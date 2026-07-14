@@ -1,0 +1,86 @@
+id,nombre,tipo,modulo,fase,fecha_inicio,fecha_fin,duracion_dias,dependencias,entregable,riesgo
+INF-01,"Crear repos erp_back/erp_front (NestJS + Vite, convenciones Almahue)",infra,core,F0,2026-07-13,2026-07-14,2,,Repos listos,bajo
+DEF-DOC-REV,Revisión PDF ERP Contable-Financiero Enterprise (alcance global),def,core,F0,2026-07-17,2026-07-20,2,INF-01,Matriz requisitos global,bajo
+DEF-DOC-COM,Revisión PDF Módulo Comercial Enterprise (spec detallada),def,comercial,F0,2026-07-15,2026-07-16,2,INF-01,Matriz requisitos comercial,bajo
+DEF-ARQ,"Def. arquitectura: Clean/Hexagonal, DDD, modular monolith, /api/v1",def,core,F0,2026-07-23,2026-07-24,2,DEF-DOC-REV,Doc arquitectura v2,bajo
+DEF-ALCANCE,Acta alcance v1: módulos IN/OUT (Prod/RRHH → fase 2),def,core,F0,2026-07-21,2026-07-22,2,DEF-DOC-REV|DEF-DOC-COM,Acta alcance firmada,medio
+DEF-CORE,"Def. Admin & Seguridad: JWT+refresh, RBAC granular, multiempresa",def,core,F0,2026-07-27,2026-07-29,3,DEF-ARQ,Spec Core,bajo
+DEF-CAT,"Def. catálogos: monedas, UM, centros costo, tipos documento",def,catalogos,F0,2026-08-03,2026-08-04,2,DEF-CORE,Spec catálogos,bajo
+DEF-SUCURSALES,Def. sucursales/branches multiempresa + restricción por sucursal,def,core,F0,2026-08-18,2026-08-18,1,DEF-CAT,Spec sucursales,bajo
+DEF-AUDIT,"Def. auditoría: audit_logs, integration/email logs, retención 5 años",def,core,F0,2026-07-30,2026-07-31,2,DEF-CORE,Spec auditoría,medio
+DEF-SEC,"Def. seguridad: rate limit, Helmet, OWASP, Redis token blacklist",def,core,F0,2026-08-05,2026-08-06,2,DEF-CORE,Spec seguridad,medio
+DEF-CONT,"Def. contabilidad: plan cuentas, asientos, periodos, reportes",def,contabilidad,F0,2026-08-07,2026-08-12,4,DEF-CAT,Spec contabilidad,medio
+DEF-TES,"Def. tesorería: flujo caja, pagos, conciliación bancaria",def,tesoreria,F0,2026-08-27,2026-08-31,3,DEF-CONT,Spec tesorería,medio
+DEF-PRES,"Def. presupuestos: elaboración, seguimiento, vs real",def,presupuestos,F0,2026-08-25,2026-08-26,2,DEF-CONT,Spec presupuestos,medio
+DEF-INSUMOS,"Def. contratistas e insumos: proveedores, catálogo, trazabilidad",def,insumos,F0,2026-08-13,2026-08-17,3,DEF-CAT,Spec insumos,medio
+DEF-COM,"Def. comercial: prospectos, clientes, motor documentos, libro comercial",def,comercial,F0,2026-08-19,2026-08-24,4,DEF-DOC-COM|DEF-CAT|DEF-CONT,Spec comercial Enterprise,alto
+DEF-WF,"Def. motor workflow: estados, transiciones, aprobaciones por monto",def,workflow,F0,2026-09-07,2026-09-09,3,DEF-COM,Spec workflow,alto
+DEF-GOSOCKET,"Def. GoSocket: interfaz ElectronicInvoiceProvider, estados, resiliencia",def,integraciones,F0,2026-09-01,2026-09-02,2,DEF-COM,Spec GoSocket v1,alto
+DEF-REP,Def. dashboard ejecutivo + reportes financieros/operativos,def,reportes,F0,2026-09-03,2026-09-04,2,DEF-CONT|DEF-COM,Spec reportes/KPIs,bajo
+DEF-PRISMA,ERD + schema Prisma draft (módulos v1 Enterprise),def,core,F0,2026-09-10,2026-09-15,4,DEF-TES|DEF-PRES|DEF-INSUMOS|DEF-COM|DEF-WF|DEF-GOSOCKET|DEF-REP|DEF-ALCANCE|DEF-SUCURSALES|DEF-AUDIT|DEF-SEC,schema.prisma draft,medio
+DEF-API,"OpenAPI borrador /api/v1/ por módulo (paginación, DTOs)",def,core,F0,2026-09-16,2026-09-18,3,DEF-PRISMA,OpenAPI v1 draft,bajo
+INF-05,"Front shell: layout, sidebar, rutas mock, design system base",front,core,F1,2026-07-15,2026-07-17,3,INF-01,App navegable sin backend,bajo
+INF-06,"UI base: DataTable, Modal, formularios, i18n ES",front,core,F1,2026-07-20,2026-07-21,2,INF-05,Componentes UI base,bajo
+MOCK-SHELL,Wireframe navegación + mapa pantallas (14 módulos v1),mock,core,F1,2026-09-21,2026-09-22,2,INF-06|DEF-API,Mapa pantallas HTML,bajo
+MOCK-CORE,"Boceto: login, admin empresas/usuarios/roles RBAC",mock,core,F1,2026-10-12,2026-10-13,2,MOCK-SHELL,Mock Core,bajo
+MOCK-CAT,Boceto: mantenedores catálogos maestros,mock,catalogos,F1,2026-09-23,2026-09-23,1,MOCK-SHELL,Mock catálogos,bajo
+MOCK-CONT,"Boceto: plan cuentas, asiento manual, diario/mayor/balance",mock,contabilidad,F1,2026-10-07,2026-10-09,3,MOCK-SHELL,Mock contabilidad,bajo
+MOCK-TES,"Boceto: flujo caja, pagos, conciliación bancaria",mock,tesoreria,F1,2026-10-26,2026-10-27,2,MOCK-SHELL,Mock tesorería,bajo
+MOCK-PRES,"Boceto: presupuesto, seguimiento vs real",mock,presupuestos,F1,2026-10-20,2026-10-21,2,MOCK-SHELL,Mock presupuestos,bajo
+MOCK-INSUMOS,"Boceto: contratistas, catálogo insumos, movimientos",mock,insumos,F1,2026-10-16,2026-10-19,2,MOCK-SHELL,Mock insumos,bajo
+MOCK-COM-CLI,"Boceto: clientes, prospectos, conversión lead→cliente",mock,comercial,F1,2026-09-24,2026-09-25,2,MOCK-SHELL,Mock CRM comercial,bajo
+MOCK-COM-LIBRO,"Boceto: Libro Comercial, cotizaciones, OC/NP, conversiones",mock,comercial,F1,2026-09-30,2026-10-02,3,MOCK-SHELL,Mock libro comercial,bajo
+MOCK-COM-WF,Boceto: workflow aprobaciones por monto y tipo documento,mock,workflow,F1,2026-10-05,2026-10-06,2,MOCK-SHELL,Mock workflow,bajo
+MOCK-COM-DASH,"Boceto: dashboard comercial KPIs (conversión, top, pendientes WF)",mock,comercial,F1,2026-09-28,2026-09-29,2,MOCK-SHELL,Mock dashboard comercial,bajo
+MOCK-GOSOCKET,"Boceto: panel GoSocket — estados DTE, reenvíos, XML/PDF",mock,integraciones,F1,2026-10-14,2026-10-15,2,MOCK-SHELL,Mock GoSocket,bajo
+MOCK-REP,Boceto: dashboard ejecutivo + reportes export,mock,reportes,F1,2026-10-22,2026-10-23,2,MOCK-SHELL,Mock reportes,bajo
+FB-PRES,Presentación mockups v1 con cliente (walkthrough Enterprise),fb,core,F1,2026-10-28,2026-10-28,1,MOCK-CORE|MOCK-CAT|MOCK-CONT|MOCK-TES|MOCK-PRES|MOCK-INSUMOS|MOCK-COM-CLI|MOCK-COM-LIBRO|MOCK-COM-WF|MOCK-COM-DASH|MOCK-GOSOCKET|MOCK-REP,Acta presentación,bajo
+FB-ACTA,Acta correcciones UX/UI por módulo (priorizada y firmada),fb,core,F1,2026-10-29,2026-10-30,2,FB-PRES,Acta correcciones v1,medio
+INF-02,Docker Compose PostgreSQL 16 + API + NGINX dev,infra,core,F2,2026-11-02,2026-11-03,2,FB-ACTA,docker compose up,bajo
+INF-03,Prisma init + migración base + soft delete pattern,back,core,F2,2026-11-04,2026-11-04,1,INF-02,Migrate ok,bajo
+INF-04,Swagger /api/v1/docs + ValidationPipe + guards base,back,core,F2,2026-11-26,2026-11-26,1,INF-03,Swagger live,bajo
+INF-07,"CI GitHub Actions (lint, test, build) + README deploy",infra,core,F2,2026-11-04,2026-11-04,1,INF-02,Pipeline CI,medio
+CORE-CORR,Aplicar correcciones mockup — Core/Auth/Admin,front,core,F2,2026-11-04,2026-11-05,2,FB-ACTA|MOCK-CORE,Mock Core v2,bajo
+CORE-BACK,"Backend Core: JWT+refresh+blacklist, RBAC, multi-tenant, admin, sucursales",back,core,F2,2026-11-27,2026-12-08,8,CORE-CORR|INF-04,API auth + admin,medio
+AUDIT-BACK,"Backend auditoría: audit_logs, integration logs, email logs inmutables",back,core,F2,2026-12-09,2026-12-15,5,CORE-BACK,API/middleware auditoría,medio
+CORE-FRONT,"Front Core: login, sesión, admin empresas/usuarios/roles",front,core,F2,2026-12-09,2026-12-15,5,CORE-BACK,Core productivo,bajo
+CAT-CORR,Aplicar correcciones mockup — Catálogos,front,catalogos,F2,2026-11-02,2026-11-03,2,FB-ACTA|MOCK-CAT,Mock catálogos v2,bajo
+CAT-BACK,"Backend catálogos: schema, CRUD, seeds",back,catalogos,F2,2026-12-16,2026-12-22,5,CAT-CORR|CORE-BACK,API catalogos/v1/*,bajo
+CAT-FRONT,Front catálogos: mantenedores + hooks cascada,front,catalogos,F2,2026-12-23,2026-12-28,4,CAT-BACK,Catálogos productivos,bajo
+CONT-CORR,Aplicar correcciones mockup — Contabilidad,front,contabilidad,F3,2026-11-06,2026-11-09,2,FB-ACTA|MOCK-CONT,Mock contabilidad v2,bajo
+CONT-BACK,"Backend contabilidad: plan cuentas, asientos, reportes",back,contabilidad,F3,2027-01-04,2027-01-15,10,CONT-CORR|CAT-BACK,API contabilidad,alto
+CONT-FRONT,Front contabilidad integrado API,front,contabilidad,F3,2027-01-18,2027-01-26,7,CONT-BACK,Contabilidad productiva,medio
+TES-CORR,Aplicar correcciones mockup — Tesorería,front,tesoreria,F3,2026-11-16,2026-11-17,2,FB-ACTA|MOCK-TES,Mock tesorería v2,bajo
+TES-BACK,"Backend tesorería: flujo caja, pagos, conciliación",back,tesoreria,F3,2027-02-05,2027-02-16,8,TES-CORR|CONT-BACK,API tesorería,alto
+TES-FRONT,Front tesorería integrado API,front,tesoreria,F3,2027-02-17,2027-02-23,5,TES-BACK,Tesorería productiva,medio
+PRES-CORR,Aplicar correcciones mockup — Presupuestos,front,presupuestos,F3,2026-11-12,2026-11-13,2,FB-ACTA|MOCK-PRES,Mock presupuestos v2,bajo
+PRES-BACK,Backend presupuestos: elaboración y seguimiento vs real,back,presupuestos,F3,2027-01-28,2027-02-04,6,PRES-CORR|CONT-BACK,API presupuestos,medio
+PRES-FRONT,Front presupuestos integrado API,front,presupuestos,F3,2027-02-05,2027-02-10,4,PRES-BACK,Presupuestos productivo,bajo
+INS-CORR,Aplicar correcciones mockup — Contratistas e insumos,front,insumos,F3,2026-11-10,2026-11-11,2,FB-ACTA|MOCK-INSUMOS,Mock insumos v2,bajo
+INS-BACK,"Backend insumos: contratistas, contratos, catálogo, movimientos",back,insumos,F3,2027-01-18,2027-01-27,8,INS-CORR|CAT-BACK,API insumos,medio
+INS-FRONT,Front insumos integrado API,front,insumos,F3,2027-01-28,2027-02-03,5,INS-BACK,Insumos productivo,bajo
+WF-CORR,Aplicar correcciones mockup — Motor workflow,front,workflow,F4,2026-11-23,2026-11-24,2,FB-ACTA|MOCK-COM-WF,Mock workflow v2,bajo
+WF-BACK,"Backend workflow: estados, transiciones, aprobaciones configurables",back,workflow,F4,2026-12-23,2027-01-01,8,WF-CORR|CORE-BACK,API workflow,alto
+WF-FRONT,Front admin workflow: config estados y aprobadores,front,workflow,F4,2027-01-04,2027-01-07,4,WF-BACK,Config workflow UI,medio
+COM-CORR,Aplicar correcciones mockup — Módulo comercial,front,comercial,F4,2026-11-18,2026-11-20,3,FB-ACTA|MOCK-COM-CLI|MOCK-COM-LIBRO|MOCK-COM-DASH,Mock comercial v2,bajo
+COM-BACK,"Backend comercial: motor documentos, clientes, prospectos, import Excel, CxC",back,comercial,F4,2027-02-17,2027-03-08,14,COM-CORR|WF-BACK|INS-BACK|CONT-BACK,API comercial/v1/*,alto
+COM-NC,Backend notas de crédito en motor documentos comerciales,back,comercial,F4,2027-03-12,2027-03-17,4,COM-BACK,API notas crédito,medio
+COM-EMAIL,Envío cotización/documento por email con PDF adjunto,back,comercial,F4,2027-03-09,2027-03-11,3,COM-BACK,Servicio email + email_log,medio
+COM-FRONT,"Front comercial: libro, cotizaciones, NC, conversiones, dashboard KPIs",front,comercial,F4,2027-03-18,2027-03-31,10,COM-BACK|COM-NC|COM-EMAIL,Comercial productivo,alto
+INT-GOSOCKET-SPIKE,"Spike GoSocket: sandbox API, ElectronicInvoiceProvider POC",back,integraciones,F4,2026-11-23,2026-11-25,3,DEF-GOSOCKET|COM-CORR,Doc spike + POC timbraje GoSocket,alto
+INT-CONT-CORR,Aplicar correcciones mockup — Config contabilización auto,front,contabilidad,F5,2026-11-25,2026-11-25,1,FB-ACTA,UI config v2,bajo
+INT-CONT-BACK,ContabilizacionService: eventos comercial/insumos→asientos,back,contabilidad,F5,2027-03-18,2027-03-25,6,INT-CONT-CORR|COM-BACK|INS-BACK|CONT-BACK,Servicio contabilización,alto
+INT-CONT-FRONT,Front config contabilización automática por tipo transacción,front,contabilidad,F5,2027-04-01,2027-04-05,3,INT-CONT-BACK,Config contable UI,bajo
+INT-CORR,Aplicar correcciones mockup — Panel GoSocket / integraciones,front,integraciones,F6,2026-11-26,2026-11-27,2,FB-ACTA|MOCK-GOSOCKET,Mock GoSocket v2,bajo
+INT-BACK,"Backend GoSocket: provider, timbraje, reintentos, circuit breaker, logs",back,integraciones,F6,2027-03-26,2027-04-08,10,INT-CORR|COM-BACK|INT-GOSOCKET-SPIKE,API integraciones DTE,alto
+INT-FRONT,"Front GoSocket: emisión desde factura, estados, reenvíos, XML/PDF",front,integraciones,F6,2027-04-09,2027-04-16,6,INT-BACK,Integración DTE productiva,alto
+REP-CORR,Aplicar correcciones mockup — Dashboard ejecutivo y reportes,front,reportes,F7,2026-11-30,2026-12-01,2,FB-ACTA|MOCK-REP,Mock reportes v2,bajo
+REP-BACK,"Backend reportes: KPIs ejecutivo/comercial, financieros, export PDF/Excel",back,reportes,F7,2027-04-09,2027-04-20,8,REP-CORR|COM-BACK|CONT-BACK|TES-BACK,API reportes,medio
+REP-FRONT,Front reportes + dashboard ejecutivo integrado,front,reportes,F7,2027-04-21,2027-04-28,6,REP-BACK,Reportes productivos,bajo
+QA-01,"Tests e2e flujos críticos (comercial, contab, GoSocket) + smoke",qa,qa,F7,2027-04-29,2027-05-05,5,REP-FRONT|INT-FRONT|COM-FRONT,Suite e2e CI,medio
+QA-LOAD,"Pruebas carga k6: documentos comerciales, latencia p95 < 500ms",qa,qa,F7,2027-05-06,2027-05-07,2,QA-01,Reporte k6,medio
+QA-SEC,Escaneo OWASP ZAP + validación controles seguridad,qa,qa,F7,2027-05-10,2027-05-11,2,QA-01,Reporte seguridad,medio
+INF-OBS,"Observabilidad: logs JSON, health checks, métricas, alertas básicas",infra,core,F7,2027-04-29,2027-04-30,2,REP-FRONT,Stack observabilidad,medio
+QA-02,UAT cliente + performance básico + bugs P1/P2,qa,qa,F7,2027-05-12,2027-05-18,5,QA-LOAD|QA-SEC|INF-OBS,Acta UAT firmada,medio
+DEP-01,"Deploy producción: Docker prod, nginx TLS, backup, rollback",infra,core,F7,2027-05-19,2027-05-21,3,QA-02,Entorno prod,medio
+DEP-02,Capacitación + documentación usuario + go-live,infra,core,F7,2027-05-24,2027-05-25,2,DEP-01,Go-live,bajo
