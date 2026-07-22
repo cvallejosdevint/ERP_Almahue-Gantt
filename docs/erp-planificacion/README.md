@@ -14,6 +14,14 @@ Planificación de 6 meses (inicio **lunes 13/07/2026**, go-live objetivo **09/01
 
 **Fuera de v1:** Producción, RRHH (fase 2), integración SII directa (usa GoSocket).
 
+## Levantamiento Agrosoft (jul-2026)
+
+Detalle funcional auditado de la demo del sistema actual (**Agrosoft 3.0** a reemplazar):
+
+→ [`agrosoft-levantamiento/README.md`](agrosoft-levantamiento/README.md)
+
+Incluye decisiones DEC, módulos canónicos (Contratistas / Compras / Insumos / Contabilidad / Permisos), matriz de trazabilidad con timestamps tl;dv, capturas legacy del video y pauta Trello depurada. Usar como backlog de pantallas para F2–F3; la Gantt de abajo sigue siendo el calendario.
+
 Fuente de tareas: `tools/erp_gantt_tasks.py`
 
 | Archivo | Descripción |

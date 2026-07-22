@@ -1,0 +1,1103 @@
+Rol: Actúa como un Product Owner enfocado en la gestión de proyectos de desarrollo con Trello.
+
+Objetivo: Generar una estructura detallada de Tarjetas de Trello para la creación del nuevo ERP. Cada tarjeta debe corresponder a una pantalla, formulario o sección del sistema actual que se mostró en el video, indicando la marca de tiempo precisa para poder tomarle la captura de pantalla correspondiente.
+
+Por favor, organiza el resultado por Listas de Trello (Módulos) con el siguiente formato para cada tarjeta:
+
+Lista: [Nombre del Módulo - ej. Módulo de Contratistas]
+Título de la Tarjeta: [Nombre de la Pantalla / Función a replicar]
+
+Timestamp para Captura: [Minuto preciso del video donde se muestra la pantalla en uso]
+
+Descripción de la Pantalla: Resumen de lo que muestra la interfaz actual y qué campos u opciones tiene.
+
+Problemas/Fallas Actuales a Corregir: Lo que el cliente se quejó que no funciona bien en esa pantalla.
+
+Checklist de Requerimientos:
+
+[ ] Campo / Opción 1 a incluir en el nuevo diseño.
+
+[ ] Validaciones o reglas de negocio que deben programarse.
+
+[ ] Mejoras solicitadas para esta pantalla.
+
+Procesa todas las secciones del video (Contratistas, Compras, Insumos/Bodega, Contabilidad, Permisos y Configuración) generando las tarjetas bajo esta estructura.
+📋 Estructura de Tarjetas Trello para Nuevo ERPBasado en el análisis completo de la demostración del sistema Agrosoft, he generado una estructura detallada de tarjetas organizadas por módulos. Cada tarjeta incluye timestamps precisos para captura de pantalla y requisitos específicos.📌 LISTA: Módulo de ContratistasTarjeta 1: Pantalla de Inicio y Cambio de EmpresaTimestamp para Captura: 00:21 - 00:45Descripción de la Pantalla:Página de inicio de Agrosoft donde se ingresa usuario y contraseña. Permite cambio de empresa desde un dropdown que muestra todas las empresas disponibles con acceso. Incluye selector de temporada (mes contable y de remuneración) y botón de aceptar para acceder al módulo AlmaWeb.Problemas/Fallas Actuales a Corregir:
+El cambio de temporada en esta página no es funcional porque no usan el módulo de gestión
+Falta claridad visual sobre qué empresa está seleccionada actualmente
+Checklist de Requerimientos:
+ Campo de usuario y contraseña con validación de credenciales
+ Dropdown de selección de empresa con filtrado por permisos del usuario
+ Selector de mes contable y mes de remuneración
+ Botón "Aceptar" que redirija al módulo correspondiente
+ Validación: Impedir acceso a empresas sin permisos asignados
+ Mejora: Mostrar empresa activa de forma destacada en la interfaz
+ Mejora: Implementar selector de temporada funcional para el nuevo ERP
+Tarjeta 2: Gestión de Contratistas - Listado y CreaciónTimestamp para Captura: 06:14 - 06:56Descripción de la Pantalla:Pantalla que muestra historial de contratistas con opciones para agregar nuevos, cambiar vigencia (de vigente a no vigente) y editar información. Incluye pestaña para crear nuevo contratista que requiere una planilla de datos completa.Problemas/Fallas Actuales a Corregir:
+No hay validación clara de campos obligatorios
+Falta confirmación visual al cambiar vigencia de contratista
+Checklist de Requerimientos:
+ Tabla con listado de contratistas (nombre, estado, fecha de creación)
+ Botón "Agregar Contratista" que abra formulario de creación
+ Formulario con campos: nombre, RUT, datos de contacto, banco, cuenta
+ Opción "Cambiar Vigencia" para desactivar contratistas sin eliminar datos históricos
+ Validación: RUT único en el sistema
+ Validación: Campos obligatorios marcados claramente
+ Mejora: Búsqueda y filtrado por nombre o RUT
+ Mejora: Confirmación modal antes de cambiar vigencia
+Tarjeta 3: Parametrización de Tarifas de ContratistasTimestamp para Captura: 04:34 - 05:47Descripción de la Pantalla:Sección de ingreso de tarifas para contratistas con botones para parametrizar ingreso de tarifa, informe y parámetros de contabilización. Permite agregar múltiples tarifas por contratista asociadas a labores y actividades.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Al ingresar 2 tarifas, la primera desaparece de la visualización
+No hay listado visible de todas las tarifas ingresadas
+Genera dudas sobre si la tarifa fue ingresada correctamente
+No permite agregar más tarifas al mismo contrato sin limpiar y reingresar
+Checklist de Requerimientos:
+ Tabla persistente que muestre todas las tarifas ingresadas
+ Campos: Labor, Actividad, Tarifa, Unidad de Control, Centro de Costo
+ Botón "Agregar Tarifa" que no elimine tarifas previas
+ Opción de editar o eliminar tarifas individuales
+ Validación: No permitir tarifas duplicadas para la misma labor
+ Validación: Tarifa debe ser número positivo
+ Mejora: Vista previa de todas las tarifas antes de guardar
+ Mejora: Confirmación visual al agregar cada tarifa
+Tarjeta 4: Asociación de Actividades y Labores a ContratistasTimestamp para Captura: 07:23 - 08:47Descripción de la Pantalla:Pantalla que permite desplegar listado de labores disponibles y asociarlas a actividades. Muestra relación jerárquica: Actividad (general) → Labor (específica). Ejemplo: "Armado de caja" (actividad) con "Packing cereza" (labor).Problemas/Fallas Actuales a Corregir:
+Interfaz poco intuitiva para visualizar relaciones actividad-labor
+Falta claridad sobre cuáles labores ya están asociadas
+Checklist de Requerimientos:
+ Dropdown de selección de Actividad
+ Listado de Labores disponibles para la actividad seleccionada
+ Botón "Agregar Labor" para asociar labor a actividad
+ Visualización clara de labores ya asociadas
+ Opción de eliminar asociación labor-actividad
+ Validación: Una labor puede asociarse a múltiples actividades
+ Mejora: Búsqueda de labores por nombre
+ Mejora: Indicador visual de labores ya asociadas
+Tarjeta 5: Ingreso de Tarifas por Contratista (Formulario Principal)Timestamp para Captura: 08:55 - 10:50Descripción de la Pantalla:Formulario principal para ingresar tarifa de contratista con campos: Año, Mes, Código, Plantas, Fecha (desde-hasta), Centro de Costo, Labor, Unidad de Control y Tarifa. Permite guardar información pero con limitaciones en visualización de múltiples registros.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Al agregar segunda labor, la primera desaparece
+No hay listado para revisar errores antes de guardar
+Falta validación de coherencia entre campos
+Checklist de Requerimientos:
+ Campo Año (selector o input numérico)
+ Campo Mes (dropdown 1-12)
+ Campo Código (auto-generado o manual)
+ Campo Plantas (selector múltiple)
+ Rango de Fechas (Desde - Hasta)
+ Selector Centro de Costo (con validación de empresa actual)
+ Selector Labor (vinculado a actividades parametrizadas)
+ Campo Unidad de Control (texto o selector)
+ Campo Tarifa (número decimal)
+ Botón Guardar
+ Validación: Fecha "Desde" menor a "Hasta"
+ Validación: Centro de costo pertenece a empresa actual
+ Validación: Tarifa es número positivo
+ Mejora: Tabla persistente mostrando todas las labores agregadas
+ Mejora: Botón "Limpiar" solo limpia el formulario, no los datos guardados
+Tarjeta 6: Proforma de ContratistaTimestamp para Captura: 19:14 - 21:05Descripción de la Pantalla:Pantalla de emisión de proforma para contratista. Permite seleccionar contratista, buscar por folio o fecha, y visualizar proforma generada. Incluye opciones de estado (Borrador/Definitiva).Problemas/Fallas Actuales a Corregir:
+En estado "Definitiva" no permite modificaciones, pero pueden existir errores
+Falta flexibilidad para corregir errores en documentos definitivos sin reversar
+Checklist de Requerimientos:
+ Selector de Contratista (dropdown con búsqueda)
+ Opción de búsqueda por Folio o Fecha
+ Visualización de Proforma generada
+ Selector de Estado: Borrador / Definitiva
+ En estado Borrador: permitir modificación de contratista
+ En estado Definitiva: bloquear modificaciones
+ Botón "Guardar"
+ Validación: Contratista debe tener tarifas ingresadas
+ Mejora: Permitir reversión de estado Definitiva a Borrador con auditoría
+ Mejora: Mostrar advertencia antes de cambiar a Definitiva
+Tarjeta 7: Asociación Proforma-FacturaTimestamp para Captura: 21:05 - 22:34Descripción de la Pantalla:Pantalla que permite asociar proforma con factura de contratista. Selector de contratista, búsqueda por folio o fecha, visualización de proforma, y opción de cambiar a estado definitivo. Incluye limitante: cada contrato solo puede tener una factura asociada.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Cada contrato solo puede tener UNA factura (muy restrictivo)
+No permite modificar factura una vez está en estado definitivo
+Falta claridad sobre si hay errores en la asociación
+Checklist de Requerimientos:
+ Selector de Contratista
+ Búsqueda por Folio o Fecha
+ Visualización de Proforma disponible
+ Campo para seleccionar Factura a asociar
+ Validación: Proforma debe estar en estado Definitiva
+ Validación: Factura debe coincidir con contratista
+ Botón "Asociar"
+ Mejora: Permitir múltiples facturas por contrato (parciales)
+ Mejora: Historial de facturas asociadas a cada proforma
+ Mejora: Validación de montos coincidentes entre proforma y factura
+Tarjeta 8: Traspaso Contable de ContratistasTimestamp para Captura: 22:38 - 24:01Descripción de la Pantalla:Pantalla de "Traspaso Contable" donde se genera la contabilización del mes. Requiere ingreso de tasa de cambio (peso, dólar, yuan, euro). Botón "Generar Contabilización" crea asiento contable que se traspasa al módulo de contabilidad.Problemas/Fallas Actuales a Corregir:
+Sistema actual solo soporta peso y dólar, necesita yuan y euro
+Falta claridad sobre qué se contabiliza exactamente
+Checklist de Requerimientos:
+ Campo Tasa de Cambio (Peso)
+ Campo Tasa de Cambio (Dólar)
+ Campo Tasa de Cambio (Yuan)
+ Campo Tasa de Cambio (Euro)
+ Botón "Generar Contabilización"
+ Visualización de asiento contable generado
+ Validación: Tasas de cambio son números positivos
+ Validación: Tasas de cambio no pueden ser cero
+ Mejora: Cargar tasas automáticamente desde Banco Central
+ Mejora: Mostrar resumen de montos a contabilizar por moneda
+Tarjeta 9: Cierre de Mes - ContratistasTimestamp para Captura: 25:00 - 25:53Descripción de la Pantalla:Pantalla de cierre de mes donde administrador puede cerrar meses específicos. Una vez cerrado, impide que digitadores sigan ingresando información. Muestra listado de meses con opción de cerrar.Problemas/Fallas Actuales a Corregir:
+Falta confirmación antes de cerrar mes
+No hay opción de reabrir mes cerrado por error
+Checklist de Requerimientos:
+ Listado de meses disponibles (estado abierto/cerrado)
+ Botón "Cerrar Mes" para cada mes abierto
+ Confirmación modal antes de cerrar
+ Validación: Solo administrador puede cerrar mes
+ Validación: No permitir cerrar mes futuro
+ Mejora: Opción de reabrir mes cerrado (solo admin, con auditoría)
+ Mejora: Mostrar fecha y usuario que cerró el mes
+📌 LISTA: Módulo de ComprasTarjeta 10: Orden de Compra - CreaciónTimestamp para Captura: 29:33 - 37:33Descripción de la Pantalla:Formulario de creación de orden de compra. Campos: Departamento, Solicitante, Fecha, Jefe Aprobador, Proveedor, Tipo de Pago, Moneda, Observación. Muestra tipo de cambio automático pero no lo reconoce al registrar. Permite agregar artículos de servicio con cantidad, precio y centro de costo.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Tipo de cambio mostrado no coincide con el que se registra (se usa fecha de recepción, no de creación)
+Falta validación de coherencia entre moneda y tipo de cambio
+No hay confirmación visual de orden creada
+Solicitud de compra es innecesaria (siempre usan "sin solicitud")
+Checklist de Requerimientos:
+ Selector Departamento (dropdown)
+ Campo Solicitante (auto-completado con usuario actual)
+ Campo Fecha (date picker)
+ Selector Jefe Aprobador (dropdown de usuarios con permisos)
+ Selector Proveedor (dropdown con búsqueda)
+ Selector Tipo de Pago (Contado, 15 días, 30 días, etc.)
+ Selector Moneda (Peso, Dólar, Yuan, Euro)
+ Campo Observación (textarea)
+ Tabla de Artículos: Tipo, Descripción, Cantidad, Precio, Centro de Costo
+ Botón "Agregar Artículo"
+ Botón "Guardar"
+ Validación: Proveedor es obligatorio
+ Validación: Debe haber al menos un artículo
+ Validación: Cantidad y precio son números positivos
+ Validación: Centro de costo pertenece a empresa actual
+ Mejora: Mostrar tipo de cambio de la fecha de creación (informativo)
+ Mejora: Aclarar que tipo de cambio se aplicará en recepción
+ Mejora: Eliminar opción "Solicitud de Compra" (no se usa)
+Tarjeta 11: Selección de Centro de Costo por HectáreaTimestamp para Captura: 38:34 - 40:04Descripción de la Pantalla:Sección de distribución de costo por centro de costo. Opciones: "Directo" (un solo centro de costo) o "Por Hectárea" (distribuir entre múltiples cuarteles). Muestra problema: si se ingresa mal una hectárea, queda eternamente mal parametrizado.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Opción "Por Hectárea" no permite editar para eliminar solo un cuartel (es todo o nada)
+Permite seleccionar centros de costo de otras empresas
+Falta validación de coherencia
+Checklist de Requerimientos:
+ Radio button "Directo" - selecciona un centro de costo
+ Radio button "Por Hectárea" - distribuye entre cuarteles
+ En modo Directo: Selector Centro de Costo, Elemento de Costo, Monto
+ En modo Por Hectárea: Selector de Hectáreas/Cuarteles con montos individuales
+ Validación: Centro de costo pertenece a empresa actual
+ Validación: Suma de montos = total de la orden
+ Validación: No permitir centros de costo de otras empresas
+ Mejora: Permitir agregar/eliminar cuarteles individuales en modo Por Hectárea
+ Mejora: Mostrar advertencia si suma no coincide con total
+ Mejora: Permitir edición de distribución después de guardar
+Tarjeta 12: Validación de Distribución de CostosTimestamp para Captura: 40:30 - 42:15Descripción de la Pantalla:Sección de validación de distribución de costos. Permite agregar múltiples centros de costo con sus montos. Problema: si el total no cuadra, no muestra advertencia clara hasta el final.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No muestra advertencia de "Descuadrado" hasta intentar guardar
+Falta claridad sobre cuál es la diferencia exacta
+Obliga a rehacer todo si hay error
+Checklist de Requerimientos:
+ Tabla de distribución: Centro de Costo, Elemento de Costo, Monto
+ Botón "Agregar Línea"
+ Botón "Eliminar Línea"
+ Campo Total Neto (calculado automáticamente)
+ Validación en tiempo real: Mostrar si suma ≠ total
+ Validación: Mostrar diferencia exacta en rojo
+ Validación: Bloquear guardar si hay diferencia
+ Mejora: Mostrar advertencia "Distribución descuadrada" en rojo
+ Mejora: Permitir ajuste automático de última línea
+ Mejora: Mostrar diferencia exacta en pesos
+Tarjeta 13: Selección de IVA (Afecto/Exento)Timestamp para Captura: 42:19 - 42:51Descripción de la Pantalla:Selector de tipo de documento: "Con IVA" o "Exento". Si es con IVA, calcula automáticamente monto de IVA y neto. Si es exento, muestra solo monto neto. Esta selección impacta el tipo de documento que se puede asociar después.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre impacto de esta selección en factura posterior
+No hay validación de coherencia entre orden y factura
+Checklist de Requerimientos:
+ Radio button "Con IVA"
+ Radio button "Exento"
+ En modo Con IVA: Mostrar Neto, IVA (19%), Total
+ En modo Exento: Mostrar solo Neto
+ Cálculo automático de IVA si aplica
+ Validación: Selección debe coincidir con tipo de factura posterior
+ Mejora: Mostrar advertencia si se intenta cambiar después de guardar
+ Mejora: Aclarar que esto afecta validación de factura
+Tarjeta 14: Generación de Número de OrdenTimestamp para Captura: 43:16 - 43:46Descripción de la Pantalla:Pantalla que muestra número de orden generado (ej: 5207) después de guardar. Orden queda en estado "Pendiente". Opción de visualizar PDF de la orden.Problemas/Fallas Actuales a Corregir:
+No abre PDF automáticamente después de crear
+Falta confirmación visual clara de creación exitosa
+Checklist de Requerimientos:
+ Mostrar número de orden generado (destacado)
+ Mostrar estado: "Pendiente"
+ Botón "Ver PDF"
+ Botón "Cerrar"
+ Validación: Número de orden es único
+[ ]
+continua
+Mejora: Abrir PDF automáticamente después de crear
+ Mejora: Mostrar resumen de orden creada (proveedor, monto, fecha)
+Tarjeta 15: Listado de Órdenes de CompraTimestamp para Captura: 43:38 - 44:51Descripción de la Pantalla:Pantalla que muestra órdenes de compra creadas por el usuario actual. Visualiza orden en estado "Pendiente". Incluye módulo de "Informe Orden de Compra" que permite filtrar por estado (Anulada, Aprobada, Cerrada, Contabilizada, Pendiente, Recepcionada Parcial, Recepcionada Total).Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Si no sabe el estado, debe buscar módulo por módulo
+Búsqueda por proveedor no funciona correctamente
+Órdenes creadas por otros usuarios no aparecen en listado personal
+Ordena de más antigua a más reciente (poco intuitivo)
+Checklist de Requerimientos:
+ Tabla de órdenes: Número, Proveedor, Monto, Fecha, Estado
+ Filtro por Estado (multi-select)
+ Búsqueda por Número de Orden
+ Búsqueda por Proveedor
+ Búsqueda por Rango de Fechas
+ Ordenamiento: Más reciente a más antigua (por defecto)
+ Opción de ver detalles de orden
+ Validación: Mostrar todas las órdenes independiente del estado
+ Validación: Búsqueda por proveedor debe funcionar en todos los estados
+ Mejora: Filtro por usuario creador
+ Mejora: Mostrar estado con color (verde=aprobada, rojo=rechazada, etc.)
+ Mejora: Búsqueda global que no requiera seleccionar estado primero
+Tarjeta 16: Aprobación de Orden de CompraTimestamp para Captura: 48:03 - 50:31Descripción de la Pantalla:Módulo "Aprobación Orden de Compra" donde jefe aprobador visualiza órdenes asignadas. Muestra detalles: Servicio, Monto, Centro de Costo. Botones: "Aprobar" o "Rechazar". Al aprobar, orden pasa a módulo de recepción.Problemas/Fallas Actuales a Corregir:
+No llega notificación por correo cuando se asigna orden
+Falta indicador visual de órdenes pendientes de aprobación
+No hay historial de aprobaciones
+Checklist de Requerimientos:
+ Tabla de órdenes pendientes de aprobación
+ Columnas: Número, Solicitante, Monto, Centro de Costo, Fecha
+ Botón "Ver Detalles" para cada orden
+ En detalles: Mostrar todos los artículos y distribución de costos
+ Botón "Aprobar"
+ Botón "Rechazar"
+ Campo Comentario (opcional) para rechazo
+ Validación: Solo jefe aprobador asignado puede aprobar
+ Validación: No permitir aprobar orden sin revisar detalles
+ Mejora: Notificación visual (badge rojo) de órdenes pendientes
+ Mejora: Historial de aprobaciones/rechazos
+ Mejora: Opción de enviar comentario al solicitante si se rechaza
+Tarjeta 17: Recepción de Orden de CompraTimestamp para Captura: 51:00 - 53:37Descripción de la Pantalla:Módulo "Recepción Orden de Compra" donde se registra la recepción física de la orden. Solo requiere ingresar fecha de recepción. Al recepcionar, se genera asiento contable automático usando tipo de cambio de la fecha de recepción (no de creación).Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Tipo de cambio se aplica en recepción, no en creación (genera diferencias contables)
+Falta claridad sobre cuándo se reconoce el gasto
+No hay opción de recepción parcial
+Checklist de Requerimientos:
+ Campo Fecha de Recepción (date picker)
+ Visualización de detalles de orden: Proveedor, Monto, Artículos
+ Botón "Recepcionar"
+ Validación: Fecha de recepción no puede ser anterior a fecha de creación
+ Validación: Fecha de recepción no puede ser futura
+ Validación: Solo usuarios autorizados pueden recepcionar
+ Mejora: Mostrar tipo de cambio que se aplicará (de la fecha de recepción)
+ Mejora: Permitir recepción parcial (cantidad recibida vs. cantidad ordenada)
+ Mejora: Generar asiento contable automático con tipo de cambio correcto
+ Mejora: Mostrar resumen de asiento contable generado
+Tarjeta 18: Asiento Contable de Orden de CompraTimestamp para Captura: 53:48 - 54:51Descripción de la Pantalla:Visualización del asiento contable generado al recepcionar orden. Muestra: Cuenta de Gasto (ej: Mantención y Reparación de Activos), Cuenta de Facturas por Recibir, Montos en Peso y Dólar, Tipo de Cambio aplicado.Problemas/Fallas Actuales a Corregir:
+Tipo de cambio mostrado no siempre es el correcto
+Falta claridad sobre qué cuentas se usan
+Checklist de Requerimientos:
+ Visualización de asiento contable: Debe, Haber, Monto
+ Mostrar Cuenta de Gasto
+ Mostrar Cuenta de Facturas por Recibir
+ Mostrar Montos en Peso y Dólar
+ Mostrar Tipo de Cambio aplicado
+ Mostrar Fecha del Asiento
+ Validación: Debe = Haber
+ Validación: Tipo de cambio es el de la fecha de recepción
+ Mejora: Permitir visualizar asiento en módulo de contabilidad
+ Mejora: Mostrar referencia a orden de compra original
+Tarjeta 19: Registro de Compra (Ingreso de Factura)Timestamp para Captura: 54:51 - 01:00:10Descripción de la Pantalla:Módulo "Registro de Compra" en Procesos Diarios donde se ingresa factura de proveedor. Permite seleccionar proveedor, tipo de compra (Insumos, Servicios, Activos Fijos), y buscar orden de compra correspondiente. Muestra orden con detalles y permite modificar tipo de cambio.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Permite contabilizar cruzado si monto coincide pero proveedor es diferente
+Modificar tipo de cambio aquí solo afecta proveedor, no el costo
+Falta validación de coherencia entre orden (exenta) y factura (afecta)
+No hay alerta si factura no lleva IVA pero orden sí
+Checklist de Requerimientos:
+ Selector Proveedor (dropdown con búsqueda)
+ Selector Tipo de Compra (Insumos, Servicios, Activos Fijos)
+ Búsqueda de Orden de Compra (muestra órdenes disponibles)
+ Doble clic en orden para seleccionar
+ Visualización de detalles: Proveedor, Monto, Tipo de Cambio
+ Campo Tipo de Documento (Afecto/Exento)
+ Campo Número de Factura
+ Campo Fecha de Factura
+ Campo Neto
+ Campo IVA (si aplica)
+ Campo Total
+ Botón "Agregar Glosa"
+ Botón "Guardar"
+ Validación: Proveedor en factura debe coincidir con orden
+ Validación: Monto debe coincidir (o estar dentro de tolerancia)
+ Validación: Tipo de documento (Afecto/Exento) debe coincidir con orden
+ Validación: Si orden es exenta, no permitir factura afecta
+ Validación: Bloquear contabilización cruzada
+ Mejora: Mostrar advertencia si tipo de documento no coincide
+ Mejora: Permitir modificar tipo de cambio solo en recepción, no aquí
+ Mejora: Mostrar diferencia exacta si monto no coincide
+Tarjeta 20: Validación de Cuadratura en Registro de CompraTimestamp para Captura: 01:00:05 - 01:02:07Descripción de la Pantalla:Sección de validación de cuadratura en registro de compra. Muestra si asiento está cuadrado (Debe = Haber). Permite ingresar glosa (comentario). Problema: permite guardar aunque haya inconsistencias.Problemas/Fallas Actuales a Corregir:
+No muestra advertencia clara si asiento está descuadrado
+Permite guardar con errores
+Tipo de cambio se modifica pero no afecta costo
+Checklist de Requerimientos:
+ Validación automática: Debe = Haber
+ Mostrar estado: "Cuadrado" (verde) o "Descuadrado" (rojo)
+ Si descuadrado: Mostrar diferencia exacta
+ Campo Glosa (textarea)
+ Botón "Guardar"
+ Validación: Bloquear guardar si está descuadrado
+ Validación: Mostrar advertencia en rojo si hay diferencia
+ Mejora: Sugerir ajuste automático de última línea
+ Mejora: Mostrar desglose de debe y haber por cuenta
+ Mejora: Permitir reversar y reintentar si hay error
+📌 LISTA: Módulo de Insumos y BodegaTarjeta 21: Maestro de Artículos - CreaciónTimestamp para Captura: 30:20 - 34:00Descripción de la Pantalla:Pantalla de creación de artículos en maestro de artículos. Campos: Familia, Subfamilia, Descripción, Unidad de Medida. Problema: permite crear artículos duplicados sin alerta.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Permite crear artículos duplicados sin validación
+Duplicación existe en dos módulos: Compras e Insumos
+Genera confusión y errores en stock
+Si se crea duplicado, aparece 20 veces en reportes de stock
+Checklist de Requerimientos:
+ Selector Familia (dropdown)
+ Selector Subfamilia (dropdown, filtrado por familia)
+ Campo Descripción (texto)
+ Selector Unidad de Medida (dropdown)
+ Botón "Guardar"
+ Validación: Combinación Familia + Subfamilia + Descripción debe ser única
+ Validación: Mostrar alerta si artículo ya existe
+ Validación: Bloquear creación de duplicados
+ Mejora: Búsqueda de artículos existentes antes de crear
+ Mejora: Sugerir artículos similares si existe algo parecido
+ Mejora: Unificar maestro de artículos (no duplicar en Compras e Insumos)
+Tarjeta 22: Gestión de Familias y SubfamiliasTimestamp para Captura: 01:13:19 - 01:13:45Descripción de la Pantalla:Sección de parametrización de familias y subfamilias de artículos. Permite crear, editar y eliminar familias y subfamilias.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre jerarquía familia-subfamilia
+No hay validación de duplicados
+Checklist de Requerimientos:
+ Tabla de Familias: Código, Descripción
+ Botón "Agregar Familia"
+ Botón "Editar Familia"
+ Botón "Eliminar Familia"
+ Tabla de Subfamilias (filtrada por familia seleccionada)
+ Botón "Agregar Subfamilia"
+ Botón "Editar Subfamilia"
+ Botón "Eliminar Subfamilia"
+ Validación: Familia no puede estar vacía
+ Validación: Subfamilia debe pertenecer a una familia
+ Validación: No permitir eliminar familia con artículos asociados
+ Mejora: Mostrar cantidad de artículos por familia/subfamilia
+ Mejora: Búsqueda de familias/subfamilias
+Tarjeta 23: Parametrización de Contabilización de InsumosTimestamp para Captura: 01:11:32 - 01:15:37Descripción de la Pantalla:Sección de parametrización de cómo se contabilizan los movimientos de bodega. Para cada tipo de movimiento (entrada, salida, consumo, etc.), se define: Familia, Subfamilia, Cuenta al Debe, Cuenta al Haber. Ejemplo: Entrada de separadores → Existencia (Debe) vs. Costo Materiales de Embalaje (Haber).Problemas/Fallas Actuales a Corregir:
+Interfaz poco intuitiva para parametrizar múltiples movimientos
+Falta claridad sobre qué cuenta va al debe y cuál al haber
+Checklist de Requerimientos:
+ Selector Tipo de Movimiento (Entrada, Salida, Consumo, Devolución, etc.)
+ Selector Familia
+ Selector Subfamilia
+ Selector Cuenta Contable (Debe)
+ Selector Cuenta Contable (Haber)
+ Botón "Guardar"
+ Tabla de parametrizaciones existentes
+ Validación: Debe ≠ Haber
+ Validación: Cuentas deben existir en plan de cuentas
+ Mejora: Mostrar descripción de cuentas
+ Mejora: Permitir editar parametrización existente
+ Mejora: Mostrar ejemplo de asiento que se generará
+Tarjeta 24: Gestión de BodegasTimestamp para Captura: 01:08:04 - 01:10:17Descripción de la Pantalla:Pantalla de creación y gestión de bodegas. Permite crear nuevas bodegas. Problema: muestra bodegas de todas las empresas, no solo la actual.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Muestra bodegas de otras empresas
+Permite crear bodega de empresa diferente por error
+Falta validación de empresa actual
+Checklist de Requerimientos:
+ Tabla de Bodegas: Código, Nombre, Empresa, Estado
+ Filtro por Empresa (mostrar solo empresa actual)
+ Botón "Agregar Bodega"
+ Formulario: Código, Nombre, Empresa (auto-completado con empresa actual)
+ Botón "Guardar"
+ Validación: Código de bodega único por empresa
+ Validación: Bodega debe pertenecer a empresa actual
+ Validación: No permitir crear bodega de otra empresa
+ Mejora: Búsqueda de bodegas
+ Mejora: Mostrar cantidad de artículos por bodega
+ Mejora: Opción de cambiar vigencia (no eliminar)
+Tarjeta 25: Nivel de AlmacenamientoTimestamp para Captura: 01:10:29 - 01:11:32Descripción de la Pantalla:Sección de parametrización de niveles de almacenamiento dentro de bodegas. Permite definir hasta 3 niveles de distribución física dentro de una bodega.Problemas/Fallas Actuales a Corregir:
+No se usa actualmente
+Falta claridad sobre utilidad
+Checklist de Requerimientos:
+ Selector Bodega
+ Tabla de Niveles: Código, Descripción
+ Botón "Agregar Nivel"
+ Validación: Máximo 3 niveles por bodega
+ Validación: Código único por bodega
+ Mejora: Documentar caso de uso
+ Mejora: Mostrar ejemplo de distribución física
+Tarjeta 26: Movimiento de Bodega - Entrada desde ProveedorTimestamp para Captura: 01:16:57 - 01:18:31Descripción de la Pantalla:Pantalla de ingreso de artículos a bodega desde orden de compra. Permite seleccionar orden de compra, tipo de movimiento (Entrada desde Proveedor), bodega destino, artículo, cantidad y tipo de cambio. Muestra saldo pendiente de recibir.Problemas/Fallas Actuales a Corregir:
+Falta validación de cantidad recibida vs. cantidad ordenada
+No hay confirmación visual de ingreso exitoso
+Checklist de Requerimientos:
+ Selector Orden de Compra (muestra órdenes pendientes)
+ Selector Tipo de Movimiento (Entrada desde Proveedor, Cambio entre Bodegas, Devolución, etc.)
+ Visualización: Cantidad Ordenada, Cantidad Recibida, Saldo Pendiente
+ Selector Bodega Destino
+ Campo Observación
+ Campo Tipo de Cambio (auto-completado)
+ Tabla de Artículos: Artículo, Cantidad Recibida, Precio Unitario
+ Botón "Agregar Artículo"
+ Botón "Guardar"
+ Validación: Cantidad recibida ≤ Cantidad ordenada
+ Validación: Artículo debe pertenecer a orden
+ Validación: Bodega debe existir
+ Mejora: Permitir recepción parcial
+ Mejora: Mostrar precio promedio actual de bodega
+ Mejora: Confirmación visual de ingreso exitoso
+Tarjeta 27: Movimiento de Bodega - Cambio entre BodegasTimestamp para Captura: 01:19:51 - 01:20:08Descripción de la Pantalla:Opción de movimiento de bodega para transferir artículos entre bodegas. Permite cambiar tipo de movimiento a "Cambio entre Bodegas" y especificar bodega origen y destino.Problemas/Fallas Actuales a Corregir:
+Interfaz poco clara para movimientos internos
+Falta validación de stock disponible
+Checklist de Requerimientos:
+ Selector Tipo de Movimiento: "Cambio entre Bodegas"
+ Selector Bodega Origen
+ Selector Bodega Destino
+ Tabla de Artículos: Artículo, Cantidad, Bodega Origen, Bodega Destino
+ Botón "Agregar Artículo"
+ Botón "Guardar"
+ Validación: Bodega Origen ≠ Bodega Destino
+ Validación: Stock disponible en bodega origen ≥
+continua con lo que resta de video
+Cantidad a mover
+ Validación: Artículo debe existir en bodega origen
+ Mejora: Mostrar stock actual en bodega origen
+ Mejora: Confirmación de movimiento completado
+Tarjeta 28: Movimiento de Bodega - Devolución a ProveedorTimestamp para Captura: 01:20:20 - 01:23:03Descripción de la Pantalla:Opción de movimiento de bodega para devoluciones a proveedor. Permite registrar nota de crédito por cantidad. Problema: cuando se ingresa nota de crédito, se saca de bodega a precio promedio, no al precio de la factura original.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Nota de crédito se contabiliza a precio promedio de bodega, no al precio de factura original
+Genera diferencia contable cuando hay múltiples facturas del mismo artículo
+No permite seleccionar factura específica para devolución
+Falta opción de elegir método de valuación (FIFO, LIFO, Promedio)
+Checklist de Requerimientos:
+ Selector Tipo de Movimiento: "Devolución a Proveedor"
+ Selector Proveedor
+ Selector Factura Original (muestra facturas del proveedor)
+ Tabla de Artículos: Artículo, Cantidad Original, Cantidad a Devolver, Precio Unitario
+ Campo Número de Nota de Crédito
+ Campo Fecha de Nota de Crédito
+ Botón "Agregar Artículo"
+ Botón "Guardar"
+ Validación: Cantidad a devolver ≤ Cantidad original
+ Validación: Factura debe pertenecer a proveedor seleccionado
+ Validación: Nota de crédito es única
+ Mejora: Permitir seleccionar factura específica para devolución
+ Mejora: Usar precio de factura original, no precio promedio
+ Mejora: Mostrar diferencia contable si hay
+ Mejora: Opción de elegir método de valuación (Promedio, FIFO, LIFO)
+Tarjeta 29: Cierre de Mes - InsumosTimestamp para Captura: 01:25:00 - 01:25:24Descripción de la Pantalla:Proceso de cierre de mes en módulo de insumos. Genera traspaso a contabilización, crea asientos contables y cierra el mes. Similar al proceso en contratistas.Problemas/Fallas Actuales a Corregir:
+Falta confirmación antes de cerrar
+No hay opción de reabrir mes cerrado
+Checklist de Requerimientos:
+ Listado de meses disponibles (estado abierto/cerrado)
+ Botón "Cerrar Mes"
+ Confirmación modal antes de cerrar
+ Validación: Solo administrador puede cerrar
+ Validación: No permitir cerrar mes futuro
+ Validación: Todos los movimientos deben estar contabilizados
+ Mejora: Mostrar resumen de movimientos a contabilizar
+ Mejora: Opción de reabrir mes (solo admin, con auditoría)
+ Mejora: Mostrar fecha y usuario que cerró el mes
+📌 LISTA: Módulo de MaquinariaTarjeta 30: Gestión de Maquinaria (No Implementado)Timestamp para Captura: 01:25:35 - 01:26:59Descripción de la Pantalla:Módulo de maquinaria para área agrícola. Permite registrar máquinas (tractores, pulverizadores, etc.), ver mantenciones, desgaste y hacer prorrateo de costos por cuartel o labor. Actualmente NO se usa.Problemas/Fallas Actuales a Corregir:
+Módulo no implementado
+Falta claridad sobre requisitos exactos
+No hay datos históricos
+Checklist de Requerimientos:
+ Tabla de Máquinas: Código, Descripción, Tipo, Estado
+ Botón "Agregar Máquina"
+ Formulario: Código, Descripción, Tipo (Tractor, Pulverizador, etc.), Año, Valor
+ Sección de Mantenciones: Fecha, Descripción, Costo
+ Botón "Agregar Mantenimiento"
+ Sección de Prorrateo: Distribución de costo por Cuartel/Labor
+ Cálculo automático de desgaste
+ Validación: Máquina debe tener código único
+ Validación: Costo de mantenimiento es número positivo
+ Mejora: Historial de mantenciones
+ Mejora: Cálculo de costo por hora de uso
+ Mejora: Integración con módulo de contratistas para prorrateo
+📌 LISTA: Módulo de ContabilidadTarjeta 31: Parametrización - Plan de CuentasTimestamp para Captura: 01:27:14 - 01:28:10Descripción de la Pantalla:Pantalla de parametrización del plan de cuentas. Permite crear, editar y eliminar cuentas contables. Para cada cuenta se define si requiere: Centro de Costo, Área de Negocio, Especie, Variedad, Elemento de Costo. Opción "No Imputable" bloquea uso de la cuenta.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre qué campos son obligatorios para cada cuenta
+No hay validación de coherencia entre cuentas relacionadas
+Checklist de Requerimientos:
+ Tabla de Cuentas: Código, Descripción, Tipo (Activo, Pasivo, Patrimonio, Ingreso, Gasto)
+ Botón "Agregar Cuenta"
+ Formulario: Código, Descripción, Tipo, Nivel
+ Checkboxes: Requiere Centro de Costo, Requiere Área de Negocio, Requiere Especie, Requiere Variedad, Requiere Elemento de Costo
+ Checkbox "No Imputable" (bloquea uso)
+ Botón "Guardar"
+ Tabla de cuentas con indicadores de requisitos
+ Validación: Código de cuenta único
+ Validación: Descripción no vacía
+ Validación: Nivel coherente con tipo de cuenta
+ Mejora: Búsqueda de cuentas
+ Mejora: Mostrar cuentas relacionadas (subcuentas)
+ Mejora: Validar que cuentas de balance cuadren
+Tarjeta 32: Parametrización - Auxiliares ContablesTimestamp para Captura: 01:29:08 - 01:29:54Descripción de la Pantalla:Sección de parametrización de auxiliares contables. Incluye: Personal (empleados contratados), Instituciones de Previsión, Tipos de Referencia, Área de Negocio, Elemento de Costo, Código Financiero, Tipos de Comprobante, Tipos de Impuestos.Problemas/Fallas Actuales a Corregir:
+Interfaz poco intuitiva con muchas opciones
+Falta claridad sobre relación entre auxiliares
+Checklist de Requerimientos:
+ Sección Personal: Tabla de empleados, Botón Agregar, Editar, Eliminar
+ Sección Instituciones de Previsión: Tabla, Botón Agregar
+ Sección Tipos de Referencia: Tabla, Botón Agregar
+ Sección Área de Negocio: Tabla, Botón Agregar
+ Sección Elemento de Costo: Tabla, Botón Agregar
+ Sección Código Financiero: Tabla, Botón Agregar
+ Sección Tipos de Comprobante: Tabla, Botón Agregar
+ Sección Tipos de Impuestos: Tabla, Botón Agregar
+ Validación: Códigos únicos en cada sección
+ Mejora: Organizar en pestañas por tipo de auxiliar
+ Mejora: Mostrar relaciones entre auxiliares
+ Mejora: Búsqueda global de auxiliares
+Tarjeta 33: Parametrización - Tipos de ReferenciaTimestamp para Captura: 01:30:06 - 01:30:57Descripción de la Pantalla:Sección de creación de tipos de referencia. Permite crear códigos de referencia (ej: 31) con descripción. Estos se usan en libro de compras para clasificar documentos. Requiere parametrización adicional de impuestos asociados.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre qué es tipo de referencia
+No hay validación de coherencia con impuestos
+Checklist de Requerimientos:
+ Tabla de Tipos de Referencia: Código, Descripción
+ Botón "Agregar Tipo de Referencia"
+ Formulario: Código, Descripción
+ Sección de Impuestos Asociados: Tipo de Impuesto, Porcentaje, Exento
+ Botón "Guardar"
+ Validación: Código único
+ Validación: Descripción no vacía
+ Mejora: Mostrar dónde se usa cada tipo de referencia
+ Mejora: Documentar tipos de referencia estándar (Factura, Boleta, etc.)
+ Mejora: Validar coherencia con impuestos
+Tarjeta 34: Parametrización - Área de NegocioTimestamp para Captura: 01:31:04 - 01:31:54Descripción de la Pantalla:Sección de parametrización de áreas de negocio. Permite crear áreas (ej: Industrial, Agrícola, Exportación). Se usa para clasificar costos y generar reportería por área.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre jerarquía de áreas
+No hay validación de uso
+Checklist de Requerimientos:
+ Tabla de Áreas de Negocio: Código, Descripción
+ Botón "Agregar Área"
+ Formulario: Código, Descripción, Área Padre (opcional)
+ Botón "Guardar"
+ Validación: Código único
+ Validación: Descripción no vacía
+ Mejora: Mostrar jerarquía de áreas
+ Mejora: Mostrar cantidad de cuentas por área
+ Mejora: Mostrar cantidad de movimientos por área
+Tarjeta 35: Parametrización - Elemento de CostoTimestamp para Captura: 01:31:54 - 01:35:03Descripción de la Pantalla:Sección de parametrización de elementos de costo. Permite crear elementos (ej: Movimiento de Envases, Limpieza de Envases, Reparación de Envases). Problema: hay muchos elementos de costo que ya no se usan pero no se pueden anular.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No permite anular elementos de costo (solo eliminar, lo que pierde datos históricos)
+Listado muy largo con elementos obsoletos
+Falta claridad sobre cuáles están activos
+Problema: Diferentes departamentos usan diferentes elementos para el mismo concepto
+Checklist de Requerimientos:
+ Tabla de Elementos de Costo: Código, Descripción, Estado
+ Botón "Agregar Elemento"
+ Formulario: Código, Descripción, Área de Negocio, Estado (Activo/Inactivo)
+ Botón "Guardar"
+ Validación: Código único
+ Validación: Descripción no vacía
+ Validación: No permitir eliminar elemento con movimientos históricos
+ Mejora: Opción "Anular" (marca como inactivo sin eliminar)
+ Mejora: Filtro por Estado (Activos/Inactivos)
+ Mejora: Mostrar cantidad de movimientos por elemento
+ Mejora: Mostrar último uso de elemento
+ Mejora: Asociar elementos de costo a áreas de negocio (restricción por departamento)
+Tarjeta 36: Parametrización - Código FinancieroTimestamp para Captura: 01:35:19 - 01:36:31Descripción de la Pantalla:Sección de parametrización de códigos financieros. Se usa para flujo de caja y movimientos de tesorería. Permite clasificar ingresos/egresos por tipo (ej: Ingreso Cereza, Ingreso Exportación, Venta Agroquímicos).Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre relación con cuentas contables
+No hay validación de coherencia
+Checklist de Requerimientos:
+ Tabla de Códigos Financieros: Código, Descripción, Tipo (Ingreso/Egreso)
+ Botón "Agregar Código"
+ Formulario: Código, Descripción, Tipo, Cuenta Contable Asociada
+ Botón "Guardar"
+ Validación: Código único
+ Validación: Descripción no vacía
+ Validación: Cuenta contable existe
+ Mejora: Mostrar dónde se usa cada código
+ Mejora: Mostrar flujo de caja por código
+ Mejora: Validar coherencia con tipo de movimiento
+Tarjeta 37: Parametrización - Tipos de ComprobanteTimestamp para Captura: 01:36:41 - 01:36:44Descripción de la Pantalla:Sección de parametrización de tipos de comprobante. Incluye: Apertura, Egreso, Ingreso, Proveedores, Traspaso, Venta.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre diferencia entre tipos
+No hay validación de uso
+Checklist de Requerimientos:
+ Tabla de Tipos de Comprobante: Código, Descripción, Tipo
+ Botón "Agregar Tipo"
+ Formulario: Código, Descripción, Tipo (Apertura, Egreso, Ingreso, Proveedores, Traspaso, Venta)
+ Botón "Guardar"
+ Validación: Código único
+ Validación: Descripción no vacía
+ Mejora: Documentar cada tipo de comprobante
+ Mejora: Mostrar cantidad de comprobantes por tipo
+ Mejora: Mostrar flujo de comprobantes
+Tarjeta 38: Parametrización - Tipos de ImpuestosTimestamp para Captura: 01:36:56 - 01:37:51Descripción de la Pantalla:Sección de parametrización de tipos de impuestos. Permite definir porcentajes de IVA, Retención, Honorarios. Para Honorarios, permite cambiar factor en diferentes fechas (ej: 14% hasta mayo, 15% desde junio).Problemas/Fallas Actuales a Corregir:
+Falta historial de cambios de factores
+No hay auditoría de quién cambió qué
+Checklist de Requerimientos:
+ Tabla de Tipos de Impuestos: Código, Descripción, Porcentaje
+ Botón "Agregar Tipo"
+ Formulario: Código, Descripción, Porcentaje
+ Para Honorarios: Opción de cambiar factor por fecha
+ Campo Factor Anterior
+ Campo Factor Actual
+ Campo Fecha de Cambio
+ Botón "Guardar"
+ Validación: Porcentaje entre 0 y 100
+ Validación: Código único
+ Mejora: Historial de cambios de factores
+ Mejora: Mostrar quién y cuándo cambió cada factor
+ Mejora: Validar coherencia con impuestos aplicados
+Tarjeta 39: Indicadores Financieros - Tasas de CambioTimestamp para Captura: 01:49:10 - 01:54:43Descripción de la Pantalla:Pantalla de indicadores financieros que muestra tasas de cambio (Dólar, Euro, Yuan) e indicadores (UF, UTM, IPC). Se actualiza automáticamente desde Banco Central a las 9 AM. Problema: no trae tasas para domingos y feriados.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No trae tipo de cambio para domingos y feriados
+Requiere ingreso manual para esos días
+Solo trae Dólar, Euro, Yuan (no otros indicadores necesarios)
+UF, UTM, IPC no se usan en reportería pero se muestran
+Checklist de Requerimientos:
+ Tabla de Indicadores: Fecha, Dólar, Euro, Yuan, UF, UTM, IPC
+ Selector de Año (para filtrar)
+ Actualización automática desde Banco Central (9 AM)
+ Campo manual para ingresar tasa si falta
+ Validación: Tasas son números positivos
+ Validación: Fecha no puede ser futura
+ Mejora: Traer tasas para domingos y feriados (usar última tasa disponible)
+ Mejora: Permitir seleccionar monedas a mostrar (Dólar, Euro, Yuan)
+ Mejora: Ocultar indicadores no usados (UF, UTM, IPC)
+ Mejora: Mostrar fecha de última actualización
+ Mejora: Historial de cambios de tasas
+Tarjeta 40: Procesos Diarios - Comprobantes ContablesTimestamp para Captura: 01:38:46 - 01:39:53Descripción de la Pantalla:Sección de procesos diarios donde se ingresan comprobantes contables. Permite crear movimientos de: Ingreso, Egreso, Traspaso. Opción de carga masiva de comprobantes desde archivo Excel.Problemas/Fallas Actuales a Corregir:
+Interfaz poco clara para ingreso manual
+Falta validación de campos obligatorios
+Checklist de Requerimientos:
+ Selector Tipo de Comprobante (Ingreso, Egreso, Traspaso)
+ Tabla de Líneas: Cuenta, Debe, Haber, Centro de Costo, Área de Negocio
+ Botón "Agregar Línea"
+ Botón "Eliminar Línea"
+ Campo Glosa (descripción del comprobante)
+ Botón "Guardar"
+ Validación: Debe = Haber
+ Validación: Cuentas existen en plan de cuentas
+ Validación: Campos obligatorios según cuenta
+ Mejora: Mostrar total Debe y Haber en tiempo real
+ Mejora: Mostrar si está cuadrado (verde) o descuadrado (rojo)
+ Mejora: Permitir copiar comprobante anterior
+Tarjeta 41: Carga Masiva de ComprobantesTimestamp para Captura: [01:39:53](/app
+continua
+/meetings/6a60394d4959970013159ad2?t=5993) - 01:44:13Descripción de la Pantalla:Funcionalidad de carga masiva de comprobantes contables desde archivo Excel. Permite subir archivo con formato específico, valida errores (período contable, campos obligatorios, cuadratura), y muestra reporte de inconsistencias. Se usa principalmente para centralización de remuneraciones.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Archivos quedan en el olvido si tienen errores
+Falta validación clara de formato
+Errores de tipo de dato (número vs. texto) son difíciles de encontrar
+No hay plantilla clara de formato esperado
+Checklist de Requerimientos:
+ Selector de Archivo (Excel)
+ Campo Glosa (descripción de la carga)
+ Botón "Subir Archivo"
+ Validación de Formato: Verifica estructura del archivo
+ Validación de Período Contable: Debe coincidir con mes actual
+ Validación de Campos Obligatorios: Según cuenta contable
+ Validación de Cuadratura: Debe = Haber
+ Reporte de Errores: Lista línea por línea
+ Visualización de Archivo: Muestra contenido del Excel
+ Botón "Guardar" (solo si no hay errores)
+ Validación: Archivo debe tener formato específico
+ Validación: Todas las cuentas deben existir
+ Validación: Montos son números (no texto)
+ Mejora: Descargar plantilla de formato correcto
+ Mejora: Validar tipo de dato (número vs. texto) y alertar
+ Mejora: Permitir guardar archivo con errores como "Borrador"
+ Mejora: Mostrar línea exacta donde está el error
+ Mejora: Sugerir correcciones automáticas si es posible
+Tarjeta 42: Visualización de Comprobante ContabilizadoTimestamp para Captura: 01:43:02 - 01:43:23Descripción de la Pantalla:Pantalla que muestra comprobante contable después de guardarlo. Permite visualizar detalles del asiento: Glosa, Líneas (Cuenta, Debe, Haber), Totales. Muestra archivo Excel de la carga masiva si aplica.Problemas/Fallas Actuales a Corregir:
+Falta opción de reversar comprobante
+No hay auditoría de cambios
+Checklist de Requerimientos:
+ Visualización de Comprobante: Número, Fecha, Glosa
+ Tabla de Líneas: Cuenta, Descripción, Debe, Haber
+ Totales: Debe Total, Haber Total
+ Validación: Debe = Haber
+ Botón "Ver PDF"
+ Botón "Descargar Excel" (si es carga masiva)
+ Botón "Reversar" (solo si está permitido)
+ Botón "Cerrar"
+ Mejora: Mostrar fecha y usuario que creó comprobante
+ Mejora: Mostrar historial de cambios
+ Mejora: Permitir agregar comentarios
+Tarjeta 43: Cierre de Mes - ContabilidadTimestamp para Captura: 25:00 - 25:53Descripción de la Pantalla:Pantalla de cierre de mes en módulo de contabilidad. Permite cerrar meses específicos. Una vez cerrado, impide ingreso de nuevos comprobantes.Problemas/Fallas Actuales a Corregir:
+Falta confirmación antes de cerrar
+No hay opción de reabrir mes cerrado
+Checklist de Requerimientos:
+ Listado de Meses: Código, Descripción, Estado (Abierto/Cerrado)
+ Botón "Cerrar Mes"
+ Confirmación Modal: "¿Está seguro de cerrar el mes?"
+ Validación: Solo administrador puede cerrar
+ Validación: No permitir cerrar mes futuro
+ Validación: Todos los módulos deben estar cerrados
+ Mejora: Mostrar resumen de movimientos antes de cerrar
+ Mejora: Opción de reabrir mes (solo admin, con auditoría)
+ Mejora: Mostrar fecha y usuario que cerró el mes
+ Mejora: Bloquear edición de comprobantes en mes cerrado
+📌 LISTA: Módulo de Gestión (No Implementado)Tarjeta 44: Sistema de Gestión - DashboardsTimestamp para Captura: 01:46:49 - 01:48:15Descripción de la Pantalla:Módulo de gestión que actualmente NO se usa. Se supone que muestra dashboards con gráficos de costos por especie, desviaciones de presupuesto, etc. Actualmente usan Power BI directo de base de datos (departamento de Mario).Problemas/Fallas Actuales a Corregir:
+Módulo muy básico
+No se usa (prefieren Power BI)
+Falta claridad sobre requisitos
+Mario (control de gestión) vuelve en agosto
+Checklist de Requerimientos:
+ Dashboard Principal: Resumen de costos por especie
+ Gráfico de Costos vs. Presupuesto
+ Gráfico de Desviaciones por Centro de Costo
+ Gráfico de Costos por Área de Negocio
+ Filtros: Período, Especie, Centro de Costo, Área de Negocio
+ Tabla de Detalle: Permite drill-down
+ Exportar a Excel/PDF
+ Validación: Solo mostrar datos de empresa actual
+ Mejora: Integración con Power BI
+ Mejora: Gráficos interactivos
+ Mejora: Alertas de desviaciones
+ Mejora: Comparativa período anterior
+📌 LISTA: Módulo de Permisos y SeguridadTarjeta 45: Gestión de Perfiles de UsuarioTimestamp para Captura: 13:11 - 14:22Descripción de la Pantalla:Sección de gestión de perfiles de usuario. Muestra perfiles predefinidos: Administrador, Digitador. Problema: cuando se solicita cambio de permisos, el proveedor cambia todos los perfiles similares, generando conflictos.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Cambio de permisos en un perfil afecta a todos los usuarios con ese perfil
+Falta flexibilidad para crear perfiles intermedios
+No hay control granular de permisos
+Cambios no solicitados se aplican a otros usuarios
+Checklist de Requerimientos:
+ Tabla de Perfiles: Código, Descripción, Cantidad de Usuarios
+ Botón "Agregar Perfil"
+ Formulario: Código, Descripción, Módulos Permitidos
+ Sección de Permisos: Checkboxes por módulo y función
+ Botón "Guardar"
+ Validación: Código de perfil único
+ Validación: Descripción no vacía
+ Mejora: Crear perfiles intermedios (ej: Digitador Avanzado)
+ Mejora: Mostrar impacto de cambio (cuántos usuarios afectados)
+ Mejora: Confirmación antes de aplicar cambios a múltiples usuarios
+ Mejora: Historial de cambios de permisos
+ Mejora: Opción de aplicar cambio solo a usuario específico
+Tarjeta 46: Permisos por Módulo - AdministradorTimestamp para Captura: 16:07 - 16:37Descripción de la Pantalla:Pantalla que muestra permisos del perfil Administrador. Tiene acceso a todos los módulos y todas las parametrizaciones. Incluye módulo de gestión (aunque no se usa).Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre qué puede hacer cada permiso
+No hay restricción de datos por empresa
+Checklist de Requerimientos:
+ Tabla de Módulos: Nombre, Acceso (Sí/No)
+ Tabla de Funciones por Módulo: Crear, Leer, Editar, Eliminar, Cerrar
+ Checkbox para cada combinación módulo-función
+ Botón "Guardar"
+ Validación: Administrador siempre tiene acceso total
+ Mejora: Mostrar descripción de cada función
+ Mejora: Opción de copiar permisos de otro perfil
+ Mejora: Mostrar impacto de cambios
+Tarjeta 47: Permisos por Módulo - DigitadorTimestamp para Captura: 16:37 - 17:10Descripción de la Pantalla:Pantalla que muestra permisos del perfil Digitador. Tiene acceso limitado: solo puede ingresar información, no puede parametrizar, no puede cerrar mes, no puede hacer traspaso contable.Problemas/Fallas Actuales a Corregir:
+Falta flexibilidad para crear perfiles intermedios
+No hay opción de permisos granulares por usuario
+Checklist de Requerimientos:
+ Tabla de Módulos: Nombre, Acceso (Sí/No)
+ Tabla de Funciones por Módulo: Crear, Leer, Editar, Eliminar, Cerrar
+ Checkbox para cada combinación módulo-función
+ Botón "Guardar"
+ Validación: Digitador no puede parametrizar
+ Validación: Digitador no puede cerrar mes
+ Validación: Digitador no puede hacer traspaso contable
+ Mejora: Crear perfil intermedio (Digitador Avanzado)
+ Mejora: Permitir permisos granulares por usuario
+ Mejora: Mostrar descripción de cada función
+Tarjeta 48: Restricción de Datos por EmpresaTimestamp para Captura: 11:29 - 11:50Descripción de la Pantalla:Problema identificado: Cuando se está trabajando en una empresa (ej: ALM), el sistema permite seleccionar centros de costo de otra empresa (ej: ALMAUE). Esto genera errores de contabilización.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No hay restricción de datos por empresa
+Permite seleccionar centros de costo de otras empresas
+Permite crear bodegas de otras empresas
+Genera errores contables
+Checklist de Requerimientos:
+ Validación: Centro de costo debe pertenecer a empresa actual
+ Validación: Bodega debe pertenecer a empresa actual
+ Validación: Proveedor debe estar disponible para empresa actual
+ Validación: Artículo debe estar disponible para empresa actual
+ Validación: Cuenta contable debe estar disponible para empresa actual
+ Mejora: Filtrar todos los dropdowns por empresa actual
+ Mejora: Mostrar empresa actual de forma destacada
+ Mejora: Bloquear cambio de empresa durante operación
+ Mejora: Auditoría de cambios de empresa
+Tarjeta 49: Gestión de UsuariosTimestamp para Captura: 01:39:02 - 01:39:11Descripción de la Pantalla:Sección de gestión de usuarios (no mostrada en detalle en video). Permite crear, editar y eliminar usuarios, asignar perfiles y empresas.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre gestión de usuarios
+No hay auditoría de accesos
+Checklist de Requerimientos:
+ Tabla de Usuarios: Nombre, Email, Perfil, Empresas Asignadas, Estado
+ Botón "Agregar Usuario"
+ Formulario: Nombre, Email, Contraseña, Perfil, Empresas (multi-select)
+ Botón "Guardar"
+ Validación: Email único
+ Validación: Contraseña cumple requisitos de seguridad
+ Validación: Usuario debe tener al menos un perfil
+ Validación: Usuario debe tener acceso a al menos una empresa
+ Mejora: Cambio de contraseña
+ Mejora: Desactivar usuario (no eliminar)
+ Mejora: Historial de accesos
+ Mejora: Auditoría de cambios de permisos
+Tarjeta 50: Sesiones Compartidas - Problema de EmpresaTimestamp para Captura: 01:58 - 02:45Descripción de la Pantalla:Problema identificado: Cuando dos personas comparten un usuario, si una está trabajando en empresa LM y la otra en AlmaWeb, la sesión se queda en LM. Esto permite que la segunda persona ingrese información en empresa equivocada sin darse cuenta.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: Sesiones compartidas generan errores de empresa
+No hay validación de cambio de empresa
+Falta confirmación visual de empresa actual
+Sesión se cierra automáticamente pero puede quedar activa
+Checklist de Requerimientos:
+ Validación: Una sesión por usuario (no compartir)
+ Validación: Cerrar sesión anterior si usuario inicia nueva sesión
+ Mostrar Empresa Actual: Destacado en interfaz
+ Confirmación: Mostrar alerta si se cambia de empresa
+ Validación: Bloquear operaciones si empresa no coincide
+ Mejora: Mostrar usuario actual en interfaz
+ Mejora: Mostrar hora de última actividad
+ Mejora: Cerrar sesión automática después de inactividad
+ Mejora: Auditoría de cambios de empresa
+📌 LISTA: Configuración GeneralTarjeta 51: Parámetros Generales - EmpresasTimestamp para Captura: 01:48:49 - 01:49:37Descripción de la Pantalla:Sección de parámetros generales donde se crean empresas. Permite crear empresas que aparecerán en selector de login. Incluye parametrización de: Especie, Variedad, Fondos (campos), Tipo de Terreno, Ubicación Geográfica.Problemas/Fallas Actuales a Corregir:
+Muchos parámetros que no se usan (Fondos, Ubicación Geográfica)
+Falta claridad sobre qué es obligatorio
+Checklist de Requerimientos:
+ Tabla de Empresas: Código, Nombre, RUT, Estado
+ Botón "Agregar Empresa"
+ Formulario: Código, Nombre, RUT, Dirección, Teléfono, Email
+ Sección de Parámetros: Especie, Variedad, Fondos, Tipo de Terreno
+ Botón "Guardar"
+ Validación: Código único
+ Validación: RUT único
+ Validación: Nombre no vacío
+ Mejora: Eliminar parámetros no usados (Fondos, Ubicación Geográfica)
+ Mejora: Mostrar cantidad de usuarios por empresa
+ Mejora: Mostrar cantidad de movimientos por empresa
+Tarjeta 52: Parámetros Generales - Especie y VariedadTimestamp para Captura: 01:49:10 - 01:49:46Descripción de la Pantalla:Sección de parametrización de especies (ej: Cereza, Nectarina) y variedades (ej: Bing, Lapins). Se usa para clasificación de costos y reportería.Problemas/Fallas Actuales a Corregir:
+Falta claridad sobre jerarquía especie-variedad
+No hay validación de uso
+Checklist de Requerimientos:
+ Tabla de Especies: Código, Descripción
+ Botón "Agregar Especie"
+ Tabla de Variedades (filtrada por especie): Código, Descripción
+ Botón "Agregar Variedad"
+ Validación: Código único por especie
+ Validación: Descripción no vacía
+ Mejora: Mostrar cantidad de movimientos por especie/variedad
+ Mejora: Mostrar jerarquía especie-variedad
+ Mejora: Opción de cambiar vigencia (no eliminar)
+Tarjeta 53: Parámetros Generales - Centros de CostoTimestamp para Captura: 01:49:37 - 01:50:04Descripción de la Pantalla:Sección de parametrización de centros de costo. Permite crear, editar y cambiar vigencia de centros de costo. Importante para área agrícola.Problemas/Fallas Actuales a Corregir:
+Permite crear centros de costo de otra empresa
+Falta validación de empresa actual
+Checklist de Requerimientos:
+ Tabla de Centros de Costo: Código, Descripción, Empresa, Estado
+ Filtro por Empresa (mostrar solo empresa actual)
+ Botón "Agregar Centro de Costo"
+ Formulario: Código, Descripción, Empresa (auto-completado), Tipo (Cuartel, Bodega, Oficina, etc.)
+ Botón "Guardar"
+ Validación: Código único por empresa
+ Validación: Centro de costo debe pertenecer a empresa actual
+ Validación: No permitir crear centro de costo de otra empresa
+ Mejora: Opción "Cambiar Vigencia" (no eliminar)
+ Mejora: Mostrar cantidad de movimientos por centro de costo
+ Mejora: Mostrar jerarquía de centros de costo
+Tarjeta 54: Indicadores Financieros - Configuración de MonedasTimestamp para Captura: 01:52:10 - 01:54:43Descripción de la Pantalla:Sección de configuración de indicadores financieros. Actualmente muestra: Dólar, Euro, Yuan, UF, UTM, IPC. Problema: UF, UTM, IPC no se usan en reportería pero se muestran.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No trae tasas para domingos y feriados
+Muestra indicadores no usados (UF, UTM, IPC)
+Falta opción de seleccionar monedas a mostrar
+Requiere ingreso manual para días sin tasa
+Checklist de Requerimientos:
+ Tabla de Monedas Configuradas: Código, Descripción, Activa
+ Checkboxes: Dólar, Euro, Yuan, UF, UTM, IPC
+ Botón "Guardar"
+ Validación: Al menos una moneda debe estar activa
+ Mejora: Permitir seleccionar monedas a mostrar
+ Mejora: Ocultar indicadores no usados
+ Mejora: Traer tasas para domingos y feriados (usar última disponible)
+ Mejora: Permitir ingreso manual de tasas faltantes
+ Mejora: Mostrar fecha de última actualización
+Tarj
+continua
+eta 55: Indicadores Financieros - Tasas Faltantes (Domingos y Feriados)Timestamp para Captura: 01:53:27 - 01:54:17Descripción de la Pantalla:Problema identificado: Los domingos y feriados no traen tipo de cambio automático. Falta el día 19 (feriado) en el listado. Requiere ingreso manual de tasa.Problemas/Fallas Actuales a Corregir:
+CRÍTICO: No trae tasas para domingos y feriados
+Falta claridad sobre qué día falta
+Requiere búsqueda manual y ingreso de tasa
+Solo se ingresa Dólar, otros indicadores quedan en blanco
+Checklist de Requerimientos:
+ Validación: Detectar días sin tasa (domingos y feriados)
+ Mostrar advertencia: "Falta tasa para día X"
+ Campo manual para ingresar Dólar
+ Campo manual para ingresar Euro
+ Campo manual para ingresar Yuan
+ Botón "Guardar"
+ Validación: Tasas son números positivos
+ Mejora: Usar última tasa disponible automáticamente
+ Mejora: Permitir ingresar todas las monedas, no solo Dólar
+ Mejora: Mostrar fecha de última tasa disponible
+ Mejora: Sugerir tasa anterior como valor por defecto
+📌 LISTA: Mejoras Transversales y CríticasTarjeta 56: 🔴 CRÍTICO - Validación de Empresa ActualTimestamp para Captura: 11:29 - 01:10:44Descripción del Problema:En múltiples módulos (Compras, Insumos, Contabilidad), el sistema permite seleccionar datos de empresas diferentes a la actual. Esto genera errores contables graves.Impacto:
+Errores en contabilización
+Datos mezclados entre empresas
+Dificultad en auditoría
+Checklist de Requerimientos:
+ Implementar filtro de empresa en TODOS los dropdowns
+ Validar empresa actual en cada operación
+ Mostrar empresa actual de forma destacada en interfaz
+ Bloquear cambio de empresa durante operación
+ Auditoría de cambios de empresa
+ Pruebas de validación en todos los módulos
+ Documentación de restricciones por empresa
+Tarjeta 57: 🔴 CRÍTICO - Tipo de Cambio en Órdenes de CompraTimestamp para Captura: 37:33 - 53:37Descripción del Problema:El tipo de cambio mostrado al crear orden de compra no coincide con el que se aplica al recepcionar. Se usa fecha de recepción, no de creación. Genera diferencias contables significativas.Impacto:
+Diferencias contables entre costo y pago
+Confusión en reportería
+Errores en flujo de caja
+Checklist de Requerimientos:
+ Aclarar en interfaz que tipo de cambio se aplica en recepción
+ Mostrar tipo de cambio de fecha de creación (informativo)
+ Mostrar tipo de cambio de fecha de recepción (el que se aplicará)
+ Permitir modificar tipo de cambio solo en recepción
+ Bloquear modificación de tipo de cambio en registro de compra
+ Documentar política de tipo de cambio
+ Pruebas de coherencia de tipo de cambio
+Tarjeta 58: 🔴 CRÍTICO - Duplicación de ArtículosTimestamp para Captura: 30:20 - 34:00Descripción del Problema:Maestro de artículos permite crear duplicados sin validación. Existe duplicación entre módulos de Compras e Insumos. Genera confusión y errores en stock.Impacto:
+Stock fragmentado en múltiples registros
+Reportería incorrecta
+Dificultad en búsqueda de artículos
+Checklist de Requerimientos:
+ Validación: Combinación Familia + Subfamilia + Descripción única
+ Mostrar alerta si artículo ya existe
+ Bloquear creación de duplicados
+ Búsqueda de artículos existentes antes de crear
+ Unificar maestro de artículos (no duplicar en Compras e Insumos)
+ Migración de datos históricos
+ Pruebas de validación de duplicados
+Tarjeta 59: 🔴 CRÍTICO - Visualización de Múltiples RegistrosTimestamp para Captura: 04:54 - 10:50Descripción del Problema:En módulo de Contratistas, al agregar segunda tarifa, la primera desaparece de la visualización. No hay listado persistente de registros ingresados. Genera dudas sobre si se guardó correctamente.Impacto:
+Incertidumbre sobre datos guardados
+Errores de ingreso no detectados
+Necesidad de reversar y reintentar
+Checklist de Requerimientos:
+ Tabla persistente mostrando todos los registros
+ Agregar nuevo registro sin eliminar anteriores
+ Opción de editar o eliminar registros individuales
+ Confirmación visual al agregar cada registro
+ Vista previa de todos los registros antes de guardar
+ Pruebas de persistencia de datos
+Tarjeta 60: 🔴 CRÍTICO - Validación de Coherencia Afecto/ExentoTimestamp para Captura: 42:19 - 01:03:15Descripción del Problema:Permite crear orden de compra exenta pero luego ingresar factura afecta. No hay validación de coherencia. Genera errores contables.Impacto:
+Asientos contables incorrectos
+Diferencias en IVA
+Errores en reportería de impuestos
+Checklist de Requerimientos:
+ Validación: Tipo de documento (Afecto/Exento) debe coincidir entre orden y factura
+ Mostrar advertencia si no coinciden
+ Bloquear ingreso de factura si tipo no coincide
+ Documentar casos especiales (facturas mixtas)
+ Pruebas de validación de coherencia
+Tarjeta 61: 🟡 IMPORTANTE - Notificaciones de AprobaciónTimestamp para Captura: 48:17 - 49:22Descripción del Problema:No llega notificación por correo cuando se asigna orden de compra para aprobación. Falta indicador visual de órdenes pendientes.Impacto:
+Órdenes olvidadas sin aprobar
+Retrasos en procesos
+Falta de visibilidad
+Checklist de Requerimientos:
+ Notificación visual (badge rojo) de órdenes pendientes
+ Opción de notificación por correo (configurable)
+ Indicador en dashboard de órdenes pendientes
+ Recordatorio automático después de X días
+ Historial de aprobaciones/rechazos
+ Pruebas de notificaciones
+Tarjeta 62: 🟡 IMPORTANTE - Búsqueda Global de ÓrdenesTimestamp para Captura: 44:12 - 45:32Descripción del Problema:Para buscar orden de compra, debe seleccionar estado primero. Si no sabe el estado, debe buscar módulo por módulo. Búsqueda por proveedor no funciona en todos los estados.Impacto:
+Búsqueda lenta y tediosa
+Órdenes perdidas
+Baja productividad
+Checklist de Requerimientos:
+ Búsqueda global por número de orden (todos los estados)
+ Búsqueda por proveedor (todos los estados)
+ Búsqueda por rango de fechas
+ Filtros opcionales por estado
+ Ordenamiento por fecha (más reciente primero)
+ Mostrar estado con color
+ Pruebas de búsqueda global
+Tarjeta 63: 🟡 IMPORTANTE - Anulación de Elementos de CostoTimestamp para Captura: 01:34:46 - 01:35:13Descripción del Problema:No permite anular elementos de costo (solo eliminar, lo que pierde datos históricos). Listado muy largo con elementos obsoletos. Falta claridad sobre cuáles están activos.Impacto:
+Listado confuso con elementos no usados
+Pérdida de datos históricos si se elimina
+Dificultad en búsqueda
+Checklist de Requerimientos:
+ Opción "Anular" (marca como inactivo sin eliminar)
+ Filtro por Estado (Activos/Inactivos)
+ Mostrar cantidad de movimientos por elemento
+ Mostrar último uso de elemento
+ Validación: No permitir eliminar elemento con movimientos
+ Búsqueda de elementos
+ Pruebas de anulación
+Tarjeta 64: 🟡 IMPORTANTE - Historial de Cambios de FactoresTimestamp para Captura: 01:37:07 - 01:38:01Descripción del Problema:Cuando se cambia factor de honorarios, no hay historial de quién cambió qué y cuándo. Falta auditoría.Impacto:
+Imposible auditar cambios
+Confusión sobre factores aplicados
+Falta de trazabilidad
+Checklist de Requerimientos:
+ Historial de cambios de factores
+ Mostrar: Factor Anterior, Factor Nuevo, Fecha, Usuario
+ Validación: Cambios solo por administrador
+ Auditoría de cambios
+ Pruebas de historial
+Tarjeta 65: 🟡 IMPORTANTE - Recepción Parcial de ÓrdenesTimestamp para Captura: 01:17:20 - 01:18:31Descripción del Problema:No hay opción clara de recepción parcial. Muestra saldo pendiente pero no permite ingresar cantidad parcial de forma clara.Impacto:
+Órdenes quedan en estado parcial sin claridad
+Dificultad en seguimiento
+Errores en stock
+Checklist de Requerimientos:
+ Campo "Cantidad a Recibir" (permite menos que cantidad ordenada)
+ Mostrar Cantidad Ordenada, Cantidad Recibida, Saldo Pendiente
+ Validación: Cantidad a recibir ≤ Cantidad ordenada
+ Opción de recibir en múltiples ocasiones
+ Mostrar estado: Pendiente, Parcial, Total
+ Pruebas de recepción parcial
+Tarjeta 66: 🟡 IMPORTANTE - Método de Valuación de InventarioTimestamp para Captura: 01:20:20 - 01:23:03Descripción del Problema:Devoluciones a proveedor se contabilizan a precio promedio de bodega, no al precio de factura original. Genera diferencias contables cuando hay múltiples facturas del mismo artículo.Impacto:
+Diferencias contables en devoluciones
+Reportería de costo incorrecta
+Auditoría difícil
+Checklist de Requerimientos:
+ Permitir seleccionar factura específica para devolución
+ Usar precio de factura original, no precio promedio
+ Opción de elegir método de valuación (Promedio, FIFO, LIFO)
+ Mostrar diferencia contable si hay
+ Validación: Cantidad a devolver ≤ Cantidad original
+ Pruebas de valuación de inventario
+Tarjeta 67: 🟡 IMPORTANTE - Validación de Cuadratura en Tiempo RealTimestamp para Captura: 40:30 - 42:15Descripción del Problema:No muestra advertencia de "Descuadrado" hasta intentar guardar. Falta claridad sobre cuál es la diferencia exacta. Obliga a rehacer todo si hay error.Impacto:
+Retrasos en ingreso de datos
+Frustración del usuario
+Errores no detectados a tiempo
+Checklist de Requerimientos:
+ Validación en tiempo real: Mostrar si suma ≠ total
+ Mostrar diferencia exacta en rojo
+ Bloquear guardar si hay diferencia
+ Mostrar advertencia "Distribución descuadrada"
+ Permitir ajuste automático de última línea
+ Mostrar total Debe y Haber en tiempo real
+ Pruebas de validación en tiempo real
+Tarjeta 68: 🟡 IMPORTANTE - Plantilla de Carga MasivaTimestamp para Captura: 01:40:06 - 01:44:13Descripción del Problema:Archivos de carga masiva quedan en el olvido si tienen errores. Falta validación clara de formato. Errores de tipo de dato (número vs. texto) son difíciles de encontrar.Impacto:
+Archivos perdidos
+Retrasos en carga
+Errores no detectados
+Checklist de Requerimientos:
+ Descargar plantilla de formato correcto
+ Validar tipo de dato (número vs. texto) y alertar
+ Permitir guardar archivo con errores como "Borrador"
+ Mostrar línea exacta donde está el error
+ Sugerir correcciones automáticas si es posible
+ Historial de cargas (exitosas y fallidas)
+ Pruebas de validación de formato
+Tarjeta 69: 🟢 MEJORA - Integración con Power BITimestamp para Captura: 01:46:49 - 01:48:15Descripción del Problema:Módulo de gestión muy básico. Actualmente usan Power BI directo de base de datos. Falta integración clara.Impacto:
+Reportería lenta
+Falta de dashboards en ERP
+Dependencia de herramienta externa
+Checklist de Requerimientos:
+ Integración con Power BI
+ Dashboards en ERP
+ Gráficos interactivos
+ Filtros por período, especie, centro de costo
+ Exportar a Excel/PDF
+ Alertas de desviaciones
+ Comparativa período anterior
+ Pruebas de integración
+Tarjeta 70: 🟢 MEJORA - Auditoría y TrazabilidadTimestamp para Captura: [Transversal en todo el video]Descripción del Problema:Falta auditoría clara de quién cambió qué y cuándo en múltiples módulos. Especialmente en: cambios de permisos, cambios de factores, cambios de empresa, reversiones.Impacto:
+Imposible auditar cambios
+Falta de trazabilidad
+Dificultad en investigación de errores
+Checklist de Requerimientos:
+ Auditoría de cambios en plan de cuentas
+ Auditoría de cambios en elementos de costo
+ Auditoría de cambios de factores
+ Auditoría de cambios de empresa
+ Auditoría de reversiones
+ Auditoría de cambios de permisos
+ Mostrar: Usuario, Fecha, Cambio Anterior, Cambio Nuevo
+ Reportería de auditoría
+ Pruebas de auditoría
+📊 Resumen Ejecutivo de TarjetasTotal de Tarjetas: 70Distribución por Módulo:
+🔵 Módulo de Contratistas: 9 tarjetas
+🔵 Módulo de Compras: 7 tarjetas
+🔵 Módulo de Insumos y Bodega: 9 tarjetas
+🔵 Módulo de Maquinaria: 1 tarjeta
+🔵 Módulo de Contabilidad: 13 tarjetas
+🔵 Módulo de Gestión: 1 tarjeta
+🔵 Módulo de Permisos y Seguridad: 6 tarjetas
+🔵 Configuración General: 5 tarjetas
+🔴 Mejoras Críticas: 6 tarjetas
+🟡 Mejoras Importantes: 8 tarjetas
+🟢 Mejoras Generales: 5 tarjetas
+Problemas Críticos Identificados: 6
+Validación de empresa actual
+Tipo de cambio en órdenes
+Duplicación de artículos
+Visualización de múltiples registros
+Validación Afecto/Exento
+Sesiones compartidas
+Mejoras Importantes: 8
+Notificaciones de aprobación
+Búsqueda global
+Anulación de elementos
+Historial de cambios
+Recepción parcial
+Método de valuación
+Validación en tiempo real
+Plantilla de carga masiva
+🎯 Próximos Pasos Recomendados
+Priorizar Tarjetas Críticas: Resolver los 6 problemas críticos en primer sprint
+Agrupar por Dependencias: Algunas tarjetas dependen de otras (ej: Validación de empresa debe estar antes de otras)
+Estimar Esfuerzo: Cada tarjeta requiere estimación de puntos de historia
+Asignar a Sprints: Distribuir tarjetas en sprints de 2 semanas
+Validar con Stakeholders: Confirmar requisitos con equipo de negocio
+Preparar Ambiente de Pruebas: Crear datos de prueba para cada módulo
+Documentar Decisiones: Registrar decisiones de diseño en cada tarjeta
+Nota: Esta estructura está lista para ser importada a Trello. Cada tarjeta incluye timestamps precisos para captura de pantalla, descripción detallada, problemas identificados y checklist de requerimientos específicos.

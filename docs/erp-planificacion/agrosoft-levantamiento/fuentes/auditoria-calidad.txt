@@ -1,0 +1,864 @@
+🔍 REPORTE DE AUDITORÍA DE CALIDAD
+Análisis de Discrepancias - Documento de Tarjetas Trello vs. Transcripción Original
+Fecha de Auditoría: 2026-07-22Auditor: Analista de Sistemas Senior - Auditor de CalidadPeríodo Auditado: Reunión 6a60394d4959970013159ad2 (2026-07-22)Documento Auditado: Estructura de 70 Tarjetas Trello para Nuevo ERP
+
+📋 RESUMEN EJECUTIVO
+Categoría
+Cantidad
+Estado
+Alucinaciones Detectadas
+8
+⚠️ CRÍTICO
+Omisiones Críticas
+12
+⚠️ CRÍTICO
+Errores de Timestamp
+15
+⚠️ CRÍTICO
+Inconsistencias Menores
+23
+🟡 IMPORTANTE
+Elementos Correctos
+62
+✅ VERIFICADO
+Tasa de Precisión General
+73.5%
+🟡 ACEPTABLE
+
+🔴 SECCIÓN 1: ALUCINACIONES DETECTADAS
+Alucinación #1: Módulo de Maquinaria - Funcionalidad Detallada
+Ubicación en Documento: Tarjeta 30 - Gestión de Maquinaria
+Afirmación del Documento:
+"Permite registrar máquinas (tractores, pulverizadores, etc.), ver mantenciones, desgaste y hacer prorrateo de costos por cuartel o labor."
+Verificación en Transcripción:
+01:25:35 - 01:26:59
+Hallazgo:El video SOLO menciona que el módulo de maquinaria "es para el área agrícola, que tiene tractores, tiene pulverizador" y que "sería bueno implementarlo". NO se muestra ninguna pantalla del módulo. El documento describe funcionalidades específicas (prorrateo por cuartel, cálculo de desgaste) que NUNCA fueron mencionadas en la reunión.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar descripción a: "Módulo no implementado actualmente. Se menciona que sería útil para área agrícola para registrar máquinas (tractores, pulverizadores) y ver mantenciones, pero no se especifican funcionalidades exactas."
+
+Alucinación #2: Módulo de Gestión - Dashboards Específicos
+Ubicación en Documento: Tarjeta 44 - Sistema de Gestión - Dashboards
+Afirmación del Documento:
+"Dashboard Principal: Resumen de costos por especie, Gráfico de Costos vs. Presupuesto, Gráfico de Desviaciones por Centro de Costo, Gráfico de Costos por Área de Negocio"
+Verificación en Transcripción:
+01:46:49 - 01:48:15
+Hallazgo:El video menciona: "la gestión que nos daba el sistema era muy básica" y "no sé, los gráficos de costos de las especies. Si hay alguna desviación con el presupuesto." NO se especifican dashboards exactos. El documento lista 4 gráficos específicos que NO fueron mencionados.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar a: "Módulo no usado actualmente. Se menciona necesidad de gráficos de costos por especie y desviaciones de presupuesto, pero no se especifican dashboards exactos. Actualmente usan Power BI directo de base de datos."
+
+Alucinación #3: Tarjeta 11 - Opción "Por Hectárea" con Distribución Detallada
+Ubicación en Documento: Tarjeta 11 - Selección de Centro de Costo por Hectárea
+Afirmación del Documento:
+"En modo Por Hectárea: Selector de Hectáreas/Cuarteles con montos individuales"
+Verificación en Transcripción:
+38:34 - 40:04
+Hallazgo:El video menciona: "por ejemplo acá lo intentamos hacer por hectárea, pero el problema es que si queda mal ingresado una hectárea, queda eternamente mal parametrizado". NO se muestra cómo funciona la opción "Por Hectárea". El documento asume una funcionalidad específica que NO fue demostrada.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar a: "Opción 'Por Hectárea' mencionada pero con problemas: no permite editar para eliminar solo un cuartel (es todo o nada). Funcionalidad exacta no fue demostrada en detalle."
+
+Alucinación #4: Tarjeta 28 - Método de Valuación FIFO/LIFO
+Ubicación en Documento: Tarjeta 28 - Movimiento de Bodega - Devolución a Proveedor
+Afirmación del Documento:
+"Opción de elegir método de valuación (Promedio, FIFO, LIFO)"
+Verificación en Transcripción:
+01:20:20 - 01:23:03
+Hallazgo:El video menciona: "¿Qué pasa? Que cuando yo tengo una nota de crédito que va directamente a una factura en específico No me deja sacar esa cantidad por el precio de la factura, me la saca de bodega a precio promedio." NO se menciona FIFO o LIFO. El documento asume una mejora que NO fue solicitada.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar a: "Mejora: Permitir seleccionar factura específica para devolución y usar precio de factura original, no precio promedio. (Nota: FIFO/LIFO no fueron mencionados)"
+
+Alucinación #5: Tarjeta 49 - Gestión Completa de Usuarios
+Ubicación en Documento: Tarjeta 49 - Gestión de Usuarios
+Afirmación del Documento:
+"Sección de gestión de usuarios (no mostrada en detalle en video). Permite crear, editar y eliminar usuarios, asignar perfiles y empresas."
+Verificación en Transcripción:
+Búsqueda exhaustiva: NO EXISTE MENCIÓN de gestión de usuarios en el video
+Hallazgo:El documento crea una tarjeta completa para un módulo que NUNCA fue mencionado en la reunión. El video se enfoca en perfiles (Administrador, Digitador) pero NO en gestión de usuarios.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:ELIMINAR Tarjeta 49 completamente. No hay evidencia de que se haya discutido gestión de usuarios.
+
+Alucinación #6: Tarjeta 52 - Parámetros de Especie y Variedad
+Ubicación en Documento: Tarjeta 52 - Parámetros Generales - Especie y Variedad
+Afirmación del Documento:
+"Se usa para clasificación de costos y reportería."
+Verificación en Transcripción:
+01:49:10 - 01:49:46
+Hallazgo:El video menciona: "la especie, variedad, los fondos, que en realidad son los campos, que esto no tiene mayor, como mayor relevancia." NO se menciona que se use para clasificación de costos. El documento asume un uso que NO fue confirmado.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar a: "Parámetros de especie y variedad. El video menciona que 'no tiene mayor relevancia' en el sistema actual."
+
+Alucinación #7: Tarjeta 54 - Configuración de Monedas Seleccionables
+Ubicación en Documento: Tarjeta 54 - Indicadores Financieros - Configuración de Monedas
+Afirmación del Documento:
+"Checkboxes: Dólar, Euro, Yuan, UF, UTM, IPC"
+Verificación en Transcripción:
+01:52:10 - 01:54:43
+Hallazgo:El video menciona: "yo creo que sería importante que claro aquí fuera dólar, euro y yuan. En realidad la UEF, la UTM y el IPC no son indicadores que usemos directamente". NO se menciona opción de seleccionar monedas. El documento asume una funcionalidad que NO fue solicitada.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:Cambiar a: "Mejora: Permitir seleccionar monedas a mostrar (Dólar, Euro, Yuan). Ocultar indicadores no usados (UF, UTM, IPC)."
+
+Alucinación #8: Tarjeta 70 - Auditoría Transversal Completa
+Ubicación en Documento: Tarjeta 70 - Auditoría y Trazabilidad
+Afirmación del Documento:
+"Auditoría de cambios en plan de cuentas, Auditoría de cambios en elementos de costo, Auditoría de cambios de factores, Auditoría de cambios de empresa, Auditoría de reversiones, Auditoría de cambios de permisos"
+Verificación en Transcripción:
+Búsqueda exhaustiva: NO EXISTE MENCIÓN de auditoría transversal
+Hallazgo:El documento crea una tarjeta de mejora que NUNCA fue mencionada en la reunión. Se menciona historial de cambios de factores 01:37:07, pero NO se solicita auditoría completa de todos los módulos.
+Veredicto: ❌ ALUCINACIÓN CONFIRMADA
+Corrección Necesaria:ELIMINAR Tarjeta 70 o REDUCIR a: "Mejora: Historial de cambios de factores de honorarios (mostrar: Factor Anterior, Factor Nuevo, Fecha, Usuario)"
+
+🟡 SECCIÓN 2: OMISIONES CRÍTICAS
+Omisión #1: Problema de Sesiones Compartidas - Contexto Incompleto
+Ubicación en Documento: Tarjeta 50 - Sesiones Compartidas - Problema de Empresa
+Problema Identificado:El documento menciona el problema pero NO captura la solución propuesta ni el contexto completo.
+Transcripción Original:01:39 - 02:45
+"Si quisiéramos implementar más usuarios, entonces hay veces en que un usuario lo ocupan 2 personas. En ese caso hay que tener mucho ojo con el tema de la empresa, porque si yo me meto a LM y estoy trabajando en LM y la persona que está trabajando con el mismo usuario se vuelve a meter y esa persona estaba trabajando en AlmaWeb, como yo soy la última persona que está trabajando en LM, le queda en LM."
+Hallazgo:El documento menciona el problema pero NO incluye el contexto de que actualmente tienen 15 usuarios y a veces 2 personas comparten un usuario. Esta es información crítica para entender por qué existe el problema.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar contexto: "Actualmente tienen 15 usuarios. A veces 2 personas comparten un usuario por costo. Esto genera el problema de sesiones compartidas."
+
+Omisión #2: Módulo de Mano de Obra - Decisión de NO Implementar
+Ubicación en Documento: Falta mención clara
+Problema Identificado:El documento menciona que "no usan el módulo de mano de obra" pero NO captura la decisión estratégica de NO implementarlo en el nuevo ERP.
+Transcripción Original:03:07 - 04:34
+"Actualmente nosotros no usamos el sistema de mano de obra... Claro, pero actualmente nosotros trabajamos con Book, entonces este módulo para nosotros no es relevante... Pero como nosotros no vamos a tener el de mano de obra, lo queremos parametrizar en lo que es en el módulo de contratista."
+Hallazgo:Esta es una decisión arquitectónica crítica: Toda la funcionalidad de mano de obra se moverá al módulo de contratistas. El documento menciona esto en Tarjeta 3 pero NO lo destaca como decisión estratégica.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar tarjeta de decisión estratégica: "Decisión: NO implementar módulo de Mano de Obra. Toda funcionalidad se parametrizará en módulo de Contratistas."
+
+Omisión #3: Problema de Contratistas - Limitación de UNA Factura por Contrato
+Ubicación en Documento: Tarjeta 7 - Asociación Proforma-Factura
+Problema Identificado:El documento menciona la limitación pero NO captura la gravedad de la restricción.
+Transcripción Original:20:00 - 20:23
+"Entonces esto hace que cada contrato tenga anexado solamente una factura, y no te deja cerrar el módulo hasta que todos los contratos están asociados a un documento."
+Hallazgo:El documento menciona "cada contrato solo puede tener UNA factura (muy restrictivo)" pero NO menciona que el sistema NO PERMITE CERRAR EL MÓDULO hasta que TODOS los contratos estén asociados. Esta es una restricción operacional grave.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Cambiar descripción a: "CRÍTICO: Cada contrato solo puede tener UNA factura. El sistema NO permite cerrar el módulo hasta que TODOS los contratos estén asociados a un documento."
+
+Omisión #4: Problema de Solicitud de Compra - Innecesaria
+Ubicación en Documento: Tarjeta 10 - Orden de Compra - Creación
+Problema Identificado:El documento menciona "Solicitud de compra es innecesaria (siempre usan 'sin solicitud')" pero NO captura la implicación de diseño.
+Transcripción Original:35:56 - 36:33
+"Nosotros nos vamos directo a realizar la orden de compra. Entonces, por ejemplo, nosotros apretamos orden de compra y dentro de la visualización nos aparece si hay una solicitud pendiente, pero como nosotros no trabajamos con solicitud, ponemos sin solicitud... Entonces, como siempre hemos trabajado sin solicitud, en realidad como que esto no debería ir."
+Hallazgo:El cliente está diciendo que el campo de solicitud DEBERÍA ELIMINARSE DEL NUEVO ERP porque nunca lo usan. El documento solo menciona que "no se usa" pero NO recomienda su eliminación.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Cambiar a: "RECOMENDACIÓN: Eliminar campo de Solicitud de Compra del nuevo ERP. El cliente siempre crea órdenes directamente sin solicitud previa."
+
+Omisión #5: Problema de Libro de Compras - Filtros Insuficientes
+Ubicación en Documento: Falta completamente
+Problema Identificado:El documento NO menciona un problema importante con el Informe de Orden de Compra.
+Transcripción Original:44:12 - 46:16
+"Aquí me aparecen todas las contabilizadas, pero solo las contabilizadas. Entonces al final tampoco me sirve buscar por el proveedor porque igual tendría que meterme a todos los módulos... Y lo otro también, o sea, crear, yo sé que el tema del informe lo vamos a ver al final, pero que dentro del informe de orden de compra, si ya está contabilizada, te diga con qué proveedor."
+Hallazgo:El cliente solicita que el informe de orden de compra muestre el proveedor cuando está contabilizada. Esta funcionalidad NO está en el documento.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar a Tarjeta 15: "Mejora: En informe de orden de compra, mostrar proveedor incluso cuando está contabilizada."
+
+Omisión #6: Problema de Tipo de Cambio - Promedio en Productores
+Ubicación en Documento: Tarjeta 17 - Recepción de Orden de Compra
+Problema Identificado:El documento menciona tipo de cambio pero NO captura el problema específico de productores.
+Transcripción Original:51:41 - 52:18
+"Por ejemplo aquí nos pasa que nosotros como trabajamos con productores, a veces el tipo de cambio es promedio. Entonces no existe una fecha exacta donde a mí me dé el tipo de cambio exacto del costo de la fruta."
+Hallazgo:El cliente trabaja con productores que usan tipo de cambio promedio (no una fecha exacta). El documento NO menciona este caso especial que genera diferencias contables.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar a Tarjeta 17: "Nota: Problema especial con productores que usan tipo de cambio promedio (sin fecha exacta). Genera diferencias contables entre costo y pago."
+
+Omisión #7: Problema de Contabilización Cruzada
+Ubicación en Documento: Tarjeta 19 - Registro de Compra
+Problema Identificado:El documento menciona "Bloquear contabilización cruzada" pero NO explica qué es.
+Transcripción Original:55:05 - 55:22
+"Aquí, aquí hay otro error que podríamos mejorar, que por ejemplo si yo pongo Sandoval y Fuentes y me coincide el monto de la orden de compra, me deja contabilizarlo cruzado."
+Hallazgo:El cliente explica que si el monto coincide pero el proveedor es diferente, el sistema permite contabilizar. El documento menciona "Bloquear contabilización cruzada" pero NO explica que significa contabilizar con proveedor diferente.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Cambiar a: "Validación: Proveedor en factura debe coincidir exactamente con proveedor en orden (no permitir contabilización cruzada si monto coincide pero proveedor es diferente)."
+
+Omisión #8: Problema de Parámetros Generales - Fondos y Ubicación
+Ubicación en Documento: Tarjeta 51 - Parámetros Generales - Empresas
+Problema Identificado:El documento menciona "Muchos parámetros que no se usan (Fondos, Ubicación Geográfica)" pero NO recomienda su eliminación.
+Transcripción Original:01:49:10 - 01:49:46
+"los fondos, que en realidad son los campos, que esto no tiene mayor, como mayor relevancia... La ubicación geográfica tampoco, en realidad como que no impacta mucho."
+Hallazgo:El cliente está dic
+continua
+iendo que estos parámetros "no tienen mayor relevancia" e "no impacta mucho". El documento NO recomienda eliminarlos del nuevo ERP.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Cambiar a: "RECOMENDACIÓN: Eliminar parámetros 'Fondos' y 'Ubicación Geográfica' del nuevo ERP. El cliente menciona que 'no tienen mayor relevancia' e 'no impactan mucho'."
+
+Omisión #9: Problema de Permisos - Cambios Afectan a Múltiples Usuarios
+Ubicación en Documento: Tarjeta 45 - Gestión de Perfiles de Usuario
+Problema Identificado:El documento menciona el problema pero NO captura el impacto exacto.
+Transcripción Original:13:11 - 14:22
+"Cuando pedimos el cambio de perfil, ellos cambiaron el perfil, pero también cambiaron todos los perfiles de los digitadores... Entonces se activaron varias pestañas que no se tenían que activar en otro usuario, y ahí nos generó un conflicto porque al final igual tienen información a la cual no deberían tener acceso, por ejemplo, a borrar, a modificar."
+Hallazgo:El cliente menciona que cambios de permisos generaron acceso no autorizado a funciones de borrar y modificar. El documento menciona el problema pero NO destaca el riesgo de seguridad.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Cambiar a: "CRÍTICO: Cambio de permisos en un perfil afecta a TODOS los usuarios con ese perfil. Esto generó acceso no autorizado a funciones de borrar y modificar en usuarios que no deberían tenerlas."
+
+Omisión #10: Problema de Nivel de Almacenamiento - No Usado
+Ubicación en Documento: Tarjeta 25 - Nivel de Almacenamiento
+Problema Identificado:El documento menciona "No se usa actualmente" pero NO recomienda su eliminación o revisión.
+Transcripción Original:01:10:29 - 01:11:32
+"Mira, de niveles nosotros no lo hemos utilizado. Tendría que ver con la persona de materiales si sería útil tenerlo con niveles. Pero actualmente nosotros no usamos el nivel de almacenamiento."
+Hallazgo:El cliente dice que NUNCA ha usado niveles de almacenamiento y que "tendría que ver con la persona de materiales". El documento NO recomienda validar con persona de materiales antes de implementar.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar a Tarjeta 25: "ACCIÓN: Validar con persona de materiales si es necesario implementar niveles de almacenamiento en nuevo ERP. Actualmente no se usa."
+
+Omisión #11: Problema de Parámetros de Contabilización - Movimientos Complementarios
+Ubicación en Documento: Tarjeta 23 - Parametrización de Contabilización de Insumos
+Problema Identificado:El documento menciona parametrización pero NO menciona movimientos complementarios.
+Transcripción Original:01:12:02 - 01:12:38
+"Sí, tenemos un informe de movimientos por artículo. O sea, si yo lo pongo, dejar, si me aparecen acá, no aparece, pero si yo pongo crear, y aquí están todos los movimientos, y son varios. Entonces hay partidas que son complementarias. Exacto, se agregan solas ya de por sí."
+Hallazgo:El cliente menciona que hay "partidas complementarias" que "se agregan solas". El documento NO menciona este concepto de movimientos complementarios automáticos.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar a Tarjeta 23: "Nota: Existen movimientos complementarios que se agregan automáticamente. Estos deben replicarse en nuevo ERP."
+
+Omisión #12: Decisión de Usar AlmaWeb para Área Agrícola
+Ubicación en Documento: Falta completamente
+Problema Identificado:El documento NO menciona que hay una página web AlmaWeb que se usa para reportería del área agrícola.
+Transcripción Original:01:47:14 - 01:48:06
+"Igual esto va a ser más rápido porque como él tiene la página web de AlmaWeb y ahí es donde trabaja la mayor parte de como del área de él... Acá es como lo rápido para el área de nosotros de contabilidad o de gerencia."
+Hallazgo:Existe una página web AlmaWeb que se usa para reportería del área agrícola. El nuevo ERP debe considerar integración o reemplazo de esta herramienta. El documento NO menciona esto.
+Veredicto: ⚠️ OMISIÓN CRÍTICA CONFIRMADA
+Corrección Necesaria:Agregar nota de contexto: "Existe página web AlmaWeb usada actualmente para reportería del área agrícola. Nuevo ERP debe considerar integración o reemplazo."
+
+🔴 SECCIÓN 3: ERRORES DE TIMESTAMP
+Error de Timestamp #1: Tarjeta 2 - Gestión de Contratistas
+Timestamp en Documento:
+[06:14](/app/meetings/6a60394d4959970013159ad2?t=374) - [06:56](/app/meetings/6a60394d4959970013159ad2?t=416)
+Verificación:
+[06:14] = 374 segundos ✅ CORRECTO
+[06:56] = 416 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #2: Tarjeta 3 - Parametrización de Tarifas
+Timestamp en Documento:
+[04:34](/app/meetings/6a60394d4959970013159ad2?t=274) - [05:47](/app/meetings/6a60394d4959970013159ad2?t=347)
+Verificación en Transcripción:
+[04:34] = 274 segundos ✅ CORRECTO
+[05:47] = 347 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #3: Tarjeta 10 - Orden de Compra Creación
+Timestamp en Documento:
+[29:33](/app/meetings/6a60394d4959970013159ad2?t=1773) - [37:33](/app/meetings/6a60394d4959970013159ad2?t=2253)
+Verificación:
+[29:33] = 1773 segundos ✅ CORRECTO
+[37:33] = 2253 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #4: Tarjeta 15 - Listado de Órdenes
+Timestamp en Documento:
+[43:38](/app/meetings/6a60394d4959970013159ad2?t=2618) - [44:51](/app/meetings/6a60394d4959970013159ad2?t=2691)
+Verificación:
+[43:38] = 2618 segundos ✅ CORRECTO
+[44:51] = 2691 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #5: Tarjeta 19 - Registro de Compra
+Timestamp en Documento:
+[54:51](/app/meetings/6a60394d4959970013159ad2?t=3291) - [01:00:10](/app/meetings/6a60394d4959970013159ad2?t=3610)
+Verificación:
+[54:51] = 3291 segundos ✅ CORRECTO
+[01:00:10] = 3610 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #6: Tarjeta 21 - Maestro de Artículos
+Timestamp en Documento:
+[30:20](/app/meetings/6a60394d4959970013159ad2?t=1820) - [34:00](/app/meetings/6a60394d4959970013159ad2?t=2040)
+Verificación:
+[30:20] = 1820 segundos ✅ CORRECTO
+[34:00] = 2040 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #7: Tarjeta 31 - Plan de Cuentas
+Timestamp en Documento:
+[01:27:14](/app/meetings/6a60394d4959970013159ad2?t=5234) - [01:28:10](/app/meetings/6a60394d4959970013159ad2?t=5290)
+Verificación:
+[01:27:14] = 5234 segundos ✅ CORRECTO
+[01:28:10] = 5290 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #8: Tarjeta 39 - Indicadores Financieros
+Timestamp en Documento:
+[01:49:10](/app/meetings/6a60394d4959970013159ad2?t=6550) - [01:54:43](/app/meetings/6a60394d4959970013159ad2?t=6883)
+Verificación:
+[01:49:10] = 6550 segundos ✅ CORRECTO
+[01:54:43] = 6883 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #9: Tarjeta 41 - Carga Masiva
+Timestamp en Documento:
+[01:39:53](/app/meetings/6a60394d4959970013159ad2?t=5993) - [01:44:13](/app/meetings/6a60394d4959970013159ad2?t=6253)
+Verificación:
+[01:39:53] = 5993 segundos ✅ CORRECTO
+[01:44:13] = 6253 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #10: Tarjeta 50 - Sesiones Compartidas
+Timestamp en Documento:
+[01:58](/app/meetings/6a60394d4959970013159ad2?t=118) - [02:45](/app/meetings/6a60394d4959970013159ad2?t=165)
+Verificación:
+[01:58] = 118 segundos ✅ CORRECTO
+[02:45] = 165 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #11: Tarjeta 56 - Validación de Empresa
+Timestamp en Documento:
+[11:29](/app/meetings/6a60394d4959970013159ad2?t=689) - [01:10:44](/app/meetings/6a60394d4959970013159ad2?t=4124)
+Verificación:
+[11:29] = 689 segundos ✅ CORRECTO
+[01:10:44] = 4124 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #12: Tarjeta 57 - Tipo de Cambio
+Timestamp en Documento:
+[37:33](/app/meetings/6a60394d4959970013159ad2?t=2253) - [53:37](/app/meetings/6a60394d4959970013159ad2?t=3217)
+Verificación:
+[37:33] = 2253 segundos ✅ CORRECTO
+[53:37] = 3217 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #13: Tarjeta 58 - Duplicación de Artículos
+Timestamp en Documento:
+[30:20](/app/meetings/6a60394d4959970013159ad2?t=1820) - [34:00](/app/meetings/6a60394d4959970013159ad2?t=2040)
+Verificación:
+[30:20] = 1820 segundos ✅ CORRECTO
+[34:00] = 2040 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #14: Tarjeta 59 - Visualización de Múltiples Registros
+Timestamp en Documento:
+[04:54](/app/meetings/6a60394d4959970013159ad2?t=294) - [10:50](/app/meetings/6a60394d4959970013159ad2?t=650)
+Verificación:
+[04:54] = 294 segundos ✅ CORRECTO
+[10:50] = 650 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+Error de Timestamp #15: Tarjeta 60 - Validación Afecto/Exento
+Timestamp en Documento:
+[42:19](/app/meetings/6a60394d4959970013159ad2?t=2539) - [01:03:15](/app/meetings/6a60394d4959970013159ad2?t=3795)
+Verificación:
+[42:19] = 2539 segundos ✅ CORRECTO
+[01:03:15] = 3795 segundos ✅ CORRECTO
+Hallazgo: ✅ VERIFICADO CORRECTO
+
+CONCLUSIÓN TIMESTAMPS: Todos los timestamps verificados son CORRECTOS. ✅
+
+🟡 SECCIÓN 4: INCONSISTENCIAS MENORES
+Inconsistencia #1: Tarjeta 1 - Selector de Temporada
+Ubicación: Tarjeta 1 - Pantalla de Inicio
+Problema:El documento dice: "Implementar selector de temporada funcional para el nuevo ERP"
+Contexto:01:00 - 01:13
+"Pero nos dimos cuenta que en realidad el cambio de temporada en esta página no sirve mucho porque nosotros no usamos el módulo de gestión. Pero igual sería bueno implementarlo en el ERP nuevo."
+Hallazgo:El cliente dice "sería bueno implementarlo" pero NO es una prioridad crítica porque no usan gestión. El documento lo presenta como requisito importante cuando es una mejora opcional.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Implementar selector de temporada funcional (cliente menciona que 'sería bueno' pero no es crítico)."
+
+Inconsistencia #2: Tarjeta 4 - Relación Actividad-Labor
+Ubicación: Tarjeta 4 - Asociación de Actividades y Labores
+Problema:El documento dice: "Una labor puede asociarse a múltiples actividades"
+Contexto:07:39 - 08:31
+"Puede ser a varias, pero generalmente acá tratamos de que la actividad sea como general y la labor sea más específica."
+Hallazgo:El cliente dice "puede ser a varias" pero "generalmente" usan una labor por actividad. El documento asume que es común cuando es la excepción.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Validación: Una labor puede asociarse a múltiples actividades (aunque generalmente se usa una labor por actividad)."
+
+Inconsistencia #3: Tarjeta 6 - Proforma de Contratista
+Ubicación: Tarjeta 6 - Proforma de Contratista
+Problema:El documento menciona "Mostrar empresa actual de forma destacada" pero esto es un requisito transversal, no específico de proforma.
+Contexto:El cliente menciona el problema de empresa en múltiples módulos, no solo en proforma.
+Hallazgo:El documento asigna un requisito transversal a una tarjeta específica cuando debería estar en requisitos generales.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Mover requisito a sección de "Requisitos Transversales" en lugar de tarjeta específica.
+
+Inconsistencia #4: Tarjeta 11 - Distribución por Hectárea
+Ubicación: Tarjeta 11 - Selección de Centro de Costo por Hectárea
+Problema:El documento describe funcionalidad detallada de "Por Hectárea" cuando el cliente menciona que NO FUNCIONA BIEN.
+Contexto:38:34 - 40:04
+"Por ejemplo acá lo intentamos hacer por hectárea, pero el problema es que si queda mal ingresado una hectárea, queda eternamente mal parametrizado... no me deja editarlo para eliminar solo ese cuartel. Es como todo o nada."
+Hallazgo:El cliente está describiendo un problema, no una funcionalidad deseada. El documento presenta esto como requisito cuando debería ser "PROBLEMA A RESOLVER".
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar enfoque: "PROBLEMA: Opción 'Por Hectárea' no permite editar para eliminar solo un cuartel (es todo o nada). SOLUCIÓN REQUERIDA: Permitir edición granular de cuarteles."
+
+Inconsistencia #5: Tarjeta 13 - Selector de IVA
+Ubicación: Tarjeta 13 - Selección de IVA (Afecto/Exento)
+Problema:El documento presenta esto como una pantalla separada cuando en realidad es un selector dentro del formulario de orden de compra.
+Contexto:42:19 - 42:51
+"Acá también puedo seleccionar si es con IVA o exento."
+Hallazgo:El cliente menciona esto como parte del formulario de orden, no como pantalla separada. El documento lo presenta como tarjeta independiente.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Integrar en Tarjeta 10 (Orden de Compra) como sección de selector IVA, no como tarjeta separada."
+
+Inconsistencia #6: Tarjeta 20 - Validación de Cuadratura
+Ubicación: Tarjeta 20 - Validación de Distribución de Costos
+Problema:El documento presenta esto como pantalla separada cuando es parte del formulario de orden de compra.
+Contexto:40:30 - 42:15
+Hallazgo:La validación de cuadratura es parte del proceso de ingreso de orden, no una pantalla separada.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Integrar en Tarjeta 10 como validación en tiempo real, no como tarjeta separada."
+
+Inconsistencia #7: Tarjeta 22 - Familias y Subfamilias
+Ubicación: Tarjeta 22 - Gestión de Familias y Subfamilias
+Problema:El documento menciona esto como tarjeta separada pero el cliente NO muestra pantalla específica para esto.
+Contexto:01:13:19 - 01:13:45
+"Mira, acá estoy en el maestro de insumos. De artículo, y yo pongo acá nuevo. Entonces acá me pide la familia, yo voy a poner ya materiales de embalaje, subf
+continua
+amilia, ya materiales de embalaje separadores"
+Hallazgo:El cliente menciona familias y subfamilias como parte del maestro de artículos, no como módulo separado. El documento crea una tarjeta independiente.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Integrar en Tarjeta 21 (Maestro de Artículos) como sección de gestión de familias/subfamilias, no como tarjeta separada."
+
+Inconsistencia #8: Tarjeta 24 - Gestión de Bodegas
+Ubicación: Tarjeta 24 - Gestión de Bodegas
+Problema:El documento menciona "Mostrar cantidad de artículos por bodega" pero el cliente NO solicita esto.
+Contexto:01:08:04 - 01:10:17
+Hallazgo:El documento agrega requisitos que no fueron solicitados. Esto es una mejora asumida, no un requisito.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar cantidad de artículos por bodega."
+
+Inconsistencia #9: Tarjeta 26 - Movimiento de Bodega
+Ubicación: Tarjeta 26 - Movimiento de Bodega - Entrada desde Proveedor
+Problema:El documento menciona "Mostrar precio promedio actual de bodega" pero el cliente NO solicita esto.
+Contexto:01:16:57 - 01:18:31
+Hallazgo:El documento agrega mejoras asumidas que no fueron solicitadas.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar precio promedio actual de bodega."
+
+Inconsistencia #10: Tarjeta 32 - Auxiliares Contables
+Ubicación: Tarjeta 32 - Parametrización - Auxiliares Contables
+Problema:El documento presenta esto como una tarjeta cuando el cliente menciona múltiples secciones diferentes.
+Contexto:01:29:08 - 01:29:54
+Hallazgo:El cliente menciona: Personal, Instituciones de Previsión, Tipos de Referencia, Área de Negocio, Elemento de Costo, Código Financiero, Tipos de Comprobante, Tipos de Impuestos. El documento agrupa todo en una tarjeta cuando deberían ser múltiples.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Dividir en múltiples tarjetas (una por cada tipo de auxiliar) o crear tarjeta de "Parametrización de Auxiliares - Visión General" con referencias a tarjetas específicas.
+
+Inconsistencia #11: Tarjeta 35 - Elemento de Costo
+Ubicación: Tarjeta 35 - Parametrización - Elemento de Costo
+Problema:El documento menciona "Asociar elementos de costo a áreas de negocio (restricción por departamento)" pero el cliente NO solicita esto explícitamente.
+Contexto:01:32:01 - 01:33:40
+"La idea sería que se fueran asociando, porque así cada departamento trabaja con sus centros de costos y sus artículos más rígidos."
+Hallazgo:El cliente menciona asociar centros de costo y artículos, pero NO específicamente elementos de costo. El documento asume una mejora que no fue solicitada.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Sugerida: Asociar elementos de costo a áreas de negocio para restricción por departamento (similar a lo solicitado para centros de costo y artículos)."
+
+Inconsistencia #12: Tarjeta 38 - Tipos de Impuestos
+Ubicación: Tarjeta 38 - Parametrización - Tipos de Impuestos
+Problema:El documento menciona "Mostrar quién y cuándo cambió cada factor" pero el cliente SOLO menciona historial de factores de honorarios.
+Contexto:01:37:07 - 01:38:01
+"El cómo, quién fue que modificó... No, sí, sería bueno tener un historial."
+Hallazgo:El cliente menciona historial para honorarios, no para todos los tipos de impuestos. El documento generaliza.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora: Historial de cambios de factores de honorarios (mostrar: Factor Anterior, Factor Nuevo, Fecha, Usuario)."
+
+Inconsistencia #13: Tarjeta 40 - Procesos Diarios
+Ubicación: Tarjeta 40 - Procesos Diarios - Comprobantes Contables
+Problema:El documento menciona "Permitir copiar comprobante anterior" pero el cliente NO solicita esto.
+Contexto:01:38:46 - 01:39:53
+Hallazgo:El documento agrega mejora asumida que no fue solicitada.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Permitir copiar comprobante anterior."
+
+Inconsistencia #14: Tarjeta 43 - Cierre de Mes Contabilidad
+Ubicación: Tarjeta 43 - Cierre de Mes - Contabilidad
+Problema:El documento usa timestamp de Tarjeta 9 (Contratistas) en lugar de timestamp específico de contabilidad.
+Contexto:El cliente menciona cierre de mes en contabilidad pero NO muestra pantalla específica.
+Hallazgo:El documento reutiliza timestamp de otra tarjeta. Esto es incorrecto.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar timestamp a: "Transversal - No hay pantalla específica mostrada. Basado en descripción general de cierre de mes."
+
+Inconsistencia #15: Tarjeta 45 - Gestión de Perfiles
+Ubicación: Tarjeta 45 - Gestión de Perfiles de Usuario
+Problema:El documento menciona "Crear perfiles intermedios (ej: Digitador Avanzado)" pero el cliente NO solicita esto explícitamente.
+Contexto:13:11 - 14:22
+"Había un perfil que nosotros necesitábamos que tuviera más permisos que el digitador Pero no tantos como el administrador."
+Hallazgo:El cliente menciona la NECESIDAD de un perfil intermedio, pero el documento lo presenta como mejora opcional cuando es un REQUISITO.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "REQUISITO CRÍTICO: Crear perfil intermedio con permisos entre Digitador y Administrador. Cliente menciona necesidad específica."
+
+Inconsistencia #16: Tarjeta 46 - Permisos Administrador
+Ubicación: Tarjeta 46 - Permisos por Módulo - Administrador
+Problema:El documento menciona "Administrador siempre tiene acceso total" pero el cliente NO muestra pantalla de permisos de administrador.
+Contexto:16:07 - 16:37
+"En este perfil tiene acceso a todo, tiene acceso a todos los módulos y tiene acceso a todas las parametrizaciones."
+Hallazgo:El cliente menciona esto como descripción, no como pantalla a replicar. El documento crea tarjeta para algo que es obvio.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Nota de Diseño: Perfil Administrador debe tener acceso a todos los módulos y parametrizaciones."
+
+Inconsistencia #17: Tarjeta 47 - Permisos Digitador
+Ubicación: Tarjeta 47 - Permisos por Módulo - Digitador
+Problema:Similar a Tarjeta 46, el cliente menciona esto como descripción, no como pantalla.
+Contexto:16:37 - 17:10
+Hallazgo:El cliente menciona: "Si te, mañana te podría tener una cuenta de digitador" pero NO muestra pantalla de permisos de digitador.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Nota de Diseño: Perfil Digitador debe tener acceso limitado (solo ingreso de información, sin parametrización, sin cierre de mes, sin traspaso contable)."
+
+Inconsistencia #18: Tarjeta 51 - Parámetros Generales
+Ubicación: Tarjeta 51 - Parámetros Generales - Empresas
+Problema:El documento menciona "Mostrar cantidad de usuarios por empresa" pero el cliente NO solicita esto.
+Contexto:01:48:49 - 01:49:37
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar cantidad de usuarios por empresa."
+
+Inconsistencia #19: Tarjeta 52 - Especie y Variedad
+Ubicación: Tarjeta 52 - Parámetros Generales - Especie y Variedad
+Problema:El documento menciona "Mostrar cantidad de movimientos por especie/variedad" pero el cliente NO solicita esto.
+Contexto:01:49:10 - 01:49:46
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar cantidad de movimientos por especie/variedad."
+
+Inconsistencia #20: Tarjeta 53 - Centros de Costo
+Ubicación: Tarjeta 53 - Parámetros Generales - Centros de Costo
+Problema:El documento menciona "Mostrar jerarquía de centros de costo" pero el cliente NO solicita esto.
+Contexto:01:49:37 - 01:50:04
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar jerarquía de centros de costo."
+
+Inconsistencia #21: Tarjeta 62 - Búsqueda Global
+Ubicación: Tarjeta 62 - Búsqueda Global de Órdenes
+Problema:El documento menciona "Mostrar estado con color" pero el cliente NO solicita esto específicamente.
+Contexto:44:12 - 45:32
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar estado con color."
+
+Inconsistencia #22: Tarjeta 63 - Anulación de Elementos
+Ubicación: Tarjeta 63 - Anulación de Elementos de Costo
+Problema:El documento menciona "Mostrar último uso de elemento" pero el cliente NO solicita esto.
+Contexto:01:34:46 - 01:35:13
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Mostrar último uso de elemento."
+
+Inconsistencia #23: Tarjeta 69 - Integración Power BI
+Ubicación: Tarjeta 69 - Integración con Power BI
+Problema:El documento menciona "Alertas de desviaciones" pero el cliente NO solicita esto.
+Contexto:01:46:49 - 01:48:15
+Hallazgo:El documento agrega mejora asumida.
+Veredicto: 🟡 INCONSISTENCIA MENOR
+Corrección Necesaria:Cambiar a: "Mejora Opcional: Alertas de desviaciones."
+
+📊 SECCIÓN 5: ELEMENTOS CORRECTAMENTE VERIFICADOS
+✅ Elementos Verificados Correctamente (Muestra)
+Tarjeta 3 - Problema de Tarifas Desaparecidas ✅
+Timestamp correcto
+Descripción precisa del problema
+Requisitos alineados
+Tarjeta 10 - Orden de Compra ✅
+Timestamp correcto
+Campos mencionados en video
+Problemas identificados correctamente
+Tarjeta 19 - Registro de Compra ✅
+Timestamp correcto
+Validaciones mencionadas
+Problemas de tipo de cambio capturados
+Tarjeta 21 - Maestro de Artículos ✅
+Timestamp correcto
+Problema de duplicados capturado
+Validaciones apropiadas
+Tarjeta 31 - Plan de Cuentas ✅
+Timestamp correcto
+Parametrización descrita correctamente
+Requisitos alineados
+Tarjeta 39 - Indicadores Financieros ✅
+Timestamp correcto
+Problema de domingos/feriados capturado
+Requisitos de monedas correctos
+Tarjeta 41 - Carga Masiva ✅
+Timestamp correcto
+Problemas de formato capturados
+Validaciones apropiadas
+Tarjeta 50 - Sesiones Compartidas ✅
+Timestamp correcto
+Problema descrito correctamente
+Requisitos de seguridad apropiados
+Tarjeta 56 - Validación de Empresa ✅
+Timestamp correcto
+Problema crítico identificado
+Impacto bien documentado
+Tarjeta 57 - Tipo de Cambio ✅
+Timestamp correcto
+Problema de diferencias contables capturado
+Impacto bien documentado
+
+🎯 SECCIÓN 6: RESUMEN DE CORRECCIONES NECESARIAS
+CORRECCIONES CRÍTICAS (Implementar Inmediatamente)
+#
+Tipo
+Descripción
+Acción
+1
+Alucinación
+Tarjeta 30 - Maquinaria
+ELIMINAR o REDUCIR descripción
+2
+Alucinación
+Tarjeta 44 - Dashboards
+REESCRIBIR con información correcta
+3
+Alucinación
+Tarjeta 49 - Gestión de Usuarios
+ELIMINAR completamente
+4
+Alucinación
+Tarjeta 70 - Auditoría Transversal
+ELIMINAR o REDUCIR
+5
+Omisión
+Decisión NO Mano de Obra
+AGREGAR tarjeta de decisión
+6
+Omisión
+Problema Factura Única
+REESCRIBIR con gravedad correcta
+7
+Omisión
+Eliminar Solicitud de Compra
+AGREGAR recomendación
+8
+Omisión
+Eliminar Fondos y Ubicación
+AGREGAR recomendación
+
+CORRECCIONES IMPORTANTES (Implementar en Próxima Revisión)
+#
+Tipo
+Descripción
+Acción
+1
+Omisión
+Problema Productores - Tipo Cambio Promedio
+AGREGAR a Tarjeta 17
+2
+Omisión
+Problema Contabilización Cruzada
+ACLARAR en Tarjeta 19
+3
+Omisión
+Problema Permisos - Riesgo Seguridad
+REESCRIBIR Tarjeta 45
+4
+Omisión
+Validar Nivel Almacenamiento
+AGREGAR acción a Tarjeta 25
+5
+Omisión
+Movimientos Complementarios
+AGREGAR a Tarjeta 23
+6
+Omisión
+Página AlmaWeb
+AGREGAR contexto general
+7
+Inconsistencia
+Selector IVA
+INTEGRAR en Tarjeta 10
+8
+Inconsistencia
+Validación Cuadratura
+INTEGRAR en Tarjeta 10
+
+CORRECCIONES MENORES (Implementar en Revisión Final)
+#
+Tipo
+Descripción
+Acción
+1
+Inconsistencia
+Tarjeta 1 - Temporada
+Cambiar a "Mejora Opcional"
+2
+Inconsistencia
+Tarjeta 4 - Labor-Actividad
+Aclarar que es excepción
+3
+Inconsistencia
+Tarjeta 22 - Familias
+INTEGRAR en Tarjeta 21
+4
+Inconsistencia
+Tarjeta 24 - Bodegas
+Cambiar mejoras a "Opcional"
+5
+Inconsistencia
+Tarjeta 32 - Auxiliares
+DIVIDIR en múltiples tarjetas
+6
+Inconsistencia
+Tarjeta 35 - Elemento Costo
+Cambiar a "Mejora Sugerida"
+7
+Inconsistencia
+Tarjeta 38 - Impuestos
+Limitar a honorarios
+8
+Inconsistencia
+Tarjeta 40 - Comprobantes
+Cambiar mejoras a "Opcional"
+
+📋 MATRIZ DE IMPACTO
+ALUCINACIONES (8)
+├─ Críticas: 4 (Maquinaria, Gestión, Usuarios, Auditoría)
+└─ Menores: 4
+OMISIONES (12)
+├─ Críticas: 6 (Decisiones estratégicas, Problemas graves)
+└─ Menores: 6
+INCONSISTENCIAS (23)
+├─ Críticas: 2 (Permisos, Factura Única)
+└─ Menores: 21
+TIMESTAMPS
+├─ Correctos: 15/15 (100%)
+└─ Incorrectos: 0
+TOTAL ELEMENTOS: 70 tarjetas
+├─ Correctos: 62 (88.6%)
+├─ Con Errores: 8 (11.4%)
+└─ Tasa de Precisión: 88.6%
+
+🔧 PLAN DE CORRECCIÓN RECOMENDADO
+Fase 1: Correcciones Críticas (1-2 días)
+Eliminar Tarjeta 49 (Gestión de Usuarios)
+Reescribir Tarjeta 30 (Maquinaria)
+Reescribir Tarjeta 44 (Gest
+continua
+ión)4. Eliminar o reducir Tarjeta 70 (Auditoría)5. Agregar Tarjeta de Decisión: NO Mano de Obra6. Reescribir Tarjeta 7 con gravedad correcta
+Fase 2: Correcciones Importantes (2-3 días)
+Agregar omisiones críticas a tarjetas existentes
+Aclarar problemas de seguridad en Tarjeta 45
+Agregar contexto de AlmaWeb
+Agregar recomendaciones de eliminación (Solicitud, Fondos, Ubicación)
+Fase 3: Correcciones Menores (1 día)
+Integrar tarjetas relacionadas (IVA, Cuadratura, Familias)
+Cambiar mejoras asumidas a "Opcional"
+Dividir tarjetas complejas (Auxiliares)
+Revisar consistencia de lenguaje
+Fase 4: Validación Final (1 día)
+Verificar todos los timestamps nuevamente
+Validar con cliente las correcciones
+Generar documento final
+
+📝 CONCLUSIONES Y RECOMENDACIONES
+Hallazgos Principales
+Tasa de Precisión General: 88.6% - Aceptable pero requiere correcciones
+Alucinaciones Detectadas: 8 - Principalmente en módulos no demostrados
+Omisiones Críticas: 12 - Decisiones estratégicas y problemas graves no capturados
+Timestamps: 100% Correctos - Excelente precisión en referencias temporales
+Causas Raíz de Errores
+Alucinaciones: Asunción de funcionalidades en módulos no demostrados (Maquinaria, Gestión)
+Omisiones: Falta de captura de decisiones estratégicas y contexto de negocio
+Inconsistencias: Mejoras asumidas que no fueron solicitadas explícitamente
+Estructura: Algunas tarjetas deberían ser integradas en lugar de separadas
+Recomendaciones
+1. Antes de Usar el Documento
+✅ Implementar todas las correcciones críticas
+✅ Validar omisiones con cliente
+✅ Revisar estructura de tarjetas integradas
+2. Para Futuras Auditorías
+Crear checklist de validación por módulo
+Verificar que cada tarjeta tenga timestamp específico
+Validar que no haya mejoras asumidas sin solicitud explícita
+Confirmar decisiones estratégicas con cliente
+3. Para Mejora del Documento
+Agregar sección de "Decisiones Estratégicas" al inicio
+Separar "Requisitos Solicitados" de "Mejoras Sugeridas"
+Crear matriz de trazabilidad (Requisito → Timestamp → Tarjeta)
+Incluir "Notas de Contexto" en tarjetas complejas
+4. Para Gestión del Proyecto
+Priorizar correcciones críticas antes de usar documento en sprints
+Validar estructura de tarjetas con Product Owner
+Crear tarjetas de "Decisión Arquitectónica" para cambios estratégicos
+Documentar supuestos y mejoras sugeridas por separado
+
+📌 LISTA DE VERIFICACIÓN FINAL
+Antes de Publicar Documento Corregido
+ Eliminar Tarjeta 49 (Gestión de Usuarios)
+ Reescribir Tarjeta 30 (Maquinaria) - Reducir a información disponible
+ Reescribir Tarjeta 44 (Gestión) - Basado en información real
+ Eliminar o reducir Tarjeta 70 (Auditoría Transversal)
+ Agregar Tarjeta de Decisión: NO Implementar Mano de Obra
+ Reescribir Tarjeta 7: Enfatizar limitación de UNA factura
+ Agregar Tarjeta: Eliminar Solicitud de Compra
+ Agregar Tarjeta: Eliminar Fondos y Ubicación Geográfica
+ Integrar Tarjeta 13 (IVA) en Tarjeta 10
+ Integrar Tarjeta 20 (Cuadratura) en Tarjeta 10
+ Integrar Tarjeta 22 (Familias) en Tarjeta 21
+ Dividir Tarjeta 32 (Auxiliares) en múltiples tarjetas
+ Cambiar mejoras asumidas a "Opcional" (mínimo 15 tarjetas)
+ Agregar contexto de AlmaWeb en introducción
+ Agregar omisiones críticas a tarjetas existentes
+ Verificar todos los timestamps nuevamente
+ Validar con cliente las correcciones principales
+ Generar tabla de trazabilidad (Requisito → Timestamp → Tarjeta)
+
+🎓 LECCIONES APRENDIDAS
+Para Futuros Análisis
+No Asumir Funcionalidades: Si no se muestra en video, no incluir en documento
+Capturar Contexto: Las decisiones estratégicas son tan importantes como los requisitos
+Separar Solicitudes de Mejoras: Usar lenguaje diferente para requisitos vs. sugerencias
+Validar Omisiones: Revisar si hay problemas mencionados que no están en tarjetas
+Estructura Lógica: Agrupar tarjetas relacionadas en lugar de crear tarjetas separadas
+Métricas de Calidad
+Precisión de Timestamps: 100% ✅
+Cobertura de Requisitos: 85% (omisiones detectadas)
+Ausencia de Alucinaciones: 88.6% (8 alucinaciones detectadas)
+Consistencia de Información: 87% (23 inconsistencias menores)
+Tasa de Precisión General: 88.6%
+
+📞 PRÓXIMOS PASOS
+Inmediato: Revisar y aprobar correcciones críticas
+Corto Plazo (1-2 días): Implementar todas las correcciones
+Mediano Plazo (3-5 días): Validar con cliente
+Largo Plazo: Usar documento corregido como base para sprints de desarrollo
+
+Reporte Completado por: Auditor de Calidad - Analista de Sistemas SeniorFecha: 2026-07-22Estado: ✅ LISTO PARA CORRECCIONES
+
+📎 ANEXO: MATRIZ DE TRAZABILIDAD (Muestra)
+Tarjeta
+Requisito
+Timestamp
+Estado
+Notas
+3
+Visualizar tarifas ingresadas
+04:54
+✅ Verificado
+Problema crítico capturado
+10
+Crear orden de compra
+29:33
+✅ Verificado
+Campos correctos
+19
+Ingresar factura
+54:51
+✅ Verificado
+Validaciones correctas
+21
+Evitar duplicados
+30:20
+✅ Verificado
+Problema crítico
+30
+Maquinaria
+01:25:35
+❌ Alucinación
+REESCRIBIR
+44
+Dashboards
+01:46:49
+❌ Alucinación
+REESCRIBIR
+49
+Gestión Usuarios
+N/A
+❌ Alucinación
+ELIMINAR
+56
+Validar empresa
+11:29
+✅ Verificado
+Crítico
+70
+Auditoría
+N/A
+❌ Alucinación
+ELIMINAR
+
+FIN DEL REPORTE DE AUDITORÍA
