@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Videos de reuniones (pesados; viven en disco local)
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/videos/*.mp4
+
+# Credenciales Trello (locales; no versionar)
+docs/erp-planificacion/agrosoft-levantamiento/.env.trello
+
+# Dependencias locales de scripts de captura Playwright
+docs/erp-planificacion/agrosoft-levantamiento/node_modules/

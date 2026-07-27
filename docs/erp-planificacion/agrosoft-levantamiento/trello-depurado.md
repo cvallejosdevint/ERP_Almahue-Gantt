@@ -20,7 +20,7 @@ Crear tablero **ERP Agrosoft 3.0 — Levantamiento** con estas listas:
 - **Checklist:** solo ítems REQ/DEC
 - **Adjunto:** PNG de `pantallas-legacy/` si existe
 - **Label:** REQ | DEC | OPT | OUT | PEND
-- **Attachment link:** `https://tldv.io/app/meetings/6a60394d4959970013159ad2?t={segundos}`
+- **No publicar** enlaces al video de la reunión en tarjetas Trello (uso interno Devint)
 
 ## No crear
 

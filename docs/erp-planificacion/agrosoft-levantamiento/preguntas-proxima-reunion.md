@@ -1,27 +1,41 @@
-# Preguntas / pendientes — próxima reunión
+# Preguntas / pendientes — próxima reunión (martes post Reu 2)
 
-Compromisos ya dichos por el cliente:
+Actualizado 2026-07-23 tras Reunión 2.
 
-1. Traer **proforma + factura** de contratistas área agrícola (más labores).
-2. Traer ejemplos de **nota de crédito** con diferencia por precio promedio.
-3. Cuenta de perfil **digitador** para demo.
-4. Entregar **cuentas contables** por tipo de movimiento de bodega.
+## Compromisos abiertos del cliente
 
-## Validar con cliente
+1. **Agustín:** Excel + PDF de cartola bancaria (carga / conciliación).
+2. **Mario:** lista actualizada de **centros de costo** y **elementos de costo**.
+3. Feedback asíncrono en **Trello** cuando Carlos envíe link + capturas (lunes).
+4. Avance **firma propuesta GoSocket** y fecha reunión con soporte (Cristian) — Devint (Sergio) coordina timing vs ERP básico.
+
+## Cerrados en Reunión 2 (no re-preguntar)
+
+- Flujo proforma + asociación a factura contratistas (demo completa).
+- Referencia UX AgroSmart para rediseño contratistas.
+- Niveles de almacenamiento → **no usan** (OUT).
+- Perfiles Digitador contratistas / Analista / Admin (vistos en legacy).
+- Cuentas / bodega / nota crédito (revisados en sesión).
+- Afecto/Exento: confirmaron alerta OC vs factura (falta solo afinar casos borde).
+
+## Validar el martes (corto)
 
 | # | Pregunta |
 |---|---|
-| 1 | ¿Confirmamos eliminar Solicitud de Compra del ERP nuevo? |
-| 2 | Afecto/Exento: ¿opción A (quitar de OC) o B (matching rígido)? ¿Cómo tratan facturas mixtas y combustible? |
-| 3 | ¿Permitir múltiples facturas parciales por contrato de contratista? |
-| 4 | ¿Niveles de bodega? (persona materiales) |
-| 5 | ¿Maquinaria entra en v1 o fase posterior? |
-| 6 | AlmaWeb: ¿integrar, reemplazar o convivir con ERP? |
-| 7 | Con Mario (agosto): ¿qué KPIs mínimos en ERP vs solo Power BI? |
-| 8 | Política TC productores (promedio sin fecha): ¿dónde se fija la verdad (recepción vs tesorería)? |
-| 9 | ¿1 sesión por usuario obligatoria aunque suba costo de licencias? |
+| 1 | ¿Nombres finales de roles seed? (Digitador contratistas / Analista / Admin u otros) |
+| 2 | ¿Prioridad back inmediata: cierre/traspaso (C-07) o ingreso diario tipo AgroSmart? |
+| 3 | ¿Cartola: solo Banco Chile o varios bancos/formatos? |
+| 4 | Anticipos productores: ¿regla de negocio mínima para v1 (calce parcial + saldo)? |
+| 5 | GoSocket: ¿fecha tentativa reunión soporte y quiénes de Devint asisten? |
+| 6 | ¿URL maqueta UAT esta semana o seguimos solo con capturas Trello? |
 
-## Siguiente paso técnico (interno)
+## Fuera de esta reunión (agosto / Mario)
 
-- Cargar listas Trello desde `trello-depurado.md` + `matriz-trazabilidad.csv`.
-- En Cursor: `@modulos/0X-....md` + `@pantallas-legacy/...png` por pantalla.
+- KPIs dashboard / AlmaWeb / Power BI (PEND-04).
+- Maquinaria (OUT hasta validar).
+
+## Doc
+
+- Análisis completo: `reunion2-analisis-2026-07-23.md`
+- Plan de acción: `plan-accion-post-reunion2-2026-07-23.md`
+- Decisiones: `00-decisiones.md` (DEC-11…15, PEND actualizados)

@@ -34,7 +34,6 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 CSV_PATH = BASE / "matriz-trazabilidad.csv"
-TLDV = "https://tldv.io/app/meetings/6a60394d4959970013159ad2"
 
 # Orden de listas y qué IDs van a cada una
 LIST_ORDER = [
@@ -112,13 +111,12 @@ def load_rows() -> dict[str, dict]:
 def card_desc(row: dict) -> str:
     t0 = row.get("ts_tldv_inicio") or ""
     t1 = row.get("ts_tldv_fin") or ""
-    link = f"{TLDV}?t={ts_to_seconds(t0)}" if t0 else TLDV
     lines = [
         f"**Etiqueta:** {row.get('etiqueta', '')}",
         f"**Módulo:** {row.get('modulo', '')}",
-        f"**Timestamps tl;dv:** {t0} – {t1}",
-        f"**Video:** {link}",
     ]
+    if t0:
+        lines.append(f"**Marca temporal reunión:** {t0}" + (f" – {t1}" if t1 else ""))
     if row.get("captura_path"):
         lines.append(f"**Captura local:** `{row['captura_path']}`")
     if row.get("notas"):

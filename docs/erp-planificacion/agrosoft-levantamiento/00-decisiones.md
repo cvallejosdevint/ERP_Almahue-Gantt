@@ -19,14 +19,26 @@ Construir el nuevo ERP como **Agrosoft 3.0**: mismos módulos operativos que usa
 | DEC-09 | Existe **AlmaWeb** + Power BI (Mario / control de gestión). Gestión Agrosoft no se usa. | 01:46–01:48 |
 | DEC-10 | Maquinaria: mencionada (mantenciones/desgaste/prorrateo) pero **no se usa en ningún rubro** y sin demo de pantalla → **OUT v1** hasta validar. | 01:25 |
 
+## Decisiones confirmadas / actualizadas en Reunión 2 (23/07/2026)
+
+| ID | Decisión | Evidencia |
+|---|---|---|
+| DEC-11 | UX Contratistas v1 se inspira en **AgroSmart** (ingreso diario, precio editable, asociación masiva labores→proforma/factura), no clonar el flujo engorroso de AgroSoft. Contabilidad sigue el modelo AgroSoft (cierre → facturas por recibir). | Reu 2 demo Rodrigo |
+| DEC-12 | **Niveles de almacenamiento = OUT v1** (no parametrizados / no usados). | Reu 2 MJ |
+| DEC-13 | Roles base: **Digitador contratistas**, **Analista** (diarios + informes, sin parametrización ni cierre), **Admin**. Permisos lectura/escritura por pantalla. | Reu 2 perfiles legacy |
+| DEC-14 | GoSocket go-live cliente **~01/09** es **independiente** del ERP; integración libro compras ERP puede diferirse. | Reu 2 MJ |
+| DEC-15 | Feedback de maqueta vía **Trello** (asíncrono) + reunión semanal **martes**. | Reu 2 |
+
 ## Decisiones pendientes de cliente
 
-| ID | Tema |
-|---|---|
-| PEND-01 | Afecto/Exento en OC: ¿quitarlo (solo neto) o rigidizar matching con factura? Casos mixtos + impuesto específico combustible. |
-| PEND-02 | ¿Múltiples facturas parciales por contrato de contratista? (hoy 1:1 + bloqueo de cierre) |
-| PEND-03 | Niveles de almacenamiento: validar con persona de materiales |
-| PEND-04 | Alcance Maquinaria / AlmaWeb / dashboards (Mario vuelve en agosto) |
+| ID | Tema | Estado post Reu 2 |
+|---|---|---|
+| PEND-01 | Afecto/Exento en OC: detalle casos mixtos + combustible. MJ indicó que ya vieron alerta afecta vs OC exento. | Parcialmente visto — cerrar regla exacta en mock |
+| PEND-02 | N labores/proformas → 1 factura; periodos multi-mes. | **Confirmado como REQ** (dolor actual) — implementar en diseño |
+| PEND-03 | Niveles de almacenamiento | **Cerrado → OUT (DEC-12)** |
+| PEND-04 | Alcance Maquinaria / AlmaWeb / dashboards (Mario agosto) | Sigue abierto |
+| PEND-05 | Entregar Excel+PDF cartola bancaria (Agustín) | Nuevo — Reu 2 |
+| PEND-06 | Lista actualizada centros de costo + elementos de costo (Mario) | Nuevo — Reu 2 |
 
 ## Core técnico propio (no levantado en demo)
 

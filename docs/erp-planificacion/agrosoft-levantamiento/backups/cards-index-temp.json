@@ -1,0 +1,132 @@
+[
+  {
+    "idShort": 1,
+    "name": "Mock — Inicio de sesión",
+    "id": "6a5506270fe5f85bf4307ac5"
+  },
+  {
+    "idShort": 3,
+    "name": "Mock — Panel principal",
+    "id": "6a568d0c5fc4c3189b67bea1"
+  },
+  {
+    "idShort": 4,
+    "name": "Mock — Empresas",
+    "id": "6a568e25201839d8929a8674"
+  },
+  {
+    "idShort": 5,
+    "name": "Mock — Usuarios",
+    "id": "6a568e73f739160fabeadf4c"
+  },
+  {
+    "idShort": 6,
+    "name": "Mock — Roles y permisos",
+    "id": "6a568ebe2af3f4099b42cc15"
+  },
+  {
+    "idShort": 7,
+    "name": "Mock — Monedas",
+    "id": "6a568f048f82b87faa923f45"
+  },
+  {
+    "idShort": 8,
+    "name": "Mock — Unidades de medida",
+    "id": "6a56dc880008fd50372a09fa"
+  },
+  {
+    "idShort": 9,
+    "name": "Mock — Centros de costo",
+    "id": "6a56dcee171c9d3f7378b861"
+  },
+  {
+    "idShort": 10,
+    "name": "Mock — Tipos de documento",
+    "id": "6a56dd486f710f9a72c8f914"
+  },
+  {
+    "idShort": 11,
+    "name": "Mock — Plan de cuentas",
+    "id": "6a56ddbec8142db625d510fa"
+  },
+  {
+    "idShort": 12,
+    "name": "Mock — Asientos contables",
+    "id": "6a56de52f10c2c1776593f86"
+  },
+  {
+    "idShort": 13,
+    "name": "Mock — Reportes contables",
+    "id": "6a56dec8fb1a1ac94fdcd621"
+  },
+  {
+    "idShort": 14,
+    "name": "Mock — Flujo de caja",
+    "id": "6a56df7fe3dff29cf42ad789"
+  },
+  {
+    "idShort": 15,
+    "name": "Mock — Pagos",
+    "id": "6a56dfc90311652545c4855b"
+  },
+  {
+    "idShort": 16,
+    "name": "Mock — Conciliación bancaria",
+    "id": "6a56dffbbf9687330c65e8b7"
+  },
+  {
+    "idShort": 17,
+    "name": "Mock — Presupuestos",
+    "id": "6a56e032ffa5359c8b895d10"
+  },
+  {
+    "idShort": 18,
+    "name": "Mock — Contratistas",
+    "id": "6a56e05f97f435379103f6d9"
+  },
+  {
+    "idShort": 19,
+    "name": "Mock — Catálogo de insumos",
+    "id": "6a56e09cdb55b3605f0fde7f"
+  },
+  {
+    "idShort": 20,
+    "name": "Mock — Clientes",
+    "id": "6a56e0d0e5456db74c0efc37"
+  },
+  {
+    "idShort": 21,
+    "name": "Mock — Prospectos",
+    "id": "6a56e743917543b1c4a1779a"
+  },
+  {
+    "idShort": 22,
+    "name": "Mock — Libro comercial",
+    "id": "6a56e78c1a9286c6838183b6"
+  },
+  {
+    "idShort": 23,
+    "name": "Mock — Cotizaciones",
+    "id": "6a56e7bce93b80fedee6471c"
+  },
+  {
+    "idShort": 24,
+    "name": "Mock — Aprobaciones",
+    "id": "6a56e807a68a12300a6d2cbd"
+  },
+  {
+    "idShort": 25,
+    "name": "Mock — Facturación electrónica (GoSocket)",
+    "id": "6a56e86990ba6e5ac5e5819b"
+  },
+  {
+    "idShort": 26,
+    "name": "Mock — Reporte ejecutivo",
+    "id": "6a56e8af8f615e9b9f290312"
+  },
+  {
+    "idShort": 2,
+    "name": "Carta Gantt",
+    "id": "6a5515ed340e797dac6c3082"
+  }
+]

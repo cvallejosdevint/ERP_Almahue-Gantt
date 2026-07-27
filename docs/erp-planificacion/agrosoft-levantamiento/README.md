@@ -1,6 +1,6 @@
 # Levantamiento Agrosoft → ERP Almahue (canónico)
 
-Documento de trabajo **auditado** a partir de la demo del 2026-07-21.
+Documento de trabajo **auditado** a partir de las demos del **2026-07-21 (Reu 1)** y **2026-07-23 (Reu 2)**.
 
 ## Objetivo del cliente
 
@@ -29,14 +29,23 @@ Documento de trabajo **auditado** a partir de la demo del 2026-07-21.
 agrosoft-levantamiento/
   README.md
   00-decisiones.md
+  reunion2-analisis-2026-07-23.md
+  plan-accion-post-reunion2-2026-07-23.md
+  preguntas-proxima-reunion.md
   matriz-trazabilidad.csv
   trello-depurado.md
   compromiso-actualizacion-tablero-2026-07-22.md
-  preguntas-proxima-reunion.md
+  consolidacion-tablero-2026-07-22.md
+  backups/   ← respaldos JSON del tablero Trello
   fuentes/
+    videos/  ← mp4 reu1/reu2 (gitignore)
   pantallas-legacy/
+    reunion2/  ← capturas video 23/07
   modulos/
 ```
+
+**Última consolidación Trello:** 22/07/2026 — ver `consolidacion-tablero-2026-07-22.md`.  
+**Post Reunión 2:** `reunion2-analisis-2026-07-23.md` + `plan-accion-post-reunion2-2026-07-23.md`.
 
 ## Relación con Gantt Enterprise
 
