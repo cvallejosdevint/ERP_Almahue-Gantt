@@ -1,0 +1,92 @@
+# ERP Almahue — producción independiente (api + web + postgres propios)
+# Uso en server: /opt/almahue_erp
+#   docker compose -f docker-compose.prod.yml --env-file .env up -d --build
+#
+# No reutiliza almahue_postgres ni vendora_postgres.
+
+name: almahue_erp
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: almahue_erp_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-erp}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-erp}
+    volumes:
+      - almahue_erp_pgdata:/var/lib/postgresql/data
+      - ./scripts/init-erp-schema.sql:/docker-entrypoint-initdb.d/01-erp-schema.sql:ro
+    networks:
+      - almahue_erp_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    # Sin publicar 5432 al host (igual que almahue/vendora)
+
+  api:
+    build:
+      context: ./erp_back
+      dockerfile: Dockerfile
+    image: ${ERP_API_IMAGE:-almahue-erp-api:prod}
+    container_name: almahue_erp_api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: ${ERP_API_PORT_INTERNAL:-3001}
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-8h}
+      FRONTEND_URL: ${FRONTEND_URL:?Set FRONTEND_URL in .env}
+      CORS_ORIGINS: ${CORS_ORIGINS:-}
+      PASSWORD_RESET_DEV_RETURN_LINK: ${PASSWORD_RESET_DEV_RETURN_LINK:-false}
+      RUN_MIGRATE: ${RUN_MIGRATE:-true}
+    ports:
+      - "127.0.0.1:${ERP_API_HOST_PORT:-4010}:${ERP_API_PORT_INTERNAL:-3001}"
+    networks:
+      - almahue_erp_net
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://127.0.0.1:'+(process.env.PORT||3001)+'/api/v1/health').then(r=>process.exit(r.status<500?0:1)).catch(()=>process.exit(1))\"",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+  web:
+    build:
+      context: ./erp_front
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-/api/v1}
+        VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
+        VITE_APP_TITLE: ${VITE_APP_TITLE:-Almahue ERP}
+    image: ${ERP_WEB_IMAGE:-almahue-erp-web:prod}
+    container_name: almahue_erp_web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${ERP_WEB_HOST_PORT:-4011}:80"
+    networks:
+      - almahue_erp_net
+
+networks:
+  almahue_erp_net:
+    name: almahue_erp_net
+    driver: bridge
+
+volumes:
+  almahue_erp_pgdata:
+    name: almahue_erp_pgdata

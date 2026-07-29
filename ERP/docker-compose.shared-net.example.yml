@@ -1,0 +1,13 @@
+# Ejemplo: unir el stack ERP a una red Docker ya existente en el host
+# (otros proyectos en Bluehost / mismo servidor).
+#
+# Uso:
+#   export ERP_NETWORK_NAME=nombre-red-existente
+#   docker compose -f docker-compose.yml -f docker-compose.shared-net.example.yml up -d
+#
+# Ajustar nombres de contenedor/puertos en .env para no chocar con otros stacks.
+
+networks:
+  erp:
+    name: ${ERP_NETWORK_NAME:?Set ERP_NETWORK_NAME to the existing Docker network}
+    external: true

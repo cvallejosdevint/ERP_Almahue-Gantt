@@ -1,0 +1,96 @@
+# ERP Almahue — compose de ejemplo (portable)
+#
+# Por defecto NO levanta Postgres: apunta DATABASE_URL a una BD externa/compartida.
+# Postgres local opcional: docker compose --profile db up -d
+#
+# Uso:
+#   cp .env.example .env   # o .env.production.example
+#   docker compose up -d --build
+#   docker compose run --rm api npx prisma migrate deploy
+#
+# Red compartida con otros stacks (fase Bluehost): ver docker-compose.shared-net.example.yml
+
+name: ${COMPOSE_PROJECT_NAME:-almahue-erp}
+
+services:
+  api:
+    build:
+      context: ./erp_back
+      dockerfile: Dockerfile
+    image: ${ERP_API_IMAGE:-almahue-erp-api:local}
+    container_name: ${ERP_API_CONTAINER:-almahue-erp-api}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: ${ERP_API_PORT_INTERNAL:-3001}
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-8h}
+      FRONTEND_URL: ${FRONTEND_URL:?Set FRONTEND_URL in .env}
+      CORS_ORIGINS: ${CORS_ORIGINS:-}
+      PASSWORD_RESET_DEV_RETURN_LINK: ${PASSWORD_RESET_DEV_RETURN_LINK:-false}
+      RUN_MIGRATE: ${RUN_MIGRATE:-false}
+    ports:
+      - "${ERP_API_HOST_PORT:-3001}:${ERP_API_PORT_INTERNAL:-3001}"
+    networks:
+      - erp
+    healthcheck:
+      # Proceso arriba (HTTP 200 aunque DB esté degraded)
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://127.0.0.1:'+(process.env.PORT||3001)+'/api/v1/health').then(r=>process.exit(r.status<500?0:1)).catch(()=>process.exit(1))\"",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  web:
+    build:
+      context: ./erp_front
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-/api/v1}
+        VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
+        VITE_APP_TITLE: ${VITE_APP_TITLE:-Almahue ERP v1}
+    image: ${ERP_WEB_IMAGE:-almahue-erp-web:local}
+    container_name: ${ERP_WEB_CONTAINER:-almahue-erp-web}
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "${ERP_WEB_HOST_PORT:-8080}:80"
+    networks:
+      - erp
+
+  # Solo con: docker compose --profile db up -d
+  db:
+    profiles: ["db"]
+    image: postgres:16-alpine
+    container_name: ${ERP_DB_CONTAINER:-almahue-erp-db}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-almahue}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-almahue}
+      POSTGRES_DB: ${POSTGRES_DB:-almahue}
+    ports:
+      - "${ERP_DB_HOST_PORT:-5433}:5432"
+    volumes:
+      - erp_pgdata:/var/lib/postgresql/data
+      - ./scripts/init-erp-schema.sql:/docker-entrypoint-initdb.d/01-erp-schema.sql:ro
+    networks:
+      - erp
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  erp:
+    name: ${ERP_NETWORK_NAME:-almahue-erp}
+
+volumes:
+  erp_pgdata:
+    name: ${ERP_DB_VOLUME:-almahue-erp-pgdata}
