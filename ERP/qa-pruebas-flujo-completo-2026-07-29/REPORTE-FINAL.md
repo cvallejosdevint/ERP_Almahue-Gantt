@@ -14,10 +14,11 @@ Se ejecutaron **41 casos de prueba (TC01–TC41)** cubriendo el flujo de negocio
 |---|---|
 | ✅ PASS | **41 / 41 (100%)** |
 | ❌ FALLA real de sistema | 0 |
-| Bugs reales encontrados y corregidos | 2 (H4, H5\*) |
-| Hallazgos UX documentados (no bloqueantes) | 6 (H1, H2, H3, H6, H7, H8) |
+| Bugs reales encontrados y corregidos | **H4, H5, H8** (+ PATCH elementos/honorarios, PC-04) |
+| Hallazgos mitigados / no-bug cerrados | **H1, H2, H3, H7** |
+| En monitoreo (no bloqueante) | **H6** (`pg` DeprecationWarning aislado) |
 
-\* H5 fue documentado como mejora de accesibilidad pendiente, no se modificó código de producción.
+Ver matriz completa en `00-PLAN-MAESTRO.md` § «Matriz de hallazgos H1–H8».
 
 Todos los datos de prueba fueron creados en la base de datos real bajo la convención de nombres **"Prueba QA"** / **"Intento N"**, quedando disponibles para revisión directa en BD o en la interfaz. Cada caso tiene su propia carpeta de evidencia con capturas de pantalla en `TC##-nombre-caso/`.
 
@@ -38,21 +39,24 @@ Es decir, estos fueron **problemas de la estrategia de automatización, no bugs 
 - **Fix:** `erp_front/src/components/ui/searchable-select.tsx` — el listado de opciones ahora se renderiza en un portal a `document.body` con posición `fixed` calculada dinámicamente (con flip hacia arriba si no hay espacio abajo), evitando el recorte por `overflow` del modal padre.
 - **Verificado en:** TC11 (tipo de documento), y de forma indirecta en todos los formularios posteriores que usan selects en modales (TC13, TC16, TC18, TC19, TC24, TC28, TC33, TC39, etc.) — todos funcionaron sin fricción tras el fix.
 
-### 🐛 H5 — Acciones de Plan de Cuentas solo accesibles por hover (accesibilidad, documentado)
-- **Dónde:** árbol de Plan de Cuentas — botones "Agregar hijo / Editar / Eliminar" por fila.
-- **Causa:** los botones solo son visibles con `group-hover:flex` (CSS `:hover`), sin alternativa para usuarios que no puedan hacer hover preciso (táctil, accesibilidad, automatización).
-- **Estado:** no se modificó producción (funciona bien con mouse real); documentado como mejora de accesibilidad pendiente de evaluar por el equipo de producto.
+### 🐛 H5 — Acciones de Plan de Cuentas solo por hover — **CORREGIDO**
+Botones siempre visibles + `aria-label` + foco teclado (`PlanCuentasPage.tsx`).
 
-## 3. Hallazgos UX menores (no bloqueantes)
+### 🐛 H8 — Periodo Conciliación con placeholder engañoso — **CORREGIDO**
+`defaultValue` desde periodo contable activo; toasts 5s.
 
-| ID | Módulo | Descripción |
+## 3. Hallazgos H1–H8 (estado final 2026-07-29)
+
+| ID | Estado | Nota |
 |---|---|---|
-| H1 | Login | Rechazo de usuario inactivo fue silencioso en un intento y mostró toast en otro — variabilidad menor, ambos rechazaron el acceso correctamente. |
-| H2 | Roles | Un intento de reasignar rol reportó error impreciso; reintento inmediato funcionó sin cambios. Posible problema de timing puntual. |
-| H3 | Plantilla documentos | El campo "Texto pie" es difícil de editar rápido porque la vista previa en vivo (iframe) refresca el DOM constantemente. |
-| H6 | Contratistas (tarifas) | `DeprecationWarning` aislado de la librería `pg` en el backend ("client.query() called while already executing"); no afectó el resultado (201 Created). Requiere monitoreo si se repite con más frecuencia. |
-| H7 | Compras (OC) | Aclaración: no hay bug de re-render; el "bloqueo" reportado por el agente de pruebas fue por su propia estrategia de automatización (ver nota arriba). |
-| H8 | Tesorería (Conciliación) | El campo "Periodo" del modal "Nueva conciliación" usa un `placeholder` ("Jul 2026") que visualmente parece un valor ya cargado, pero el campo está realmente vacío hasta que el usuario escribe. Si se deja así, la validación bloquea el guardado con un toast que desaparece en 1-2 segundos. Se recomienda revisar placeholders similares en otros formularios (mismo patrón que H1/H3) para evitar confusión. |
+| H1 | CERRADO | Toast de login + duración 5s; backend ya rechazaba inactivos. |
+| H2 | CERRADO | No bug (timing agente). |
+| H3 | CERRADO | Debounce preview plantilla 400ms. |
+| H4 | CORREGIDO | Portal SearchableSelect. |
+| H5 | CORREGIDO | Acciones plan cuentas visibles. |
+| H6 | MONITOREO | Warning `pg` aislado; sin falla funcional. |
+| H7 | CERRADO | No bug (automatización). |
+| H8 | CORREGIDO | defaultValue Periodo conciliación. |
 
 ## 4. Detalle de casos por lote
 
@@ -132,6 +136,6 @@ Es decir, estos fueron **problemas de la estrategia de automatización, no bugs 
 
 ## 5. Conclusión
 
-El sistema Almahue ERP superó exitosamente los 41 casos de prueba que cubren el ciclo de vida completo del negocio: desde la configuración inicial (empresas, usuarios, roles, catálogos) hasta la operación diaria (ventas, compras, contratistas, bodega) y el cierre contable/financiero (asientos, centralización, tesorería). Se identificó y corrigió en el momento **un bug real de UX crítico** (H4 — selects no clicables en modales) que afectaba potencialmente a decenas de formularios del sistema. El resto de observaciones son mejoras de UX menores, no bloqueantes, documentadas para seguimiento futuro del equipo de producto.
+El sistema Almahue ERP superó los 41 casos de prueba del flujo completo. Los bugs de producto de la suite (H4, H5, H8) y los hallazgos UX asociados (H1, H3) quedaron corregidos o mitigados. H2/H7 fueron falsos negativos de automatización. Solo H6 queda en monitoreo técnico (warning `pg` no bloqueante). Diferidos externos (GoSocket, BND, etc.) están en `DEFINICIONES_PENDIENTES.md`, no en esta suite.
 
 **Evidencia completa:** 41 carpetas `TC##-*` en este directorio con capturas de pantalla de cada paso relevante. Detalle caso por caso, notas de verificación y hallazgos técnicos completos en `00-PLAN-MAESTRO.md`.
