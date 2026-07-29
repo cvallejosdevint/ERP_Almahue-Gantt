@@ -11,7 +11,7 @@ Estado post-implementación local. Criterios: **PASS** = cableado front+back (o 
 | DEFERRED | 6 |
 | FAIL | 0 |
 | % cerrado del backlog **factible** | **~100%** |
-| % del backlog “ideal mágico” (incl. GoSocket prod, BND, PDF avanzado, deploy SSH) | ~80% (honestidad) |
+| % del backlog “ideal mágico” (incl. GoSocket prod, PDF avanzado, deploy SSH) | ~80% (honestidad) |
 
 ## Builds / tests (smoke técnico)
 
@@ -95,7 +95,6 @@ Estado post-implementación local. Criterios: **PASS** = cableado front+back (o 
 |---|---|
 | GoSocket/SII producción | Sin credenciales / env productivo |
 | Formatos cotización/OC dinámicos (logo/sello) | Sin assets cliente |
-| Plataforma BND | Fuera de sprint; arranca próxima semana |
 | Reportería PDF avanzada por módulo | Espera feedback pantallas |
 | Deploy SSH / R3-18 servidor publicado | Pedido: NO redeploy SSH en esta pasada |
 | Catálogo estados bodega “oficial” cliente | UI con estados razonables; fine-tune con Excel cliente |

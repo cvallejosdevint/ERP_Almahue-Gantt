@@ -30,7 +30,6 @@ Precondiciones: `erp_back` migrado + seed; `erp_front` en local; toggle Demo **O
 | Redeploy SSH / URL publicada | **DONE** — `http://45.7.229.46/almahue-erp/` |
 | PDF logo cotización/OC (plantilla admin) | **DONE** — Admin → Plantilla documentos + print browser |
 | Parser PDF cartola (heurística genérica) | **DONE** (mejor esfuerzo) — escaneados / banco-específico sin muestra aún limitado |
-| BND | **DEFERRED** — sin reqs concretos de Diego en repo/docs; no inventar plataforma |
 
 ## Builds locales
 

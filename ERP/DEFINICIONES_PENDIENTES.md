@@ -34,27 +34,11 @@
 
 ---
 
-## 2. Plataforma BND
+## 2. Cuentas corrientes (menú Sergio / DTEMITE)
 
 | | |
 |---|---|
-| **Fuente** | Interno I6 · residual #6 |
-| **Estado actual** | Sin módulo ni rutas. |
-| **Bloqueante** | Requisitos de Diego (alcance, APIs, roles, fechas). |
-| **Contrato propuesto (placeholder hasta reqs)** | |
-| | 1. Menú: Integraciones › BND (o módulo propio si Diego lo pide). |
-| | 2. Pantallas mínimas: configuración de credenciales por empresa, estado de sync, log de errores. |
-| | 3. No mezclar con GoSocket ni con Tesorería hasta confirmar dominio. |
-| **Criterio de aceptación** | Definidos por Diego; este doc se actualiza cuando lleguen. |
-| **Acción inmediata** | Agendar kickoff con Diego; no stubear UI engañosa. |
-
----
-
-## 3. Cuentas corrientes (menú Sergio / DTEMITE)
-
-| | |
-|---|---|
-| **Fuente** | Validación Sergio · residual #7 |
+| **Fuente** | Validación Sergio · residual cuentas corrientes |
 | **Estado actual** | Gap. Anticipos productores y conciliación bancaria cubren parte del dominio, pero no hay módulo “Cuentas corrientes”. |
 | **Bloqueante** | Confirmación de producto: ¿CC de clientes, proveedores, o ambos? ¿Saldo por documento o por tercero? |
 | **Contrato propuesto (asumiendo clientes + proveedores)** | |
@@ -89,11 +73,11 @@
 
 ---
 
-## 4. Cartola banco-específica / PDF escaneado
+## 3. Cartola banco-específica / PDF escaneado
 
 | | |
 |---|---|
-| **Fuente** | Reu2 / flujo · residual #4 |
+| **Fuente** | Reu2 / flujo · residual cartola |
 | **Estado actual** | Parser genérico Excel/CSV/PDF de texto (`cartola-parser.util.ts`). PDF escaneado (imagen) no soportado. Formatos banco-específicos no calibrados. |
 | **Bloqueante** | Muestra real de Agustín (PDF/Excel Banco Chile / Estado / Santander). |
 | **Contrato propuesto** | |
@@ -105,11 +89,11 @@
 
 ---
 
-## 5. Datos maestros Excel oficiales del cliente
+## 4. Datos maestros Excel oficiales del cliente
 
 | | |
 |---|---|
-| **Fuente** | Dependencia Mario · residual #5 |
+| **Fuente** | Dependencia Mario · residual maestros |
 | **Estado actual** | Seed con plan 396 / CC 233 / elementos 208 (Exceles ya procesados 28/07). Estados de bodega razonables en seed. |
 | **Bloqueante** | Excel “oficial definitivo” + catálogo de estados de bodega firmado por cliente. |
 | **Contrato propuesto** | |
@@ -120,11 +104,11 @@
 
 ---
 
-## 6. Cron Banco Central 9:00 (producción)
+## 5. Cron Banco Central 9:00 (producción)
 
 | | |
 |---|---|
-| **Fuente** | Reu3 D13 · residual #8 |
+| **Fuente** | Reu3 D13 · residual cron BC |
 | **Estado actual** | Sync manual OK (`Indicadores BC`). Cron prod no validado en el servidor. |
 | **Bloqueante** | Acceso deploy / confirmación de scheduler en el host (systemd timer, cron Docker, o Nest `@Cron`). |
 | **Contrato propuesto** | |
@@ -136,7 +120,7 @@
 
 ---
 
-## 7. Reportería PDF avanzada por módulo
+## 6. Reportería PDF avanzada por módulo
 
 | | |
 |---|---|
@@ -151,7 +135,7 @@
 
 ---
 
-## 8. Assets reales de marca (logo / sello cotización-OC)
+## 7. Assets reales de marca (logo / sello cotización-OC)
 
 | | |
 |---|---|
@@ -163,7 +147,7 @@
 
 ---
 
-## 9. Libro comercial unificado + Libro despachos
+## 8. Libro comercial unificado + Libro despachos
 
 | | |
 |---|---|
@@ -182,7 +166,6 @@
 | Ítem | Owner externo | ¿Puede codearse ya? |
 |---|---|---|
 | GoSocket prod | Cliente / keys | No |
-| BND | Diego | No |
 | Cuentas corrientes | Producto (decisión scope) | **Sí (spec arriba)** — esperar OK de producto |
 | Cartola banco-específica | Agustín (muestras) | No |
 | Excel maestros | Mario | Parcial (pipeline listo) |

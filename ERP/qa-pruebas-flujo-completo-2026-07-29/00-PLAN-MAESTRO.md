@@ -47,7 +47,7 @@
 | PC-04 periodo cerrado → contabilizar | **CORREGIDO** — `assertPeriodoAbierto` en asientos CONTABILIZADO + check en Libro ventas |
 | `eslint.config.js` faltante | **CORREGIDO** — flat config; `npm run lint` sin errors |
 
-**Respuesta corta:** los hallazgos de **producto/UX de esta suite están solucionados o mitigados (H1–H5, H7–H8)**. Queda solo **H6 en monitoreo** (no es un bug funcional). Lo diferido (GoSocket, BND, etc.) no son hallazgos de esta QA; están especificados en `DEFINICIONES_PENDIENTES.md`.
+**Respuesta corta:** los hallazgos de **producto/UX de esta suite están solucionados o mitigados (H1–H5, H7–H8)**. Queda solo **H6 en monitoreo** (no es un bug funcional). Lo diferido (GoSocket, cuentas corrientes, cartolas banco-específicas, etc.) no son hallazgos de esta QA; están especificados en `DEFINICIONES_PENDIENTES.md`.
 
 ---
 
@@ -170,4 +170,4 @@
 
 - Capturas por caso: carpetas `TC##-*` en este directorio.
 - Reporte consolidado: [`REPORTE-FINAL.md`](./REPORTE-FINAL.md).
-- Diferidos externos (GoSocket, BND, cuentas corrientes, etc.): [`../DEFINICIONES_PENDIENTES.md`](../DEFINICIONES_PENDIENTES.md).
+- Diferidos externos (GoSocket, cuentas corrientes, cartolas, etc.): [`../DEFINICIONES_PENDIENTES.md`](../DEFINICIONES_PENDIENTES.md).

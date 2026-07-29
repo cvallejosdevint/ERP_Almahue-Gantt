@@ -136,6 +136,6 @@ Botones siempre visibles + `aria-label` + foco teclado (`PlanCuentasPage.tsx`).
 
 ## 5. Conclusión
 
-El sistema Almahue ERP superó los 41 casos de prueba del flujo completo. Los bugs de producto de la suite (H4, H5, H8) y los hallazgos UX asociados (H1, H3) quedaron corregidos o mitigados. H2/H7 fueron falsos negativos de automatización. Solo H6 queda en monitoreo técnico (warning `pg` no bloqueante). Diferidos externos (GoSocket, BND, etc.) están en `DEFINICIONES_PENDIENTES.md`, no en esta suite.
+El sistema Almahue ERP superó los 41 casos de prueba del flujo completo. Los bugs de producto de la suite (H4, H5, H8) y los hallazgos UX asociados (H1, H3) quedaron corregidos o mitigados. H2/H7 fueron falsos negativos de automatización. Solo H6 queda en monitoreo técnico (warning `pg` no bloqueante). Diferidos externos del ERP (GoSocket, cuentas corrientes, etc.) están en `DEFINICIONES_PENDIENTES.md`, no en esta suite.
 
 **Evidencia completa:** 41 carpetas `TC##-*` en este directorio con capturas de pantalla de cada paso relevante. Detalle caso por caso, notas de verificación y hallazgos técnicos completos en `00-PLAN-MAESTRO.md`.

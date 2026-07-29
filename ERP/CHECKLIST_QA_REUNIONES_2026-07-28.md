@@ -101,7 +101,6 @@ Leyenda: **OK** · **parcial** · **falta** · **DEFERRED** · **OUT**
 | Comprobantes enriquecidos | Interno PC-03 | OK | periodo/tipo/líneas/estados |
 | Período impacta ventas | Interno PC-04 | parcial | selector API + PeriodoSetup; reglas doc parciales |
 | Formato cotización/OC logo/sello | Interno I5 | OK | Admin plantilla + print |
-| BND plataforma | Interno I6 | **DEFERRED** | sin reqs Diego |
 | Períodos contables pantalla | Sergio | OK | `/contabilidad/periodos` |
 | Config SII → cuenta | Sergio | OK | `/contabilidad/config-sii` |
 | Centralización masiva | Sergio | OK | `/contabilidad/centralizacion` |
@@ -134,11 +133,10 @@ Leyenda: **OK** · **parcial** · **falta** · **DEFERRED** · **OUT**
 1. **GoSocket/DTE productivo** — DEFERRED (sin keys; pedido usuario no tocar). Spec §1.
 2. ~~Elementos de costo / honorarios: falta PATCH~~ — **RESUELTO** (`PUT /elementos-costo/:id`, `PUT /factores-honorario/:id`).
 3. ~~PC-04 período → contabilización~~ — **RESUELTO** (`ContabilizarService.assertPeriodoAbierto` bloquea asientos CONTABILIZADO si periodo inexistente/cerrado).
-4. **Cartola banco-específica / PDF escaneado** — falta muestra Agustín. Spec §4.
-5. **Datos maestros Excel cliente** (plan/elementos/CC oficiales + estados bodega). Spec §5.
-6. **BND** — DEFERRED (reqs Diego). Spec §2.
-7. **Cuentas corrientes** (menú Sergio) — no implementado; **definición lista** Spec §3 (esperar OK de producto).
-8. **Cron BC 9am en producción** — no validado en deploy. Spec §6.
+4. **Cartola banco-específica / PDF escaneado** — falta muestra Agustín. Spec §3.
+5. **Datos maestros Excel cliente** (plan/elementos/CC oficiales + estados bodega). Spec §4.
+6. **Cuentas corrientes** (menú Sergio) — no implementado; **definición lista** Spec §2 (esperar OK de producto).
+7. **Cron BC 9am en producción** — no validado en deploy. Spec §5.
 
 ---
 
