@@ -1,0 +1,122 @@
+[
+  {
+    "Modulo": "Auth",
+    "Caso": "Logins QA OK",
+    "OK": true,
+    "Detalle": "sol/aprob/lect/digit"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Solicitante crea EMITIDO",
+    "OK": true,
+    "Detalle": "OC-RT-140310"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Solicitante NO aprueba",
+    "OK": true,
+    "Detalle": "403 expected"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Lectura NO aprueba",
+    "OK": true,
+    "Detalle": "403 expected"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Aprobador aprueba",
+    "OK": true,
+    "Detalle": "APROBADO"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Aprobador rechaza",
+    "OK": true,
+    "Detalle": "RECHAZADO"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Pendiente UI creada",
+    "OK": true,
+    "Detalle": "OC-UIP-140311"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Solicitante pide aprobacion",
+    "OK": true,
+    "Detalle": "PF-RT-140311"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Solicitante NO aprueba",
+    "OK": true,
+    "Detalle": "403"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Digitador NO aprueba",
+    "OK": true,
+    "Detalle": "403"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Aprobador aprueba",
+    "OK": true,
+    "Detalle": "DEFINITIVA"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Aprobador rechaza",
+    "OK": true,
+    "Detalle": "RECHAZADA"
+  },
+  {
+    "Modulo": "PF",
+    "Caso": "Pendiente UI creada",
+    "OK": true,
+    "Detalle": "PF-UIP-140311"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Digitador GET OC 403",
+    "OK": true,
+    "Detalle": ""
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura POST OC 403",
+    "OK": true,
+    "Detalle": ""
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Solicitante GET usuarios 403",
+    "OK": true,
+    "Detalle": ""
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura GET OC 200",
+    "OK": true,
+    "Detalle": ""
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Digitador GET proformas 200",
+    "OK": true,
+    "Detalle": ""
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura no ve OC ajenas en bandeja (o sin botones UI)",
+    "OK": true,
+    "Detalle": "ajenas=0 totalPend=1"
+  },
+  {
+    "Modulo": "OC",
+    "Caso": "Aprobador ve pendiente en bandeja",
+    "OK": true,
+    "Detalle": "OC-UIP-140311"
+  }
+]

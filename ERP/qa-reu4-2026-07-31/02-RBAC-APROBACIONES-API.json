@@ -1,0 +1,134 @@
+[
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura NO puede crear OC",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura NO puede admin/usuarios",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura NO lee roles admin",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Lectura SÍ lee OC",
+    "OK": true,
+    "Detalle": "code=200 count=3"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Digitador contratistas NO lee compras",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Solicitante crea OC EMITIDO con aprobador",
+    "OK": false,
+    "Detalle": "id= estado= code=400 \r\n{\r\n  \"message\": \"Proveedor no est\\u00E1 en el maestro. Cr\\u00E9alo en Cat\\u00E1logos \\u2192 Proveedores.\",\r\n  \"error\": \"Bad Request\",\r\n  \"statusCode\": 400\r\n}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Aprobador rechaza OC",
+    "OK": false,
+    "Detalle": "create failed \r\n{\r\n  \"message\": \"Proveedor no est\\u00E1 en el maestro. Cr\\u00E9alo en Cat\\u00E1logos \\u2192 Proveedores.\",\r\n  \"error\": \"Bad Request\",\r\n  \"statusCode\": 400\r\n}"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Solicitante crea proforma borrador",
+    "OK": true,
+    "Detalle": "id=cms97h1s400l6mstydyohm1em estado=BORRADOR code=201 {\"id\":\"cms97h1s400l6mstydyohm1em\",\"numero\":\"PF-QA-131743\",\"contratistaId\":\"CTR-EMP-1-6\",\"contratista\":\"Contratista Prueba QA\",\"empresaId\":\"EMP-1\",\"periodo\":\"2026-07\",\"monto\":800000,\"montoNeto\":800000,\"moneda\":\"CLP\",\"estado\":\"BORRADOR\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"solicitante\":\"QA Solicitante\",\"createdAt\":\"2026-07-31T17:17:43.876Z\",\"updatedAt\":\"2026-07-31T17:17:43.876Z\"}"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Solicitante pide aprobación",
+    "OK": true,
+    "Detalle": "estado=PENDIENTE_APROBACION code=201 {\"id\":\"cms97h1s400l6mstydyohm1em\",\"numero\":\"PF-QA-131743\",\"contratistaId\":\"CTR-EMP-1-6\",\"contratista\":\"Contratista Prueba QA\",\"empresaId\":\"EMP-1\",\"periodo\":\"2026-07\",\"monto\":800000,\"montoNeto\":800000,\"moneda\":\"CLP\",\"estado\":\"PENDIENTE_APROBACION\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"solicitante\":\"QA Solicitante\",\"createdAt\":\"2026-07-31T17:17:43.876Z\",\"updatedAt\":\"2026-07-31T17:17:43.901Z\"}"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Solicitante NO puede aprobar definitiva",
+    "OK": true,
+    "Detalle": "code=403 \r\n{\r\n  \"message\": \"Solo un supervisor de la regla de Contratistas puede resolver esta proforma\",\r\n  \"error\": \"Forbidden\",\r\n  \"statusCode\": 403\r\n}"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Digitador NO puede aprobar",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Aprobador aprueba proforma",
+    "OK": true,
+    "Detalle": "estado=DEFINITIVA code=201 {\"id\":\"cms97h1s400l6mstydyohm1em\",\"numero\":\"PF-QA-131743\",\"contratistaId\":\"CTR-EMP-1-6\",\"contratista\":\"Contratista Prueba QA\",\"empresaId\":\"EMP-1\",\"periodo\":\"2026-07\",\"monto\":800000,\"montoNeto\":800000,\"moneda\":\"CLP\",\"estado\":\"DEFINITIVA\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"aprobadoPorId\":\"U-16\",\"aprobadoPorNombre\":\"QA Aprobador\",\"aprobadaAt\":\"2026-07-31T17:17:43.937Z\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"solicitante\":\"QA Solicitante\",\"createdAt\":\"2026-07-31T17:17:43.876Z\",\"updatedAt\":\"2026-07-31T17:17:43.939Z\"}"
+  },
+  {
+    "Modulo": "Contratistas/PF",
+    "Caso": "Aprobador rechaza proforma",
+    "OK": true,
+    "Detalle": "estado=RECHAZADA code=201 {\"id\":\"cms97h1ue00l9msty01t5a2c3\",\"numero\":\"PF-QA-RJ-131743\",\"contratistaId\":\"CTR-EMP-1-6\",\"contratista\":\"Contratista Prueba QA\",\"empresaId\":\"EMP-1\",\"periodo\":\"2026-07\",\"monto\":120000,\"montoNeto\":120000,\"moneda\":\"CLP\",\"estado\":\"RECHAZADA\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"aprobadoPorId\":\"U-16\",\"aprobadoPorNombre\":\"QA Aprobador\",\"aprobadaAt\":\"2026-07-31T17:17:43.981Z\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"solicitante\":\"QA Solicitante\",\"createdAt\":\"2026-07-31T17:17:43.958Z\",\"updatedAt\":\"2026-07-31T17:17:43.983Z\"}"
+  },
+  {
+    "Modulo": "Comercial",
+    "Caso": "Sin cola de aprobación activa (solo reglas)",
+    "OK": true,
+    "Detalle": "modulos=Compras,Comercial,Contratistas"
+  },
+  {
+    "Modulo": "RBAC",
+    "Caso": "Solicitante NO admin usuarios",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Crear proveedor maestro",
+    "OK": true,
+    "Detalle": "code=201 id=cms97hk7900lkmstyttuprvjg {\"id\":\"cms97hk7900lkmstyttuprvjg\",\"rut\":\"76.123.456-0\",\"razonSocial\":\"Proveedor QA Aprobaciones\",\"activo\":true,\"empresaId\":\"EMP-1\"}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Solicitante crea OC EMITIDO",
+    "OK": true,
+    "Detalle": "id=cms97hk8k00llmsty2aau3xtn estado=EMITIDO code=201 {\"id\":\"cms97hk8k00llmsty2aau3xtn\",\"numero\":\"OC-QA-131807\",\"fecha\":\"2026-07-31\",\"proveedor\":\"Proveedor QA Aprobaciones\",\"proveedorId\":\"cms97hk7900lkmstyttuprvjg\",\"solicitante\":\"QA Solicitante\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"moneda\":\"CLP\",\"neto\":1500000,\"afacto\":\"AFECTO\",\"estado\":\"EMITIDO\",\"departamento\":\"Operaciones\"}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Solicitante NO aprueba OC",
+    "OK": true,
+    "Detalle": "code=403 \r\n{\r\n  \"message\": \"Solo el jefe aprobador asignado puede aprobar o rechazar esta OC\",\r\n  \"error\": \"Forbidden\",\r\n  \"statusCode\": 403\r\n}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Lectura NO aprueba OC",
+    "OK": true,
+    "Detalle": "code=403"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Aprobador ve OC en bandeja",
+    "OK": true,
+    "Detalle": "total=4 hit=1 sample={\"id\":\"cms97hk8p00lmmstydla1522w\",\"ocId\":\"cms97hk8k00llmsty2aau3xtn\",\"ocNumero\":\"OC-QA-131807\",\"proveedor\":\"Proveedor QA Aprobaciones\",\"monto\":1500000,\"solicitante\":\"QA Solicitante\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"estado\":\"PENDIENTE\",\"fecha\":\"2026-07-31\"}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Aprobador aprueba OC",
+    "OK": true,
+    "Detalle": "estado=APROBADO code=200 {\"id\":\"cms97hk8k00llmsty2aau3xtn\",\"numero\":\"OC-QA-131807\",\"fecha\":\"2026-07-31\",\"proveedor\":\"Proveedor QA Aprobaciones\",\"proveedorId\":\"cms97hk7900lkmstyttuprvjg\",\"solicitante\":\"QA Solicitante\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"moneda\":\"CLP\",\"neto\":1500000,\"afacto\":\"AFECTO\",\"estado\":\"APROBADO\",\"departamento\":\"Operaciones\"}"
+  },
+  {
+    "Modulo": "Compras/OC",
+    "Caso": "Aprobador rechaza OC",
+    "OK": true,
+    "Detalle": "estado=RECHAZADO code=200 {\"id\":\"cms97hkcy00lpmsty6orvvoxe\",\"numero\":\"OC-QA-RJ-131807\",\"fecha\":\"2026-07-31\",\"proveedor\":\"Proveedor QA Aprobaciones\",\"proveedorId\":\"cms97hk7900lkmstyttuprvjg\",\"solicitante\":\"QA Solicitante\",\"creadoPorId\":\"U-17\",\"creadoPorNombre\":\"QA Solicitante\",\"aprobadorId\":\"U-16\",\"aprobadorNombre\":\"QA Aprobador\",\"moneda\":\"CLP\",\"neto\":500000,\"afacto\":\"AFECTO\",\"estado\":\"RECHAZADO\",\"departamento\":\"Operaciones\"}"
+  }
+]

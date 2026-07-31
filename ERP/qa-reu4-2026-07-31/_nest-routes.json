@@ -1,0 +1,972 @@
+[
+  {
+    "method": "POST",
+    "path": "auth/login",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "auth/me",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "auth/me",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/change-password",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/clave-reversa",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/logout",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/refresh",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/recover",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "auth/reset-password",
+    "file": "auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "empresas",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "empresas",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "empresas/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "empresas/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "usuarios",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "usuarios",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "usuarios/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "roles",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "roles",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "roles/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "roles/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "workflows-admin",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "workflows-admin",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "workflows-admin/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "workflows-admin/:id",
+    "file": "modules/admin/admin.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "monedas",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "monedas",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "monedas/:id",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "unidades",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "unidades",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "unidades/:id",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "tipos-documento",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "tipos-documento",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "tipos-documento/:id",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "centros-costo",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "centros-costo",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "centros-costo/:id",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "sync-bc-meta",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "sync-bc-meta",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "sync-indicadores-bc",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "bc/series",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "indicadores-bc",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "proveedores",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proveedores",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "proveedores/:id",
+    "file": "modules/catalogos/catalogos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "clientes",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "clientes",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "clientes/:id",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "prospectos",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "prospectos",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "prospectos/:id",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "documentos",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "documentos/:id",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "documentos/:id",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos/:id/anular",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos/:id/convertir",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos/carga-masiva",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos/:id/reversar",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos/:id/contabilizar",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "workflows",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "dtes",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "dtes/sync",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "dtes/sincronizar",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "dtes/emitir",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "dtes/:id/estado",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "libro-comercial",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "guias-despacho",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "guias-despacho",
+    "file": "modules/comercial/comercial.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "ordenes-compra",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "ordenes-compra",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "ordenes-compra/:id",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "aprobaciones-oc",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "recepciones-oc",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "recepciones-oc",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "recepciones-oc/:id",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "registros-compra",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "registros-compra",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "registros-compra/:id",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "registros-compra/:id/anular",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "registros-compra/carga-masiva",
+    "file": "modules/compras/compras.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "cuentas",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas/categoria",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas/bulk",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "cuentas/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "cuentas/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "cuentas",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas/import-excel/preview",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas/import-excel",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "asientos",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "asientos",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "asientos/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "asientos/bulk",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "elementos-costo",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "elementos-costo",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "elementos-costo/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "factores-honorario",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "factores-honorario",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "factores-honorario/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "reportes-contables",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "presupuestos",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "presupuestos",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "presupuestos/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "presupuestos/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "periodos-contables",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "periodos-contables",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "periodos-contables/:id",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "periodos-contables/:id/abrir",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "periodos-contables/:id/cerrar",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "config-contable-sii",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "config-contable-sii",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "centralizacion/preview",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "centralizacion/ejecutar",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "libro-diario",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "mayor",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "balance-8-columnas",
+    "file": "modules/contabilidad/contabilidad.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "labores",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "labores",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "actividades",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "actividades",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "labor-actividad",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "contratistas",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "contratistas",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "contratistas/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "tarifas-contratista",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "tarifas-contratista",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "tarifas-contratista/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "tarifas-contratista/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "proformas-contratista",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "proformas-contratista/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista/:id/definitiva",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista/:id/solicitar-aprobacion",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista/:id/rechazar",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista/:id/factura",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "proformas-contratista/:id/reversar",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "proformas-contratista/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "ingresos-labor-diario",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "ingresos-labor-diario",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "ingresos-labor-diario/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "ingresos-labor-diario/:id",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "ingresos-labor-diario/asociar",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "contratistas/traspaso-cierre",
+    "file": "modules/contratistas/contratistas.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "dashboard/kpis",
+    "file": "modules/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "dashboard/tendencia",
+    "file": "modules/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "dashboard/notificaciones",
+    "file": "modules/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "dashboard/notificaciones/:id",
+    "file": "modules/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "dashboard/notificaciones/marcar-todas-leidas",
+    "file": "modules/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "gosocket/status",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "gosocket/recibidos",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "gosocket/documentos/:trackId",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "gosocket/documentos/:trackId/pdf",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "gosocket/documentos/:trackId/xml",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "gosocket/documentos/:trackId/reenviar",
+    "file": "modules/gosocket/gosocket.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "health",
+    "file": "modules/health/health.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "insumos",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "insumos",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "insumos/:id",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "bodegas",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "bodegas",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "bodegas/:id",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "movimientos-bodega",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "movimientos-bodega",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "movimientos-bodega/:id",
+    "file": "modules/insumos/insumos.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "movimientos-caja",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "movimientos-caja",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "movimientos-caja/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "movimientos-caja/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "pagos",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "pagos",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "pagos/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "conciliaciones",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "conciliaciones",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "conciliaciones/:id/movimientos",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "movimientos-conciliacion/:id/desconciliar",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "cartolas-bancarias",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cartolas-bancarias",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cartolas-bancarias/preview-archivo",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cartolas-bancarias/import-archivo",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "cartolas-bancarias/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cartolas-bancarias/:id/cerrar",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "cartolas-bancarias/:id/movimientos",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "movimientos-cartola/:id/contabilizar",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "documentos-aging",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "documentos-aging/sync",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "documentos-aging/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "anticipos-productores",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "anticipos-productores",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "anticipos-productores/:id",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "cuentas-corrientes",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "cuentas-corrientes/:terceroId/movimientos",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "cuentas-corrientes/ajuste",
+    "file": "modules/tesoreria/tesoreria.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "ui/table-preferences/:tableKey",
+    "file": "modules/ui/ui.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "ui/table-preferences/:tableKey",
+    "file": "modules/ui/ui.controller.ts"
+  }
+]

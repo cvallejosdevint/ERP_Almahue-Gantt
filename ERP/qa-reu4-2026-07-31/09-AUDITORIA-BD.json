@@ -1,0 +1,187 @@
+{
+  "ts": "2026-07-31T19:38:04.360Z",
+  "counts": {
+    "Actividad": 4,
+    "AnticipoProductor": 1,
+    "AprobacionOc": 5,
+    "Asiento": 14,
+    "Bodega": 1,
+    "CartolaBancaria": 1,
+    "CentroCosto": 37,
+    "Cliente": 4,
+    "Conciliacion": 1,
+    "ConfigContableSii": 10,
+    "Contratista": 7,
+    "CuentaContable": 792,
+    "CuentaCorrienteMovimiento": 3,
+    "DocumentoAging": 3,
+    "DocumentoComercial": 18,
+    "DteEnvio": 0,
+    "DteGoSocket": 1,
+    "ElementoCosto": 208,
+    "Empresa": 6,
+    "FactorHonorario": 0,
+    "FacturaContratista": 1,
+    "GuiaDespacho": 0,
+    "IndicadorBc": 4,
+    "IngresoLaborDiario": 2,
+    "Insumo": 1,
+    "Labor": 4,
+    "LaborActividad": 5,
+    "Moneda": 5,
+    "MovimientoBodega": 1,
+    "MovimientoCaja": 0,
+    "MovimientoCartola": 1,
+    "MovimientoConciliacion": 0,
+    "Notificacion": 49,
+    "OrdenCompra": 5,
+    "Pago": 4,
+    "PasswordResetToken": 0,
+    "PeriodoCierreContratista": 1,
+    "PeriodoContable": 2,
+    "Presupuesto": 0,
+    "ProformaContratista": 12,
+    "Prospecto": 0,
+    "Proveedor": 3,
+    "RecepcionOc": 0,
+    "RefreshToken": 182,
+    "RegistroCompra": 0,
+    "Rol": 11,
+    "Sucursal": 1,
+    "SyncBcMeta": 1,
+    "TarifaContratista": 4,
+    "TipoDocumento": 54,
+    "UiTablePreference": 1,
+    "UnidadMedida": 6,
+    "Usuario": 18,
+    "UsuarioEmpresa": 28,
+    "WorkflowConfig": 3,
+    "_prisma_migrations": 25
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "area": "core",
+      "code": "EMPRESAS",
+      "detail": "6 empresas (4 activas): Almahue SpA, Almahue Logística Ltda., Frutícola Sur SpA, test, Empresa Prueba QA, Empresa Intento 2",
+      "count": 6
+    },
+    {
+      "severity": "INFO",
+      "area": "rbac",
+      "code": "USUARIOS",
+      "detail": "18 users (2 inactivos). Roles: Analista, QA Solo lectura, Digitador contratistas, Contador, Administrador, Compras demo, Aprobador OC demo, Aprobación proformas, QA Aprobador, QA Solicitante",
+      "count": 18
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Digitador contratistas (ROL-3) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Contador (ROL-4) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Aprobación proformas (ROL-5) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Compras demo (ROL-6) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Aprobador OC demo (ROL-7) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "QA Aprobador (ROL-9) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "QA Solicitante (ROL-10) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "QA Solo lectura (ROL-11) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "MED",
+      "area": "rbac",
+      "code": "ROL_SIN_PANTALLAS",
+      "detail": "Analista (ROL-2) sin matriz permisosPantalla"
+    },
+    {
+      "severity": "INFO",
+      "area": "compras",
+      "code": "OC_RESUMEN",
+      "detail": "OC=5; estados: EMITIDO:2, RECHAZADO:1, ANULADO:1, APROBADO:1",
+      "count": 5
+    },
+    {
+      "severity": "INFO",
+      "area": "contratistas",
+      "code": "PROFORMA_RESUMEN",
+      "detail": "proformas=12; DEFINITIVA:6, RECHAZADA:4, FACTURADA:1, PENDIENTE_APROBACION:1",
+      "count": 12
+    },
+    {
+      "severity": "INFO",
+      "area": "comercial",
+      "code": "DOC_RESUMEN",
+      "detail": "docs=18; FACTURADO:6, BORRADOR:5, EMITIDO:4, ANULADO:2, CONTABILIZADA:1",
+      "count": 18
+    },
+    {
+      "severity": "INFO",
+      "area": "contabilidad",
+      "code": "PERIODOS",
+      "detail": "2 periodos (1 abiertos, 1 cerrados)",
+      "count": 2
+    },
+    {
+      "severity": "INFO",
+      "area": "tesoreria",
+      "code": "PAGOS_RESUMEN",
+      "detail": "pagos=4; ACTIVO:3, PENDIENTE:1",
+      "count": 4
+    },
+    {
+      "severity": "MED",
+      "area": "insumos",
+      "code": "MOV_BODEGA_NO_CATALOGO",
+      "detail": "MovimientoBodega.bodega (texto) no matchea Bodega del tenant",
+      "count": 1
+    },
+    {
+      "severity": "INFO",
+      "area": "insumos",
+      "code": "MOV_RESUMEN",
+      "detail": "movimientos=1",
+      "count": 1
+    },
+    {
+      "severity": "INFO",
+      "area": "notificaciones",
+      "code": "NOTIF_TOTAL",
+      "detail": "total=49",
+      "count": 49
+    }
+  ]
+}

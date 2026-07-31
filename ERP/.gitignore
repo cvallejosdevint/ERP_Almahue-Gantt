@@ -6,3 +6,13 @@
 
 # Datos locales de conexión al server (IP, user, paths de clave) — nunca commitear
 .deploy/
+
+# Dumps locales de PostgreSQL (pueden contener datos sensibles)
+backups/*.dump
+backups/*.sql
+!backups/README.md
+!backups/restore-almahue-erp.ps1
+
+# Tokens JWT de sesiones QA locales (nunca commitear)
+qa-reu4-*/session-*.json
+qa-reu4-*/qa-sessions.json
