@@ -1,39 +1,20 @@
-# Fuentes del levantamiento
+# Fuentes crudas
 
-**Índice de la cadena completa (marketing → Gantt → reuniones → Trello):** ver [`cadena-documental.md`](./cadena-documental.md).
-
-| Archivo | Descripción |
+| Archivo | Reunión |
 |---|---|
-| `cadena-documental.md` | Identificación ordenada de todos los documentos |
-| `transcripcion.md` | Texto reunión 1 (verdad de lo dicho) |
-| `reunion2-minuta-tldv-2026-07-23.md` | Minuta tl;dv reunión 2 |
-| `auditoria-calidad.txt` | Corrección del plan Trello de ~70 tarjetas |
-| `resumen-trello-70.txt` | Primer plan Trello post-reunión (no usar solo) |
+| `transcripcion.md` | Reu1 |
+| `transcripcion-reunion2.md` | Reu2 |
+| `transcripcion-reunion3.md` | Reu3 |
+| `transcripcion-reunion4.md` | Reu4 |
+| `transcripcion-reunion5.md` | Reu5 |
+| `reunion3-minuta-tldv-2026-07-28.md` | Reu3 (tl;dv) |
+| `reunion4-minuta-tldv-2026-07-30.md` | Reu4 (tl;dv) |
+| `reunion5-minuta-tldv-2026-08-03.md` | Reu5 (tl;dv) |
+| `videos/reunion1-2026-07-21.mp4` | Reu1 |
+| `videos/reunion2-2026-07-23.mp4` | Reu2 |
+| `videos/reunion3-2026-07-28.mp4` | Reu3 |
+| `videos/reunion4-2026-07-30.mp4` | Reu4 |
+| `videos/reunion5-2026-08-03.mp4` | Reu5 |
+| `sergio-ui-ref-2026-07-28/` | Frames PNG (interna Sergio) |
 
-## Videos (locales, no versionados en git)
-
-Carpeta: [`videos/`](./videos/) — listada en `.gitignore` por tamaño (~6.3 GB).
-
-| Archivo | Reunión | Fecha |
-|---|---|---|
-| `videos/reunion1-2026-07-21.mp4` | Reunión 1 / demo Agrosoft | 21/07/2026 |
-| `videos/reunion2-2026-07-23.mp4` | Reunión 2 (contratistas AgroSmart, ventas, tesorería) | 23/07/2026 |
-
-Copia de origen (backup usuario):
-
-- `C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-07-21 120114.mp4`
-- `C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-07-23 113533.mp4`
-
-## tl;dv
-
-| Reunión | URL |
-|---|---|
-| Reunión 1 | https://tldv.io/app/meetings/6a60394d4959970013159ad2 |
-| Reunión 2 | https://tldv.io/app/meetings/6a624d3ff324400013c736cb |
-
-## Capturas
-
-| Carpeta | Origen |
-|---|---|
-| `../pantallas-legacy/` | Reunión 1 (legado Agrosoft) |
-| `../pantallas-legacy/reunion2/` | Reunión 2 (20 pantallazos del video) |
+**Planificar desde:** [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)

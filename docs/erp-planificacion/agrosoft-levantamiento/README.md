@@ -1,52 +1,38 @@
-# Levantamiento Agrosoft → ERP Almahue (canónico)
+# Fuentes canónicas — ERP Almahue
 
-Documento de trabajo **auditado** a partir de las demos del **2026-07-21 (Reu 1)** y **2026-07-23 (Reu 2)**.
+**Planificar desde Reu5** (ajustes post-demo 03/08). Reu4 sigue siendo la base de decisiones de producto; si chocan, gana la decisión más reciente (Reu5).
 
-## Objetivo del cliente
+## Prompt para nuevo chat (copiar)
 
-> “Un Agrosoft pero versión 3.0” — replicar pantallas/flujos actuales corrigiendo fallas críticas, sin mano de obra (usan Book) y con gestión vía Power BI / AlmaWeb por ahora.
+```
+Planifica e implementa el siguiente sprint del ERP Almahue.
 
-## Cómo usar (Cursor / Trello)
+Reglas:
+1. Guíate SOLO por docs/erp-planificacion/agrosoft-levantamiento/
+2. Prioridad absoluta: reunion5-minuta-2026-08-03.md (decisiones D* + action items A*).
+3. Contexto de producto: reunion4-minuta-2026-07-30.md. Si chocan, gana Reu5.
+4. Código actual: ERP/erp_back + ERP/erp_front.
+5. Empieza leyendo la minuta Reu5 y propone un plan concreto (revisión 04/08).
+```
 
-1. Leer `00-decisiones.md` antes de cualquier sprint.
-2. Abrir el módulo en `modulos/0X-*.md`.
-3. Ver captura en `pantallas-legacy/` referenciada.
-4. Implementar solo ítems **REQ** / **DEC**. Lo **OPT** requiere OK del cliente.
-5. Timestamps: columna `ts_tldv` en `matriz-trazabilidad.csv` (preferir sobre relojes del transcript).
+## Inventario
 
-## Etiquetas
-
-| Tag | Significado |
+| Qué | Dónde |
 |---|---|
-| REQ | Obligatorio (dicho/mostrado) |
-| DEC | Decisión estratégica |
-| OPT | Mejora deseable |
-| OUT | Fuera de v1 / sin evidencia suficiente |
+| **Minuta Reu5 (planificar aquí)** | [`reunion5-minuta-2026-08-03.md`](reunion5-minuta-2026-08-03.md) |
+| Minuta Reu4 (decisiones base) | [`reunion4-minuta-2026-07-30.md`](reunion4-minuta-2026-07-30.md) |
+| Minuta / transcripción Reu5 | `fuentes/reunion5-minuta-tldv-*.md`, `fuentes/transcripcion-reunion5.md` |
+| Minuta / transcripción Reu4 | `fuentes/reunion4-minuta-tldv-*.md`, `fuentes/transcripcion-reunion4.md` |
+| Minuta / transcripción Reu3 | `fuentes/reunion3-minuta-tldv-*.md`, `fuentes/transcripcion-reunion3.md` |
+| Transcripciones Reu1 / Reu2 | `fuentes/transcripcion.md`, `fuentes/transcripcion-reunion2.md` |
+| Videos | `fuentes/videos/reunion{1,2,3,4,5}-*.mp4` (gitignored) |
+| Capturas | `pantallas-legacy/`, `capturas-validacion-erp/`, `fuentes/sergio-ui-ref-2026-07-28/` |
+| PDF requerimientos | [`requerimientos/`](requerimientos/) |
 
-## Estructura
+## tl;dv
 
-```
-agrosoft-levantamiento/
-  README.md
-  00-decisiones.md
-  reunion2-analisis-2026-07-23.md
-  plan-accion-post-reunion2-2026-07-23.md
-  preguntas-proxima-reunion.md
-  matriz-trazabilidad.csv
-  trello-depurado.md
-  compromiso-actualizacion-tablero-2026-07-22.md
-  consolidacion-tablero-2026-07-22.md
-  backups/   ← respaldos JSON del tablero Trello
-  fuentes/
-    videos/  ← mp4 reu1/reu2 (gitignore)
-  pantallas-legacy/
-    reunion2/  ← capturas video 23/07
-  modulos/
-```
-
-**Última consolidación Trello:** 22/07/2026 — ver `consolidacion-tablero-2026-07-22.md`.  
-**Post Reunión 2:** `reunion2-analisis-2026-07-23.md` + `plan-accion-post-reunion2-2026-07-23.md`.
-
-## Relación con Gantt Enterprise
-
-Ver [../README.md](../README.md). Este levantamiento detalla Contratistas / Compras / Insumos / Contabilidad / Permisos para las fases F2–F3.
+| Reunión | URL |
+|---|---|
+| Reu3 | https://tldv.io/app/meetings/6a68f05340ebfe00135d54a8 |
+| Reu4 | https://tldv.io/app/meetings/6a6c199a423056001311d7a6 |
+| Reu5 | https://tldv.io/app/meetings/6a71065851275b0013b6f1d9 |
