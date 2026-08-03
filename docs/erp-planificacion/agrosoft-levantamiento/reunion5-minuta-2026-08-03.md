@@ -74,8 +74,8 @@ Prioridad sugerida para “mañana a la misma hora”:
 |---|---|---|
 | A9 | Emisión redimensionable / expandible | |
 | A10 | Panel resumen por tipo doc **colapsable** | NC − / ND + |
-| A11 | Menú acciones alineado (pago, facturar, print, mail stub, adjuntar, anular) | Mail sin server |
-| A12 | Reformular filtros libros (estética) | Ref. Sergio |
+| A11 | Menú acciones alineado (pago, facturar, print, mail stub, adjuntar, anular) | **Hecho** · `RowActions` en cotiz/ventas/OC/compras · mail/adj stub |
+| A12 | Reformular filtros libros (estética) | **Hecho** · `DocumentoLibroFilters` + refs en `fuentes/sergio-ui-ref-2026-08-03/` |
 | A13 | Multi-periodo: tope **1 año** + paginación | Avanzada = rangos |
 | A14 | Admin borradores: filtro por usuario | Ver / Cargar |
 | A15 | Alta cliente desde cotiz: ícono **+** → panel derecho | Campos completos |

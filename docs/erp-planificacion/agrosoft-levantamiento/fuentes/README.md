@@ -16,5 +16,6 @@
 | `videos/reunion4-2026-07-30.mp4` | Reu4 |
 | `videos/reunion5-2026-08-03.mp4` | Reu5 |
 | `sergio-ui-ref-2026-07-28/` | Frames PNG (interna Sergio) |
+| `sergio-ui-ref-2026-08-03/` | Refs menú acciones / preview / filtros (Reu5) |
 
 **Planificar desde:** [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)
