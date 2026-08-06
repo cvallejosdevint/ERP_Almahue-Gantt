@@ -1,0 +1,2397 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+ 
+API GOSOCKET 
+Manual de usuario 
+  
+ 
+ 
+  
+
+===== PAGE 2 =====
+ 
+2 
+ 
+Tabla de contenido 
+INTRODUCCIÓN ----------------------------------------------------------------------- 6 
+CARACTERÍSTICAS DE LAS API ---------------------------------------------------------------- 6 
+¿QUÉ ES UNA API REST? -------------------------------------------------------------------- 7 
+DEFINICIÓN, BENEFICIOS Y FUNCIONES DE LA API REST DE GOSOCKET -------------------------- 8 
+AUTENTICACIÓN EN LA API ----------------------------------------------------------------- 10 
+Funciones ----------------------------------------------------------------------------- 13 
+¿CÓMO ESTABLECER LA COMUNICACIÓN CON LA API? ---------------------------------------- 16 
+MÉTODO PARA AGREGAR UN COMENTARIO (ADDCOMMENT) ------------------ 19 
+¿Cómo funciona el método AddComment? ----------------------------------------- 19 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 20 
+Características del método AddComment ------------------------------------------- 21 
+MÉTODO PARA ELIMINAR UN COMENTARIO (DELETECOMMENT) ------------- 22 
+¿Cómo funciona el método DeleteComment? -------------------------------------- 22 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 23 
+Características del método DeleteComment ---------------------------------------- 24 
+MÉTODO PARA RECUPERAR LOS COMENTARIOS DE UN DOCUMENTO 
+(GETDOCUMENTCOMMENTS) ------------------------------------------------------ 25 
+¿Cómo funciona el método GetDocumentComments? ------------------------------ 25 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 26 
+Características del método ---------------------------------------------------------- 27 
+        MÉTODO PARA ENVIAR DOCUMENTOS 
+(SENDDOCUMENTTOAUTHORITY) ------------------------------------------------- 28 
+¿Cómo funciona el método SendDocumentToAuthority? --------------------------- 29 
+JSON Ejemplo de respuesta --------------------------------------------------------- 29 
+Proceso del método SendDocumentToAuthority------------------------------------ 31 
+Características del método SendDocumentToAuthority ---------------------------- 32 
+MÉTODO PARA ALMACENAR DOCUMENTOS EN GOSOCKET 
+(SENDDOCUMENTTOSAVE) --------------------------------------------------------- 34 
+¿Cómo funciona el método SendDocumentToSave? ------------------------------- 34 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 36 
+
+
+===== PAGE 3 =====
+ 
+3 
+ 
+Características del método SendDocumentToSave --------------------------------- 37 
+MÉTODO PARA CAMBIAR LA FECHA ESTIMADA DE PAGO 
+(CHANGEDOCUMENTESTIMATEDPAYMENTDATE) ------------------------------- 39 
+¿Cómo funciona el método ChangeDocumentEstimatedPaymentDate? ----------- 39 
+Características del método ChangeDocumentEstimatedPaymentDate ------------ 40 
+  MÉTODO PARA OBTENER EL DETALLE DEL DOCUMENTO 
+(GETDOCUMENTDETAILS) ---------------------------------------------------------- 41 
+¿Cómo funciona el método GetDocumentDetails? ---------------------------------- 42 
+JSON Ejemplo de respuesta --------------------------------------------------------- 42 
+Características del método GetDocumentDetails ----------------------------------- 42 
+MÉTODO PARA VER LOS DOCUMENTOS RECIBIDOS (GETRECEIVEDDOCUMENT)
+ ---------------------------------------------------------------------------------------- 43 
+¿Cómo funciona el método GetReceivedDocument? ------------------------------- 44 
+Características del método GetReceivedDocument --------------------------------- 44 
+MÉTODO PARA MARCAR DOCUMENTOS COMO RECIBIDOS 
+(CONFIRMRECEIVEDDOCUMENT) ------------------------------------------------- 45 
+¿Cómo funciona el método ConfirmReceivedDocument? -------------------------- 45 
+Json Ejemplo de Respuesta---------------------------------------------------------- 46 
+Características del método ConfirmReceivedDocument ---------------------------- 47 
+    MÉTODO PARA INFORMAR ACUSES MERCANTILES O ESTADO 
+RADIAN (CHANGEDOCUMENTSTATUS) ------------------------------------------- 48 
+¿Cómo funciona el método ChangeDocumentStatus? ------------------------------ 48 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 49 
+Características del método ChangeDocumentStatus ------------------------------- 51 
+ MÉTODO PARA CAMBIAR EL ESTADO ANTE LA ENTIDAD TRIBUTARIA 
+(CHANGEDOCUMENTAUTHORITYSTATUS) --------------------------------------- 53 
+¿Cómo funciona el método ChangeDocumentAuthorityStatus? ------------------- 53 
+Características del método ChangeDocumentAuthorityStatus --------------------- 54 
+MÉTODO DE CONSULTA DE ESTADO Y METADATA DEL DOCUMENTO 
+(GETDOCUMENT) -------------------------------------------------------------------- 55 
+
+
+===== PAGE 4 =====
+ 
+4 
+ 
+¿Cómo funciona el método GetDocument? ----------------------------------------- 55 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 57 
+Características del método ---------------------------------------------------------- 61 
+MÉTODO PARA DESCARGAR EL XML (DOWNLOADDOCUMENTXML) ----------- 63 
+¿Cómo funciona el método DownloadDocumentXml? ------------------------------ 63 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 64 
+Características del método DownloadDocumentXml ------------------------------- 64 
+          MÉTODO PARA DESCARGAR EL XML POR 
+IDENTIFICACIÓN FISCAL 
+(DOWNLOADDOCUMENTXMLBYCOUNTRYDOCUMENTID) ----------------------- 65 
+¿Cómo funciona el método DownloadDocumentXmlByCountryDocumentId? ----- 66 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 66 
+Características del método DownloadDocumentXmlByCountryDocumentId ------ 66 
+MÉTODO PARA DESCARGAR EL PDF (DOWNLOADDOCUMENTPDF) ------------ 67 
+¿Cómo funciona el método DownloadDocumentPdf? ------------------------------- 67 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 68 
+Características del método DownLoadDocumentPdf ------------------------------- 68 
+MÉTODO PARA DESCARGAR ARCHIVOS ADJUNTOS 
+(DOWNLOADDOCUMENTATTACHMENTS) ----------------------------------------- 69 
+¿Cómo funciona el método DownloadDocumentAttachments? -------------------- 69 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 70 
+Características del método DownloadDocumentAttachments ---------------------- 70 
+MÉTODO PARA DESCARGAR UN ARCHIVO ADJUNTO ESPECÍFICO 
+(DOWNLOADDOCUMENTATTACHMENT) ------------------------------------------ 71 
+¿Cómo funciona el método DownloadDocumentAttachment? --------------------- 71 
+Json Ejemplo de Respuesta---------------------------------------------------------- 72 
+Características del método DownloadDocumentAttachment ----------------------- 72 
+MÉTODO PARA OBTENER INFORMACIÓN DE ARCHIVOS ADJUNTOS 
+(GETDOCUMENTATTACHMENTS) --------------------------------------------------------- 73 
+¿Cómo funciona el método GetDocumentAttachments? --------------------------- 73 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 74 
+
+
+===== PAGE 5 =====
+ 
+5 
+ 
+Características del método GetDocumentAttachments ---------------------------- 76 
+MÉTODO PARA CARGAR UN ARCHIVO ADJUNTO 
+(UPLOADDOCUMENTATTACHMENT) ----------------------------------------------- 77 
+¿Cómo funciona el método UploadDocumentAttachment? ------------------------- 77 
+JSON Ejemplo De Respuesta -------------------------------------------------------- 78 
+Características del método UploadDocumentAttachment -------------------------- 79 
+MÉTODO PARA CARGAR UN ARCHIVO ADJUNTO POR FOLIO DEL DOCUMENTO 
+(UPLOADDOCUMENTATTACHMENTBYNUMBER) --------------------------------- 81 
+¿Cómo funciona el método UploadDocumentAttachmentByNumber? ------------- 82 
+JSON Ejemplo de Respuesta--------------------------------------------------------- 83 
+Características del método UploadDocumentAttachmentByNumber -------------- 83 
+  
+
+===== PAGE 6 =====
+ 
+6 
+ 
+Introducción 
+Una API es una vía de comunicación que nos permite entablar una interacción 
+entre los productos y servicios de una empresa y otra.  
+Las API se consideran como contratos, con documentación que representa un 
+acuerdo entre las partes: si una de las partes envía una solicitud remota con 
+cierta estructura en particular, esa misma estructura determinará cómo 
+responderá el software de la otra parte 
+Las API permiten que productos y servicios se comuniquen con otros, sin 
+necesidad de saber cómo están implementados. Esto simplifica el desarrollo 
+de las aplicaciones y permite ahorrar tiempo y dinero. Las API le otorgan 
+flexibilidad; simplifican el diseño, la administración y el uso de las aplicaciones; 
+y ofrecen oportunidades de innovación, lo cual es ideal al momento de diseñar 
+herramientas y productos nuevos (o de gestionar los actuales). 
+Sin duda, una función imprescindible para aportar una buena experiencia de 
+usuario a los clientes ya que ayudan a reducir los tiempos de respuesta. 
+Características de las API 
+▪ Hacen más sencillo el trabajo de los desarrolladores 
+▪ Reducen el trabajo 
+▪ Controlan el acceso a los recursos 
+▪ Son sencillas de utilizar 
+▪ Se utilizan para la comunicación entre servicios 
+ 
+Por otro lado, también son muy útiles cuando queremos utilizar las funciones 
+de algún servicio con la intención de que los clientes utilicen nuestra 
+aplicación. 
+
+===== PAGE 7 =====
+ 
+7 
+ 
+¿Qué es una API Rest? 
+Para comprender lo que es una API Rest, será necesario definir el primer tipo 
+de API, es decir las API SOAP.  
+Se trata de una especificación de protocolo que estandariza el intercambio de 
+información. Recibe su nombre por sus siglas en inglés que significan 
+Protocolo de Acceso a Objetos Simples (SOAP). Este tipo de API utiliza XML 
+para el formato de sus mensajes y reciben solicitudes en HTTP o SMTP. 
+Con SOAP es más fácil que las aplicaciones que funcionan en entornos 
+distintos o están escritas en diferentes lenguajes, compartan información. 
+Las API REST las podemos encontrar en la web y su principal diferencia es que 
+SOAP es un protocolo mientras que REST es un estilo de arquitectura, por lo 
+que no tiene un estándar oficial. 
+Una API de REST, o API de RESTful, es una interfaz de programación de 
+aplicaciones (API o API web) que se ajusta a los límites de la arquitectura REST 
+y permite la interacción con los servicios web de RESTful. 
+ 
+Nota al usuario: a lo largo de este manual encontrará banderas nacionales que le indicarán que 
+las funciones mostradas son exclusivas de determinado país. 
+ 
+ 
+ 
+  
+
+===== PAGE 8 =====
+ 
+8 
+ 
+Definición, beneficios y funciones de la API Rest de Gosocket 
+Definición 
+La API de Gosocket es un conjunto de funciones y procedimientos que 
+permiten la interacción entre aplicaciones externas y los productos de 
+Gosocket de forma segura, permite el intercambio de DTE según el Schema 
+Local.  
+Esta API cuenta con varios métodos que permitirán utilizar opciones como 
+hacer peticiones a la autoridad tributaria, agregar adjuntos a los documentos, 
+obtener información de documentos, entre otros, de forma síncrona y 
+asíncrona. 
+Este desarrollo está basado en API Rest lo que nos permite entregar un 
+servicio online que ofrece una red de Gestión de DTE y la validación del ente 
+tributario electrónico que corresponda.  
+En el proceso de comunicación, el cliente inicia una solicitud. Para ello, el 
+servidor y el cliente web se comunican en un formato de intercambio de 
+información que puede ser Json u otro lenguaje como XML.  
+  
+  
+
+
+===== PAGE 9 =====
+ 
+9 
+ 
+Beneficios 
+ 
+• Acceso sencillo sin riesgos 
+Las API le permiten ofrecer acceso a los recursos y, al mismo tiempo, mantener la seguridad y el 
+control de la información que se gestiona. 
+• Control de accesos a la información 
+Usted decide cómo habilita el acceso y a quiénes se lo otorga. 
+• Separación cliente/servidor 
+Al ser sistemas independientes pueden manejarse en forma de proyectos autónomos, equipos 
+autónomos. 
+• Fiabilidad, escalabilidad, flexibilidad 
+Utilizar los componentes con Microsoft Azure, ayuda a las aplicaciones a rendir de forma óptima 
+cuando cambia la demanda, además de la disponibilidad y seguridad garantizada por Microsoft. 
+• Experiencia de usuario 
+Un sitio web basado en API puede dar mejor desempeño que uno tradicional. Cuando se realiza una 
+solicitud al servidor, lo que se obtiene como respuesta son datos planos que requieren tiempos de 
+transferencia menores que si esos mismos datos se recibieran mezclados con el HTML/CSS de la 
+presentación. Con todo este proceso podemos conseguir aplicaciones web que se asemejan más a 
+aplicaciones de escritorio haciendo más amigable los Request y retornos.  
+Alcances funcionales 
+Según el modelo de operación, cuenta con los siguientes alcances funcionales 
+basados en los esquemas definidos por la entidad tributaria local:  
+• Modelo de integración por los métodos de consumo. 
+• Generación y firma del XML tributario. 
+• Carga del certificado digital para la firma del documento tributario. 
+• Despachar/enviar el XML al ente tributario y obtener la aceptación o rechazo 
+del documento por la entidad tributaria.   
+ 
+  
+
+===== PAGE 10 =====
+ 
+10 
+ 
+Autenticación en la API 
+Para consumir los métodos disponibles en la API de Gosocket es necesario 
+tener perfil de usuario administrador y realizar la configuración de 
+autenticación con los siguientes parámetros: 
+ 
+Método de autenticación: Basic Auth 
+ 
+UserName: xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx 
+Password: xxxxxxxxxxxxxx  
+ 
+ 
+Veamos cómo obtener un usuario y contraseña: 
+1. Una vez que inició sesión en el portal de Gosocket, ingrese a las configuraciones. 
+ 
+  
+1 
+Nota: Estas credenciales se deben 
+tramitar directamente con el Gerente 
+de Proyecto. 
+
+===== PAGE 11 =====
+ 
+11 
+ 
+2. Presione la pestaña ApiKeys. 
+3. Presione +Agregar Apikey. 
+  
+2 
+3 
+
+===== PAGE 12 =====
+ 
+12 
+ 
+4. El portal mostrará los datos básicos del usuario que acaba de registrar. 
+a. Fecha de creación de la ApiKey. 
+b. Método de autenticación con el que la ApiKey accederá a la API. 
+c. ApiKey registrada (Usuario). 
+d. Contraseña. En este campo se puede visualizar la contraseña con la que se registró la 
+ApiKey para copiar y pegar en la API al momento de iniciar sesión. 
+e. Última IP desde donde la ApiKey se conectó a la API. 
+f. Fecha de última conexión de la ApiKey a la API. 
+g. Opciones para el nuevo usuario de la API que pueden ser: 
+i. Bloquear o desbloquear el APIKey para controlar los accesos a la API 
+ii. Añadir una descripción de la APIKey 
+iii. Cambio de contraseña 
+iv. Eliminar el APIKey 
+En esta sección puede agregar los ApiKeys necesarios para realizar un proceso 
+de integración desde diferentes sistemas que se conectarán a nuestra 
+plataforma. La información se almacenará dentro de un registro de auditoría 
+en el que se podrá identificar las conexiones IP y los movimientos realizados. 
+  
+a 
+ b 
+ c 
+ d 
+e 
+ f 
+g 
+i 
+ ii 
+ ii
+ iv 
+
+===== PAGE 13 =====
+ 
+13 
+ 
+Funciones 
+La API de Gosocket es un conjunto de funciones y procedimientos que 
+permiten que las aplicaciones externas interactúen con los productos de 
+Gosocket. Para consultar el uso de cada método, podrá guiarse de la 
+documentación. 
+Para acceder a la documentación de la API, será necesario que ingrese en los 
+siguientes links: 
+▪ Documentación API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/help/index# 
+▪ Documentación API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/help/index# 
+Los procedimientos y funciones que ofrece la API, son los siguientes: 
+1. Comment/AddComment (POST): Agregar un comentario aun documento. 
+2. Comment/DeleteComment (POST): Eliminar un comentario de un documento.  
+3. Comment/GetDocumentComments (POST): Leer los comentarios de un documento. 
+4.          Document/SendDocumentToAuthority (POST): 
+Recibe datos y los transforma al UBL establecido por cada país, firma el documento 
+electrónico en caso de requerirlo y lo envía a la entidad tributaria. 
+5. Document/SendDocumentToSave (POST): Almacenamiento de documentos en la 
+plataforma de Gosocket. 
+6. Document/ChangeDocumentEstimatedPaymentDate (GET/POST): Cambio de fecha 
+de pago estimada del documento. 
+7.      Document/GetDocumentDetails (POST): Obtiene el detalle de productos y 
+servicios en el documento.         
+8. Document/GetReceivedDocument (GET): Consulta de documento recibido. 
+9. Document/ConfirmReceivedDocument (POST): Marca los documentos como 
+recibidos. 
+10.     Document/ChangeDocumentStatus (GET/POST): Informe de estado 
+del acuse mercantil o estado radian.  
+11.  Document/ChangeDocumentAuthorityStatus (GET/POST): Cambiar estado del 
+documento ante la Entidad Tributaria. 
+12. Document/GetDocument (POST): Consultar estado y meta data de un documento. 
+13. File/DownloadDocumentXml (GET): Descarga un XML del portal Gosocket. 
+14. File/DownloadDocumentXmlByCountryDocumentId (GET): Descarga un XML del 
+portal Gosocket filtrado por el Country Document ID. 
+15. File/DownloadDocumentPdf (GET):  Descarga un PDF del portal Gosocket. 
+16. File/DownloadDocumentAttachments (GET): Descarga todos los archivos adjuntos de 
+un documento.  
+17. File/DownloadDocumentAttachment (GET): Descarga un archivo adjunto de un 
+documento.  
+18. File/GetDocumentAttachments (GET/POST): Permite obtener información sobre los 
+archivos adjuntos. 
+
+
+===== PAGE 14 =====
+ 
+14 
+ 
+19. File/UploadDocumentAttachment (POST): Permite cargar un archivo adjunto al 
+documento. 
+20. File/UploadDocumentAttachmentByNumber (POST): Permite cargar un archivo 
+adjunto al documento por folio del documento. 
+A continuación, enlistamos las estructuras de Country Document ID por país:  
+ 
+  
+
+
+===== PAGE 15 =====
+ 
+15 
+ 
+Para facilitar sus procesos de petición, le proporcionamos las estructuras de ID 
+fiscal por país: 
+  
+
+
+===== PAGE 16 =====
+ 
+16 
+ 
+¿Cómo establecer la comunicación con la API? 
+Para esto, es necesario descargar una aplicación que nos ayudará a establecer 
+la comunicación con la API de Gosocket. Para este ejemplo tomaremos la 
+aplicación Postman. 
+1. Presione + 
+2. Seleccione el método a utilizar. En este ejemplo, seleccionaremos POST. 
+  
+c 
+1 
+c 
+ 2 
+
+===== PAGE 17 =====
+ 
+17 
+ 
+3. Ingrese el link del método en que hará el procedimiento para iniciar con la comunicación con 
+la API. Es decir, el link que previamente se proporcionó para el ambiente de producción y, al 
+final, el nombre del método que utilizará. Por ejemplo: 
+https://developers.gosocket.net/api/v1/Document/SendDocumentToAuthority 
+4. Ingrese a la pestaña Authorization. 
+5. Seleccione el tipo de autorización Basic Auth (ya que es el tipo de autenticación que utiliza la 
+API de Gosocket). 
+6. Capture el Username y el Password que previamente generó dentro del portal de Gosocket 
+como se muestra aquí. 
+7. Presione la pestaña Body antes de iniciar el proceso de petición. 
+ 
+8. Seleccione raw, que será el formato a utilizar para ingresar los parámetros del método y 
+generar la petición. 
+9. Se muestra el botón de lenguaje del request o petición. Seleccione JSON para configurarlo 
+como lenguaje de petición. 
+10.  Ingrese los parámetros de la petición en lenguaje JSON. 
+11. Presione Send para enviar la petición y obtener el response. 
+  
+c 
+ 
+ 
+ 
+ 
+ 
+8 
+ 9 
+10 
+11 
+3 
+4 
+5 
+ 6 
+7 
+2 
+
+===== PAGE 18 =====
+ 
+18 
+ 
+12. El response se mostrará en la parte inferior de la pantalla dentro de la pestaña Pretty. 
+ 
+ 
+ 
+¡Ahora exploremos los principales métodos que permite la API de 
+Gosocket!  
+12 
+
+===== PAGE 19 =====
+ 
+19 
+ 
+Método para agregar un comentario 
+(AddComment) 
+ 
+Este método permite agregar un comentario a un documento  utilizando el 
+servicio POST AddComment. 
+Por medio de este método, se agregan comentarios al documento, los cuales 
+son visibles tanto para el emisor como para el receptor, de manera que se 
+pueden considerar una forma de comunicación entre ambos. 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Comment/AddComment  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Comment/AddComment 
+ 
+¿Cómo funciona el método AddComment? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+*Requerido 
+  
+
+
+===== PAGE 20 =====
+ 
+20 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Success": true, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": "OK", 
+    "Code": "200", 
+    "Description": "Document comment created successfully.", 
+    "ErrorException": null 
+} 
+ 
+  
+
+
+===== PAGE 21 =====
+ 
+21 
+ 
+Características del método AddComment 
+• La longitud máxima del comentario es de 1480 caracteres. 
+•   Cuando se inicia el comentario con la palabra “REJECTED:”, se inserta una nota al 
+documento indicando que fue rechazado, en vez de agregar el comentario. 
+ 
+• Cuando no se incluye alguno de los parámetros, el sistema responde con un error: 
+{ 
+    "Message": "No HTTP resource was found that matches 
+the request URI 'https://developers.gosocket.net/api/v1/
+Comment/AddComment?globalDocumentId=5a84678d-fa23-a0a2-
+1f2c-55e3012f5d99'.", 
+    "MessageDetail": "No action was found on the control
+ler 'Comment' that matches the request." 
+} 
+  
+
+
+===== PAGE 22 =====
+ 
+22 
+ 
+Método para eliminar un comentario 
+(DeleteComment) 
+ 
+Este método permite eliminar un comentario a un documento  utilizando el 
+servicio POST DeleteComment. 
+Por medio de este método, se eliminan comentarios al documento, los cuales 
+ya no serán visibles en Inbox, pero se podrán consultar por medio del método 
+GetDocumentComments. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Comment/DeleteComment  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Comment/DeleteComment  
+ 
+ 
+¿Cómo funciona el método DeleteComment? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+*Requerido 
+
+
+===== PAGE 23 =====
+ 
+23 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Success": true, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": "OK", 
+    "Code": "200", 
+    "Description": "Document comment created successfully.", 
+    "ErrorException": null 
+} 
+ 
+ 
+ 
+  
+
+
+===== PAGE 24 =====
+ 
+24 
+ 
+Características del método DeleteComment 
+• Se puede eliminar cualquier comentario del documento. 
+• Cuando no existe el Id del documento (globalDocumentId) o el Id del comentario (commentId), el 
+sistema responde: 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": "Error deleting Document comment", 
+    "Code": "500", 
+    "Description": "Document comment not founded.", 
+    "ErrorException": null 
+} 
+• Cuando no existe la empresa (accountCode), el sistema responde: 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": "Authorization Required", 
+    "Code": "401", 
+    "Description": "Check Profile Access", 
+    "ErrorException": null 
+} 
+ 
+  
+
+===== PAGE 25 =====
+ 
+25 
+ 
+Método para recuperar los comentarios de 
+un documento (GetDocumentComments) 
+ 
+Este método permite recuperar los comentarios de un documento utilizando el 
+servicio POST GetDocumentComments. 
+Por medio de este método, se recuperan todos los comentarios de un 
+documento. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Comment/GetDocumentComments  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Comment/GetDocumentComments  
+ 
+ 
+¿Cómo funciona el método GetDocumentComments? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+*Requerido 
+  
+
+
+===== PAGE 26 =====
+ 
+26 
+ 
+JSON Ejemplo de Respuesta 
+[ 
+    { 
+        "PartitionKey": "5a84678d-fa23-a0a2-1f2c-
+55e3012f5d99", 
+        "CommentId": "7c092804-e181-42b3-a849-6b9238e3bce9", 
+        "UserName": "adriana.jaramillo@gosocket.net", 
+        "AccountCode": "900508908", 
+        "AccountName": "FACTURADOR DE EJEMPLO", 
+        "CommentTimeStamp": "2022-07-21T15:14:29.2550773Z", 
+        "Comment": "Comentario de prueba 1", 
+        "Deleted": false, 
+        "DeletedByUserEmail": null, 
+        "Readed": true, 
+        "GlobalDocumentId": "5a84678d-fa23-a0a2-1f2c-
+55e3012f5d99", 
+        "id": "832f1769-4f3a-4cdf-98e4-2d86c9fc6712", 
+        "_rid": "2nsFANBPB9ldVAAAAAAAAA==", 
+        "_self": "dbs/2nsFAA==/colls/2nsFANBPB9k=/docs/2nsFAN
+BPB9ldVAAAAAAAAA==/", 
+        "_etag": "\"d401670d-0000-0300-0000-62d981810000\"", 
+        "_attachments": "attachments/", 
+        "_ts": 1658421633 
+    } 
+] 
+  
+
+===== PAGE 27 =====
+ 
+27 
+ 
+  
+ 
+Características del método 
+• Cuando no existe el documento (GlobalDocumentId), el sistema responde con un arreglo vacío: [] 
+• Cuando no existe la empresa (accountCode), el sistema responde con un arreglo vacío 
+• La respuesta incluye tanto los comentarios activos como los eliminados. 
+• Cuando no se incluye alguno de los parámetros, el sistema responde con un error: 
+{ 
+    "Message": "No HTTP resource was found that matches 
+the request URI 'https://developers.gosocket.net/sandbox
+/api/v1/Comment/GetDocumentComments?accountCode=90050890
+8'.", 
+    "MessageDetail": "No action was found on the control
+ler 'Comment' that matches the request." 
+} 
+  
+
+
+===== PAGE 28 =====
+ 
+28 
+ 
+        Método para enviar 
+documentos 
+(SendDocumentToAuthority) 
+ 
+Este método permite emitir documentos  directamente al portal de Gosocket 
+utilizando el servicio POST SendDocumentToAuthority, donde se podrá enviar 
+el archivo de integración con respuesta inmediata (síncrona) por la entidad 
+tributaria. 
+Por medio de este método, es posible enviar diferentes tipos de estructuras de 
+integración (XML, TXT), para la cual su funcionalidad será transformarlo al UBL 
+representativo de la entidad tributaria de cada país, debidamente firmado y 
+dar una respuesta de su validación previa en tan solo milésimas de segundos. 
+Para una integración más ágil y escalable, se recomienda utilizar el DTE de 
+integración estándar que utiliza la plataforma, con esto se podría garantizar una 
+integración casi inmediata con nuestros sistemas. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/SendDocumentToAuthority 
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/SendDocumentToAuthority 
+  
+
+
+===== PAGE 29 =====
+ 
+29 
+ 
+¿Cómo funciona el método SendDocumentToAuthority? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+{ 
+    "FileContent":"<?xml version=\"1.0\"?>\r\n<DTE \r\n<\/DTE
+>", 
+    "Async":false, 
+    "Mapping":"11111111-1111-1111-1111-111111111111", 
+    "Sign":true, 
+    "DefaultCertificate":false, 
+    "IgnoreDownWorkload":false, 
+    "IsTxt":false 
+} 
+*Requerido     
+ 
+JSON Ejemplo de respuesta 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": "5e097654e9029851dc9364ce8bc358e9562
+1d081987c4b4a92b9b455ec3b4331b1d8e741c182026ca29c358f13e35da0
+", 
+    "OtherData": {"additionalProp1": "string", 
+"additionalProp2": "string" 
+}, 
+    "Messages": [], 
+
+
+===== PAGE 30 =====
+ 
+30 
+ 
+    "ResponseValue": xml_base64, 
+    "Code": 99, 
+    "Description": " 
+Validación contiene errores en campos mandatorios.", 
+    "ErrorException": null 
+} 
+ 
+ 
+ 
+  
+
+
+===== PAGE 31 =====
+ 
+31 
+ 
+Proceso del método SendDocumentToAuthority 
+El proceso del método SendDocumentToAuthority, se ve de la siguiente forma: 
+ 
+México, Guatemala, Perú, Panamá: 
+1. El cliente manda la solicitud con los parámetros antes vistos.  
+2. El DTE recibido, la API de Gosocket lo convierte en un XML. 
+3. Se firma el XML de acuerdo con los criterios configurados previamente. 
+4. El XML firmado, se certifica por el PAC/OSE/PT. 
+5. El PAC/OSE/PT envía a través de la API una respuesta de aprobación o rechazo con el XML 
+verificado. Esta respuesta se emite de forma síncrona con la solicitud. 
+6. La API da la respuesta síncrona con la validación o el rechazo de la solicitud al cliente. 
+7. El XML certificado y sus observaciones de aceptación o rechazo, son enviados a la autoridad 
+tributaria. 
+Colombia: 
+• Para el caso de Colombia, el proceso que se sigue es el mismo al anterior, con la diferencia de que 
+el XML firmado se envía a la autoridad y ésta da como respuesta al cliente un Acuse de Recibo a 
+través de la API. 
+ 
+ 
+   
+   
+          
+1 
+2 
+3 
+4 
+7 
+5 
+6 
+1 
+2 
+3 
+4 
+5 
+6 
+
+===== PAGE 32 =====
+ 
+32 
+ 
+Costa Rica, Ecuador, Chile: 
+1. El usuario utiliza los mismos parámetros ya vistos para realizar su petición  
+2. Dentro de la Api, el documento se transforma en un XML. 
+3. El XML entra a firma. 
+4. La API manda una respuesta síncrona al usuario que contiene el XML verificado junto con las 
+observaciones para corrección que se obtenga. Esto de acuerdo con los parámetros 
+actualizados dentro de la API de Gosocket. 
+5. El usuario recibe el XML firmado, así como las observaciones que arrojó la API al momento de 
+emitir la respuesta. 
+6. Paralelamente, la API envía a la autoridad tributaria el XML firmado para su procesamiento de 
+acuerdo con su normativa. La autoridad tributaria, a su vez, envía como respuesta el acuse 
+del documento a la API. 
+7. Desde la API el usuario puede gestionar la generación de PDF, la distribución del documento y 
+la descarga de reportes. 
+8. El servidor actualizará el estado del documento en la API periódicamente. 
+ 
+Características del método SendDocumentToAuthority 
+• Para utilizar el mapeo estándar que ya tiene el portal con el DTE genérico, se podrá utilizar el 
+siguiente código de mapping:     11111111-1111-1111-1111-11111111111 
+•       Debido a que el ResponseValue es la respuesta de la entidad tributaria, el 
+parámetro solo trae información para los países que emiten el documento de manera síncrona.  
+1 
+ 2 
+3 
+4 
+7 
+5 
+6 
+8 
+
+===== PAGE 33 =====
+ 
+33 
+ 
+En el parámetro OtherData se pueden encontrar las siguientes propiedades:  
+País Propiedades OtherData
+Chile
+{
+        "Country": "cl",
+        "Certifier": "SII"
+    }
+Colombia
+{
+        "Country": "co",
+        "Certifier": "DIAN",
+        "AuthorityTimeStamp": 
+"15/07/2022 15:42:06",
+        "BarCodeText": "https...",
+        "Folio": "990001015",
+        "NumeroInterno": "01015",
+        "Serie": "SETP"
+    }
+Costa Rica
+{
+        "Country": "cr",
+        "Certifier": "M H"
+    }
+Ecuador
+    {
+        "Country": "ec",
+        "Certifier": "SRI"
+    }
+Guatemala
+{
+      "Country": "gt",
+      "Certifier": "Megaprint",
+      "AuthorityTimeStamp": 
+"15/07/2022 15:00:15",
+      "Number": "3558819305",
+      "Series": "557AC19C",
+      "BarCodeText": "https…"
+   }
+México
+{
+      "Country": "mx",
+      "AuthorityTimeStamp": 
+"15/07/2022 15:54:12",
+      "Certifier": "GRUPO YACORD",
+      "BarCodeText": "https…",
+      "NoCertificado": "22345754",
+      "RFCEmisor": "EKU9003173C1",
+      "RFCReceptor": 
+"CAVR781231UU2"
+   }
+Panamá
+{
+        "Country": "pa",
+        "Certifier": "ebi",
+        "AuthorityTimeStamp": 
+"7/6/2022 11:00:56 PM",
+        "BarCodeText": "https…"
+    }
+Perú null
+OtherData
+
+===== PAGE 34 =====
+ 
+34 
+ 
+Método para almacenar documentos en 
+Gosocket (SendDocumentToSave) 
+ 
+Este método permite almacenar documentos directamente en el  portal de 
+Gosocket utilizando el servicio POST SendDocumentToSave, donde se podrá 
+almacenar el archivo XML tributario sin realizar acciones sobre el documento ni 
+validaciones con la entidad tributaria. 
+Por medio de este método, es posible cargar los documentos precisando el 
+estado de aprobación o rechazo respectivo a cada documento. 
+Este método permite carga masiva de documentos. 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/SendDocumentToSave   
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/SendDocumentToSave   
+ 
+¿Cómo funciona el método SendDocumentToSave? 
+Para realizar la petición, el método tiene como parámetro el siguiente formato 
+XML: 
+<SyncBatch> 
+    <Header> 
+        <SyncPointId>String</SyncPointId> 
+    </Header> 
+    <Items> 
+        <Document AuthorityValidation="String" Id="String"></
+Document> 
+        <Document AuthorityValidation="String" Id="String"></
+Document> 
+
+===== PAGE 35 =====
+ 
+35 
+ 
+        <Document AuthorityValidation="String" Id="String"></
+Document> 
+    </Items> 
+</SyncBatch> 
+  
+
+===== PAGE 36 =====
+ 
+36 
+ 
+ 
+Los parámetros que se utilizan en la petición de este método son: 
+ 
+ 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Success": true, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": "b019b8c7-7cae-8235-dc5e-2ac7c4e4268a", 
+    "Code": "0", 
+    "Description": "Process Pending", 
+    "ErrorException": null 
+} 
+ 
+O en formato XML con la siguiente estructura: 
+ 
+<ProcessResult xmlns:i="http://www.w3.org/2001/XMLSchema-
+instance" 
+xmlns="http://schemas.datacontract.org/2004/07/Gosocket.API.M
+odels"> 
+   <Code>0</Code> 
+   <CountryDocumentId i:nil="true"/> 
+   <Description>Process Pending</Description> 
+   <ErrorException i:nil="true" 
+xmlns:d2p1="http://schemas.datacontract.org/2004/07/System"/> 
+
+
+===== PAGE 37 =====
+ 
+37 
+ 
+   <GlobalDocumentId>00000000-0000-0000-0000-
+000000000000</GlobalDocumentId> 
+   <Messages i:nil="true" 
+xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serializatio
+n/Arrays"/> 
+   <OtherData i:nil="true" 
+xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serializatio
+n/Arrays"/> 
+   <ResponseValue>b019b8c7-7cae-8235-dc5e-
+2ac7c4e4268a</ResponseValue> 
+   <Success>true</Success> 
+</ProcessResult> 
+ 
+Los parámetros que se mostrarán como respuesta, son los siguientes: 
+ 
+Características del método SendDocumentToSave 
+• Se puede enviar el nodo <Document> la cantidad de veces necesaria, garantizando que el ID y el 
+Documento sean diferentes por cada nodo. 
+• Cuando se intenta subir el mismo documento varias veces, el sistema solamente lo subirá una vez. 
+• Cuando se intenta subir dos documentos diferentes con el mismo ID, el sistema mantendrá el 
+documento con el ID original. 
+• Si el ID ya existe en la plataforma para otro documento, el sistema mantendrá el documento con el 
+ID original. 
+• Cuando no se incluye el parámetro de estado del documento (AuthorityValidation), el sistema lo 
+subirá con estado Error.  
+• Cuando se especifica un estado que no está incluido en la lista de valores permitidos, el sistema lo 
+subirá con estado Validado o Aceptado. 
+• Cuando no se especifica ID para el documento, el sistema no subirá el documento. 
+
+
+===== PAGE 38 =====
+ 
+38 
+ 
+•              El ID especificado para el documento, se asignará como 
+identificador único del documento en Gosocket (GlobalDocumentId) 
+•           Se asignará como identificador único del documento en Gosocket el UUID 
+con base en el XML.  
+Nota: Este método también ejecuta otra 
+tarea, la cual se encarga de subir el documento 
+y, por esa razón, el response mostrará success 
+aunque no se haya subido el documento. 
+ 
+
+===== PAGE 39 =====
+ 
+39 
+ 
+Método para cambiar la fecha estimada de 
+pago 
+(ChangeDocumentEstimatedPaymentDate) 
+Este método permite cambiar la fecha estimada de pago a un documento  
+utilizando el servicio GET/POST ChangeDocumentEstimatedPaymentDate. 
+Por medio de este método, cambia la fecha de pago estimada al documento 
+especificado. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/ChangeDocumentEstimatedPaymentDate  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/ChangeDocumentEstimatedPaymentDate  
+ 
+ 
+¿Cómo funciona el método ChangeDocumentEstimatedPaymentDate? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+*Requerido 
+
+
+===== PAGE 40 =====
+ 
+40 
+ 
+La respuesta se mostrará en formato JSON con la siguiente estructura: 
+Características del método ChangeDocumentEstimatedPaymentDate 
+• El método permite cambiar la fecha estimada de pago las veces que sea necesario, actualizando la 
+fecha a la última petición recibida. 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde: 
+{ 
+    "Message": "The request is invalid.", 
+    "MessageDetail": "The parameters dictionary contains
+ a null entry for parameter 'globalDocumentId' of non-
+nullable type 'System.Guid' for method 'Boolean ChangeDo
+cumentEstimatedPaymentDate(System.Guid, System.DateTime,
+ System.String)' in 'Global.Gosocket.API.Controllers.Doc
+umentController'. An optional parameter must be a refere
+nce type, a nullable type, or be declared as an optional
+ parameter." 
+} 
+ 
+• Cuando no se incluye algún parámetro, el sistema responde con un error: 
+{ 
+    "Message": "No HTTP resource was found that matches 
+the request URI 'https://developers.gosocket.net/sandbox
+/api/v1/Document/ChangeDocumentEstimatedPaymentDate?glob
+alDocumentId=2622b383-e60a-f0cd-9f43-
+10ecec0140cf&estimatedPaymentDate=2022-08-
+20T15:30:00'.", 
+    "MessageDetail": "No action was found on the control
+ler 'Document' that matches the request." 
+} 
+  
+Parámetro Tipo Descripción Valores permitidos
+Success Boolean Indica si la petición se ejecutó 
+correctamente.
+true: La petición se ejecutó sin 
+errores.
+false: La petición ejecutó algún 
+error.
+ChangeDocumentEstimatedPaymentDate (response)
+
+===== PAGE 41 =====
+ 
+41 
+ 
+  Método para obtener el detalle del 
+documento (GetDocumentDetails) 
+Este método permite obtener el detalle de un documento utilizando el servicio 
+POST GetDocumentDetails. 
+Por medio de este método, se obtiene el detalle de productos o servicios de un 
+documento, los cuales se pueden ver en la representación gráfica así: 
+ 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/GetDocumentDetails  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/GetDocumentDetails  
+  
+
+
+===== PAGE 42 =====
+ 
+42 
+ 
+¿Cómo funciona el método GetDocumentDetails? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+globalDocumentId 
+*Requerido 
+ 
+JSON Ejemplo de respuesta 
+[ 
+    { 
+        "Code": "6543542313534", 
+        "Name": "Articulo 1 Libro de cocina", 
+        "Description": "", 
+        "Unit": "EA", 
+        "Count": 1.000000, 
+        "Price": 22950.00, 
+        "Amount": 15300.08 
+    } 
+] 
+ 
+ 
+Características del método GetDocumentDetails 
+• El método recupera todas las líneas del detalle del documento. 
+• Se puede consultar las veces que se requiera. 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde: [] 
+ 
+
+
+===== PAGE 43 =====
+ 
+43 
+ 
+Método para ver los documentos recibidos 
+(GetReceivedDocument) 
+ 
+Este método permite ver los documentos recibidos que tiene una empresa  
+utilizando el servicio GET GetReceivedDocument. 
+Por medio de este método, se obtiene la lista de documentos recibidos con un 
+límite a 50 documentos por consulta para la empresa. Cuando existen más 
+documentos recibidos que el límite de la consulta (50), se deben marcar los 
+documentos recuperados a fin de que en la próxima consulta no vuelvan a 
+aparecer, y se de lugar a nuevos documentos recibidos.  
+Cada documento tiene asignado un ID (globalDocumentId) con el cual es 
+posible marcarlo como recibido usando el método POST 
+ConfirmReceivedDocument que puede ver en el siguiente tema o dando clic 
+aquí. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/GetReceivedDocument 
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/GetReceivedDocument  
+ 
+  
+
+===== PAGE 44 =====
+ 
+44 
+ 
+¿Cómo funciona el método GetReceivedDocument? 
+ 
+Para realizar la petición, el método tiene el siguiente parámetro: 
+accountCode 
+ 
+ 
+La respuesta se mostrará en formato JSON con la siguiente estructura: 
+ 
+{ 
+    "Error": false, 
+    "Description": null, 
+    "CData": [ 
+        { 
+            "GlobalDocumentId": "16f5ab35-3d8d-31cf-1b21-
+eb3c8be54ae4", 
+            "XmlString": "XML_del_documento_recibido" 
+        } 
+    ], 
+    "Code": 200 
+} 
+Los parámetros de respuesta para este método son: 
+ 
+Características del método GetReceivedDocument 
+• El límite de resultados a mostrar en la consulta es de 50 documentos.  
+• Este método debe ser utilizado junto con el método ConfirmReceivedDocument. 
+• Se puede realizar varias veces la consulta y siempre dará el mismo resultado hasta que se marquen 
+los documentos como recibidos usando el método ConfirmReceivedDocument. 
+
+
+===== PAGE 45 =====
+ 
+45 
+ 
+• Luego de marcar los documentos, la consulta traerá los documentos recibidos pendientes por 
+marcar. 
+Método para marcar documentos como 
+recibidos (ConfirmReceivedDocument) 
+ 
+Este método permite marcar los documentos como recibidos para la empresa  
+utilizando el servicio POST ConfirmReceivedDocument. 
+Por medio de este método, se permite marcar uno o varios de los documentos 
+recibidos para la empresa, utilizando el ID único (globalDocumentId) de cada 
+documento recibido con el método anterior GetReceivedDocument. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/ConfirmReceivedDocument  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/ConfirmReceivedDocument   
+ 
+¿Cómo funciona el método ConfirmReceivedDocument? 
+Para realizar la petición, el método tiene el siguiente parámetro: 
+documents  
+ 
+ 
+  
+
+
+===== PAGE 46 =====
+ 
+46 
+ 
+Json Ejemplo de Respuesta 
+{ 
+    "ErrorMessage": null, 
+    "IsValid": true, 
+    "StatusCode": "200", 
+    "StatusDescription": null, 
+    "StatusMessage": "OK", 
+    "XmlBase64Bytes": null, 
+    "XmlBytes": null, 
+    "XmlDocumentKey": null, 
+    "XmlFileName": null, 
+    "ResponseType": null, 
+    "OtherData": { 
+"00000000-0000-0000-0000-000000000000": "OK", 
+"xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx": "OK" 
+}, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "Timestamp": null, 
+    "Response": null, 
+    "TaxDocument": null 
+} 
+Datos adicionales en la respuesta del proceso 
+Parámetros de repuesta en el método ConfirmReceivedDocument: 
+ 
+
+
+===== PAGE 47 =====
+ 
+47 
+ 
+ 
+Nota: Los parámetros de respuesta que no están especificados en el cuadro, 
+siempre salen vacíos o nulos debido a que es un proceso en lote o masivo. 
+ 
+Características del método ConfirmReceivedDocument 
+• Se permite marcar como recibidos 1 o n documentos. 
+• Este método debe ser utilizado junto con el método GetReceivedDocument, con el fin de obtener 
+los Ids (globalDocumentId) de los documentos a marcar como recibidos. 
+• Cuando se realiza la petición para un documento válido, en el OtherData la respuesta al proceso del 
+documento será “OK”. 
+• Cuando se realiza varias veces la petición al mismo documento, en el OtherData la respuesta al 
+proceso del documento será: “Document with GlobalDocumentId 025eb8e4-9d79-59c6-a40b-
+87e1ad6ce320 downloaded.”. 
+• Cuando se realiza la petición con un Id que no existe, en el OtherData la respuesta al proceso del 
+documento será: “Document with GlobalDocumentId 00000000-0000-0000-0000-000000000001 not 
+found”. 
+  
+
+===== PAGE 48 =====
+ 
+48 
+ 
+    Método para informar acuses 
+mercantiles o estado RADIAN 
+(ChangeDocumentStatus) 
+Este método permite informar el estado mercantil o estado RADIAN de un 
+documento utilizando el servicio GET/POST ChangeDocumentStatus. 
+Por medio de este método, se puede informar cada uno de los estados 
+mercantiles o estados RADIAN de un documento (Acuse, Recibo, Reclamo, 
+Aceptación, etc). 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/ChangeDocumentStatus  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/ChangeDocumentStatus  
+ 
+¿Cómo funciona el método ChangeDocumentStatus? 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+{ 
+    "globalDocumentId":"ddd6e821-2421-4a21-80aa-
+470c10346721", 
+    "countryDocumentId": "ee4c1c7da374b65773868d13404fb302764
+0886dd71b1c2bd0caf6b1afe2f9687c2e57e97f2fc677c1dd6c9ef9536421
+", 
+    "countryId": "co", 
+    "status":32, 
+    "description": "Autorizado", 
+    "code": "1" 
+
+
+===== PAGE 49 =====
+ 
+49 
+ 
+} 
+*Requerido 
+JSON Ejemplo de Respuesta 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": {"additionalProp1": "string", 
+"additionalProp2": "string" 
+}, 
+    "Messages": [], 
+    "ResponseValue": null, 
+    "Code": 500, 
+    "Description": "Evento no puede ser registrado ya que no 
+se puede acusar recibo de mercadería de DTE previamente 
+reclamado.", 
+    "ErrorException": null 
+} 
+
+
+===== PAGE 50 =====
+ 
+50 
+ 
+ 
+  
+
+
+===== PAGE 51 =====
+ 
+51 
+ 
+Características del método ChangeDocumentStatus 
+• El método permite informar uno a uno los estados del acuse mercantil o estado de RADIAN. 
+• Cuando se envía en la petición el parámetro CountryDocumentId y el parámetro countryId no se 
+requiere enviar de forma obligatoria el parámetro GlobalDocumentId 
+• Cuando no se conoce el valor del CountryDocumentId, se debe enviar el parámetro 
+GlobalDocumentId 
+• En el parámetro OtherData se pueden encontrar las siguientes propiedades: 
+o Chile: {"Folio": "17529"} 
+o Colombia: { 
+"Country": "co", 
+ "Certifier": "DIAN", 
+"AuthorityTimeStamp": "25/07/2022 19:20:31" 
+   } 
+• Algunos ejemplos de reglas validadas en el proceso del parámetro messages son: 
+o Chile: 
+▪ "Regla: ERROR, Reintento: Error Transformando Archivo, verifique el mapeo y 
+reintente nuevamente." 
+o Colombia: 
+▪ "Regla: 0, Notificación: La Application response 6473921416, ha sido 
+autorizada." 
+▪ "Regla: LGC14, Rechazo: Solo se pueda transmitir el evento (034) Aceptación 
+Tácita de la factura, pasados 3 días hábiles, después de la transmisión del 
+evento (032) recibo del bien o aceptación de la prestación del servicio" 
+▪ "Regla: LGC03, Rechazo: No se puede recibir un reclamo si previamente no se 
+han recibido los eventos Acuse de recibo de la factura electrónica y un recibo de 
+bien y prestación de servicio" 
+▪ "Regla: AAH07, Rechazo: Esta UUID no existe en la base de datos de la DIAN" 
+• Algunos ejemplos de respuesta del proceso en el parámetro Description son: 
+o Chile: 
+▪ "ERROR Transformando Archivo" 
+▪ "Xml ACK procesado correctamente. Estado: Envío Rechazado" 
+▪ "Respuesta del SII para el documento folio 17451: Accion Completada OK." 
+▪ "Evento no puede ser registrado ya que no se puede acusar recibo de 
+mercadería de DTE previamente reclamado." 
+▪ "Evento no puede ser registrado ya que el documento presenta un evento 
+previo de rechazado." 
+▪ "Evento no puede ser registrado ya que el documento presenta un evento 
+previo de acuse de recepción." 
+▪ "Evento no puede ser registrado ya que han pasado más de 8 días desde su 
+recepción en el SII." 
+o Colombia: 
+▪ "Evento no puede ser registrado ya que el documento presenta un evento 
+previo de acuse de recibo de la factura electronica de venta." 
+▪ "La Application response 6473921416, ha sido autorizada." 
+▪ "Solo se pueda transmitir el evento (034) Aceptación Tácita de la factura, 
+pasados 3 días hábiles, después de la transmisión del evento (032) recibo del 
+bien o aceptación de la prestación del servicio" 
+▪ "No se puede recibir un reclamo si previamente no se han recibido los eventos 
+Acuse de recibo de la factura electrónica y un recibo de bien y prestación de 
+servicio" 
+
+===== PAGE 52 =====
+ 
+52 
+ 
+▪ "Esta UUID no existe en la base de datos de la DIAN" 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde: 
+{ 
+   "Success": false, 
+   "GlobalDocumentId": "00000000-0000-0000-0000-000000000000", 
+   "CountryDocumentId": null, 
+   "OtherData": null, 
+   "Messages": null, 
+   "ResponseValue": null, 
+   "Code": "400", 
+  "Description": "Document Not Found", 
+  "ErrorException": null 
+} 
+• Cuando no se especifica en los parámetros ni el globalDocumentId ni el countryDocumentId, el 
+sistema responde: 
+{ 
+   "Success": false, 
+   "GlobalDocumentId": "00000000-0000-0000-0000-000000000000", 
+   "CountryDocumentId": null, 
+   "OtherData": null, 
+   "Messages": null, 
+   "ResponseValue": null, 
+   "Code": "400", 
+   "Description": "The Request Needs either GlobalDocumentId or CountryDocumentId", 
+   "ErrorException": null 
+} 
+  
+
+===== PAGE 53 =====
+ 
+53 
+ 
+ Método para cambiar el estado ante la 
+Entidad Tributaria 
+(ChangeDocumentAuthorityStatus) 
+Este método permite cambiar el estado ante la entidad tributaria para un 
+documento utilizando el servicio GET/POST 
+ChangeDocumentAuthorityStatus. 
+Por medio de este método, se puede cambiar el estado ante la entidad 
+tributaria a un documento que tenga estado diferente a aprobado. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/ChangeDocumentAuthorityStatus  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/ChangeDocumentAuthorityStatus  
+ 
+ 
+¿Cómo funciona el método ChangeDocumentAuthorityStatus? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+globalDocumentId, status 
+ 
+*Requerido 
+
+
+===== PAGE 54 =====
+ 
+54 
+ 
+La respuesta se mostrará en formato JSON con la siguiente estructura: 
+{ 
+    "ErrorMessage": null, 
+    "IsValid": true, 
+    "StatusCode": "200", 
+    "StatusDescription": null, 
+    "StatusMessage": " El estado del documento fue 
+actualizado correctamente", 
+    "XmlBase64Bytes": null, 
+    "XmlBytes": null, 
+    "XmlDocumentKey": null, 
+    "XmlFileName": null, 
+    "ResponseType": null, 
+    "OtherData": null, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "Timestamp": null, 
+    "Response": null, 
+    "TaxDocument": null 
+} 
+ 
+Características del método ChangeDocumentAuthorityStatus 
+• El método permite cambiar el estado tributario de un documento cuando se encuentra en un estado 
+diferente a aprobado. 
+• Algunos ejemplos de respuesta (StatusMessage) del proceso son: 
+o "No es posible cambiar el estado de un documento aprobado al estado XX" 
+o "El estado del documento fue actualizado correctamente" 
+ 
+
+
+===== PAGE 55 =====
+ 
+55 
+ 
+Método de consulta de estado y metadata 
+del documento (GetDocument) 
+Este método permite consultar la información de un documento  utilizando el 
+servicio POST GetDocument. 
+Por medio de este método, se obtiene toda la información del documento, IDs 
+del documento, fechas de emisión, firmado, notas, datos del emisor, receptor, 
+estado, etc. 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/Document/GetDocument  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/Document/GetDocument  
+ 
+¿Cómo funciona el método GetDocument? 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+{ 
+    "Country":"co", 
+    "SenderCode": "900508908", 
+    "DateFrom": "2022-01-01T15:24:11.560Z", 
+    "DateTo": "2022-07-31T15:24:11.560Z", 
+    "GlobalDocumentId": "2622b383-e60a-f0cd-9f43-
+10ecec0140cf", 
+    "CountryDocumentId": "5e097654e9029851dc9364ce8bc358e9562
+1d081987c4b4a92b9b455ec3b4331b1d8e741c182026ca29c358f13e35da0
+" 
+} 
+
+===== PAGE 56 =====
+ 
+56 
+ 
+*Requerido 
+
+
+===== PAGE 57 =====
+ 
+57 
+ 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Documents": [ 
+        { 
+            "UrlPdf": "https://...", 
+            "UrlXml": "https://...", 
+            "GlobalDocumentId": "2622b383-e60a-f0cd-9f43-
+10ecec0140cf", 
+            "CountryDocumentId": "5e097654e9029851dc9364ce8bc
+358e95621d081987c4b4a92b9b455ec3b4331b1d8e741c182026ca29c358f
+13e35da0", 
+            "ExternalId": null, 
+            "CountryId": "co", 
+            "Date": "2022-07-22T09:33:23", 
+            "DocumentTypeId": 1, 
+            "DocumentTypeName": "Factura Electrónica", 
+            "NetAmount": 15300.08, 
+            "FreeAmount": 0.0, 
+            "TaxAmount": 2937.01, 
+            "TotalAmount": 18237.09, 
+            "CurrencyType": "USD", 
+            "SeriesNumber": "SETP990001018", 
+            "Series": "SETP", 
+            "Number": 990001018, 
+            "NumberStr": "990001018", 
+            "DocumentSenderCode": "900508908", 
+            "DocumentSenderName": "FACTURADOR DE EJEMPLO", 
+            "DocumentReceiverCode": "900508907", 
+            "DocumentReceiverName": "ADQUIRIENTE DE EJEMPLO", 
+            "DocumentFinancialOwnerCode": null, 
+            "DocumentFinancialOwnerName": null, 
+            "FinancialDate": "0001-01-01T00:00:00", 
+            "EstimatedPaymentDate": "2022-08-30T00:00:00", 
+            "DocumentTimeStamp": "2022-07-
+22T17:44:14.6699036Z", 
+            "AuthorityTimeStamp": "2022-07-
+22T12:44:14.6699036", 
+            "SyncPoint": "ddd6e893-24fb-4a51-80aa-
+470c10346781", 
+            "DocumentTags": [ 
+                { 
+                    "Code": "AuthorityFormatVersion", 
+                    "TimeStamp": "2022-07-
+22T17:44:14.6699036Z", 
+
+===== PAGE 58 =====
+ 
+58 
+ 
+                    "Value": "2.1" 
+                }, 
+                { 
+                    "Code": "AuthorityStatus", 
+                    "TimeStamp": "2022-07-
+22T12:44:14.6699036", 
+                    "Value": "2" 
+                } 
+            ], 
+            "TwoCheck": { 
+                "TwoCheckDocumentStatus": 0, 
+                "TwoCheckDocumentStatusDescription": "PENDIEN
+TE", 
+                "TwoCheckReceiverDocumentStatus": 0, 
+                "TwoCheckReceiverInternalDocumentStatusDescri
+ption": "PENDIENTE", 
+                "Timestamp": "2022-07-22T17:44:24.3741964Z" 
+            }, 
+            "Notes": [ 
+                { 
+                    "Mandatory": false, 
+                    "Code": "00", 
+                    "Note": "00 - La Application response 647
+3921416, ha sido autorizada., Regla: 0, Notificación: La Appl
+ication response 6473921416, ha sido autorizada.", 
+                    "TimeStamp": "2022-07-
+25T18:53:55.6753858Z", 
+                    "Source": "DIAN" 
+                }, 
+                { 
+                    "Mandatory": false, 
+                    "Code": "ARR", 
+                    "Note": "Acuse de recibo de la Factura El
+ectronica de Venta", 
+                    "TimeStamp": "2022-07-
+22T17:45:21.923465Z", 
+                    "Source": "Eventos Mercantiles" 
+                } 
+            ], 
+            "Offers": null, 
+            "Fields": [ 
+                { 
+                    "Code": "01-DIGITEENTRADA-HOJADEENTRADA", 
+                    "Name": "Digite Entrada - Hoja de Entrada
+", 
+                    "Value": "12314129 GR", 
+
+===== PAGE 59 =====
+ 
+59 
+ 
+                    "ExternalId": "9e6d9b3c-2c5a-4649-ade6-
+894e5935e48a", 
+                    "Source": "xml", 
+                    "IsValid": false, 
+                    "EditingEnabled": true, 
+                    "Flow": "smartsupply", 
+                    "Timestamp": "2022-07-
+22T17:44:23.5460373Z", 
+                    "Category": "Entrada - Hoja de Entrada" 
+                } 
+            ], 
+            "Author": null 
+        } 
+    ], 
+    "ContinuationToken": null 
+} 
+ 
+
+===== PAGE 60 =====
+ 
+60 
+ 
+ 
+Nota: Las URL de descarga de 
+archivo xml y pdf se activan 
+por empresa. Por lo tanto para 
+poder visualizarlas se debe 
+solicitar su activación. Aplica 
+para       
+
+
+===== PAGE 61 =====
+ 
+61 
+ 
+ 
+ 
+ 
+Características del método 
+• El método recupera la información del documento. 
+• Se puede consultar las veces que se requiera. 
+• Cuando no se encuentra información con los parámetros de consulta, el servicio responde: 
+{ 
+   "Documents": [], 
+   "ContinuationToken": null 
+} 
+• Cuando no se consulta por un Id de documento específico, el máximo de documentos que 
+retorna la consulta es de 100 documentos. 
+
+===== PAGE 62 =====
+ 
+62 
+ 
+• Los estados por los que ha pasado el documento se pueden ver en la sección de DocumentTags 
+ 
+• En la sección TwoCheck se puede ver el resultado de las validaciones del proceso de SmartSupply: 
+ 
+• En la sección Notes se pueden ver las notas asociadas al documento que pueden ser de diferente 
+origen: 
+o Entidad Tributaria (DIAN, SII, SRI, SUNAT, PAC) 
+o Eventos Mercantiles 
+o Servidor de correo 
+o Servidor de correo Distribución 
+o Distribucion por Ftp/Sftp 
+o SmartSupply 
+o Gosocket  
+
+
+===== PAGE 63 =====
+ 
+63 
+ 
+Método para descargar el XML 
+(DownloadDocumentXml) 
+ 
+Este método permite descargar el archivo XML de un documento  utilizando el 
+servicio GET DownloadDocumentXml. 
+Por medio de este método, se obtiene el archivo XML codificado en base 64 del 
+documento consultado.  
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/DownloadDocumentXml  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/DownloadDocumentXml   
+ 
+¿Cómo funciona el método DownloadDocumentXml? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+GlobalDocumentId, type  
+*Requerido 
+  
+
+
+===== PAGE 64 =====
+ 
+64 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Name": "055d0442-7f81-4a4b-99a4-ada09fe31c7a.xml", 
+    "Description": "Xml Content for GlobalDocumentId 055d0442
+-7f81-4a4b-99a4-ada09fe31c7a ", 
+    "Base64Content": "XML_en_base_64", 
+    "Timestamp": "2022-06-29T14:29:58.7271619Z", 
+    "Type": "xml" 
+} 
+ 
+Características del método DownloadDocumentXml 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with GlobalDocumentId (00000000-0000-0000-0000-000000000000) 
+does not exist"}”. 
+• Se puede descargar el archivo muchas veces. 
+• Al momento de decodificar el archivo descargado se debe tener en cuenta que: 
+o El archivo XML de distribución viene con doble codificación, por lo tanto, es necesario 
+decodificarlo dos veces para poder ver el xml. 
+o El archivo XML por defecto, viene con codificación sencilla, por lo tanto, solo es necesario 
+decodificarlo una vez para ver el xml. 
+• El tipo “distribution” solamente está habilitado para Colombia. 
+• El tipo “original” solo está habilitado para Erú y Bolivia. 
+  
+
+
+===== PAGE 65 =====
+ 
+65 
+ 
+          Método para descargar 
+el XML por identificación fiscal 
+(DownloadDocumentXmlByCountryDocume
+ntId) 
+ 
+Este método permite descargar el archivo XML de un documento  utilizando el 
+servicio POST DownloadDocumentXmlByCountryDocumentId por medio del 
+identificador fiscal del documento. 
+Por medio de este método, se obtiene el archivo XML codificado en base 64 del 
+documento consultado.  
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/DownloadDocumentXmlByCountryDocumentId  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/DownloadDocumentXmlByCountryDocumentId   
+  
+
+
+===== PAGE 66 =====
+ 
+66 
+ 
+¿Cómo funciona el método DownloadDocumentXmlByCountryDocumentId? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+CountryDocumentId, Date, type  
+*Requerido 
+JSON Ejemplo de Respuesta 
+{ 
+    "Name": "xxxxxxxxx.xml", 
+    "Description": "Xml Content for CountryDocumentId xxxxxxx
+xx", 
+    "Base64Content": "XML_en_base_64", 
+    "Timestamp": "2022-06-29T14:29:58.7271619Z", 
+    "Type": "xml" 
+} 
+ 
+Características del método DownloadDocumentXmlByCountryDocumentId 
+• Cuando no existe el Id del documento (CountryDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with CountryDocumentId (xxxxxxxxx) does not exist"}”. 
+• Se puede descargar el archivo muchas veces. 
+• Al momento de decodificar el archivo descargado se debe tener en cuenta que: 
+o El archivo XML de distribución viene con doble codificación, por lo tanto, es necesario 
+decodificarlo dos veces para poder ver el xml. 
+o El archivo XML por defecto, viene con codificación sencilla, por lo tanto, solo es necesario 
+decodificarlo una vez para ver el xml. 
+• El tipo “distribution” solamente está habilitado para Colombia. 
+
+
+===== PAGE 67 =====
+ 
+67 
+ 
+Método para descargar el PDF 
+(DownloadDocumentPdf) 
+ 
+Este método permite descargar el archivo PDF de un documento  utilizando el 
+servicio GET DownloadDocumentPdf. 
+Por medio de este método, se obtiene el archivo PDF codificado en base 64 del 
+documento consultado.  
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/DownloadDocumentPdf  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/DownloadDocumentPdf   
+ 
+¿Cómo funciona el método DownloadDocumentPdf? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros:  
+GlobalDocumentId, type  
+*Requerido 
+ 
+  
+
+
+===== PAGE 68 =====
+ 
+68 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Name": "055d0442-7f81-4a4b-99a4-ada09fe31c7a.pdf", 
+    "Description": "Pdf Content for GlobalDocumentId 055d0442
+-7f81-4a4b-99a4-ada09fe31c7a ", 
+    "Base64Content": "PDF_en_base_64", 
+    "Timestamp": "2022-06-29T14:29:58.7271619Z", 
+    "Type": "pdf" 
+} 
+ 
+Características del método DownLoadDocumentPdf 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with GlobalDocumentId (00000000-0000-0000-0000-000000000000) 
+does not exist"}”. 
+• Se puede descargar el archivo más de una vez. 
+• Al momento de decodificar el archivo descargado se debe tener en cuenta que el archivo PDF viene 
+con codificación sencilla, por lo tanto, sólo es necesario decodificarlo una vez para poder ver el PDF. 
+  
+
+
+===== PAGE 69 =====
+ 
+69 
+ 
+Método para descargar archivos adjuntos 
+(DownloadDocumentAttachments) 
+ 
+Este método permite descargar los archivos adjuntos de un documento  
+utilizando el servicio GET DownloadDocumentAttachments. 
+Por medio de este método, se obtienen los archivos adjuntos codificados en 
+base 64 del documento consultado. El método recupera todos los archivos 
+adjuntos. 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/DownloadDocumentAttachments  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/DownloadDocumentAttachments   
+ 
+¿Cómo funciona el método DownloadDocumentAttachments? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+GlobalDocumentId 
+ 
+*Requerido 
+ 
+  
+
+
+===== PAGE 70 =====
+ 
+70 
+ 
+JSON Ejemplo de Respuesta 
+[ 
+{ 
+    "Name": "nombre.extension", 
+    "Description": "Xml Content for GlobalDocumentId 055
+d0442-7f81-4a4b-99a4-ada09fe31c7a", 
+    "Base64Content": "XML_en_base_64", 
+    "Timestamp": "2022-06-29T14:29:58.7271619Z", 
+    "Type": "xml" 
+} 
+] 
+ 
+Características del método DownloadDocumentAttachments 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with GlobalDocumentId (00000000-0000-0000-0000-000000000000) 
+does not exist"}”. 
+• Se pueden descargar los archivos muchas veces. 
+• Se descargarán todos los archivos adjuntos que tenga el documento. 
+• Al momento de decodificar el archivo descargado se debe tener en cuenta que cada archivo viene 
+con doble codificación, por lo tanto, es necesario decodificarlo dos veces para poder ver el archivo. 
+  
+
+
+===== PAGE 71 =====
+ 
+71 
+ 
+Método para descargar un archivo adjunto 
+específico 
+(DownloadDocumentAttachment) 
+ 
+Este método permite descargar un archivo adjunto específico de un documento 
+utilizando el servicio GET DownloadDocumentAttachment. 
+Por medio de este método, se obtiene el archivo adjunto especificado en los 
+parámetros, codificado en base 64 del documento consultado. El método 
+recupera el archivo adjunto especificado. 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/DownloadDocumentAttachment  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/DownloadDocumentAttachment 
+ 
+¿Cómo funciona el método DownloadDocumentAttachment? 
+Para realizar la petición, el método tiene los siguientes parámetros:  
+GlobalDocumentId, AttachmentId  
+*Requerido 
+  
+Parámetro Tipo Descripción Valores permitidos
+globalDocumentId* String Identificación de documento en 
+Gosocket.
+UUID de 36 caracteres 
+alfanuméricos
+00000000-0000-0000-0000-
+000000000000
+AttachmentId*  String
+Identificación única del archivo 
+adjunto (se obtiene con el método 
+GetDocumentAttachments)
+UUID de 36 caracteres 
+alfanuméricos
+00000000-0000-0000-0000-
+000000000000
+DownloadDocumentAttachment (request)
+
+===== PAGE 72 =====
+ 
+72 
+ 
+Json Ejemplo de Respuesta 
+{ 
+    "Name": "ARR-900508908-SETP-993884190-265f7884-bce3-4cec-
+bfb6-ed23895b1040", 
+    "Description": "ACK", 
+    "Base64Content": "archivo_en_base_64", 
+    "Timestamp": "2022-07-15T20:18:35.015616Z", 
+    "Type": "xml" 
+} 
+ 
+ 
+Características del método DownloadDocumentAttachment 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with GlobalDocumentId (00000000-0000-0000-0000-000000000000) 
+does not exist"}”. 
+• Se pueden descargar los archivos muchas veces. 
+• Se pueden descargar todos los archivos adjuntos que tenga el documento uno por uno. 
+• Al momento de decodificar el archivo descargado se debe tener en cuenta que cada archivo viene 
+con codificación sencilla, por lo tanto, sólo es necesario decodificarlo una vez para poder ver el 
+archivo. 
+ 
+Parámetro Tipo Descripción Valores permitidos
+Name String Nombre del archivo descargado
+Description String Descripción del archivo.
+Base64Content String Archivo codificado en base 64
+TimeStamp String Fecha y hora de creación del 
+archivo aaaa-mm-ddThh:mm:ss
+Type String Tipo de archivo “extension_archivo”
+DownloadDocumentAttachment (response)
+
+===== PAGE 73 =====
+ 
+73 
+ 
+Método para obtener información de 
+archivos adjuntos 
+(GetDocumentAttachments) 
+ 
+Este método permite obtener información sobre los archivos adjuntos de un 
+documento utilizando el servicio GET/POST n. 
+Por medio de este método, se obtiene la información respectiva a los archivos 
+adjuntos del documento consultado. El método recupera información de todos 
+los archivos adjuntos. 
+¿Cómo funciona el método GetDocumentAttachments? 
+Para realizar la petición, el método tiene los siguientes parámetros: 
+GlobalDocumentId 
+ 
+ 
+*Requerido 
+  
+
+
+===== PAGE 74 =====
+ 
+74 
+ 
+JSON Ejemplo de Respuesta 
+[ 
+    { 
+        "AttachmentId": "055d0402-7f81-0a4b-90a4-
+ada09fe31c7a", 
+        "Country": "co", 
+        "Name": "PDF_1_990001001.pdf", 
+        "Description": "Factura Anterior en PDF", 
+        "AttachmentTypeId": 990, 
+        "Date": "2022-06-30T14:08:40.1273705Z", 
+        "FileExt": "pdf", 
+        "ShowSender": true, 
+        "ShowReceiver": true, 
+        "RefSenderCode": "900508908", 
+        "RefReceiverCode": "900108281", 
+        "RefDocumentTypeId": 1, 
+        "RefDocumentId": "a25909a6-5185-11f6-3afe-
+ddf19c60ddc6", 
+        "RefCountryDocumentId": "f7842a1ff930436a036846cc76b4
+6fabd3770bbb3d9df28afbec8d39123b9bf8ef5b6c2b24e6230cbcdc0272a
+8dc9de9", 
+        "RefDate": "2022-06-30T08:45:23Z", 
+        "RefNumber": "0", 
+        "RefSeries": "SEEP", 
+        "CreatedBy": "f40eb67a-243d-4013-98e8-92fde3178aab", 
+        "CreationSource": "Gosocket API", 
+        "Timestamp": "2022-06-30T14:08:40.1273705Z", 
+        "LastUpated": "2022-06-30T14:08:40.1273705Z", 
+        "AuthorityValidation": 0, 
+        "AuthorityValidationTimestamp": "0001-01-
+01T00:00:00", 
+        "GlobalTrackId": "00000000-0000-0000-0000-
+000000000000" 
+    } 
+] 
+
+===== PAGE 75 =====
+ 
+75 
+ 
+ 
+
+
+===== PAGE 76 =====
+ 
+76 
+ 
+ 
+Características del método GetDocumentAttachments 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde un mensaje de 
+error: ” {"Message": "Document with GlobalDocumentId (00000000-0000-0000-0000-000000000000) 
+does not exist"}”. 
+• Se pueden consultar los archivos muchas veces. 
+• Se mostrará información de todos los archivos adjuntos que tenga el documento. 
+  
+
+===== PAGE 77 =====
+ 
+77 
+ 
+Método para cargar un archivo adjunto 
+(UploadDocumentAttachment) 
+ 
+Este método permite cargar un archivo adjunto a un documento  utilizando el 
+servicio POST UploadDocumentAttachment. 
+Por medio de este método, se carga un archivo adjunto codificado en base 64 
+al documento especificado. El archivo debe pesar menos de 2MB para que el 
+método permita su carga. Se pueden cargar archivos de tipo: pdf, xml, jpg, 
+png, xls, doc, txt. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/UploadDocumentAttachment  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/UploadDocumentAttachment  
+ 
+¿Cómo funciona el método UploadDocumentAttachment? 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+{ 
+  "GlobalDocumentId": "a25909f8-5195-12f6-3afb-ddf74c61ddc6", 
+  "FileName": "nombre_archivo.extension", 
+  "Description": "descripción_del_archivo_adjunto", 
+  "Base64FileContent": "archivo_en_base_64" 
+} 
+
+===== PAGE 78 =====
+ 
+78 
+ 
+*Requerido 
+ 
+JSON Ejemplo De Respuesta 
+{ 
+    "Success": true, 
+    "GlobalDocumentId": "5a84678d-fa23-a0a2-1f2c-
+55e3012f5d99", 
+    "CountryDocumentId": "1599a8eb65aeffb06eb4c4fc465c391320c
+5091356a9f7d0ad5c112dc049ca615f916297bc1948f2f91be8037352dc52
+", 
+    "OtherData": { 
+        "AttachmentId": "cd815d84-d218-4351-a59d-
+a738a3085c52" 
+    }, 
+    "Messages": null, 
+    "ResponseValue": "OK", 
+    "Code": "200", 
+    "Description": "Upload Success", 
+    "ErrorException": null 
+
+
+===== PAGE 79 =====
+ 
+79 
+ 
+} 
+ 
+Características del método UploadDocumentAttachment 
+• El peso máximo para el archivo que se quiere cargar es de 2MB. 
+• Cuando no existe el Id del documento (globalDocumentId), el sistema responde: 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": null, 
+    "Code": "307", 
+    "Description": "Document Not Found, System Automatic
+ Retry in 1 minute", 
+    "ErrorException": null 
+} 
+ 
+• Cuando no se incluye el parámetro: “FileName”, el sistema responde con un error: 
+{ 
+    "Message": "An error has occurred.", 
+    "ExceptionMessage": "Object reference not set to an 
+instance of an object.", 
+    "ExceptionType": "System.NullReferenceException" 
+} 
+
+
+===== PAGE 80 =====
+ 
+80 
+ 
+ 
+• Cuando en el nombre del archivo no se especifica la extensión del archivo a cargar (Ejemplo: 
+archivo_prueba), el sistema lo carga sin extensión. Inbox lo mostrará sin extensión y los métodos de 
+descarga también. Al descargarlo desde Inbox se debe abrir con un programa que permita abrir el 
+tipo de archivo, o cambiar el nombre del archivo adicionando la extensión. Cuando se descarga 
+desde la API, solo es necesario decodificar el archivo en base 64. 
+ 
+{ 
+   "Name": "pdf_prueba_upload3", 
+   "Description": "Pruebas de Carga de tipo PDF sin ext", 
+   "Base64Content": "JVBERi0xLjcgCiXi48/TIAoxIDAgb2JqIAo8PCAKL1R5", 
+   "Timestamp": "2022-07-18T20:42:04.9424452Z", 
+   "Type": "" 
+} 
+• Cuando en el nombre del archivo si se especifica la extensión del archivo a cargar (Ejemplo: 
+archivo_prueba.pdf), el sistema lo carga con extensión y en Inbox se ve con doble extensión. Sin 
+embargo, al descargarlo desde la API o desde Inbox no habrá inconvenientes al momento de abrirlo. 
+ 
+{ 
+   "Name": "pdf_prueba_upload.pdf", 
+   "Description": "Pruebas de Carga de tipo PDF", 
+   "Base64Content": "JVBERi0xLjcgCiXi48/TIAoxIDAgb2JqIAo8PCAKL1R5", 
+   "Timestamp": "2022-07-18T20:41:24.3649357Z", 
+   "Type": "pdf" 
+} 
+  
+
+
+===== PAGE 81 =====
+ 
+81 
+ 
+Método para cargar un archivo adjunto por 
+folio del documento 
+(UploadDocumentAttachmentByNumber) 
+ 
+Este método permite cargar un archivo adjunto a un documento  utilizando el 
+servicio POST UploadDocumentAttachmentByNumber. 
+Por medio de este método, se carga un archivo adjunto codificado en base 64 
+especificando el folio del documento. El archivo debe pesar menos de 2MB 
+para que el método permita su carga. Se pueden cargar archivos de tipo: pdf, 
+xml, jpg, png, xls, doc, txt. 
+ 
+Para conectarse a esta funcionalidad será necesario que ingrese en los 
+siguientes links: 
+▪ API en ambiente de Sandbox 
+https://developers.gosocket.net/sandbox/api/v1/File/UploadDocumentAttachmentByNumber  
+▪ API en ambiente de Producción 
+https://developers.gosocket.net/api/v1/File/UploadDocumentAttachmentByNumber  
+  
+
+===== PAGE 82 =====
+ 
+82 
+ 
+¿Cómo funciona el método UploadDocumentAttachmentByNumber? 
+ 
+Para realizar la petición, el método tiene los siguientes parámetros en formato 
+JSON con la siguiente estructura: 
+{ 
+  "SenderCode": "900508908", 
+  "Date": "2022-06-29T09:14:23", 
+  "DocumentTypeId": 1, 
+  "Series": "SERIE", 
+  "Number": 12345678, 
+  "FileName": "nombre_archivo.extension", 
+  "Description": "descripción_del_archivo_adjunto", 
+  "Base64FileContent": "archivo_en_base_64" 
+} 
+ 
+*Requerido 
+  
+
+
+===== PAGE 83 =====
+ 
+83 
+ 
+JSON Ejemplo de Respuesta 
+{ 
+    "Success": true, 
+    "GlobalDocumentId": "5a84678d-fa23-a0a2-1f2c-
+55e3012f5d99", 
+    "CountryDocumentId": "1599a8eb65aeffb06eb4c4fc465c391320c
+5091356a9f7d0ad5c112dc049ca615f916297bc1948f2f91be8037352dc52
+", 
+    "OtherData": { 
+        "AttachmentId": "cd815d84-d218-4351-a59d-
+a738a3085c52" 
+    }, 
+    "Messages": null, 
+    "ResponseValue": "OK", 
+    "Code": "200", 
+    "Description": "Upload Success", 
+    "ErrorException": null 
+} 
+ 
+Características del método UploadDocumentAttachmentByNumber 
+• El peso máximo para el archivo que se quiere cargar es de 2MB. 
+• Cuando no existe el documento, el sistema responde: 
+
+
+===== PAGE 84 =====
+ 
+84 
+ 
+{ 
+    "Success": false, 
+    "GlobalDocumentId": "00000000-0000-0000-0000-
+000000000000", 
+    "CountryDocumentId": null, 
+    "OtherData": null, 
+    "Messages": null, 
+    "ResponseValue": null, 
+    "Code": "307", 
+    "Description": "Document Not Found, System Automatic
+ Retry in 1 minute", 
+    "ErrorException": null 
+} 
+ 
+• Cuando no se incluye el parámetro: “Date”, el sistema responde con un error: 
+{ 
+   "Message": "An error has occurred.", 
+   "ExceptionMessage": "The added or subtracted value 
+results in an un-representable DateTime.\r\nParameter 
+name: value", 
+   "ExceptionType": "System.ArgumentOutOfRangeException" 
+} 
+• Cuando no se incluye el parámetro: “FileName”, el sistema responde con un error 
+{ 
+   "Message": "An error has occurred.", 
+   "ExceptionMessage": "One or more errors occurred.", 
+   "ExceptionType": "System.AggregateException" 
+} 
+• Cuando en el nombre del archivo no se especifica la extensión del archivo a cargar (Ejemplo: 
+archivo_prueba), el sistema lo carga sin extensión. Inbox lo mostrará sin extensión y los métodos de 
+descarga también. Al descargarlo desde Inbox se debe abrir con un programa que permita abrir el 
+tipo de archivo, o cambiar el nombre del archivo adicionando la extensión. Cuando se descarga 
+desde la API, solo es necesario decodificar el archivo en base 64. 
+ 
+{ 
+   "Name": "pdf_prueba_upload3", 
+   "Description": "Pruebas de Carga de tipo PDF sin ext", 
+   "Base64Content": "JVBERi0xLjcgCiXi48/TIAoxIDAgb2JqIAo8PCAKL1R5", 
+   "Timestamp": "2022-07-18T20:42:04.9424452Z", 
+   "Type": "" 
+
+
+===== PAGE 85 =====
+ 
+85 
+ 
+} 
+  
+
+===== PAGE 86 =====
+ 
+86 
+ 
+• Cuando en el nombre del archivo si se especifica la extensión del archivo a cargar (Ejemplo: 
+archivo_prueba.pdf), el sistema lo carga con extensión y en Inbox se ve con doble extensión. Sin 
+embargo, al descargarlo desde la API o desde Inbox no habrá inconvenientes al momento de abrirlo. 
+ 
+{ 
+   "Name": "pdf_prueba_upload.pdf", 
+   "Description": "Pruebas de Carga de tipo PDF", 
+   "Base64Content": "JVBERi0xLjcgCiXi48/TIAoxIDAgb2JqIAo8PCAKL1R5", 
+   "Timestamp": "2022-07-18T20:41:24.3649357Z", 
+   "Type": "pdf" 
+}  
+
+
+===== PAGE 87 =====
+ 
+87 
+ 
+ 
+  
+Puede escribirnos a: 
+Puede visitar nuestra página: 
+info@gosocket.net 
+www.gosocket.net 
+
+
+===== PAGE 88 =====
+ 
+88 
+ 
+ 
+Toda la información y los contenidos aquí disponibles, incluyendo 
+gráficos y  logos, tienen carácter estrictamente confidencial, y además, 
+están  protegidos por las normas de Propiedad Intelectual. En  
+consecuencia, queda  prohibida su reproducción total o parcial, por 
+cualquier medio o  procedimiento, así como su modificación, traducción, 
+comunicación pública  y distribución, cualquiera que sea la finalidad, sin 
+la autorización expresa del  titular de los derechos. La infracción de 
+estos derechos queda sujeta a las  penalidades establecidas en la 
+legislación vigente sobre la materia. 
+ 
+© Gosocket Corporation S.A  
+Versión 1. julio  202 2 

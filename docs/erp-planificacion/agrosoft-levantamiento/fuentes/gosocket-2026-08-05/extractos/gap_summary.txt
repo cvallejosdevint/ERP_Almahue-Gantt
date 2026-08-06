@@ -1,0 +1,296 @@
+=== FIELD COUNTS (M=mandatory O=optional C=conditional) ===
+Tipo 33: {'M': 51, 'N/A': 59, 'C': 59, 'O': 71}
+Tipo 34: {'M': 40, 'N/A': 93, 'C': 42, 'O': 65}
+Tipo 39: ver hoja Boleta
+Tipo 41: ver hoja Boleta
+Tipo 46: {'M': 43, 'N/A': 71, 'C': 56, 'O': 70}
+Tipo 52: {'M': 58, 'N/A': 34, 'C': 44, 'O': 104}
+Tipo 56: {'M': 40, 'N/A': 74, 'C': 52, 'O': 74}
+Tipo 61: {'M': 40, 'C': 53, 'N/A': 69, 'O': 78}
+Tipo 110: {'M': 42, 'N/A': 76, 'C': 29, 'O': 93}
+Tipo 111: {'M': 37, 'N/A': 80, 'C': 14, 'O': 108}
+Tipo 112: {'M': 37, 'N/A': 80, 'C': 14, 'O': 109}
+
+=== MANDATORY fields for Tipo 33 ===
+- TipoDTE: Tipo Documento Tributario Electr¾nico | GUF=/DTE/Documento/Encabezado/IdDoc/Tipo
+- Folio: Folio del Documento Electronico | GUF=/DTE/Documento/Encabezado/IdDoc/Numero
+- FchEmis: Fecha de emisi¾n contable del documento (AAAA-MM-DD) | GUF=/DTE/Documento/Encabezado/IdDoc/FechaEmis
+- FchPago: Fecha de Pago | GUF=/DTE/Documento/Encabezado/IdDoc/Pagos/FechaPago
+- MntPago: Monto de Pago | GUF=/DTE/Documento/Encabezado/IdDoc/Pagos/Monto
+- RUTEmisor: RUT del Emisor del DTE | GUF=DTE/Documento/Encabezado/Emisor/IDEmisor
+- RznSoc: Nombre o Razon Social del Emisor | GUF=/DTE/Documento/Encabezado/Emisor/NmbEmisor
+- GiroEmis: Giro Comercial del Emisor Relevante para el DTE | GUF=/DTE/Documento/Encabezado/Emisor/NombreEmisor/PrimerNombre
+- Acteco: C¾digo de Actividad Economica del Emisor Relevante para el DTE | GUF=/DTE/Documento/Encabezado/Emisor/ExtraInfoEmisor[@name='Acte
+- DirOrigen: Direccion de Origen | GUF=/DTE/Documento/Encabezado/Emisor/DomFiscal/Calle
+- CmnaOrigen: Comuna de Origen | GUF=/DTE/Documento/Encabezado/Emisor/DomFiscal/Municipio
+- RUTRecep: RUT del Receptor del DTE | GUF=/DTE/Documento/Encabezado/Receptor/IDReceptor
+- RznSocRecep: Nombre o Razon Social del Receptor | GUF=/DTE/Documento/Encabezado/Receptor/NmbRecep
+- GiroRecep: Giro Comercial del Receptor | GUF=/DTE/Documento/Encabezado/Receptor/NombreRecep/PrimerNombre
+- DirRecep: Direccion en la Cual se Envian los Productos o se Prestan los Servicios | GUF=/DTE/Documento/Encabezado/Receptor/LugarRecep/Calle
+- CmnaRecep: Comuna de Recepcion | GUF=/DTE/Documento/Encabezado/Receptor/LugarRecep/Municipio
+- MntTotal: Monto Total del DTE | GUF=/DTE/Documento/Encabezado/Totales/ExtraInfoTotal[@name='MntT
+- NroLinDet: Numero Secuencial de Linea | GUF=/DTE/Documento/Detalle/NroLinDet
+- NmbItem: Nombre del Item | GUF=/DTE/Documento/Detalle/DscComercial
+- MontoItem: Monto por Linea de Detalle. Corresponde al Monto Neto, a menos que MntBruto Indi | GUF=/DTE/Documento/Detalle/MontoTotalItem
+- NroSTI: N·mero de Subtotal | GUF=/DTE/Documento/Encabezado/Totales/TotSubMonto/ExtraInfoTotSu
+- GlosaSTI: Glosa | GUF=/DTE/Documento/Encabezado/Totales/TotSubMonto/MontoConcepto
+- NroLinDR: Numero Secuencial de Linea | GUF=/DTE/Documento/DscRcgGlobal/NroLinDR
+- TpoMov: Tipo de Movimiento | GUF=/DTE/Documento/DscRcgGlobal/TpoMov
+- TpoValor: Unidad en que se Expresa el Valor | GUF=/DTE/Documento/DscRcgGlobal/TpoValor
+- ValorDR: Valor del Descuento o Recargo | GUF=/DTE/Documento/DscRcgGlobal/ValorDR
+- NroLinRef: Numero Secuencial de Linea de Referencia | GUF=/DTE/Documento/Referencia/NroLinRef
+- TpoDocRef: Tipo de Documento de Referencia | GUF=/DTE/Documento/Referencia/TpoDocRef
+- FolioRef: Folio del Documento de Referencia | GUF=/DTE/Documento/Referencia/NumeroRef
+- FchRef: Fecha de la Referencia | GUF=/DTE/Documento/Referencia/FechaRef
+- ComunaRolOrigen: Comuna del Rol Predial de Origen | GUF=DTE/Documento/Complementos/VentaMadera/ComunaRolOrigen
+- MnzRolOrigen: Manzana del Rol Predial de Origen | GUF=DTE/Documento/Complementos/VentaMadera/MnzRolOrigen
+- PrdRolOrigen: Num. Predio del Rol Predial de Origen | GUF=DTE/Documento/Complementos/VentaMadera/PrdRolOrigen
+- ComunaRolDestino: Comuna del Rol Predial de Destino | GUF=DTE/Documento/Complementos/VentaMadera/ComunaRolDestino
+- MnzRolDestino: Manzana del Rol Predial de Destino | GUF=DTE/Documento/Complementos/VentaMadera/MnzRolDestino
+- PrdRolDestino: Num. Predio del Rol Predial de Origen | GUF=DTE/Documento/Complementos/VentaMadera/PrdRolDestino
+- CodPlanConaf: C¾digo Plan de Manejo Conaf | GUF=DTE/Documento/Complementos/VentaMadera/CodPlanConaf
+- LatitudOrigenMadera: Latitud Origen | GUF=DTE/Documento/Complementos/VentaMadera/LatitudOrigenMadera
+- LongitudOrigenMadera: Longitud Origen | GUF=DTE/Documento/Complementos/VentaMadera/LongitudOrigenMadera
+- LatitudDestinoMadera: Latitud Destino | GUF=DTE/Documento/Complementos/VentaMadera/LatitudDestinoMadera
+- LongitudDestinoMadera: Longitud Destino | GUF=DTE/Documento/Complementos/VentaMadera/LongitudDestinoMadera
+- SistemareferenciaMadera: Sistema de Referencia | GUF=DTE/Documento/Complementos/VentaMadera/SistemareferenciaMade
+- RutEmisor: RUT Emisor de los DTE | GUF=DTE/Documento/Encabezado/Emisor/IDEmisor
+- RutEnvia: RUT que envia los DTE | GUF=DTE/Documento/Encabezado/Emisor/IDEmisor
+- RutReceptor: RUT al que se le envian los DTE | GUF=/DTE/Documento/Encabezado/Receptor/IDReceptor
+- FchResol: Fecha de Resolucion que Autoriza el Envio de DTE | GUF=/DTE/Documento/CAE/FechaResolucion
+- NroResol: Numero de Resolucion que Autoriza el Envio de DTE | GUF=/DTE/Documento/CAE/NroResolucion
+- TmstFirmaEnv: Fecha y Hora de la Firma del Archivo de Envio | GUF=N/A
+- TpoDTE: Tipo de DTE Enviado | GUF=DTE/Documento/Encabezado/IdDoc/Tipo
+- NroDTE: Numero de DTE Enviados | GUF=1
+
+=== MANDATORY fields for Tipo 110 (Export) ===
+- TipoDTE: Tipo Documento Tributario Electr¾nico
+- Folio: Folio del Documento Electronico
+- FchEmis: Fecha de emisi¾n contable del documento (AAAA-MM-DD)
+- FchPago: Fecha de Pago
+- MntPago: Monto de Pago
+- RUTEmisor: RUT del Emisor del DTE
+- RznSoc: Nombre o Razon Social del Emisor
+- GiroEmis: Giro Comercial del Emisor Relevante para el DTE
+- Acteco: C¾digo de Actividad Economica del Emisor Relevante para el DTE
+- DirOrigen: Direccion de Origen
+- CiudadOrigen: Ciudad de Origen
+- RUTRecep: RUT del Receptor del DTE
+- RznSocRecep: Nombre o Razon Social del Receptor
+- DirRecep: Direccion en la Cual se Envian los Productos o se Prestan los Servicios
+- CiudadRecep: Ciudad de Recepcion
+- TotBultos: Cantidad total de bultos que ampara el documento.
+- CodPaisRecep: C¾digo del paÝs del receptor extranjero de la mercaderÝa, seg·n tabla PaÝses aduana
+- MntExe: Monto Exento del DTE
+- MntTotal: Monto Total del DTE
+- NroLinDet: Numero Secuencial de Linea
+- NmbItem: Nombre del Item
+- MontoItem: Monto por Linea de Detalle. Corresponde al Monto Neto, a menos que MntBruto Indique lo Con
+- NroSTI: N·mero de Subtotal
+- GlosaSTI: Glosa
+- NroLinDR: Numero Secuencial de Linea
+- TpoMov: Tipo de Movimiento
+- TpoValor: Unidad en que se Expresa el Valor
+- ValorDROtrMnda: Valor en otra moneda
+- NroLinRef: Numero Secuencial de Linea de Referencia
+- TpoDocRef: Tipo de Documento de Referencia
+- FolioRef: Folio del Documento de Referencia
+- FchRef: Fecha de la Referencia
+- RutEmisor: RUT Emisor de los DTE
+- RutEnvia: RUT que envia los DTE
+- RutReceptor: RUT al que se le envian los DTE
+- FchResol: Fecha de Resolucion que Autoriza el Envio de DTE
+- NroResol: Numero de Resolucion que Autoriza el Envio de DTE
+- TmstFirmaEnv: Fecha y Hora de la Firma del Archivo de Envio
+- TpoDTE: Tipo de DTE Enviado
+- NroDTE: Numero de DTE Enviados
+
+=== Conditional/Optional EXPORT-relevant (Transporte/Aduana/OtrMnda) for 110 ===
+- TipoDTE [{33: 'M', 34: 'M', 52: 'M', 61: 'M', 56: 'M', 46: 'M', 110: 'M'}]: Tipo Documento Tributario Electr¾nico
+- IndTraslado [{33: 'N/A', 34: 'N/A', 52: 'M', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'N/A'}]: S¾lo para GuÝas de despacho. 
+Indica si el traslado de mercaderÝa es p
+- IndServicio [{33: 'C', 34: 'C', 52: 'N/A', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Indica si Transaccion Corresponde a la Prestacion de un Servicio
+- FmaPagExp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Forma de Pago Exportaci¾n
+- FchCancel [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: Fecha de Cancelacion del DTE
+- TermPagoGlosa [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: TÚrminos del Pago - glosa
+- CdgTraslado [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'N/A'}]: C¾digo Emisor Traslado Excepcional
+- FolioAut [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'N/A'}]: Folio Autorizaci¾n ( N░ de Resoluci¾n del SI)
+- FchAut [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'N/A'}]: Fecha de emisi¾n de la Resoluci¾n de autorizaci¾n
+- IdAdicEmisor [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Identificador Adicional del Emisor
+- RUTRecep [{33: 'M', 34: 'M', 52: 'M', 61: 'M', 56: 'M', 46: 'M', 110: 'M'}]: RUT del Receptor del DTE
+- Nacionalidad [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: Nacionalidad Receptor Extranjero
+- IdAdicRecep [{33: 'N/A', 34: 'N/A', 52: 'N/A', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Identificador Adicional del Receptor Extranjero
+- Patente [{33: 'C', 34: 'C', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'C', 110: 'O'}]: Patente del Vehiculo que Transporta los Bienes
+- PatenteCarro [{33: 'C', 34: 'C', 52: 'M', 61: 'N/A', 56: 'N/A', 46: 'C', 110: 'O'}]: Patente de Carro o remolque
+- RUTTrans [{33: 'C', 34: 'C', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'C', 110: 'O'}]: RUT del Transportista
+- RUTChofer [{33: 'O', 34: 'O', 52: 'C', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: RUT del Chofer
+- NombreChofer [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'O'}]: Nombre del Chofer
+- DirDest [{33: 'C', 34: 'C', 52: 'C', 61: 'O', 56: 'O', 46: 'C', 110: 'C'}]: Direccion de Destino
+- CmnaDest [{33: 'C', 34: 'C', 52: 'M', 61: 'O', 56: 'O', 46: 'C', 110: 'O'}]: Comuna de Destino
+- CiudadDest [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: Ciudad de Destino
+- CodModVenta [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: C¾digo seg·n  tabla "Modalidad de Venta" de aduana
+- CodClauVenta [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: C¾digo seg·n  Tabla "Clßusula compra-venta" de  Aduana
+- TotClauVenta [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: Total  Clßusula de venta
+- CodViaTransp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'C'}]: Indicar el C¾digo de la vÝa de transporte utilizada para transportar l
+- NombreTransp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Nombre o Identificaci¾n del Medio de Transporte
+- RUTCiaTransp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Rut CÝa. Transportadora
+- NomCiaTransp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Nombre CÝa. Transportadora
+- IdAdicTransp [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Identificador Adicional CÝa. Transportadora
+- Booking [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Numero de reserva del Operador
+- Operador [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: C¾digo del Operador
+- CodPtoEmbarque [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: C¾digo del puerto de embarque seg·n tabla de Aduana
+- IdAdicPtoEmb [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Identificador Adicional Puerto de Embarque
+- CodPtoDesemb [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: C¾digo del puerto de desembarque seg·n tabla de Aduana
+- IdAdicPtoDesemb [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Identificador Adicional Puerto de Desembarque
+- Tara [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Tara
+- CodUnidMedTara [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: C¾digo de la unidad de medida  seg·n tabla de Aduana
+- PesoBruto [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Sumatoria de los pesos brutos de todos los Ýtems del documento
+- CodUnidPesoBruto [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: C¾digo de la unidad de medida  seg·n tabla de Aduana
+- PesoNeto [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Sumatoria de los pesos netos de todos los Ýtems del documento
+- CodUnidPesoNeto [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: C¾digo de la unidad de medida  seg·n tabla de Aduana
+- TotItems [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Indique el total de items del documento
+- TotBultos [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'M'}]: Cantidad total de bultos que ampara el documento.
+- CodTpoBultos [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: C¾digo seg·n  tabla "Tipos de Bultos" de aduana
+- CantBultos [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: Cantidad de Bultos
+- Marcas [{33: 'N/A', 34: 'N/A', 52: 'C', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: Identificaci¾n de marcas, cuando es distinto de contenedor
+- IdContainer [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Se utiliza cuando el tipo de bulto es contenedor
+- Sello [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Sello contenedor. Con digito verificador
+- EmisorSello [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Nombre emisor sello
+- MntFlete [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Monto del flete seg·n moneda de venta
+- MntSeguro [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'O'}]: Monto del seguro , seg·n moneda de venta
+- CodPaisRecep [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'M'}]: C¾digo del paÝs del receptor extranjero de la mercaderÝa, seg·n tabla 
+- CodPaisDestin [{33: 'N/A', 34: 'N/A', 52: 'O', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'C'}]: C¾digo del paÝs de destino extranjero de la mercaderÝa, seg·n tabla Pa
+- FchSalida [{33: 'C', 34: 'C', 52: 'M', 61: 'O', 56: 'O', 46: 'C', 110: 'O'}]: Fecha efectiva de inicio del traslado
+- HraSalida [{33: 'C', 34: 'C', 52: 'M', 61: 'O', 56: 'O', 46: 'C', 110: 'O'}]: Hora de inicio de traslado
+- FchLlegada [{33: 'C', 34: 'C', 52: 'M', 61: 'O', 56: 'O', 46: 'C', 110: 'O'}]: Fecha de llegada del traslado
+- TpoMoneda [{33: 'N/A', 34: 'N/A', 52: 'N/A', 61: 'N/A', 56: 'N/A', 46: 'N/A', 110: 'M'}]: Tipo Moneda Transacci¾n
+- MntExe [{33: 'C', 34: 'M', 52: 'O', 61: 'C', 56: 'C', 46: 'C', 110: 'M'}]: Monto Exento del DTE
+- MntTotal [{33: 'M', 34: 'M', 52: 'M', 61: 'M', 56: 'M', 46: 'M', 110: 'M'}]: Monto Total del DTE
+- TpoMoneda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Tipo Otra moneda Tabla de Monedas  de Aduanas
+- TpoCambio [{33: 'O', 34: 'O', 52: 'C', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: Tipo de Cambio fijado por el Banco Central de Chile
+- MntNetoOtrMnda [{33: 'O', 34: 'N/A', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'N/A'}]: Monto Neto del DTE en Otra Moneda
+- MntExeOtrMnda [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: Monto Exento del DTE en Otra Moneda
+- MntFaeCarneOtrMnda [{33: 'O', 34: 'N/A', 52: 'O', 61: 'O', 56: 'O', 46: 'N/A', 110: 'N/A'}]: Monto Base Faenamiento Carne en Otra Moneda
+- MntMargComOtrMnda [{33: 'C', 34: 'N/A', 52: 'O', 61: 'C', 56: 'C', 46: 'N/A', 110: 'N/A'}]: Monto Base de Mßrgenes de Comercializaci¾n. Monto informado
+- IVAOtrMnda [{33: 'C', 34: 'C', 52: 'O', 61: 'C', 56: 'C', 46: 'C', 110: 'N/A'}]: Monto de IVA del DTE en Otra Moneda
+- TipoImpOtrMnda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'N/A'}]: Tipo de Impuesto o Retencion Adicional
+- TasaImpOtrMnda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'N/A'}]: Tasa de Impuesto o Retencion
+- VlrImpOtrMnda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'N/A'}]: Valor del impuesto o retenci¾n en otra moneda
+- IVANoRetOtrMnda [{33: 'N/A', 34: 'N/A', 52: 'N/A', 61: 'O', 56: 'O', 46: 'O', 110: 'N/A'}]: IVA no retenido Otra Moneda
+- MntTotOtrMnda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Monto Total Otra Moneda
+- IndExe [{33: 'C', 34: 'C', 52: 'O', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Indicador de Exencion/Facturacion
+- UnmdItem [{33: 'C', 34: 'O', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Unidad de Medida
+- PrcItem [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'O'}]: Precio Unitario del Item en Pesos
+- PrcOtrMon [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Precio Unitario en Otra Moneda
+- Moneda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: C¾digo de Otra Moneda (Usar C¾digos de Moneda del Banco Central)
+- FctConv [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Factor  para Conversion a Pesos
+- DctoOtrMnda [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: Descuento en Otra Moneda
+- RecargoOtrMnda [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'O'}]: Recargo en Otra Moneda
+- MontoItemOtrMnda [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Valor por lÝnea de detalle en Otra Moneda
+- ValorDROtrMnda [{33: 'O', 34: 'O', 52: 'O', 61: 'O', 56: 'O', 46: 'O', 110: 'M'}]: Valor en otra moneda
+- IndExeDR [{33: 'C', 34: 'C', 52: 'C', 61: 'C', 56: 'C', 46: 'C', 110: 'C'}]: Indica si el D/R es No Afecto o No Facturable
+- TpoDocRef [{33: 'M', 34: 'M', 52: 'M', 61: 'M', 56: 'M', 46: 'M', 110: 'M'}]: Tipo de Documento de Referencia
+- ValComExe [{33: 'N/A', 34: 'N/A', 52: 'N/A', 61: 'M', 56: 'M', 46: 'M', 110: 'N/A'}]: Val. Comis. y Otros Cargos no Afectos o Exentos
+
+=== BOLETA sheet header preview ===
+ROW1: []
+ROW2: [(2, 'Zona/┴rea'), (7, 'Nombre Campo en XML Tributario'), (8, 'Descripci¾n'), (12, 'Observaciones'), (14, 'Tipo'), (15, 'Formato'), (16, 'xPath GUF (Gosocket Universal Format)'), (17, 'xPath de XML Tributario'), (18, 'Boleta Electr¾nica (39)'), (19, 'Boleta Exenta Electr¾nica (41)')]
+ROW3: [(2, 'Zona/┴rea'), (7, 'Name Field in Tax XML'), (8, 'Description'), (12, 'Comments'), (14, 'Type'), (15, 'Format'), (16, 'xPath GUF (Gosocket Universal Format)'), (17, 'Tax XML xPath'), (18, 'Electronic Receipt  (39)'), (19, 'Exempt Electronic Receipt (41)')]
+ROW4: [(2, 'A - ENCABEZADO')]
+ROW5: [(7, 'IdDoc'), (8, 'IDENTIFICACIËN DEL DOCUMENTO'), (10, 'DOCUMENT IDENTIFICATION'), (18, 'M'), (19, 'M')]
+ROW6: [(7, 'TipoDTE'), (8, 'Tipo Documento Tributario Electr¾nico'), (10, 'Electronic Tax Document Type'), (12, 'Indica que el documento es: \n39: Boleta Electr¾nica\n41: Boleta No Afecta o Exenta Electr¾nica'), (13, 'Indicates that the document is:\n39: Electronic Receipt\n41: Non-Taxable or Exempt Electronic Receipt'), (14, 'Number'), (15, 'Valores permitidos: 39, 41'), (16, '/DTE/Documento/Encabezado/IdDoc/Tipo'), (17, '/EnvioBOLETA/SetDTE/DTE/Documento/Encabezado/IdDoc/TipoDTE'), (18, 'M'), (19, 'M')]
+
+=== CATALOGS ===
+	Tabla 1. Catßlogos de Aduana		Table 1. Customs Catalogs				
+	Tipo	Enlace de consulta	Type	Reference link			
+	Aduana	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T0 	Customs	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T0á			
+	Tipos de Operaci¾n	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T1 	Types of Operation	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T1á			
+	Agentes de Aduana	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T2 	Customs Agents	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T2á			
+	Agentes de Cabotaje y Exportaci¾n	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T3 	Domestic and Export Agents	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T3á			
+	Consignantes y Consignatarios conlicencia para despachar 	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T4	Consignors and Consignees with a license to shipá	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T4			
+	Consignantes y consignatarios especiales	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T5	Special consignors and consignees	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T5			
+	Operadores	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T6	Operators	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T6			
+	PaÝses	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T7	Countries	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T7			
+	C¾digos y Siglas a ser usados en operaciones de zona Franca	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T8	Codes and Acronyms to be used in Free Trade Zone Operations	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T8			
+	Puertos	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T10	Ports	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T10			
+	Tipo Carga	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T11	Type of Cargo	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T11			
+	VÝas de Transporte	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T12	Means of Transport	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T12			
+	C¾digos de Flete y Seguro	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T13	Freight and Insurance Codes	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T13			
+	Almacenistas	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T14	Warehouse Operators	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T14			
+	Formas de pago de gravßmenes	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T15	Payment methods for taxes	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T15			
+	C¾digos de regÝmenes de importaci¾n	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T18	Import regime codes	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T18			
+	Monedas	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T19	Currencies	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T19			
+	Clßusulas de Compraventa	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T20	Purchase and Sale Clauses	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T20			
+	 Formas de Pago	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T21	áPayment Methods	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T21			
+	Tipo de Bulto	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T22	Type of Package	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T22			
+	Unidades de Medida	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T23	Units of Measure	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T23			
+	Modalidad de Venta	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T25	Sales Method	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T25			
+	Oficinas de las Empresas de Correos	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T26	Post Office Branches	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T26			
+	Compa±Ýas transportadoras y emisores de documentos de transporte	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T28	Transport companies and issuers of transport documents	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T28			
+	Operaciones que generan giro comprobante de pago	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T29	Transactions that generate payment vouchers	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T29			
+	Situaciones que generan giro comprobante de pago adicional	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T30	Situations that generate additional payment vouchers	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T30			
+	C¾digos de cuenta a indicar en giros comprobantes de pago	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T31	Account codes to be indicated on payment vouchers	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T31			
+	Acuerdos Comerciales	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T33	Trade Agreements	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T33			
+	Operadores de Contenedores	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T35	Container Operators	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T35			
+	C¾digo de vistos buenos y reglas de procedimiento de aforo	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T37	Code of approvals and rules of procedure for capacity	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T37			
+	Comunas de Chile y Aduanas de Jurisdicci¾n	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T38	Municipalities of Chile and Customs Jurisdictions	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T38			
+	Autorizaci¾n retiro de mercancÝas	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T39	Authorization for removal of goods	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T39			
+	Tipo de documento de pago	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T40	Type of payment document	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T40			
+	Registro de datos de la Declaraci¾n de Ingreso	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T41	Registration of Entry Declaration data	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T41			
+	C¾digos de campos a aclarar en Declaraciones de Ingreso	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T42	Field codes to be clarified in Income Declarations	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T42			
+	C¾digos de Regiones de Origen	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T43	Codes for Regions of Origin	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T43			
+	Tipo de Documento	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T44	Document Type	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T44			
+	Sitios de Atraque	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T45	Berthing Sites	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T45			
+	Emisor de Sellos	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T46	Stamp Issuer	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T46			
+	Unidades de Cobro	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T47	Collection Units	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T47			
+	C¾digos de Pasos Fronterizos y Puntos Habilitados utilizados en documentos de destinaci¾n via carretera	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T48	Border Crossing Codes and Authorized Points used in road transport destination documents	https://www.aduana.cl/compendio-de-normas-anexo-51/aduana/2009-11-19/163937.html#vtxt_cuerpo_T48			
+	Tabla 2. Tipos de Documentos Tributarios electr¾nicos (DTE)		Table 2. Types of Electronic Tax Documents (DTE)				
+	C¾digo	Descripci¾n	Code	Description			
+	33	Factura Electr¾nica	33	Electronic Invoice			
+	34	Factura Exenta Electr¾nica	34	Exempt Electronic Invoice			
+	39	Boleta Electr¾nica	39	Electronic Ticket			
+	41	Boleta Exenta Electr¾nica	41	Electronic Exempt Receipt			
+	43	Liquidaci¾n Factura Electr¾nica	43	Electronic Invoice Settlement			
+	46	Factura de Compra Electr¾nica	46	Electronic Purchase Invoice			
+	52	GuÝa de Despacho Electr¾nica	52	Electronic Dispatch Guide			
+	56	Nota de DÚbito Electr¾nica	56	Electronic Debit Note			
+	61	Nota de CrÚdito Electr¾nica	61	Electronic Credit Note			
+	110	Factura Exportaci¾n Electr¾nica	110	Electronic Export Invoice			
+	111	Nota de CrÚdito de Exportaci¾n Electr¾nica	111	Electronic Export Credit Note			
+	112	Nota de DÚbito de Exportaci¾n Electr¾nica	112	Electronic Export Debit Note			
+	801	Orden de Compra 	801	Purchase Orderá			
+	802	Nota de pedido	802	Order Note			
+	803	Contrato	803	Contract			
+	804	Resoluci¾n	804	Resolution			
+	805	Proceso ChileCompra	805	ChileCompra Process			
+	806	Ficha ChileCompra	806	ChileCompra Fact Sheet			
+	807	DUS	807	DUS			
+	808	B/L (Conocimiento de embarque)	808	B/L (Bill of Lading)			
+	809	AWB (Air Will Bill)	809	AWB (Air Waybill)			
+	810	MIC/DTA	810	MIC/DTA			
+	811	Carta de Porte	811	Waybill			
+	812	Resoluci¾n del SNA donde califica Servicios de Exportaci¾n	812	SNA resolution classifying Export Services			
+	813	Pasaporte	813	Passport			
+	814	Certificado de Dep¾sito Bolsa Prod. Chile.	814	Stock Exchange Deposit Certificate Prod. Chile.			
+	815	 Vale de Prenda Bolsa Prod. Chile	815	áChilean Stock Exchange Pledge Certificate			
+	820	C¾digo de Inscripci¾n en el Registro de Acuerdos con Plazo de Pago Excepcional	820	Registration Code in the Register of Agreements with Exceptional Payment Terms Container Operators			
+
+=== GLOSSARY ===
+	Tabla 1. Obligatoriedad de campos		Table 1. Mandatory fields	
+	M	Dato Mandatorio. El dato debe estar en el documento siempre, independiente de las caracterÝsticas de la transacci¾n.	M	Mandatory data. The data must always be included in the document, regardless of the characteristics of the transaction.
+	O	Dato Opcional	O	Optional data
+	C	Dato condicional. El dato no es obligatorio en todas los tipos de documentos, pero pasa a ser obligatorio en determinadas
+operaciones si se cumple una cierta condici¾n.	C	Conditional data. The data is not mandatory in all types of documents, but becomes mandatory in certain
+operations if a certain condition is met.
+	N/A	No Aplicable, este dao nunca debe enviarse para ese tipo de documento	N/A	Not applicable, this data must never be sent for this type of document
+	Tabla 2. Descripci¾n de formato		Table 2. Format description	
+	minLen	Longitud mÝnima permitida para el dato, en n·mero de caracteres.	minLen	Minimum length allowed for the data, in number of characters.
+	maxLen	Longitud mßxima permitida para el dato, en n·mero de caracteres.	maxLen	Maximum length allowed for the data, in number of characters.
+	totalDig	N·mero total de dÝgitos permitidos para un valor numÚrico (parte entera + parte fraccionaria)	totalDig	Total number of digits allowed for a numeric value (integer part + fractional part)
+	fracDig	N·mero de dÝgitos permitidos en la parte fraccionaria (decimales) de un valor numÚrico	fracDig	Number of digits allowed in the fractional part (decimals) of a numeric value.
+	minIncl	Valor mÝnimo permitido para el dato, incluido (es decir, el dato puede ser igual a este valor o mayor)	minIncl	Minimum value allowed for the data, inclusive (i.e., the data can be equal to or greater than this value)
+	maxIncl	Valor mßximo permitido para el dato, incluido (es decir, el dato puede ser igual a este valor o menor)	maxIncl	Maximum value allowed for the data, inclusive (i.e., the data can be equal to or less than this value)
+	Tabla 3. Descripci¾n de columna "Impresi¾n (PDF)"		Table 3. Description of the ôPrint (PDF)ö column	
+	N	No es obligatorio que el campo sea impreso en el documento	N	This field does not have to be printed in the document
+	I	I = Debe estar impreso. La impresi¾n de un dato no debe necesariamente ser igual al formato que se especifica en el presente documento. Como ejemplo, una fecha no tiene necesariamente que estar en el formato AAAA-MMDD, sino que puede ser impresa con el mes en letras o cambiando el orden en que aparecen el a±o, el mes y dÝa, de manera de facilitar su lectura. Adicionalmente, se puede optar porque un dato que es obligatorio imprimir, estÚ preimpreso.	I	I = Must be printed. The printing of a data item does not necessarily have to match the format specified in this document. For example, a date does not necessarily have to be in the YYYY-MMDD format; instead, it may be printed with the month in letters or by changing the order in which the year, month, and day appear, in order to make it easier to read. Additionally, it is possible to choose to have a data item that is required to be printed appear as pre-printed.
+	P	Debe estar impresa traduciendo el c¾digo a la correspondiente glosa (expresado en palabras.) Por ejemplo: en el documento electr¾nico el tipo de documento estß codificado, sin embargo en la representaci¾n impresa del documento se debe indicar el nombre del documento (Factura electr¾nica, Nota de CrÚdito electr¾nica, etc.) 	P	Must be printed by translating the code into the corresponding description (expressed in words). For example: in the electronic document, the document type is coded; however, in the printed version of the document, the document name must be indicated (Electronic Invoice, Electronic Credit Note, etc.).

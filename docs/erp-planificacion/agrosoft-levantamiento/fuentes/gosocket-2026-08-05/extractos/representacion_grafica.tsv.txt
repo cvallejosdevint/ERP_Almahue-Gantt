@@ -1,0 +1,20 @@
+RUT											
+Giro											
+Direccion 											
+Sucursales (en caso de tener)											
+Telefono (opcional)											
+Correo electronico (opcional)											
+Oficina SII											
+											
+En caso de necesitar otro dato en encabezado, informarlo aquí.											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											

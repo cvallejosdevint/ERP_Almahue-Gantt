@@ -23,7 +23,12 @@
 - `../fuentes/reunion5-minuta-tldv-2026-08-03.md` · `../reunion5-minuta-2026-08-03.md`
 - Contexto: `transcripcion-reunion2.md`, `transcripcion-reunion3.md`
 
+## Relacionado (post docs GoSocket 05/08/2026)
+
+- Fuentes: [`../fuentes/gosocket-2026-08-05/`](../fuentes/gosocket-2026-08-05/)
+- Propuesta **billing-gateway** (repo separado): [`../partners-hub/00-PLAN-IMPLEMENTACION.md`](../partners-hub/00-PLAN-IMPLEMENTACION.md)
+
 ## Fuera de este paquete
 
 - Guiones / rutas de presentación
-- Implementación GoSocket (espera docs + transcripción de esa reunión)
+- Código del Hub / adapter GoSocket (ver plan partners-hub; no forma parte de esta entrega AS-IS)

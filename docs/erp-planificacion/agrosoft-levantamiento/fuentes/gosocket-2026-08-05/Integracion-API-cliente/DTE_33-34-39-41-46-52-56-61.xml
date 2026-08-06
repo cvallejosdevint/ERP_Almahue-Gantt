@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DTE>
+	<Documento ID="">
+		<Encabezado>
+			<IdDoc>
+				<TipoEmision>.</TipoEmision>
+				<Tipo>33</Tipo>
+				<Numero>24577</Numero>
+				<NumeroInterno>.</NumeroInterno>
+				<FechaEmis>AAAA-MM-DDTHH:MI:SS</FechaEmis>
+				<PtoEmis>.</PtoEmis>
+				<IndServicio>.</IndServicio>
+				<IndEnvio>.</IndEnvio>
+				<TipoServicio>.</TipoServicio>
+				<TipoDespacho>.</TipoDespacho>
+				<FormaPago>.</FormaPago>
+				<MedioPago>.</MedioPago>
+				<FechaCancel>.</FechaCancel>
+				<PeriodoDesde>.</PeriodoDesde>
+				<PeriodoHasta>.</PeriodoHasta>
+				<TermPagoCdg>.</TermPagoCdg>
+				<TermPagoGlosa>.</TermPagoGlosa>
+				<TermPagoDias>.</TermPagoDias>
+				<FechaVenc>.</FechaVenc>
+				<TipoImpresion>.</TipoImpresion>
+				<Pagos>
+					<DescPago>.</DescPago>
+					<FechaPago>.</FechaPago>
+					<Monto>.</Monto>
+				</Pagos>
+				<ExtraInfoDoc name="FmaPagExp">.</ExtraInfoDoc>
+				<ExtraInfoDoc name="TipoCtaPago">.</ExtraInfoDoc>
+				<ExtraInfoDoc name="NumCtaPago">.</ExtraInfoDoc>
+				<ExtraInfoDoc name="BcoPago">.</ExtraInfoDoc>
+			</IdDoc>
+			<Emisor>
+				<DocEmisor>
+					<NroDocEmisor>.</NroDocEmisor>
+				</DocEmisor>
+				<IDEmisor></IDEmisor>
+				<NmbEmisor>.</NmbEmisor>
+				<NombreEmisor>
+					<PrimerNombre>.</PrimerNombre>
+				</NombreEmisor>
+				<CdgSucursal>.</CdgSucursal>
+				<Sucursal>.</Sucursal>
+				<CdgVendedor>.</CdgVendedor>
+				<DomFiscal>
+					<Calle>.</Calle>
+					<Ciudad>.</Ciudad>
+					<Municipio>.</Municipio>
+				</DomFiscal>
+				<ContactoEmisor>
+					<eMail>.</eMail>
+					<Telefono>.</Telefono>
+				</ContactoEmisor>
+				<ExtraInfoEmisor name="Acteco">.</ExtraInfoEmisor>
+				<ExtraInfoEmisor name="RUTMandante">.</ExtraInfoEmisor>
+			</Emisor>
+			<Receptor>
+				<IDReceptor>.</IDReceptor>
+				<DocRecep>
+					<NroDocRecep>.</NroDocRecep>
+				</DocRecep>
+				<NmbRecep>.</NmbRecep>
+				<Nacionalidad>.</Nacionalidad>
+				<NombreRecep>
+					<PrimerNombre>.</PrimerNombre>
+				</NombreRecep>
+				<CodigoReceptor>
+					<CdgIntRecep>.</CdgIntRecep>
+				</CodigoReceptor>
+				<Contacto>.</Contacto>
+				<DomFiscalRcp>
+					<Calle>.</Calle>
+					<Municipio>.</Municipio>
+					<CodigoPostal>.</CodigoPostal>
+				</DomFiscalRcp>
+				<LugarRecep>
+					<Calle>.</Calle>
+					<Ciudad>.</Ciudad>
+					<Municipio>.</Municipio>
+				</LugarRecep>
+				<ContactoReceptor>
+					<eMail>.</eMail>
+				</ContactoReceptor>
+				<ExtraInfoReceptor name="RUTSolicita">.</ExtraInfoReceptor>
+			</Receptor>
+			<Transporte>
+				<DocTransp>
+					<NroDocTransp>.</NroDocTransp>
+				</DocTransp>
+				<IdTransporte>.</IdTransporte>
+				<DomFiscalTransp>
+					<Calle>.</Calle>
+					<Ciudad>.</Ciudad>
+					<Municipio>.</Municipio>
+				</DomFiscalTransp>
+				<InfoCarga>
+					<Cantidad>.</Cantidad>
+					<ExtraInfoCarga name="CodTpoBultos">.</ExtraInfoCarga>
+					<ExtraInfoCarga name="Marcas">.</ExtraInfoCarga>
+					<ExtraInfoCarga name="IdContainer">.</ExtraInfoCarga>
+					<ExtraInfoCarga name="Sello">.</ExtraInfoCarga>
+					<ExtraInfoCarga name="EmisorSello">.</ExtraInfoCarga>
+				</InfoCarga>
+				<ExtraInfoTransporte name="RUTChofer">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="NombreChofer">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodModVenta">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodClauVenta">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="TotClauVenta">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodViaTransp">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="NombreTransp">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="RUTCiaTransp">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="NomCiaTransp">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="IdAdicTransp">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="Booking">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="Operador">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodPtoEmbarque">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="IdAdicPtoEmb">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodPtoDesemb">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="IdAdicPtoDesemb">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="Tara">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodUnidMedTara">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="PesoBruto">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodUnidPesoBruto">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="PesoNeto">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodUnidPesoNeto">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="TotItems">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="TotBultos">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="MntFlete">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="MntSeguro">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodPaisRecep">.</ExtraInfoTransporte>
+				<ExtraInfoTransporte name="CodPaisDestin">.</ExtraInfoTransporte>
+			</Transporte>
+			<Totales>
+				<Moneda>.</Moneda>
+				<FctConv>.</FctConv>
+				<IndLista>.</IndLista>
+				<SubTotal>.</SubTotal>
+				<MntBase>.</MntBase>
+				<MntExe>.</MntExe>
+				<ImporteNoGravado>.</ImporteNoGravado>
+				<ImporteOtrosTributos>.</ImporteOtrosTributos>
+				<MntImp>.</MntImp>
+				<SaldoAnterior>.</SaldoAnterior>
+				<VlrPagar>.</VlrPagar>
+				<VlrPalabras>.</VlrPalabras>
+				<MontoPeriodo>.</MontoPeriodo>
+				<TotSubMonto>
+					<MontoBase>.</MontoBase>
+					<MontoExento>.</MontoExento>
+					<MontoImp>.</MontoImp>
+					<MontoOtrosImp>.</MontoOtrosImp>
+					<MontoConcepto>.</MontoConcepto>
+					<MontoTotal>.</MontoTotal>
+					<ExtraInfoTotSubMonto name="NroSTI">.</ExtraInfoTotSubMonto>
+					<ExtraInfoTotSubMonto name="OrdenSTI">.</ExtraInfoTotSubMonto>
+					<ExtraInfoTotSubMonto name="LineasDeta">.</ExtraInfoTotSubMonto>
+					<ExtraInfoTotSubMonto name="LineasDeta">2</ExtraInfoTotSubMonto>
+				</TotSubMonto>
+				<ExtraInfoTotal name="MntCancel">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="SaldoInsol">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntMargenCom">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="TasaIVA">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="IVAProp">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="CredEC">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="GrntDep">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntTotal">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="ValComNeto">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="ValComExe">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="ValComIVA">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MontoNF">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="IVAOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntNetoOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntExeOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntFaeCarneOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntMargComOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="IVANoRetOtrMnda">.</ExtraInfoTotal>
+				<ExtraInfoTotal name="MntTotOtrMnda">.</ExtraInfoTotal>
+			</Totales>
+			<Retenciones>
+				<TipoRet>.</TipoRet>
+				<TasaRet>.</TasaRet>
+				<MontoRet>.</MontoRet>
+			</Retenciones>
+			<OtrosTributos>
+				<TipoTrib>.</TipoTrib>
+				<TasaTrib>.</TasaTrib>
+				<MontoTrib>.</MontoTrib>
+			</OtrosTributos>
+			<Aduana>
+				<NroDcto>.</NroDcto>
+				<FechaDcto>.</FechaDcto>
+				<MedioTraslado>.</MedioTraslado>
+			</Aduana>
+		</Encabezado>
+		<Detalle>
+			<NroLinDet>1</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>.</TpoCodigo>
+				<VlrCodigo>.</VlrCodigo>
+			</CdgItem>
+			<IndExe>.</IndExe>
+			<DscItem>.</DscItem>
+			<DscComercial>.</DscComercial>
+			<QtyItem>.</QtyItem>
+			<SubQtyItem>
+				<SubCod>.</SubCod>
+				<SubQty>.</SubQty>
+			</SubQtyItem>
+			<FchElabor>.</FchElabor>
+			<FchVencim>.</FchVencim>
+			<UnmdItem>.</UnmdItem>
+			<PrcBrutoItem>.</PrcBrutoItem>
+			<OtrMnda>
+				<PrcOtrMon>.</PrcOtrMon>
+				<Moneda>.</Moneda>
+				<FctConv>.</FctConv>
+				<DctoOtrMnda>.</DctoOtrMnda>
+				<RecargoOtrMnda>.</RecargoOtrMnda>
+				<MontoItemOtrMnda>.</MontoItemOtrMnda>
+			</OtrMnda>
+			<DescuentoPct>.</DescuentoPct>
+			<DescuentoMonto>.</DescuentoMonto>
+			<SubDscto>
+				<TipoDscto>.</TipoDscto>
+				<MntDscto>.</MntDscto>
+			</SubDscto>
+			<RecargoPct>.</RecargoPct>
+			<RecargoMonto>.</RecargoMonto>
+			<SubRecargo>
+				<TipoRecargo>.</TipoRecargo>
+				<MntRecargo>.</MntRecargo>
+			</SubRecargo>
+			<MontoTotalItem>.</MontoTotalItem>
+			<ExtraInfoDetalle name="IndAgente">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="MntBaseFaena">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="MntMargComer">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="PrcConsFinal">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="QtyRef">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="UnmdRef">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="PrcRef">..</ExtraInfoDetalle>
+			<ExtraInfoDetalle name="CodImpAdic">..</ExtraInfoDetalle>
+		</Detalle>
+		<DscRcgGlobal>
+			<NroLinDR>.</NroLinDR>
+			<TpoMov>D</TpoMov>
+			<GlosaDR>.</GlosaDR>
+			<TpoValor>.</TpoValor>
+			<ValorDR>.</ValorDR>
+			<ValorDROtrMnda>.</ValorDROtrMnda>
+			<IndExeDR>.</IndExeDR>
+		</DscRcgGlobal>
+		<DscRcgGlobal>
+			<NroLinDR>.</NroLinDR>
+			<TpoMov>R</TpoMov>
+			<GlosaDR>.</GlosaDR>
+			<TpoValor>.</TpoValor>
+			<ValorDR>.</ValorDR>
+			<ValorDROtrMnda>.</ValorDROtrMnda>
+			<IndExeDR>.</IndExeDR>
+		</DscRcgGlobal>
+		<DscRcgGlobal>
+			<NroLinDR>.</NroLinDR>
+			<TpoMov>C</TpoMov>
+			<GlosaDR>.</GlosaDR>
+			<PorcentajeDR>.</PorcentajeDR>
+			<ValorDR>.</ValorDR>
+			<ValorImpDR>.</ValorImpDR>
+			<ValorDROtrMnda>.</ValorDROtrMnda>
+		</DscRcgGlobal>
+		<DscRcgGlobal>
+			<NroLinDR>.</NroLinDR>
+			<TpoMov>O</TpoMov>
+			<GlosaDR>.</GlosaDR>
+			<PorcentajeDR>.</PorcentajeDR>
+			<ValorDR>.</ValorDR>
+			<ValorImpDR>.</ValorImpDR>
+			<ValorDROtrMnda>.</ValorDROtrMnda>
+		</DscRcgGlobal>
+		<Referencia>
+			<NroLinRef>1</NroLinRef>
+			<TpoDocRef>801</TpoDocRef>
+			<IndGlobal>.</IndGlobal>
+			<NumeroRef>363</NumeroRef>
+			<FechaRef>2022-01-10</FechaRef>
+			<CodRef>.</CodRef>
+			<RazonRef>Prueba</RazonRef>
+			<ProvRef>
+				<ID>.</ID>
+			</ProvRef>
+		</Referencia>
+		<CAE>
+			<NroResolucion>.</NroResolucion>
+			<FechaResolucion>.</FechaResolucion>
+		</CAE>
+		<TimeStamp/>
+	</Documento>
+	<Personalizados>
+		<DocPersonalizado dteID="">
+			<campoString name="..">sdsd</campoString>
+			<campoNumero name="..">wewe</campoNumero>
+			<campoFecha name="..">gtrfed</campoFecha>
+			<ImpresionDetalle>
+				<PersonNroLinDet>.</PersonNroLinDet>
+				<DetPersonAFN_01>.</DetPersonAFN_01>
+				<DetPersonAFN_02>.</DetPersonAFN_02>
+				<DetPersonAFN_03>.</DetPersonAFN_03>
+				<DetPersonAFN_04>.</DetPersonAFN_04>
+				<DetPersonAFN_05>.</DetPersonAFN_05>
+				<DetPersonAFN_06>.</DetPersonAFN_06>
+				<DetPersonAFN_07>.</DetPersonAFN_07>
+				<DetPersonAFN_08>.</DetPersonAFN_08>
+				<DetPersonAFN_09>.</DetPersonAFN_09>
+				<DetPersonAFN_10>.</DetPersonAFN_10>
+				<DetPersonNUE_01>.</DetPersonNUE_01>
+				<DetPersonNUE_02>.</DetPersonNUE_02>
+				<DetPersonNUE_03>.</DetPersonNUE_03>
+				<DetPersonNUE_04>.</DetPersonNUE_04>
+				<DetPersonNUE_05>.</DetPersonNUE_05>
+				<DetPersonNUE_06>.</DetPersonNUE_06>
+				<DetPersonNUE_07>.</DetPersonNUE_07>
+				<DetPersonNUE_08>.</DetPersonNUE_08>
+				<DetPersonNUE_09>.</DetPersonNUE_09>
+				<DetPersonNUE_10>.</DetPersonNUE_10>
+				<DetPersonNUD_01>.</DetPersonNUD_01>
+				<DetPersonNUD_02>.</DetPersonNUD_02>
+				<DetPersonNUD_03>.</DetPersonNUD_03>
+				<DetPersonNUD_04>.</DetPersonNUD_04>
+				<DetPersonNUD_05>.</DetPersonNUD_05>
+				<DetPersonNUD_06>.</DetPersonNUD_06>
+				<DetPersonNUD_07>.</DetPersonNUD_07>
+				<DetPersonNUD_08>.</DetPersonNUD_08>
+				<DetPersonNUD_09>.</DetPersonNUD_09>
+				<DetPersonNUD_10>.</DetPersonNUD_10>
+				<DetPersonFEC_01>.</DetPersonFEC_01>
+				<DetPersonFEC_02>.</DetPersonFEC_02>
+				<DetPersonFEC_03>.</DetPersonFEC_03>
+				<DetPersonFEC_04>.</DetPersonFEC_04>
+				<DetPersonFEC_05>.</DetPersonFEC_05>
+			</ImpresionDetalle>
+		</DocPersonalizado>
+	</Personalizados>
+</DTE>

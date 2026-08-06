@@ -111,7 +111,7 @@
 | VEN-019 | Filtros libros reformulados | reu5:L147–149 | Should | Implementado |
 | VEN-020 | Panel resumen lateral colapsable | reu5:L99–105 | Must | Implementado |
 | VEN-021 | Cotizaciones con registro (+ aprobación) | reu4:L334–346 | Should | Implementado |
-| VEN-022 | Cotiz: emitir/anular/convertir/imprimir | reu5:L199–237 | Should | Parcial (NP→Factura UI gap) |
+| VEN-022 | Cotiz: emitir/anular/convertir/imprimir | reu5:L199–237 | Should | Implementado (NP→Factura UI) |
 | VEN-023 | Alta cliente `+` panel derecho completo | reu5:L209–217 | Should | Implementado |
 | VEN-024 | Tipos cliente export/nacional | reu4:L350–354 | Should | Parcial |
 | VEN-025 | Factura exportación (aduana, puertos, SII) | reu4:L356–372 | Must | No / Diferido docs MJ |

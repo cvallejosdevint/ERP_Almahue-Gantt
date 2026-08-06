@@ -79,17 +79,17 @@ Maestro, bodegas, movimientos.
 
 ---
 
-## 5. Rutas cerradas / deuda (pre-cierre código)
+## 5. Deuda / diferidos (post-cierre P0 06/08)
 
-| # | Síntoma | Severidad |
-|---|---|---|
-| 1 | Cotiz→NP sin salida UI a factura | P0 |
-| 2 | `convertirDocumento` no copia EXENTO/creadoPor/wizard | P0 |
-| 3 | Destino OC comercial ≠ OrdenCompra compras | P0 |
-| 4 | “Registrar pago” toast stub | P0 |
-| 5 | Correo / adjunto “siguiente oleada” | P1 (ocultar) |
-| 6 | Guías API sin menú | P2 |
-| 7 | GoSocket / SMTP | Diferido |
+| # | Síntoma | Severidad | Estado |
+|---|---|---|---|
+| 1 | Cotiz→NP sin salida UI a factura | P0 | **Cerrado** (pestaña NP + Facturar) |
+| 2 | `convertirDocumento` no copia EXENTO/creadoPor/wizard | P0 | **Cerrado** |
+| 3 | Destino OC comercial ≠ OrdenCompra compras | P0 | **Cerrado** (rechazo + mensaje) |
+| 4 | “Registrar pago” toast stub | P0 | **Cerrado** (bridge → Tesorería) |
+| 5 | Correo / adjunto | P1 | **Cerrado UI** (ocultos; SMTP diferido) |
+| 6 | Guías API sin menú | P2 | Abierto |
+| 7 | GoSocket / SMTP / Excel cartolas finas | Diferido | Abierto (propuesta `billing-gateway`) |
 
 ---
 
@@ -107,7 +107,7 @@ Maestro, bodegas, movimientos.
 | Alta cliente panel | Hecho |
 | Ventas sin CC | Hecho |
 | Folio preview | Hecho |
-| Menú acciones | Parcial (stubs) |
+| Menú acciones | Hecho (pago→Tesorería; mail oculto) |
 | 88001 estado cuenta | Seed-dependiente |
 | Cartolas | Base |
 | GoSocket / SMTP | Diferido |
