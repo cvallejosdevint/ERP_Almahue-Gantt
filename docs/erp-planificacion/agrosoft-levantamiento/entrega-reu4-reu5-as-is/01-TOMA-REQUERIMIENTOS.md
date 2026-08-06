@@ -114,7 +114,7 @@
 | VEN-022 | Cotiz: emitir/anular/convertir/imprimir | reu5:L199–237 | Should | Implementado (NP→Factura UI) |
 | VEN-023 | Alta cliente `+` panel derecho completo | reu5:L209–217 | Should | Implementado |
 | VEN-024 | Tipos cliente export/nacional | reu4:L350–354 | Should | Parcial |
-| VEN-025 | Factura exportación (aduana, puertos, SII) | reu4:L356–372 | Must | Parcial docs — manual COMEX MJ en [`../fuentes/mj-compartidos-2026-07-30/`](../fuentes/mj-compartidos-2026-07-30/); UI/mapper ERP pendiente |
+| VEN-025 | Factura exportación (aduana, puertos, SII) | reu4:L356–372 | Must | **Parcial UI** — campos COMEX en emisión + NC precarga; DTE GoSocket diferido |
 | VEN-026 | NC/ND export precargadas desde factura | reu4:L374–386 | Must | Parcial |
 | VEN-027 | Folio cotiz clickeable preview | reu5:L241–243 | Should | Implementado |
 | VEN-028 | Vendedor = usuario sistema | reu3:L211–213 | Should | Parcial |
@@ -160,7 +160,7 @@
 | ID | Enunciado | Fuente | Prio | Estado |
 |---|---|---|---|---|
 | TES-001 | Flujo de caja | reu4:L504 | Must | Implementado |
-| TES-002 | Cartolas Excel + calce | reu4:L506–528 | Must | Parcial (base; Excel finas MJ Diferido) |
+| TES-002 | Cartolas Excel + calce | reu4:L506–528 | Must | **Parcial→mejorado** — parser multi-hoja MJ (ALM/Almahue/Scotia); calce base OK |
 | TES-003 | Contabilizar mov cartola → asiento | reu4:L510–522 | Must | Implementado |
 | TES-004 | Pagos + N° transacción cartola | reu4:L540–556 | Must | Implementado |
 | TES-005 | TC auto editable + casos promedio | reu4:L558–578 | Must | Parcial |

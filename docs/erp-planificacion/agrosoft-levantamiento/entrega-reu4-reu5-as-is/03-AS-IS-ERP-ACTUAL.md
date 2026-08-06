@@ -89,7 +89,9 @@ Maestro, bodegas, movimientos.
 | 4 | “Registrar pago” toast stub | P0 | **Cerrado** (bridge → Tesorería) |
 | 5 | Correo / adjunto | P1 | **Cerrado UI** (ocultos; SMTP diferido) |
 | 6 | Guías API sin menú | P2 | Abierto |
-| 7 | GoSocket / SMTP / Excel cartolas finas | Diferido | Abierto (propuesta `billing-gateway`) |
+| 7 | GoSocket / SMTP | Diferido | Abierto (`billing-gateway`) |
+| 8 | Excel cartolas finas MJ | P1 | **Cerrado parser** multi-hoja (pack 06-CARTOLA) |
+| 9 | Campos COMEX emisión/NC | P0 docs MJ | **Cerrado modelo+UI** (DTE diferido) |
 
 ---
 
