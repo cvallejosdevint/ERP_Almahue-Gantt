@@ -80,6 +80,7 @@ Canvas: `operativo-as-is-to-be.canvas.tsx` (abrir junto al chat)
 
 ## Evidencia
 
+- [`12-VALIDACION-TRANSCRIPT-VS-CODIGO.md`](./12-VALIDACION-TRANSCRIPT-VS-CODIGO.md) — validación ítem a ítem desde la transcripción Reu4 vs código
 - [`06-MATRIZ-CUMPLIMIENTO-REU4.md`](./06-MATRIZ-CUMPLIMIENTO-REU4.md)
 - [`07-FLUJO-COMPLETO.md`](./07-FLUJO-COMPLETO.md)
 - [`08-DATOS-FLUJO-OC.md`](./08-DATOS-FLUJO-OC.md)

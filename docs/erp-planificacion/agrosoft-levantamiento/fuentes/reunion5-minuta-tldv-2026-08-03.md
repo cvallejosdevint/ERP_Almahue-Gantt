@@ -4,7 +4,7 @@ Fuente: https://tldv.io/app/meetings/6a71065851275b0013b6f1d9
 Título tl;dv: Screen Recording 2026-08-03 164322  
 Video: `fuentes/videos/reunion5-2026-08-03.mp4`  
 Origen: `c:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-03 164322.mp4`  
-Minuta canónica: [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)  
+Estado vs código: [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)  
 Transcripción: [`transcripcion-reunion5.md`](./transcripcion-reunion5.md)
 
 > **Nota:** tl;dv atribuyó los action items a “Sergio implementar…”. En la sala, **Carlos** presenta/implementa y **Sergio** pide/valida. La minuta canónica corrige el “quién”.
