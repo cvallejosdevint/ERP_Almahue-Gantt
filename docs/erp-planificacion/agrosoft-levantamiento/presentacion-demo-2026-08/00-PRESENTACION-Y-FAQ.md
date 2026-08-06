@@ -106,9 +106,9 @@ Mensaje: *sin esto, las pantallas de negocio no tienen combos ni cuentas para as
 `[/comercial/clientes]` · `[/comercial/prospectos]`  
 Maestro comercial y leads. El cliente alimenta RUT/razón en emisión.
 
-### 4.2 Cotizaciones → Factura
+### 4.2 Cotizaciones → Nota de pedido
 `[/comercial/cotizaciones]`  
-Cotización en borrador → emitir → convertir a **factura**. Cadena de origen queda trazada (`folioOrigen`).
+Cotización en borrador → emitir → convertir a **NP** o facturar. Cadena de origen queda trazada (`folioOrigen`).
 
 ### 4.3 Emitir documento (wizard) ⭐
 `[/comercial/emitir]`  
@@ -395,19 +395,19 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 |---|---|---|
 | Lead / Contacto / Origen / Estado / Fecha | Pipeline liviano | No genera asiento |
 
-### Cotizaciones — `/comercial/cotizaciones`
+### Cotizaciones / NP — `/comercial/cotizaciones`
 
 | Campo | Principal | Secundario |
 |---|---|---|
 | Folio / Fecha / Cliente / Neto / Estado | Documento comercial pre-factura | Estados: BORRADOR, EMITIDO, ANULADO, … |
-| Convertir a Factura | Cadena comercial | Conserva origen (`folioOrigen`) |
+| Convertir a NP / Factura | Cadena comercial | Conserva origen (`folioOrigen`) |
 | Lineas | Detalle de costos | Mismas ideas que emitir |
 
 ### Emitir documento — `/comercial/emitir` ⭐
 
 | Campo | Principal | Secundario |
 |---|---|---|
-| Tipo documento | Factura, NC, Cotización, OC* | OC comercial del wizard no reemplaza Compras › OC |
+| Tipo documento | Factura, NC, Cotización, NP, OC* | OC comercial del wizard no reemplaza Compras › OC |
 | Forma de pago | Crédito / Contado / Transferencia | Va al documento y resumen |
 | Folio | Correlativo interno ERP | **No** es folio CAF SII hasta partner real |
 | Fecha emisión / vencimiento | Contable y cobranza | Debe caer en periodo operable |
@@ -416,7 +416,7 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 | Cliente / RUT / Razón / Giro / Dirección / Comuna / Ciudad | Receptor | Export: RUT extranjero tip. `55.555.555-5` |
 | Ítems: descripción, cant, P.U., desc %, cuenta | Detalle y neto | Cuenta alimenta asiento |
 | Descuento global % | Sobre subtotal | |
-| Tipo / Folio referencia | 801 OC, 110 export, HES | Distinto de folioOrigen NC |
+| Tipo / Folio referencia | 801 OC, 802 NP, 110 export, HES | Distinto de folioOrigen NC |
 | COMEX: moneda, TC, país, puertos, cláusula, vía, modalidad, ind. traslado, bulto tipo/cant/marca, montos otra moneda | Datos DTE 110/112 | Manual MJ; no van a GoSocket aún en stub |
 | Observaciones | Texto libre | Condiciones de pago / despacho |
 | Billing stub (post-emisión) | Partner de pruebas | Badge “Stub · no SII”; PDF watermark |
@@ -426,7 +426,7 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 | Campo / acción | Principal | Secundario |
 |---|---|---|
 | Folio / Tipo / RUT / Razón / Fecha / Neto / Estado | Consulta del periodo | Filtro periodo header |
-| Origen / cadena | Cotiz→Factura / NC | |
+| Origen / cadena | Cotiz→NP→Factura / NC | |
 | Stub · no SII | Emisión vía partner stub | No es DTE oficial |
 | Registrar pago | Abre Tesorería con contexto | Bridge UI |
 | Reverso contable | Corrige asiento | No anula fiscal |
