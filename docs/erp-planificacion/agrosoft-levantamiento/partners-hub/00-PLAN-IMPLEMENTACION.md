@@ -16,6 +16,9 @@
 | Nombre | **`billing-gateway`** (temporal) |
 | Repositorio | **Git separado** (ciclo de vida / deploys / secretos independientes del monorepo Almahue) |
 | ApiKeys sandbox GoSocket | **Esperar** reunión SII / onboarding (no asumir disponibles) |
+| Ambiente GoSocket (URL base) | Default sandbox/developers hasta promoción explícita; ver §3.1 — **el modo efectivo es por cliente**, no un switch global |
+| Modo partner | **Por cliente** en registry: `partner` (`stub` \| `gosocket` \| …) + `connectionMode` — ver §3.1. **`stub` es un facturador más** (mismo contrato); se reemplaza por GoSocket cambiando registry |
+| Demo / visualización (2026-08) | **Sin GoSocket real**: todo dato ingresado en demo = stub local. Si hay conexión partner, **solo ambiente QA** (sandbox). **Antes de marcha blanca: reinicio de BD** (datos demo no migran a prod fiscal) |
 | Fail-closed | **No aceptado aún** — va como **opción recomendada en la propuesta**; negocio decide |
 
 ### Aún abierto
@@ -74,7 +77,58 @@ Repos separados:
 | Validación canónica | Zod (`schemaVersion` 1.0) |
 | Observabilidad | logs estructurados + métricas emit |
 
-Sandbox GoSocket: **no conectar** hasta tener ApiKeys post-reunión SII. Hasta entonces: mocks WireMock / fixtures del Manual.
+Sandbox GoSocket: **no conectar** hasta tener ApiKeys post-reunión SII. Hasta entonces: mocks / fixtures del Manual **por cliente en `stub`**.
+
+### 3.1 Modo de conexión **por cliente** (no solo env global)
+
+El gateway atiende **varios ERPs / varios emisores**. No sirve un único `GOSOCKET_MODE=stub` para todo el proceso: Almahue puede pasar a `sandbox`/`live` mientras otro cliente sigue **en espera de credenciales** del facturador/partner.
+
+#### Operación demo → QA → marcha blanca (acordado 2026-08-06)
+
+| Etapa | Partner | Datos |
+|---|---|---|
+| **Demo / visualización** | Solo `stub` (sin red a GoSocket) | Datos de prueba / demo; **no** son DTE reales |
+| **QA** | Único lugar donde puede haber `sandbox` (ApiKeys cuando existan) | BD de QA; no es producción fiscal |
+| **Marcha blanca** | Tras **reinicio de BD**; promover registry a sandbox/live según acuerdo | Parte limpia; folios stub de demo **no** se reutilizan |
+
+Consecuencia: el riesgo de “confundir stub con DTE” en demo se mitiga operativamente (sin GoSocket + wipe de BD). Aun así el UI debe llevar disclaimer, para que nadie use un PDF de demo como respaldo fiscal antes del wipe.
+
+| Nivel | Qué controla |
+|---|---|
+| **Registry por cliente** (fuente de verdad) | `connectionMode` + partner + Mapping + credenciales (si aplica) |
+| **Env del gateway** (default / safety) | URL sandbox, timeouts, y default solo si el tenant no tiene modo; **nunca** fuerza live a todos |
+
+Estados sugeridos en registry (`TenantBillingConfig` / entrada `erpId + rutEmisor`):
+
+| Campo | Valores | Uso |
+|---|---|---|
+| **`partner`** | `stub` \| `gosocket` \| … | **Facturador/seller**. `stub` es un partner completo de pruebas (emite doc + PDF/XML dummy). Se **reemplaza** por `gosocket` (u otro) sin cambiar el ERP. |
+| **`connectionMode`** | `stub` \| `sandbox` \| `live` | Ambiente del partner. Con `partner=stub` → local. Con `partner=gosocket` → sandbox/live. |
+
+| `partner` + mode | Comportamiento |
+|---|---|
+| **`stub` + stub** | Emite DUMMY (folio `STUB-*`, PDF/XML descargables, `artifacts.dummy=true`); disclaimer; sin red externa |
+| **`gosocket` + sandbox** | Llama `developers.gosocket.net/sandbox/...` (ApiKeys del tenant) |
+| **`gosocket` + live** | API producción GoSocket — solo con decisión explícita |
+
+Ejemplo futuro concurrente:
+
+| Cliente | partner | connectionMode | Nota |
+|---|---|---|---|
+| Almahue (preview) | `stub` | `stub` | Integra y prueba flujo completo |
+| Almahue (post-ApiKeys) | `gosocket` | `sandbox` → `live` | Solo cambia registry |
+| Otro ERP | `stub` | `stub` | Independiente |
+
+El ERP **no** elige el facturador: solo llama al gateway. El gateway resuelve por `erpId` + RUT → adapter del `partner`.
+
+Campos mínimos a persistir por emisión (evidencia):
+
+- `tenantId` / `erpId` / `rutEmisor`
+- `partner` (`stub` \| `gosocket` \| …)
+- `connectionMode` usado
+- `partnerDocumentId` / folio (`STUB-*` o folio oficial)
+- `disclaimer` (visible si dummy)
+- request/response audit (secretos redactados)
 
 ---
 
@@ -109,8 +163,9 @@ sequenceDiagram
 |---|---|
 | `api` | `POST /v1/emissions`, `GET /v1/emissions/:id`, webhooks |
 | `canonical` | Schema Zod + errores estables |
-| `registry` | `erpId + rutEmisor → partner + Mapping + credenciales` |
-| `adapters/gosocket` | Mapper canónico→GUF + cliente HTTP Basic Auth |
+| `registry` | `erpId + rutEmisor → partner + **connectionMode** + Mapping + credenciales` |
+| `adapters/gosocket` | Mapper canónico→GUF + cliente HTTP Basic Auth; rama `stub` sin red |
+| `adapters/stub` | Respuesta simulada + disclaimer (reutilizable si partner ≠ GoSocket aún) |
 | `jobs` | Polling SII, retry 5xx, DLQ |
 | `audit` | Request/response (secretos redactados) |
 
@@ -145,14 +200,14 @@ Mapeo Almahue → DTE (propuesta MVP):
 
 **Punto:** `ComercialService.grabarDocumentoContabilizar` — **antes** del asiento.
 
-1. Feature flag por empresa: `dte.enabled` + `dte.partnerId=gosocket`.
-2. Flag OFF → comportamiento actual (folio local).
-3. Flag ON → build canónico → `billing-gateway.emit` → folio oficial + contabilizar según política acordada.
-4. Credenciales GoSocket **solo en billing-gateway**.
-5. Sin pantalla admin GoSocket (INT-GOSOCKET-008).
-6. Preview watermark local sin cambio; PDF timbrado = artifact post-emisión.
+1. Feature flag por empresa ERP: `dte.enabled` (¿llamar al gateway?).
+2. Flag OFF → comportamiento actual (folio local, sin gateway).
+3. Flag ON → build canónico → `billing-gateway.emit` → el **gateway** aplica `connectionMode` del tenant (`stub`/`sandbox`/`live`) → ERP guarda resultado + contabiliza según política acordada.
+4. Credenciales partner **solo en billing-gateway**, por entrada de registry (nunca en ERP).
+5. Sin pantalla admin GoSocket (INT-GOSOCKET-008); sí badge/disclaimer en Libro/Emitir si `connectionMode=stub`.
+6. Preview watermark local sin cambio; PDF/XML del partner = artifacts post-emisión (`stub`: dummy marcado; `gosocket`: timbrados reales).
 
-Multi-RUT (ticket 14213): dos entradas registry (mismo `erpId=almahue`, distinto RUT / Mapping / cert).
+Multi-RUT (ticket 14213): dos entradas registry (mismo `erpId=almahue`, distinto RUT / Mapping / cert / opcionalmente distinto `connectionMode` si un RUT aún no tiene ApiKeys).
 
 ### 6.1 Política ante partner caído — **para decisión de negocio**
 
@@ -184,15 +239,16 @@ La propuesta de proyecto llega con **A como default técnico**, dejando B/C docu
 
 - [ ] Reunión SII / onboarding → ApiKeys sandbox
 - [ ] Presentar propuesta (este doc) + decisión política §6.1
-- [ ] Crear repo git `billing-gateway`
+- [x] Crear repo git `billing-gateway` (scaffold en `E:/source/repos/billing-gateway`; init remoto pendiente)
 
 ### Fase A — Fundaciones (días 1–3, puede empezar sin ApiKeys)
 
 - [ ] Scaffold NestJS + Prisma + Redis + docker-compose
-- [ ] Auth API key por ERP + allowlist RUTs
-- [ ] Canónico v1 + tests golden
-- [ ] Audit + idempotency
-- [ ] Mock GoSocket (fixtures Manual / Example_integracion.json)
+- [x] Auth API key por ERP + allowlist RUTs
+- [x] Registry con `connectionMode` por `erpId + rutEmisor` (§3.1)
+- [x] Canónico v1 + tests golden
+- [x] Audit + idempotency
+- [x] Adapter `stub` + fixtures Manual / Example_integracion.json (sin red)
 
 ### Fase B — Adapter GoSocket (días 4–8; sandbox real post-ApiKeys)
 
@@ -214,22 +270,59 @@ La propuesta de proyecto llega con **A como default técnico**, dejando B/C docu
 
 ---
 
-## 9. Seguridad
+## 9. Seguridad e integridad
 
-- Secretos partner solo en `billing-gateway`
-- TLS + API key ERP→gateway; allowlist RUT
-- Logs sin password ApiKey; XML con TTL
+### 9.1 Hallazgo AS-IS (2026-08-06)
+
+Hoy el ERP **ya** completa folio local → asiento → `CONTABILIZADA` **sin** partner DTE. El peligro del stub no es inventar ese camino: es **legitimarlo** con respuestas “de partner” y UX de transmisión si faltan disclaimer, watermark PDF y campos de auditoría.
+
+### 9.2 Controles
+
+- Secretos partner **solo** en `billing-gateway` (por entrada registry); nunca en ERP ni front
+- TLS + API key ERP→gateway; allowlist RUT por tenant
+- Logs / audit: **nunca** password ApiKey ni `Authorization: Basic` en claro; XML con TTL
+- `connectionMode` por cliente (§3.1): env global **no** puede forzar `live` a todos
+- Canónico sin `cuentaContableId` / `centroCostoId`
+- Demo Mode del front (`almahue-erp-demo-mode`) **≠** stub DTE — checklist operativo los distingue
+
+### 9.3 Invariantes (gates de merge / demo)
+
+1. `stub` **sí** emite documento DUMMY (flujo completo + PDF/XML descargables) pero **nunca** presentados como timbrados SII (`artifacts.dummy=true`, watermark / disclaimer)  
+2. Folio stub (`STUB-*`) ≠ `folioOficial` live; no reutilizar sin remapeo  
+3. ERP no elige `live`; solo el registry del gateway  
+4. Credenciales solo en gateway  
+5. Política ante fallo acordada (§6.1); stub siempre con disclaimer persistido  
+6. `dte.enabled=OFF` → cero HTTP al gateway  
+7. Disclaimer visible en Emitir, Libro y PDF (no solo JSON)  
+8. Tenant en `stub` no puede alcanzar URL live por bug de env  
+
+### 9.4 Matriz de validación (iterativa, con logs)
+
+| Capa | Caso | Evidencia |
+|---|---|---|
+| Unit ERP | Flag OFF: 0 HTTP | test + log |
+| Unit GW | stub: 0 salida a red | spy HTTP |
+| Unit GW | A stub / B sandbox concurrentes | fixtures registry |
+| Integration | misma idempotency key → 1 emission | count DB |
+| Integration | partner 5xx + política A → BORRADOR, 0 asiento | assert estado |
+| E2E UI | badge + disclaimer stub | screenshot |
+| E2E PDF | watermark NO VÁLIDO SII / STUB | preview |
+| Logs | grep CI sin Basic/ApiKey/password | pipeline |
+| Folio | promover stub→live sin colisión unique | migración |
+
+**Orden de implementación seguro:** G0 invariantes → G1 schema auditoría ERP → G2 gateway stub+registry+tests → G3 hook `dte.enabled` + UI/PDF → G4 matriz completa + revisión logs → recién entonces demo marcha blanca.
 
 ---
 
 ## 10. Criterios MVP (ajustables tras §6.1)
 
-1. Con mock o sandbox: emitir 33 y obtener ids/folio de partner.
+1. Con stub o sandbox: emitir 33 y obtener ids/folio de partner (stub: `STUB-*` + disclaimer).
 2. Rechazo mandatorio → mensaje usable en ERP.
 3. Idempotencia: no duplicar DTE.
 4. Flag OFF: cero llamadas al gateway.
 5. Cuenta/CC nunca en payload.
 6. Docs fuentes versionadas en monorepo Almahue.
+7. Matriz §9.4 en verde (incl. logs) antes de demo con datos reales.
 
 ---
 
