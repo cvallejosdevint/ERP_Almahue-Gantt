@@ -169,7 +169,7 @@
 | TES-008 | Aging / nóminas | reu4:L614–618 | Must | Implementado |
 | TES-009 | Vencimiento doc + fecha pago operativa | reu4:L620–646 | Must | Parcial |
 | TES-010 | Editar vencimiento solo rol tesorería | reu4:L642–648 | Must | Parcial |
-| TES-011 | Cobranza (compromisos, mail) | reu4:L650–654 | Could | Diferido |
+| TES-011 | Cobranza (compromisos, mail) | reu4:L650–654 | Could | Diferido — propuesta R4-18 en [`../propuesta-modulo-cobranza.md`](../propuesta-modulo-cobranza.md) |
 | TES-012 | Conciliación: pendientes + resumen | reu4:L658–674 | Must | Implementado |
 | TES-013 | Estado de cuenta (ex Ctas cte) | reu4:L676–704 | Must | Implementado |
 | TES-014 | Tipo movimiento + links + Excel | reu4:L696–712; reu5:L307 | Must | Implementado |

@@ -3,6 +3,15 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Nested app repos (viven como git independientes)
+ERP/erp_back/
+ERP/erp_front/
+
+# Dumps BD locales (solo versionar README + restore script)
+ERP/backups/*.dump
+ERP/backups/*.sql
+ERP/backups/*.backup
+
 # Videos de reuniones (pesados; viven en disco local)
 docs/erp-planificacion/agrosoft-levantamiento/fuentes/videos/*.mp4
 
@@ -11,3 +20,8 @@ docs/erp-planificacion/agrosoft-levantamiento/.env.trello
 
 # Dependencias locales de scripts de captura Playwright
 docs/erp-planificacion/agrosoft-levantamiento/node_modules/
+
+# Tooling local / exports de chat
+.rooignore
+historial_cursor_exportado.md
+tools/recovered-workspace-context/
