@@ -1,0 +1,12 @@
+FILE: Conta_Libro_MayorDolarExcel_-_2026-07-30T211524.128.xlsx
+SHEETS: ['Conta_Libro_MayorDolarExcel']
+--- sheet Conta_Libro_MayorDolarExcel ---
+|LIBRO MAYOR
+junio del 2026||||||||||
+Cuenta|Desc. Cuenta|Fecha|ESTADO|Tipo Comprobante|Comprobante|Nro.Linea|CC|AN|Especie|EC|T.Ref.
+110102001|BANCO CHILE $|31/05/2026|||0|0|0||||
+110102001|BANCO CHILE $|01/06/2026|ACTUALIZADO|T         |8156|1|0|0000        |00        |0000      |
+110102001|BANCO CHILE $|01/06/2026|REVERSADOR|E         |9596|1|0|0000        |00        |0000      |
+110102001|BANCO CHILE $|01/06/2026|ACTUALIZADO|I         |1352|1|0|0000        |00        |0000      |
+110102001|BANCO CHILE $|01/06/2026|REVERSADO|E         |9594|1|0|0000        |00        |0000      |
+110102001|BANCO CHILE $|01/06/2026|ACTUALIZADO|E         |9597|1|0|0000        |00        |0000      |

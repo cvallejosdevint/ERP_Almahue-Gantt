@@ -20,8 +20,11 @@
 
 ### Aún abierto
 
-- Alcance MVP: solo 33/34/61 vs incluir **110 export** desde día 1.
+- Alcance MVP: solo 33/34/61 vs incluir **110 export** desde día 1.  
+  **Update 2026-08-06:** llegó el manual COMEX de MJ (`fuentes/mj-compartidos-2026-07-30/`) — hay reglas concretas (RUT 55.555.555-5, bulto 22, TC, FOB/CIF, 6 decimales). Recomendación: **diseñar 110/112 en paralelo** al MVP nacional aunque la emisión sandbox empiece por 33.
 - Política ante partner caído (ver §6.1 — alternativas a presentar).
+- Archivo Excel Comex de un embarque real (citado en el manual; no vino en el pack Trello).
+- ApiKeys sandbox post-reunión SII.
 
 ---
 

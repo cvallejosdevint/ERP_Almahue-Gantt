@@ -25,7 +25,8 @@
 
 ## Relacionado (post docs GoSocket 05/08/2026)
 
-- Fuentes: [`../fuentes/gosocket-2026-08-05/`](../fuentes/gosocket-2026-08-05/)
+- Fuentes GoSocket: [`../fuentes/gosocket-2026-08-05/`](../fuentes/gosocket-2026-08-05/)
+- Fuentes MJ (export/cartolas/contables): [`../fuentes/mj-compartidos-2026-07-30/`](../fuentes/mj-compartidos-2026-07-30/)
 - Propuesta **billing-gateway** (repo separado): [`../partners-hub/00-PLAN-IMPLEMENTACION.md`](../partners-hub/00-PLAN-IMPLEMENTACION.md)
 
 ## Fuera de este paquete

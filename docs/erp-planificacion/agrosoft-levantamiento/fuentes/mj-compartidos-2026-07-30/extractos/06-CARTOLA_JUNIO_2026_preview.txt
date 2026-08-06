@@ -1,0 +1,15 @@
+FILE: 06-CARTOLA_JUNIO_2026.xls
+SHEETS: ['ALM CLP ', 'BANCO SCOTIABANK', 'ALM USD ', 'ALMAHUE CLP', 'ALMAHUE USD ', 'ALMAHUE YUAN ']
+rows=162 cols=15
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|||||||||
+|Sr(a).: ||Guadalupe Carmen Alvarez Barrueto||||||
+|Nombre Empresa:||ALM SERVICES SpA||||||
+|Rut:||77.032.639-7||||||
+|Cuenta N°:||00-847-01811-03||||||
+|Moneda:||Pesos Chilenos (CLP)||||||

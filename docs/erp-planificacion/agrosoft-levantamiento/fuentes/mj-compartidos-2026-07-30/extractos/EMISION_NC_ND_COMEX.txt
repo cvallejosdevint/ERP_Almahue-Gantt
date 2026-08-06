@@ -1,0 +1,39 @@
+EMISION DE NOTA DE CREDITO Y DEBITO FACTURAS CIERRE COMEX.
+1.- En acepta elegir la empresa Almahue Export Spa.
+2.- Emisión de DTE
+3.- Elegir tipo de documento
+4.- Seleccionar fecha de emisión, siempre es la misma del día de la emisión.
+5.- Ingresar cliente, que es el mismo de la factura que se hará referencia.
+6.- Dirección, se saca igual de la factura de referencia 
+7.-ID Fiscal, es el rut extranjero que es siempre 55.555.555-5
+8.- Código producto se coloca el mismo de la factura EJEMPLO 003
+9.-Producto va la especie y el embalaje Ejemplo: CEREZA 5 KN
+10.-En precio neto se divide el total neto del monto del documento (nc – nd) en USD por la cantidad de cajas del embarque, esa información se saca del archivo enviado por comex. Se utilizan 6 decimales.
+11.-En unidad de medida va caja 
+12.-En cantidad va la cantidad de cajas que se saca del mismo archivo de comex.
+13.-Se agrega el producto al detalle de documento y debe dar la misma cantidad de USD totales que el archivo comex.
+14.-En referencias se agrea el tipo de documento 110
+15.- En motivo: corrige monto cuando son de cierre 
+16.-En folio, el folio de la factura 
+17.-En fecha, la fecha de la factura que hacemos referencia 
+18: En descripción: Corrige Monto: ND -NC por cierre. 
+Y SE AGREGA REFERENCIA, AGREGAR TRANSPORTE Y AGREGAR ADUANA.
+19.- En transporte solo se agrega DESPACHO POR CUENTA DEL EMISOR.
+20.-En venta modalidad: depende del embarque, puede ser en consignación libre o bajo condición.
+21.-Pais destino, el que dice la factura
+22.- Receptor, el que dice la factura 
+23.-Clausula, puede ser FOB O CIF, lo que dice la factura o el archivo comex
+24.-Via, puede ser marítima o aérea, lo que diga la factura o el archivo comex.
+25.-Puerto Embarque, de donde sale la fruta y dice la factura 
+26.-Puerto desembarque, es donde llega la fruta y dice la factura.
+27.- en información de bultos, siempre es 22 (CAJA DE CARTON), cantidad es la cantidad de cajas enviadas y en marca se pone el signo menos -.
+28.- En observación siempre se pone TC y el tipo de cambio de la factura.
+29.-Tipo de moneda: 13- DÓLAR USA
+30.-El monto en usd me lo da automático (debe ser el mismo del archivo Excel de comex)
+31.-En tipo de cambio se coloca el TC de la factura (mismo de la observación)
+32.-Monto total otra moneda, es el monto en CLP del archivo comex (los dólares multiplicados por el TC)
+33.-Monto exento otra moneda, se repite el monto en CLP.
+En la revisión de documento antes de firmar se revisan los datos del cliente, fecha, destino, referencia de factura, de embarque, monto en usd y clp con el archivo comex.
+Una vez que todo este ok se firma el documento y se guarda en este caso:
+ND 1263 EMB 65.
+Puede ser NC O ND.
