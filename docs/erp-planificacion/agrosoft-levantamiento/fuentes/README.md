@@ -7,6 +7,7 @@
 | `transcripcion-reunion3.md` | Reu3 |
 | `transcripcion-reunion4.md` | Reu4 |
 | `transcripcion-reunion5.md` | Reu5 |
+| `transcripcion-reunion6.md` | Reu6 — demo avances 06/08/2026 |
 | `reunion3-minuta-tldv-2026-07-28.md` | Reu3 (tl;dv) |
 | `reunion4-minuta-tldv-2026-07-30.md` | Reu4 (tl;dv) |
 | `reunion5-minuta-tldv-2026-08-03.md` | Reu5 (tl;dv) |
@@ -15,7 +16,10 @@
 | `videos/reunion3-2026-07-28.mp4` | Reu3 |
 | `videos/reunion4-2026-07-30.mp4` | Reu4 |
 | `videos/reunion5-2026-08-03.mp4` | Reu5 |
+| *(grabación local Cursor, no en git)* | Reu6 — 06/08/2026 |
 | `sergio-ui-ref-2026-07-28/` | Frames PNG (interna Sergio) |
 | `sergio-ui-ref-2026-08-03/` | Refs menú acciones / preview / filtros (Reu5) |
 
-**Planificar desde:** [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)
+**Minutas Reu6:** [`../reunion6-minuta-2026-08-06.md`](../reunion6-minuta-2026-08-06.md)
+
+**Planificar desde:** [`../reunion6-minuta-2026-08-06.md`](../reunion6-minuta-2026-08-06.md) (más reciente) · [`../reunion5-minuta-2026-08-03.md`](../reunion5-minuta-2026-08-03.md)
