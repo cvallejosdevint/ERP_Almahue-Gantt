@@ -30,9 +30,9 @@ Decisiones fuertes: **ficha única** cliente/proveedor, **órdenes de venta** (r
 | D1 | Administración usuarios **desde el ERP** (no solo ambiente dev); multi-empresa por usuario | Panel Admin › Usuarios; empresa activa en header aísla datos entre usuarios |
 | D2 | **Super admin** ve todas las empresas y puede aprobar cualquier pendiente (con advertencia si no es el asignado) | Rol master no editable en permisología |
 | D3 | Permisos **por rol**, no por empresa; si hace falta variación → **rol por empresa** | No permisología duplicada por empresa en mismo rol |
-| D4 | Reglas de aprobación (Admin › Aprobaciones): pool de jefes por módulo/monto; **1 firma** al solicitar | Compras OC, Contratistas proformas, Comercial (reservado) |
+| D4 | Reglas de aprobación (Admin › Aprobaciones): pool de jefes por módulo/monto; **cadena secuencial automática** (evolución Reu6; antes «1 firma» Reu4) | Compras OC, Contratistas proformas, Comercial (reservado) |
 | D5 | Quitar checkbox **«Aprobar con PIN»** del mantenedor de roles (implementación antigua) | PIN ligado a **designación en reglas de aprobación**, no al rol |
-| D6 | **Propuesta pendiente:** cadena de aprobación por **montos + línea de mando / organigrama** | No elegir libremente aprobador ajeno al área; escalamiento si monto excede facultad; suplencia vacaciones |
+| D6 | Cadena de aprobación por **montos + línea de mando / organigrama** + **suplencia vacaciones** | No elegir libremente aprobador ajeno al área; escalamiento si monto excede facultad |
 | D7 | Proveedores y clientes: **bases separadas**; consulta RUT unificada (sociedad / proveedor / cliente / productor) | Listados limpios; lookup por RUT |
 | D8 | **Ficha única** cliente/proveedor: datos bancarios (N cuentas/monedas), contactos, direcciones despacho | Pestañas en mantenedor; trazabilidad en datos críticos |
 | D9 | Plan de cuentas: atributos por cuenta (CC, elemento costo, área negocio) según Excel MJ | No solo clasificación; flags activo/inactivo |
@@ -54,7 +54,7 @@ Decisiones fuertes: **ficha única** cliente/proveedor, **órdenes de venta** (r
 
 | Tema | Responsable | Nota |
 |---|---|---|
-| Cadena aprobación multi-nivel + organigrama + suplentes | Devint (propuesta visual) | Agustín + MJ; incluye anti-«trampa» entre áreas |
+| Cadena aprobación multi-nivel + organigrama + suplentes | Devint | ✅ Implementado — ver [`02-PROPUESTA-APROBACIONES-ORGANIGRAMA.md`](02-PROPUESTA-APROBACIONES-ORGANIGRAMA.md) |
 | Traspaso gastos **próxima temporada** (cuenta puente / activación) | Producto + MJ | Presupuesto mayo; no bloqueante demo |
 | Emisión DTE real | GoSocket + Devint | Credenciales lunes; stub PDF hasta entonces |
 | Carga masiva histórica DTE | MJ ↔ Acepta | En curso |
