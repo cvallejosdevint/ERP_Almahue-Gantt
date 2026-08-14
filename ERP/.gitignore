@@ -16,3 +16,8 @@ backups/*.sql
 # Tokens JWT de sesiones QA locales (nunca commitear)
 qa-reu4-*/session-*.json
 qa-reu4-*/qa-sessions.json
+
+# Playwright / dumps temporales de QA (nunca versionar)
+.qa-tmp/
+qa-tmp/
+**/node_modules/

@@ -14,6 +14,15 @@
 > Leer en voz alta siguiendo el orden. Cada bloque = una “escena” en pantalla.  
 > Entre corchetes `[...]` = acción a hacer en el sistema.
 
+### Convención GoSocket (leer cuando haya **negrita de emisión**)
+
+En este speech, todo lo marcado en **negrita** que toque emisión / DTE / facturación electrónica es un punto donde, en producción, el ERP hablaría con **GoSocket** (vía billing-gateway).
+
+**Frase sugerida (decir en voz alta en esos puntos):**  
+*«Esto que estamos viendo son datos de prueba que estamos generando nosotros, **sin conexión a GoSocket**. Cuando tengamos las credenciales de GoSocket, podremos usar su ambiente de pruebas e implementarlo en el ERP.»*
+
+Hoy el partner activo es el **stub** (simulación local): folio/auditoría de prueba, badge “Stub · no SII”. La UI no cambia al pasar a sandbox/live GoSocket; solo el registry / ApiKeys.
+
 ---
 
 ## 0. Apertura (2 min)
@@ -22,11 +31,12 @@ Buenos días. Hoy recorremos el **ERP Almahue** de punta a punta: desde la param
 
 Tres ideas de ancla:
 
-1. **Una sola interfaz de trabajo** — el usuario opera siempre en el ERP; lo que ocurre “abajo” (facturador electrónico / partner) es transparente.
+1. **Una sola interfaz de trabajo** — el usuario opera siempre en el ERP; lo que ocurre “abajo” (**facturador electrónico / GoSocket**) es transparente.
 2. **Periodo contable abierto** — nada se contabiliza si el mes no está abierto.
 3. **Aprobaciones con responsable y PIN** — OC y proformas no “pasan solas”: hay regla, jefe elegido y, si el rol lo exige, PIN de 4 dígitos.
 
-En esta sesión **no** revisamos bodega ni inventario (queda fuera del alcance de hoy).
+En esta sesión **no** revisamos bodega ni inventario (queda fuera del alcance de hoy).  
+Aclaración temprana: **hoy no hay conexión real a GoSocket**; lo que se ve de facturación electrónica es stub / datos de prueba nuestros.
 
 `[Login → confirmar periodo ABIERTO → empresa Almahue SpA]`
 
@@ -55,7 +65,7 @@ Multi-empresa: RUT, razón social, giro, activa. El resto del sistema trabaja si
 
 ### 2.2 Plantilla documentos
 `[/admin/plantilla-documentos]`  
-Branding de PDF internos (logo, colores, pie, marca de agua). No es el PDF timbrado SII; es la representación gráfica del ERP.
+Branding de PDF internos (logo, colores, pie, marca de agua). **No es el PDF timbrado SII / GoSocket**; es la representación gráfica del ERP.
 
 ### 2.3 Usuarios y roles
 `[/admin/usuarios]` · `[/admin/roles]`  
@@ -87,13 +97,13 @@ Recorrido rápido (mostrar listados, no crear todos):
 
 | Pantalla | Para qué |
 |---|---|
-| Monedas | Códigos + sync Banco Central |
+| Monedas | Códigos CLP/USD/… (sync Banco Central **no** está aquí) |
 | Unidades | UM de ítems |
 | Centros de costo | Cuarteles / CC de imputación |
 | Tipos de documento | Catálogo por módulo |
 | Plan de cuentas | Árbol contable (imputables) |
 | Elementos de costo | Clasificación de gasto |
-| Indicadores BC | Series TC |
+| Indicadores BC | Series TC + sync Banco Central |
 | Proveedores | Maestro compras |
 
 Mensaje: *sin esto, las pantallas de negocio no tienen combos ni cuentas para asentar.*
@@ -106,33 +116,47 @@ Mensaje: *sin esto, las pantallas de negocio no tienen combos ni cuentas para as
 `[/comercial/clientes]` · `[/comercial/prospectos]`  
 Maestro comercial y leads. El cliente alimenta RUT/razón en emisión.
 
-### 4.2 Cotizaciones → Nota de pedido
-`[/comercial/cotizaciones]`  
-Cotización en borrador → emitir → convertir a **NP** o facturar. Cadena de origen queda trazada (`folioOrigen`).
+### 4.2 Cotizaciones / NP (misma pantalla)
+`[/comercial/cotizaciones]` — menú **Ventas › Cotizaciones / NP**
+
+No hay menú separado de NP: viven en **esta misma ruta**, con dos pestañas.
+
+[Abrir Ventas › Cotizaciones / NP]
+
+1. Pestaña **Cotizaciones** — alta / emitir / anular. (Documento interno ERP; **aún no es DTE GoSocket**.)  
+2. Acción **Nota de pedido** (o **Facturar directo** ← **aquí sí iría GoSocket** al generar factura electrónica).  
+3. Cambiar a pestaña **Notas de pedido** — ahí quedan las NP listas para **Facturar** ← **emisión DTE vía GoSocket**.  
+4. Cadena trazada con `folioOrigen` (Cotiz → NP → Factura).
+
+Mensaje clave: *«Cotización y NP son el mismo mantenedor; el menú lo dice para no buscar un ítem fantasma.»*  
+Al **Facturar** (desde cotiz o NP): decir la **frase GoSocket** (datos de prueba / sin conexión real todavía).
 
 ### 4.3 Emitir documento (wizard) ⭐
 `[/comercial/emitir]`  
 
 Tres pasos:
 
-1. **Datos generales y receptor** — tipo (Factura / NC / …), forma de pago, fechas, indicador (Venta / Exento / **Exportación**), receptor.  
+1. **Datos generales y receptor** — tipo (**Factura / NC** / …), forma de pago, fechas, indicador (Venta / Exento / **Exportación**), receptor.  
 2. **Ítems** — descripción, cantidad, precio, descuento, **cuenta contable** (en ventas no se pide CC por línea; CC es más de compras).  
-3. **Referencias y COMEX** — si es exportación: moneda, TC, país, puertos, FOB/CIF, bultos, etc. (manual COMEX).
+3. **Referencias y COMEX** — si es exportación: moneda, TC, país, puertos, FOB/CIF, bultos, etc. (manual COMEX → **payload DTE 110/112 hacia GoSocket**).
 
-Acciones: borrador · preview · **Emitir / Grabar y contabilizar**.
+Acciones: borrador · preview · **Emitir / Grabar y contabilizar** ← **punto GoSocket** (emisión electrónica + auditoría partner).
 
-Hoy, al contabilizar, el ERP genera asiento y, si el *billing-gateway* está activo, pasa por el **partner stub** (facturador de pruebas): folio/auditoría simulada, **no** es DTE SII. Eso demuestra el intermediario; luego se cambia el registry a GoSocket.
+Al pulsar **Emitir / Grabar y contabilizar**: decir la **frase GoSocket**.  
+Hoy el ERP genera asiento contable y, vía *billing-gateway*, pasa por el **partner stub** (folio/auditoría simulada, **no** es DTE SII oficial). Eso demuestra el intermediario; con ApiKeys se cambia el registry a **GoSocket** (sandbox → live) **sin cambiar la UI**.
 
 ### 4.4 Libro de ventas
 `[/comercial/libro]`  
-Documentos del periodo: folio, tipo, RUT, neto, estado (`CONTABILIZADA`, badge stub si aplica).  
-Desde aquí: vista previa, **registrar pago** → Tesorería, reverso contable, NC.
+Documentos del periodo: folio, tipo, RUT, neto, estado (`CONTABILIZADA`, **badge “Stub · no SII”** si la emisión fue por partner de prueba).  
+Desde aquí: vista previa, **registrar pago** → Tesorería, reverso contable, **emitir NC** ← **otra interacción GoSocket**.
+
+Al mostrar el badge stub / folio de prueba: decir la **frase GoSocket**.
 
 ### 4.5 Corrección
-- **Reverso contable** = corregir imputación (cuenta), no anula el DTE.  
-- **Nota de crédito** = corrección tributaria / anulación de monto.
+- **Reverso contable** = corregir imputación (cuenta); **no** anula el DTE en SII/GoSocket.  
+- **Nota de crédito** = corrección tributaria / anulación de monto ← **emisión DTE vía GoSocket**.
 
-`[Emitir una factura corta → verla en Libro → opcional: puente a pago]`
+`[Emitir una factura corta → decir frase GoSocket → verla en Libro (badge stub) → opcional: puente a pago]`
 
 ---
 
@@ -155,7 +179,8 @@ Post-aprobación: fecha recepción, TC, monto → CONFIRMADA.
 
 ### 5.4 Libro de compras
 `[/compras/registro]`  
-Factura de proveedor vs OC (match afecto/exento). Contabiliza y puede **Registrar pago**.
+Factura de **proveedor** vs OC (match afecto/exento). Contabiliza y puede **Registrar pago**.  
+(Registro de compra = documento del proveedor; **no** es emisión GoSocket de Almahue. Eventual **recepción/consulta DTE** de compra sería otro enganche futuro con el partner.)
 
 `[Mostrar OC emitida → cambiar a usuario jefe o usar admin → aprobar con PIN → recepción → factura compra]`
 
@@ -170,6 +195,7 @@ Factura de proveedor vs OC (match afecto/exento). Contabiliza y puede **Registra
 5. **Proformas** — borrador → **Solicitar aprobación** (elige jefe según reglas) → bandeja.  
 6. **Aprobaciones proforma** `[/contratistas/aprobaciones]` — Aprobar/Rechazar + PIN.  
 7. Estado **DEFINITIVA** → asociar **factura** (N proformas : 1 factura).  
+   (Factura de contratista = documento de **proveedor de MO**; hoy es registro operativo. **Si mañana se emite/recepciona DTE aquí, sería GoSocket** — por ahora no marcar como emisión Almahue.)
 8. **Traspaso y cierre** — genera asiento de mano de obra / cierre del mes (TC, glosa).
 
 Mensaje: *misma mecánica de aprobación que compras (regla + jefe + PIN), otro módulo.*
@@ -179,13 +205,13 @@ Mensaje: *misma mecánica de aprobación que compras (regla + jefe + PIN), otro 
 ## 7. Contabilidad — el mes manda (5–6 min)
 
 1. **Períodos** — abrir / cerrar / reabrir (+ motivo). Header muestra mes activo.  
-2. **Config SII (cuentas)** — mapeo tipo documento → cuenta (ventas, clientes, IVA, etc.). No es el facturador; es **cuenta contable**.  
+2. **Config SII (cuentas)** — mapeo tipo documento → cuenta (ventas, clientes, IVA, etc.). **No es GoSocket**; es **cuenta contable** del ERP.  
 3. **Asientos** — manuales + los generados por ventas/compras/contratistas.  
 4. **Centralización** — lote de orígenes pendientes.  
 5. **Libro diario / Mayor / Balance 8 columnas / Resumen** — reportería del periodo.  
 6. **Honorarios / Presupuestos** — factores y presupuesto vs real (mencionar breve).
 
-`[Mostrar periodo ABIERTO → un asiento generado por la factura demo → Diario o Mayor]`
+`[Mostrar periodo ABIERTO → un asiento generado por la factura demo (asiento ERP; la emisión DTE fue stub/GoSocket) → Diario o Mayor]`
 
 ---
 
@@ -210,7 +236,7 @@ Recap del circuito:
 ```
 Parametrización + Admin (roles, reglas, PIN)
         ↓
-Ventas (emitir → libro → pago)
+Ventas (Cotizaciones/NP → emitir → libro → pago)
 Compras (OC → aprobación PIN → recepción → factura → pago)
 Contratistas (labor → proforma → aprobación PIN → factura → traspaso)
         ↓
@@ -219,7 +245,20 @@ Tesorería (cartola, pagos, conciliación, C/C)
 ```
 
 Fuera de alcance hoy: **bodega / inventario**.  
-Facturación electrónica real (GoSocket): el ERP ya deja el enganche vía **billing-gateway**; en demo el partner es **stub** (pruebas). Con ApiKeys se cambia a GoSocket en registry, sin cambiar la UI.
+
+**GoSocket — cierre explícito:** el ERP ya deja el enganche vía **billing-gateway**. En esta demo el partner es **stub** (pruebas nuestras, **sin credenciales GoSocket**). Con ApiKeys del ambiente de pruebas GoSocket se cambia el registry a sandbox/live **sin cambiar la UI**. Repetir si hace falta: *«lo que vieron de facturación electrónica son datos de prueba generados por nosotros; con credenciales usamos el ambiente de pruebas de GoSocket y lo implementamos en el ERP.»*
+
+### Mapa rápido — puntos **GoSocket** del speech
+
+| Momento | Acción en UI |
+|---|---|
+| Cotizaciones / NP | **Facturar** / **Facturar directo** |
+| Emitir documento | **Emitir / Grabar y contabilizar** (Factura, NC, export) |
+| COMEX / exportación | Datos DTE 110/112 al emitir |
+| Libro de ventas | Badge **Stub · no SII** / folio de prueba |
+| Corrección | **Nota de crédito** (emisión) |
+
+No son GoSocket (aclarar si preguntan): plantilla PDF ERP, Config SII (cuentas), reverso contable, OC/compras, proformas contratista, cotización/NP como docs internos.
 
 Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 
@@ -397,8 +436,11 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 
 ### Cotizaciones / NP — `/comercial/cotizaciones`
 
+Menú UI: **Ventas › Cotizaciones / NP** (no existe entrada aparte “Notas de pedido”).
+
 | Campo | Principal | Secundario |
 |---|---|---|
+| Pestañas Cotizaciones / Notas de pedido | Un solo listado, dos vistas | Misma URL |
 | Folio / Fecha / Cliente / Neto / Estado | Documento comercial pre-factura | Estados: BORRADOR, EMITIDO, ANULADO, … |
 | Convertir a NP / Factura | Cadena comercial | Conserva origen (`folioOrigen`) |
 | Lineas | Detalle de costos | Mismas ideas que emitir |
@@ -661,6 +703,7 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 |---|---|
 | ¿Por qué no contabiliza? | Periodo cerrado, falta cuenta, o sin permiso write |
 | ¿Dónde está el PIN? | Perfil del usuario; el rol solo activa la exigencia |
+| ¿Dónde están las notas de pedido? | Ventas › **Cotizaciones / NP** (pestaña); no hay menú aparte |
 | ¿Quién aprueba? | Reglas de aprobación → jefes elegibles → bandeja |
 | ¿Folio = folio SII? | Hoy folio **interno** ERP; oficial SII cuando partner GoSocket esté en live/sandbox |
 | ¿Qué es Stub? | Facturador de **pruebas** en billing-gateway; se reemplaza por GoSocket en registry |
@@ -676,13 +719,35 @@ Preguntas → usamos la **Parte B (FAQ)** ordenada por pantalla.
 1. Login + periodo  
 2. Panel  
 3. Roles (PIN) + Reglas de aprobación + Perfil PIN  
-4. Parametrización (flash)  
-5. Emitir venta → Libro → (pago)  
+4. Parametrización (flash) — monedas **sin** sync BC; sync en **Indicadores BC**  
+5. Ventas › Cotizaciones / NP → **Facturar / Emitir** (**GoSocket**/stub) → Libro → (pago)  
 6. OC → Aprobación PIN → Recepción → Libro compras  
 7. Ingreso labor → Proforma → Aprobación PIN → Factura → Traspaso  
 8. Periodo / Asiento / Diario  
 9. Cartola o Pagos / Estado de cuenta  
 10. Cierre + Q&A con Parte B  
+
+### Cobertura seed (EMP-1 · 2026-08) — validado
+
+| Área | Qué hay en BD |
+|---|---|
+| Auth | Admin con PIN `4821`; login = email |
+| Workflows | Compras + Contratistas (jefes U-1, U-6) |
+| Periodos | 2026-08 ABIERTO · 2026-07 CERRADO |
+| Cotizaciones | BORRADOR, EMITIDO, APROBADO (convertida), ANULADO |
+| NP | BORRADOR + EMITIDO (con `folioOrigen`) |
+| Libro ventas | Facturas CONTABILIZADA (stub), EMITIDO, EXPORTACION, NC |
+| OC | BORRADOR, EMITIDO+PENDIENTE, APROBADO, RECHAZADO, RECEPCIONADA |
+| Aprob. OC | PENDIENTE / APROBADA / RECHAZADA |
+| Recepciones | BORRADOR + CONFIRMADA |
+| Libro compras | ≥4 CONTABILIZADA (incluye casos N OC → 1 factura) |
+| Proformas | BORRADOR, PENDIENTE_APROBACION, DEFINITIVA, FACTURADA, RECHAZADA |
+| Ingresos labor | PENDIENTE, ASOCIADO, FACTURADO |
+| Asientos | CONTABILIZADO (venta/compra/MO) + BORRADOR manual |
+| Tesorería | Pagos, cartola, caja, anticipo, cuenta corriente |
+| Prospectos / clientes | 3 prospectos · 2 clientes EMP-1 |
+
+*Tras `prisma db seed`, las 28 rutas del checklist cargan con h1 y rastro de datos seed (smoke UI).*
 
 ---
 

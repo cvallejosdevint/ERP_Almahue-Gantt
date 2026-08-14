@@ -144,10 +144,15 @@ Freshlink/Almahue sigue en `http://45.7.229.46/`. El ERP vive en **`/almahue-erp
 3. CORS: incluir origen `http://45.7.229.46` (el path no forma parte del Origin).
 4. Health: `http://45.7.229.46/almahue-erp/api/v1/health`
 
+## Deploy fase 2 (aprobaciones / AdminConcepto) en prod
+
+Checklist detallado para actualizar `http://45.7.229.46/almahue-erp/` desde el código actual: **[DEPLOY-PROD-FASE2.md](./DEPLOY-PROD-FASE2.md)** (sync, rebuild, migraciones, seed opcional, QA re-test).
+
 ## Checklist rápido
 
 1. `.env` sin secretos de ejemplo
 2. `DATABASE_URL` con `?schema=erp` y schema creado
 3. `docker compose build && docker compose up -d`
-4. `prisma migrate deploy`
+4. `prisma migrate deploy` (incluye OV/stock, aprobación comercial y `20260815200000_huerfanos_ficha_inventario` si aplica)
 5. Abrir `http://localhost:8080` (o URL pública) y verificar login / API
+6. Prod (`45.7.229.46`): seguir **[DEPLOY-PROD-FASE2.md](./DEPLOY-PROD-FASE2.md)** — no asumir migrate hasta deploy explícito

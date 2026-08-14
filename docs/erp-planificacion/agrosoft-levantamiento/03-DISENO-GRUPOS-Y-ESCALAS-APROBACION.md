@@ -179,6 +179,7 @@ Validaciones al guardar:
 - No ciclos (A→C→D→A).
 - Todo nodo referenciado en «escala a» debe existir.
 - Al menos un nodo sin tope (cierre).
+- **Topes monótonos:** si A escala a B, el tope de B debe ser ≥ tope de A (el siguiente nivel cubre montos mayores).
 
 ### Pestaña C — Simulador (línea de ejemplo)
 

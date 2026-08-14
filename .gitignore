@@ -21,6 +21,15 @@ docs/erp-planificacion/agrosoft-levantamiento/.env.trello
 # Dependencias locales de scripts de captura Playwright
 docs/erp-planificacion/agrosoft-levantamiento/node_modules/
 
+# QA temporal / Playwright local
+ERP/.qa-tmp/
+ERP/qa-tmp/
+ERP/qa-reu4-*/session-*.json
+ERP/qa-reu4-*/qa-sessions.json
+
+# Dumps QA con tokens (el informe sanitizado YYYY-MM-DD.md sí se versiona)
+docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*-raw.md
+
 # Tooling local / exports de chat
 .rooignore
 historial_cursor_exportado.md

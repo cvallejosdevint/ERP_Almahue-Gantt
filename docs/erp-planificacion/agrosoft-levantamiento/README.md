@@ -1,33 +1,32 @@
 # Fuentes canónicas — ERP Almahue
 
-**Planificar desde Reu5** (ajustes post-demo 03/08). Reu4 sigue siendo la base de decisiones de producto; si chocan, gana la decisión más reciente (Reu5).
+**Planificar desde Reu6** (demo 06/08 + aprobaciones fase 2). Si chocan, gana la decisión más reciente: Reu6 → Reu5 → Reu4.
+
+Arranque de chat: leer `AGENTS.md` en la raíz del repo. Skills: `almahue-erp-contexto`, `almahue-aprobaciones`.
 
 ## Prompt para nuevo chat (copiar)
 
 ```
-Planifica e implementa el siguiente sprint del ERP Almahue.
+Lee AGENTS.md. Planifica o implementa en el ERP Almahue.
 
 Reglas:
-1. Guíate SOLO por docs/erp-planificacion/agrosoft-levantamiento/
-2. Prioridad absoluta: reunion5-minuta-2026-08-03.md (decisiones D* + action items A*).
-3. Contexto de producto: reunion4-minuta-2026-07-30.md. Si chocan, gana Reu5.
-4. Código actual: ERP/erp_back + ERP/erp_front.
-5. Empieza leyendo la minuta Reu5 y propone un plan concreto (revisión 04/08).
+1. Docs canónicas: docs/erp-planificacion/agrosoft-levantamiento/ (Reu6 gana).
+2. Código: ERP/erp_back + ERP/erp_front.
+3. Aprobaciones: skill almahue-aprobaciones; no leas transcripciones salvo que lo pida.
 ```
 
 ## Inventario
 
 | Qué | Dónde |
 |---|---|
-| **Minuta Reu5 (planificar aquí)** | [`reunion5-minuta-2026-08-03.md`](reunion5-minuta-2026-08-03.md) |
-| Minuta Reu4 (decisiones base) | [`reunion4-minuta-2026-07-30.md`](reunion4-minuta-2026-07-30.md) |
-| Minuta / transcripción Reu5 | `fuentes/reunion5-minuta-tldv-*.md`, `fuentes/transcripcion-reunion5.md` |
-| Minuta / transcripción Reu4 | `fuentes/reunion4-minuta-tldv-*.md`, `fuentes/transcripcion-reunion4.md` |
-| Minuta / transcripción Reu3 | `fuentes/reunion3-minuta-tldv-*.md`, `fuentes/transcripcion-reunion3.md` |
-| Transcripciones Reu1 / Reu2 | `fuentes/transcripcion.md`, `fuentes/transcripcion-reunion2.md` |
-| Videos | `fuentes/videos/reunion{1,2,3,4,5}-*.mp4` (gitignored) |
-| Capturas | `pantallas-legacy/`, `capturas-validacion-erp/`, `fuentes/sergio-ui-ref-2026-07-28/` |
-| PDF requerimientos | [`requerimientos/`](requerimientos/) |
+| **Minuta Reu6 (planificar aquí)** | [`reunion6-minuta-2026-08-06.md`](reunion6-minuta-2026-08-06.md) |
+| Diseño grupos/escalas | [`03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md`](03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md) |
+| Minuta Reu5 | [`reunion5-minuta-2026-08-03.md`](reunion5-minuta-2026-08-03.md) |
+| Minuta Reu4 | [`reunion4-minuta-2026-07-30.md`](reunion4-minuta-2026-07-30.md) |
+| Plan QA aprobaciones | [`qa/PLAN-PRUEBAS-APROBACIONES.md`](qa/PLAN-PRUEBAS-APROBACIONES.md) |
+| QA histórico Reu4 | [`qa/historico-reu4/`](qa/historico-reu4/) |
+| Transcripciones | `fuentes/transcripcion-reunion*.md` (solo bajo pedido) |
+| Videos | `fuentes/videos/` (gitignored) |
 
 ## tl;dv
 
