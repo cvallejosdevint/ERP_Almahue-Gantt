@@ -1,0 +1,76 @@
+{
+  "fecha": "2026-08-15",
+  "ola": "C",
+  "entorno": "local",
+  "api": "http://localhost:3001/api/v1",
+  "front": "http://localhost:5174",
+  "ejecutor": "almahue-qa-runner",
+  "plan": "PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md §4.2, §9 Ola C",
+  "prerequisito": "LISTO_OLA_C (2026-08-15-revision-ola-b-cierre.md)",
+  "script": "ERP/.qa-tmp/run-ola-c-e2e.mjs",
+  "veredicto_runner": "PIPELINE_LOCAL_CERRADO",
+  "summary": {
+    "PASS": 6,
+    "FAIL": 0,
+    "BLOCKED": 1,
+    "SKIP": 1,
+    "total_casos_ola_c": 8
+  },
+  "casos": [
+    {
+      "id": "E2E-001",
+      "prioridad": "P0",
+      "resultado": "PASS",
+      "evidencia": "ALM-COT-001→ALM-OC-E2E-C Jorge PIN U-3 · recepción CONFIRMADA · registro BORRADOR matchOk=true"
+    },
+    {
+      "id": "E2E-002",
+      "prioridad": "P0",
+      "resultado": "PASS",
+      "evidencia": "OV-002 AUTORIZADA→APROBADO · stock frigorífico Δ=320 · UI aprobaciones status=200"
+    },
+    {
+      "id": "E2E-003",
+      "prioridad": "P0",
+      "resultado": "PASS",
+      "evidencia": "OV-004 APROBADO · FAC-101 billingStub=true ACCEPTED_STUB · UI emitir 200"
+    },
+    {
+      "id": "E2E-004",
+      "prioridad": "P1",
+      "resultado": "PASS",
+      "evidencia": "PRF-E2E-31416 Jorge crea/solicita · admin PIN DEFINITIVA · factura asociada"
+    },
+    {
+      "id": "E2E-005",
+      "prioridad": "P1",
+      "resultado": "PASS",
+      "evidencia": "centralización preview 201 · cartolas/conciliaciones/pagos POST 201 · UI showcase"
+    },
+    {
+      "id": "E2E-006",
+      "prioridad": "P0",
+      "resultado": "PASS",
+      "evidencia": "8/8 rutas demo sin 500 · folios ALM-COT-001, ALM-OV-002, ALM-FAC-101"
+    },
+    {
+      "id": "E2E-007",
+      "prioridad": "P2",
+      "resultado": "SKIP",
+      "evidencia": "Greenfield sin seed — omitido según plan Ola C"
+    },
+    {
+      "id": "E2E-008",
+      "prioridad": "P0",
+      "resultado": "BLOCKED",
+      "evidencia": "Prod 45.7.229.46 sin migrate H14 — no ejecutado"
+    }
+  ],
+  "demo_steps": [
+    "COT→OC ALM-OC-E2E-C (cperez)",
+    "OC EMITIDO · aprobador Jorge Sánchez",
+    "Aprobación OC Jorge PIN U-3",
+    "OV-002 aprobación cadena 3 pasos admin PIN",
+    "Demo rutas inventario/compras/ventas/emitir HTTP 200"
+  ]
+}

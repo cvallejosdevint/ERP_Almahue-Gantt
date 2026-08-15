@@ -38,15 +38,15 @@ Demo: `admin@almahue.local` / `Admin123!` · PIN `4821`. AdminConcepto debe **re
 3. Corregir solo **Critical**
 4. `almahue-qa-runner` → `almahue-qa-reviewer`
 
-## Huecos vigentes (Fase 1, 2026-08-14)
+## Huecos vigentes (Fase 1, actualizado 2026-08-15)
 
-Fuente: `docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/2026-08-14-fase1-as-is-to-be.md`.
+Fuente QA: pipeline local **`PIPELINE_LOCAL_CERRADO`** — `qa/resultados/2026-08-15-revision-ola-c.md` (Ola A `LISTO_OLA_B`, Ola B `LISTO_OLA_C`).
 
-- **D4:** cadena OV Comercial implementada; **activar** con `comercialRequiereAprobacion` tras reunión (checklist `qa/REUNION-CHECKLIST-APROBACION-COMERCIAL.md`).
+- **D4:** cadena OV validada local con `comercialRequiereAprobacion=true` (retest VEN-009–012). Decisión reunión: narrativa demo vs activación piloto real.
 - **D11:** Compras › Cotizaciones → OC. Ventas › Orden de venta → stock → factura. No restaurar cotiz→NP→factura. Redirect `/comercial/cotizaciones`. Catálogo `pantallas-permisos` puede seguir listando Cotizaciones bajo Ventas (desfasado vs Sidebar).
-- **D16:** no vender bajo costo — Admin › Empresas (`ventaBajoCosto` = `BLOQUEAR`).
-- **Huérfanos H1–H14:** ver `qa/HUERFANOS-H1-H14.md` (H4/H8/H2/H3 listos en código; H14 deploy pendiente).
-- **D7:** lookup RUT con flag `esProductor` en ficha cliente/proveedor y arreglo `productores[]`.
-- **Emitir documento:** el wizard no está restringido a factura/NC de OV (puede mezclar tipos de compra).
-- **DTE:** stub `billing/` + canonical; GoSocket en proyecto aparte (no bloqueante piloto). Tesorería **existe** en código (cartolas, conciliación, pagos); demo cliente no cerrada.
-- **Prod:** no asumir migrate `stock_ov_ficha` / OV en `45.7.229.46` hasta deploy explícito.
+- **D16:** no vender bajo costo — Admin › Empresas (`ventaBajoCosto` = `BLOQUEAR`); retest UI pendiente (Ola B).
+- **Huérfanos H1–H14:** ver `qa/HUERFANOS-H1-H14.md` (H1/H4/H7/H8 PASS Ola A; H14 deploy pendiente).
+- **D7:** lookup RUT con flag `esProductor` — PASS Ola A (VEN-031).
+- **Emitir documento:** restricción FACTURA/NC/ND/GUIA PASS (VEN-021); wizard compra aún mezcla tipos en otros contextos.
+- **DTE:** stub billing PASS local (`BILLING_STUB_INLINE`); GoSocket en proyecto aparte.
+- **Prod:** no asumir migrate stock/OV en `45.7.229.46` hasta deploy explícito (H14).

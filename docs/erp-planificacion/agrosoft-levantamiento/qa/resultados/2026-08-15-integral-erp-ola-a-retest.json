@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "fecha": "2026-08-15",
+    "ola": "A-retest",
+    "plan": "PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md §6",
+    "entorno": "local",
+    "api": "http://localhost:3001/api/v1",
+    "front": "http://localhost:5174",
+    "ejecutor": "almahue-qa-runner",
+    "precondiciones": {
+      "health_api": {
+        "status": "PASS",
+        "http": 200
+      },
+      "billing_env": {
+        "BILLING_GATEWAY_ENABLED": true,
+        "BILLING_STUB_INLINE": true,
+        "note": "API reiniciada"
+      },
+      "seed_demo_propuesta": {
+        "status": "PASS",
+        "note": "re-ejecutado pre-retest"
+      }
+    },
+    "veredicto": "OLA_A_RETEST_OK"
+  },
+  "conteo": {
+    "PASS": 11,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "total": 11
+  },
+  "precondiciones": {
+    "health_api": {
+      "status": "PASS",
+      "http": 200
+    },
+    "comercialRequiereAprobacion": true,
+    "billing_env": {
+      "BILLING_GATEWAY_ENABLED": true,
+      "BILLING_STUB_INLINE": true,
+      "note": "API reiniciada"
+    },
+    "seed_demo_propuesta": {
+      "status": "PASS",
+      "note": "re-ejecutado pre-retest"
+    }
+  },
+  "casos": [
+    {
+      "id": "BIL-001",
+      "resultado": "PASS",
+      "evidencia": "POST contabilizar 201 billingStub=true status=ACCEPTED_STUB"
+    },
+    {
+      "id": "CMP-012",
+      "resultado": "PASS",
+      "evidencia": "POST matchOk=true diff=0 http=201"
+    },
+    {
+      "id": "CMP-013",
+      "resultado": "PASS",
+      "evidencia": "POST matchOk=false diff=-150000 http=201"
+    },
+    {
+      "id": "VEN-009",
+      "resultado": "PASS",
+      "evidencia": "solicitar 201 estado=PENDIENTE_APROBACION aprobador=U-6"
+    },
+    {
+      "id": "VEN-011",
+      "resultado": "PASS",
+      "evidencia": "pasos=3 estado=AUTORIZADA"
+    },
+    {
+      "id": "VEN-012",
+      "resultado": "PASS",
+      "evidencia": "solicitante U-6 aprobador=U-3 skipSelf=true"
+    },
+    {
+      "id": "INV-010",
+      "resultado": "PASS",
+      "evidencia": "NC contabilizar 201 DEVOLUCION_NC=true delta=10"
+    },
+    {
+      "id": "ADM-022",
+      "resultado": "PASS",
+      "evidencia": "re-login modsBefore=[Compras] modsAfter=[Contratistas] target=Contratistas"
+    },
+    {
+      "id": "ADM-015",
+      "resultado": "PASS",
+      "evidencia": "POST escalas 400 code=APROBADOR_SIN_BANDEJA"
+    },
+    {
+      "id": "VEN-010",
+      "resultado": "PASS",
+      "evidencia": "API aprobar-ov PIN×3 estado=AUTORIZADA bandejaId=APROV-ALM-OV-PEND; UI pagina OK"
+    },
+    {
+      "id": "BIL-002",
+      "resultado": "PASS",
+      "evidencia": "UI /comercial/emitir disclaimer=true"
+    }
+  ],
+  "fail_p0": [],
+  "blocked": []
+}
