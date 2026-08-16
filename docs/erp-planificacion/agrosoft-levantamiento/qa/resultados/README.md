@@ -1,26 +1,26 @@
 # Resultados QA
 
-**Estado actual (integral ERP v2):** **`PIPELINE_LOCAL_CERRADO`**
+Los **informes de corrida** (`YYYY-MM-DD-*.md`, `*.json`) viven **solo en disco local** — no se versionan en git (ver `.gitignore`).
 
-| Oleada | Veredicto | Informe |
-|---|---|---|
-| A | LISTO_OLA_B | [`revision-ola-a-cierre.md`](2026-08-15-revision-ola-a-cierre.md) |
-| B | LISTO_OLA_C | [`revision-ola-b-cierre.md`](2026-08-15-revision-ola-b-cierre.md) |
-| C | PIPELINE_LOCAL_CERRADO | [`integral-erp-ola-c.md`](2026-08-15-integral-erp-ola-c.md) · [`revision-ola-c.md`](2026-08-15-revision-ola-c.md) |
+## Estado actual (referencia local, 2026-08-15)
 
-**Veredicto final:** [`2026-08-15-veredicto-pipeline-local-cierre.md`](2026-08-15-veredicto-pipeline-local-cierre.md)
+| Oleada | Veredicto |
+|---|---|
+| A | `LISTO_OLA_B` |
+| B | `LISTO_OLA_C` |
+| C | `PIPELINE_LOCAL_CERRADO` |
+| Prod | **No-Go** — E2E-008 / H14 pendiente |
 
-**Steering histórico:** [`2026-08-15-veredicto-encargado-proyecto.md`](2026-08-15-veredicto-encargado-proyecto.md)
+Últimos informes generados en esta carpeta (local): `integral-erp-ola-*`, `revision-ola-*`, `veredicto-*`, `analisis-jefe-proyecto-implementacion.md`.
 
-**Pendiente prod:** E2E-008 tras deploy H14 — **No-Go** `45.7.229.46`
+## Planes (sí en git)
 
-**Histórico fase 2 aprobaciones (local cerrada):** [`2026-08-12-veredicto-unificado.md`](2026-08-12-veredicto-unificado.md)
+- [`../PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`](../PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md)
+- [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md)
+- [`../PLAN-PRUEBAS-E2E-MANUAL-SIN-SEED.md`](../PLAN-PRUEBAS-E2E-MANUAL-SIN-SEED.md)
 
-Planes de prueba (no borrar):
+## Nuevas corridas
 
-- [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md) — con seed
-- [`../PLAN-PRUEBAS-E2E-MANUAL-SIN-SEED.md`](../PLAN-PRUEBAS-E2E-MANUAL-SIN-SEED.md) — bootstrap superadmin
-
-Nuevos informes: usar [PLANTILLA.md](PLANTILLA.md). Dumps con tokens: `*-raw.md` (gitignored).
+Usar [PLANTILLA.md](PLANTILLA.md). Sin JWT en markdown. Dumps con tokens: `*-raw.md` (gitignored).
 
 Histórico Reu4: [`../historico-reu4/`](../historico-reu4/)

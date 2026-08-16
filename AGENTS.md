@@ -40,7 +40,7 @@ Demo: `admin@almahue.local` / `Admin123!` · PIN `4821`. AdminConcepto debe **re
 
 ## Huecos vigentes (Fase 1, actualizado 2026-08-15)
 
-Fuente QA: pipeline local **`PIPELINE_LOCAL_CERRADO`** — `qa/resultados/2026-08-15-revision-ola-c.md` (Ola A `LISTO_OLA_B`, Ola B `LISTO_OLA_C`).
+Fuente QA local: pipeline **`PIPELINE_LOCAL_CERRADO`** (informes en `qa/resultados/`, **no versionados**). Plan: `PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`.
 
 - **D4:** cadena OV validada local con `comercialRequiereAprobacion=true` (retest VEN-009–012). Decisión reunión: narrativa demo vs activación piloto real.
 - **D11:** Compras › Cotizaciones → OC. Ventas › Orden de venta → stock → factura. No restaurar cotiz→NP→factura. Redirect `/comercial/cotizaciones`. Catálogo `pantallas-permisos` puede seguir listando Cotizaciones bajo Ventas (desfasado vs Sidebar).

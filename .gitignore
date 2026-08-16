@@ -27,7 +27,12 @@ ERP/qa-tmp/
 ERP/qa-reu4-*/session-*.json
 ERP/qa-reu4-*/qa-sessions.json
 
-# Dumps QA con tokens (el informe sanitizado YYYY-MM-DD.md sí se versiona)
+# Informes de corrida QA (solo local; en git: README + PLANTILLA)
+docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*
+!docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/README.md
+!docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/PLANTILLA.md
+
+# Dumps QA con tokens (nunca versionar)
 docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*-raw.md
 
 # Tooling local / exports de chat
