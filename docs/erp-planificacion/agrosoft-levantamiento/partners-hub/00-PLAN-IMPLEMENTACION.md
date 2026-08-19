@@ -1,10 +1,11 @@
 # Plan de implementación — billing-gateway + integración Almahue / GoSocket
 
-**Fecha:** 2026-08-06 (actualizado)  
-**Estado:** **Propuesta** — para presentar a María Jesús / Sergio; no hay acuerdo de política operativa ni ApiKeys sandbox aún.  
+**Fecha:** 2026-08-19 (actualizado)  
+**Estado:** **Propuesta técnica en ejecución parcial** — ApiKeys sandbox QA recibidas y guardadas solo en `.env` local del `billing-gateway` (gitignored; no versionar valores). Falta acuerdo de política operativa y contrato comercial / IOFactura.  
 **Nombre temporal del servicio:** `billing-gateway`  
 **Repo:** **git separado** (no carpeta hermana dentro del monorepo Almahue como código fuente)  
 **Fuentes GoSocket:** [`../fuentes/gosocket-2026-08-05/`](../fuentes/gosocket-2026-08-05/)  
+**Minuta GoSocket QA:** [`../reunion-gosocket-minuta-2026-08.md`](../reunion-gosocket-minuta-2026-08.md)  
 **Ancla negocio:** Reu4 L250–266 — ERP = única UI; partner transparente bajo “Grabar y contabilizar”.
 
 ---
@@ -15,11 +16,12 @@
 |---|---|
 | Nombre | **`billing-gateway`** (temporal) |
 | Repositorio | **Git separado** (ciclo de vida / deploys / secretos independientes del monorepo Almahue) |
-| ApiKeys sandbox GoSocket | **Esperar** reunión SII / onboarding (no asumir disponibles) |
-| Ambiente GoSocket (URL base) | Default sandbox/developers hasta promoción explícita; ver §3.1 — **el modo efectivo es por cliente**, no un switch global |
+| ApiKeys sandbox GoSocket | **Recibidas para QA** post reunión GoSocket; valores solo en `.env` local gitignored del `billing-gateway` |
+| Ambiente GoSocket (URL base) | QA vigente: `https://developers-sbx.gosocket.net/api/v1/` (el path `/sandbox/` de `developers.gosocket.net` está bloqueado 19/08). Live: `https://developers.gosocket.net/api/v1/`. El modo efectivo es **por cliente**, no un switch global |
 | Modo partner | **Por cliente** en registry: `partner` (`stub` \| `gosocket` \| …) + `connectionMode` — ver §3.1. **`stub` es un facturador más** (mismo contrato); se reemplaza por GoSocket cambiando registry |
 | Demo / visualización (2026-08) | **Sin GoSocket real**: todo dato ingresado en demo = stub local. Si hay conexión partner, **solo ambiente QA** (sandbox). **Antes de marcha blanca: reinicio de BD** (datos demo no migran a prod fiscal) |
-| Fail-closed | **No aceptado aún** — va como **opción recomendada en la propuesta**; negocio decide |
+| Fail-closed | **Aceptado en ERP local 19/08:** HTTP/REJECTED → no asiento, documento `BORRADOR`. CAF/cert MJ pendiente para `ACCEPTED`. |
+| Contrato comercial / IOFactura | **Pendiente**. QA/API no requiere contrato; IOFactura se habilita después de firma |
 
 ### Aún abierto
 
@@ -27,7 +29,7 @@
   **Update 2026-08-06:** llegó el manual COMEX de MJ (`fuentes/mj-compartidos-2026-07-30/`) — hay reglas concretas (RUT 55.555.555-5, bulto 22, TC, FOB/CIF, 6 decimales). Recomendación: **diseñar 110/112 en paralelo** al MVP nacional aunque la emisión sandbox empiece por 33.
 - Política ante partner caído (ver §6.1 — alternativas a presentar).
 - Archivo Excel Comex de un embarque real (citado en el manual; no vino en el pack Trello).
-- ApiKeys sandbox post-reunión SII.
+- Contrato comercial / IOFactura post-firma.
 
 ---
 
@@ -77,7 +79,7 @@ Repos separados:
 | Validación canónica | Zod (`schemaVersion` 1.0) |
 | Observabilidad | logs estructurados + métricas emit |
 
-Sandbox GoSocket: **no conectar** hasta tener ApiKeys post-reunión SII. Hasta entonces: mocks / fixtures del Manual **por cliente en `stub`**.
+Sandbox GoSocket: ApiKeys QA recibidas el 19/08/2026 y disponibles solo en `.env` local gitignored del `billing-gateway`; no versionar usuario/password/API key ni `Authorization`. Para clientes sin credenciales, seguir con mocks / fixtures del Manual **por cliente en `stub`**.
 
 ### 3.1 Modo de conexión **por cliente** (no solo env global)
 
@@ -108,7 +110,7 @@ Estados sugeridos en registry (`TenantBillingConfig` / entrada `erpId + rutEmiso
 | `partner` + mode | Comportamiento |
 |---|---|
 | **`stub` + stub** | Emite DUMMY (folio `STUB-*`, PDF/XML descargables, `artifacts.dummy=true`); disclaimer; sin red externa |
-| **`gosocket` + sandbox** | Llama `developers.gosocket.net/sandbox/...` (ApiKeys del tenant) |
+| **`gosocket` + sandbox** | Llama `developers-sbx.gosocket.net/api/v1/...` (ApiKeys QA del tenant) |
 | **`gosocket` + live** | API producción GoSocket — solo con decisión explícita |
 
 Ejemplo futuro concurrente:
@@ -235,9 +237,10 @@ La propuesta de proyecto llega con **A como default técnico**, dejando B/C docu
 
 ## 8. Fases (propuesta)
 
-### Fase 0 — Bloqueada / externa
+### Fase 0 — Onboarding externo
 
-- [ ] Reunión SII / onboarding → ApiKeys sandbox
+- [x] Reunión GoSocket QA / onboarding → ApiKeys sandbox QA recibidas (sin versionar valores)
+- [ ] Contrato comercial / IOFactura post-firma
 - [ ] Presentar propuesta (este doc) + decisión política §6.1
 - [x] Crear repo git `billing-gateway` (scaffold en `E:/source/repos/billing-gateway`; init remoto pendiente)
 
@@ -250,7 +253,7 @@ La propuesta de proyecto llega con **A como default técnico**, dejando B/C docu
 - [x] Audit + idempotency
 - [x] Adapter `stub` + fixtures Manual / Example_integracion.json (sin red)
 
-### Fase B — Adapter GoSocket (días 4–8; sandbox real post-ApiKeys)
+### Fase B — Adapter GoSocket (días 4–8; sandbox real con ApiKeys QA)
 
 - [ ] Mapper 33/34/61 (+ diseño 110)
 - [ ] `SendDocumentToAuthority` (mock → sandbox)
@@ -332,7 +335,7 @@ Hoy el ERP **ya** completa folio local → asiento → `CONTABILIZADA` **sin** p
 2. Contrato real GoSocket = XML GUF (no HTML).
 3. Repo separado `billing-gateway` multi-ERP.
 4. Tabla §6.1 — pedir decisión A/B/C.
-5. Bloqueo sandbox hasta ApiKeys post-reunión SII.
+5. ApiKeys sandbox QA ya recibidas; contrato comercial e IOFactura siguen pendientes.
 6. Preguntar si MVP incluye export **110** desde el inicio.
 
 ---

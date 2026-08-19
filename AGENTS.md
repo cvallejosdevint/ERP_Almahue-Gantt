@@ -4,7 +4,7 @@ Lee este archivo al inicio. **No** leas transcripciones de reuniones salvo que e
 
 Afirmaciones de **Carlos** o **Sergio** en demo no son requisitos: contrastar minuta (Agustín/MJ) y código. Rule `almahue-reuniones`.
 
-Para aprobaciones usa la skill `almahue-aprobaciones`. Para comercial/inventario (OV vs cotización), `almahue-comercial-inventario`. Para tesorería, `almahue-tesoreria`. Para DTE/billing, `almahue-billing-dte`. Para contabilidad, `almahue-contabilidad`. Para ficha cliente/proveedor, `almahue-ficha-contraparte`. Para deploy, `almahue-deploy`. Para QA, `almahue-qa-local`.
+Para aprobaciones usa la skill `almahue-aprobaciones`. Para comercial/inventario (OV vs cotización), `almahue-comercial-inventario`. Para tesorería, `almahue-tesoreria`. Para DTE/billing, `almahue-billing-dte`. Para contabilidad, `almahue-contabilidad`. Para ficha cliente/proveedor, `almahue-ficha-contraparte`. Para deploy, `almahue-deploy`. Para QA, `almahue-qa-local`. Para datos ficticios del toggle **Modo demo**, `almahue-demo-mode`.
 
 ## Código
 
@@ -38,15 +38,29 @@ Demo: `admin@almahue.local` / `Admin123!` · PIN `4821`. AdminConcepto debe **re
 3. Corregir solo **Critical**
 4. `almahue-qa-runner` → `almahue-qa-reviewer`
 
-## Huecos vigentes (Fase 1, actualizado 2026-08-15)
+## Huecos vigentes (actualizado 2026-08-19)
 
-Fuente QA local: pipeline **`PIPELINE_LOCAL_CERRADO`** (informes en `qa/resultados/`, **no versionados**). Plan: `PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`.
+Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md`) + ciclo 18/08. Plan integral: `PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`. Inventario docs: `qa/resultados/2026-08-18-ciclo-0-inventario-docs.md`. QA local: skill `almahue-qa-local`. DTE: skill `almahue-billing-dte` (intermediario **otro chat**).
 
-- **D4:** cadena OV validada local con `comercialRequiereAprobacion=true` (retest VEN-009–012). Decisión reunión: narrativa demo vs activación piloto real.
-- **D11:** Compras › Cotizaciones → OC. Ventas › Orden de venta → stock → factura. No restaurar cotiz→NP→factura. Redirect `/comercial/cotizaciones`. Catálogo `pantallas-permisos` puede seguir listando Cotizaciones bajo Ventas (desfasado vs Sidebar).
-- **D16:** no vender bajo costo — Admin › Empresas (`ventaBajoCosto` = `BLOQUEAR`); retest UI pendiente (Ola B).
-- **Huérfanos H1–H14:** ver `qa/HUERFANOS-H1-H14.md` (H1/H4/H7/H8 PASS Ola A; H14 deploy pendiente).
-- **D7:** lookup RUT con flag `esProductor` — PASS Ola A (VEN-031).
-- **Emitir documento:** restricción FACTURA/NC/ND/GUIA PASS (VEN-021); wizard compra aún mezcla tipos en otros contextos.
-- **DTE:** stub billing PASS local (`BILLING_STUB_INLINE`); GoSocket en proyecto aparte.
-- **Prod:** no asumir migrate stock/OV en `45.7.229.46` hasta deploy explícito (H14).
+### Cerrado en código local (no reabrir)
+
+- **D4 / H3:** cadena OV **existe**. Flag `comercialRequiereAprobacion` piloto **ON** (schema `@default(true)`, seed EMP-1, migración `20260818180000_comercial_aprobacion_piloto_on`, `comercialAprobacionDesde=0`). Factura desde OV autorizada: sin segunda cadena. Prod: no asumir hasta migrate + reunión (H14).
+- **D11:** Compras › Cotizaciones → OC (`BORRADOR`). Ventas › Orden de venta → stock al confirmar → factura. Redirect `/comercial/cotizaciones` → Compras. Catálogo pantallas alineado (Cotizaciones en Compras). No restaurar cotiz→NP→factura.
+- **D16:** `ventaBajoCosto=BLOQUEAR` en Admin › Empresas (UI existe).
+- **Emitir:** solo FACTURA/NC/ND/GUIA. Borradores DTE en Emitir, **no** en Libro ventas (P0-4).
+- **D7 / H1:** lookup RUT sociedad + clientes + proveedores + flag `esProductor`. Maestro Productor sigue fuera.
+- **OC wizard:** correlativo `OC-AAAA-NNNN` (`allocateOcNumero`). **Guardar borrador** = `BORRADOR` sin bandeja; **Enviar a aprobación** = `PENDIENTE_APROBACION`. Admin **ROL-1** (`*`) arma cadena con el **primer grupo activo** (sin membresía) y **no figura** en la escala. Cotiz→OC usa número ad-hoc `OC-{folio}-{ts}`.
+- **Libro de compras / Emitir-OV:** montaje `/compras/registro` (19/08); `GET /cuentas` lectura operativa (`comercial:read`); factura desde OV sin cuenta obligatoria en piloto.
+- **H1–H8, H4, H8 Guías:** listos en código local.
+
+### Siguen vigentes
+
+- **H14:** no asumir migrate stock/OV/`piloto_on` en `45.7.229.46` hasta deploy explícito.
+- **DTE / H11:** tres modos. `BILLING_GATEWAY_ENABLED=false` → contabiliza sin partner. `true` + `BILLING_STUB_INLINE=true` → stub local demo. `true` + `STUB_INLINE=false` → HTTP `billing-gateway` (GoSocket sandbox `developers-sbx`). Sin CAF/cert MJ el partner **REJECTED** (fail-closed, no asiento). No SII live. No reabrir como «falta GoSocket».
+- **H9:** SMTP correo PIN (externo).
+- **R4-18:** cobranza = propuesta, no módulo.
+- **DK-G8:** `workflows-admin` legacy en API/UI; no mezclar con grupos/escalas.
+- **D17:** FLETE `tipoLinea` en OV; canonical DTE recargo SII no auditado.
+- **Productor:** flag lookup ≠ entidad maestro Productor.
+- **Recepción OC:** no mueve stock; entrada por Insumos › Movimientos (`ENTRADA_PROVEEDOR`).
+- **H10 / H12 / H13:** comparador 3 cotiz (diferido); Acepta; Excel banco fino.

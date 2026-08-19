@@ -593,6 +593,7 @@ Igual v1 §3.4 y `PLAN-PRUEBAS-APROBACIONES.md`.
 |---|---|---|
 | 1.0 | 2026-08-15 | Plan integral 225 casos (v1, no editar) |
 | 2.0 | 2026-08-15 | Fase 3 pipeline: oleadas A/B/C, HEREDADO, −10 casos, commit `2035773` erp_front, retest §9, checklist §8, HUERFANOS H1–H8 |
+| 2.1 | 2026-08-19 | H11: HTTP ERP→billing-gateway→sbx; BIL-007 sigue SKIP/BLOCKED por CAF. BIL-001/002 = stub demo. Fail-closed REJECTED: informes `2026-08-19-billing-errores-*`. |
 
 ---
 

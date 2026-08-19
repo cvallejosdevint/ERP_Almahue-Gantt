@@ -1,7 +1,7 @@
 # Estado huérfanos H1–H14 (Reu6 vs código)
 
-**Fecha corte:** 2026-08-14 (actualizado sesión cierre)  
-**Fuente plan:** sesión auditoría Reu4–6 + `qa/resultados/2026-08-14-fase1-as-is-to-be.md`
+**Fecha corte:** 2026-08-14 (H3 18/08; H11 HTTP+CAF 19/08)  
+**Fuente plan:** HUERFANOS + P0 17/08 + ciclo 18/08. El as-is 14/08 está `{deprecado}`.
 
 Leyenda: **Listo** · **Parcial** · **Bloqueado externo** · **Diferido**
 
@@ -9,7 +9,7 @@ Leyenda: **Listo** · **Parcial** · **Bloqueado externo** · **Diferido**
 |---|---|---|---|
 | **H1** | Productor en lookup RUT | **Listo** | Flag `esProductor` en Cliente/Proveedor; lookup devuelve `productor` y arreglo `productores[]`. |
 | **H2** | UI `ventaBajoCosto` | **Listo** | Admin › Empresas: bloqueo bajo costo + flags aprobación OV. |
-| **H3** | Aprobación comercial OV | **Listo (off)** | Código + propuesta `04-PROPUESTA-APROBACIONES-COMERCIAL.md`; activar tras reunión (`comercialRequiereAprobacion`). |
+| **H3** | Aprobación comercial OV | **Listo (on en seed/default local)** | `comercialRequiereAprobacion` default true; seed EMP-1; migración `20260818180000_comercial_aprobacion_piloto_on` (`comercialAprobacionDesde=0`). Prod = reunión + migrate (H14). |
 | **H4** | `pantallas-permisos` vs Sidebar | **Listo** | Catálogo alineado: OV, Aprobaciones, Guías; Cotizaciones en Compras; sin Prospectos fantasma. |
 | **H5** | PDF ficha solicitud | **Listo** | Print HTML «Imprimir solicitud» en `FichaContraparteModal` (piloto sin PDF servidor). |
 | **H6** | Flag inventariable + AlmaWeb | **Listo (base)** | Campo `inventariable` en maestro; OV omite bodega/stock si false. Integración AlmaWeb = proyecto externo. |
@@ -17,7 +17,7 @@ Leyenda: **Listo** · **Parcial** · **Bloqueado externo** · **Diferido**
 | **H8** | Guías despacho UI | **Listo** | Ventas › Guías de despacho (`/comercial/guias-despacho`); emisión vía Emitir (tipo GUIA). |
 | **H9** | SMTP correo PIN | **Bloqueado externo** | Infra Almahue (Reu5 diferido). |
 | **H10** | 3 cotizaciones comparativas compras | **Diferido** | No es proceso actual (Reu4 ideal futuro). |
-| **H11** | GoSocket / DTE real | **Listo (stub)** | `billing/` + canonical + disclaimer stub; conexión real en proyecto aparte (datos brutos) — **no bloqueante**. |
+| **H11** | GoSocket / DTE real | **Parcial (HTTP + CAF pendiente)** | Cliente HTTP ERP→`billing-gateway`→sandbox `developers-sbx` (19/08). Fail-closed si REJECTED. **Bloqueo:** CAF/cert MJ. SII live = no. No reabrir «falta GoSocket». |
 | **H12** | Carga masiva Acepta | **Bloqueado externo** | MJ ↔ Acepta en curso. |
 | **H13** | Excel cartolas finas | **Bloqueado externo** | Plantilla banco MJ (R4-16). |
 | **H14** | Deploy prod OV/stock | **Listo (doc)** | `DEPLOY.md` + `DEPLOY-PROD-FASE2.md`; migrate pendiente ejecución en `45.7.229.46`. |
@@ -38,8 +38,9 @@ Incluyen OV/aprobación y huérfanos de esta sesión — **no aplicar en prod** 
 - `20260814180000_comercial_aprobacion_ov`
 - `20260814180000_tipo_doc_nd_guia`
 - `20260815200000_huerfanos_ficha_inventario`
+- `20260818180000_comercial_aprobacion_piloto_on`
 
 ## Resumen
 
-- **Listos en código:** H1–H8, H11 (stub), H14 (checklist).
+- **Listos en código:** H1–H8, H14 (checklist). **H11:** HTTP+fail-closed listo; ACCEPTED/SII bloqueado por CAF.
 - **Externos / no deuda:** H9, H12, H13, H10.
