@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: minuta Reu6 (D19) + código auth. Motivo: carpeta de guion D11 invertido; SSO sigue SKIP sin `.env`.
+
 # SSO Microsoft Entra ID — plan local / pruebas (URL publicada)
 
 **Objetivo:** dos vías de login en paralelo — **email+clave ERP** y **botón Microsoft** — sin reemplazar la clave local.  

@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: minuta Reu6 + [`qa/HUERFANOS-H1-H14.md`](../qa/HUERFANOS-H1-H14.md). Motivo: paquete 06/08 pre-OV unificado y pre-pipeline v2.
+
 # Toma de requerimientos — ERP Almahue (Reu4 → Reu5)
 
 **Fecha:** 2026-08-06  

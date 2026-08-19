@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md). Motivo: QA 31/07; OC `EMITIDO` ya no describe wizard BORRADOR vs enviar a aprobación.
+
 # 08 — Datos limpios + creación OC desde front
 
 Fecha: 2026-07-31

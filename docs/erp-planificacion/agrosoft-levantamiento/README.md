@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`AGENTS.md`](../../../AGENTS.md) + inventario [`qa/resultados/2026-08-18-ciclo-0-inventario-docs.md`](qa/resultados/2026-08-18-ciclo-0-inventario-docs.md). Motivo: inventario corto; no lista plan v2 ni HUERFANOS.
+
 # Fuentes canónicas — ERP Almahue
 
 **Planificar desde Reu6** (demo 06/08 + aprobaciones fase 2). Si chocan, gana la decisión más reciente: Reu6 → Reu5 → Reu4.

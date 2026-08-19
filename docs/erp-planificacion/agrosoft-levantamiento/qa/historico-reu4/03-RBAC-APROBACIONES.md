@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md). Motivo: QA 31/07; evidencia HEREDADO, no plan vigente.
+
 # QA interactivo — Aprobaciones + permisos por rol
 
 Fecha: 2026-07-31 · Stack: `127.0.0.1:5174` → proxy → Nest `:3001` · **MODO REAL**

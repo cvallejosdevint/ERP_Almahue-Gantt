@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: minuta Reu6 + [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md). Motivo: QA 31/07; D11/OV/grupos no eran el modelo vigente.
+
 # Matriz de cumplimiento Reu4 — minuta + transcripción vs producto
 
 **Fecha validación:** 31/07/2026  

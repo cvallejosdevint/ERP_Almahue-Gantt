@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`](PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md). Motivo: v1; el propio v2 indica no editarlo.
+
 # Plan de pruebas integral — ERP Almahue (completo)
 
 **Fecha:** 2026-08-15  

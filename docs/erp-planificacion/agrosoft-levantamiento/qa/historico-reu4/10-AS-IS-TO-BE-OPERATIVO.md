@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`../HUERFANOS-H1-H14.md`](../HUERFANOS-H1-H14.md) + matriz 16/08. Motivo: QA 31/07; as-is operativo previo a grupos/escalas y D11.
+
 # 10 — AS-IS / TO-BE operativo
 
 Fecha: 2026-07-31 (actualizado oleada alto/medio impacto)  

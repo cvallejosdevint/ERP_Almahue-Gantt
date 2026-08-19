@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`docs/matriz-asis-tobe.md`](../../../matriz-asis-tobe.md) + [`qa/HUERFANOS-H1-H14.md`](../qa/HUERFANOS-H1-H14.md). Motivo: paquete 06/08 pre-OV unificado y pre-pipeline v2.
+
 # AS-IS — ERP Almahue (estado actual del proyecto)
 
 **Fecha:** 2026-08-06  

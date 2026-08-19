@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`reunion6-minuta-2026-08-06.md`](reunion6-minuta-2026-08-06.md). Motivo: DEC Reu1–2; no cubre D11/OV/grupos.
+
 # 00 — Decisiones estratégicas (DEC)
 
 ## Meta

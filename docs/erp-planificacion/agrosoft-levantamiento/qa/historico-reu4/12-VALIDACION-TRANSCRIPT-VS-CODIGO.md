@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: minuta Reu4 editada + [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md). Motivo: QA 31/07; transcripción vs código no gana a minuta + código 18/08.
+
 # 12 — Validación Reu4: transcripción vs código
 
 **Fecha validación:** 2026-08-03 (reloj alineado al MP4)  

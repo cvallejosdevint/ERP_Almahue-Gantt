@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`../PLAN-PRUEBAS-APROBACIONES.md`](../PLAN-PRUEBAS-APROBACIONES.md). Motivo: QA 31/07; menú Cotizaciones/NP y usuarios `qa.*@`.
+
 # QA Reu4 — 2026-07-31 (stack local)
 
 ## Entorno validado

@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md`](03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md). Motivo: Fase 1 `jefeId`; el modelo vigente es grupos + escalas.
+
 # Propuesta visual — Aprobaciones por organigrama (Reu6)
 
 **Audiencia:** María Jesús, Agustín  

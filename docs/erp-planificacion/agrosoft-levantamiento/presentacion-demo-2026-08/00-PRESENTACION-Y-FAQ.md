@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`qa/DEMO-PROPUESTA-LOCAL.md`](../qa/DEMO-PROPUESTA-LOCAL.md). Motivo: guion con «Ventas › Cotizaciones / NP» (D11 invertido).
+
 # Presentación demo Almahue ERP — guion + FAQ por pantalla
 
 **Fecha:** 2026-08-06  

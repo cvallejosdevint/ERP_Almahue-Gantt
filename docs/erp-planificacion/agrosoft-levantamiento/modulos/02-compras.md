@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`reunion6-minuta-2026-08-06.md`](../reunion6-minuta-2026-08-06.md) + código. Motivo: levantamiento Reu1 («jefe aprobador»); no spec ERP actual.
+
 # Módulo: Compras (servicios)
 
 Flujo real: **Crear OC → Aprobación → Recepción (reconoce gasto + TC) → Registro compra (factura)**.

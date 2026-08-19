@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`reunion6-minuta-2026-08-06.md`](../reunion6-minuta-2026-08-06.md) + código. Motivo: levantamiento Reu1; no spec ERP actual.
+
 # Fuera de alcance v1 / pendiente cliente
 
 ## Maquinaria — OUT v1 (mencionado)

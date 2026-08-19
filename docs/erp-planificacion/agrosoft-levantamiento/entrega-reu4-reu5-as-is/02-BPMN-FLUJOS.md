@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: mapa [`qa/resultados/2026-08-18-ciclo-0-mapa-modulos.md`](../qa/resultados/2026-08-18-ciclo-0-mapa-modulos.md). Motivo: paquete 06/08 pre-OV unificado y pre-pipeline v2.
+
 # BPMN — Flujos de negocio con gateways (Reu4 → Reu5)
 
 **Fecha:** 2026-08-06  

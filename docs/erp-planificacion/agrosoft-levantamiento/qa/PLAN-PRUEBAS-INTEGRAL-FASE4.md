@@ -1,3 +1,6 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`](PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md) + [`HUERFANOS-H1-H14.md`](HUERFANOS-H1-H14.md). Motivo: oleadas 0–7 previas al pipeline v2; D4/D11/D16/D7 ya no son deuda abierta.
+
 # Plan de pruebas integral — Fase 4 (backend/API prioritario)
 
 **Fecha:** 2026-08-14 (validado contra código Nest 2026-08-14)  
