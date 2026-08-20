@@ -23,6 +23,8 @@ Bake front: `VITE_BASE_PATH=/almahue-erp/`, `VITE_API_URL=/almahue-erp/api/v1`. 
 
 Solo `prisma/migrations/`. `RUN_MIGRATE=true` al boot. No dejar DDL en `prisma/sql/`. En prod verificar, antes de demo de ventas/aprobaciones: `20260813230000_stock_ov_ficha` y `20260818180000_comercial_aprobacion_piloto_on` (H14: no asumir).
 
+QA local (`localhost:5433`, schema `erp`): `_prisma_migrations` puede estar **vacía** con objetos ya creados. **Prohibido** `migrate deploy` o `resolve --applied` sobre esa BD sin backup + BD desechable + diff vs las 50 SQL. El usuario `almahue` no tiene `CREATEDB` hasta que un superusuario lo otorgue. No copiar filas desde `public._prisma_migrations` (otro historial). Informe 19/08: `qa/resultados/2026-08-19-prisma-drift-local.md`.
+
 Smoke post-deploy: checklist en `ERP/DEPLOY-PROD-FASE2.md` §5–6. Mínimo: health 200; `GET /grupos-aprobacion` sin token → **401** (404 = imagen vieja); AdminConcepto re-login.
 
 ## Seed

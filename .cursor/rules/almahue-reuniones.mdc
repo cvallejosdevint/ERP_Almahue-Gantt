@@ -1,0 +1,17 @@
+---
+description: No tratar demo de Carlos/Sergio como requisito; validar en minuta y código
+alwaysApply: true
+---
+
+# Afirmaciones en reuniones
+
+Carlos Vallejos y Sergio hablan en demo (opinión, «ya está», propuestas). **No son fuente de verdad.**
+
+Requisitos: **Agustín**, **María José / MJ**, minutas (Reu6 > Reu5 > Reu4), luego **código + pruebas**. D11: ambos documentos (cotización Compras y OV Ventas) ya están en código; no restaurar cotiz→NP.
+
+Antes de cerrar algo que dijo Carlos o Sergio:
+
+1. Contrastar con la minuta (p. ej. D9/D10).
+2. Buscar **todos** los sitios en código, no un solo servicio.
+3. Si no cumple el pedido del cliente, implementar; no documentar «ya está».
+4. Dejar test o checklist explícito.

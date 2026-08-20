@@ -1,0 +1,14 @@
+---
+description: Núcleo Almahue — idioma, secretos, tenant, skills primero
+alwaysApply: true
+---
+
+# Almahue core
+
+- Responder en **español**.
+- No commitear `.env`, JWT, dumps ni `ERP/.deploy/`.
+- Filtrar siempre por **tenant** (`empresaId`).
+- Arranque: `AGENTS.md`. Skills de dominio antes de transcripciones.
+- No leer `fuentes/transcripcion*.md` salvo pedido explícito.
+- Schema Prisma: solo `prisma/migrations/`.
+- Carlos/Sergio en reuniones: hipótesis. Validar con minuta (MJ/Agustín) y código. Ver `almahue-reuniones.mdc`.

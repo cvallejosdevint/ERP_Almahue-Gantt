@@ -1,0 +1,599 @@
+# Transcripción bruta (Whisper local small, ES)
+
+Idioma detectado: es (p=1.00)
+Fuente: Screen Recording 2026-08-20 105836.mp4 (~30:47)
+Quién: reunión con Sergio (Devint). No es fuente de requisitos.
+Limpieza / contraste PM posterior.
+
+- [00:00] aprobación, o sea, perdón, la solicitud. Por eso hago la orden de venta, ¿cierto? Sí. Mando la
+- [00:05] solicitud de aprobaciones, pasa por los tres niveles, para luego esa orden de venta yo la
+- [00:10] tengo que facturar, ¿cierto? En ese caso a ti te debería llegar la notificación de que se
+- [00:15] aprobó y tú deberías confirmar de que se haga la... Exactamente. Ya, ya, bacán, bacán, bacán.
+- [00:22] Entonces, yo me encargo, ¿por qué, en cierto modo, el... por ejemplo, no sé, por el nivel 3,
+- [00:28] puede ser un gerente, bohua. Sí, bohua. Hay un gerente con todo, y el one que está diciendo,
+- [00:33] que te lo está dividiendo y unas facturas, que se va a hacer tu pega, bohua. Yo solamente te la
+- [00:38] estoy aprobando, así que tú sigues el flujo. Vale, vale, vale. Como te digo, vale, a averiguar
+- [00:42] con la IA y la IA, tu cachet que alucina, de repente, entonces... Sí, no, no, sí, sí.
+- [00:47] Perfecto. Hay otra consulta que tengo, porque actualmente el flujo es en las ventas, por ejemplo.
+- [00:57] Perdón, en las compras. Compras, compras, compras, compras. Ah, no, en las ventas. En las ventas tengo
+- [01:04] la página de órdenes de venta, que es la parte no contable, bohachay, que se puede
+- [01:08] en generar todo, que es la parte como de la solicitud de la aprobación, es la parte pre-
+- [01:15] y aparte también está el emitir documento. En la emisión de documento está, y ahí tengo
+- [01:23] una duda, porque cuando son solamente servicios, no pasa por descuento de esto, obviamente.
+- [01:30] Exacto. Entonces, en ese caso, para ese tipo de casos, yo podría hacer una emisión
+- [01:37] sin pasar por una órdena de venta, ¿verdad? O no es, porque yo lo vi como algo lógico, porque
+- [01:45] decía, no, pues si la órdena de venta es para controlar el stock, pero ahora como teniendo
+- [01:49] una doble lectura, no necesariamente es eso la órdena de venta, es como para generar
+- [01:52] control y aprobaciones, por cierto? Claro. Entonces, igual los servicios deberían
+- [01:59] pasar por órdena de venta. Sí, sí, totalmente, totalmente, tienen que pasar a ambos y tiene
+- [02:04] temas de aprobación, tienen que pasar. Perfecto. Y habrá alguna opción, habrán en algún momento
+- [02:11] de este flujo de que yo necesite directamente emitir documentos sin pasar por una órdena de venta?
+- [02:17] Puede darse, puede darse el caso. Ya, ya, porque actualmente lo tengo con el Sador,
+- [02:23] sí. Pero ahí yo creo que, por ejemplo, yo creo que va a depender mucho, o sea, igual hay que
+- [02:28] obligarlo con ellos, porque si, por ejemplo, si ubiten la órdena de venta y, no sé,
+- [02:33] pues la aprobación no pasa por el rango, ¿cierto? No sé, bueno, estoy emitiendo la primer
+- [02:40] nivel de aprobaciones hasta tres quinientas lucas, ¿cierto? Cierto. Si no, si no están las
+- [02:49] quinientas, por ejemplo, de menos quinientas lucas, le emití factura, ¿que hacéis? Claro.
+- [02:55] Claro. Pero igual, pero igual deja, tiene que quedar enlazado alguna factura, siempre enlazado una
+- [03:00] órdena de venta, o sea. Ya, ya, a menos que ellos empiezan lo contrario. Claro, porque igual
+- [03:06] piensa que si yo, por ejemplo, no sé, yo soy pillo y no sé, la factura, la órdena de venta,
+- [03:13] parte del flujo de aprobación de la quinienta de lucas, ¿cierto? ¿y qué pasa si yo voy directo
+- [03:19] a facturar mejor el servicio? Exacto. Ya, entonces, restrictivo no va. Exacto. Pero igual me gustaría
+- [03:28] que fuera configurable, eso sí. Poder dejar configurable que la factura quede bloqueada si
+- [03:34] tiene nivel de aprobaciones, ¿que hacéis? Así igual damos la opción de juego, en caso
+- [03:39] de que lo necesiten, de cualquier lado, formó. Ya. Sí, sí, se puede. Entonces, mira,
+- [03:49] hagamos una simulación, pues, porque el sistema está más o menos así. Hagamos una simulación,
+- [03:53] aquí estoy desde el ad. Vamos a hacer una nueva orden. Cantidad, bodega, tanto. Siguiente,
+- [04:11] poder visualizar, perfecto. Aquí dice que un borrador y equipo enviar aprobación. Perfecto.
+- [04:22] Y me voy a aprobaciones. Y acá están las que yo tengo pendientes, ¿que hacéis? Esta
+- [04:28] es la visualización de la persona que solicitó. Aquí no puede ver la escala y aquí dice
+- [04:33] que Andrés Pino tiene que aprobarme el paso. Perfecto. Entonces, como soy el superadmin
+- [04:40] en este momento, puedo aprobarla directamente. Sí, que vamos a aprobarla en la orden mil uno.
+- [04:53] Tengo que untarla el curso. Aquí gasto token de 1 por no tener un blog de nota con el PIN.
+- [04:59] Por ejemplo, acá, en el flujo como está, es que el mismo aprobador, esto,
+- [05:14] eso es todo mal, por eso lo tengo que corregir. El mismo aprobador te tiene que generar la
+- [05:20] emisión del documento. Entonces, ahora voy a hacer ese ajuste para que a la persona le llegue la
+- [05:24] notificación de que se lo aprobaron y el del botón de generar. Perfecto, ahí se aprobó y queda
+- [05:37] acá abajo. Y acá, creo que es porque lo hice desde el superadmin, debería aparecerme la opción
+- [05:47] de la emisión del documento cuando ya está aprobada. Aquí creo que es porque como le hice
+- [05:52] con el flujo del superadmin, tengo un pequeño bug acá, pero acá debería salirme como aprobado
+- [05:56] las mías, no las pendientes. Y aquí debería tener el botón de emitir. Desconozca acá el
+- [06:01] por qué el superadmin no lo puede hacer. Y ahí, cuando se va a la... le doy a emitir,
+- [06:06] me lleva esta pestañita que me carga los datos. Sí, también. Y ahí tendría el preview,
+- [06:14] podría editar los ítems en caso de tenerlos. Ah, pero mira, ojo, ya le dí al expediente seleccionado
+- [06:21] al cliente o... Así, si como te digo, aquí tengo un bug de las aprobaciones, o era acá,
+- [06:28] que tenía que verlo. Acá, no, estoy promintiendo. Acá solamente los pendientes. Y acá está la
+- [06:34] parte donde emito. Voy a hacer una unificación porque son como dos pantallas de listo de
+- [06:39] información. Entonces, por acá, por ejemplo, podría imprimirlo directamente, la orden de
+- [06:47] venta, verla, y esta es la de confirmar. Entonces, yo aquí al momento de confirmar,
+- [06:53] dice orden de confirmada, estoy descontado, y acá puedo facturar con este botoncito. Y aquí
+- [07:03] se cargan los datos. Es la mil uno, ¿cierto? Cantidad uno, perfecto. Siguiente, aquí
+- [07:16] puedo previsualizarlo, también sale como borrador. Puedo guardar este borrador antes de emitir,
+- [07:22] y aquí en la misión de documento, debería tirar el error porque no hay folio todavía.
+- [07:28] Perfecto. Error, reintento. No se pudo encontrar la información del archivo rango de números,
+- [07:33] perfecto. Todavía no tenemos folio, por eso tiró el error. Le llevó al...
+- [07:36] Ya, ok. Alda acá, ¿cierto? A ver. Aquí tengo el intermediario. Oye, el intermediario
+- [07:41] no te pregunté ni el nombre, le puse uno yo. Le puse Billing, Guion, Gateway. Pero
+- [07:48] después por último le cambiamos el hombre. Sí, sí, claro. Y aquí llegó la info,
+- [07:53] pero no tengo en el log el error que me tiró así, voy a dejar lo que me deje el log acá,
+- [07:57] solamente me está logreando la info. Pero ahí ya tendríamos flujo de lo que
+- [08:02] vendría a hacer las ventas, con la parte de la misión que estamos parados. Y esto
+- [08:07] queda como borrador cuando se te da falla, por si acaso. Cuando no te deja emitir,
+- [08:13] sé que ha guardado como borrador, y también lo puedes ver directamente en la parte de...
+- [08:18] las órdenas acá para poder factuarlo directamente y te queda con el que
+- [08:22] estaba probado. Y cuando se emite te sale con el estado emitido. Dentro de esto habrá
+- [08:31] algo que se me esté escapando yo, no sé si por ejemplo en parte de la
+- [08:34] ignorancia de esto que no conozco, si es que por ejemplo esta factura se puede
+- [08:39] reversar, existe algún movimiento de eso, ahí como que desconoce un poquito
+- [08:43] ser yo. O esto, por ejemplo, ya cuando pasan al servicio puesto interno quedan ahí
+- [08:48] y no se puede hacer nada. O sea, si el documento se puta el servicio de los
+- [08:55] rechazos se podría como eliminar, pero tenéis que validar ahí porque si el
+- [09:01] documento te movió inventario, cierto, se fue el servicio puesto interno, te lo
+- [09:05] organizaron, esa reversa para tienes que reversar el documento.
+- [09:10] Claro, porque hasta acá, por ejemplo, te entiendo, porque hasta acá esto es
+- [09:15] solamente interno y cuando yo le doy acá pasa el servicio puesto interno. Pero
+- [09:18] aquí ya me hizo el descuento como tú dices, entonces debería tener una acción
+- [09:21] más para devolver es esto que en caso de que nos haya hecho la, o sea, como nos
+- [09:25] haya validado la factura, ¿cierto? Claro, por ejemplo, no sé, pues si tiene algún
+- [09:29] error en el S.I. Ese es otro tema, es que ahí lo que podríamos hacer si la
+- [09:34] factura tiene error, ¿sí? Podríamos dos opciones que la puedan editar, ¿sí?
+- [09:42] Editar o eliminar y esa eliminación. Trae el esto. Tiene que devolver
+- [09:47] el stock a ODEA. ¿Sabí que eso sí? Si es servicio da igual, pues. Ay, no sé si te acordeis con la
+- [09:53] María José que en una reunión salió de que la reserva al menos, o sea, la no se
+- [09:57] podían devolver productos porque eran frutas, pues. Entonces cuando los devolven
+- [10:03] eso es merma, no sé si te acordeis que una vez salió la palabra merma entre
+- [10:06] medio de una reunión. Entonces de igual lo voy a validar si es que efectivamente
+- [10:12] existe porque a los locos por lo que entiendo venden solamente de productos
+- [10:16] es pura fruta, no venden nada más. A nivel de lo que sí es la gestión de
+- [10:22] un RP de otro sistema, claro, hay que tenerlo porque si ahí pueden haber de
+- [10:25] vuelta de stock, entonces igual podríamos tener la opción pero para este
+- [10:29] cliente oculta, si es que no hay ningún concepto de reserva porque me acuerdo de
+- [10:35] la María Jesús ahora que conversamos que creo que fue como en la cuarta
+- [10:39] reunión que dijo que no habían de vuelta en este comercio porque es fruta
+- [10:45] y si devolven es merma. Entonces ahí voy a aprovechar de preguntar, pues como
+- [10:55] ya vamos a estar todos, ahí va a aprovechar de tener ese feedback.
+- [11:02] Ya, vale, dejéme la notadita de esa consulta.
+- [11:05] Yes, yes, yes, yes, yes.
+- [11:07] Ay, pero y el tema del movimiento de bodega no lo aún no lo hace?
+- [11:14] Sí, sí, hace el descuento de bodega pero como no, de hecho mira por ejemplo
+- [11:19] este loco si hago otra orden de compra y la pruebo va a ser el movimiento
+- [11:24] interno, pues mira, vamos a ver a los productos cuántos tiene.
+- [11:28] Nuestros artículos de cereza, perfecto, bodegas,
+- [11:32] estado y los movimientos.
+- [11:36] No tengo como ver, oh, en serio, no tengo como ver el stock total, voy a agregar el
+- [11:40] tiro, un módulo de para ver el stock total.
+- [11:44] Chan.
+- [11:45] No, pero ahí tranquilos, o sea, se puede llegar a las cuatro con eso?
+- [11:50] Ah, sí, yo creo que estaba implementado Sergio, pero entre los permisos que estoy
+- [11:53] configurando la otra vez del dashboard, porque no se estaban aplicando una
+- [11:57] permisología, parece que ahí se borró.
+- [12:00] Pero claro, debería ser el descuento, aquí solamente estoy viendo los
+- [12:03] movimientos, sí, sí.
+- [12:13] Claro, pero en sí como lo tenía planeado, cuando esto yo lo apruebo, cuando
+- [12:16] que ha estado aprobado, ya se descuenta de la bodega, porque yo lo había
+- [12:21] pensado así, porque en caso de que por ejemplo hagan dos solicitudes de un
+- [12:25] producto que tenga un ejemplo, no más, stock 10.
+- [12:29] Si por ejemplo yo hago dos solicitudes de 10, la primera, que es aprobada,
+- [12:35] es la que se asegura el stock y la segunda, el momento de aprobarlo,
+- [12:38] debería decir desde el momento que se generó la solicitud hasta ahora
+- [12:45] que se está aprobando, el stock era tanto y ahora y tanto no se puede
+- [12:48] aprobar porque falta stock.
+- [12:50] Claro.
+- [12:52] Entonces sí, este hacía como el descuento, pero para reservarlo.
+- [12:58] Tengo que dejarlo como reserva, pero los hacía como descuento.
+- [13:01] Tengo que dejarlo como reserva.
+- [13:04] Claro, pero esa reserva después te dice que a eso es otro tema,
+- [13:07] por ejemplo, está bien, está súper bien, pero nos faltaría la
+- [13:12] pata y después liberar esa reserva.
+- [13:15] Sí, por ejemplo, no sé, si admitiste la orden de venta,
+- [13:19] con tal fecha, ¿cierto?
+- [13:21] Y te reservó tanto producto en sí, como que no lo sacaste de tu bodega,
+- [13:26] pero sí los tienes reservados.
+- [13:27] Claro, claro.
+- [13:28] Entonces, el stock disponible para una nueva venta va a bajar, ¿cierto?
+- [13:34] Podríamos tener dos indicadores de stock total y stock disponible, ¿cierto?
+- [13:38] Claro, sí, porque ese sería el stock disponible,
+- [13:41] sería, o sea, el stock disponible sería el stock total,
+- [13:45] menos las reservas, ¿cierto?
+- [13:46] Exacto.
+- [13:48] Y así también por ítem tener así como un cuantificado al momento
+- [13:52] de ir a ver los stock del módulo que me falta,
+- [13:55] también podría ver así como, ah, mira,
+- [13:57] de esta fruta tengo tanto, pero disponible tengo tanto,
+- [13:59] porque los otros están pendientes de una aprobación o algo.
+- [14:02] Claro.
+- [14:03] Sí, pero actualmente como está, este cuando se aprueba,
+- [14:06] llega y hace el descuento, no hay que pasarlo como un proceso de reserva.
+- [14:10] Eso también lo va a notar.
+- [14:14] Ya.
+- [14:14] Para hoy no, para hoy no, hoy ya me voy a enfocar a...
+- [14:17] Pero igual, hay que mencionar, hay que mencionar lo que lo vamos a trabajar así.
+- [14:20] Por ejemplo, no sé, pues si el, como te decía,
+- [14:23] el producto movió stock, o sea, la orden de venta,
+- [14:26] cuando antes de pasar en la aprobación,
+- [14:29] yo creo que es el que va a lidiarlo ahí, Carlos,
+- [14:32] por ejemplo, si pasa, emite la orden de venta y el producto
+- [14:36] mueve esto, o sea, un producto tiene control de inventario,
+- [14:41] esa orden de venta pasa a un stock reservado de una
+- [14:47] o o descuenta al tío el stock o va a mover el stock, la factura,
+- [14:54] pero claro, si no está reservado la orden de venta y el facturado
+- [14:57] y ya no tiene stock disponible, puede que venga un problema.
+- [15:01] Sí, Carlos, pero es ahora como hablándolo contigo,
+- [15:03] como que me di cuenta que no,
+- [15:05] porque si yo hago dos solicitudes de 100 y tengo stock 100
+- [15:08] y la pruebo, o sea, pues las do al mismo tiempo,
+- [15:11] ¿qué pasa ahí, Carlos?
+- [15:13] Claro, sí, no yo creo que está bien la orden de venta
+- [15:15] y de viaje de un stock, pero ese stock debería tener
+- [15:18] el tiempo de vigencia que ellos lo validen, por ejemplo,
+- [15:21] no sé, 10 días te voy a dejar ese stock de ahí,
+- [15:25] si tú desorden de venta, no me la factura el 10 día,
+- [15:28] ese stock tú lo pierdes.
+- [15:30] Sí, yo creo que es lo mejor, porque volte tú así,
+- [15:32] alguien haya dejado una reserva y se vaya y el,
+- [15:35] no sé, la persona que tenga la cuenta de superadmin
+- [15:37] o el jefe o cualquier persona no se puede meter,
+- [15:40] ¿qué hay eso infinito ahí en reserva?
+- [15:43] Claro, y lo otro que también, ese módulo de reservas,
+- [15:48] también se pueda liberar manualmente la reserva, ¿gaché?
+- [15:52] Claro, así como ver, así...
+- [15:55] Pero siempre cuando sea un súper usuario.
+- [15:57] Vale, igual así como que podríamos ligar las bases de datos,
+- [16:01] pues por ejemplo, si veís la reserva, no sé,
+- [16:05] ver, hacerle clic a la reserva y ver si es que,
+- [16:09] no sé, ¿cuántos tiempos de reserva que le queda?
+- [16:13] Claro.
+- [16:14] Ya, bacán, ahí voy a jugar, pero ya, sí, eso hay que implementarlo.
+- [16:18] Vamos entonces al de compras,
+- [16:20] como igual es como lo estoy basándolo el del de venta,
+- [16:23] es que quizá no lo tengo tan desarrollado.
+- [16:27] Claro, ahí hay que mencionar que el de compra,
+- [16:30] como decía ayer, compras,
+- [16:32] va a tener la opción de dividir manuales,
+- [16:34] pero la idea es que prácticamente no se ocupe,
+- [16:38] sino que se trabaje directamente con la integración
+- [16:42] de los docentes recibidos de los docentes.
+- [16:44] Claro, entonces ahí, eso es lo que me mencionaba ayer,
+- [16:48] de que yo, de la gente que me está vendiendo,
+- [16:50] debería tener las facturas para esas facturas,
+- [16:53] poder subirlas y después hacer la comparación de las compras
+- [16:56] con las facturas que tengo, ¿verdad?
+- [16:59] Ahí no te entendí, no te entendí, no.
+- [17:01] Porque las compras en sí igual deberían pasar por aprobación o no?
+- [17:08] No, pues...
+- [17:10] Ah, ojo, buen, buen punto, porque pueden, pueden haber...
+- [17:16] Sí, por montos, por cachay.
+- [17:18] Preguntémoslo, preguntémoslo por montos, sí, porque en cierto modo,
+- [17:22] incluso yo creo que las aprobaciones,
+- [17:25] se tienen que pasar más con las compras, bueno,
+- [17:28] porque sí, las ventas no deberían pasar por loco de aprobaciones.
+- [17:34] O sea, sí, sí, también.
+- [17:36] Dejarlo, dejarlo como por montos, pero en momentos más extremos
+- [17:38] que tengan delicadeza, pues, cachay, la venta.
+- [17:41] No, claro, o sea, si la aprobación debería definir qué tipo es,
+- [17:45] o qué flujo, venta o compra, ¿cachay?
+- [17:48] Porque en cierto modo, yo creo que ellos van a decir,
+- [17:51] no sé, pues voy a generar una,
+- [17:53] la verdad es que tenía un nombre,
+- [17:54] bueno, no me acuerdo si era la verdad en de compra
+- [17:56] o nota de venta, bueno, es que ellos de ahí
+- [17:58] vengo la confusión, bueno.
+- [18:01] Esa era una...
+- [18:03] era una nota, ¿cómo se llamaba?
+- [18:08] Sí, sí, te entiendo, si me acuerdo, si me acuerdo.
+- [18:13] Entonces, por ejemplo, en sí actualmente
+- [18:16] los dos tienen... se pueden configurar restricciones, ¿cachay?
+- [18:20] En las ventas yo lo pensaba como para dejarlo
+- [18:22] para montos grandes para que...
+- [18:25] claro, si van a venderse montos grandes
+- [18:28] debería haber quizá algún tipo de control.
+- [18:31] ¿Compra ella la restricción total de las compras?
+- [18:34] Pues ahí hay que limitar la gente, nos puede adquirir cosas sin...
+- [18:37] sin control.
+- [18:40] Y ahí también está mi duda, porque...
+- [18:42] Pero yo no me acuerdo cuál era el documento que se hacía,
+- [18:44] bueno, para que...
+- [18:46] que era, no sé si es una orden de venta,
+- [18:48] porque una cotización...
+- [18:51] parece que era cotización.
+- [18:53] Que metían ellos en el flujo de compra.
+- [18:56] Sí, era una cotización.
+- [18:59] Porque acá lo tengo.
+- [19:01] Ellos pasan por la cotización
+- [19:03] y después reciben la de la factura, ¿cierto?
+- [19:05] Exacto.
+- [19:07] Entonces, en la cotización pasa aprobación.
+- [19:10] Claro. Pero y ahí, por ejemplo,
+- [19:12] y esa cotización va a quedar en estado
+- [19:14] hasta pendiente, ¿cierto?
+- [19:16] Exacto.
+- [19:17] Hasta que no se apruebe...
+- [19:19] Ah, pero ahí... ahí cachay igual,
+- [19:21] puta, se viene vigida, ¿sobre qué?
+- [19:23] Evite la cotización, ¿cierto?
+- [19:25] pasa por el flujo de aprobación,
+- [19:27] el flujo de compra, ¿cierto?
+- [19:29] Y la cotización está aprobada,
+- [19:31] ahí recién el cliente
+- [19:33] o tu proveedor, en realidad,
+- [19:35] te va a emitir la factura, ¿cierto?
+- [19:37] Exacto.
+- [19:38] Y esa factura, cuando llegue,
+- [19:40] debería venir referenciando la cotización
+- [19:42] que tú generaste. Exacto.
+- [19:44] Entonces ahí, hay que pedirle si,
+- [19:46] en el caso de la cotización,
+- [19:48] viene sin referencia,
+- [19:50] se rechaza de manera automática,
+- [19:52] o usted la va a rechazar manual,
+- [19:54] o si se las destacamos para que usted sepan
+- [19:56] que esas facturas recibidas
+- [19:58] no vienen...
+- [20:00] no han sido referenciadas
+- [20:02] o están referenciando una cotización
+- [20:04] que no ha sido aprobada, ¿o qué sé?
+- [20:06] Sí, en ese caso, Sergio, ahí hablando
+- [20:08] sobre lo mismo, como van a referenciarse
+- [20:10] documentos, los documentos, yo, por ejemplo,
+- [20:12] si tengo una factura de un cliente,
+- [20:14] no voy a referenciar y poner la factura
+- [20:16] del cliente, debería subir el documento también, ¿verdad?
+- [20:20] ¿Cómo? ¿Cómo no te entendí?
+- [20:22] Por ejemplo, cuando ya, por ejemplo,
+- [20:24] tuve la aprobación de la cotización.
+- [20:26] ¿Ya?
+- [20:28] Porque aquí, supuestamente,
+- [20:30] tengo la aprobación
+- [20:32] de la cotización
+- [20:34] y ahí pasaría a hacer
+- [20:36] una orden de compra,
+- [20:38] ¿cierto, no?
+- [20:52] Pero,
+- [20:54] te plena.
+- [20:56] ¿Ya te olvides la cotización, ¿cierto?
+- [20:58] Claro, yo te olvido,
+- [21:00] oye, ¿sabes qué hacen falta pallets?
+- [21:02] ¿Me hacen falta pallets?
+- [21:04] Pero
+- [21:06] es tanta la cantidad que necesitamos,
+- [21:08] Sergio, que necesito que tú aprobí
+- [21:10] esta cotización.
+- [21:12] Entonces, yo te la voy a mandar.
+- [21:14] Cuando te va a llegar la cotización, te decía, claro, efectivamente
+- [21:16] son muchos pallets, no sé qué onda que no habíamos comprado
+- [21:18] y esto necesita mi aprobación, porque excede,
+- [21:20] no sé, un palo.
+- [21:22] Entonces, si te voy a darle la aprobación,
+- [21:24] a mí va a llegar la notificación de que tú aprobaste.
+- [21:26] Entonces, a nivel
+- [21:28] de lo que vendría a hacer al mamá,
+- [21:30] interno, llámela a probar. Ahora,
+- [21:32] tendría que hacer la parte del
+- [21:34] registrar esta
+- [21:36] cotización. O sea,
+- [21:39] ahí viene la cotización, viene el flujo de
+- [21:41] que tú ya, no sé si se la vas,
+- [21:43] ahí recién cuando se aprueba
+- [21:45] se puede enviar
+- [21:47] como la cotización hacia tu proveedor, ¿cierto?
+- [21:49] Ya, eso no lo tengo.
+- [21:51] Ahí como que recién viajaría
+- [21:53] esa orden de ven,
+- [21:55] de esa cotización, perdón, hacia tu proveedor.
+- [21:57] Porque una cotización aprobada.
+- [21:59] Claro.
+- [22:01] Entonces, cuando te llega
+- [22:03] la cotización, o sea,
+- [22:05] la factura de referenciando esa cotización
+- [22:07] es lo que te decía yo,
+- [22:09] que puede ser que si esa cotización
+- [22:11] no está aprobada, final,
+- [22:13] la factura no debería ser aceptada.
+- [22:15] ¿Lo explico?
+- [22:17] En ese caso, por ejemplo, aquí
+- [22:19] en mi pantalla, aquí estoy haciendo una cotización
+- [22:21] y, por ejemplo, aquí yo no tengo conectado
+- [22:23] el servicio producto
+- [22:25] que me venden, porque no tengo un catálogo
+- [22:27] de lo que me venden los productores.
+- [22:29] Pues no puede que compre cosas
+- [22:31] que no están ni pensadas más a futuro.
+- [22:33] ¿No tengo conectado una base de datos?
+- [22:35] ¿Eso está bien, ¿cierto?
+- [22:37] Claro.
+- [22:39] Perfecto.
+- [22:41] Aquí quizás deberíamos tener algo que diga
+- [22:43] que si es un servicio o un producto.
+- [22:45] Sí, eso lo tenéis que destacar.
+- [22:47] Perfecto.
+- [22:49] Vamos a darle una boca
+- [22:54] y vamos a agregar otro por si acaso.
+- [22:56] A ver qué vas aprovechando el test.
+- [23:01] Perfecto.
+- [23:03] Vamos a crear.
+- [23:05] Está como borrador, porque yo le digo
+- [23:07] perfecto, puedo editarla,
+- [23:09] emitir la cotización,
+- [23:11] convertir en orden de compra, eso me sale
+- [23:13] porque acá sube el administrador,
+- [23:15] pero a los demás le sale
+- [23:17] emitir cotización, que esto pasa por el proceso
+- [23:19] de aprobación.
+- [23:21] Entonces, emitir
+- [23:23] y aquí no está pasando por el proceso
+- [23:25] de aprobación, eso lo voy a ajustar.
+- [23:27] O podríamos esperar que nos
+- [23:29] detallen ellos.
+- [23:31] Nos confirmen, sí, sería bueno.
+- [23:33] Aquí podemos decir de que no está aplicado
+- [23:35] y vamos esperando su confirmación,
+- [23:37] pero así se vería una vez ya aprobado
+- [23:39] que haría en este estado
+- [23:41] de emitido una vez apruebe.
+- [23:43] Yo debería dejarlo como emitido
+- [23:45] y acá, por ejemplo, puedo imprimirlo,
+- [23:47] editarlo nuevamente
+- [23:49] y tengo el botón de convertir en orden de compra.
+- [23:51] Aquí es donde juega la parte que pasa
+- [23:53] de nuevo a hacer un DT, ¿verdad?
+- [23:56] No, no, no, no, convertir en orden de compra
+- [23:58] no puedo.
+- [24:00] Esa cotización queda aprobada,
+- [24:02] en realidad no debería convertirla nada.
+- [24:04] Después tú tienes que esperar a que recibas
+- [24:06] la factura de tu proveedor.
+- [24:08] Ah, ya.
+- [24:10] Que eso va a ser la integración con Google Sock
+- [24:12] en los documentos de compra.
+- [24:14] Entonces, aquí yo le digo ya caballero
+- [24:16] mándeme la factura de lo que
+- [24:18] estoy comprandole.
+- [24:20] Exacto. Y yo ya una vez ya el caballero
+- [24:22] demande la factura
+- [24:24] y eso es lo que te preguntaba delante, por ejemplo,
+- [24:26] yo aquí solamente referencio el número
+- [24:28] de la factura de él, no tengo que subir el documento, ¿verdad?
+- [24:30] No, no, no, ahí no tienes que referenciar
+- [24:32] nada. Ah, ya.
+- [24:34] Tú no referencias nada, porque ese
+- [24:36] pensemoslo así que el documento
+- [24:38] origen, ¿ya?
+- [24:40] El inicio de la historia.
+- [24:42] Entonces, no sabes
+- [24:44] que folio te va a emitir tu proveedor.
+- [24:46] Claro. ¿Me explico?
+- [24:48] Entonces, pero sí, tu proveedor
+- [24:50] sabe a qué
+- [24:52] documento tiene que hacer referencia a esa factura
+- [24:54] que es tu cotización.
+- [24:56] ¿Cachay? Número X. Vale.
+- [24:58] Vale, vale, vale.
+- [25:00] Igual Carlos sería bueno esta duda
+- [25:02] que tenemos a ser un dibujito
+- [25:04] como un flujo
+- [25:06] que viene de la cotización
+- [25:08] aprobación en diferentes niveles.
+- [25:10] Sí. Y después
+- [25:12] es la recepción del documento
+- [25:14] hacer las preguntas
+- [25:16] pero tener ahí marcaito
+- [25:18] como si una pregunta es a parte del flujo.
+- [25:20] Si en la factura
+- [25:22] viene con referencia, se tiene que
+- [25:24] auto rechazar o se
+- [25:26] se marca para que pues se pueda
+- [25:28] hacer la anular.
+- [25:30] Vale, genial.
+- [25:32] Voy a preparar ese dibujito
+- [25:34] y
+- [25:36] aquí por ejemplo
+- [25:38] editar, imprimir, anular también.
+- [25:40] Me imagino que anular, si el caballero me hizo de que
+- [25:42] no le midí la factura o me fui a quebrar
+- [25:44] así que busques otro proveedor y te vas a eliminarlo.
+- [25:46] Está bien el anular.
+- [25:48] Claro. Y aquí el convertidor
+- [25:50] de compra
+- [25:52] aquí me tira
+- [25:54] a este
+- [25:56] por así decirlo
+- [25:58] que ah mira de hecho está mal
+- [26:00] porque aquí recién va a pasar por el proceso
+- [26:02] aprobación debería ser antes de la orden
+- [26:04] de compra. Sí.
+- [26:06] Si recuerde que aquí la orden de compra
+- [26:08] ya está listo e interno.
+- [26:10] Sí, pues es que es la cotización
+- [26:12] para ellos pues. Sí.
+- [26:14] Yo siento que está mal
+- [26:16] pero ya es un tema de ellos. Sí.
+- [26:18] Y eso después cuando lo migreo al otro lado
+- [26:20] no lo vamos a migrar así.
+- [26:22] En realidad para las compras siempre se ha
+- [26:24] encontrado una orden de compra
+- [26:26] y después recibe la factura. La cotización
+- [26:28] es cuando yo quiero
+- [26:30] mi cliente por ejemplo
+- [26:32] yo
+- [26:34] como vendedor le estoy cotizando
+- [26:36] a la
+- [26:38] una venta, lo explico? Sí, por eso el concepto
+- [26:40] de la cotización yo lo encontraba
+- [26:42] como que de manera interna era como extraño.
+- [26:44] Sí, o sea
+- [26:46] para, o sea el flujo normal
+- [26:48] es que una cotización
+- [26:50] está en la sábada venta
+- [26:52] y ellos la cotización la sábada
+- [26:54] la compra.
+- [26:56] Y la orden de compra está en la sábada la compra
+- [26:58] porque es una orden
+- [27:00] de ordeno a comprar.
+- [27:02] Está autorizo esta compra
+- [27:04] que voy a hacer. Sí, sí, sí.
+- [27:06] Ya me parece que dejarlo ahí
+- [27:08] yo digo un dibujito para
+- [27:10] para ver qué dicen.
+- [27:12] Vale, vale. Voy a preparar eso primero
+- [27:14] voy a hacer esta corrección de la
+- [27:16] compra, menos la venta ya la tenemos claro.
+- [27:18] Para llegar con todas las dudas las compras voy a intentar corregirlo
+- [27:20] rapidito para que quede con la aprobación
+- [27:22] antes para que nos confirmen bien el
+- [27:24] sistema de la orden de compra porque la cotización
+- [27:26] es un poco extraño.
+- [27:28] Hacete un dibujito de las dudas que teníamos
+- [27:30] para que lo digieran bien porque
+- [27:32] puta de verdad está hablando y
+- [27:34] no se, no lo escuchamos bien
+- [27:36] o ellos a lo mejor no nos escuchan
+- [27:38] mejor que lo vean visual
+- [27:40] y digan nada así, mira no, esta parte tiene
+- [27:42] que agregar esto ¿Cachay? No sé si
+- [27:44] o que el Cachay, el Lucy, ya.
+- [27:46] Sí, el que ocupáis tú.
+- [27:48] No ves el ScaliDrap
+- [27:50] y ahí es lo que deseamos a Lucy
+- [27:52] a todos, cualquiera de los dos
+- [27:54] o que tú ocupes
+- [27:56] para hacer el dibujito
+- [27:58] ahí trata de llegar con algo para poder
+- [28:00] editarlo ahí en la reunión
+- [28:02] y quedamos con el flujo final, ¿me caché?
+- [28:04] Vale.
+- [28:06] Vale, vale, vale. No voy así
+- [28:08] que más claro, estoy toda razon.
+- [28:14] Eso. Y bueno todavía no confirman
+- [28:16] nada de los, de los CAF
+- [28:18] ni una custena así que
+- [28:20] estaba ahí medio. Sí, pero ahí
+- [28:22] tú muestrasle que ya estamos haciendo la petición
+- [28:24] y que quedan la petición almacenada
+- [28:26] que apendiente. Sí
+- [28:28] y ya con esta conexión igual, con la emisión
+- [28:30] podemos decirle que vos ok de estar listo
+- [28:32] y que sale el error de los CAF, entonces los test
+- [28:34] han estado devorosos porque necesitamos probarlo
+- [28:36] con CUAR.
+- [28:38] Claro, pero si ya estamos
+- [28:40] construyendo lequimere, es verdad
+- [28:42] eso ¿cierto? Sí, sí.
+- [28:44] De hecho, está tal cual como lo habíamos
+- [28:46] planeado esa vez, pues se genera un
+- [28:48] que este se manda al intermediario
+- [28:50] el intermediario tomase Jason lo transforma
+- [28:52] a lo que necesita GoSocket, que es
+- [28:54] LXML y lo manda GoSocket.
+- [28:56] Sí, que está más que ready.
+- [28:58] Ok.
+- [29:00] Ahí hay que
+- [29:02] podría decirte después de esta reunión
+- [29:04] avanzar, no entendí, ya tenemos
+- [29:06] dentro de la documentación la estructura de
+- [29:08] respuestas. Sí.
+- [29:10] Estos tipos. Estos son mock-up así
+- [29:12] como que, como que pensando
+- [29:14] el flujo que nos aprueban
+- [29:16] la estructura y como quería marcar
+- [29:18] tiene que ver, por ejemplo, no sé como
+- [29:20] para ver la trazabilidad y que merece
+- [29:22] toda esa información.
+- [29:24] Tu gacha y Sergio, que un igual intenta
+- [29:26] optimiza el proceso y el proyecto
+- [29:28] de Almaweb tiene una variable que
+- [29:30] si yo le pongo false
+- [29:32] falsea la emisión
+- [29:34] el local. Ah, el modo demo, el modo
+- [29:36] demo. No, no.
+- [29:38] Ni siquiera en el modo demo
+- [29:40] porque como no tenía
+- [29:42] las que y todo eso
+- [29:44] igual necesitaba probar de que al menos se mandara
+- [29:46] la información de una a otra forma, pues gacha ahí.
+- [29:48] Ya, ok.
+- [29:50] Entonces el loco, si le pongo falsa esa variable
+- [29:52] el loco no lo tira al intermediario
+- [29:54] sino que genera como al azar
+- [29:56] un numerito y te deja
+- [29:58] una leyenda en amarillo, bien notaria
+- [30:00] que te dice, este documento no es real
+- [30:02] no ha pasado por la DTE, es solamente
+- [30:04] para efectos de desarrollo
+- [30:08] como para previo.
+- [30:13] Ya, ok. Ya, buenísimo.
+- [30:15] Si igual podemos hacer esa
+- [30:17] la emisión
+- [30:19] le pongo el false nomas y podemos hacer
+- [30:21] la muestra y decirle, mire,
+- [30:23] estos al así porque nos tenemos en los CAF
+- [30:25] y lo hemos configurado para que ustedes puedan ver como el proceso
+- [30:27] pero mientras no tengan regularizado
+- [30:29] un go socket, nos podemos hacer
+- [30:31] la prueba real.
+- [30:33] Si, si, pero es perfecto.
+- [30:35] Va acá.
+- [30:37] Ya,
+- [30:39] estamos. Llegando
+- [30:41] un minuto para la otra revu.
+- [30:43] Oh, verdad.
+- [30:45] Bueno.

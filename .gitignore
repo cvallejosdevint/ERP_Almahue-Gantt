@@ -14,6 +14,12 @@ ERP/backups/*.backup
 
 # Videos de reuniones (pesados; viven en disco local)
 docs/erp-planificacion/agrosoft-levantamiento/fuentes/videos/*.mp4
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-19-demo-interno/audio.wav
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-19-demo-interno/frames/
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/audio.wav
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/frames/
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/transcribe.py
+
 
 # Credenciales Trello (locales; no versionar)
 docs/erp-planificacion/agrosoft-levantamiento/.env.trello
@@ -39,3 +45,4 @@ docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*-raw.md
 .rooignore
 historial_cursor_exportado.md
 tools/recovered-workspace-context/
+tools/transcript-ollama/out/

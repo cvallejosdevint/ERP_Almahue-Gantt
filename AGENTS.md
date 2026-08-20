@@ -56,6 +56,7 @@ Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md
 ### Siguen vigentes
 
 - **H14:** no asumir migrate stock/OV/`piloto_on` en `45.7.229.46` hasta deploy explícito.
+- **Prisma QA local:** `erp._prisma_migrations` está **vacía** (Prisma ve 50 pendientes) aunque el schema `erp` ya existe. **No** `migrate deploy` a ciegas (rompe en `init`). **No** `resolve --applied` sin BD desechable de comparación. El rol `almahue` no tiene `CREATEDB` (bloqueó la reconstrucción). Dump: `ERP/erp_back/qa-results/` (gitignored). Informe: `qa/resultados/2026-08-19-prisma-drift-local.md` (gitignored). No mezclar `public._prisma_migrations` (otro producto).
 - **DTE / H11:** tres modos. `BILLING_GATEWAY_ENABLED=false` → contabiliza sin partner. `true` + `BILLING_STUB_INLINE=true` → stub local demo. `true` + `STUB_INLINE=false` → HTTP `billing-gateway` (GoSocket sandbox `developers-sbx`). Sin CAF/cert MJ el partner **REJECTED** (fail-closed, no asiento). No SII live. No reabrir como «falta GoSocket».
 - **H9:** SMTP correo PIN (externo).
 - **R4-18:** cobranza = propuesta, no módulo.

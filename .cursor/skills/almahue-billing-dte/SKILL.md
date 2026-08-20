@@ -12,8 +12,11 @@ description: Cliente HTTP billing-gateway / stub inline / fail-closed GoSocket; 
 - `BILLING_GATEWAY_ENABLED=false`: no emite DTE ni llama HTTP; comercial contabiliza sin partner (comportamiento histórico).
 - `BILLING_GATEWAY_ENABLED=true` + `BILLING_STUB_INLINE=true`: stub local ERP (`ACCEPTED_STUB`, `partner: stub-inline`, folio `STUB-{tipoDte}-…`) para demo.
 - `BILLING_GATEWAY_ENABLED=true` + `BILLING_STUB_INLINE=false`: HTTP `POST /v1/emissions` a `BILLING_GATEWAY_URL` (default `http://127.0.0.1:3040`) con `CanonicalDocumentV1`; el gateway decide stub vs GoSocket según su registry.
-- Al contabilizar, si `emit()` es ACCEPTED se **persiste** `billingEmissionId` **antes** del asiento (evita reenviar al partner si el asiento falla). `REJECTED` no se cachea en el gateway (reintento tras CAF vuelve a llamar al partner). Folio GUF recortado a 15 dígitos (Int64).
-- **UI Emitir / Finalizar borrador / Libro › contabilizar:** banner persistente (`role="alert"`, `data-testid="emit-error-banner"`) + toast 12s con el mensaje del partner. El panel «Resumen de transmisión» **no** afirma stub; describe fail-closed (CAF/rango → borrador, sin asiento).
+- Al contabilizar, si `emit()` es `ACCEPTED` se **persiste** `billingEmissionId` **antes** del asiento (evita reenviar al partner si el asiento falla). HTTP stub solo se acepta con `SIMULATED` + `stub=true` + `partner/connectionMode=stub`.
+- Idempotencia gateway: clave compuesta ERP+empresa+key, fingerprint y bloqueo concurrente in-process. `PENDING`/`ACCEPTED`/`SIMULATED` se cachean (no reenvían al adapter); `REJECTED` no se cachea (reintenta tras CAF). Store durable **SQLite archivo** (`BILLING_STORE_PATH`, default `./data/emissions.sqlite`) para QA/single-instance; sobrevive reinicio del proceso. Multi-réplica/prod sigue necesitando store compartido (Postgres/Redis); no está implementado.
+- Seguridad gateway: API key obligatoria de 32+ bytes, bind local y CORS cerrado por defecto; canónico valida RUT/DV, fechas, líneas/totales y límites. Folio GUF máximo 15 dígitos (Int64).
+- Exportación: receptor extranjero `EX-*` solo con indicador exportación; GUF usa RUT genérico SII `55.555.555-5`.
+- **UI Emitir / Finalizar borrador / Libro › contabilizar:** banner persistente (`role="alert"`, `data-testid="emit-error-banner"`) + toast 12s con el mensaje del partner. El aviso de política de transmisión es un ícono **i** (hover/click), no un recuadro fijo.
 - Factura de ventas sale de **OV**, no de cotización Compras. Wizard Emitir: FACTURA/NC/ND/GUIA.
 - FLETE en OV es `tipoLinea`; canonical DTE **no auditado** si manda recargo SII (D17).
 - Reenvío PDF/XML libro (R4-08): print HTML local; XML/PDF partner diferido.
@@ -26,7 +29,7 @@ No implementar GoSocket dentro del ERP. El puente consume el canónico y devuelv
 
 `BillingEmissionResult`: `emissionId`, `partner`, `connectionMode`, `status`, `folioOficial` | `folioSimulado`, ids partner, `messages`, `disclaimer`, `artifacts` (incluye `dummy` si el gateway lo devuelve), `stub`.
 
-GoSocket y credenciales reales viven en `billing-gateway` (repo/proceso aparte), no en el ERP. Sandbox QA: `https://developers-sbx.gosocket.net/api/v1/` (no usar `developers.gosocket.net/sandbox`, bloqueado). **BIL-007** (SII/partner real) no es FAIL si el gateway está en modo stub; no inventar que SII está live. Sin CAF en portal, GoSocket rechaza por rango de folios.
+GoSocket y credenciales reales viven en `billing-gateway` (repo/proceso aparte), no en el ERP. Sandbox QA: `https://developers-sbx.gosocket.net/api/v1/` (no usar `developers.gosocket.net/sandbox`, bloqueado). **BIL-007** (SII/partner real) no es FAIL si el gateway está en modo stub; no inventar que SII está live. Sin CAF en portal, GoSocket rechaza por rango de folios. **BIL-007 sigue SKIP hasta CAF;** checklist operativo (sin live, sin cambiar emisión): `docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/2026-08-19-checklist-caf-portal.md`.
 
 ## No hacer
 

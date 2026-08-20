@@ -16,10 +16,13 @@ No reutilizar `CotizacionesPage` para ventas. No poner cotización de cliente en
 
 ## Inventario
 
-- Saldo de venta = `StockInsumoBodega` positivo (no tránsito).
-- Movimiento `SALIDA_VENTA` al **confirmar OV**, no al facturar.
-- Línea producto: `splits: [{ bodegaId, cantidad }]`; suma = cantidad; no sobre-stock.
-- Factura copia qty + descripción; precio editable; no segundo movimiento.
+- Saldo físico = `StockInsumoBodega.cantidad`.
+- Al **autorizar** OV (último paso de cadena): `ReservaStock` ACTIVA **7 días** (no descuenta físico).
+- Disponible = físico − reservas ACTIVA no vencidas.
+- Al **confirmar** OV: consume reserva (`CONSUMIDA`) + movimiento `SALIDA_VENTA`.
+- Factura **no** mueve stock otra vez.
+- Mantenedor: Insumos › Stock por bodega / producto (`/insumos/stock`).
+- **Emitir** factura exige OV propia facturable (`APROBADO`/`EMITIDO`); no alta libre de FACTURA.
 
 ## Precio y flete
 
