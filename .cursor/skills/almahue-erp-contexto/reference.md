@@ -3,6 +3,8 @@
 | Doc | Uso |
 |---|---|
 | `reunion6-minuta-2026-08-06.md` | Decisiones vigentes (organigrama, PIN, ficha, OV) |
+| `reunion-2026-08-20-tarde-lupe-mario.md` | Sesión Lupe/Mario 20/08 tarde (compras+tesorería). **No** pisa Reu6. |
+| `reunion-2026-08-20-contraste-sergio.md` | Interna mañana 20/08 (solo Sergio). Hipótesis. |
 | `reunion5-minuta-2026-08-03.md` | Ajustes post-demo |
 | `reunion4-minuta-2026-07-30.md` | Base de producto |
 | `03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md` | Fuente de verdad aprobaciones (grupos/escalas) |

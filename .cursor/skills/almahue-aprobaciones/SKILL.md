@@ -13,8 +13,9 @@ Grupo (quién solicita → aprobador inicial)
     → Cadena calculada (el solicitante no elige aprobador)
 ```
 
-- Un usuario: **un grupo por módulo** (Compras / Contratistas / Comercial). Excepción: **ROL-1 / `*`** (mantenedor) arma cadena con el **primer grupo activo** del módulo, sin membresía. AdminConcepto y el resto **sí** exigen grupo.
-- Módulos con cadena: **Compras**, **Contratistas** y **Comercial** (OV; piloto `comercialRequiereAprobacion` **ON**, migración `20260818180000`). Factura desde OV autorizada: sin segunda cadena.
+- Un usuario: **un grupo por módulo** (hoy **solo Compras**). Excepción: **ROL-1 / `*`** (mantenedor) arma cadena con el **primer grupo activo** del módulo, sin membresía. AdminConcepto y el resto **sí** exigen grupo.
+- Módulos con cadena: **solo Compras (OC)**. Ventas (OV) y Contratistas (proformas) **no** tienen bandeja ni PIN de cadena (corte 21/08, sesión Lupe/Mario).
+- El Administrador **no figura** en grupos ni escalas. Puede aprobar o rechazar cualquier eslabón pendiente de OC (override implícito). El tope de la cadena es un usuario operativo.
 - El Administrador **no figura** en grupos ni escalas. Puede aprobar o rechazar cualquier eslabón pendiente (override implícito). El tope de la cadena es un usuario operativo.
 - PIN ligado a **designación en reglas**, no al checkbox de rol. Demo: `4821`.
 

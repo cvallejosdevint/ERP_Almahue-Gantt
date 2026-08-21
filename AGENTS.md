@@ -18,6 +18,7 @@ Si chocan, gana la más reciente: **Reu6** → Reu5 → Reu4.
 
 - `docs/erp-planificacion/agrosoft-levantamiento/reunion6-minuta-2026-08-06.md`
 - `docs/erp-planificacion/agrosoft-levantamiento/03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md`
+- Sesión cliente 20/08 **tarde** (Lupe, Mario): `reunion-2026-08-20-tarde-lupe-mario.md`. Código local 21/08: **aprobaciones solo Compras** (se eliminó cadena OV y, en la misma tanda, proformas). Distinta de la interna de la **mañana** (`reunion-2026-08-20-contraste-sergio.md`).
 - `docs/erp-planificacion/convenciones-almaue-erp.md`
 - QA: `docs/erp-planificacion/agrosoft-levantamiento/qa/PLAN-PRUEBAS-APROBACIONES.md`
 
@@ -44,13 +45,14 @@ Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md
 
 ### Cerrado en código local (no reabrir)
 
-- **D4 / H3:** cadena OV **existe**. Flag `comercialRequiereAprobacion` piloto **ON** (schema `@default(true)`, seed EMP-1, migración `20260818180000_comercial_aprobacion_piloto_on`, `comercialAprobacionDesde=0`). Factura desde OV autorizada: sin segunda cadena. Prod: no asumir hasta migrate + reunión (H14).
-- **D11:** Compras › Cotizaciones → OC (`BORRADOR`). Ventas › Orden de venta → stock al confirmar → factura. Redirect `/comercial/cotizaciones` → Compras. Catálogo pantallas alineado (Cotizaciones en Compras). No restaurar cotiz→NP→factura.
-- **D16:** `ventaBajoCosto=BLOQUEAR` en Admin › Empresas (UI existe).
+- **D4 / H3:** cadena de aprobación **solo Compras (OC)**. Se **eliminó** (no se ocultó) la cadena de OV: sin flag `comercialRequiereAprobacion`, sin bandeja `/comercial/aprobaciones`, sin `AprobacionOv`. OV: `BORRADOR` → confirmar (stock) → factura. Migración `20260821120000_aprobaciones_solo_compras_drop_ov`.
+- **D11:** el documento de arranque de compras es la **OC**. Cotización = referencia opcional (tipo/folio/fecha) **en la OC**; no hay menú ni CRUD de Cotizaciones ni atajo cotiz→OC. Ventas › Orden de venta → confirmar stock → factura **sin** cadena. Redirect `/compras/cotizaciones` y `/comercial/cotizaciones` → `/compras/ordenes`. No restaurar cotiz→NP→factura.
+- **D16:** no vender producto bajo `costoPromedio` (regla fija en OV/emisión). **No** hay parámetro ni combo en Admin › Empresas. No reabrir `ventaBajoCosto` / `PERMITIR_MERMA`.
 - **Emitir:** solo FACTURA/NC/ND/GUIA. Borradores DTE en Emitir, **no** en Libro ventas (P0-4).
 - **D7 / H1:** lookup RUT sociedad + clientes + proveedores + flag `esProductor`. Maestro Productor sigue fuera.
-- **OC wizard:** correlativo `OC-AAAA-NNNN` (`allocateOcNumero`). **Guardar borrador** = `BORRADOR` sin bandeja; **Enviar a aprobación** = `PENDIENTE_APROBACION`. Admin **ROL-1** (`*`) arma cadena con el **primer grupo activo** (sin membresía) y **no figura** en la escala. Cotiz→OC usa número ad-hoc `OC-{folio}-{ts}`.
-- **Libro de compras / Emitir-OV:** montaje `/compras/registro` (19/08); `GET /cuentas` lectura operativa (`comercial:read`); factura desde OV sin cuenta obligatoria en piloto.
+- **OC wizard:** correlativo `OC-AAAA-NNNN` (`allocateOcNumero`). **Guardar borrador** = `BORRADOR` sin bandeja; **Enviar a aprobación** = `PENDIENTE_APROBACION`. Admin **ROL-1** (`*`) arma cadena con el **primer grupo activo** (sin membresía) y **no figura** en la escala.
+- **Libro de compras:** se puede asociar factura a OC no aprobada (**destacar**, `ocNoAprobada`); no contabilizar ni pagar hasta OC `APROBADO` o posterior. Plazo aceptación comercial `aceptacionCompraPlazoDias` (default 8, Admin › Empresas). Asiento de libro sin cuenta imputable = deuda P0-1 (no es el gate de OC).
+- **Proformas:** `BORRADOR` → `DEFINITIVA` con `contratistas:write`; **sin** bandeja ni PIN de cadena.
 - **H1–H8, H4, H8 Guías:** listos en código local.
 
 ### Siguen vigentes

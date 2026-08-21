@@ -19,6 +19,8 @@ docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-19-demo-interno/fr
 docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/audio.wav
 docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/frames/
 docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/transcribe.py
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/whisper-local/**/audio.wav
+docs/erp-planificacion/agrosoft-levantamiento/fuentes/whisper-local/**/frames/
 
 
 # Credenciales Trello (locales; no versionar)

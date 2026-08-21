@@ -10,5 +10,5 @@ alwaysApply: false
 - Orden de venta (`ORDEN_VENTA`) = Ventas, receptor cliente, stock al **confirmar**, factura copia qty/desc (precio editable).
 - No reutilizar `CotizacionesPage` para OV. No cotización de cliente en menú Ventas.
 - No usar wizard Emitir para cotización/NP/OC.
-- `ventaBajoCosto` es param de empresa (Admin › Empresas, default BLOQUEAR), no checkbox de rol.
+- No vender producto bajo costo: regla fija en OV/emisión, no parámetro de empresa ni combo en Admin › Empresas.
 - Lookup: sociedad + clientes + proveedores + flag `esProductor`; no hay maestro Productor.

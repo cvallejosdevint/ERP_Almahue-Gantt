@@ -21,7 +21,7 @@ Código: `ERP/erp_back`, `ERP/erp_front`. Docs: `docs/erp-planificacion/agrosoft
 
 Carlos/Sergio en reuniones = hipótesis. Requisitos = Agustín/MJ + minuta + código (rule `almahue-reuniones`).
 
-Minutas: `reunion6-minuta-2026-08-06.md`, `reunion5-minuta-2026-08-03.md`, `reunion4-minuta-2026-07-30.md`.
+Minutas: `reunion6-minuta-2026-08-06.md`, `reunion5-minuta-2026-08-03.md`, `reunion4-minuta-2026-07-30.md`. Sesión Lupe/Mario 20/08 tarde: `reunion-2026-08-20-tarde-lupe-mario.md` (no pisa Reu6).
 
 ## Auth / permisos
 
@@ -36,14 +36,14 @@ Minutas: `reunion6-minuta-2026-08-06.md`, `reunion5-minuta-2026-08-03.md`, `reun
 
 ## Documentos (Reu6)
 
-- Compras › Cotizaciones → proveedor → OC. Ventas › Orden de venta → cliente → stock → factura.
+- Compras › OC (cotiz = referencia tipo/folio/fecha). Ventas › Orden de venta → cliente → stock → factura. Sin menú Cotizaciones.
 - Skill: `almahue-comercial-inventario`.
 
 ## Huecos de producto (no greenfield)
 
 - Tesorería y contabilidad: módulos en código; smoke UI live 19/08 (EMP-BOOT) PASS. Demo cliente / «oficial SII» no cerrados.
 - DTE: cliente HTTP a `billing-gateway` cuando `BILLING_GATEWAY_ENABLED=true` y `BILLING_STUB_INLINE=false`. Stub inline solo si ambos flags true. Sin CAF/cert en portal GoSocket QA el partner rechaza (fail-closed). **No** emisión SII live. Skill `almahue-billing-dte`.
-- Aprobación: **sí cubre OV** si `comercialRequiereAprobacion` (piloto ON, migración `20260818180000`). Factura desde OV autorizada: sin segunda cadena. Admin **no** es nodo de escala.
+- Aprobación: **solo Compras (OC)**. OV y proformas sin cadena (corte 21/08). Admin **no** es nodo de escala.
 - Skill comercial: `almahue-comercial-inventario`. Corte docs: inventario `qa/resultados/2026-08-18-ciclo-0-inventario-docs.md` (el as-is 14/08 está `{deprecado}`).
 - Siguen: H14 prod, SMTP, cobranza R4-18, `workflows-admin` legacy, FLETE canonical, productor no maestro, recepción OC no mueve stock.
 

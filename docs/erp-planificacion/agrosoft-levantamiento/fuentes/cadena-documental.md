@@ -1,6 +1,6 @@
 # Cadena documental ERP Almahue (identificación)
 
-Orden cronológico confirmado · actualizado 2026-07-23
+Orden cronológico confirmado · actualizado 2026-08-21
 
 ## Timeline
 
@@ -96,3 +96,14 @@ En Trello cliente: tarjeta **Carta Gantt** (En QA Almahue).
 | Existe un archivo literal “minuta.docx” | **No encontrado**; síntesis repartida en MD de consolidación/decisiones |
 
 Si los dos docs de marketing fueran otros archivos, indicar nombres exactos para corregir este índice.
+
+---
+
+## 20/08/2026 — dos grabaciones distintas
+
+| Cuándo | Quién | Docs |
+|---|---|---|
+| Mañana (~10:58) | Solo Carlos + Sergio (interna) | [`../reunion-2026-08-20-contraste-sergio.md`](../reunion-2026-08-20-contraste-sergio.md) · video `105836` |
+| Tarde (~17:49, ~41 min) | Sergio, Lupe, Mario, Carlos | [`../reunion-2026-08-20-tarde-lupe-mario.md`](../reunion-2026-08-20-tarde-lupe-mario.md) · transcripción [`transcripcion-2026-08-20-tarde-lupe-mario.md`](transcripcion-2026-08-20-tarde-lupe-mario.md) · tl;dv [6a877e1e644c1a00131f8046](https://tldv.io/app/meetings/6a877e1e644c1a00131f8046) · video `174935` (~1,12 GB, no git) |
+
+La de la tarde **no** es Reu7 y **no** pisa Reu6 (MJ/Agustín).

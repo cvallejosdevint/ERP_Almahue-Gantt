@@ -23,7 +23,7 @@ Emisión OC: `qa/resultados/2026-08-17-p0-emision-registro.md` (el as-is 14/08 e
 
 ## Deuda conocida — no FAIL de producto
 
-No reabrir como gap: cadena OV (D4), Emitir solo FACTURA/NC/ND/GUIA, `ventaBajoCosto` **con** UI Admin › Empresas, catálogo vs Sidebar (D11), Libro de compras montaje (fix 19/08), Emitir-desde-OV sin exigir cuenta en piloto.
+No reabrir como gap: cadena OV (D4), Emitir solo FACTURA/NC/ND/GUIA, D16 bloqueo bajo costo **sin** flag/UI de empresa, catálogo vs Sidebar (D11), Libro de compras montaje (fix 19/08), Emitir-desde-OV sin exigir cuenta en piloto.
 
 Sigue vigente:
 
