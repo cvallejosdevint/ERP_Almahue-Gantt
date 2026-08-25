@@ -21,6 +21,7 @@ Si chocan, gana la más reciente: **Reu6** → Reu5 → Reu4.
 - Sesión cliente 20/08 **tarde** (Lupe, Mario): `reunion-2026-08-20-tarde-lupe-mario.md`. Código local 21/08: **aprobaciones solo Compras** (se eliminó cadena OV y, en la misma tanda, proformas). Distinta de la interna de la **mañana** (`reunion-2026-08-20-contraste-sergio.md`).
 - `docs/erp-planificacion/convenciones-almaue-erp.md`
 - QA: `docs/erp-planificacion/agrosoft-levantamiento/qa/PLAN-PRUEBAS-APROBACIONES.md`
+- Tesorería ciclo: `docs/erp-planificacion/agrosoft-levantamiento/plan-tesoreria-ciclo-completo-2026-08-21.md` + `qa/PLAN-PRUEBAS-TESORERIA-CICLO-2026-08-21.md`
 
 ## Entornos
 
@@ -54,6 +55,7 @@ Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md
 - **Libro de compras:** se puede asociar factura a OC no aprobada (**destacar**, `ocNoAprobada`); no contabilizar ni pagar hasta OC `APROBADO` o posterior. Plazo aceptación comercial `aceptacionCompraPlazoDias` (default 8, Admin › Empresas). Asiento de libro sin cuenta imputable = deuda P0-1 (no es el gate de OC).
 - **Proformas:** `BORRADOR` → `DEFINITIVA` con `contratistas:write`; **sin** bandeja ni PIN de cadena.
 - **H1–H8, H4, H8 Guías:** listos en código local.
+- **Tesorería ciclo (21/08):** asiento banco = cartola (`CARTOLA:{id}`). Pago/cobro = calce + CC + aging; **sin** asiento `PAGO:{id}`. Aging/CC al contabilizar (neto+IVA). Cartola import-only; conciliación = resumen. Pagos unificados (`PAGO_TOTAL` / `ANTICIPO` / `ANTICIPO_PRODUCTOR`). Nómina = semana de compromiso (no muta DTE). Flujo caja por banco/moneda + apertura inmutable. Migración `20260821200000_tesoreria_ciclo_completo`.
 
 ### Siguen vigentes
 

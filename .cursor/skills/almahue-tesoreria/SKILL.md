@@ -5,19 +5,29 @@ description: Cartolas, conciliación, pagos, estado de cuenta y aging; parsers b
 
 # Tesorería Almahue
 
-Módulo **existe** en código (pagos, cartolas, conciliación, estado de cuenta, anticipos, aging, flujo de caja). Demo cliente **no** cerrada (Reu6 «siguiente reunión»).
+Módulo **existe**. Contrato ciclo: `docs/erp-planificacion/agrosoft-levantamiento/plan-tesoreria-ciclo-completo-2026-08-21.md`. Tesorería **no crea** la deuda; solo la liquida.
 
-## Hechos (Fase 1)
+## Cerrado 21/08 (ciclo)
 
-- Parsers en `erp_back` `modules/tesoreria/parsers` (p. ej. Almahue web); carga Excel **base**, formato banco fino pendiente de MJ.
-- Códigos de flujo de caja: UI hay; códigos Agrosoft no auditados (R4-25 parcial).
-- Estado de cuenta / aging ≠ cobranza.
+- Asiento banco = movimiento de cartola (`origen CARTOLA:{id}`). Periodo ABIERTO.
+- Pago/cobro = calce + CC + aging. **No** asiento `PAGO:{id}` (ni con cartola ni sin ella).
+- Al contabilizar compra/venta: CC + aging (neto+IVA).
+- Gate: no pagar OC no operable; no cobrar factura no `CONTABILIZADA`.
+- Cartola: solo import con líneas; `usuarioCarga` = email de sesión.
+- `updatePago`: no edita calce/monto/contraparte.
+- Conciliación: resumen de cartolas (R4-19). No alta huérfana.
+- Pagos unificados: `PAGO_TOTAL` | `ANTICIPO` | `ANTICIPO_PRODUCTOR` (flag `esProductor` + TC). `/tesoreria/anticipos` redirige.
+- Nómina: `semanaCompromiso` (aplazar no muta DTE). R4-17 vencimiento queda en aging.
+- Flujo caja: banco + CLP/USD + apertura inmutable.
+- Menú: cartola → conciliación → flujo → pagos → nómina → estado de cuenta.
 
 ## No inventar / diferido
 
-- **Cobranza R4-18** (compromisos, mail, tracking): no hay; propuesta, no feature.
-- **SMTP**: correo al cambiar PIN / reenvío mail diferido (infra).
-- DTE real y emisión SII: no es tesorería; ver skill `almahue-billing-dte`.
-- Productor no es maestro (lookup comercial).
+- **Cobranza R4-18** (compromisos, mail, tracking).
+- **SMTP** / H9.
+- Match automático cartola↔factura (RUT+monto): calce **manual** 1:1.
+- Parsers Chile/Estado/Santander sin muestra MJ (**H13**). Queda Almahue-web + CSV/Excel genérico.
+- Maestro Productor. Códigos financieros Agrosoft (R4-25).
+- DTE real / SII live.
 
-Rule: `erp-tesoreria`. Integridad UI↔Prisma: `docs/auditoria-integridad-secundaria.md`. El as-is 14/08 está `{deprecado}`.
+Rule: `erp-tesoreria`. Integridad UI↔Prisma: `docs/auditoria-integridad-secundaria.md`.
