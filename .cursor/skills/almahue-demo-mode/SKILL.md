@@ -33,4 +33,6 @@ Al activar demo se llama `resetDemoStore()` (store + grupos/escalas/delegaciones
 
 `/admin/aprobaciones`, `/catalogos/areas-negocio`, `/contratistas/aprobaciones`, `/contratistas/traspaso`, `/contabilidad/libro-diario`, `/contabilidad/mayor`.
 
+Tesorería (periodo **2026-08**): cartolas (incl. `2026/08`), conciliación Ago, flujo de caja con banco/moneda, pagos calzados a folios MJ, nómina `POR_PAGAR`, estado de cuenta. Un folio de CC debe existir en libro compras, libro ventas, órdenes o pagos — no enlazar OC a `/compras/registro`.
+
 Si falta una pantalla: fixture + persistencia en store (no `return []` en `mock/api.ts`).
