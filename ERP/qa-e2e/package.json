@@ -2,9 +2,10 @@
   "name": "qa-e2e",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "scripts": {
+      "test": "node run-e2e-manual.mjs",
+      "testrim:ventas": "node run-e2e-ventas.mjs"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

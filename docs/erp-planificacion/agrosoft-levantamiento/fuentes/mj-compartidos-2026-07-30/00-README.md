@@ -47,6 +47,8 @@ Procedimiento actual en **Acepta** (legacy). Al migrar a ERP + GoSocket hay que 
 
 Esto cierra el hueco “manual exportación MJ” que faltaba antes de diseñar el mapper **110/112** del gateway.
 
+**Propuesta de implementación (flujo + UI, 10/09):** [`../../analisis-reuniones/10-propuesta-dte-exportacion-2026-09-10.md`](../../analisis-reuniones/10-propuesta-dte-exportacion-2026-09-10.md)
+
 ## Relación con otros packs
 
 - GoSocket API: [`../gosocket-2026-08-05/`](../gosocket-2026-08-05/)  

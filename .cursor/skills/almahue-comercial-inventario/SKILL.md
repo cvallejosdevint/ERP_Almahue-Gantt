@@ -20,7 +20,7 @@ La cotización del proveedor **no es documento del ERP**: campos opcionales `ref
 - Al **confirmar** OV: movimiento `SALIDA_VENTA` (descuenta físico). Si existiera `ReservaStock` residual, se consume; **no** hay cadena que cree reservas.
 - Factura **no** mueve stock otra vez.
 - Mantenedor: Insumos › Stock por bodega / producto (`/insumos/stock`).
-- **Emitir** factura exige OV propia facturable (`APROBADO`/`EMITIDO`); no alta libre de FACTURA.
+- **Emitir** factura exige OV propia facturable (`CONFIRMADA`/`EMITIDO`); no alta libre de FACTURA.
 
 ## Precio y flete
 
@@ -35,7 +35,7 @@ La cotización del proveedor **no es documento del ERP**: campos opcionales `ref
 
 - Lookup RUT: sociedad + clientes + proveedores + flag `esProductor`. **Maestro Productor** sigue fuera (no hay entidad `Productor`).
 - `ventaBajoCosto` **eliminado**: la regla es fija (bloquear). No hay UI ni flag en Empresa.
-- Wizard **Emitir** (`/comercial/emitir`): FACTURA/NC/ND/GUIA (pantalla de **emisión**). Libro ventas es el libro, no el alta. Borradores DTE viven en Emitir. No ampliar a COTIZ/NP/OC. Factura desde OV: cuenta por línea **opcional** en piloto.
+- Wizard **Emitir** (`/comercial/emitir`): FACTURA/NC/ND/GUIA (pantalla de **emisión**). Sin columna de cuenta. Libro ventas: **solo DTE** (sin OV). DTE emitido = «Por contabilizar»; click → cuenta por ítem → `CONTABILIZADA`. OV confirmada se factura desde Emitir. Borradores DTE viven en Emitir. No ampliar a COTIZ/NP/OC.
 - FLETE: en OV como `tipoLinea`; cotización/emitir pueden no ofrecerlo igual. Canonical DTE **no auditado** (recargo SII).
 - Catálogo `pantallas-permisos` alineado 21/08 (OV/Guías en Ventas; Compras sin Cotizaciones). Revalidar si cambia el menú.
 - Guías de despacho: **hay UI** Ventas › Guías (`/comercial/guias-despacho`); despacho logístico sigue incompleto.
@@ -43,7 +43,7 @@ La cotización del proveedor **no es documento del ERP**: campos opcionales `ref
 
 ## Cadena y OC (21/08)
 
-- Aprobación **solo OC** (grupos/escalas Compras). OV **no** pasa por bandeja: `BORRADOR` → confirmar stock → factura.
+- Aprobación **solo OC** (grupos/escalas Compras). OV **no** pasa por bandeja: `BORRADOR` → confirmar stock (`CONFIRMADA`) → factura. `APROBADO` es solo OC.
 - Wizard OC: **Guardar borrador** (`BORRADOR`) vs **Enviar a aprobación** (`PENDIENTE_APROBACION`). Correlativo `OC-AAAA-NNNN` al crear. Cotización = referencia opcional (tipo, folio, fecha); no hay atajo cotiz→OC.
 
 ## No implementar / no restaurar

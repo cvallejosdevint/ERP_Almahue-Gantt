@@ -21,6 +21,8 @@ GoSocket **no** recibe HTML ni PDF de entrada. El flujo real es:
 3. GoSocket transforma a XML SII, firma y responde; el acuse SII en Chile es **asíncrono** → polling `GetDocument`
 4. PDF/XML timbrados se **descargan** (`DownloadDocumentPdf` / `DownloadDocumentXml`)
 
+**Propuesta DTE 110/111/112 (10/09):** [`../../analisis-reuniones/10-propuesta-dte-exportacion-2026-09-10.md`](../../analisis-reuniones/10-propuesta-dte-exportacion-2026-09-10.md). El XML de ejemplo de esta carpeta es tipo **33**; el Gap sí cubre 110/111/112. Un spool 110 de Pablo, si llega, va en `ejemplos-110/`.
+
 ## Relación con billing-gateway
 
 Servicio propuesto (repo git separado, nombre temporal): **`billing-gateway`**.  

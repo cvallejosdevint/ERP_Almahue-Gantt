@@ -1,0 +1,976 @@
+# Reu1 2026-07-21 (Whisper local)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `small` CPU int8 + VAD
+Fuente: E:\source\repos\Almahue\docs\erp-planificacion\agrosoft-levantamiento\fuentes\videos\reunion1-2026-07-21.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:03] O sea, igual acá se ha notado el agua comparación al año pasado, pero aún así no hemos tenido mayores
+- [00:10] problemas como dinundación o problemas en el tráfico, o hasta hablo el menos.
+- [00:20] Mira, nosotros ingresamos a un link que nos manda a Grosof. Esta es la página de inicio.
+- [00:41] Nosotros acá ponemos oro y clave y al ingresar siempre nos queda en la última empresa que trabajamos,
+- [00:55] pero acá nosotros podemos hacer cambio de empresa. Entonces acá nos aparecen todas las empresas las
+- [01:03] cuales nosotros podemos tener acceso. Acá nos aparecen los datos y nosotros podemos ir cambiando
+- [01:09] temporadas, pero nos dimos cuenta que en realidad el cambio de temporada en esta página nos sirve
+- [01:16] mucho porque nosotros nos usamos el módulo de gestión, pero igual sería bueno implementarlo
+- [01:21] en el RAP nuevo. Si por ejemplo acá si yo me quisiera cambiar de empresa, aprieto ahí,
+- [01:30] veo los meses que en el mes que quiero trabajar, mes contable y de remuneración y pongo aceptar.
+- [01:38] Y ahí me mete al módulo de Almagüe. Sí, mira actualmente nosotros contamos con 15
+- [02:04] usuarios y por usuario nos cobran un adicional. Si quisiéramos implementar más usuarios,
+- [02:11] entonces hay veces en que un usuario lo ocupan dos personas. En ese caso hay que tener mucho
+- [02:19] ojo con el tema de la empresa porque si yo me meto al lm y estoy trabajando en lm y la persona
+- [02:23] que está trabajando con el mismo usuario se vuelve a meter y esa persona está trabajando en
+- [02:29] Almagüe como yo soy la última persona que está trabajando en lm le queda en lm. Entonces si no
+- [02:35] se da cuenta, le permite seguir ingresando información en una empresa diferente. Exacto, entonces si
+- [02:46] se les cerró la sesión y yo tengo la sesión activa, porque igual cada cierto tiempo se te
+- [02:50] cierra la sesión automática y pasa eso de que se les cierra la sesión y yo la tengo activa,
+- [02:56] esa persona le aparece que está trabajando en otra empresa. Sí, ya mira actualmente
+- [03:11] nosotros no usamos el sistema de mano de obra acá en el lado izquierdo te aparecen todos los
+- [03:17] módulos que nosotros tenemos acceso. Tenemos el tema de obra acá tenemos la parametrización
+- [03:23] donde se parametriza la labor, las actividades, los horarios de la persona, los sistemas de
+- [03:33] precisión de salud, todo lo que lleva una remuneración o una liquidación. Claro, pero
+- [03:43] actualmente nosotros trabajamos con buc, entonces este módulo para nosotros no es
+- [03:48] relevante, por eso no te lo voy a mostrar a mayor detalle. Exacto, ya ahí viene el módulo
+- [04:01] de contratistas, el módulo de contratista igual que en relación con el de módulo de mano de obra
+- [04:10] porque en el módulo de mano de obra se parametriza lo que es la actividad y la labor. Ya, pero como
+- [04:17] nosotros no vamos a tener el de mano de obra lo queremos parametrizar es lo que es en el módulo
+- [04:21] de contratista. Ya, acá nosotros tenemos un... un botoncito donde podemos parametrizar lo que es el
+- [04:32] ingreso de la tarifa al contratista, el informe y los parámetros de contabilización. Está un poquito
+- [04:43] lento el internet. Ya, acá la limitancia que tenemos en este módulo del ingreso de tarifos
+- [04:51] contratistas es que una la va ingresando y por ejemplo si ingreso dos la que ingrese primero
+- [04:56] no se me visualiza. Claro, entonces por ejemplo no sé yo pongo una labor con un tarifario y
+- [05:04] pongo a agregar y quiero poner otra, me deja agregar la otra pero se me desaparece la primera,
+- [05:10] entonces queda siempre la duda si yo la ingresé o no la ingresé. Claro, no me deja visualizar
+- [05:21] todas las tarifas que yo quiero ingresar en el en el contrato. Existe la opción de buscar
+- [05:33] pero como informe no como que yo pueda agregarle a ese mismo tarifario más tarifa a modificar
+- [05:39] la. También hay otra limitación. Mirad acá cuando agrego los datos yo pongo el año, el mes,
+- [06:10] el código, ya primero que todo hay que agregar el contratista, enrolarlo, ya mira acá yo tengo el
+- [06:22] historial de los contratistas y si quiero agregar me aparece aquí la pestañita, me aparece acá,
+- [06:38] ya perfecto, ya aquí yo tengo la opción de evitarlo, agregar o cambiar vigencia de que
+- [06:50] quede vigente o no vigente para que no me siga apareciendo, ya entonces una vez que acá se crea
+- [06:57] el contratista que me pide esta planilla de datos, ya yo aquí ingrese la tarifa al contratista.
+- [07:10] Exacto, por ejemplo acá vamos a ponerla en ampliaza, entonces aquí yo abro el despliegue de
+- [07:27] labores, acá tengo todas las labores que yo quiero crear y las labores van anexadas a una actividad,
+- [07:38] puede ser a varias pero generalmente acá tratamos de que la actividad sea como general y la labor
+- [07:52] sea más específica, te voy a mostrar acá porque mira acá tengo las actividades y la actividad y
+- [08:10] labores, entonces por ejemplo si yo quiero anexar una actividad y una labor, yo busco la actividad por
+- [08:16] ejemplo armada de caja y veo lo que tiene asociado como labor que es packing cereza,
+- [08:23] pues si yo quisiera agregar otra un ejemplo, pintar troncos, aprieto pintar troncos y pongo
+- [08:29] agregar y ahí queda la actividad anexada a la labor y entonces lo ideal es que esa
+- [08:42] parametrización aparezca ahora en contratista y entonces acá volvemos, le supongamos que es abrir
+- [09:06] cartas. Unidad de control acá yo puedo poner por cómo lo voy a medir. Lo que pasa es que en este
+- [09:22] caso las unidades de control hacen referencia a las labores que son de campo, claro pero igual
+- [09:29] hay que tener en consideración que actualmente nosotros estamos haciendo un RP para lo que es
+- [09:33] la exportadora y la de servicio, pero nosotros también tenemos un partner que es agrícola,
+- [09:39] entonces en ese sentido este módulo igual va a tener que quedar como más
+- [09:50] más específico para lo que es el área agrícola y para lo que es el área industrial. Entonces
+- [10:00] por ejemplo acá yo voy a poner plantas, la fecha desde el 1 de julio a hoy día,
+- [10:09] centro de costo, aquí lo voy a anexar y la tarifa ya pongo en mil, ya y le pongo guardar,
+- [10:22] claro pero si yo quiero agregar una labor no la puedo agregar aquí, tengo que limpiar y agregarla
+- [10:31] de nuevo, exacto, por ejemplo acá si quiero agregar labor ya la 16 y vins y lo mismo acá
+- [10:44] le agrego y se me agrega como línea 2 pero no me aparece la que ya agregue al principio, claro no
+- [10:53] hay un listado entonces no me permita revisar si tengo algún error, exacto, si, acá nosotros en
+- [11:27] parámetros generales podemos agregar los centros de costo y cuáles también hay una limitancia
+- [11:31] que tenemos que por ejemplo si yo estoy trabajando en ALM me permite seleccionar centros de costo de
+- [11:36] otra empresa, exacto, entonces si la labor, bueno la unidad de control se puede crear de aquí mismo
+- [12:00] pero sería si la labor, el centro de costo y la tarifa que han negociado, si el tema de las
+- [12:19] labores administra de mano de obra, pero como no vamos a tener ese módulo la idea es que se
+- [12:28] administra directamente de contratista, lo que pasa es que por ejemplo en el tema la parametrización
+- [13:04] y creación de información van a haber ciertos usuarios que van a tener acceso, entonces por
+- [13:10] ejemplo no sé, puede ser una sección de administrativo y una sección de jefatura,
+- [13:17] un ejemplo, entonces las jefaturas tienen permiso para tener el módulo de parametrización pero
+- [13:22] no lo administrativo, ya, solamente lo podemos pedir al proveedor y eso igual no ha traído problemas,
+- [13:56] y lo que pasa es que ellos tienen como creado, porque igual me mandaron una vez un pantalla eso
+- [14:02] porque tuvimos hartos problemas con un perfil en específico, ellos tienen creado la sección por
+- [14:07] ejemplo de administrador y de digitador, claro, entonces ¿qué pasó? había un perfil que nosotros
+- [14:17] necesitábamos que tuviera más permiso que el digitador pero no tanto como el administrador,
+- [14:22] entonces ¿qué pasó? cuando pedimos el cambio de perfil, ellos cambiaron el perfil pero también
+- [14:35] cambiaron todos los perfiles de los digitadores, una cosa así, entonces activaron varias
+- [14:41] pestañas que no se deberían activar en otro usuario, y ahí nos generó un conflicto porque al final igual
+- [14:47] tienen información a la cual no deberían tener acceso por ejemplo a borrar, a modificar,
+- [14:57] ya, ya mira por ejemplo en este perfil tiene acceso a todo, tiene acceso a todos los módulos y tiene
+- [16:13] acceso a todas las parametrizaciones, claro este sería un módulo de administrador, este sistema
+- [16:22] es que no lo usamos pero igual está activo por si lo quisieramos usar, si te mañana te podría
+- [16:43] tener una cuenta de digitador, ya perfecto, acá tenemos la parametrización que donde nosotros
+- [17:12] decimos cuando nosotros pongamos centralizar, ¿a qué cuentas contables se tienen que imputar?
+- [17:19] acá nosotros decidimos que cuenta usamos, mira acá es el tema de la imputación de cuentas,
+- [17:37] si una vez que yo por ejemplo contabilicen la factura se me va a reconocer todo lo que es el costo
+- [17:47] del trabajo y se me va a reconocer una subcuente que es facturas por recibir contratistas, entonces una
+- [17:58] vez que a mí me llega la factura y la ingreso, la factura se ingresa a facturas por recibir
+- [18:04] contratista contra el proveedor, en este caso contratista, y ahí me queda anexada lo que es la
+- [18:09] entre comillas como la orden de compra con la factura, ah pero ahí ¿cómo lo haríamos con la factura?
+- [18:24] si tendríamos que esperar una factura, mira mañana podríamos ver el ingreso de contratista
+- [19:03] como queda la pro forma y el ingreso de la factura, ya perfecto, mira yo mañana lo comprometo a tener
+- [19:37] una una pro forma y una factura de contratista del área agrícola porque ellos tienen más
+- [19:42] labores y actividades, entonces si no es que haría el tiro una visualización completa, mira acá solamente
+- [20:00] se después de que se ingresa el tarifario y se ingresa la información, se llama un módulo que es
+- [20:06] emitir factura, entonces esto hace que cada contrato tenga anexado solamente una factura y no te
+- [20:14] dejas arreglar el módulo hasta que todos los contratos están asociados a un documento,
+- [20:19] escucha en ALM no tenemos mucho contratista actualmente y está todo anexado y ahí ya como que se elimina
+- [20:32] del módulo en sí, exacto, entonces aparecen solamente pendientes en caso de haber o no
+- [20:40] aparecen, tendríamos que sacar informes pero informes del men específico que queremos revisar,
+- [21:07] entonces una vez que nosotros anexamos la pro forma con con la factura que acá ponemos el
+- [21:18] contratista que queremos seleccionar y si es por folio por fecha, aquí te aparece la pro forma una vez
+- [21:38] que no tú seleccionas, pero aquí también tiene un pequeña un pequeña limitante el módulo porque
+- [21:46] si yo pongo borrador me deja modificar en caso de que me haya equivocado en elegir el contratista por
+- [21:53] ejemplo, pero si yo pongo definitiva no me deja modificarlo, entonces cuando me lo pone
+- [22:06] definitiva como que ya no debería haber ningún error y obviamente tal vez iguales hay existen
+- [22:11] errores, exacto, porque si no hay tengo que reversar y tengo que modificar para atrás,
+- [22:19] en esto no casi nada, mira, acá entra el paso contable donde se genera la contabilización del mes
+- [22:53] y de aquí se va el módulo de contabilidad, entonces por ejemplo yo acá pongo generar
+- [23:02] contabilización y acá siempre me pide la tasa de cambio porque en este sistema nos deja
+- [23:06] sacar los informes en peso y dólar, pero lo ideal es para el módulo que estamos creando en que
+- [23:13] sea peso, dólar, yuan y euros y como principales monedas, entonces una vez que yo pongo la
+- [23:35] tasa de cambio y pongo contabilizar y aquí se me genera el asiento contable, pero una vez que yo
+- [23:47] lo traspaso contabilidad se va a contabilidad, mira en el módulo de contabilización queda
+- [24:14] contabilizado pero no queda registrado el costo, o sea en el módulo de contratista como que queda
+- [24:22] cerrado el proceso, pero queda abierto en el módulo de contabilidad, por el momento de yo ingresar la
+- [24:27] factura no me va a permitir, o sea me va a parecer pendiente como facturas por recibir, si en cierre
+- [24:53] de mes vamos, bueno vamos cerrando los meses, aquí vamos por ejemplo acá falta cerrar julio
+- [25:02] que obviamente está vigente, pero acá vamos cerrando los meses, cosa es que como yo tengo el
+- [25:08] perfil de administrador, impida al digitador poder seguir ingresando información en el mes de cierre,
+- [25:14] claro, entonces por ejemplo el perfil de digitador no tiene parametrización y no tiene el ni el
+- [25:33] traspaso contable ni el cerra de mes, si que uno solamente sirve para ingresar información y el
+- [25:49] otro perfil sirve para crear, eliminar, modificar y cerrar, si, mira al final lo que nosotros
+- [26:29] queremos hacer es como una grasa pero una versión 3.0, ya, buenísimo, ya, claro, pero que en un futuro no
+- [27:38] va a ser mano de obra sino que va a ser todo contratista, no, acá de los otros módulos no se
+- [28:22] cruce ninguno con contratista, contratista se cruza solamente con mano de obra en el tema de la
+- [28:27] actividad y las labores, si, no mejor, no mejorando eso ya quedaría el módulo bastante bueno, ya mira,
+- [29:41] acá tenemos el módulo de compras, que es donde tiene que ver toda la creación de la orden de
+- [29:49] compra, mira acá te voy a mostrar dos módulos en paralelo porque hay algo que quizás podríamos
+- [29:57] mejorar, que es el sistema de compras y el sistema de insumos y aquí me pasa que en el sistema de
+- [30:06] compras y el sistema de insumos, que en la parametrización yo puedo crear el maestro de artículos y tengo
+- [30:14] otros artículos, que si yo lo apretó tengo todo lo que es materiales, bien y tú, tengo todo lo
+- [30:25] que es materiales, etiqueta, insuma agrícola, todo lo que acá también lo tengo entonces está como
+- [30:35] duplicado, o sea es que al final si yo lo creo arriba igual me aparece abajo, claro por ejemplo si me hiciera
+- [31:01] una distinción entre que el sistema insumo yo pueda ingresar solamente materiales de bodega o
+- [31:08] materiales agroquímicos, genial, pero acá me mezcla lo que es servicios y lo que es materiales o
+- [31:17] existencia, si, claro mira el maestro de artículos se me va todo lo que es materiales y los agroquímicos
+- [31:48] y en ingreso de otro artículo acá me aparecen los activos fijos, claro, pero nosotros siempre cuando
+- [32:09] creamos insumo o artículos lo creamos en el módulo de insumos, claro, porque igual acá puede crear
+- [32:36] confusiones porque yo lo puedo crear en el maestro artículo que me va a aparecer acá abajo pero
+- [32:41] yo lo puedo volver a agregar sin que me dé la alerta de que ya existe, exacto, pero en este caso no
+- [33:00] advierte, o sea sería lo ideal pero mira por ejemplo yo acá estoy en el maestro de insumo
+- [33:30] de artículo y yo pongo acá nuevo, entonces acá me pide la familia, yo voy a poner materiales de
+- [33:38] embalaje, su familia ya materiales de embalaje separadores y acá yo lo puedo poner un ejemplo
+- [33:44] bolsas, acá me pide la unidad de medida y yo lo creo acá pongo guardar y se crea y si yo lo
+- [33:56] quiero poner de nuevo por ejemplo materiales de embalaje separadores y pongo bolsas y pongo unidad
+- [34:07] me lo vuelvo a crear, exacto sería ideal, si porque mira en este caso yo puse exactamente los
+- [34:35] mismos datos y aún así me dejo crearlo, entonces lo puedo crear 20 veces y después cuando la
+- [34:41] persona quiere por ejemplo comprar bolsas, él va a poner bolsas y va a apretar cualquiera y si yo
+- [34:47] apreto 10 distintas cuando yo sé que el mayor de insumos me va a aparecer en 10 en 10 partes
+- [34:55] diferentes, sí, el maestro de artículo, ya, en parametrización prácticamente nada y aquí nos
+- [35:45] vamos a mirar acá está el módulo de solicitud de compra pero nosotros no lo usamos, nosotros nos vamos
+- [35:50] directo a realizar la orden de compra, entonces por ejemplo que nosotros apretamos orden de compra
+- [35:58] y dentro de la visualización no aparece si hay una solicitud pendiente pero como nosotros no
+- [36:06] trabajamos con solicitud ponemos sin solicitud, entonces como siempre hemos trabajado sin solicitud en
+- [36:13] realidad como que esto no debería ir, ya, acá nosotros seleccionamos el departamento que actualmente
+- [36:21] son dos pero generalmente el que hace la orden de compra es administrativo, acá vemos la persona
+- [36:32] que lo quiere solicitar, ejemplo en este caso yo, ya, no tengo orden de compra, pongo la fecha,
+- [36:38] el jefe es la persona que me la va a probar, a Juana Agustín, acá selecciono el proveedor, acá pongo
+- [36:49] el tipo de pago, si hay al contado 15 días, 30 días, la moneda en la cual yo la voy a registrar
+- [36:56] que siempre usamos peso pero también hemos usado dólar y acá pongo una observación, voy a poner
+- [37:04] ya, acá me arroja el tipo de cambio pero este tipo de cambio que me arroja después no me lo reconoce
+- [37:16] el momento de yo registrar la orden de compra, se registra a la fecha en que yo recepciono la orden
+- [37:27] de compra, claro el tipo que en este caso es servicio, acá me despliego un listado de
+- [37:57] todos los artículos de servicio que tengo creados, ya supongamos que hay reparación de activos y acá
+- [38:06] pongo la cantidad y el precio y acá me pide el centro de costo, aquí yo lo despliego y me aparece
+- [38:18] si no quiero por hectárea, directo o por un grupo de centro de costo, mira actualmente no lo
+- [38:26] utilizamos pero si lo queremos implementar, si, si porque por ejemplo acá lo intentamos hacer
+- [38:45] por hectárea pero el problema es que si queda mal ingresado una hectárea queda eternamente mal
+- [38:53] parametrizado en la imputación del costo, o sea tiene la opción de editar pero por ejemplo si yo
+- [39:05] quisiera por hectárea y quiero que solo un cuartel no esté dentro de esa hectárea no me deja
+- [39:11] editarlo para eliminar solo ese cuartel, es como todo o nada, claro como que no pudiera ir
+- [39:28] lo agregando y ahí distribuirlo, es actualmente usamos el módulo directo y al usar el módulo
+- [39:36] directo solamente se me activa lo que es centro de costo, elemento de costo y el monto, yo lo pongo
+- [39:44] por grupo me pide que hay selección al grupo y por hectárea y que agregue la hectárea y entonces
+- [39:57] en esta casa vamos a poner administración, llegue aquí busco y mira te das cuenta que yo estoy
+- [40:04] en ALM pero yo podría poner ALMAWE, por ejemplo Santa Pilar y me deja, exacto, el elemento de costo
+- [40:26] también lo mismo, ya voy preparación de activos y acá el monto era mil, si yo pusiera un monto
+- [40:32] distinto al que puse al inicio no me deja guardarla, o sea en este caso no me muestra la
+- [40:44] potencia porque está bien pero si yo pusiera mil 10 y pongo agregar y acá pongo agregar,
+- [40:50] mira me dejó agregarlo por mil pero yo había puesto mil 10 y no me da una testencia que no está
+- [40:58] cuadrado, claro por último que diga desquadrado, voy a ver si es el tiro que me falta algo sobre
+- [41:24] algo, exacto mira si yo lo voy a guardar con mil 10 porque hay una alerta para la alta, lo
+- [41:38] pongo más y acá pongo más y lo quiero guardar acá debería aparecer, ya distribución del centro
+- [41:50] del costo no cuadra con total neto, antes porque te has aceptado de nuevo y acá yo puedo poner más de
+- [41:58] una actividad, entonces al final no te va a decir en cuál tú tienes la diferencia,
+- [42:02] exacto, entonces ahí la agrego, bueno acá también puedo seleccionar si es con IVA o accento,
+- [42:20] si es con IVA me calcula el tiro al monto del IVA y el monto al neto y si yo pongo accenta me la
+- [42:27] tira directamente al monto neto y accenta, entonces esto influye mucho para cuando llega
+- [42:33] a la factura, porque lo asimila el tiro si yo la grabo accenta de que el documento que tengo que
+- [42:39] asociarlo tiene que ser accento, si eso es automático, ya yo pongo grabar, ya me dice que se generó la
+- [43:03] 52.07, no me la dejo ahí, me la dejo, ya pa ir anotándola pa eliminarla y entonces se genera
+- [43:26] la 52.07 y yo como la creé yo la puedo visualizar acá, la puedo visualizar acá que están en estado
+- [43:43] pendiente, lo bueno sería que cuando uno la crea se abra como el pdf para visualizarla, claro,
+- [44:11] pero por ejemplo en el caso de la persona que lo crea lo puede visualizar acá, si yo me meto y
+- [44:17] lo creo otra persona, a mí no me aparece en este módulo la que creo, claro, acá me aparece
+- [44:28] en informa orden de compra y me aparece asimila, si yo me voy informa orden de compra, acá yo tengo
+- [44:38] que seleccionar si está anulada, probada, cerrada, contabilizada, pendiente, recepcionada,
+- [44:43] parcial o recepcionada total, si yo no tengo idea, tengo que buscar la módulo por módulo.
+- [44:51] Claro, claro, pero si yo acá pongo el número me aparece directa, independiente de si está
+- [44:58] contabilizada, pendiente, anulada, independiente. Exacto, ese es lo que pasa y lo otro que por
+- [45:18] ejemplo si yo busco por proveedor, que su módulo no tengo, me aparece, ya, aquí me aparecen todas
+- [45:35] las contabilizadas, pero solo las contabilizadas, entonces al final tampoco me sirve buscar por el proveedor
+- [45:41] porque igual tendría que meterme a todos los módulos y además las ordenas de la de la más antigua
+- [45:48] la más reciente, entonces sí, aquí es un tema cuando uno quiere buscar una orden de compra,
+- [45:58] sí, bueno ahí vamos viviendo más temas porque también pasa que nosotros cuando
+- [46:08] creamos la orden de compra como la creamos primero, o sea se emite la factura y después
+- [46:13] creamos la orden de compra, nosotros en la observación ponemos factura tanto, no sé,
+- [46:18] servicio de reparación de activo y ahí solamente la podemos asociar a la orden de compra, pero no
+- [46:26] hay ningún informe que nos saque en qué orden de compra tiene tal proveedor. Exacto y lo otro
+- [46:54] también, o sea crear, ya sé que el tema del informe lo vamos a ver en final, pero que dentro
+- [46:59] del informe de orden de compra si ya está contabilizada te diga con qué proveedor,
+- [47:07] porque nosotros al momento de, mira, vamos a seguir con esto, pero al momento de crear la orden de
+- [47:12] compra existen dos pasos posteriores y ahí reciente aparece en el módulo de contabilidad. Exacto,
+- [47:26] acá está solamente la creación, en este momento nosotros tenemos el documento para pedir la
+- [47:32] solicitud de aprobación para realizar el servicio, se supone que primero va la orden de compra
+- [47:37] y después la factura. Lo que pasa es que igual actualmente lo hace el departamento de contabilidad
+- [47:52] lo que es la creación de la orden de compra, pero lo ideal es que después cada departamento se
+- [47:56] encargue de su creación de orden de compra, entonces igual necesitamos que los pasos sigan
+- [48:01] iguales de aprobación y recepción. Exacto, por ejemplo acá y ya una vez que nosotros
+- [48:09] creamos la orden de compra y aparece pendiente se supone que uno va a la jefatura y pide
+- [48:13] la aprobación del servicio. Entonces acá está en el módulo de aprobación orden de compra
+- [48:20] y aquí yo visualizo todas las órdenes de compra que fueron asignadas a mí. Exacto, pero actualmente
+- [48:43] si yo me meto en aprobación orden de compra me aparece, pero no me llegue ningún correo nada
+- [48:47] de que alguien me solicite una orden de compra. Claro, claro, o por último aquí que aparezca
+- [48:56] un icono de pendientes, no sé, como un icono rojo, como que algo hay. Claro, quizás no mucho
+- [49:06] el correo porque igual sería tedioso que acá red que está ingresando órdenes de compra
+- [49:10] me vaya llenando un correo, pero si al momento de meterme en la página que me aparezca como
+- [49:13] un pendientes. Ah, perfecto, buenísimo. Claro, acá es como me puede aprobar, me puede aprobar.
+- [49:58] Claro, entonces mira, acá por ejemplo como supuestamente María Jesús le tiró la
+- [50:02] orden de compra a Juana Bustín y yo estoy en el usuario de Juana Bustín, yo la puedo visualizar,
+- [50:07] entonces yo en aprobación me aparece la que creé en la 52.07 y aquí yo puedo revisar recién que
+- [50:14] está en servicio de reparación de activos el monto y el centro de costos. Acá yo tengo la opción
+- [50:24] de aprobarla o rechazarla, en este caso la voy a aprobar y ahí se me va al módulo de recepción
+- [50:32] de orden de compra. Mira, en este módulo aquí nunca te va a aparecer, si tú la emitiste en ningún
+- [50:52] momento te aparece se está aprobada, recepcionada como módulo, sino que tú al buscar la orden de
+- [50:57] compra te va a aparecer en que está o está, pero a la opción de que la solicitó no la aparece
+- [51:01] por ejemplo, se hará reactivar, aprobación de orden de compra, recepción de orden de compra
+- [51:06] le aparece solamente la opción de emitir el informe y los informes de acá abajo. Estos
+- [51:14] tres módulos que harían solamente a las personas que tienen acceso a aprobar y enula.
+- [51:22] Mira acá solamente tengo que poner la fecha y el recepciono y ahí es cuando se me
+- [51:40] reconoce con el tipo de cambio de la fecha que yo recepciono el gasto, no se puede hacer el
+- [51:55] mismo día, pero por ejemplo aquí nos pasa que nosotros como trabajamos con productores a veces el
+- [52:04] tipo de cambio es promedio, entonces no existe una fecha exacta donde a mí me dé el tipo de cambio
+- [52:10] exacto del costo de la fruta. Entonces acá se me genera mucha diferencia entre lo que yo
+- [52:19] imputo contablemente y lo que yo pago, porque en el módulo de pago me permite poner el tipo de
+- [52:26] cambio humana, pero eso solamente para el tema de solería, entonces yo lo pago al tipo de cambio
+- [52:32] que estoy negociando, pero en realidad yo estoy reconociendo mi costo al tipo de cambio de un día
+- [52:36] X. Exacto. Bueno esperamos ser mejores. Exacto. Claro, por ejemplo como yo tengo que recepcionar
+- [53:13] las órdenes de compra que hace mi analista yo siempre pongo la fecha en que yo estoy haciendo
+- [53:17] el movimiento, pero es un tema mío. El resto voy poner la fecha que quiera, entonces yo por ejemplo
+- [53:24] estoy a 21 y pongo el 21 y ahí pongo recepcionar. Una vez que yo la recepciono se me genera el
+- [53:31] traspaso contable, que si yo me voy a ver el 8310 a contabilidad está aquí, entonces me dice
+- [53:45] orden de compra y servicio en las 52 07 del 7 del 26. Este es el asiento contable que se
+- [53:52] me hace actualmente, es mantensión y reparación de activo en la cuenta del gasto contra facturas
+- [54:00] por recibir servicios. Entonces ahí me avisa que yo estoy pendiente de recibir una factura,
+- [54:06] pero ya yo reconocí el gasto. Mire, si tú te fija acá me aparece peso y dólar
+- [54:25] la orden de compra y el tipo de cambio debía ser el tipo de cambio de hoy. Exacto. Entonces
+- [54:39] esta es la contabilización de la orden de compra y cuando yo quiero ingresar la factura
+- [54:46] me tengo que ir a proveedores, procesos diarios, registro de compra. Yo aquí ingreso la factura
+- [54:52] de la orden de compra que creé. Ya, y acá selecciono el proveedor. Aquí hay otro
+- [54:58] error que podríamos mejorar, que por ejemplo, si yo pongo Sandoval y Fuentes y me coincide
+- [55:07] el monto de la orden de compra, me deja contar que listarlo cruzado. Claro, pero ya aquí puse
+- [55:24] Sandoval y Fuentes y aquí tengo que poner el tipo de, el tipo de compra para que me
+- [55:30] aparezca la orden de compra que ya están listas para ingresar. Lo que pasa es que
+- [55:40] por ejemplo, si yo ingreso por el módulo de insumos, me va a aparecer en existencia
+- [55:44] la orden de compra, como clasificada, como existencia. Si la hago por el módulo activo
+- [55:51] fijo, me va a aparecer el activo fijo. Entonces en este caso yo la hice por el módulo de
+- [55:57] servicios. Entonces yo agregar servicios me van a aparecer todas las ordenes de
+- [56:02] compra que están disponibles para yo agregarla. Entonces aquí está la orden
+- [56:13] de compra 52.07. Doble clic y se me reconoce la cuenta de facturas por
+- [56:32] recibir servicios. Jay me arroja el auxiliar del proveedor. La orden de compra, la
+- [56:44] cantidad nunca me aparece, pero sí me aparece el monto y el tipo de cambio.
+- [56:47] Entonces por ejemplo, ya supongamos que la factura de hoy día, el tipo de
+- [56:57] cambio, esa la factura es afecta y vamos a ver que es la 1. Ya acá yo puedo
+- [57:07] modificar el tipo de cambio. Supongamos que es a 9.10. Y yo pongo aceptar, se me
+- [57:15] modifica aquí, pero se me modifica solamente la parte del proveedor, no la
+- [57:25] parte del costo. O sea esto más que nada fue una solución parche que nos
+- [57:37] dieran por el mismo tema de la recepción de la orden de compra. Porque el momento
+- [57:42] recepcional haya quedado con un tipo de cambio. Entonces ¿qué pasaba? Cuando
+- [57:45] nosotros queríamos ingresar las facturas del productor en este caso, no
+- [57:51] apareció un tipo de cambio fijo. Entonces pedimos poder modificarlo para poder
+- [57:54] ingresar las facturas. Pero no, no, dieron una solución del tipo de cambio de
+- [58:01] recepción. Es que en este módulo ya no, o sea como que ya no olvidamos de la parte
+- [58:13] del costo, pero aún así es algo que nos pega fuerte. Entonces si yo aquí cambio,
+- [58:20] supongamos que el tipo de cambio fue pactado a 9.10 con el prove, con el
+- [58:25] productor y yo la guardo a 9.10 acá. Yo si me voy al proveedor, como al
+- [58:31] consulta proveedor, me aparece la factura a 9.10. Entonces ahí no me
+- [58:39] genera, no me genera ningún problema con el pago, pero sí me genera una
+- [58:43] diferencia con el costo. Claro, quizás dejarlo como es más rígido y no dejar
+- [59:14] modificar acá, sino tener que modificar directamente la recepción.
+- [59:27] Exacto. Claro. Ya, genial. Entonces una vez que nosotros ponemos todos los datos y coincide
+- [59:45] el tipo de cambio con la orden de compra y acá pongo los datos de la
+- [59:49] factura en sí, que pongo ya el neto aquí son 1000 y el IVA que son
+- [59:58] 890. Una vez que me cuadra todo, me deja contabilizarlo. Sí, aquí me va a arrojar
+- [01:00:12] si está cuadrado o no en el asiento. Ya debe ingresar glosa.
+- [01:00:16] Factura. Claro, tiene como el alerte que falta algo. Claro.
+- [01:00:36] Entonces aquí agregué la glosa y grabó registro, pero mira, acá me dejó
+- [01:00:41] contabilizarlo, pero si no me equivoco, la orden de compra la
+- [01:00:46] llevamos puesto exenta. Ya, entonces me dejó contabilizarlo porque el neto está
+- [01:00:51] cuadrado, pero no me saltó ninguna alerta de que la factura no llevaba IVA.
+- [01:00:56] O sea, claro, es que me aparece porque yo acá puse que era tipo de documento
+- [01:01:07] afecto. Por eso, si yo pongo afecto acá, me aparecen todos los módulos
+- [01:01:14] acá abajo, o sea, todos los ítems. Si yo pongo exento, claro, por ejemplo, ya la voy a
+- [01:01:21] reversar y ahí se reversó. Si yo pongo acá exento, me aparece solamente el
+- [01:01:32] exento acá abajo. Claro. Y ahí, recién, ni siquiera me da, porque acá me
+- [01:01:43] puse, si te fijaste, y la reversé y me puso de nuevo al tipo de cambio 933.
+- [01:01:46] Entonces el tipo de cambio 933 se me ve reflejado acá abajo, pero no en la orden
+- [01:01:51] de compra. Entonces, yo de nuevo tengo que tabular para que me cambia acá y ahí
+- [01:01:59] recién me cuadro en los netos. O sea, claro, en dólar. Y ahí la guardo y me
+- [01:02:14] dejo guardarla. Si yo creé la orden de compra exenta, no debería dejar
+- [01:02:45] agregarla como una factura afecta. O sea, no de 10, porque al final si yo, mira,
+- [01:02:55] siempre la orden de compra es para reconocer el gasto. Entonces, si va afecto
+- [01:02:59] exento, en realidad la orden de compra no impacta. Entonces, habrían dos
+- [01:03:06] soluciones. O la orden de compra en realidad no se pone ese afecto exento,
+- [01:03:09] porque en realidad yo estoy reconociendo solamente el gasto, que siempre es el
+- [01:03:13] neto. O acá, si yo estoy poniendo una orden de compra exenta, no me debería
+- [01:03:20] dejar un documento afecto. Yo creo que puede ser como un error, entre comillas,
+- [01:03:38] porque igual hay facturas que son afectas que traen monta de exento. Claro, y
+- [01:03:49] también hay facturas que traen la de combustible, que traen el impuesto
+- [01:03:52] específico. Entonces, creo que la orden de compra trae el módulo para dejarlo
+- [01:03:59] como afecto exento, pero en realidad no tiene mayor implicancia en el módulo
+- [01:04:02] registro de compra, porque si no quedaría como muy rígido y quizás impediría
+- [01:04:08] el ingreso a alguna factura. Claro, porque actualmente, por ejemplo, las facturas
+- [01:04:27] que traen exento y afecto, nosotros tenemos que, para hacer la orden de
+- [01:04:31] compra, sumar el neto y el exento para poder ingresar el costo. Y ahí no podemos
+- [01:04:42] poner que ese exento, porque tiene que hacer el cálculo del impuesto, pero
+- [01:04:46] si ponemos afecto, la calcula una base más alta. No sé si se entiende. Claro, ya,
+- [01:05:08] buenísima. El registro de compra no. Siempre que la orden de compra esté aprobada y
+- [01:05:28] recepcionada, ya sea de insumo o servicio, me va a aparecer el registro de compra.
+- [01:05:32] Si está solamente en estado aprobada, no me aparece. Ya, mira, pero el módulo del
+- [01:05:51] sistema de compra estaríamos listas. Y el sistema de insumo, la diferencia es que
+- [01:05:55] aquí está el módulo de la bodega. Entonces, por eso yo, como que prefiero
+- [01:06:03] que lo que es maestro de artículos quede en el módulo de insumo. Exacto, porque
+- [01:06:12] al final el sistema de orden de compra como administrativo es para el tema de los
+- [01:06:17] servicios, pero lo que es compra de material y compra agroquímico va por el
+- [01:06:21] sistema de insumo. Sí, pero acá, por ejemplo, en el módulo solamente usamos
+- [01:06:37] el maestro de artículos, la bodega y el nivel de almacenamiento. Lo que es
+- [01:06:42] ingrediente activo y unidad de medida, no lo usamos, porque no aplicamos
+- [01:06:49] directamente del módulo. O sea, por ejemplo, en este módulo, para
+- [01:07:12] lo que es el área agrícola, sería bueno que tuviera
+- [01:07:18] los ingredientes activos y la unidad de medida, porque ellos lo podrían usar para el tema de las aplicaciones.
+- [01:07:24] Claro. Sí, sería bueno, sería una mejora para ellos.
+- [01:07:36] Entonces, si te fija que en el maestro de artículos me aparecen los
+- [01:07:45] mismos canales de compra, yo puedo editar, agregar o eliminar.
+- [01:07:52] Sí, y acá yo puedo crear las bodegas, pues si tú te fija a mí me aparecen igual
+- [01:07:58] todas las bodegas de la otra empresa. Me aparece la empresa, por ejemplo, ya
+- [01:08:06] LM. Me aparecen todas las bodegas que tiene LM, pero aquí solamente es
+- [01:08:17] creación, no, aquí solamente creación para cuando yo haga los movimientos de
+- [01:08:25] bodega me aparezcan las bodegas y los artículos. En los informas me
+- [01:08:36] aparecen las bodegas. Sí, cada módulo tiene su panel de informes.
+- [01:08:46] Claro, por ejemplo, acá si yo estoy en LM, debería ser si o si solamente
+- [01:09:04] LM, porque puede pasar que yo, por error, ponga el magüe y me ponga
+- [01:09:10] crear las bodegas del LM. Sí, si por ejemplo, si hoy quise crear una
+- [01:09:37] bodega de las que no está aquí, yo acá pongo que ya voy, por ejemplo, en
+- [01:09:41] la bodega 23. Pongo 24 y pongo la bodega.
+- [01:09:50] Entonces ahí la creo y me deja crearla. Entonces, si yo me voy a LM y me voy a la
+- [01:09:56] 24, me aparece la bodega. Ya, y el nivel de almacenamiento, bueno, aquí es lo mismo,
+- [01:10:13] pero esto tampoco lo usamos mucho, debería ser como la distribución que yo
+- [01:10:20] tengo dentro de sí de la bodega. Siempre son tres niveles, mira, de niveles
+- [01:11:02] nosotros no lo hemos utilizado. Tendría que ver con la persona de materiales si
+- [01:11:08] sería útil tenerlo con niveles.
+- [01:11:12] Pero actualmente nosotros no usamos el nivel de almacenamiento. Y ahí el
+- [01:11:26] parámetro de contabilización. Acá sí es importante el tema de la
+- [01:11:30] contabilización, porque tenemos distintos movimientos de bodega.
+- [01:11:34] Sí, tenemos un informe de movimientos por artículo. O sea, si yo lo pongo,
+- [01:12:10] dejar si me aparece, no me aparece. Pero si yo pongo, crear.
+- [01:12:15] Y aquí están todos los movimientos y son varios. Entonces, hay partidas que
+- [01:12:23] son complementarias. Exacto. Se agregan solas ya de por sí.
+- [01:12:48] Sí, esto sería replicarnos, ya.
+- [01:13:20] En familia es lo mismo de la creación de insumo.
+- [01:13:28] Sí, puedo empezar a modificar la familia. En la subfamilia es lo mismo.
+- [01:13:45] Sí. Pero por ejemplo, acá como es la contabilización de insumo, yo si pongo un
+- [01:13:49] tipo de movimiento, imagina a pedir la familia, la subfamilia, la cuenta el
+- [01:13:54] debe y la cuenta la ver. Para cuando ese movimiento tenga, o sea, ese tipo de
+- [01:13:59] movimiento, tenga movimiento ver dónde se va a contabilizar.
+- [01:14:07] Sí, sí. Ya mira, por ejemplo, acá yo voy a poner entrada de bodega.
+- [01:14:30] Conse la familia materiales de embalaje. La subfamilia materiales de embalaje
+- [01:14:34] separadores. Acá yo estoy diciendo que todo cuando entre a bodega los
+- [01:14:40] separadores se me van a ir a la cuenta, por ejemplo, existencia. Y cuando yo
+- [01:14:51] tenga baja de separadores se me va a ir a la cuenta del gasto.
+- [01:15:03] ¿Cómo es que bolsé de venir a existencia tiene la baja?
+- [01:15:06] Eso pongamos que existencia. Y acá la cuenta contable es costo.
+- [01:15:15] Costo materiales de embalaje. Entonces, yo ahí la grabo.
+- [01:15:22] Entonces, estoy diciendo que cuando yo tenga movimiento de
+- [01:15:24] separadores, siempre se va a mover en existencia, pero cuando yo haga el
+- [01:15:28] consumo, se me va a ir a la cuenta costo materiales de embalaje.
+- [01:15:42] Sí, al tipo de movimiento. Claro, este es un ejemplo.
+- [01:16:01] Igual yo te voy a poner las cuantas contables que va a mover
+- [01:16:04] cada tipo de movimiento. Entonces, cuando yo aquí parametrizo
+- [01:16:14] cómo quiero los movimientos de bodega, una vez que la persona
+- [01:16:18] encargada de bodega termina de hacer los consumos mensuales,
+- [01:16:23] él cierra. Bueno, yo cerro el módulo y se contabiliza.
+- [01:16:29] Y ahí, dependiendo de los movimientos que hubieron en el
+- [01:16:31] mes, es si se cambió de bodega o se reconoció algún costo por
+- [01:16:35] consumo. ¿Sí? Ya. Ahí ya sería el movimiento de bodega in situ.
+- [01:17:03] Que aquí es donde se hace todo el movimiento de bodega desde
+- [01:17:06] que llega el producto, se cambia de bodega, se consume.
+- [01:17:12] ¿Aquí se hace el movimiento de bodega?
+- [01:17:20] Exacto. Exacto. Entonces, por ejemplo, acá, yo puedo
+- [01:17:26] seleccionar la orden de compra. Ya tipo de movimiento.
+- [01:17:31] Ya entra desde bodega, desde proveedor. Una compra.
+- [01:17:38] Entonces, veo toda la orden de compra que yo tengo para
+- [01:17:42] ingresarlas. Ya supongamos que está. Ya. Acá me dice
+- [01:17:52] cuánto es el saldo y cuánto es el total. Claro.
+- [01:18:04] El saldo es la clara. Lo que yo ya ingresé porque por eso
+- [01:18:06] estaba en estado parcial. Y la cantidad yo compré 800, pero
+- [01:18:12] llevo ingresada 398. Entonces, acá yo puedo decir, ya llegó,
+- [01:18:19] selecciono el, bueno, el proveedor me lo da automático
+- [01:18:22] al seleccion en la orden de compra. Y acá yo voy a,
+- [01:18:27] aquí bodega la quiero almacenar. Aquí pongo bodega
+- [01:18:32] chamonata. Aquí pongo la, la observación, el tipo de
+- [01:18:36] cambio de compra que lo hace la persona encargado. Ya
+- [01:18:41] acá pongo el artículo que llegó, la cantidad que me
+- [01:18:44] llegó y la pongo a agregar. Yo una vez que está todo aquí, yo
+- [01:18:49] pongo guardar. No lo voy a hacer en este caso porque no es
+- [01:18:51] mi módulo. Sí, igual la idea de cuando ya esté armado el
+- [01:19:13] tema o ya veamos las pruebas o cómo va quedando el módulo
+- [01:19:17] como llamar a los encargados de cada área para ver si se
+- [01:19:20] puede hacer alguna mejora o están conforme con lo que
+- [01:19:22] se está haciendo. Claro. Claro. O sea, la idea es que las
+- [01:19:37] personas que ya están operando el cada módulo después ya
+- [01:19:41] vean una visualización avanzada porque son personas que
+- [01:19:45] tampoco saben cómo se conectan los módulos entre sí a
+- [01:19:48] contabilidad. Exacto. Entonces yo van a ver, por ejemplo,
+- [01:19:54] esta pantallita y van a decir, ya tengo todo lo que
+- [01:19:56] necesito. No, acá solamente se pone si llegó más, más
+- [01:20:13] producto en suma de la orden de compra o si yo, por
+- [01:20:17] ejemplo, tengo la bodega chamonata de veinte y la
+- [01:20:20] quiero mover a otra bodega, cambio el tipo de
+- [01:20:22] movimiento. Claro, y ahí lo muevo entre bodega o si tengo
+- [01:20:26] que hacer una devolución. Acá si habría una, que
+- [01:20:29] hacer, podríamos hacer una mejora en el módulo de
+- [01:20:31] de insumo. Nos pasa que, por ejemplo, nosotros
+- [01:20:36] compramos a un tipo de cambio, una cantidad y nos
+- [01:20:43] imiten nota de crédito. Y a veces la nota de crédito es
+- [01:20:49] por cantidad, entonces, por ejemplo, si compré mil y
+- [01:20:54] me llegaron 900, me imiten una nota de crédito por
+- [01:20:56] cien. Exacto. Entonces, ¿qué pasa? Cuando se ingresa a la
+- [01:21:03] bodega, queda a precio promedio. Entonces, sí.
+- [01:21:13] Exacto. Entonces, si yo la meto a precio, no. Por
+- [01:21:16] ejemplo, compré bolsas. Ya, y la bolsa en la
+- [01:21:19] bodega, por la cantidad de bolsa, están hacia el
+- [01:21:22] peso. Pero yo compré mil bolsas a ciento diez.
+- [01:21:29] Entonces, cuando yo ingreso a la bodega, por
+- [01:21:31] ejemplo, que me llegaron cien bolsas a ciento diez, me
+- [01:21:33] queda un precio promedio de ciento cinco. Con las
+- [01:21:37] que ya tenía, más las que estoy adicionando. O sea, se
+- [01:21:45] topa como un conjunto, que al final me va modificando
+- [01:21:48] el precio promedio de la bodega, dependiendo de la
+- [01:21:49] cantidad y el precio que la compré, si tengo diez
+- [01:21:52] facturas, me saco un precio promedio de las diez
+- [01:21:54] facturas. ¿Qué pasa? Que cuando yo tengo una nota
+- [01:21:59] de crédito, que va directamente a una
+- [01:22:01] factura en específico, no me deja sacar esa
+- [01:22:04] cantidad por el precio de la factura. Me la
+- [01:22:07] saca de bodega a precio promedio de selección. No me
+- [01:22:13] da la opción de seleccionar ni de modificar
+- [01:22:16] nada. Entonces, ¿qué pasa? A nosotros en
+- [01:22:18] contabilidad se nos genera una diferencia cuando
+- [01:22:21] llegan notas de crédito, ya sea para arriba o
+- [01:22:24] para abajo. Va a depender del precio promedio
+- [01:22:27] a la bodega, no de la factura. Ya. Yo me
+- [01:22:49] compro mucho a buscarte todos los ejemplos que
+- [01:22:50] te estoy mencionando. Entonces, mañana voy a
+- [01:22:55] intentar detener el de contratista para que
+- [01:23:00] podamos visualizar el ingreso de una
+- [01:23:02] pro forma y la sesión a la factura y el
+- [01:23:09] tema de alguna nota de crédito con factura
+- [01:23:11] que me esté generando una diferencia.
+- [01:23:21] Claro. Ya. Y una vez que nosotros hacemos
+- [01:23:36] un movimiento de bodega, solamente me
+- [01:23:38] generan los informes y los de más informes.
+- [01:23:41] Así que aquí solamente sí, aquí solamente
+- [01:23:43] es movimiento. Sí. Sí, porque independiente
+- [01:24:00] del cargo no todos tienen acceso a toda la
+- [01:24:03] información. Claro, pero para
+- [01:24:21] visualización para nosotros es más fácil
+- [01:24:24] si quiero sacar un informe de bodega y
+- [01:24:27] martiró el módulo de insumo. No, no
+- [01:24:42] porque acá pasa lo mismo que en el módulo
+- [01:24:44] de contratista. Acá se hace el
+- [01:24:48] traspaso a contabilización, se genera
+- [01:24:51] la contabilización, se traspasa
+- [01:24:52] contabilidad y se cierra el mes. No,
+- [01:25:11] actualmente no usamos el módulo de
+- [01:25:13] maquinaria, pero yo creo que sería bueno
+- [01:25:19] implementarlo. Mira, se supone que el
+- [01:25:26] módulo de maquinaria es para el área
+- [01:25:28] agrícola que tiene tractores, tiene
+- [01:25:31] pulverizador. Sí, mira, esto es para ver
+- [01:25:41] las mantenciones, ver el desgaste y
+- [01:26:00] pasar el progroteo. Por ejemplo, si yo
+- [01:26:01] tengo un tractor y lo ocupo no sé,
+- [01:26:04] por ejemplo, en cinco cuarteles, hacer el
+- [01:26:07] desglose por cuartel, o por labor.
+- [01:26:21] Mira, igual actualmente, en maquinaria no
+- [01:26:31] lo usamos en ninguno de los rubros.
+- [01:26:41] Exacto. Este módulo sería como ya la
+- [01:26:45] necesidad de lo que queremos ver, pero en
+- [01:26:47] sí no lo usamos en ningún rubro.
+- [01:26:50] Exacto. Y aquí viene el de
+- [01:27:01] contabilidad que es como el más denso.
+- [01:27:05] Sí, porque aquí centraliza contabilidad,
+- [01:27:08] proveedores, ventas de ferrería y activos
+- [01:27:11] fijos. Entonces, el módulo de
+- [01:27:15] contabilidad, tenemos la parametriciación
+- [01:27:18] que aquí nos deja agregar, eliminar y
+- [01:27:22] modificar el plan de cuenta.
+- [01:27:26] Yo quiero que la cuenta me pida
+- [01:27:29] en el centro de costo, me pida, haría negocio.
+- [01:27:32] Todo lo que yo creo que me pida.
+- [01:27:47] No me permite. Por ejemplo, yo aprieto
+- [01:27:49] banco Chile, me permite todo lo que yo quiero
+- [01:27:53] cambiar. Exacto. Por ejemplo, pongo centro
+- [01:27:59] de costo, haría negocio y lo pongo
+- [01:28:01] guardar. O si no quiero que la utilicen,
+- [01:28:04] pongo no imputable y pongo guardar.
+- [01:28:07] Entonces, nadie puede utilizar esa cuenta.
+- [01:28:12] Y ahí después, acá yo puedo desplegar
+- [01:28:14] todo lo que es el plan de cuenta.
+- [01:28:16] Y ahí me dice, me dice el nivel de
+- [01:28:20] almacenamiento, me dice si la planta
+- [01:28:23] no, si, no, si, si yo la modifique.
+- [01:28:26] O sea, si la estoy solicitando.
+- [01:28:29] El centro de costo, el haría negocio,
+- [01:28:31] la especie, variedad, elemento de costo.
+- [01:28:35] Entonces, todas las que son bienes,
+- [01:28:37] son las que no se requieren.
+- [01:28:39] Aquí nosotros parametrizamos.
+- [01:28:45] Ya, una vez que tenemos el plan de
+- [01:28:51] cuenta, podemos parametrizar lo que
+- [01:28:53] queremos visualizar en el estado
+- [01:28:55] resultado y en el estado de situación
+- [01:28:57] financiera. Acá tengo los tipos de
+- [01:29:09] auxiliares. Las cuentas auxiliares.
+- [01:29:28] Por ejemplo, el personal está creado
+- [01:29:30] a toda la gente que está contratado.
+- [01:29:36] Acaba eso y las instituciones de
+- [01:29:38] previsión. No mucho porque,
+- [01:29:45] mira, si yo aprieto acá personal,
+- [01:29:47] me aparece solamente para
+- [01:29:49] oeditarlo o eliminarlo.
+- [01:29:51] Sí. Sí.
+- [01:29:56] Tipos de referencia.
+- [01:30:10] Acá es lo que uno va seleccionando
+- [01:30:12] en el libro de compras.
+- [01:30:14] Cuando yo seleccioné el documento,
+- [01:30:20] y estos son todos los tipos de
+- [01:30:22] referencia que yo puedo crear
+- [01:30:24] también. Sí, lo he creado acá.
+- [01:30:34] Mira, por ejemplo, el 31 lo creé.
+- [01:30:39] Entonces, acá pongo nuevo
+- [01:30:41] y tengo que poner el código
+- [01:30:43] y la descripción.
+- [01:30:45] Y en otro módulo,
+- [01:30:48] yo tengo que poner si,
+- [01:30:50] por ejemplo, el 31 tiene
+- [01:30:52] algún impuesto específico,
+- [01:30:54] algún exento,
+- [01:30:56] como la
+- [01:30:58] la clasificación
+- [01:31:00] de cada tipo de referencia.
+- [01:31:02] Ya, área de negocio,
+- [01:31:08] que son las que usamos actualmente,
+- [01:31:10] es el módulo de gestión.
+- [01:31:16] El área de negocio.
+- [01:31:18] Y el elemento de costo,
+- [01:31:22] que esto también lo podemos modificar
+- [01:31:24] y crear y eliminar de aquí mismo.
+- [01:31:26] ¿Cómo?
+- [01:31:55] Sí. Igual acá,
+- [01:32:01] nosotros queremos hacer una mejor
+- [01:32:03] al sistema, porque actualmente
+- [01:32:05] nosotros tenemos el artículo,
+- [01:32:07] el centro de costo
+- [01:32:10] y el elemento de costo que podemos mezclar
+- [01:32:12] como nosotros creamos.
+- [01:32:18] La idea sería que se fregan asociando, porque así
+- [01:32:20] cada departamento trabaja
+- [01:32:22] con sus centros de costos y sus artículos
+- [01:32:24] más rígidos.
+- [01:32:26] Porque actualmente
+- [01:32:28] nos pasa mucho que le preguntamos,
+- [01:32:30] no sé, al jefe de área de industrial,
+- [01:32:32] por ejemplo.
+- [01:32:34] ¿Esta factura a qué va? Ya dice, no sé,
+- [01:32:36] movimiento en base, elemento de costo,
+- [01:32:38] movimiento en base. Después le preguntamos lo mismo,
+- [01:32:40] y dice ya centro de costo cereza,
+- [01:32:42] elemento de costo
+- [01:32:44] bodega.
+- [01:32:46] Entonces al final es el mismo concepto
+- [01:32:48] y vamos cambiando el elemento de costo.
+- [01:32:50] Exacto. O sea, si el área industrial
+- [01:32:54] un ejemplo tiene para usar
+- [01:32:56] los centros de costo de la bodega,
+- [01:32:58] tenga que usar los elementos
+- [01:33:00] de costo que sean solamente de
+- [01:33:02] esa área, que es, por ejemplo, movimiento en base,
+- [01:33:04] limpieza en base,
+- [01:33:06] reparación de en base, todo lo que tenga
+- [01:33:08] que ver relacionado con su área.
+- [01:33:10] Exacto. Si hablo acá,
+- [01:33:34] me aparece el elemento de costo, y acá lo puedo
+- [01:33:36] sacar en Word, PDF, PowerPoint,
+- [01:33:38] todo.
+- [01:33:40] Siempre usamos Excel, pero nunca está demasiado
+- [01:33:42] a tener el PDF.
+- [01:33:51] De hecho, eso fue una mejora que fue
+- [01:33:53] si fue implementada hace poco, porque
+- [01:33:55] antes se podía sacar solos en PDF.
+- [01:34:00] Para nosotros, Excel es sagrado.
+- [01:34:02] Entonces, tenemos todo el listado
+- [01:34:04] de los elementos de costo.
+- [01:34:21] Claro. Sí.
+- [01:34:25] De hecho, cuando solo queremos mandarlo
+- [01:34:27] el listado de los que hay que crear, pero ya
+- [01:34:29] cuando estén más limpios.
+- [01:34:32] Bueno, porque por ejemplo, actualmente
+- [01:34:34] en los elementos de costo, no solo podemos
+- [01:34:36] modificar, editar o eliminar,
+- [01:34:38] pero no nos deja, por ejemplo,
+- [01:34:40] anular el uso.
+- [01:34:45] Exacto.
+- [01:34:47] Sí, porque al final, obviamente, sabemos
+- [01:34:49] que no lo podemos eliminar por la información histórica,
+- [01:34:51] pero igual hay muchos elementos
+- [01:34:53] de costo que ya no se usan.
+- [01:34:55] Entonces,
+- [01:34:57] cuando uno quiere seleccionar el elemento de costo
+- [01:34:59] te aparece el paño de elementos de costo.
+- [01:35:01] ¿Por qué sí?
+- [01:35:09] Porque no hay los por su acaso.
+- [01:35:17] Ya.
+- [01:35:19] Acá tenemos el código financiero.
+- [01:35:21] Que el código financiero lo usamos netamente
+- [01:35:25] para el flujo de caja.
+- [01:35:27] Para todo lo que tiene que ver con movimiento
+- [01:35:31] de banco y tesorería.
+- [01:35:33] Entonces, yo, dependiendo del código financiero,
+- [01:35:35] se aparametriza para que cuando yo saque
+- [01:35:37] el flujo de caja me aparezca si es
+- [01:35:39] ingresos cerezas,
+- [01:35:41] si es venta de agroquímico.
+- [01:35:43] Sí.
+- [01:35:53] Sí.
+- [01:35:55] Entonces, esta es la forma que nosotros
+- [01:35:57] tenemos para seleccionar.
+- [01:35:59] Si queremos que, por ejemplo, un ingreso de dinero
+- [01:36:01] se vaya a venta de exportación cereza
+- [01:36:03] o se vaya a venta de exportación nectarín.
+- [01:36:05] Entonces, después,
+- [01:36:09] cuando queremos sacar el flujo de caja,
+- [01:36:11] vemos cuál es el que no está dando mayor
+- [01:36:13] ingreso, mayor costo.
+- [01:36:15] Sí.
+- [01:36:34] Los tipos de comprobante.
+- [01:36:36] La apertura, si es de ingreso, ingreso,
+- [01:36:38] proveedores de la espacio y venta.
+- [01:36:40] Acá sería replicar solamente.
+- [01:36:42] Y los tipos de impuestos.
+- [01:36:50] Por ejemplo, acá yo pongo que el IVA
+- [01:36:53] es el 0,19.
+- [01:36:55] Yo el retenido también es 0,19.
+- [01:36:57] Los horarios, cuando vamos cambiando,
+- [01:36:59] por ejemplo, yo aprieto y me pide
+- [01:37:01] el factor actual y el factor anterior.
+- [01:37:05] ¿Y desde qué fecha?
+- [01:37:07] Claro, desde qué fecha.
+- [01:37:09] Yo quiero modificar a que se haga el factor actual.
+- [01:37:11] Exacto. Por ejemplo, como el tema
+- [01:37:18] de los horarios va subiendo año a año,
+- [01:37:27] yo aquí pongo cuando hay un cambio
+- [01:37:29] en el factor.
+- [01:37:32] ¿Y desde qué fecha? Quiero que se aplique.
+- [01:37:34] Entonces, por ejemplo, si hubo un cambio en junio,
+- [01:37:36] yo pongo que desde junio
+- [01:37:38] sea, por ejemplo, un factor
+- [01:37:40] del 15-25
+- [01:37:42] y de mayo hacia atrás sea del 14-5.
+- [01:37:59] ¿Cómo que fue que modificó?
+- [01:38:01] No.
+- [01:38:07] Sí, sería bueno tener un historial.
+- [01:38:09] Sí, estaría bueno.
+- [01:38:24] Sí, todos tienen la misma.
+- [01:38:32] Ya, ahí sería todo lo que es la
+- [01:38:38] parametricesión de contabilidad.
+- [01:38:40] Y acá yo lo pongo en los procesos diarios
+- [01:38:42] que se los comprovantan de que yo ingreso
+- [01:38:44] como el movimiento diario del sistema.
+- [01:38:46] Acá ingresa no sé
+- [01:38:51] si hay algún traspaso de cuenta,
+- [01:38:53] alguna clasificación
+- [01:38:55] de centro de costo,
+- [01:38:57] si quiero ingresar
+- [01:39:01] los movimientos del banco.
+- [01:39:03] ¿Sí?
+- [01:39:16] Mira, por ejemplo, yo acá
+- [01:39:18] puedo poner todos los movimientos que quiero crear.
+- [01:39:20] Entonces, generalmente
+- [01:39:22] en este módulo
+- [01:39:24] se ocupa ingreso e ingreso traspaso.
+- [01:39:26] Porque el de proveedor y el de venta
+- [01:39:28] se hacen directamente en el módulo
+- [01:39:30] de proveedor y en el módulo de venta.
+- [01:39:32] Entonces, por ejemplo, si yo quisiera hacer
+- [01:39:36] un movimiento del banco, pongo
+- [01:39:38] si es ingreso o ingreso.
+- [01:39:40] Y si quiero hacer
+- [01:39:42] una clasificación de centro de costo, pongo traspaso.
+- [01:39:44] Ya.
+- [01:40:04] Acá tenemos la opción
+- [01:40:06] de hacer una carga masiva
+- [01:40:08] de un comprobante contable.
+- [01:40:10] Y esto también es nuevo del sistema.
+- [01:40:14] Hasta no teníamos esta opción.
+- [01:40:16] Teníamos que visitar si eran 200 líneas
+- [01:40:18] a las 200 líneas.
+- [01:40:21] Terrible.
+- [01:40:24] Sí.
+- [01:40:26] Vamos a desharrar la sesión en el movimiento 180.
+- [01:40:28] Claro.
+- [01:40:30] Así que acá
+- [01:40:34] nosotros seleccionamos el archivo
+- [01:40:36] que es un archivo especial
+- [01:40:38] que nos creo
+- [01:40:40] agrosoft
+- [01:40:42] con campo específico
+- [01:40:44] con
+- [01:40:46] tipo documento específico.
+- [01:40:48] Nosotros seleccionamos el archivo,
+- [01:40:50] ponemos la glosa,
+- [01:40:52] subimos el archivo y nos arroja sitiana
+- [01:40:54] no errores.
+- [01:40:56] Y ahí guardamos y se contabiliza.
+- [01:41:01] Claro, mira, por ejemplo, yo te voy a seleccionar un archivo.
+- [01:41:05] Actualmente lo usamos con el tema
+- [01:41:07] de remuneraciones.
+- [01:41:09] Entonces, por ejemplo, ya tengo
+- [01:41:17] remuneraciones.
+- [01:41:19] Y acá subo el archivo.
+- [01:41:21] Ya me dice todo lo que tiene inconsistencia,
+- [01:41:23] que es el periodo contable,
+- [01:41:25] porque esta centralización es de junio.
+- [01:41:27] Entonces acá me dice que todas las líneas
+- [01:41:31] tienen error en el periodo contable.
+- [01:41:35] Pero si tuvieran junio,
+- [01:41:37] me diría que no hay ningún error
+- [01:41:39] y que la diferencia entre el DBI y el ABI es cero
+- [01:41:41] en peso y dólar.
+- [01:41:50] Mira, me voy a cambiar a junio
+- [01:41:52] y se cambia.
+- [01:42:00] Entonces ahí me arroja todos los errores que puede tener el archivo.
+- [01:42:02] Puede ser error,
+- [01:42:07] por ejemplo, que yo puse centro de costo
+- [01:42:09] y la cuenta contable no lo requiere,
+- [01:42:11] me alerta.
+- [01:42:13] Tal línea no requiere centro de costo.
+- [01:42:15] O tal línea le falta centro de costo.
+- [01:42:17] O le falta elemento de costo.
+- [01:42:19] O le falta área de negocio.
+- [01:42:21] Exacto.
+- [01:42:29] Exacto.
+- [01:42:31] Entonces una vez que yo puedo cedir el archivo
+- [01:42:33] no puedo visualizar abajo.
+- [01:42:43] Sí, esto es súper bueno.
+- [01:42:45] Y acá yo pongo la glosa,
+- [01:42:47] centralización de remuneraciones en mes de junio
+- [01:42:49] y la pongo guarda.
+- [01:42:51] Y ahí se me guarda.
+- [01:42:55] Entonces si yo lo hiciera...
+- [01:42:57] Exacto.
+- [01:42:59] No, la glosa es lo que yo quiero visualizar
+- [01:43:01] en el comprobante.
+- [01:43:03] Por ejemplo,
+- [01:43:05] yo siempre lo guardo como centralización
+- [01:43:07] de remuneraciones.
+- [01:43:09] Entonces si yo me voy a comprobante es contable
+- [01:43:11] y pongo
+- [01:43:13] centralización, me aparece.
+- [01:43:15] Centralización de remuneraciones.
+- [01:43:17] Si yo doble click
+- [01:43:19] y aquí veo cómo se me contabilizo.
+- [01:43:21] Exacto.
+- [01:43:24] Este es el éxel de la carga masiva.
+- [01:43:26] Voy a decir lo mismo.
+- [01:43:48] Voy a decir lo mismo porque nos pasa mucho
+- [01:43:50] que por ejemplo tenemos que buscar un archivo
+- [01:43:52] que no tenga errores.
+- [01:43:54] Entonces el archivo ya me lo mandaron una vez
+- [01:43:56] y yo lo hice modificaciones
+- [01:43:58] copias todo el tema
+- [01:44:00] y de repente
+- [01:44:02] yo estoy trabajando un archivo, lo guardo tal cual
+- [01:44:04] y me dice que error en conexión
+- [01:44:06] que algo no se hizo bien.
+- [01:44:08] Entonces tengo que ver un archivo que esté
+- [01:44:10] como listo para subir
+- [01:44:12] para poder modificarlo recién y subirlo.
+- [01:44:14] Exacto.
+- [01:44:22] Esos archivos quedan en el olvido.
+- [01:44:26] Mira, yo lo guardo por ejemplo el tema
+- [01:44:28] de las centralizaciones y yo siempre me voy
+- [01:44:30] como colgando del archivo anterior
+- [01:44:32] y le modifico los datos y todo el tema.
+- [01:44:34] Pero aún así puede tener errores.
+- [01:44:36] Exacto.
+- [01:44:49] Mira, por ejemplo la vez me pasó que estaba
+- [01:44:51] cargando un archivo y me demoré
+- [01:44:53] n y le decía por qué no me funciona si es el mismo
+- [01:44:55] archivo del mes pasado.
+- [01:44:57] Y era que una
+- [01:44:59] como una celda se había cambiado
+- [01:45:01] de número a texto.
+- [01:45:04] Entonces para encontrarlo le decía
+- [01:45:06] un kilo. Sí, ideal.
+- [01:45:21] De hecho era la mejor idea de decir.
+- [01:45:23] Sí, muy bien.
+- [01:45:26] Sí, estamos en la hora.
+- [01:45:35] ¿Ya?
+- [01:46:07] Buenísimo.
+- [01:46:19] Es que tú iguales entendías todo el módulo.
+- [01:46:29] Entonces se acabó bastante.
+- [01:46:35] Pero luego todo grababa entonces.
+- [01:46:37] Nos quedaría como el sistema de gestión
+- [01:47:04] y la parametrización en general.
+- [01:47:06] Mira, el sistema de gestión tampoco lo usamos
+- [01:47:09] actualmente y por eso nació la creación
+- [01:47:11] del departamento de Mario
+- [01:47:13] de control de gestión y que él
+- [01:47:15] trabajara con los Power BI directo
+- [01:47:17] de la base de Agresoft.
+- [01:47:19] Sí, porque en sí
+- [01:47:21] la gestión que nos daba el sistema era muy básica.
+- [01:47:23] Sí.
+- [01:47:34] Acá es lo ideal es trabajarlo con Mario
+- [01:47:36] para ver como él qué quiere ver
+- [01:47:38] de forma rápida.
+- [01:47:40] Por ejemplo, no sé por los gráficos
+- [01:47:42] de costo de
+- [01:47:44] la especie.
+- [01:47:46] Sí, alguna depensión con el presupuesto.
+- [01:47:48] Mario vuelve en agosto.
+- [01:48:04] Igual esto va a ser más rápido porque
+- [01:48:06] como él tiene la página web de Almagüe
+- [01:48:08] y ahí ande trabaja la mayor parte
+- [01:48:10] como del área de él,
+- [01:48:12] acá es como lo rápido
+- [01:48:14] para el área de nosotros de contabilidad
+- [01:48:16] o de gerencia.
+- [01:48:18] Entonces, al final se dieron como gráficos rapiditos
+- [01:48:20] de no sé
+- [01:48:22] de viajar en el centro
+- [01:48:24] de costo
+- [01:48:26] o ver
+- [01:48:28] no sé la cantidad
+- [01:48:30] de costos versus la especie
+- [01:48:32] pero como algo más rápido
+- [01:48:34] en realidad. Claro, sería ideal.
+- [01:48:43] Y en el
+- [01:48:50] parámetro general
+- [01:48:52] acá yo puedo crear las empresas
+- [01:48:59] que me deberían aparecer afuera.
+- [01:49:03] Sí.
+- [01:49:05] La especie variedad
+- [01:49:17] los fundos que en realidad son los campos
+- [01:49:19] que esto no tiene mayor
+- [01:49:21] como mayor
+- [01:49:23] relevancia.
+- [01:49:27] Sí, se tiene el registro pero al final
+- [01:49:29] como que lo ponen por sector más
+- [01:49:31] que como
+- [01:49:33] un fundo.
+- [01:49:35] El tipo de terreno
+- [01:49:37] importa porque para el área agrícola
+- [01:49:39] los centros de costo
+- [01:49:44] que los podemos acá
+- [01:49:46] cambiar vigencia, crear o modificar
+- [01:49:48] la ubicación geográfica
+- [01:49:54] tampoco en realidad como que no impacta
+- [01:49:56] mucho.
+- [01:49:59] Claro, pero esto nos pide
+- [01:50:01] cuando creamos los proveedores.
+- [01:50:05] Sí.
+- [01:50:11] Y los indicadores financieros que acá
+- [01:50:13] por ejemplo yo pongo el año 2026
+- [01:50:15] y me parece
+- [01:50:17] esto se toma
+- [01:50:19] en la página del banco central.
+- [01:50:26] Sí, y esto también es algo nuevo
+- [01:50:28] que tiene al módulo porque antes
+- [01:50:30] no lo ponía automático
+- [01:50:32] sino que me aparecía todo en blanco y tenía que
+- [01:50:34] digitarlo manual todos los días.
+- [01:50:37] Sí, me sé, se me olvidaba un día
+- [01:50:39] y la gente contabilizaba
+- [01:50:41] y no se daba cuenta que no tiene el tipo de cambio
+- [01:50:43] y se contabiliza igual.
+- [01:50:45] Entonces ahí queda todo
+- [01:50:47] mal contabilizado.
+- [01:50:51] Sí.
+- [01:50:54] Entonces ahí nos genera
+- [01:50:56] como inconsistencia en la reportería
+- [01:50:58] porque empezo siempre me va a salir
+- [01:51:00] porque empezo me deja contabilizarlo
+- [01:51:02] pero ya hay registros que no me aparecen
+- [01:51:04] en dólar.
+- [01:51:06] Entonces el momento de sacar reportería en dólar
+- [01:51:08] es una información errónea.
+- [01:51:21] Mira, esto se actualiza en la mañana.
+- [01:51:26] Sí, sí, yo cuando ya
+- [01:51:28] a las 9 y están actualizados los indicadores
+- [01:51:30] por eso se hace del banco central
+- [01:51:32] y no se hace la página del servicio impuesto interno
+- [01:51:34] porque el servicio lo utiliza más tarde.
+- [01:51:36] No, solamente
+- [01:51:53] los indicadores del banco central.
+- [01:51:55] Pero por ejemplo, en este caso
+- [01:52:08] yo creo que sería importante que, claro, aquí fuera
+- [01:52:10] dólar, euro y ya
+- [01:52:12] y yuan.
+- [01:52:14] En realidad la UF, la UTM y el IPC
+- [01:52:16] no son indicadores que usamos directamente
+- [01:52:18] para ninguna reportería
+- [01:52:20] porque hasta en el módulo de mano de obra
+- [01:52:22] que actualmente lo ocupan los agrícolas
+- [01:52:24] lo tienen que digitar manual.
+- [01:52:26] Por ejemplo,
+- [01:52:47] que nosotros veíamos seleccionando
+- [01:52:49] la moneda de armas
+- [01:52:56] y sería mejor porque así
+- [01:52:58] en caso de que el día mañana necesitáramos
+- [01:53:00] otra moneda ya estaría parametrizado.
+- [01:53:02] Mira, por ejemplo, acá lo que podría ser mejora
+- [01:53:21] que lo estoy visualizando
+- [01:53:23] es que los días domingo y los feriado
+- [01:53:25] no me trae el tipo de cambio.
+- [01:53:27] Entonces, por ejemplo, estos días
+- [01:53:29] yo lo tengo que digitar manual.
+- [01:53:31] Y ahí me quedan.
+- [01:53:48] Sí, sería ideal.
+- [01:54:03] Claro, porque mira, por ejemplo, acá me aparecen
+- [01:54:05] de lunes a sábado y si hay feriados
+- [01:54:07] no me aparecen y de ahí domingo está un poco.
+- [01:54:09] Entonces, si tú fijas que acá falta el día 19
+- [01:54:11] y tampoco me lo dejan plan,
+- [01:54:13] entonces yo he tenido que buscarlo,
+- [01:54:15] poner el 19 y digitarlo.
+- [01:54:17] Claro, y ahí se me agrega solamente
+- [01:54:20] el dólar que yo estoy ingresando.
+- [01:54:22] Si me hicieran los otros datos
+- [01:54:24] tendría que poner los manuales.
+- [01:54:36] Claro, claro.
+- [01:54:45] Mira, entonces mañana nos juntaríamos
+- [01:55:16] para ver los diferentes perfiles.
+- [01:55:18] Ya.
+- [01:55:25] Ya.
+- [01:55:30] No, creo que avanzamos bastante
+- [01:55:32] y con varias mejoras.
+- [01:55:34] Ya.
+- [01:56:05] Ya.
+- [01:56:07] Buenísimo.
+- [01:56:12] Te amo al pendiente.
+- [01:56:16] Tu igual que te vi en chao.

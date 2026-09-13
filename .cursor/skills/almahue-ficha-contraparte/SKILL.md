@@ -8,6 +8,7 @@ description: Ficha única cliente/proveedor (bancos, contactos, despacho); produ
 ## As-is (D7–D8)
 
 - Ficha única cliente/proveedor: bancos, contactos, despacho, historial, `solicitadoPor`.
+- **Cliente nacional:** dirección fiscal + comuna **obligatorias** (SII HED-3-845/846). Ciudad se completa con comuna si viene vacía. El alta en Ventas › Clientes y `createCliente`/`updateCliente` fallan sin esos datos. `getClientes` incluye `direcciones` de ficha.
 - Helpers en `modules/ficha/`; sin controller propio obligatorio.
 - UI: `FichaContraparteModal`, clientes comercial, `FichaProveedoresPage`.
 - Lookup RUT (`GET /comercial/lookup-rut`): sociedad + clientes + proveedores. Flag `esProductor` + arreglo `productores[]`. **No hay maestro Productor** (entidad aparte).

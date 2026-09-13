@@ -17,9 +17,11 @@ Código: `ERP/erp_back`, `ERP/erp_front`. Docs: `docs/erp-planificacion/agrosoft
 
 ## Prioridad de decisiones
 
-**Reu6** > Reu5 > Reu4. No leer `fuentes/transcripcion*.md` a menos que el usuario lo pida.
+**Reu6** > Reu5 > Reu4 en fecha. En **fidelidad**: `fuentes/transcripcion*.md` > minuta (las minutas las generó una IA).
 
-Carlos/Sergio en reuniones = hipótesis. Requisitos = Agustín/MJ + minuta + código (rule `almahue-reuniones`).
+Carlos/Sergio en reuniones = hipótesis. Requisitos = Agustín/MJ/Lupe/Mario **en la transcripción** + código (rule `almahue-reuniones`).
+
+Reu1–Reu3 (`transcripcion.md`, `transcripcion-reunion2.md`, `transcripcion-reunion3.md`) = recorrido del **as-is de Agrosoft**. Es la mejor descripción del sistema que el cliente usa hoy.
 
 Minutas: `reunion6-minuta-2026-08-06.md`, `reunion5-minuta-2026-08-03.md`, `reunion4-minuta-2026-07-30.md`. Sesión Lupe/Mario 20/08 tarde: `reunion-2026-08-20-tarde-lupe-mario.md` (no pisa Reu6).
 

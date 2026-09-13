@@ -1,0 +1,85 @@
+{
+  "id": "b64a082d-20c5-44cd-8fe2-d8f5d00e17ca",
+  "title": "Almahue — Emisión ventas + Config aprobaciones",
+  "product": "lucidchart",
+  "pages": [
+    {
+      "id": "0_0",
+      "title": "1. Emisión ventas (OV → DTE)",
+      "index": 0,
+      "items": {
+        "shapes": [
+          {"id": "SCPmUzUHAqZJ", "class": "TerminatorBlockV2", "textAreas": [{"label": "Text", "text": "Inicio"}], "customData": [], "linkedData": []},
+          {"id": "SCPmfcVfwoZa", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Solicitante genera OV"}], "customData": [], "linkedData": []},
+          {"id": "UEPmwi8hsDYt", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Se envía OV a cadena de aprobación"}], "customData": [], "linkedData": []},
+          {"id": "SCPmciWtTVEJ", "class": "DecisionBlock", "textAreas": [{"label": "Text", "text": "¿Se aprueba?"}], "customData": [], "linkedData": []},
+          {"id": "FFPmigZBzIEV", "class": "TerminatorBlockV2", "textAreas": [{"label": "Text", "text": "Notifica a solicitante\ncon motivo de rechazo"}], "customData": [], "linkedData": []},
+          {"id": "SCPmsL9vJ.S4", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "OV Autorizada"}], "customData": [], "linkedData": []},
+          {"id": "ORPmE9fdkdDl", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Notifica a solicitante"}], "customData": [], "linkedData": []},
+          {"id": "-SPmKWcjXE1Y", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Solicitante confirma OV"}], "customData": [], "linkedData": []},
+          {"id": "BKPmasaT_3dw", "class": "DecisionBlock", "textAreas": [{"label": "Text", "text": "¿Es producto o servicio?"}], "customData": [], "linkedData": []},
+          {"id": "aLPmhHWMKuTz", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Descuento en bodega"}], "customData": [], "linkedData": []},
+          {"id": "EMTsolicit001", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Solicitante emite factura\n(pantalla Emitir)"}], "customData": [], "linkedData": []},
+          {"id": "yLPmKGxJMUxj", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "GoSocket revisa/emite DTE\n+ asiento contable"}], "customData": [], "linkedData": []},
+          {"id": "1LPmwZyhsDxa", "class": "TerminatorBlockV2", "textAreas": [{"label": "Text", "text": "Fin"}], "customData": [], "linkedData": []}
+        ],
+        "lines": [
+          {"id": "SCPm10mCjPKS", "endpoint1": {"style": "None", "connectedTo": "SCPmUzUHAqZJ"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "SCPmfcVfwoZa"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "SCPmgd3UZiaA", "endpoint1": {"style": "None", "connectedTo": "SCPmfcVfwoZa"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "UEPmwi8hsDYt"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "0EPmLMCOpQWH", "endpoint1": {"style": "None", "connectedTo": "UEPmwi8hsDYt"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "SCPmciWtTVEJ"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "SCPmQJ-bf62c", "endpoint1": {"style": "None", "connectedTo": "SCPmciWtTVEJ"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "SCPmsL9vJ.S4"}, "textAreas": [{"label": "Text", "text": "Sí"}], "customData": [], "linkedData": []},
+          {"id": "SCPmaeSR421w", "endpoint1": {"style": "None", "connectedTo": "SCPmciWtTVEJ"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "FFPmigZBzIEV"}, "textAreas": [{"label": "Text", "text": "No"}], "customData": [], "linkedData": []},
+          {"id": "-JPmwNXSOzIk", "endpoint1": {"style": "None", "connectedTo": "SCPmsL9vJ.S4"}, "endpoint2": {"style": "Arrow", "connectedTo": "ORPmE9fdkdDl"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "-SPmoPB.UZ7s", "endpoint1": {"style": "None", "connectedTo": "ORPmE9fdkdDl"}, "endpoint2": {"style": "Arrow", "connectedTo": "-SPmKWcjXE1Y"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "WTPmvRv1-2_w", "endpoint1": {"style": "None", "connectedTo": "-SPmKWcjXE1Y"}, "endpoint2": {"style": "Arrow", "connectedTo": "BKPmasaT_3dw"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "OKPmB1yQTP_T", "endpoint1": {"style": "None", "connectedTo": "BKPmasaT_3dw"}, "endpoint2": {"style": "Arrow", "connectedTo": "aLPmhHWMKuTz"}, "textAreas": [{"label": "Text", "text": "Producto"}], "customData": [], "linkedData": []},
+          {"id": "uMPmKGcsI5sl", "endpoint1": {"style": "None", "connectedTo": "BKPmasaT_3dw"}, "endpoint2": {"style": "Arrow", "connectedTo": "EMTsolicit001"}, "textAreas": [{"label": "Text", "text": "Servicio"}], "customData": [], "linkedData": []},
+          {"id": "yLPmDEgEzlGx", "endpoint1": {"style": "None", "connectedTo": "aLPmhHWMKuTz"}, "endpoint2": {"style": "Arrow", "connectedTo": "EMTsolicit001"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "EMTlineEmit01", "endpoint1": {"style": "None", "connectedTo": "EMTsolicit001"}, "endpoint2": {"style": "Arrow", "connectedTo": "yLPmKGxJMUxj"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "kMPmCxxQSQdS", "endpoint1": {"style": "None", "connectedTo": "yLPmKGxJMUxj"}, "endpoint2": {"style": "Arrow", "connectedTo": "1LPmwZyhsDxa"}, "textAreas": [], "customData": [], "linkedData": []}
+        ],
+        "groups": [],
+        "layers": []
+      },
+      "customData": [],
+      "linkedData": []
+    },
+    {
+      "id": "0_1",
+      "title": "2. Admin configura aprobaciones (Comercial / OV)",
+      "index": 1,
+      "items": {
+        "shapes": [
+          {"id": "ADM01inicio", "class": "TerminatorBlockV2", "textAreas": [{"label": "Text", "text": "Inicio"}], "customData": [], "linkedData": []},
+          {"id": "ADM02menu", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Admin entra a\nReglas de aprobación"}], "customData": [], "linkedData": []},
+          {"id": "ADM03modulo", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Elige módulo Comercial\n(órdenes de venta)"}], "customData": [], "linkedData": []},
+          {"id": "ADM04grupo", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Define / edita Grupo\n(quiénes solicitan OV)"}], "customData": [], "linkedData": []},
+          {"id": "ADM05escala", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Define Escala por montos\n(pasos + aprobadores)"}], "customData": [], "linkedData": []},
+          {"id": "ADM06pin", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Designa aprobadores\ncon PIN de aprobación"}], "customData": [], "linkedData": []},
+          {"id": "ADM07sim", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Simula cadena\n(monto de prueba)"}], "customData": [], "linkedData": []},
+          {"id": "ADM08ok", "class": "DecisionBlock", "textAreas": [{"label": "Text", "text": "¿Cadena OK?"}], "customData": [], "linkedData": []},
+          {"id": "ADM09save", "class": "ProcessBlock", "textAreas": [{"label": "Text", "text": "Guarda configuración"}], "customData": [], "linkedData": []},
+          {"id": "ADM10fin", "class": "TerminatorBlockV2", "textAreas": [{"label": "Text", "text": "Listo para flujo OV\n(página Emisión ventas)"}], "customData": [], "linkedData": []}
+        ],
+        "lines": [
+          {"id": "ADMl01", "endpoint1": {"style": "None", "connectedTo": "ADM01inicio"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM02menu"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl02", "endpoint1": {"style": "None", "connectedTo": "ADM02menu"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM03modulo"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl03", "endpoint1": {"style": "None", "connectedTo": "ADM03modulo"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM04grupo"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl04", "endpoint1": {"style": "None", "connectedTo": "ADM04grupo"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM05escala"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl05", "endpoint1": {"style": "None", "connectedTo": "ADM05escala"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM06pin"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl06", "endpoint1": {"style": "None", "connectedTo": "ADM06pin"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM07sim"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl07", "endpoint1": {"style": "None", "connectedTo": "ADM07sim"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM08ok"}, "textAreas": [], "customData": [], "linkedData": []},
+          {"id": "ADMl08", "endpoint1": {"style": "None", "connectedTo": "ADM08ok"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM05escala"}, "textAreas": [{"label": "Text", "text": "No — ajustar"}], "customData": [], "linkedData": []},
+          {"id": "ADMl09", "endpoint1": {"style": "None", "connectedTo": "ADM08ok"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM09save"}, "textAreas": [{"label": "Text", "text": "Sí"}], "customData": [], "linkedData": []},
+          {"id": "ADMl10", "endpoint1": {"style": "None", "connectedTo": "ADM09save"}, "endpoint2": {"style": "Equilateral Arrow", "connectedTo": "ADM10fin"}, "textAreas": [], "customData": [], "linkedData": []}
+        ],
+        "groups": [],
+        "layers": []
+      },
+      "customData": [],
+      "linkedData": []
+    }
+  ],
+  "data": {"collections": []},
+  "accountId": 186735770
+}

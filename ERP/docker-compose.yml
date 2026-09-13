@@ -30,6 +30,10 @@ services:
       CORS_ORIGINS: ${CORS_ORIGINS:-}
       PASSWORD_RESET_DEV_RETURN_LINK: ${PASSWORD_RESET_DEV_RETURN_LINK:-false}
       RUN_MIGRATE: ${RUN_MIGRATE:-false}
+      BC_CRON_ENABLED: ${BC_CRON_ENABLED:-false}
+      BC_BDE_TOKEN: ${BC_BDE_TOKEN:-}
+      BC_BDE_USER: ${BC_BDE_USER:-}
+      BC_BDE_PASS: ${BC_BDE_PASS:-}
     ports:
       - "${ERP_API_HOST_PORT:-3001}:${ERP_API_PORT_INTERNAL:-3001}"
     networks:

@@ -29,7 +29,7 @@ Reglas:
 | Plan QA aprobaciones | [`qa/PLAN-PRUEBAS-APROBACIONES.md`](qa/PLAN-PRUEBAS-APROBACIONES.md) |
 | QA histórico Reu4 | [`qa/historico-reu4/`](qa/historico-reu4/) |
 | Transcripciones | `fuentes/transcripcion-reunion*.md` (solo bajo pedido) |
-| Videos | `fuentes/videos/` (gitignored) |
+| Videos + cronología | [`fuentes/cronologia/00-INVENTARIO.md`](fuentes/cronologia/00-INVENTARIO.md) · MP4 en `fuentes/videos/` (gitignored) o Screen Recordings |
 
 ## tl;dv
 

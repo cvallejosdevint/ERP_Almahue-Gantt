@@ -1,6 +1,6 @@
 # Cadena documental ERP Almahue (identificación)
 
-Orden cronológico confirmado · actualizado 2026-08-21
+Orden cronológico · actualizado 2026-09-04. Índice de videos: [`cronologia/00-INVENTARIO.md`](cronologia/00-INVENTARIO.md).
 
 ## Timeline
 
@@ -8,7 +8,8 @@ Orden cronológico confirmado · actualizado 2026-08-21
 |---|---|---|---|
 | 1 | Toma de requerimientos (no equipo TI) | Marketing proveedor + marketing cliente | **Dos PDFs Enterprise** (ver abajo) |
 | 2 | Planificación | Devint (tú) | **Carta Gantt** 6 meses |
-| 3 | Primera reunión / demo Agrosoft | Cliente + Devint | Video 21/07 + tl;dv |
+| 2b | Comentarios UI **Freshlink** (otro producto) | Cliente | Word 06/07 `Pantallazos_primera_Versión…` — **no es Agrosoft** |
+| 3 | Primera **demo Agrosoft grabada** (R1). No es el primer contacto | Cliente + Devint | Video 21/07 + tl;dv |
 | 4 | Post-reunión 1 (IA + análisis) | Devint | Transcripción, planes Trello v1 + corrección, consolidación |
 | 5 | Reunión 2 (contratistas AgroSmart, ventas, tesorería) | Cliente + Devint | Video 23/07 + tl;dv + capturas |
 | 6 | Post-reunión 2 | Devint | Análisis, plan de acción, DEC-11…15 |
@@ -30,7 +31,7 @@ Cruce interno: `docs/erp-planificacion/validacion-pdf-enterprise.md`
 |---|---|
 | `MarketManager-Levantamiento-Funcional-v3.pdf` (raíz repo) | Producto hermano MarketManager |
 | `Documentación API Export Manager China.pdf` (raíz repo) | Producto hermano Export Manager |
-| `Pantallazos_primera_Versión_comentarios_Almahue.docx` (Downloads, ~06/07) | Feedback UI previo; no el par marketing Enterprise |
+| `Pantallazos_primera_Versión_comentarios_Almahue.docx` (~06/07) | Feedback **Freshlink/MarketManager**; no Enterprise ni AS-IS Agrosoft. Copia: `cronologia/pre-2026-07-21/` |
 
 ---
 
@@ -48,7 +49,7 @@ En Trello cliente: tarjeta **Carta Gantt** (En QA Almahue).
 
 ---
 
-## 3) Primera reunión
+## 3) Primera demo Agrosoft grabada (R1, 21/07)
 
 | Artefacto | Ubicación |
 |---|---|

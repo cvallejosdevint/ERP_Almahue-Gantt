@@ -8,7 +8,8 @@ alwaysApply: true
 - Responder en **español**.
 - No commitear `.env`, JWT, dumps ni `ERP/.deploy/`.
 - Filtrar siempre por **tenant** (`empresaId`).
-- Arranque: `AGENTS.md`. Skills de dominio antes de transcripciones.
-- No leer `fuentes/transcripcion*.md` salvo pedido explícito.
+- Arranque: `AGENTS.md`. Skills de dominio para el **cómo**; transcripciones para el **qué pidió el cliente**.
+- `fuentes/transcripcion*.md` = **fuente primaria**. Las minutas `reunionN-minuta-*.md` las generó una IA: son índice, no evidencia. Ante duda, gana la transcripción.
+- Las Reu1–Reu3 documentan el **as-is de Agrosoft** (sistema actual del cliente). Consultarlas antes de declarar «no pedido».
 - Schema Prisma: solo `prisma/migrations/`.
 - Carlos/Sergio en reuniones: hipótesis. Validar con minuta (MJ/Agustín) y código. Ver `almahue-reuniones.mdc`.

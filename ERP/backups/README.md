@@ -1,19 +1,21 @@
 # Backups BD Almahue ERP
 
-Snapshot previo a ensayo de demostración.
+Snapshot previo a ensayo de demostración o QA que muta datos.
 
 ## Archivos
 
 | Archivo | Uso |
 |---|---|
-| `almahue-erp-20260730-144430.dump` | Backup de esta corrida (formato custom `pg_dump -Fc`) |
-| `almahue-erp-latest.dump` | Alias estable (siempre el último) |
-| `almahue-erp-20260730-144430.sql` | SQL del schema `erp` (inspección / fallback) |
-| `restore-almahue-erp.ps1` | Script de restauración |
+| `almahue-erp-20260902-224451.dump` | Respaldo **completo** pre-QA sistema 02/09 (pg_dump `-Fc` de toda la BD `almahue`) |
+| `almahue-erp-latest.dump` | Alias estable (siempre el último dump) |
+| `dump-almahue-erp.ps1` | Crear un dump nuevo |
+| `restore-almahue-erp.ps1` | Restaurar |
 
-## Restaurar en cualquier momento
+Dumps `.dump` / `.sql` están en `.gitignore`.
 
-Desde `ERP/backups` en PowerShell:
+## Restaurar (vuelve la BD al momento del dump)
+
+Desde `ERP/backups` en PowerShell. **Para el API** (Nest en watch). Luego:
 
 ```powershell
 .\restore-almahue-erp.ps1
@@ -22,24 +24,15 @@ Desde `ERP/backups` en PowerShell:
 O un dump concreto:
 
 ```powershell
-.\restore-almahue-erp.ps1 -DumpFile 'almahue-erp-20260730-144430.dump'
+.\restore-almahue-erp.ps1 -DumpFile 'almahue-erp-20260902-224451.dump'
 ```
 
-Luego reinicia el API si hace falta:
+Reinicia o deja que Nest recargue. Health debe seguir `db=ok`.
+
+`--clean` borra/recrea objetos de la BD destino. No apuntar a otra base.
+
+## Nuevo dump
 
 ```powershell
-cd ..\erp_back
-npm run start:dev
+.\dump-almahue-erp.ps1
 ```
-
-## Manual
-
-```powershell
-$env:PGPASSWORD = '<password del .env>'
-& 'C:\Program Files\PostgreSQL\18\bin\pg_restore.exe' `
-  -h localhost -p 5433 -U almahue -d almahue `
-  --clean --if-exists --no-owner --no-acl `
-  .\almahue-erp-latest.dump
-```
-
-**Nota:** `--clean` borra/recrea objetos de la BD destino. No ejecutar contra otra base por error.

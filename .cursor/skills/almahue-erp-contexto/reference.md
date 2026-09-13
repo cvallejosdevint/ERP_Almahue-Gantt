@@ -20,4 +20,4 @@
 
 Rutas: `/compras/cotizaciones`, `/comercial/ordenes-venta`, `/comercial/emitir` (Emitir = FACTURA/NC/ND/GUIA; borradores DTE aquí, no en Libro ventas). OV canónico: `/comercial/ordenes-venta` o Emitir `?contexto=ov`.
 
-Transcripciones y tl;dv: `fuentes/` — solo bajo pedido explícito.
+Transcripciones y tl;dv: `fuentes/` — **fuente primaria**, por encima de las minutas (generadas por IA).

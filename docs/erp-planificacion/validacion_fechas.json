@@ -1,0 +1,28 @@
+{
+  "fecha_inicio": "2026-07-13",
+  "fecha_fin_objetivo": "2027-01-09",
+  "ventana_dias_habiles": 130,
+  "esfuerzo_total_persona_dia": 298,
+  "escenarios": {
+    "1dev_fullstack": {
+      "fin": "2027-09-01",
+      "dentro_plazo": false,
+      "dias_desviacion": 168,
+      "critical_path_ids": 28
+    },
+    "2dev_back_front": {
+      "fin": "2027-05-25",
+      "dentro_plazo": false,
+      "dias_desviacion": 97,
+      "critical_path_ids": 28
+    },
+    "plan_2back_2front": {
+      "fin": "2027-01-21",
+      "dentro_plazo": false,
+      "dias_desviacion": 9,
+      "critical_path_ids": 28,
+      "recomendado": true
+    }
+  },
+  "nota": "298 persona-dia v3.1 Enterprise. Validado vs PDFs. 85 tareas. Sin Prod/RRHH v1."
+}
