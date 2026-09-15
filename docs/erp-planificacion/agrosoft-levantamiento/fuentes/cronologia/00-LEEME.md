@@ -25,6 +25,8 @@
 | `2026-08-post-r6/` | Todos los Screen Recordings 08/08–03/09 (clasificados) |
 | `_por-clasificar/` | Frames de Screen Recordings aún no emparejados |
 
+14/09/2026: cuatro MP4 en `fuentes/videos/reunion-2026-09-14-*` (gitignored). Índice: [`reunion-2026-09-14.md`](../../reunion-2026-09-14.md).
+
 Detalle en [`00-INVENTARIO.md`](00-INVENTARIO.md).
 
 **AS-IS antes del ERP:** [`AS-IS-AGROSOFT-antes-del-ERP.md`](AS-IS-AGROSOFT-antes-del-ERP.md).

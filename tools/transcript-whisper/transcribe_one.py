@@ -57,7 +57,10 @@ def main() -> int:
         if not text:
             continue
         lines.append(f"- [{stamp}] {text}")
-        print(f"[{stamp}] {text}", flush=True)
+        try:
+            print(f"[{stamp}] {text}", flush=True)
+        except UnicodeEncodeError:
+            print(f"[{stamp}] {text.encode('ascii', 'replace').decode('ascii')}", flush=True)
 
     body = "\n".join(lines) + "\n"
     out.write_text(body, encoding="utf-8")

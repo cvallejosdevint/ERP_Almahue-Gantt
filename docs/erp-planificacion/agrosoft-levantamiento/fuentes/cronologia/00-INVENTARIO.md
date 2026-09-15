@@ -1,6 +1,6 @@
 # Inventario cronológico — videos, transcripciones, artefactos
 
-Actualizado **2026-09-10 tarde** (demo cliente `171320` archivada + transcrita). El recuento de la mañana del 10/09 (tl;dv 27 meetings) se conserva abajo. El corte 04/09 se conserva abajo y se corrige en «Recuento 10/09». **No hay demo Agrosoft antes del 21/07.** Sí hay video **antes** en `E:\grabaciones`: Freshlink (08–09/07) y kickoff ERP Gantt/Trello (13/07). Captures julio = juegos. tl;dv (`cvallejos@devint.cl`) desde **22/07**.
+Actualizado **2026-09-15** (Screen Recordings **14/09** archivadas + Whisper). El recuento de la **2026-09-10 tarde** (demo cliente `171320`) se conserva. El recuento de la mañana del 10/09 (tl;dv 27 meetings) se conserva abajo. El corte 04/09 se conserva abajo y se corrige en «Recuento 10/09». **No hay demo Agrosoft antes del 21/07.** Sí hay video **antes** en `E:\grabaciones`: Freshlink (08–09/07) y kickoff ERP Gantt/Trello (13/07). Captures julio = juegos. tl;dv (`cvallejos@devint.cl`) desde **22/07**.
 
 Leyenda **aplica:** sí ERP Almahue/Agrosoft · parcial (otro producto mismo cliente) · interna · pendiente de ver · no.
 
@@ -79,6 +79,10 @@ Ruta: `C:\Users\c\Videos\Screen Recordings\`. Ninguno de estos está en git.
 | `2026-09-03 201524` | **No** | — | Clase («profe»). = Desktop 2331. **No transcribir** |
 | `2026-09-10 102149` | **Interna** | whisper `sergio-2026-09-10` | Carlos↔Sergio; panel totales export |
 | `2026-09-10 171320` | **Cliente** | `transcripcion-2026-09-10-demo-cliente.md` | Meet Avances. MJ+Lupe+Pía+Mario. Minuta `reunion-2026-09-10-demo-cliente.md`. Copia `fuentes/videos/reunion-2026-09-10-demo-cliente.mp4` |
+| `2026-09-14 104939` | **Interna** | `transcripcion-2026-09-14-interna-manana.md` | Carlos↔Sergio ~40 min. Copia `reunion-2026-09-14-interna-manana-carlos-sergio.mp4` |
+| `2026-09-14 120227` | **Interna** | `transcripcion-2026-09-14-interna-mediodia.md` | Carlos↔Sergio + movimientos bodega prod ~38 min |
+| `2026-09-14 174419` | **Cliente** | `transcripcion-2026-09-14-demo-avances.md` | Meet Avances ~77 min. Mario en sala; MJ/Lupe invitadas. Índice `reunion-2026-09-14.md` |
+| `2026-09-14 183258` | **Interna** | `transcripcion-2026-09-14-interna-tesoreria.md` | Cartolas localhost ~13 min |
 
 Detalle y frames: [`2026-08-post-r6/README.md`](2026-08-post-r6/README.md). El tldv citado como tesorería 28/08 (`6a91a445`) **es** el MP4 `2026-08-27 172119` (~81 min), sí está en esta carpeta.
 
