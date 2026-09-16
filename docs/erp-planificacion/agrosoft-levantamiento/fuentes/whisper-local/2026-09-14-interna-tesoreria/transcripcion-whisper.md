@@ -1,0 +1,369 @@
+# Interna tesoreria cartolas Carlos/Sergio 2026-09-14 (~13 min)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-09-14 183258.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:01] Aló, aló. Aló, aló. Vas a cerrar la ventana, sorry. ¿Me escucháis, cierto?
+- [00:13] Sí, sí.
+- [00:14] Vale, vas a cerrar la ventana, perdón.
+- [00:17] Ya. Con perdón, Taya. Te digo yo que ahí cuando los contabilizar te permite seleccionar la nómina, cuando sea egreso. ¿Me escucháis?
+- [00:32] Por ejemplo, mirá, estoy medio perdido con los conceptos, Sergio. Los aplicaría sin entender, pero la idea es que entienda para poder hacerlo bien.
+- [00:40] En este caso, por ejemplo, en la cartola yo estoy trayendo todos los movimientos del banco que están registrados, ¿cierto?
+- [00:46] Sí, por ejemplo, no sé, pagó sueldo, ¿ya?
+- [00:50] Pagó sueldo, no, le pagó un proveedor.
+- [00:53] Claro.
+- [00:53] 100 lucas, le pagó un proveedor 100 lucas.
+- [00:57] En la semana, porque esto va contra, por ejemplo, si yo pago, yo hago un ingreso de 100 lucas,
+- [01:06] me va a salir el movimiento de las 100 lucas que te pagué de tu cuenta, ¿cierto?
+- [01:10] Claro.
+- [01:10] te pago otro movimiento
+- [01:12] de 50 lucas
+- [01:13] que va a ser la cuenta del José por ejemplo
+- [01:16] y van a quedar separados
+- [01:17] en el banco, en la cartola
+- [01:20] del Excel serían dos movimientos
+- [01:22] diferentes a dos cuentas diferentes
+- [01:23] que se fueron a egresos desde nuestra cuenta
+- [01:26] hacia ellos
+- [01:26] y por ejemplo
+- [01:30] acá
+- [01:31] yo cuando hago esto
+- [01:34] de por ejemplo elegir la
+- [01:36] contracuenta, esto para qué es en particular
+- [01:38] Por ejemplo, porque aquí ya sé que está el plan de cuentas
+- [01:40] ¿Por cierto?
+- [01:41] Y el plan de cuentas, por lo que tengo entendido
+- [01:43] Es como para diseccionar
+- [01:45] A nivel contable, dónde se está yendo
+- [01:47] O dónde está ingresando, saliendo la plata
+- [01:49] ¿Cierto?
+- [01:51] Exacto
+- [01:51] El código financiero, no entiendo para qué es
+- [01:56] Yo tampoco, la verdad
+- [01:58] Yo lo vi ahora
+- [02:00] Pero es por lo que
+- [02:01] Entiendo que el flujo de caja
+- [02:03] Cachate que lo tienen ellos
+- [02:05] El flujo de caja, el código financiero dividido
+- [02:07] ella, separado
+- [02:08] según el Excel
+- [02:14] ¿cachai? y la nómina
+- [02:17] la nómina nace de la que tú estás creando
+- [02:19] abajito, ¿tú hiciste
+- [02:21] para la factura de proveedores?
+- [02:24] ¿cachai?
+- [02:25] sí, sí, sí
+- [02:26] entonces tú creaste esa nómina para poder cambiar
+- [02:28] la fecha de vencimiento y toda esa mierda
+- [02:30] sí, sí, sí
+- [02:32] entonces ellos, por ejemplo
+- [02:34] no, pues son lagartólogos
+- [02:39] la nómina
+- [02:40] nómina semanal
+- [02:41] Ya, vale, sí, hasta que se puedan retrasar
+- [02:44] Exacto, es una nómina
+- [02:46] ¿Ya? Esa es la nómina de pago
+- [02:48] Que tú pagaste
+- [02:50] facturas de proveedores, ¿cierto?
+- [02:52] Sí, sí, sí
+- [02:53] Que las moviste de semana y cosas así
+- [02:55] Entonces, tú esa nómina
+- [02:57] esa nómina que tú tienes ahí
+- [02:59] en la cartola
+- [03:01] porque, como digo, tú por ejemplo
+- [03:03] tú la pagaste, ¿ya?
+- [03:05] Yo pagué esas 100 lucas
+- [03:06] al Carlos
+- [03:08] y 50 lucas al José
+- [03:11] ¿Ya?
+- [03:11] yo pagué hoy día, viernes, a la una de la tarde
+- [03:14] pagué
+- [03:15] entonces yo, si saco la cartola
+- [03:18] del banco, me van a salir
+- [03:20] esos dos movimientos de egresos
+- [03:21] ¿cierto? de 150 lucas
+- [03:24] entonces después
+- [03:26] ellos van a pescar esa cartola
+- [03:28] y la van a querer contabilizar
+- [03:30] si tú te vas a la cartola
+- [03:31] ¿dónde está la cartola?
+- [03:35] ah, pero espérate
+- [03:36] en nómina, en nómina de semanal
+- [03:38] no sé, la semana
+- [03:40] 2 de septiembre yo pagué
+- [03:42] 150 lucas
+- [03:44] la verdad es que no sé por qué
+- [03:46] no podemos ver
+- [03:48] eso se supone
+- [03:50] que te va a aparecer ahí, ¿cierto?
+- [03:53] me van a aparecer
+- [03:54] y me van a aparecer las dos facturas
+- [03:55] de 100 lucas que fueron del Carlos
+- [03:58] y 50 lucas que fueron del Koss
+- [04:00] ¿cierto? y hice dos movimientos
+- [04:02] bancarios en sí
+- [04:03] y pagué
+- [04:04] una cartola en realidad
+- [04:07] ¿cierto? que es la cartola
+- [04:09] semana 2 de septiembre.
+- [04:11] ¿Sí?
+- [04:12] ¿Sí me sigues?
+- [04:14] Ahí me perdí porque la cartola
+- [04:17] ellos la extraen por semana entonces.
+- [04:19] No, no, espérate.
+- [04:20] Es una sola nómina
+- [04:23] que pagaste, ¿cierto?
+- [04:26] De la nómina semana 2
+- [04:27] de septiembre
+- [04:28] pagaste
+- [04:30] a dos proveedores.
+- [04:33] Carlos y José, ¿cierto?
+- [04:35] Claro.
+- [04:36] Que estarían dentro de una sola semana.
+- [04:38] claro, en la nómina
+- [04:41] semana 2, septiembre
+- [04:42] ya, entonces
+- [04:45] después yo cuando, no sé
+- [04:47] la niña llega el lunes
+- [04:49] porque esto lo pagué el viernes
+- [04:50] lunes de la semana 3 de septiembre
+- [04:53] llega el día lunes
+- [04:55] saca la cartola del banco
+- [04:56] si te va a ir al banco
+- [04:58] saca el banco, cartolas
+- [05:01] cartola
+- [05:03] cierto, y va a cargar
+- [05:05] el Excel de la cartola
+- [05:06] del banco
+- [05:08] y cuando cargue
+- [05:10] lo que yo pagué el día viene
+- [05:12] fueron con el Banco Chile
+- [05:13] yo pagué
+- [05:16] con Banco Chile van a aparecer dos movimientos
+- [05:18] que van a ser las 100 lucas
+- [05:20] del Carlos
+- [05:21] y las 50 lucas del José
+- [05:23] y ahí van a ser dos
+- [05:25] dos movimientos, dos egresos
+- [05:27] entonces yo
+- [05:30] aquí
+- [05:32] desde el banco yo no sé
+- [05:34] que pagué
+- [05:35] ¿cierto? solo sé
+- [05:38] que va a haber 100 lucas y 50 lucas
+- [05:40] claro, en la semana 2
+- [05:42] en la semana 2
+- [05:44] entonces ellos
+- [05:46] quieren poder acá
+- [05:47] al momento de contabilizar
+- [05:50] ¿cachai?
+- [05:52] si yo contabilizo
+- [05:53] contabilizar y te lista
+- [05:56] la nómina
+- [05:57] el campo nómina
+- [05:59] la idea es que ahí cuando tú contabilices
+- [06:02] diga ya, este movimiento
+- [06:04] de 100 lucas y el movimiento
+- [06:06] de 50 lucas
+- [06:07] corresponden a la nómina
+- [06:10] de la semana 2
+- [06:12] ¿cachai?
+- [06:13] entonces aquí faltaría agregar la semana
+- [06:15] la nómina
+- [06:16] claro, la nómina
+- [06:18] faltaría agregarla acá
+- [06:20] exacto
+- [06:22] ¿cachai?
+- [06:24] solamente el regreso
+- [06:25] solo el regreso
+- [06:27] porque en los ingresos no existe nómina
+- [06:30] porque no es una nómina de ingreso
+- [06:31] ¿cachai?
+- [06:32] porque ellos en realidad
+- [06:36] controlan cuando sale la plata
+- [06:39] pero cuando su ingreso es plata
+- [06:41] no lo controlan ellos, solamente le llega al banco
+- [06:43] ¿me entiendes?
+- [06:47] vale, vale, vale, entonces solamente
+- [06:48] hay que agregar ese campo
+- [06:50] pero si, ¿me entendiste no?
+- [06:53] si, si, si, y ahí por ejemplo
+- [06:55] se haría como la asociación con
+- [06:57] la nómina
+- [06:58] claro, asociar la nómina
+- [07:01] lo que nos faltaría por confirmar
+- [07:04] por ejemplo de esa nómina
+- [07:06] Porque la nómina tiene dos movimientos
+- [07:08] ¿Cachai? Entonces sería bueno
+- [07:10] Ya, mira, dejémoslo hasta ahí
+- [07:18] Porque si te meto
+- [07:20] Mi duda que tengo ahora
+- [07:21] Voy a quedar más mareado
+- [07:22] Gracias
+- [07:23] Ya, ¿pero se entendió?
+- [07:27] Sí, sí, ese ajuste tenía que hacer ahora
+- [07:29] Y con eso
+- [07:31] Estamos hasta
+- [07:33] Por pincelería
+- [07:34] Con ese buen avance
+- [07:36] Ya, bacán
+- [07:37] Igual ahora
+- [07:40] Deberían comprometerse a ver el tren
+- [07:43] Para
+- [07:43] Puedo decirle turbo
+- [07:46] Pásale al
+- [07:49] Yo prefiero que veas esto
+- [07:51] Tú, Carlos, porque esto es como
+- [07:53] Lo más complejo
+- [07:54] Es lo más complejo y
+- [07:57] Prefiero que Diego vea otras
+- [07:59] Cosas, por ejemplo, moviendo bodegas
+- [08:01] Esas cosas, que son más simples
+- [08:03] ¿Ya?
+- [08:05] Pero tú enfócate en esto porque
+- [08:07] va a ser lo más difícil
+- [08:08] pero prefiero que como tú
+- [08:11] estás al 100% en este proyecto, prefiero que tú
+- [08:13] lo tomes porque ahí de aquí va a interactuar
+- [08:15] el Agustín
+- [08:16] vale
+- [08:17] ¿ya?
+- [08:20] vale, vale, y como se nutre de lo otro igual
+- [08:22] es más fácil, yo creo que si
+- [08:24] este es el que consume la información
+- [08:26] de los otros módulos, se lo ve directamente
+- [08:29] yo, porque igual si lo ven los cabros
+- [08:31] el teléfono de ellos, para mí
+- [08:33] de mí va al cliente, va a ser muy largo
+- [08:34] sí, no, no, y
+- [08:36] en realidad
+- [08:37] contabilidad
+- [08:38] es que tiene todo
+- [08:39] centralizado
+- [08:39] vale
+- [08:40] pero
+- [08:40] pero este
+- [08:42] de salería
+- [08:43] igual es
+- [08:43] las lucas
+- [08:44] todo
+- [08:45] si
+- [08:45] y ahí es donde
+- [08:46] el contable
+- [08:48] se mete
+- [08:48] vale vale
+- [08:50] ya
+- [08:51] bueno
+- [08:51] el de finanza
+- [08:52] ok
+- [08:54] yo con esto
+- [08:55] ya te di
+- [08:56] harta peguita
+- [08:57] para avanzar
+- [08:58] estos dos días
+- [08:58] genial
+- [08:59] ya
+- [09:00] cualquier cosa
+- [09:02] me habláis
+- [09:02] pues bueno
+- [09:02] si si
+- [09:03] ya
+- [09:03] oye Sergio
+- [09:05] y
+- [09:06] algo te iba a preguntar
+- [09:10] ah
+- [09:11] que había que mandarle
+- [09:13] porque mañana hay reunión de GoSocket
+- [09:14] y lo único que
+- [09:17] estábamos pendientes nosotros era mandarle el spool
+- [09:19] de datos al
+- [09:20] al loquito este al Pablo
+- [09:22] ya
+- [09:24] el spool el xml por cierto
+- [09:28] si exacto
+- [09:30] el xml que esperan ellos
+- [09:31] ya porque
+- [09:33] ah no era un xml
+- [09:35] ah, sí, uno que viene
+- [09:36] pero en base
+- [09:38] en base a la documentación
+- [09:40] ¿con cómics y con el local?
+- [09:44] ¿cómo? ¿qué dices? cómics
+- [09:45] ah, exportación, factura de exportación
+- [09:48] yes, yes
+- [09:49] ah, ya, dime factura de exportación
+- [09:51] ah, comercio
+- [09:53] ya
+- [09:55] eso, mándaselo
+- [09:57] ¿se lo tiene que certificar?
+- [10:00] ya, se lo va a aprovechar de mandar ahora
+- [10:02] en caso de que, porque la reunión es a mediodía
+- [10:04] en caso de que haya alguna corrección, la mandan en la mañana
+- [10:06] y si es que contesta
+- [10:07] ya
+- [10:10] ya
+- [10:10] ya
+- [10:12] estamos
+- [10:13] oye alíneate con el Diego
+- [10:17] para que te ayude en lo que
+- [10:18] tú mire ahora revisa el sistema y ve
+- [10:21] cuál es el que está más atrasado, tú decide
+- [10:22] qué es lo que tiene que ver aquí Diego
+- [10:24] puede ser que haga el
+- [10:30] CUA de los
+- [10:31] permisos de usuarios porque como han habido
+- [10:33] tantas modificaciones
+- [10:35] pero es que ahí va a tener que tener
+- [10:38] el flujo de compras
+- [10:38] Entonces bodega tendría que ver
+- [10:42] No al Diego
+- [10:42] Puede ser bodega y lo que hablamos
+- [10:45] También contratista
+- [10:48] Y el sistema de notificación
+- [10:50] También ese también
+- [10:51] Ya
+- [10:52] Ah pero es que iba a estar con el
+- [10:54] No no eso se lo pasa al
+- [10:57] Yo creo que el tema de contratista
+- [10:59] Está más
+- [11:00] Más endeble
+- [11:02] Ya entonces dale con contratista
+- [11:05] Pero van a tener que tener bien claro
+- [11:07] que es lo que tiene que llegar a ser ese módulo
+- [11:09] tengo que ver el video entonces
+- [11:13] los videos de los programas
+- [11:15] entonces pásaselo a él
+- [11:17] pásaselo a él y dile que
+- [11:18] y ahí por último yo, puta si puedo
+- [11:21] coordinamos una reunión de
+- [11:22] como un refresh sobre ese módulo
+- [11:25] vale, ¿quién lo tenía que ver con Tratista?
+- [11:28] ¿Mario?
+- [11:29] eh, digo de inmediato
+- [11:31] parece que sí
+- [11:33] o no, parece que era María Jesús
+- [11:34] Lupe
+- [11:48] ya, Lupe
+- [11:51] ok
+- [11:54] entonces ahí
+- [11:56] confirmale al
+- [12:00] eh
+- [12:01] ¿cómo se llama? al Diego
+- [12:04] que te ayude con contratistas
+- [12:06] esos son todos los tarjetas
+- [12:07] vale
+- [12:08] ah pero no están en ese trélogo
+- [12:11] no entonces no lo metan
+- [12:12] ninguno de los dos chiquillos están en el trélogo
+- [12:15] no, no tiene que ver el módulo
+- [12:17] total tiene el módulo
+- [12:19] ya, ya don Carlos
+- [12:26] ya don Sergio, cualquier cosita le hablo
+- [12:28] Vale, hoy viene el 17
+- [12:32] Mediodía por si acaso
+- [12:33] Ah, ya, bacán
+- [12:34] Ya
+- [12:35] Vale, viejito, muchas gracias
+- [12:40] Nos vemos, que estén bien, chau chau

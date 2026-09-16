@@ -2,10 +2,30 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
 from faster_whisper import WhisperModel
+
+
+def _prepend_nvidia_cuda_bins() -> None:
+    """CTranslate2 needs cublas64_12.dll on PATH (pip nvidia-*-cu12 wheels)."""
+    try:
+        import site
+    except ImportError:
+        return
+    extra: list[str] = []
+    for root in site.getsitepackages() + [str(Path(sys.prefix) / "Lib" / "site-packages")]:
+        nvidia = Path(root) / "nvidia"
+        if not nvidia.is_dir():
+            continue
+        for sub in ("cublas", "cuda_runtime", "cudnn", "cuda_nvrtc"):
+            bin_dir = nvidia / sub / "bin"
+            if bin_dir.is_dir():
+                extra.append(str(bin_dir))
+    if extra:
+        os.environ["PATH"] = os.pathsep.join(extra) + os.pathsep + os.environ.get("PATH", "")
 
 
 def main() -> int:
@@ -15,6 +35,14 @@ def main() -> int:
     p.add_argument("--title", default="Transcripción Whisper local")
     p.add_argument("--source", default="")
     p.add_argument("--model", default="small")
+    p.add_argument("--device", default="cpu", help="cpu | cuda | auto")
+    p.add_argument(
+        "--compute-type",
+        default="int8",
+        dest="compute_type",
+        help="cpu: int8. cuda: float16 o int8_float16",
+    )
+    p.add_argument("--cpu-threads", type=int, default=0, dest="cpu_threads")
     p.add_argument(
         "--prompt",
         default=(
@@ -31,19 +59,26 @@ def main() -> int:
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    model = WhisperModel(args.model, device="cpu", compute_type="int8")
+    if args.device in ("cuda", "auto"):
+        _prepend_nvidia_cuda_bins()
+
+    kw = {"device": args.device, "compute_type": args.compute_type}
+    if args.cpu_threads:
+        kw["cpu_threads"] = args.cpu_threads
+    model = WhisperModel(args.model, **kw)
     segments, info = model.transcribe(
         str(audio),
         language="es",
         vad_filter=True,
         initial_prompt=args.prompt,
+        condition_on_previous_text=False,
     )
 
     lines = [
         f"# {args.title}",
         "",
         f"Idioma: {info.language} (p={info.language_probability:.2f})",
-        f"Modelo: faster-whisper `{args.model}` CPU int8 + VAD",
+        f"Modelo: faster-whisper `{args.model}` {args.device} {args.compute_type} + VAD",
         f"Fuente: {args.source or audio.name}",
         "No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.",
         "",
