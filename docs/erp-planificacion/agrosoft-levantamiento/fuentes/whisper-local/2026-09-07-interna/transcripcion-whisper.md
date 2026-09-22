@@ -1,0 +1,1318 @@
+# Interna Carlos/Sergio 2026-09-07 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\erp-planificacion\agrosoft-levantamiento\fuentes\videos\Screen Recording 2026-09-07 162654.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:02] Bien, bien, aquí solucionando el mundo.
+- [00:26] Parte B.
+- [00:29] Edwin, vámonle.
+- [00:35] Un momento que...
+- [00:37] Ya compita. Del último rato que hablamos, sí, el tema de la nota de débito que aplican los demás
+- [00:59] documentos no lo he podido aplicar
+- [01:01] estaba
+- [01:02] planificando ahí pero
+- [01:04] todavía no lo aplico
+- [01:09] pero revisé por lo que tengo hecho
+- [01:10] vale, oye pero
+- [01:13] no lo hablaste
+- [01:15] a la
+- [01:16] al grupo
+- [01:19] María Jesús
+- [01:20] no, sorry, no lo hice
+- [01:22] entonces vamos con eso primero
+- [01:24] ¿y las tarjetas las creaste?
+- [01:27] no, todavía no
+- [01:28] pero me demoro 5 minutos
+- [01:31] en hacerlas y como digo son como 4 páginas nomás
+- [01:33] entonces creemos eso
+- [01:35] creemos eso y se las han
+- [01:37] mandado para dejarlo cerrado
+- [01:39] eso
+- [01:39] y porque
+- [02:06] del módulo de ventas son
+- [02:10] 1, 2, 3, 4
+- [02:13] son 5 nomás, son 5 cartas
+- [02:15] por eso creemos en la
+- [02:18] y dejémoslas pasar el tiro
+- [02:19] para que no después se nos va a ir
+- [02:20] a bajar lo pasado
+- [02:23] esa sería la de
+- [02:29] órdenes de ventas, ¿cierto?
+- [02:32] les pongo así como subtítulo
+- [02:35] o módulo tanto, o solamente órdenes de ventas
+- [02:37] ponenle
+- [02:39] ventas-órdenes de ventas
+- [02:40] eso mismo, vale
+- [02:41] si subo el documento mientras
+- [02:51] vamos a seguir esta imagen
+- [02:56] no le voy a poner tanta descripción
+- [03:10] no
+- [03:13] o sea, igual hay que colocarle
+- [03:15] lo que tienen que revisar
+- [03:16] Tienen que crear una nueva orden
+- [03:19] ¿Cómo, cómo? ¿Así como
+- [03:23] Quieres probarlo, pongo?
+- [03:25] Sigo, o sea
+- [03:26] O validar todas las funcionalidades
+- [03:31] De este menú
+- [03:35] Como por ejemplo, crear una nueva orden
+- [03:37] Y le pongo las caricaturas
+- [03:51] En falta de la nueva orden
+- [03:53] Y esto de acá
+- [03:54] No, pero ya eso es necesario
+- [04:13] Creo que ya con ninguna estamos bien
+- [04:16] Ahora la de emitir.
+- [04:20] Y listo.
+- [04:23] Sí.
+- [04:26] Estas las voy a sacar de acá, sí.
+- [04:33] Voy a dejar solamente las de la reunión.
+- [04:40] ¿Y esas por qué las sacaste de ahí?
+- [04:43] Porque estaban antiguas y son como el login.
+- [04:47] Dependiendo de que no han revisado nada del tráiler.
+- [04:51] Yo las dejaría ya nomás, bueno.
+- [04:53] Porque les descargaría más la pega.
+- [04:56] Bueno.
+- [04:57] Sí, porque así les decimos, mira, bueno, todo esto es revisado.
+- [05:00] Todo esto ya te lo han entregado.
+- [05:01] Terminemos entonces de hacer estas que son las de ahora
+- [05:05] Y traspaso nuevamente esas para allá
+- [05:07] Dale
+- [05:08] Ah mira, aquí había parte de un poquito
+- [05:14] De las mejoras, por ejemplo
+- [05:15] Y ahí también tengo una duda
+- [05:16] Porque te acordé que aquí uno le daba a facturar y creaba directamente el asiento
+- [05:20] Pero para poder confirmar
+- [05:22] ¿Cómo el asiento?
+- [05:22] ¿Cómo el asiento la factura?
+- [05:25] Perdón, sí, la factura
+- [05:26] Ah, asustado
+- [05:27] Sergio, es que yo no soy
+- [05:29] no soy nada de esta cuestión de ventas
+- [05:32] ni de tesorería, entonces los términos son
+- [05:34] cosas nuevas, se me van caletas los nombres
+- [05:36] ya, por eso, pero
+- [05:38] facturar es emitir una factura, después de
+- [05:40] facturar se puede generar un asiento contable
+- [05:42] ¿cachai? por ejemplo acá
+- [05:44] si necesitas acordar que en este menú
+- [05:46] aquí le volví a agregar nuevamente
+- [05:48] el tema de las cuentas, pero es opcional
+- [05:49] que este solamente estaba apareciendo
+- [05:53] en el tema de emitir DT, pero se lo agrega acá
+- [05:55] de todas formas
+- [05:56] ¿eso lo pidieron así?
+- [05:59] o sea, no me acuerdo
+- [06:04] yo me acuerdo de que era
+- [06:06] por ejemplo, en el libro de ventas
+- [06:08] cuando le dabas contabilizar
+- [06:10] que te levantara el detalle
+- [06:12] para seleccionar
+- [06:14] las cuentas por línea
+- [06:15] yo lo entendí al revés
+- [06:18] lo hice acá en el emitir
+- [06:20] antes de emitir
+- [06:22] o sea, yo creo que se puede dar
+- [06:26] en los dos casos
+- [06:29] por ejemplo, este es un anuncio
+- [06:31] de que te dice que ese no tiene la cuenta
+- [06:33] contable asociada, pues, ¿cachai?
+- [06:35] ¿Ya?
+- [06:36] Ya, aquí, ya, eso sí tengo que modificarlo
+- [06:38] porque acá cuando tú le des factura, si no tiene la cuenta
+- [06:40] te obliga a asociarla.
+- [06:44] Es que... Ah, ya.
+- [06:49] Puta, es que yo...
+- [06:50] Es que yo no sé si el área
+- [06:55] comercial va a saber de qué cuenta
+- [06:57] mayor tienen que salir los documentos.
+- [07:00] ¿Cachai?
+- [07:03] Entonces dejarlo como opcional, que te dé este aviso nomás, pues.
+- [07:10] No te digo yo, pero...
+- [07:11] O sea, yo de la orden de venta...
+- [07:13] O sea, sí, a ver, dale sí a asociar ahora.
+- [07:16] Dale sí a asociar.
+- [07:17] Te levanta este mismo menú.
+- [07:19] Pero esto son...
+- [07:20] Lo que le pusiste son órdenes de...
+- [07:23] Ah, pero vuelve a la orden de venta.
+- [07:27] Ah, ya.
+- [07:28] Te entiendo, te entiendo.
+- [07:30] Y una vez ya teniéndolo asociado acá,
+- [07:31] voy a facturar, pues.
+- [07:33] Pero ahí, en cierto modo,
+- [07:35] ¿tú qué es lo que haces ahí?
+- [07:36] ¿Estás actualizando la orden de venta?
+- [07:38] Sí.
+- [07:38] yo creo que
+- [07:49] debería quedar hacia la factura
+- [07:51] yo la había entendido
+- [07:55] así
+- [07:55] a ver, pidele a María Jesús
+- [07:59] si se puede venir, poder preguntarle
+- [08:01] ¿pregunta al grupo nomás?
+- [08:06] sí
+- [08:07] dile María Jesús, ¿tiene 5 minutos
+- [08:09] para una mes cortísima?
+- [08:14] o háblale directo a Whatsapp
+- [08:16] no sé, si es que la tienes
+- [08:17] no, al grupo nomás
+- [08:20] Yo por ese parte decía que lo revisara
+- [08:28] Igual antes de
+- [08:30] De gestionar como un arreo
+- [08:33] Mañana con ellos directamente
+- [08:34] Y que igual me pasa de que
+- [08:40] Como hay altas cosas contables que no entiendo
+- [08:42] Creo entender las cosas
+- [08:44] Las aplico, pero cuando me encuentro
+- [08:46] Aquí con reuniones contigo
+- [08:47] Lo apliqué mal porque lo había entendido mal
+- [08:50] ¿Cachai? Entonces
+- [08:51] Siento que igual mi desconocimiento del área
+- [08:54] Contable me juega harto en contra con esto
+- [08:56] Como no
+- [08:57] Tengo como una base de como tomar
+- [08:59] los requerimientos como una base previa
+- [09:02] me pierdo caleta en esto
+- [09:04] si, no, si está bien
+- [09:06] hay que juntarlo, no va a ir resolviendo
+- [09:08] si, o sea
+- [09:09] de cierto modo ya lo hiciste para la orden de venta
+- [09:12] si la moneda Jesús dice no, la orden de venta no va
+- [09:14] la factura ya es prácticamente
+- [09:16] replicar, no más
+- [09:17] dentro de todo es reutilizarlo
+- [09:20] si, más que nada afinar
+- [09:22] dónde tiene que ir, no más, pero ya la pega está hecha
+- [09:24] te respondió, no?
+- [09:27] estoy
+- [09:30] enviando aquí el mensaje
+- [09:32] lo que hice es que no te había contestado que estoy viendo
+- [09:49] lo que hiciste cortó
+- [09:51] algo cortó
+- [09:52] revisar algo cortó
+- [09:54] algo cortito
+- [09:56] a ver si nos pesca o si nos pela
+- [09:59] jajaja
+- [10:01] estaba viendo
+- [10:04] una hueá que tengo que
+- [10:05] esta casa la tenemos que vender
+- [10:06] igual estoy metido hasta las patas
+- [10:09] se nos está yendo el plazo
+- [10:10] fue un divorcio esta hueá
+- [10:12] Y tengo que ir la hueá a la casa a la venta
+- [10:14] Entonces
+- [10:15] ¿Por qué? ¿Por qué lo tienes que vender?
+- [10:18] Eh, porque esta casa es de mi papá con su matrimonio anterior
+- [10:20] Y se divorció
+- [10:23] Se nos dieron los plazos
+- [10:24] No hemos encontrado compradores
+- [10:25] Esta casa culia está más amplia que la chucha
+- [10:27] Y no está regular
+- [10:29] ¿Te la aprovechas ahora a la vez del bono?
+- [10:33] No, porque hay que hacer cualquier regularización
+- [10:35] Hay que hacer caleta
+- [10:39] Hay que poner guas de corta
+- [10:40] Es mucha pega para el poco plazo
+- [10:42] Que tenemos
+- [10:43] ¿Y tu papá?
+- [10:47] Un viejito
+- [10:48] ¿Quién le está pidiendo la casa?
+- [10:55] Su ex señora
+- [10:55] ¿Y por qué la tiene que vender usted?
+- [11:01] Ah, ¿para que quede para tu papá?
+- [11:03] No, porque es parte del matrimonio
+- [11:05] Porque nosotros tenemos que salir de acá
+- [11:06] Ah, ¿ella la está vendiendo?
+- [11:10] No
+- [11:10] Mi papá estaba casado con su ex pareja
+- [11:13] de hace muchos años antes de que yo naciera y se divorciaron ahora y la casa estaba dentro del
+- [11:23] matrimonio de así entonces como se divorciaron le pidieron la la mitad de la casa de lo que
+- [11:33] vendan la casa ustedes con el 50% no tengo que pasarla a la señora se divide entre mi papá y
+- [11:39] y ella. Ah, ¿y tú
+- [11:45] vivís con tu papá? Sí, po.
+- [11:48] ¿Y tu papá
+- [11:49] te vive con tu mamá? Sí, po,
+- [11:51] yo vivo con los tres acá.
+- [11:53] Ya, por eso, entonces, en cierto modo,
+- [11:55] tu papá se va a quedar con el 50%
+- [11:57] de la venta y la señora
+- [11:59] con el 0,50.
+- [12:01] Sí, po, ¿cachai?
+- [12:03] Pero no hemos tenido compradores
+- [12:05] y, como te digo, esta casa
+- [12:07] está muy ampliada para lo que vale realmente
+- [12:09] la casa, po. Sí, la ampliación. ¿Y cuánto
+- [12:11] están vendiendo?
+- [12:13] Estaban pidiendo 50
+- [12:15] La idea de venderlo a 50
+- [12:18] Estábamos pidiendo 60
+- [12:19] Para que no hagan los rebajos
+- [12:21] Por todas las cosas que no están reguladas
+- [12:22] ¿Ya?
+- [12:25] Pero no ha ido como el hoyo
+- [12:26] Entonces tenemos que hablar con él
+- [12:28] Y esta otra señora odia a mi viejo
+- [12:29] Entonces estamos viendo que onda
+- [12:32] Que no hace una prórroga
+- [12:34] Para extender el plazo
+- [12:35] Tengo que negociar con una persona tan desagradable
+- [12:38] Con el Danilo
+- [12:40] Peor
+- [12:41] Entonces cachai
+- [12:48] Este viejo está terrible
+- [12:50] Mal anímicamente porque tiene
+- [12:52] Problemas en la rodilla
+- [12:53] Hace cualquier año que no trabaja
+- [12:55] Está aquí en la casa todos los días
+- [12:56] Y se siente inútil
+- [12:58] Entonces hay que subirle el ánimo
+- [13:01] Que no se me enferme más
+- [13:02] Encima enfermo cardíaco
+- [13:03] Tiene el corazón dilatado
+- [13:06] Entonces tampoco le puedo pasar tanta carga
+- [13:08] Mi mamá que no está ni ahí
+- [13:11] oye
+- [13:13] pero
+- [13:14] oye voy a llamar a María Jesús
+- [13:17] pero me está dejando un sur
+- [13:18] dale más
+- [13:19] no vamos sin respuesta
+- [13:41] no responde
+- [13:42] si debe estar con la auditoría
+- [13:46] también pa' acuérdate
+- [13:46] ya entonces mira
+- [13:49] yo digo Carlos
+- [13:50] que míralo al DTE
+- [13:51] nomás
+- [13:52] al libro de
+- [13:53] libro de venta
+- [13:54] y al emitir
+- [13:55] no solo en el libro de venta
+- [13:57] déjalo solo en el libro de venta
+- [14:01] Y que en la orden de ventas no se puede asignar.
+- [14:04] Deja, a ver acá, porque no se va a olvidar.
+- [14:14] Entonces, pasar la asignación de cuenta contable al libro de ventas.
+- [14:18] Claro, en la factura.
+- [14:20] Vale, vale.
+- [14:21] O sea, puede ser que también el emitir.
+- [14:23] Por ejemplo, si le pones a una...
+- [14:25] Acá en el emitir.
+- [14:37] No, pues en el emitir, cierto, le voy a poner facturar, cierto, y te va a levantar la información.
+- [14:42] Como que te va a levantar la factura, cierto.
+- [14:47] Ahí estamos.
+- [14:48] claro
+- [14:48] eso está bien
+- [14:50] al facturar te pide las cuentas
+- [14:53] eso está perfecto
+- [14:55] solamente sacaría de la orden de venta
+- [14:58] ahí si lo sacáis
+- [15:00] de la orden de venta
+- [15:01] al momento de factura
+- [15:03] pero puede ser opcional
+- [15:05] eso, yo por ejemplo
+- [15:07] en el omitir la orden de venta
+- [15:09] no es restrictivo, tú puedes guardar la orden de venta
+- [15:12] y aparece acá en emitir DTE
+- [15:13] claro
+- [15:16] entonces acá cuando le des facturar te dice
+- [15:19] Oye, no he puesto las cuentas
+- [15:20] Y te tira a la edición de esa orden de ventas
+- [15:23] Pero esa edición entonces tendría que hacer la factura
+- [15:25] Y dejártelo en el libro de ventas
+- [15:28] Para poder hacer esa asociación, ¿cierto?
+- [15:31] Claro
+- [15:31] Y esa asociación también aquí
+- [15:33] Tendría que hacerse por ítem
+- [15:34] Espera, estoy buscando
+- [15:41] Esta asociación
+- [15:44] Sí, pues tiene que ser
+- [15:45] Por ejemplo, tú cuando esa ya está por contabilizar
+- [15:48] ¿Cierto? Tenía, ah, una orden de ventas
+- [15:50] Ahí, ojo que en el libro de ventas
+- [15:52] No, deberíamos tener la orden de venta
+- [15:54] Vale, vale, vale
+- [15:57] Entonces habría que trasladarlo
+- [16:12] Para que acá se haga la asociación
+- [16:13] Y en ese caso, por ejemplo
+- [16:17] Sería bueno que salga una ventanita
+- [16:19] Listando los ítems y poder seleccionar solamente
+- [16:21] La cuenta
+- [16:22] Porque acá te levanta la orden de venta
+- [16:27] Completa cuando le das acá
+- [16:29] ¿Cachai?
+- [16:32] Que te salga una ventanita como un pop-up
+- [16:34] Con los ítems y asociar la cuenta
+- [16:36] ¿O no?
+- [16:39] Así podríamos dejarlo
+- [16:43] a las 6 de la tarde
+- [16:44] tengo clase hoy día
+- [16:45] no
+- [16:46] no, país coreano
+- [16:48] ¿cómo lo podríamos dejar, man?
+- [16:52] es que
+- [16:53] ya, por ejemplo, el emitir
+- [16:56] el emitir, ¿cierto?
+- [16:58] ahí, por ejemplo, si le dais facturar
+- [17:02] le dais facturar, claro, aquí te va a pedir
+- [17:06] aquí podría ser opcional
+- [17:08] igual decía
+- [17:12] como opcional, o sea, lo dejé restrictivo
+- [17:14] porque
+- [17:14] me imaginaba que sí o sí
+- [17:18] se tendrían que asociar, pero podría ser restrictivo
+- [17:20] en el libro de ventas
+- [17:21] o puede que se dé
+- [17:27] no, no debería darse el caso de que
+- [17:29] no se asocia a una cuenta contable
+- [17:32] si, es que estoy pensando
+- [17:38] por ejemplo, es que
+- [17:39] qué pasa si nos van a saber
+- [17:42] o sea, si en el momento
+- [17:46] no saben a qué cuenta, yo creo que
+- [17:48] sí van a saber
+- [17:49] incluso ahí yo lo quería
+- [17:51] pero cuando le di facturar
+- [17:54] que debía asociar las cuentas, ¿cachai?
+- [17:56] de una, sin esa
+- [17:58] esa como consulta
+- [18:00] sin editar, ah ya, que te tire directamente
+- [18:02] claro
+- [18:04] bueno, igual
+- [18:06] pero por ejemplo, ahí, si asociar
+- [18:09] si asociar, no debería levantar
+- [18:11] el menú, el formulario de venta
+- [18:14] claro, como te digo
+- [18:15] lo volví a agregar porque me había quedado
+- [18:17] con que se tenía que volver a agregar aquí en orden
+- [18:19] de venta, no sé por qué
+- [18:20] me había quedado
+- [18:23] pero eso lo vamos a dejar
+- [18:24] como lo pensáis
+- [18:25] dejar el debería ser
+- [18:25] el formulario de emisión
+- [18:27] no
+- [18:27] claro
+- [18:29] acá me imaginaba
+- [18:30] que darle facturar
+- [18:31] y te levante
+- [18:31] en vez de llevarte
+- [18:32] a esa edición
+- [18:33] de la orden de venta
+- [18:34] de que te ponga
+- [18:35] una ventanita
+- [18:36] ítem y cuenta
+- [18:37] claro
+- [18:39] y acá por ejemplo
+- [18:40] si tú
+- [18:40] si tú querías editar
+- [18:41] la orden de venta
+- [18:42] antes de facturar
+- [18:43] está bien este menú
+- [18:44] ¿cachai?
+- [18:46] ya eso está bien
+- [18:46] claro
+- [18:47] ¿cachai?
+- [18:48] entonces se conservaría
+- [18:49] ese sí facturar
+- [18:50] que sería
+- [18:51] el mismo botón
+- [18:52] del editar
+- [18:52] Y aquí te levantaría la ventanita
+- [18:56] Solamente para asociar las cuentas
+- [18:57] Pero hay que validar si es que es
+- [18:59] Opcional o
+- [19:01] O no
+- [19:02] O si es que lo quieren hacer desde el libro de venta
+- [19:05] Para que emite el DT
+- [19:06] Pero si, ya está como construido
+- [19:14] Como tú decís
+- [19:15] Hay que ubicarlo bien
+- [19:17] Si, yo lo dejaría
+- [19:20] En el libro de venta y en emitir DT
+- [19:22] Nada más
+- [19:22] Dale, pensemos
+- [19:26] que ya está hecho así y ahora como por ejemplo la anulación la anulación sería directamente desde
+- [19:38] acá ya perfecto reverso contable pero ahí sería no es un reverso con o sea si no yo le pondría
+- [19:52] ese mensaje que sea emitir nota de crédito ya sería emitir la nota directamente acá
+- [20:18] ¿Y ahí qué te hace?
+- [20:24] No
+- [20:24] Se hace desde acá, perdón, la nota de crédito
+- [20:28] Estoy puro dando jugo
+- [20:29] Y acá te hace elegir la factura
+- [20:31] Que como te dije, aquí está solamente asociando
+- [20:33] A las facturas que están registradas acá
+- [20:35] No, está mal
+- [20:37] O sea, no está mal eso
+- [20:39] Está bien, pero en el libro de venta
+- [20:41] Tiene que tener la opción de poder emitir desde cualquiera también
+- [20:43] No, espérate, pero en el libro de venta
+- [20:45] Acuérdate de lo que hablamos en la reunión
+- [20:47] En el libro de venta, que ese botón te permite
+- [20:49] Te levante tres opciones
+- [20:50] Anular total
+- [20:53] Corrección de monto
+- [20:55] O corrección de texto
+- [20:56] Y ahí debería ser
+- [21:05] Levantarte
+- [21:07] Esta emisión de ACAPOS
+- [21:09] Con los datos de esa factura
+- [21:11] No, no necesariamente
+- [21:13] Cuando si le das
+- [21:15] En el libro de ventas, le das anular total
+- [21:17] Ahí lo que te va a hacer
+- [21:19] Te va a emitir la nota de crédito de una
+- [21:21] ¿Cachai?
+- [21:24] No te va a pedir ingresar nada
+- [21:26] solamente como confirmar
+- [21:28] si, por ejemplo, lo primero que tenéis
+- [21:30] que levantar aquí es un modal
+- [21:31] cuando le presiones el botoncito ese de anular
+- [21:34] tienes que levantar un modal
+- [21:36] para seleccionar el tipo
+- [21:38] de anulación o el tipo de nota de crédito
+- [21:40] recuerda, ¿cuáles serían?
+- [21:43] nota de débito, nota de crédito
+- [21:45] no, no
+- [21:46] no, no, no, estás escuchando, Carlos
+- [21:50] cuando le des acá
+- [21:52] el botón de anular, admitir nota de crédito
+- [21:54] Te va a levantar un modal
+- [21:56] Con tres tipos de
+- [21:58] De nota de crédito
+- [21:59] ¿Cuáles serían?
+- [22:02] No, ahí me pillaste
+- [22:03] Anulación total
+- [22:06] Corrección de monto
+- [22:10] Y corrección de texto
+- [22:11] Y esos son
+- [22:15] El compendio de estas tres cosas
+- [22:16] Son anulaciones
+- [22:17] ¿Por cierto?
+- [22:19] Sí, pues son
+- [22:19] Una nota de crédito
+- [22:21] Son notas de crédito
+- [22:22] Eso, son tres
+- [22:22] Hay tres tipos de notas de crédito
+- [22:24] Entonces
+- [22:24] Sí
+- [22:25] No, solo y Sergio
+- [22:27] Si de verdad tengo un caldo cabeza
+- [22:28] entonces cuando es anulación total
+- [22:33] no tiene que impedir
+- [22:35] nada más, tú le pones anulación total
+- [22:37] ¿está seguro?
+- [22:38] sí, y anula el 100%
+- [22:41] de la factura
+- [22:41] ¿qué pasa si por ejemplo
+- [22:43] ellos quieren anular algo que se hizo
+- [22:46] fuera del ERP?
+- [22:51] ¿cómo?
+- [22:53] porque por ejemplo nosotros tenemos registro del ERP
+- [22:56] pero ellos actualmente están facturando
+- [22:58] desde otra forma, ¿no es cierto?
+- [23:01] ¿cómo harían esas anulaciones que son
+- [23:03] previas a la implementación del ERP
+- [23:05] o no las consideramos?
+- [23:08] No te entendí la pregunta.
+- [23:10] De nuevo. Por ejemplo, ellos
+- [23:11] actualmente facturan, pero sin el ERP.
+- [23:14] ¿Sí?
+- [23:15] Y si ellos, por ejemplo, quieren anular
+- [23:18] algo del periodo antes de que existiera
+- [23:20] el ERP, ¿cómo se hace eso?
+- [23:23] Ah, ya. Eso lo que vamos a tener que
+- [23:25] hacer ahí es carga masiva en el
+- [23:27] sistema. ¿Cachai?
+- [23:31] Vamos a tener que hacer una carga masiva.
+- [23:32] ya, pero eso es un tema después
+- [23:34] eso después lo vemos
+- [23:35] pero entonces, volviendo al tema
+- [23:39] tipo
+- [23:41] de nota de crédito
+- [23:42] anulación total, que esa te va a preguntar
+- [23:44] ¿estás seguro que va a anular el 100%
+- [23:47] de esta factura? Sí
+- [23:48] y se crea un documento nuevo, un registro
+- [23:51] nuevo, como que estáis creando el de la factura
+- [23:52] pero es de tipo nota de crédito, ¿cachai?
+- [23:59] y si puedes
+- [24:00] ver la documentación del
+- [24:02] tú
+- [24:03] cuando está emitiendo la nota de crédito
+- [24:05] está agregando el código de referencia
+- [24:07] el folio, tipo, fecha
+- [24:10] todo eso
+- [24:10] en el spool de datos
+- [24:12] lo que se envía a Gosoque
+- [24:15] si, las referencias
+- [24:18] pero
+- [24:20] donde, revisarlo como donde
+- [24:21] perdón
+- [24:22] cuando construyes el xml para Gosoque
+- [24:25] pero el xml no lo construyo desde acá
+- [24:30] creo que no te entendí la pregunta
+- [24:36] Sergio
+- [24:36] te voy a compartir para ti
+- [24:40] entonces qué es lo que pasa tú vas a emitir una factura cierto exacto una factura y cuando tú
+- [25:45] le das factura, aquí construís un IML
+- [25:47] ¿cierto?
+- [25:48] esta factura viaja
+- [25:51] a GoSocket
+- [25:51] ¿cierto?
+- [25:59] entonces ahí está el flujo
+- [26:01] normal, pero
+- [26:02] después tú esta factura
+- [26:04] la quieres anular
+- [26:06] ¿ya? y esta anulación
+- [26:09] lo hace en una nota
+- [26:11] de crédito ¿cierto?
+- [26:14] ¿ya?
+- [26:15] entonces
+- [26:16] la nota de crédito es
+- [26:18] en la misma estructura de la factura
+- [26:21] pero mira, a ver si
+- [26:22] lo mismo estructura de la factura
+- [26:25] pero viene en datos de referencias
+- [26:27] viene con la referencia
+- [26:29] de la factura, ¿cachai?
+- [26:32] ¿te refieres así como los datos del XML
+- [26:35] de la factura?
+- [26:37] no
+- [26:37] mira, pero es que necesito que me compartas
+- [26:41] la documentación
+- [26:43] de GoldSoccer
+- [26:43] entonces, esta nota de crédito
+- [26:46] se construye
+- [26:47] prácticamente en la misma estructura
+- [26:49] de una factura, pero lleva nodos
+- [26:51] adicionales, que es por ejemplo
+- [26:53] el tipo de documento referencia
+- [26:55] que es 1, 2 o 3
+- [26:57] ¿cachai?
+- [26:59] mira, por ejemplo
+- [27:00] creo que por ejemplo, DevOps Socket
+- [27:05] solamente tenemos el spool de datos de la factura
+- [27:07] ya, pero mira acá
+- [27:10] referencia
+- [27:15] mira, acá está
+- [27:16] acá está lo que es las referencias
+- [27:20] aquí parte un nodo
+- [27:25] así
+- [27:25] bueno, pero ahí lo vais a echar cuando lo veis
+- [27:28] con la
+- [27:28] estos campos de las referencias
+- [27:32] de la nota de crédito
+- [27:33] el número de línea de referencia
+- [27:35] de 1 a 40, podría agregarse hasta 40
+- [27:38] tipo documento de referencia
+- [27:39] por ejemplo una nota de crédito está haciendo referencia
+- [27:42] a una
+- [27:42] por ejemplo
+- [27:43] ¿dónde está?
+- [27:48] aquí está, 30 y tiene una factura
+- [27:50] electrónica, ¿ya? que es la factura
+- [27:52] que está ahí anulando acá, ¿cierto?
+- [27:54] claro
+- [27:55] y también
+- [27:57] un folio de referencia
+- [28:00] que sería el folio de la factura
+- [28:01] la factura número 2, el folio de referencia
+- [28:04] es el 2
+- [28:04] acá está la fecha de referencia
+- [28:08] que corresponde a la fecha de la factura
+- [28:09] y aquí está el código
+- [28:12] de referencia, que estos son los valores
+- [28:13] que decía uno, anula documento
+- [28:16] que es el tipo de anulación
+- [28:17] de nota de crédito
+- [28:18] Esto es cuando tú
+- [28:23] Selecciones una de esas opciones
+- [28:25] Tienes que darle un valor
+- [28:26] Uno, anula documento de referencia
+- [28:28] Dos, corrige texto
+- [28:29] Tres, corrige montos
+- [28:31] ¿Cachai?
+- [28:32] Dale, dale
+- [28:32] Ya, entonces eso
+- [28:35] Te lo voy a poner acá
+- [28:36] Déjalo ahí anotadito, si
+- [28:38] Para que cuando te levantes ese modal
+- [28:41] Y te pregunte que tipo de anulación va a aplicar
+- [28:44] Uno, dos o tres
+- [28:46] ¿Ya?
+- [28:46] entonces, y esa información
+- [28:49] tú la mandas
+- [28:51] en la referencia, es un
+- [28:53] nodo
+- [28:54] mira a ver, pedemos
+- [28:56] entrada de TPTX, por ejemplo en mis libros
+- [28:59] libros de ventas
+- [29:00] para que entiendas
+- [29:02] por ejemplo aquí, ¿dónde hay una nota de crédito?
+- [29:06] esto es una nota de crédito
+- [29:07] ¿cachai? aquí hay una nota de crédito
+- [29:08] está referenciando un documento X
+- [29:10] si yo reviso el XML
+- [29:12] mira, aquí está la referencia
+- [29:15] es así
+- [29:15] número de línea de referencia
+- [29:18] 1, tipo de documento de referencia
+- [29:20] 39, el folio
+- [29:21] y el código, que es anula documento
+- [29:24] total, ¿cachai?
+- [29:27] eso es lo que
+- [29:28] tú tienes que prácticamente
+- [29:29] agregarle a la factura
+- [29:32] ¿me explico?
+- [29:34] por ejemplo, el tipo de T es distinto
+- [29:36] obviamente, es como que estuviese viniendo la factura
+- [29:38] pero, obviamente
+- [29:40] con el tipo de T, con el 61
+- [29:41] y con la información de la referencia
+- [29:44] vale, creo que esa parte
+- [29:47] creo que el cursor la implementó
+- [29:49] porque tiene harto contexto
+- [29:51] de lo que vendría a ser esto, creo que está
+- [29:53] construido Sergio
+- [29:54] pero el código
+- [29:57] de referencia creo que lo manda así como el 1
+- [29:59] si no me equivoco, como no te pregunta
+- [30:01] claro, claro
+- [30:03] ahí tú tienes que decirle que ahora va a ser 1, 2, 3
+- [30:05] sí, sí, vale
+- [30:06] entonces si es 1
+- [30:09] que anulación completa
+- [30:11] va a ser esto, va a pescar
+- [30:13] Va a construir una nota de crédito
+- [30:14] Y se va a ir a GoldSocket
+- [30:17] ¿Cachai?
+- [30:18] A nivel de lo que es la vista de usuario sería confirmar
+- [30:21] ¿Quieres hacerlo?
+- [30:22] Esta sería la opción 1
+- [30:25] ¿Cierto?
+- [30:26] Pero cuando quisiera hacer la opción 2
+- [30:29] ¿Corregir el texto?
+- [30:34] Claro
+- [30:35] ¿El corregir el texto a qué se refiere?
+- [30:40] Porque me imagino que corregir montos
+- [30:42] Es netamente la plata
+- [30:43] pero el corregir texto es como lo que
+- [30:45] lleva el documento
+- [30:47] si, hay información por ejemplo, no sé, colocaron
+- [30:50] un número en las facturas
+- [30:51] un número de teléfono de contacto
+- [30:54] que no corresponde
+- [30:55] entonces tú haces una nota de crédito
+- [30:57] y le pones
+- [30:58] ¿dónde? por ejemplo
+- [31:01] ¿dónde
+- [31:02] dice?
+- [31:06] no sé
+- [31:06] debe
+- [31:09] debe
+- [31:10] decir
+- [31:12] 8, 8, 8
+- [31:14] eso, ¿cachai?
+- [31:19] eso es lo que
+- [31:20] y en realidad se convierte
+- [31:22] en un XML
+- [31:23] un XML muy
+- [31:26] con una pura línea de detalle, ¿cachai?
+- [31:28] que aquí, entonces
+- [31:31] esta línea de detalle va
+- [31:33] en un código y dice, donde dice
+- [31:35] esto en vez de decir varios, va a decir
+- [31:37] donde dice tanto
+- [31:39] debe decir tanto, y esto va sin valor
+- [31:42] cantidad 1 y precio 0
+- [31:44] ¿me cachai?
+- [31:45] Porque modifica solo texto
+- [31:47] Exacto, modifica solo texto
+- [31:50] Entonces, pero si se construye
+- [31:52] Un XML sobre esto
+- [31:54] Y este también se envía
+- [31:56] A Gozoke, y Gozoke te va a generar
+- [31:58] Una organización gráfica de esto
+- [32:00] ¿Ya?
+- [32:02] Que esta sería la opción
+- [32:03] Dos
+- [32:04] Y la opción tres
+- [32:10] Esta es
+- [32:17] Corrección de monto
+- [32:18] Van los datos de referencia
+- [32:21] ¿Cierto?
+- [32:22] el todo, datos de referencia
+- [32:25] a la factura, ojo, ¿cierto?
+- [32:26] Sí, de la que estamos haciendo la
+- [32:29] modificación. Anulando o corrigiendo, sí.
+- [32:31] Pero en este caso, aquí
+- [32:33] ¿qué es lo que va a hacer? Va a ir a levantar
+- [32:34] el formulario. Va a ir a levantar
+- [32:37] el formulario con las
+- [32:39] líneas de detalle de todas las
+- [32:40] facturas, ¿vechai? ¿Me explico, no?
+- [32:46] Esto es como
+- [32:47] visualmente al usuario para que él pueda
+- [32:48] ingresar los montos y así construir el
+- [32:50] XML con los montos que va a modificar.
+- [32:52] Claro. Por ejemplo, esta factura es de 100 lucas, ¿cierto? Y cada uno tiene dos productos, ya de 50 y 50. Pero tú te equivocaste y en realidad era uno nomás, pues tu factura tendría sido por 50 lucas, ¿ya?
+- [33:09] Entonces acá en la nota de crédito
+- [33:11] Acá tú colocas
+- [33:15] Aquí, o mandas
+- [33:16] Envías
+- [33:17] El detalle
+- [33:20] A eliminar
+- [33:22] ¿Me explico?
+- [33:29] Pero si es una modificación
+- [33:33] Porque el 3
+- [33:37] El 3 correge montos, ¿no es cierto?
+- [33:40] Sí, por eso digo yo
+- [33:41] Por ejemplo, ya
+- [33:42] Para que se entienda mejor
+- [33:45] Tienes
+- [33:46] dos líneas de talle. Uno, la primera
+- [33:49] es de
+- [33:49] 29. Ah, claro. Voy a eliminar
+- [33:53] porque voy a eliminar uno de los ítems.
+- [33:56] Claro, exacto.
+- [33:57] Porque la nota de crédito es el monto que
+- [33:59] tú no tienes, que tienes que rebajar
+- [34:01] de la factura. ¿Me explico? Porque
+- [34:03] hay gente que se confunde y piensa que la nota de crédito
+- [34:05] es sobre
+- [34:06] es sobre lo que
+- [34:08] lo que se va, como que va a quedar
+- [34:11] ¿cachai? Lo que va a ser válido. Pero no es
+- [34:13] así. La nota de crédito es lo que yo voy a rebajar
+- [34:15] De la factura
+- [34:17] En ese caso por ejemplo si en vez de
+- [34:19] Eliminar un ítem
+- [34:20] Yo quisiera rebajarlo, por ejemplo
+- [34:23] Eran 50 y vendí 100
+- [34:25] Ahí tendría que colocar 50 del ítem para que se
+- [34:27] Descuenten, por así decirlo
+- [34:30] Si por ejemplo yo vendí
+- [34:34] En el contexto del cliente
+- [34:36] Vendí
+- [34:36] Una tonelada de
+- [34:41] Frambuesa y una tonelada
+- [34:42] De frutillas, pero no era que
+- [34:44] Tenía que vender una tonelada
+- [34:46] tenía que vender media tonelada esto de cada uno de cada uno sí sí acá le bajáis la media tonelada
+- [34:55] cada uno perfecto ya ya está como que resta nomás pues si quería eliminar todo le ponía el total del
+- [35:02] ítem y lo va a borrar todo por ejemplo no sé la primera línea de talle cantidad uno no 10
+- [35:09] vamos a poner 10
+- [35:10] y el precio unitario
+- [35:13] es de
+- [35:16] 10 lucas
+- [35:17] de una lucas
+- [35:18] ¿cierto?
+- [35:21] ¿ya?
+- [35:23] entonces a mi el total
+- [35:25] me da 10 lucas ¿cierto?
+- [35:27] claro
+- [35:28] de esa línea
+- [35:30] y puede que acá también tenga
+- [35:32] la segunda
+- [35:33] la segunda línea
+- [35:36] la segunda línea
+- [35:39] por 5
+- [35:41] y la cantidad de 5
+- [35:44] me da un total de 5
+- [35:46] ¿cierto? y puede ser que de estos
+- [35:48] 10, yo tengo que
+- [35:50] no le pasé en realidad 10 al cliente
+- [35:52] sino que le pasé 8
+- [35:54] ¿cachai?
+- [35:56] entonces yo la nota de crédito la tengo que hacer
+- [35:58] si le pasé 8
+- [35:59] entonces yo le tengo que rebajar solo 2
+- [36:02] ¿me explico?
+- [36:04] ¿cachai? al ítem 1
+- [36:05] y eso es lo que mando yo
+- [36:07] y ahí le bajo las 2 lucas
+- [36:09] Ya. ¿Me explico? Vale, vale.
+- [36:11] Y si quería eliminarlo todo, le mandaría los 10
+- [36:13] y así va. Exacto.
+- [36:15] Ya. Y esta, esta
+- [36:16] también se envía al
+- [36:18] al SI.
+- [36:21] Ya, ya, sí. Más
+- [36:23] claro del agua. ¿Te sirve
+- [36:25] esto? ¿Te lo mando? Sí, sí. Igual
+- [36:27] estaba grabando por si acaso, Sergio.
+- [36:29] Muy bien. Ya. Entonces
+- [36:34] me faltaría la implementación del
+- [36:35] menú para que seleccione
+- [36:38] los tres tipos que se quieren
+- [36:39] hacer dentro de una
+- [36:41] factura que tengamos a cabo y esa eliminación es dentro de lo que vendría va a compartir pantalla
+- [36:55] tendría que ser acá dentro del libro de ventas al darle clic acá levantar el modal y dependiendo de
+- [37:05] lo que seleccione dentro de las tres opciones o me va a levantar un submodal o me va a pedir
+- [37:10] solamente confirmar en el tipo 1 es así perfecto más claro el agua sergio bacán que más era que
+- [37:22] más era porque de la factura de exportación todavía no tenemos respuestas no todavía en
+- [37:43] Respuesta de GoSocket
+- [37:44] Ya, ¿qué?
+- [37:50] ¿Qué más?
+- [37:59] Ya, el contabilizar, cuando estás pendiente
+- [38:02] De contabilizar
+- [38:02] Tienes que levantar ahí el
+- [38:08] El detalle
+- [38:15] ¿Cómo perdón?
+- [38:20] El contabilizar tienes que levantar
+- [38:21] El detalle para seleccionar las cuentas contables
+- [38:23] Bueno, sí
+- [38:24] Eso sí, por ejemplo
+- [38:27] Tendría que agregarle un botoncito que sea
+- [38:29] Esa opción y aquí quizás ponerle
+- [38:31] No, no, no
+- [38:32] No, no, no, en el estado
+- [38:33] Por ejemplo, por contabilizar
+- [38:36] Si lo pincháis en el estado por contabilizar
+- [38:38] Abajo
+- [38:39] Por ejemplo, lo de abajo, por contabilizar
+- [38:42] ¿Cierto?
+- [38:44] Ya, pues la idea es que sea un botón
+- [38:46] Vale
+- [38:47] Y ahí asocia a las cuentas
+- [38:51] Claro
+- [38:52] Ahí le entra el modal con el detalle por cuenta
+- [38:54] Vale, y eso como te digo
+- [38:56] Ítem y cuenta
+- [38:58] Ítem y cuenta nada más, ¿cierto?
+- [38:59] Claro
+- [39:00] y creo que era eso
+- [39:05] porque de lo que habíamos hablado por ejemplo acá la otra vez
+- [39:07] ya que he implementado el tracking
+- [39:08] ahí obviamente en el tracking voy a agregar
+- [39:11] las ediciones que se van haciendo
+- [39:12] por ejemplo si
+- [39:14] se hace una nota
+- [39:16] de débito o crédito también, debería aparecer acá como estado
+- [39:19] que se hizo, ¿cierto?
+- [39:20] así es, por ejemplo una factura
+- [39:23] si se le emitió una nota de crédito
+- [39:25] y fue anulada, tiene que aparecer como anulada
+- [39:27] sería como el paso 5 acá, ¿cierto?
+- [39:30] Sí, pero a nivel global, por ejemplo, si no abres esa venta, el Estado tiene que aparecer como anulado, ¿cachai?
+- [39:39] Vale.
+- [39:47] Perfecto.
+- [39:50] Por ejemplo, entendiendo esa parte de que se asocian las cuentas, ¿y ahí quedaría contabilizado una vez asociadas las cuentas?
+- [39:59] Por ejemplo, el tema de registrar ese pago todavía no lo vemos, ¿no es cierto?
+- [40:03] No, no veamos nada
+- [40:06] Mira, yo creo que ahora, Carlos, dale con lo que
+- [40:08] Vemos, como que revisamos ahora
+- [40:10] Porque igual es harto
+- [40:11] Por la nota de crédito
+- [40:13] Entonces es importante que eso quede bien
+- [40:14] Porque es demasiado delicado eso
+- [40:17] Sí, sí
+- [40:18] Ya, entonces yo creo que ahora
+- [40:20] Enfócate a eso y avísame cómo te va
+- [40:22] Por punto, por ejemplo, no sé
+- [40:24] ¿Cómo anda un pantalla de eso? Mira, este es el nuevo modal
+- [40:26] Para la anulación
+- [40:27] Ya, vamos avanzando de esa manera
+- [40:31] Bacán
+- [40:31] ¿Ya?
+- [40:33] Bacán, bacán
+- [40:35] Oye Sergio, de casualidad
+- [40:37] Consulta personal
+- [40:38] Por esa guada que te contaba de la casa
+- [40:40] Tú no cachas, y así como quizás
+- [40:42] Porque tengo muchas dudas y tengo que buscarme un abogado
+- [40:45] Y entre buscar un abogado que no conozco
+- [40:46] Y un abogado que alguien conozca, prefiero buscar a alguien que conozca
+- [40:49] Pero que sepa de la guada de la casa
+- [40:50] Porque le preguntar ahí, ahí esa guada puede mentir caleta
+- [40:53] Y se puede hacer como una prórroga
+- [40:55] De la guada de la venta de la casa
+- [40:57] Que quedó en el juicio, tal guada
+- [40:58] ¿Tú no cachas? ¿Hay algún abogado que sepa de eso?
+- [41:00] No, weón
+- [41:02] No tengo ni idea de mentiría, weón
+- [41:04] No, si va a tener que buscarme porque
+- [41:06] Necesita asesoría legal, porque esta weón
+- [41:08] Como te digo, la tengo que ver yo, si mi viejo no cacha
+- [41:10] Ni una weón
+- [41:11] Social no, yo tampoco
+- [41:14] Nunca me tocaba así, weón
+- [41:16] En cierto modo, sí, o sea
+- [41:18] Eh, no sé, podís
+- [41:20] Podís la prórroga, pero
+- [41:21] No cacho cuánto, weón
+- [41:23] Es que esta gente, weón
+- [41:26] Sé que yo le tengo tanta desconfianza porque
+- [41:28] Bueno, situaciones de la vida
+- [41:30] Y el tema es que
+- [41:32] Como me está tocando a mí hablar con esta gente
+- [41:36] No quiero decir cosas que no corresponden
+- [41:39] Porque estas guanas son
+- [41:40] Terrible venenosas
+- [41:42] Y este viejo está mal de salud
+- [41:44] Entonces tengo que cuidarme de careta
+- [41:45] Pero no tengo que ir a buscar ahí su asesoría legal
+- [41:48] Sí, sí, mejor
+- [41:51] El tema es que
+- [41:54] Claro, y
+- [41:56] Puta de tu papá que la cagó ahí
+- [41:57] Es de familia ser así
+- [42:00] No, pero dentro de todo
+- [42:04] Bueno, me dejó
+- [42:06] Hacerme cargo porque el viejo no
+- [42:08] Quería que yo viera ni una hueá
+- [42:09] Y estaba la zorra, entonces
+- [42:11] Al menos ya tengo la calma de que voy a poder
+- [42:13] Verlo yo y él va a tener que aceptar no ver la hueá
+- [42:15] Que yo veo
+- [42:16] ¿Y qué harás? ¿Vas a ir para otro lado? ¿Tienes otra casa?
+- [42:20] Bueno, la idea
+- [42:21] De esto es que
+- [42:23] Hay estas cosas entre medio
+- [42:25] Lo que pasa es que mi papá tiene
+- [42:26] Este ex matrimonio
+- [42:28] Tiene dos hijos de ese matrimonio
+- [42:30] Y después estuvo con mi mamá que
+- [42:31] Como no se divorció de su expareja
+- [42:34] Convivieron nomás aquí en la casa
+- [42:36] Nos tuvieron a mí y a mi hermana
+- [42:37] Yo me quedé con los viejos, mi hermana ya se fue
+- [42:39] Y ahora después de muchos años
+- [42:42] Le hicieron la demanda
+- [42:45] Por pensión de alimento y por la casa
+- [42:46] Por el divorcio
+- [42:48] Y mi viejo sí pagaba pensión de alimento
+- [42:50] Pero la pagaba el amigo
+- [42:51] No teníamos ni un registro
+- [42:54] Y la persona que cuidaba a los niños
+- [42:55] Porque la hija de mi papá
+- [42:57] Porque el otro hijo no está ni ahí
+- [42:59] La hija de mi papá atestigó a favor de la mamá
+- [43:01] Entonces
+- [43:03] La venta de la casa
+- [43:06] También tiene que cubrir la pensión de alimentos
+- [43:07] De los dos niños
+- [43:08] Entonces no es solamente la mitad, es un monto mayor
+- [43:11] Y
+- [43:12] Salimos de la primera parte recién como el año pasado
+- [43:18] Del divorcio
+- [43:18] No, mentira, el año antes pasado
+- [43:20] Yo paso el año 2026
+- [43:21] Y por la guardia de la casa
+- [43:24] Como yo estaba con la guada de los estudios
+- [43:26] Se lo encargué a mi media hermana
+- [43:27] Y no hay compradores
+- [43:30] Como mi hermana no vive acá
+- [43:32] No le pesa esa guada
+- [43:33] ¿Cómo es que es mi media hermana?
+- [43:36] No te cacho
+- [43:37] Es que tengo medios hermanos y hermana
+- [43:39] ¿Y tu media hermana?
+- [43:43] ¿Cuál es esa?
+- [43:44] Mi media hermana es la vetada de acá
+- [43:46] Que atestiguó para su mamá
+- [43:48] De que mi papá no daba pensión de alimentos
+- [43:50] Lo cual es mentira
+- [43:55] Que si la daba pero no la pasaba
+- [43:57] por transferencia
+- [43:58] entonces no tiene
+- [43:58] ni un comprobante
+- [43:59] se lo jodieron
+- [44:03] al viejo
+- [44:06] si
+- [44:06] si
+- [44:07] cachai
+- [44:08] entonces
+- [44:08] yo como estaba
+- [44:10] con la wea
+- [44:11] de los estudios
+- [44:11] mi hermana
+- [44:12] no media hermana
+- [44:14] mi hermana
+- [44:14] dijo que si iba a ser
+- [44:15] cargo de la venta
+- [44:16] de la casa
+- [44:17] pero no lo ha hecho
+- [44:18] puta la wea
+- [44:23] cachai
+- [44:24] entonces
+- [44:25] mi meta de ahora
+- [44:26] más que agobiarme
+- [44:27] por buscar
+- [44:28] como un comprador
+- [44:29] y toda la wea
+- [44:29] o que la casa
+- [44:30] se vaya a vender
+- [44:30] un monto muy bajo
+- [44:31] y el viejo
+- [44:31] quede sin ni una luca
+- [44:32] Es buscar una prórroga
+- [44:34] Entonces tengo que hacer mi amigo también del otro lado
+- [44:37] Explicarle toda la guay y buscar opciones
+- [44:38] Oye, pero eso te preguntaba yo
+- [44:43] ¿Qué harían ustedes en otra casa?
+- [44:46] En este caso
+- [44:47] Por ejemplo, esta cosa se tiene que entregar
+- [44:51] En diciembre, supuestamente
+- [44:53] No, mentira
+- [44:55] Es
+- [44:56] El 3 del próximo año, por ahí por marzo
+- [44:59] Más o menos, por ahí por marzo deberíamos entregar la casa
+- [45:01] Y
+- [45:02] mi idea era que por mientras nos fuéramos
+- [45:04] a arrendar nomás
+- [45:06] quizás vivir en una guada con dos pies
+- [45:08] no va a arrendar, pero
+- [45:10] mi mamá y yo estábamos metidos
+- [45:12] en esta guada de comité
+- [45:14] para los subsidios
+- [45:15] y a la casa le queda como un año
+- [45:18] entonces
+- [45:19] apelar a la humanidad del otro lado
+- [45:21] si es que nos dan la prórroga por un año
+- [45:24] si la venta se tiene que hacer
+- [45:25] la plata le va a llegar
+- [45:27] entonces apelar al lado humano
+- [45:30] que nos quede con una extensión nomás
+- [45:31] Y que vayan a esperar a que llegue la plata nomás
+- [45:33] Claro
+- [45:34] ¿Cachai? Pero ojalá que sea la extensión de un año
+- [45:38] Porque tú cachai que la hueá de los comités
+- [45:40] Pasa una hueá de la constructora
+- [45:42] Una hueá legal
+- [45:43] O del mismo presidente y se demora la hueá
+- [45:45] Sí, bueno
+- [45:47] Entonces tampoco un lugar seguro
+- [45:50] Y ahí
+- [45:51] Puta, igual tengo pensado que la hueá
+- [45:53] Si me partió la cabeza de esta hueá
+- [45:55] Yo me voy a ir a arrendar una pieza donde sea
+- [45:57] Y a mis papás los dejo con
+- [45:59] Con mis hermanos, pues cachai
+- [46:01] Ya
+- [46:03] Entonces ahí
+- [46:05] Hay opciones, hay harto opciones
+- [46:07] No está tan trágico quizás
+- [46:10] Como pudo haber sido y por eso me quiero hacer cargo
+- [46:12] Antes de que quede la cagada
+- [46:13] Pero aparte de tu papá que no quiere
+- [46:16] Siñor o como
+- [46:17] Pero él tiene pensión o algo
+- [46:19] Sí, está recibiendo pensión
+- [46:21] Ah ya, y tu mamá trabaja
+- [46:24] Sí, pues mi vieja trabaja
+- [46:26] Y ahora con la guada en la rodilla como te dije
+- [46:27] Están con licencia, entonces aquí igual la tengo en la casa
+- [46:30] Y los dos no se llevan
+- [46:31] No son una pareja
+- [46:32] Hace cualquier rato
+- [46:33] Entonces también soy
+- [46:34] El mediador de los dos
+- [46:35] Ay que paja
+- [46:37] Y mi papá
+- [46:38] Evangelico
+- [46:39] Entonces no era
+- [46:43] La alma
+- [46:43] El problema
+- [46:44] Ni Danilo
+- [46:46] Si
+- [46:46] Si es una wea
+- [46:47] De antes
+- [46:48] Que a lo mejor
+- [46:49] Claro
+- [46:50] Como te digo
+- [46:51] Yo estaba viéndolo
+- [46:51] Por la wea
+- [46:52] Lo estudio
+- [46:52] Entonces no me estaba
+- [46:53] Haciendo muy responsable
+- [46:54] De la wea
+- [46:54] Pero
+- [46:54] Me estaba comiendo
+- [46:57] Igual por dentro
+- [46:58] Así que ahora dije
+- [46:58] No ya
+- [46:59] Hay que tomar las riendas nomás
+- [47:01] Y ahora por ejemplo
+- [47:02] ¿Cuál es mi meta de esta semana?
+- [47:04] Buscarme alguna asesoría legal
+- [47:06] Un abogado que una horita
+- [47:07] Para poder hacerle todas las preguntas posibles
+- [47:09] Para ir a negociar con estas víboras
+- [47:12] Y llegar a un acuerdo
+- [47:15] Obviamente yo sé que ya no lo van a hacer
+- [47:17] Porque sí
+- [47:18] Entonces
+- [47:19] A ver si es que a lo mejor
+- [47:21] Porque también
+- [47:24] Tengo
+- [47:27] Alguna persona por ahí me interesa
+- [47:29] En comprar la casa, que no es del agrado
+- [47:31] De mis papás
+- [47:32] Pero está dispuesto a pagar los 50
+- [47:36] ¿Vos cachai? Entonces
+- [47:37] Igual necesitamos estar viviendo
+- [47:40] Acá, así que yo decía puta
+- [47:41] Si es que puedo sacar esta guada de compromiso de venta
+- [47:44] Por 50 palos con esta persona
+- [47:45] Esto presentárselo a estas locas
+- [47:48] Como ya va a estar
+- [47:50] El compromiso de pago legalmente con esta persona
+- [47:52] Estas personas van a tener el seguro de que la casa
+- [47:54] Ya tiene un comprador y se va a vender y que nos den la prórroga
+- [47:56] De un año ¿Vos cachai?
+- [47:57] Porque las conozco
+- [48:02] Y no puedo llegar a pedirle agua sin nada
+- [48:05] Pero tu hermana
+- [48:08] La que te esticó
+- [48:10] En contra de tu viejo
+- [48:12] Antes ella iba para tu casa
+- [48:14] Y ella era
+- [48:16] La favorita de mi papá
+- [48:18] Lo que pasa es que mi papá se separó
+- [48:23] A la mala, esta señora se llevó a los cabros chicos
+- [48:25] Porque vivían aquí en la casa
+- [48:26] Pasó el tiempo, mi papá se juntó con la mamá
+- [48:28] Nunca hicieron el divorcio, nunca vieron la pensión de alimentos legal
+- [48:31] Por parte de mi papá para hacer las transferencias
+- [48:33] Estos hermanos, porque son dos
+- [48:37] Estos medios hermanos
+- [48:38] Vivieron con su abuela materna
+- [48:40] La abuela materna falleció
+- [48:41] Y mi papá tenía la relación
+- [48:44] De la entrega de la plata
+- [48:46] Como la cuidaba la abuela, era con la abuela
+- [48:48] Y que pasó
+- [48:51] Que cuando salió el agua del divorcio
+- [48:53] Mi papá necesitaba tres testigos
+- [48:55] Y hasta ahí no había problema
+- [48:57] Pero esta loca
+- [49:00] Mi media hermana
+- [49:01] Vio que en los testigos
+- [49:03] Aparecía el hijo de mi mamá
+- [49:05] Que no tiene ni un mono que pintar acá
+- [49:06] Y solamente lo pusimos como testigo
+- [49:08] Y ella se fue
+- [49:10] Ah, ustedes tienen, no sé
+- [49:12] Tus hijos, mis hijos
+- [49:14] Los tuyos, los míos, los nuestros
+- [49:15] Vamos a ver, este loco no tiene nada que ver
+- [49:19] Si como te digo, lo pillamos
+- [49:20] Porque necesitábamos a alguien que tuviera tiempo disponible
+- [49:23] Para andar en todas las guardias del juicio
+- [49:24] Y esta weona no sé qué weá le dio
+- [49:27] Que le dio los celos
+- [49:31] Se enojó con mi papá
+- [49:33] Y
+- [49:33] Se fue para otro lado
+- [49:36] Con la vieja culiá que nunca la cuidó
+- [49:38] Nunca la vio ni una weá
+- [49:39] Se metió ahí
+- [49:42] Atestiguó contra mi papá
+- [49:45] Mi papá ultra dolido
+- [49:46] Si mi papá encima tiene la culpa de que esos dos cabros
+- [49:48] Estuvieron en pésimas condiciones
+- [49:50] Pues si mi papá a ella la iba a ver todos los días
+- [49:53] Y esta weona vende pasta
+- [49:55] ¿Que en la cabra esa?
+- [49:58] Si weon, si es terrible tránsfuga
+- [50:00] Y como te digo
+- [50:03] Mi papá se siente culpable de que tenga esa vida
+- [50:05] Entonces la iba a ver toda la weon
+- [50:07] Y con esta weon el viejo anímicamente
+- [50:08] Es el que lo tengo por el suelo
+- [50:10] Porque se siente más culpable
+- [50:13] Porque ya se sentía culpable yendo a ver a la loca
+- [50:15] Con lo que pasó más
+- [50:17] Se quedó para la corneta
+- [50:19] Y ahora esta weona
+- [50:22] Está intentando
+- [50:25] Mantener relación de nuevo
+- [50:26] Mi papá lo está buscando
+- [50:27] Mi papá que hueón
+- [50:29] Igual permite que se acerque
+- [50:31] Pero yo no confío en esa hueona
+- [50:32] Entonces antes de que pase algo
+- [50:34] Y de que le vendan el chanchullo
+- [50:35] Quiero ver todo por la vía legal
+- [50:37] Y bueno, mi papá no entiende
+- [50:41] Es una hueá de que no entiende
+- [50:42] De que no es su culpa
+- [50:43] Que la hueona ya tiene como 40 años
+- [50:44] Desde que ya hace cualquier rato
+- [50:45] Pudo haberse afirmado su vida
+- [50:46] Pero el viejo se siente responsable
+- [50:48] Y culpable de que su hija
+- [50:49] Tiene esa vida y toda la hueá
+- [50:50] Entonces
+- [50:51] Tengo que andar
+- [50:53] Caminando por
+- [50:54] Campo minado
+- [50:56] Que te ven dos monos
+- [50:59] Así que
+- [51:02] Ahí está
+- [51:02] Me ha delicado la situación
+- [51:03] Pues tengo que andar viendo
+- [51:04] Que también
+- [51:04] Este caballero
+- [51:05] No anda hablando hueá allá
+- [51:07] Porque como te digo
+- [51:07] Esta loca lo busca
+- [51:08] Lo busca
+- [51:08] Lo busca
+- [51:09] No quiero que le meta idea
+- [51:11] En la cabeza
+- [51:11] Lo que más me da miedo
+- [51:12] Es que se lo cae
+- [51:12] Si ya se lo hicieron una vez
+- [51:14] Pero como está el pajarón
+- [51:16] Toma pavo
+- [51:17] ¿Qué tiene?
+- [51:18] Tiene como 70 ya
+- [51:19] está mal hoy, no puede ni caminar
+- [51:24] sí, realmente
+- [51:26] mal, realmente mal
+- [51:28] una persona que es casi analfabeta
+- [51:30] hombre de campo
+- [51:34] entonces, y como te digo
+- [51:38] creyente en la religión evangélica
+- [51:40] entonces, y yo soy volado
+- [51:43] así que le cuesta a la gente creerme a mí
+- [51:44] y soy el guan que más lo cuida
+- [51:52] más encima
+- [51:52] y ahí está
+- [51:57] por eso Andrés estaba medio
+- [51:58] me iba hablando
+- [52:00] resolviendo el mundo
+- [52:03] pero al menos anímicamente
+- [52:05] con la guada de la pizarra y estas conversaciones que hubo tenido Sergio
+- [52:07] en cuanto a la pega me he sentido bastante
+- [52:09] dentro de control y con la guada de la princesita
+- [52:12] también que están viendo los cabros
+- [52:13] me ha alivianado caleta
+- [52:14] ya, bueno
+- [52:15] ya, pero entonces, mira, vamos por parte
+- [52:18] como te digo, sigamos con este
+- [52:20] flujo, termina esto
+- [52:22] y me manda el pantallazo y yo digo, si bien, no, mal
+- [52:24] ¿cachai? vale
+- [52:26] ¿ya? vale, vale, y teniendo
+- [52:28] eso, voy a terminar esta cosa primero
+- [52:30] y ahí voy a terminar de hacer las tarjetas del tren
+- [52:32] oye, respóndete a la
+- [52:34] a la, ¿cómo se llama?
+- [52:39] a la María Jesús
+- [52:40] vale
+- [52:41] dile, no, María Jesús, veámoslo ya mañana
+- [52:43] yo creo, mañana
+- [52:44] Y cuando tengamos
+- [52:48] Lo de la nota de crédito
+- [52:49] Nos juntamos con ella
+- [52:50] ¿Ya?
+- [52:51] Bacán
+- [52:52] Muchas gracias
+- [52:56] Se basó
+- [52:57] Vale, vale, hablamos
+- [52:58] Chau chau

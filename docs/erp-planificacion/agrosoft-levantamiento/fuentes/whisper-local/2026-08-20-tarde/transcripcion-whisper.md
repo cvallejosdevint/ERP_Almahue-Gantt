@@ -1,0 +1,837 @@
+# Cliente Lupe y Mario 2026-08-20 tarde (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-20 174935.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:00] Queda como a elección del usuario, o sea, del administrador, por así decirlo. Exacto. Entonces, igual se entiende que durante el uso quizás se vayan a tener otros ajustes y, por ejemplo, como les explicaba, quizás no quedó muy claro, pero se pueden configurar más grupos y hay personas que pueden estar en más de un grupo. Entonces, dentro de lo que vendría a ser esto es flexible, pero hay que tener como un poquitito más de configuración.
+- [00:27] De todas formas, podríamos dejar acá también una tercera opción, que sería seleccionar para cada usuario un aprobador dentro de este eslabón.
+- [00:37] Pero ahí tendríamos que conversarlo un poquitito más, cuál sería el alcance y todo, dependiendo de lo que necesiten.
+- [00:43] Sí. No, yo creo que tendríamos que hacer, como decía acá la chica, hacer una prueba.
+- [00:47] Perfecto.
+- [00:47] Crear algunas órdenes de compra por forma ficticia y ver cómo queda así la tipulación de las aprobaciones.
+- [00:55] perfecto
+- [00:57] para que quede más claro
+- [00:58] Mario
+- [00:59] ahí yo tengo una duda sobre el
+- [01:03] bueno
+- [01:03] el flujo de aprobación
+- [01:06] se entiende claramente que
+- [01:08] el nivel de
+- [01:10] administrador va a definir
+- [01:13] pero por ejemplo
+- [01:14] hoy en día ustedes tienen
+- [01:17] a sus niveles
+- [01:19] de aprobación tanto para lo que es
+- [01:21] la venta
+- [01:22] y tanto para lo que es compras
+- [01:24] solo compra
+- [01:28] solo pasaría para las cotizaciones
+- [01:31] ¿cierto?
+- [01:32] servicio y material
+- [01:35] ¿se escucha o no?
+- [01:38] sí
+- [01:38] escuché que sería
+- [01:41] servicio y material
+- [01:42] sí, servicio y material
+- [01:43] solo de compras
+- [01:47] ah ya, porque ahí yo me acuerdo
+- [01:49] que no está María Jesús
+- [01:50] pero creo que María Jesús siempre habla
+- [01:53] que en el lado de
+- [01:55] de compra
+- [01:57] es las cotizaciones, ¿cierto?
+- [02:00] Son las
+- [02:01] cotizaciones y ahí se
+- [02:03] genera la orden de compra.
+- [02:06] Ah, ya. Entonces el flujo sería
+- [02:07] para entenderlo bien, sería
+- [02:09] la cotización,
+- [02:11] ¿cierto? La cotización se
+- [02:13] aprueba, ¿cierto? Pasa por todo el flujo de
+- [02:15] aprobación y luego
+- [02:17] se convierte en una orden de compra.
+- [02:19] ¿Cierto?
+- [02:20] lo que pasa es que primero
+- [02:22] claro, nos llevan las cotizaciones
+- [02:24] pero al tiro se genera la orden de compra
+- [02:26] y de ahí pasa la aprobación
+- [02:28] por la persona
+- [02:30] para que puedan
+- [02:32] la factura
+- [02:33] o sea entonces a nivel de sistema
+- [02:38] ustedes no es que emitan una cotización
+- [02:40] inicial sino es que reciben
+- [02:41] una cotización
+- [02:42] nosotros recibimos cotizaciones
+- [02:44] y esa cotización la traspasan a una orden de compra
+- [02:47] y luego la orden de compra la enlazan
+- [02:49] al documento recibido, ¿no?
+- [02:51] Sí.
+- [02:51] Que puede ser la factura, ya.
+- [02:54] Así es.
+- [02:55] Ah, ya, ok, ok.
+- [02:57] Entonces, ya, ahí, Carlos.
+- [03:01] Entonces, si el documento que emiten
+- [03:04] para el flujo de compra,
+- [03:06] el documento inicial de AlmaWeb
+- [03:09] es una orden de compra.
+- [03:11] ¿Y ustedes referencian esa cotización?
+- [03:13] ¿En la orden de compra?
+- [03:16] Sí.
+- [03:18] Cuando emiten, ¿ustedes generan la orden de compra?
+- [03:20] ¿hacen referencia
+- [03:23] a la cotización recibida?
+- [03:26] Lo que pasa es que
+- [03:29] en otro
+- [03:30] que
+- [03:32] la ingresada es igual a la cotización
+- [03:35] como archivo, adjunta
+- [03:37] la orden de compra.
+- [03:39] No sé si lo van a querer hacer.
+- [03:41] Actualmente en la agrosofía eso no pasa.
+- [03:43] No, no pasa.
+- [03:45] No lo tenemos con cotización
+- [03:47] y tampoco se anexa.
+- [03:48] No queda como un registro, por así decirlo.
+- [03:53] Mira, por ejemplo, Carlos, ¿puedes mostrar cómo es la emisión?
+- [03:58] Sí, de hecho, como lo teníamos actualmente, era que partía efectivamente por la cotización.
+- [04:07] De hecho, mira, aquí tenemos un ejemplo de las cotizaciones.
+- [04:12] Con sus diferentes estados y al momento de generar, podríamos dejar al proveedor.
+- [04:19] Eso es el módulo de ventas, ¿verdad?
+- [04:23] No, compras.
+- [04:24] Compras, ¿verdad? Compras.
+- [04:25] Compras.
+- [04:26] Perfecto.
+- [04:27] Entonces estamos bien.
+- [04:31] Entonces aquí podría ser el producto, en este caso...
+- [04:34] Claro, pero aquí cambiaría el modelo.
+- [04:46] No sé cómo, la que nos confirmó que era cotización recibida.
+- [04:52] ¿Qué fue?
+- [04:53] Es que en este caso aquí no generamos la cotización.
+- [04:57] Claro, entonces aquí...
+- [04:59] Cuando uno compra, solicita una cotización para poder generar nosotros la orden de compra.
+- [05:08] Ya, ok. Eso es lo que había hablado la semana pasada.
+- [05:12] Por eso yo me quedé con la confusión de que el documento inicial en el flujo de compra era una cotización.
+- [05:18] Entonces, ahora me queda bastante claro que parte desde la orden de compra.
+- [05:24] Pero mi duda es que, mira, Carlos, tú cuando emites un documento,
+- [05:28] Puedes agregar los datos de referencia, ¿te acuerdas?
+- [05:31] Sí.
+- [05:32] Por ejemplo, aquí sería...
+- [05:36] Las otras áreas hacen cotización y nos llevan, solo solicitan la orden de compra.
+- [05:45] ¿Cómo? ¿Las otras áreas y mienten cotizaciones?
+- [05:48] No, solicitan, hacen todo el procedimiento de la cotización y nosotros solamente nos piden la orden de compra.
+- [05:53] Y nosotros solo generamos la orden de compra.
+- [05:56] Por ejemplo, el sistema como está ahora es generar la cotización, la cotización se aprueba
+- [06:00] Y una vez estando aprobada
+- [06:02] Se puede generar la orden de compra
+- [06:05] Y ahí se hace referencia a la cotización
+- [06:08] No, pero ahí
+- [06:09] Eso no va a ser así
+- [06:10] Van a ser desde
+- [06:11] Acá van a emitir una orden de compra
+- [06:14] No una cotización
+- [06:15] Quería ver donde tú agregas la referencia
+- [06:19] Carlos
+- [06:19] Es el item
+- [06:23] Estos son los detalles
+- [06:24] Hay que agregar esto
+- [06:31] Hay que agregar la orden de compra
+- [06:34] Sí, porque se había modificado por la anterior
+- [06:35] Sí, en la orden de compra
+- [06:38] aquí vamos a agregar
+- [06:39] que puedan seleccionar el tipo de documento
+- [06:42] referencia, que sea una cotización
+- [06:43] ¿cierto? y agreguen
+- [06:45] el folio de la
+- [06:47] cotización
+- [06:48] ¿se entiende?
+- [06:51] Esa cotización ustedes pueden que la tengan
+- [06:54] física o
+- [06:55] electrónica
+- [06:56] me refiero por correo, ¿o no?
+- [07:03] Está muteado, por si acaso
+- [07:05] Mario
+- [07:13] Sí, aquí estamos, sorry, estamos conversando un tema.
+- [07:17] Les preguntaba que, bueno, vamos a hacer una corrección acá en la pantalla de emisión de orden de compra,
+- [07:23] en donde se va a agregar como dato de referencia, que no sea obligatorio, el número de la cotización, ciertos fechas y folios, ¿ya?
+- [07:32] Bueno, el tipo de documento. Entonces, pero ese no va a ser obligatorio.
+- [07:36] Usted de la cotización
+- [07:40] Al área que emite la orden de compra
+- [07:43] ¿Le puede que la reciban por correo?
+- [07:45] ¿O fíjense que la manejan ahí?
+- [07:48] Generalmente en PDF le llega
+- [07:49] Entonces ahí para que la agreguen
+- [07:55] Solamente como informativa
+- [07:56] Como referencia
+- [07:57] Pero no es que vayan a juntar el documento
+- [08:00] En la orden de compra
+- [08:01] ¿Se entendió?
+- [08:06] Sí, yo creo que lo entiendo
+- [08:07] y también me confirman que el flujo de aprobaciones pasa solamente por él por compras
+- [08:20] correcto estamos tomando nota bueno aprovechando igual la instancia aquí se vería lo que vendrían
+- [08:34] a ser los aprobaciones éste se vendría a ser como el módulo de las aprobaciones donde a las
+- [08:40] Personas que son parte de la cadena
+- [08:43] Podrían verlo acá
+- [08:45] Y también les llegaría como notificación
+- [08:47] Y las notificaciones son para las dos vías
+- [08:49] Cuando el aprobador
+- [08:51] Le llega una nueva
+- [08:53] Aprobación
+- [08:55] Valga la redundancia
+- [08:56] Y también al emisor cuando se la aprobaron
+- [08:58] También le confirma por notificación
+- [09:00] Y aquí vendrían los detalles
+- [09:05] Nosotros también podríamos acceder
+- [09:07] A este mismo módulo para ver el estado
+- [09:08] De las aprobaciones que nosotros enviamos como emisor
+- [09:11] y aquí podríamos ver lo que les contaba
+- [09:13] del progreso de la aprobación
+- [09:14] solicitante
+- [09:16] ¿Una consulta?
+- [09:20] Sí
+- [09:21] Por ejemplo, si yo genero una orden de compra
+- [09:24] ¿Yo así como
+- [09:26] asigno quién me la tiene
+- [09:28] que aprobar? ¿O ambos de los
+- [09:30] que están en esa cadena la aprobarían?
+- [09:33] En este caso
+- [09:34] está como para que sea
+- [09:36] opcional, que sea
+- [09:38] como el primero que la apruebe
+- [09:40] pase o que sea restrictivo
+- [09:42] para que si son dos, los dos
+- [09:44] lo aprueben, pero en este caso lo que se ve
+- [09:46] acá, que esta es una cadena que todos los
+- [09:48] eslabones solamente tienen uno, entonces
+- [09:50] en este caso el solicitante lo pidió
+- [09:52] acá
+- [09:52] este que es un eslabón lo aprobó
+- [09:56] y se completó
+- [09:58] o sea, si fuera que un paso de
+- [10:00] dos en la aprobación, diría
+- [10:02] así como aprobado por este, pero falta este
+- [10:04] exacto, aquí aparecerían
+- [10:06] los dos aprobadores
+- [10:07] pendientes para
+- [10:09] como dar la información de cuál está aprobado
+- [10:12] y cuál está por espera.
+- [10:15] Y en caso de que esté
+- [10:16] solo aprobado en uno, ¿podría
+- [10:17] contabilizarse?
+- [10:20] Está la opción. Pueden seleccionar de que
+- [10:22] tengan que aprobar o los dos
+- [10:23] o uno de los dos.
+- [10:26] Debería ser que estuviese
+- [10:28] aprobada la orden de compra
+- [10:30] para que se pueda contabilizar.
+- [10:35] No, no, claro.
+- [10:35] Pero a lo que se refiere, Carlos,
+- [10:37] es que el flujo
+- [10:40] o la cadena de aprobación
+- [10:45] la configuran ustedes, porque si colocan un usuario
+- [10:49] o en un nivel colocan a dos usuarios que sean obligatorios la aprobación
+- [10:53] hasta que ellos dos no la aprueben, esa orden
+- [10:57] de compra no va a quedar aprobada, y como tú bien dices
+- [11:00] no se debería contabilizar incluso
+- [11:04] Y ahí me surgió otra duda que tuve en la mañana con Carlos. Cuando la orden de compra no está aprobada, ¿cierto? En caso que reciban una factura referenciando esta orden de compra que aún no está aprobada, ¿qué se hace en ese caso? ¿Van a hacer un rechazo automático del documento?
+- [11:25] o lo van a destacar que esta factura que está referenciando esta orden de compra
+- [11:31] aún no puede ser contabilizada o pagada porque la orden de compra no ha sido aprobada del todo.
+- [11:38] Lo segundo, Sergio.
+- [11:42] Ya, ok. Hay que dejarla destacada para que sepan cuáles son las órdenes de compra
+- [11:47] que han sido facturadas y que no están aprobadas.
+- [11:51] Claro.
+- [11:51] Sí, porque así se las ponen aprobadas.
+- [11:55] Claro. Y no pasa ni a pago ni tampoco se contabiliza.
+- [11:59] Claro.
+- [12:02] Hasta que esté el ok.
+- [12:04] Perfecto.
+- [12:05] Y el ok obviamente lo definimos según las reglas que nosotros queramos.
+- [12:09] Ya, ok. Y ahí hay, bueno, ustedes como bien saben, hay un proceso de aceptación o reclamo por ocho días, ¿cierto?
+- [12:19] En caso de que estas facturas que están con orden de compra no aprobadas, ¿tienen que ser rechazadas o se van a pasar a aprobadas con el flujo normal o automático?
+- [12:33] Pasa que acá no trabajamos con el rechazo. De rechazar alguna factura, nosotros ingresamos al servicio y la rechazamos manualmente.
+- [12:45] No, claro, pero ahora con el RP, todo esto, la aceptación, los reclamos que usted hace en el servicio puesto interno,
+- [12:53] la van a hacer desde acá, porque esta aceptación o reclamo va a pasar por la integración de GoSocket,
+- [12:59] y GoSocket se encarga de informar al servicio, ¿ya?
+- [13:03] Entonces nosotros vamos a la integración directa, entonces la idea es que puedan manejar todo en una sola plataforma.
+- [13:09] Ya.
+- [13:09] Entonces, ahí vuelvo a la pregunta. Si el documento, la orden de compra no está aprobada, tienen la factura recibida de su proveedor y está en proceso de aprobación la orden de compra, pero ya van a pasar los ocho días, que después de los ocho días, de forma automática pasa un documento aceptado.
+- [13:32] ¿qué se va a hacer? ¿lo dejamos
+- [13:34] a que pasen los 8 días y después se vuelva
+- [13:36] aceptado? ¿o se hace un rechazo
+- [13:39] automático al día 7
+- [13:40] o 8?
+- [13:42] la primera opción
+- [13:44] ya, si no se aceptó a los 8 días
+- [13:48] ¿qué pasa? se va a aprobar automático
+- [13:51] ¿y queda registrado eso?
+- [13:55] sí, ustedes van a tener
+- [13:56] la responsabilidad de que ese documento
+- [13:58] pasó por la aceptación
+- [14:00] automática
+- [14:01] luego de los 8 días transcurridos
+- [14:04] si no se rechaza
+- [14:09] luego
+- [14:15] de 8 a 10
+- [14:17] vamos entonces a
+- [14:20] tener que realizar igual reformulación
+- [14:22] del módulo completo así que
+- [14:24] igual
+- [14:24] en la próxima reunión con estas correcciones ya
+- [14:28] podríamos tener un poco más concreto
+- [14:30] el sistema
+- [14:31] vamos entonces
+- [14:35] vamos a ver el módulo que habían solicitado
+- [14:40] que teníamos el de tesorería verdad sí porque queremos empezar a aplicar un poco perfecto
+- [14:47] la idea que nos explique un poco cómo estaba actualmente y nosotros nos quedamos con la
+- [14:51] tarea de dar feedback perfecto actualmente como lo tenemos acá tenemos lo que vendría a ser el
+- [14:57] flujo de caja con los diferentes movimientos y la posibilidad de editarlo aquí podemos generar
+- [15:07] nuevos. Tenemos donde se exportan las cartolas, que acá, bueno, acá en sí está un modo
+- [15:14] demo, pero este lo estábamos ajustando por los documentos que nos envió María Jesús
+- [15:20] en su momento. Así que, después de que todavía no se estén reflejando todos los campos,
+- [15:28] porque eran, creo que por Excel, venían con harta hojas de cada uno de, por así decirlo,
+- [15:33] de los bancos donde llegan
+- [15:35] de donde llegan la información, ¿verdad?
+- [15:38] Sí
+- [15:39] Perfecto, entonces este vendría a ser como el reflejo
+- [15:41] de esas cartolas que vienen acá
+- [15:43] la idea es que
+- [15:45] esté configurado para que cuando ustedes importen
+- [15:47] se refleje esta información acá
+- [15:49] y se pueda también editar de manera
+- [15:51] manual, y así es como
+- [15:53] se ve dentro de estas exportaciones
+- [15:56] Ya
+- [16:00] Carlos
+- [16:08] por ejemplo, ahí sería
+- [16:09] como una
+- [16:11] una caluguita por cada movimiento
+- [16:13] exacto
+- [16:16] oye Carlos y ahí por ejemplo si el
+- [16:18] el Excel
+- [16:19] tiene no sé
+- [16:20] 5000 registros
+- [16:23] igual no sé
+- [16:25] como sugerencia la pantalla no es muy
+- [16:27] chiquitita creo yo
+- [16:28] si podríamos dejarla más grande de hecho en base a eso
+- [16:31] también ahora se me ocurre dejar un buscador y
+- [16:33] como lo tenemos en la otra tabla no hay problema se puede agregar
+- [16:35] voy a hacerte como un ejemplo
+- [16:37] como hacer la importación del
+- [16:39] excel tal cual como le explicaba tenemos activado el modo demos de momento como
+- [16:46] estaba haciendo unos ajustes por las pruebas que estábamos realizando con
+- [16:50] go socket no sé si es que vaya a funcionar si gusta podríamos intentarlo
+- [16:54] porque de hecho no hay ninguno aquí en la esta la base de datos real
+- [16:59] buscar acá dentro de los documentos que tengo
+- [17:01] oye Mario, ahí por ejemplo
+- [17:03] ¿qué tipo de... bueno ya
+- [17:05] me puedes confirmar
+- [17:08] los nombres que le están participando
+- [17:09] para poder mencionarlos
+- [17:12] sí, la de Francisca
+- [17:13] y Guadalupe
+- [17:16] que es la crack
+- [17:17] aquí en Tesorería
+- [17:18] ya, Francisca y Guadalupe
+- [17:20] les pregunto, Francisco y Guadalupe
+- [17:23] ¿sería más cómodo
+- [17:25] que por ejemplo aparece
+- [17:27] la lista
+- [17:28] de las cartolas que fueron importadas
+- [17:31] ¿cierto?
+- [17:32] puede ser N cartolas
+- [17:35] les parecería más cómodo que por ejemplo
+- [17:37] al final
+- [17:39] de la fila
+- [17:41] aparezca como una especie
+- [17:43] de ojito que en donde si se pincha
+- [17:45] se puede visualizar el detalle
+- [17:47] de esa importación
+- [17:48] pero como una pantalla
+- [17:51] nueva que aparezca
+- [17:53] así como completo todo esto
+- [17:55] que está mostrando Carlos
+- [17:56] Con todo el detalle hacia abajo
+- [17:58] No sé si me explico
+- [17:59] Sí, sí, sí, entiendo
+- [18:01] Sí, sería ideal
+- [18:03] Ya, ok
+- [18:05] ¿Se entendió, Carlos?
+- [18:07] Sí
+- [18:07] Para no levantar un modal adicional
+- [18:10] Porque así, para poder agregar buscadores
+- [18:15] Filtrar por fecha
+- [18:16] Filtrar por monto
+- [18:18] Por avenida de transacción
+- [18:21] No sé, o de movimiento
+- [18:22] Por ejemplo, así se ve la vista
+- [18:25] cuando recopila la info del Excel
+- [18:27] antes de importarla
+- [18:28] ya
+- [18:29] aquí tenemos como estos filtros
+- [18:32] y en base a eso también, no sé si es que aquí
+- [18:35] sería de valor agregado tener
+- [18:37] otro tipo de filtro, otra información antes de agregar
+- [18:39] el import, por ejemplo
+- [18:40] esto llega y hace la importación pero nos da
+- [18:43] de momento la posibilidad de seleccionar
+- [18:45] que se va a importar o no
+- [18:47] si mal no me recuerdo
+- [18:48] esto lo había solicitado
+- [18:50] María Jesús en su momento pero como todavía
+- [18:53] no estábamos trabajando en este módulo de las correcciones no se ha implementado
+- [18:59] como que seleccionar el movimiento la cartola ingresar y que no se ingresa
+- [19:04] completa lo que pasa es que se ingresa completa
+- [19:09] el tema es que estoy viendo cómo quedaría contabilizado
+- [19:14] porque ahí
+- [19:20] no les
+- [19:20] en la cartola solo aparece el nombre
+- [19:23] no me aparece el
+- [19:24] del proveedor
+- [19:27] o el cliente
+- [19:30] ¿y ahí
+- [19:31] cómo lo asociarían
+- [19:34] o cómo lo asocian actualmente
+- [19:35] por movimiento?
+- [19:37] yo los movimientos los ingreso manualmente
+- [19:39] ahora
+- [19:40] esta es la cartola que nosotros no habían entregado
+- [19:46] y esos son
+- [19:47] ¿Son tanto los ingresos y egresos del banco?
+- [19:54] Sí.
+- [19:56] O sea, ¿y los ingresos los asocias con los documentos de venta?
+- [20:01] Con los documentos de venta.
+- [20:04] ¿Uno a uno?
+- [20:06] Uno a uno.
+- [20:09] Oye, ¿y ahí cómo lo podríamos...?
+- [20:12] ¿Qué criterio ocupas tú para poder asociar una factura de venta a un movimiento del banco?
+- [20:19] Yo reviso clientes y reviso cuál fue el movimiento en el banco del cliente.
+- [20:28] Y voy viendo qué factura es el monto.
+- [20:33] ¿Cómo revisas clientes? ¿A qué te refieres?
+- [20:36] ¿Te vas al material del cliente?
+- [20:39] Al monto del cliente, sí.
+- [20:40] lo que pasa es que claro
+- [20:43] yo voy a ingresar un anticipo
+- [20:46] porque este va a ser un anticipo
+- [20:47] un pago que me hizo un cliente
+- [20:50] ya
+- [20:50] que pasa que este pago
+- [20:53] se tiene que ir al módulo
+- [20:55] de cliente
+- [20:57] para poder hacer
+- [20:58] y me rebaje
+- [21:02] la factura
+- [21:03] ya para el saldo pendiente
+- [21:06] ahí entonces
+- [21:09] ¿puedes volver a la pantalla Carlos?
+- [21:12] por favor
+- [21:12] Por ejemplo, ese anticipo que tú mencionas
+- [21:16] Ah, claro, aquí está
+- [21:18] La carga de cartolas
+- [21:20] Pero creo que ahí están los anticipos
+- [21:22] Hay un menú de anticipo
+- [21:23] Y ahí no
+- [21:29] Si tú registras no anticipo
+- [21:33] Claro
+- [21:34] Y aquí te puedes seleccionar
+- [21:36] Pero claro, tú estás pensando en cómo hacerlo
+- [21:39] En el masivo
+- [21:40] En la carga
+- [21:42] Entonces ustedes van a subir
+- [21:45] la cartola como para tenerla
+- [21:47] visible en el sistema
+- [21:48] porque eso es lo que se ve ahí
+- [21:51] Sí, pero la idea es que
+- [21:54] ver la forma de que te puedas
+- [21:57] por ejemplo, tú haces la cartola
+- [21:59] ¿cierto? la cargas
+- [22:00] y en alguna parte
+- [22:03] de la plataforma, hacer como
+- [22:05] una conciliación bancaria
+- [22:06] por ejemplo, para tus ingresos
+- [22:09] ver sus documentos de venta
+- [22:11] y ver la forma
+- [22:13] cómo podemos hacer un match
+- [22:16] entre la factura y ese es el movimiento
+- [22:18] del banco, el ingreso, ¿cierto?
+- [22:20] Y lo mismo para el lado de las
+- [22:22] compras, las compras
+- [22:24] versus los egresos.
+- [22:26] Sí.
+- [22:28] Entonces Cartola tendría que ir
+- [22:30] en conciliación porque
+- [22:32] para eso es lo que yo la voy a usar
+- [22:34] nomás. Pero ahí como
+- [22:47] si ahí tendría
+- [22:49] claro aquí se va a asociar el movimiento.
+- [22:51] Sí. Ya mira, déjame
+- [22:54] de Guadalupe o de Francisca
+- [22:56] fue la que nos habló?
+- [22:58] Lupe
+- [22:58] déjame
+- [23:02] hacer un análisis
+- [23:04] cómo lo podríamos
+- [23:05] enlazar con la conciliación
+- [23:08] bancaria, la carga
+- [23:10] ¿ya?
+- [23:12] para ver el tema del match
+- [23:14] ya
+- [23:17] para eso a mí me sirve
+- [23:20] la cartola en sistema
+- [23:22] para hacer la conciliación
+- [23:23] Sí, tengo una duda con el flujo de caja
+- [23:26] ¿Cuál duda?
+- [23:33] Ahí, el saldo
+- [23:38] porque ahí a mí me gustaría
+- [23:40] verlo como por banco
+- [23:41] Por banco
+- [23:46] Para saber cuánto es el monto
+- [23:53] que tengo en caja
+- [23:55] en cada banco
+- [23:56] Sí, podríamos incluir la columna
+- [23:58] y el filtro de banco también
+- [24:00] Lo que pasa es que tengo
+- [24:02] se trabaja con
+- [24:04] cuatro bancos que sea son bancos chile suponte en peso y dólar entonces ahí tengo que tener
+- [24:14] la diferencia la diferencia cuánto tengo en peso y cuánto tengo en dólar abajo
+- [24:22] y el banco que ocupe cada columna salga el dato y en el otro quede como el típico guión así también
+- [24:31] Va a tener la posibilidad de, bueno, en todos estos módulos que son como una lista, por si acaso, siempre está la facilidad de aquí poder filtrar también en caso de que sea necesario quitar o mostrar algo para poder tener la información ahí un poco más ordenada.
+- [24:46] ¿Y ahí cómo se cargaría el saldo del banco?
+- [24:51] Ahí tendría que ser igual con la cartola.
+- [24:54] ¿Tendría que ser la carga de la cartola primero entonces?
+- [24:57] Sí.
+- [24:57] y dentro de esa cartola viene
+- [25:02] porque en la cartola va a venir el ingreso
+- [25:03] y aparte viene el saldo de la cuenta
+- [25:06] claro, hay que hacer como un saldo inicial
+- [25:09] claro, hay un saldo inicial
+- [25:11] y después con los movimientos de ingreso
+- [25:13] y egreso se va moviendo el
+- [25:15] flujo de caja
+- [25:17] entonces la importación
+- [25:29] de cartola, claro, sirve para la
+- [25:31] conciliación y además para
+- [25:32] el flujo de caja
+- [25:34] ok
+- [25:37] Bueno, aquí de hecho también si gustan
+- [25:40] podríamos ordenar esta
+- [25:41] cómo se muestra la información acá para que sea
+- [25:44] más ordenado
+- [25:45] el ciclo lógico
+- [25:48] para que primero vaya la cartola
+- [25:50] después lo que sí y así sucesivamente
+- [25:52] Pero sí que es como
+- [25:53] el saldo inicial
+- [25:55] como tú ponen al inicio un saldo de apertura
+- [25:58] algo así
+- [25:58] que después no se mueva
+- [26:03] pero puede empezar a cuadrarse con la cartola
+- [26:06] Sí, pues que eso
+- [26:08] se va a ir cuadrando cuando yo ingresé los anticipos igual eso quiero revisar bien mi consulta
+- [26:21] tengo anticipo
+- [26:29] me puede mostrar los pagos por supuesto el formulario que tenemos acá con los estados
+- [26:43] lo que pasa es que los anticipos y los pagos de los ingresos yo hago la diferencia al ingresarlo
+- [26:52] al ingresar un egreso entonces ahí tendría que hacerse la diferenciación por así decirlo claro
+- [27:03] yo ahí ingresos y es un pago completo de la factura o es un anticipo lo otro que podrían
+- [27:09] poner anticipo productor ahí
+- [27:11] que esos son
+- [27:12] son diferentes
+- [27:15] ¿me entienden?
+- [27:22] ¿eso sería como un
+- [27:23] tercer tipo por así decirlo?
+- [27:26] claro
+- [27:26] ¿y ese tiene el mismo tipo de información?
+- [27:30] ¿o cargaría
+- [27:32] otra data?
+- [27:33] no, es la misma información, solamente que
+- [27:36] ahí yo muevo el tipo de
+- [27:38] cambio
+- [27:38] ¿no sería mejor unificar
+- [27:44] Parece el tema de pago y anticipo y dentro, por ejemplo, dejar solo pagos y que ahí se defina, si es anticipo o no, cómo se discrimina si es que paga el saldo completo de la factura, ¿no?
+- [27:59] Sí, eso es lo que yo quiero, que se unifique, que quede solo pagos y que yo pueda al ingreso de un pago, claro, colocar si es anticipo o es un pago total de la factura.
+- [28:17] Sí, podríamos unificarlo y que al momento del ingreso haga la discriminación.
+- [28:22] Y ahí no sería, o sea, pensándolo por ejemplo, si la factura, el saldo que están ingresando corresponde al 100% del documento, ahí se asume que ya es un pago completo y si no, si el saldo es inferior, o sea, lo que se está registrando es inferior a la factura, de forma automática que lo asuma como anticipo.
+- [28:46] Y debería quedar con alguna columna de pendiente, ¿o no?
+- [28:50] O lo quieren ustedes seleccionar, decir ya es un pago total o es anticipo o parcial.
+- [28:57] Sí, sí, se podría hacer como tú lo dices, pero sí me gustaría tener la diferenciación de anticipo productor.
+- [29:06] Que es un tratamiento...
+- [29:07] Ah, ya.
+- [29:08] Sí.
+- [29:08] Sí.
+- [29:08] Ya, ya.
+- [29:09] y yo necesito
+- [29:13] sacar un
+- [29:14] claro
+- [29:17] sacar todo lo de productores
+- [29:19] ah ya ok
+- [29:22] entonces sería el movimiento
+- [29:24] que se va a registrar sería entonces
+- [29:26] pago total
+- [29:27] anticipo y anticipo
+- [29:30] productor, esos serían los tres tipos
+- [29:32] si
+- [29:33] perfecto
+- [29:36] ya
+- [29:39] no sé si habrá alguna otra
+- [29:45] parte de este módulo que les lleve la atención o que quieran que revisemos aprovechando de las
+- [29:49] correcciones la nómina así lo estábamos gestionando la nómina aquí la nómina que controlarían
+- [30:11] lo que sale a pago claro suponte yo este viernes tengo pago quiero saber qué es lo que tengo para
+- [30:19] este viernes y donde lo ustedes lo registraría en manual acá crearían cargarían una nómina o
+- [30:33] como sería y lo que pasa es que ahí trabajaríamos con el vencimiento de la del documento
+- [30:40] perfecto de los documentos recibidos claro de los documentos recibidos y esa nómina sería por día
+- [30:49] ya semanal entonces entonces que ustedes alguien nómina no cargarían absolutamente nada solamente
+- [31:01] la visualización no claro y como yo suponte tengo esta factura de que me sale y frutas arango la
+- [31:13] tengo para esta semana pero yo no la pague como podría modificar la fecha yo podría modificar
+- [31:23] la fecha de pago para otra semana aquí sería la fecha de vencimiento en ese caso debería poder
+- [31:31] guardarla pero aquí eso sí no teníamos contemplado que se pudiera modificar tendríamos que agregar
+- [31:36] los botones de acciones para poder editar
+- [31:39] aquí manualmente
+- [31:40] la fecha de vencimiento
+- [31:41] ahí Carlos no nos serviría
+- [31:44] ¿por qué? porque en sí
+- [31:46] la nómina trabaja sobre
+- [31:48] la fecha del documento
+- [31:50] o la semana que cae
+- [31:52] lo que entiendo es que
+- [31:54] van a decir ya no sé
+- [31:56] semana 1 del mes de agosto
+- [31:58] ¿cierto?
+- [32:00] se van a pagar todos los documentos que
+- [32:02] vencen desde el lunes
+- [32:04] no sé, X, hasta el viernes
+- [32:06] o domingo X, ¿cierto?
+- [32:08] Sí.
+- [32:09] Y esos
+- [32:10] documentos recibidos
+- [32:13] caen en la nómina, no sé,
+- [32:15] agosto S1, ¿ya?
+- [32:17] Entonces, si editamos
+- [32:19] la fecha de la nómina, la nómina
+- [32:21] va a estar trabajando con
+- [32:22] la fecha de los documentos. Entonces,
+- [32:25] ahí para poder editar
+- [32:27] la fecha de pago de un documento
+- [32:29] específico, como dice
+- [32:30] Guadalupe o Francisca,
+- [32:32] no se pagó
+- [32:35] entonces ese documento
+- [32:37] en particular que se va a tener que editar
+- [32:39] y de forma automática en el sistema
+- [32:41] te va a aparecer
+- [32:42] que esa factura se va a pagar ahora
+- [32:45] en la semana 2 de agosto
+- [32:47] ¿me explico?
+- [32:50] pero es que iría
+- [32:51] marcando días de enciajo
+- [32:53] ¿no?
+- [32:54] claro
+- [32:54] pero acá la nómina
+- [32:58] debería trabajarse
+- [33:00] como dicen por semana
+- [33:01] y el detalle de cada nómina se va a basar en la fecha de pago de cada factura.
+- [33:07] Entonces, si yo quiero mover una factura para la semana 4,
+- [33:13] no tengo que editar la nómina,
+- [33:14] sino que tengo que editar simplemente la fecha de pago de la factura directa.
+- [33:19] Entonces, yo creo que eso se debería controlar.
+- [33:24] No sé en qué parte de acá.
+- [33:27] Esa fecha de vencimiento va a aparecer, claro,
+- [33:30] cuando yo ingrese la factura
+- [33:32] la contabilice
+- [33:34] y me va a pedir fecha de vencimiento
+- [33:36] ¿cierto?
+- [33:38] ¿ya? y de ahí se va a ir
+- [33:40] a este módulo de nóminas de
+- [33:42] pago
+- [33:43] claro, y las nóminas
+- [33:46] como decías, van a trabajar según la fecha
+- [33:48] los rangos de fecha
+- [33:49] ya, pero yo una vez contabilizada la factura
+- [33:53] yo no puedo modificarla
+- [33:58] no, pero yo creo que
+- [33:59] si se me fue a pagar en la semana
+- [34:01] Sí, pues yo voy a seleccionar aquí, que sea, me va a mostrar, suponte esto está todo en bien, me va a mostrar qué facturas yo tengo que pagar esta semana, pero yo voy a sacarte algunas, porque no las quiero pagar, a lo mejor las tengo que pagar en tres semanas más, y quiero que me aparezca realmente en tres semanas más, no que me aparezca en la próxima semana.
+- [34:21] como que sería asignarle a cada
+- [34:24] nómina, o sea a cada línea
+- [34:26] como asignarle la semana en que se va a pagar
+- [34:28] y si está vencida
+- [34:30] que le marque ahí que lleva 10
+- [34:32] vencidas pero que ella
+- [34:33] la después
+- [34:35] pero contablemente la fecha de vencimiento
+- [34:38] no se va a editar
+- [34:39] no, no se edita
+- [34:40] pero si sería bueno que tenga indicadores
+- [34:43] o que le avise a la LUPE
+- [34:45] que ni tanta vencida, ni una atrasada
+- [34:48] que no hay pagado, aunque ella sabe que no la ha pagado
+- [34:50] pero le está mostrando
+- [34:51] decidieron no hacer
+- [34:54] el pago
+- [34:56] porque tienen retenida
+- [34:57] ya entiendo
+- [35:00] entonces aquí lo que se podría hacer
+- [35:03] es que claro la nómina
+- [35:04] se va a visualizar un detalle
+- [35:06] una lista de facturas
+- [35:07] que puedan ver ese listado y de ese listado
+- [35:11] decir ya esta factura la voy a correr
+- [35:13] el compromiso de pago
+- [35:15] para la semana 4
+- [35:16] y ahí la editan
+- [35:19] la sacan de la semana
+- [35:20] 1, y después si van a ver la nómina
+- [35:22] de semana 4, debería listar
+- [35:24] esa factura
+- [35:25] para esa nómina.
+- [35:28] Claro, y ahí obviamente la están mostrando que está
+- [35:30] vencida, pero ella obviamente lo hizo.
+- [35:32] Le está mostrando que ya
+- [35:34] se van a dar la tasa.
+- [35:36] Y ahí cuando la contabilicen,
+- [35:38] no sería bueno, pregunto si
+- [35:40] la contabilización, aparte de manejar
+- [35:42] la fecha de vencimiento, que esa fecha
+- [35:44] de vencimiento, por lo general
+- [35:46] también viene desde el
+- [35:48] emisor, del proveedor,
+- [35:49] agregar una fecha de compromiso de pago
+- [35:52] porque si
+- [35:54] se trabaja con una fecha de compromiso de pago
+- [35:56] distinta a la fecha de vencimiento
+- [35:58] ustedes podrían
+- [35:59] ese campo o ese dato
+- [36:01] si lo podrían editar
+- [36:02] la verdad es que
+- [36:06] para esa parte
+- [36:08] del pago de tesorería
+- [36:09] con contabilidad
+- [36:10] ya ok, entonces
+- [36:13] lo que les mencioné, el tema de ver
+- [36:16] el detalle, ir a la factura y
+- [36:17] cambiarla de semana
+- [36:18] se puede ver cuántos los montos pagados por semana, cuánto tiene asignado, cuánto tiene
+- [36:29] casado, cuánto adelantado, no se van a hacer, como los indicadores arriba.
+- [36:34] Y esto es nómina solamente de pago, ¿cierto? Nada de recaudación.
+- [36:41] Solo pago, ¿no?
+- [36:41] Solo pago.
+- [36:45] Sí, solo pago.
+- [36:45] bien, ahí vamos a tener que entonces
+- [36:50] llegar con una propuesta
+- [36:52] ya queda un poquitito más clara la idea
+- [36:54] bueno, nosotros igual
+- [37:03] nos quedamos con la tarea de probar el tema
+- [37:06] de las aprobaciones
+- [37:06] de los árboles
+- [37:08] de hecho, eso también le iba a comentar
+- [37:12] hay un pequeño desfase
+- [37:13] en la versión que tenemos publicado en el sitio
+- [37:16] les confirmaría
+- [37:17] mañana durante el día
+- [37:19] cuando quede esta versión disponible
+- [37:21] obviamente no va a quedar con las correcciones de inmediato
+- [37:23] pero también para que puedan probar
+- [37:25] el sistema, ver todos los módulos
+- [37:27] que ya habíamos visto la semana
+- [37:29] pasada y si es que hay algunas correcciones
+- [37:30] de ahí también nos puedan mandar ahí al grupo de Whatsapp
+- [37:33] y yo voy actualizando el tráiler
+- [37:34] lo otro también que quería consultar
+- [37:40] no sé si es que habrán podido ver
+- [37:42] el tema de la carga de los documentos
+- [37:44] en GoSocket
+- [37:44] la que subió
+- [37:50] una pero le mandó error
+- [37:52] y le comentó a Pablo
+- [37:56] si no me equivoco
+- [37:57] pero no tuvo respuesta
+- [38:00] ah, perfecto
+- [38:01] entonces ahí queríamos
+- [38:03] claro, entonces una vez
+- [38:05] sacado ese error se podría subir
+- [38:07] inmediatamente
+- [38:08] ya, perfecto, ahí les pediría que me confirmen
+- [38:11] por el mismo grupo para poder realizar también
+- [38:13] las pruebas por nuestra parte de la integración
+- [38:15] sí, sí, ahí van a ver
+- [38:17] sí, ahí nosotros ya tenemos
+- [38:20] ya estamos
+- [38:21] construyendo la estructura
+- [38:23] que pide GoSocket, que es el XML
+- [38:26] y ya estamos
+- [38:28] haciendo pruebas de comunicación pero
+- [38:29] nos arroja error de que no hay
+- [38:31] folio disponible, así que estamos
+- [38:33] solamente en la espera para después
+- [38:35] seguir con la patita de recibir
+- [38:37] la respuesta de esa emisión
+- [38:39] cargar el XML, el PDF
+- [38:41] final de que nos entrega GoSocket
+- [38:43] Sí, igual hubo un retraso
+- [38:46] por parte del
+- [38:47] proveedor que nos da los
+- [38:50] folios, o sea el tema
+- [38:51] de los
+- [38:52] ¿Qué es lo que comenta?
+- [38:59] ¿Consulta?
+- [39:00] Sí
+- [39:01] Con los anticipos
+- [39:03] Los anticipos se van a registrar
+- [39:06] ahí, pero después se van a visualizar
+- [39:08] en proveedor
+- [39:10] o en cliente
+- [39:12] si corresponde, ¿cierto?
+- [39:15] Ahí creo que lo vamos a hacer
+- [39:16] según lo que
+- [39:17] se habló con María Jesús, en estado de cuenta
+- [39:20] ahí creo que
+- [39:22] se va a hacer con una vista 360
+- [39:24] si es cliente o proveedor
+- [39:26] y se debería ver todo el detalle
+- [39:28] ya, ah ya, eso
+- [39:30] ya
+- [39:30] si, eso es
+- [39:33] ya, perfecto, oye discúlpenme
+- [39:36] por mi lado me tengo que
+- [39:38] desconectar hasta la
+- [39:39] si, déjame de nada
+- [39:40] bueno, nosotros
+- [39:44] por nuestro lado nos vamos con estas cositas
+- [39:45] y apenas tengamos
+- [39:48] ya avance, no sé
+- [39:50] Mario, si te parece tratar de
+- [39:51] dejar la reunión antes
+- [39:54] del jueves para tener
+- [39:56] yo creo que dos semanales
+- [39:57] dos reuniones semanales de avance
+- [39:59] porque así vamos cerrando de una
+- [40:02] no sé si es que pueden
+- [40:04] también
+- [40:04] si, yo creo que si, de por semana llega la María Jesús
+- [40:07] ¿no?
+- [40:10] ¿si?
+- [40:11] ya, genial
+- [40:12] tendríamos que coordinar bien la hora o no
+- [40:15] sería como
+- [40:15] los lunes son menos complicados
+- [40:18] ya, ok
+- [40:20] o lunes y viernes
+- [40:25] perdón, martes y viernes
+- [40:26] porque si lo hacemos martes
+- [40:29] va a ser solo un día
+- [40:30] de avance
+- [40:32] hasta el miércoles
+- [40:34] entonces prefiero que sea martes y viernes
+- [40:37] coordinamos el mismo horario
+- [40:38] como te dejaba aquí, coordinamos internamente
+- [40:40] y vemos bien que días dejamos
+- [40:43] para ver bien acá
+- [40:44] que día cuento
+- [40:45] excelente
+- [40:47] ya pues, muchas gracias
+- [40:50] estuvo bastante bueno el arreo
+- [40:52] gracias
+- [40:52] que estén muy bien, que tengan buena tarde
+- [40:56] chao
+- [40:57] chao

@@ -1,754 +1,945 @@
-# Sergio demo ventas 2026-09-01 13:27 (Whisper local)
+# Interna Trello cartola Carlos/Sergio 2026-09-01 (Whisper large-v3)
 
 Idioma: es (p=1.00)
-Modelo: faster-whisper `small` CPU int8 + VAD
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
 Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-09-01 132744.mp4
 No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
 
-- [00:00] ¿Carga el PDF la visualización?
-- [00:03] Puta filete, bueno.
-- [00:07] Yo creo que llegamos.
-- [00:09] Sí, va de aquí los jueves, de más.
-- [00:12] Eso sí, eso te iba a preguntar, porque de las correcciones que dieron la semana basada me van a compartir pantalla.
-- [00:20] Tengo... estaba...
-- [00:23] Bueno, lo voy a actualizando igual en el tronoborcio, acaso.
-- [00:26] Pero lo que estaba haciendo...
-- [00:30] Ahora debería elegarte la tarjeta de la integración, por no sé si la tenés...
+- [00:00] Carga el PDF y la visualización. Puta filete, weón. Yo creo que llegamos, ¿verdad?
+- [00:09] Sí, por aquí el jueves de MA. Eso sí, eso te iba a preguntar, porque de las correcciones que dieron la semana pasada... Mira, va a compartir pantalla.
+- [00:20] Tengo esta... Bueno, lo voy actualizando igual en el trailer por si acaso. Pero lo que estaba haciendo...
+- [00:30] Ahora debería agregarte la tarjeta de la integración, pues no sé si la tenís...
 - [00:34] La tengo pendiente.
-- [00:36] De esa manera, y al final del proceso.
-- [00:38] Si aquí la tiene en desarrollo, de hecho, en el momento que estábamos en la REU.
-- [00:42] Y la tengo en desarrollo, ahora estaba haciendo el tema de...
-- [00:47] La contabilización de la cartola.
-- [00:50] Entonces, lo que podría hacer, como para llegar a los jueves con la misión de documento...
-- [00:56] Dejarles un pauso nomás, darle la...
-- [00:59] La documentos que quede todo bien, y lo que alcance a probar de aquí a los jueves de...
-- [01:04] De los fixes que pidieron la semana pasada.
-- [01:06] O, si es que gustas, porque igual, como te diste cuenta, son harto.
-- [01:10] Entonces, no creo que alcance a tenerlos todos para los jueves, pero ya si es que tenemos la integración, es el medio avance.
-- [01:18] Claro. Mira, yo, dale con la integración de los soques.
-- [01:26] Pero yo creo que la contabilización de la cartola, que a él que les lo ajuste.
-- [01:32] Mira, hay que hacer...
-- [01:34] Ve que quede con cada movimiento en la cartola.
-- [01:36] Te acordé que habían pedido que se mostrara como una sublista.
-- [01:40] Claro.
-- [01:41] Hay que hacer tus ajustes, probar de que funcionen los dos rotos, porque...
-- [01:45] También estoy haciendo testing, ya que como la IA se llamaría Caleta.
-- [01:48] Ya el proyecto ha tenido Caleta.
-- [01:50] He tenido que igual codiar a mano, parte igual me ayuda la IA.
-- [01:54] Y el testing tengo que hacerlo, si o si, porque está me alucinando loco.
-- [01:59] Entonces, ahí igual me pasó, por ejemplo, y día, de que me di cuenta de que no me estaba funcionando la creación del mes contable.
-- [02:08] Entonces, ahí...
-- [02:10] Hay que dar igual su vuelta, porque se pasan a llevar cosas, y cuando la hace la IA y se pone medio tanto.
-- [02:16] Pero ahora ya le estoy yando un poco mal control.
-- [02:19] Así que, como te propuse, yo creo que sería mejor darle a la integración, fin de quitar eso.
-- [02:27] Y los fixe ir viéndolos lo que sobretienten.
-- [02:31] P***, yo creo que la integración, así se va a tener lista,
-- [02:35] y yo creo que el día mañana, en la mañana, habría que matar eso.
-- [02:38] Sí, sí.
-- [02:39] Y durante la tarde mañana, avanzar con algún punto a la cartólamo.
-- [02:44] Vale.
-- [02:45] He hecho eso en la que le di prioridad, porque los demás los dejé ahí en pendiente,
-- [02:49] mientras está, de ador, tarjetando más en desarrollo.
-- [02:52] Pero lo que falta ahí, Carlos, es revisar bien el tema de la emisión, los campos.
-- [02:57] Por ejemplo, en la emisión debería agregar ya el tema de la bodega, ¿te acuerdas?
-- [03:02] Sí, pues por ejemplo acá...
-- [03:03] De hecho, eso también está revisando que el curso, igual como le estoy pasando las transcripciones de las reuniones,
-- [03:09] ya por ejemplo...
-- [03:13] Yo creo que ahí se te va a ir a la chat.
-- [03:16] ¿Con?
-- [03:17] No, se te va a ir a la chat o no?
-- [03:19] No, no.
-- [03:20] Todo lo contrario. De hecho, le tengo los skills para que el logo no actúe solo,
-- [03:23] pero que me avise cuando se me están pasando punto a mí.
-- [03:26] No que aplique sin pensar, cachai.
-- [03:29] Ya, ok.
-- [03:30] Entonces, por ejemplo, acá...
-- [03:32] Ahí estamos, estamos en el modo real.
-- [03:35] Las bodegas ya se están trayendo, cuando, por ejemplo, le doy acá.
-- [03:39] Lo primero que hace es confirmar el stock para que el stock quede reservado
-- [03:42] y después te da la opción de emitir, pues, cachai.
-- [03:46] Ya, perfecto.
-- [03:47] Y, por ejemplo, de los temas de exportación, ya lo estábamos considerando,
-- [03:52] pero no se han probado, cachai.
-- [03:54] Entonces, voy a dejarlo acá como...
-- [03:56] Pero, ojo, ojo, que esos datos de exportación, ahí tiene que controlar bien.
-- [04:00] No, no, no, no.
-- [04:01] Tienes que, por ejemplo, si es una factura de exportación,
-- [04:05] ahí pedir los datos, pues, cachai.
-- [04:07] Chivo.
-- [04:08] Por ejemplo, ahí no...
-- [04:10] Ahí está envidiendo una orden de venta.
-- [04:12] Esto una meta no más, pues, cachai.
-- [04:13] Y aquí le voy a dar como exportación.
-- [04:15] Ya.
-- [04:18] Pero, por ejemplo, si es venta.
-- [04:20] Te muestro los datos de exportación igual?
-- [04:22] No.
-- [04:25] Ah, ya.
-- [04:27] No, no, no.
-- [04:31] Es que, por eso, ahí yo no te entiendo,
-- [04:33] aunque no, cachai.
-- [04:34] Y bien, ¿por qué?
-- [04:35] O sea, puede emitir una orden...
-- [04:37] Ahí hay una orden de venta, no más, pues.
-- [04:39] ¿O no?
-- [04:41] Sí.
-- [04:42] ¿Qué está envidiendo?
-- [04:43] ¿Y cómo yo podría emitir una factura directa?
-- [04:46] ¿O de lo que pasa por la orden de venta,
-- [04:48] después la convierta a factura?
-- [04:51] Ahí me vayaste, no, no lo entendí.
-- [04:54] ¿Que yo, por lo que tenía entendido,
-- [04:56] que las facturas eran desde la orden de venta, vos?
-- [04:59] Ah, ya, eso, eso.
-- [05:01] Entonces sí, ¿ya le voy a dar una orden de venta
-- [05:03] y la orden de venta es por la convierta a factura?
-- [05:05] Exacto.
-- [05:07] ¿Y entonces la orden de venta puede ser
-- [05:09] como nacional, exportación o...?
-- [05:12] Aquí, con los tipos, el otro era el exento.
-- [05:15] Hay el servicio que también habían pedido
-- [05:17] de tener la parte.
-- [05:18] Eso te lo pidieron, ¿así, ellos?
-- [05:21] si porque en servicios por lo que ellos me decían habían algunos ajustes que
-- [05:26] todavía no me los detallaban que se tenían que hacer que era diferente cuando
-- [05:29] era una venta normal pero eso es ese campo así tal cual como está ahí te lo
-- [05:36] pidieron ellos y si que recuerde si
-- [05:40] porque yo recuerdo que cuando vimos con el con el agustín era que en productos a
-- [05:47] nivel de detalle definir si era servicio o producto
-- [05:54] no creo que ahí me estoy confundiendo yo entonces
-- [05:57] ¿Por qué no le pidió una reunión a María José? María Jesús, perdón, para decir eso
-- [06:01] para mí, si, para dejarlo bien en claro y seguir avance con la integración
-- [06:05] por puta me pregunté si se puede juntar y di a vos, unos 10 minutitos 15
-- [06:10] minutos vale para que valides eso y así te matáis la emisión
-- [06:20] y también la confirmar de que que me confirme porque igual como os creo la
-- [06:23] duda de si es que parte de una orden de venta y después la emisión también
-- [06:27] una aprovechar
-- [06:29] si pues eso, pero a vos que te valide ella, si te puede decir que aparezca una emisión desde
-- [06:35] una factura directa sin pasar por una orden de venta
-- [06:41] ya también valigarse que necesitan que exista esa opción
-- [06:45] entonces valigar si necesitan emisión de factura sin orden de venta
-- [06:54] oíste sería nuestro tercer mes del proyecto?
-- [06:58] creo que sí, creo que sí, sí, sí
-- [07:03] ya, pero llegamos dos no más, dos meses
-- [07:05] si, este debería ser la partida del tercer mes
-- [07:09] de hecho es si, para octubre tenemos que viajar primeros días de octubre de
-- [07:17] Carlos, entonces tenemos que este mes sí o sí ya matarlo
-- [07:20] sí, yo creo que voy a retomar porque igual estamos haciendo reos con la María Jesús
-- [07:25] así como independientes como para ir viendo el sistema antes de las reuniones de entrega
-- [07:29] así que igual, bueno lo que sí no han hecho nada, nada, nada, no han hecho los tronlogos
-- [07:34] nada
-- [07:35] ya, pero ahí yo creo que sé lo que tenés que hacer si Carlos ahora ya
-- [07:40] focando a un punto en particular, por ejemplo ya esta reunión se va a ver el
-- [07:46] tema de emisión, esta es la emisión, está aprobado? No, falta esto y todo
-- [07:50] y no pasemos a flujo de caja, contabilidad, nada, nada, nada de eso
-- [07:55] vale, Kachay, yo creo que hay que ordenarnos con eso
-- [07:58] ahora, por ejemplo, piden la reunión y puta, que es la utilidad que sabe día
-- [08:02] Kachay, ya, porque si están por lo que veo tenemos que llegar de aquí a octubre
-- [08:10] o sea primero de octubre para poder viajar y estar allá con ellos
-- [08:17] vale, vale, no sé si que por ejemplo de los sacris que igual veamos como el proceso
-- [08:21] de acá como se ve todo por si hay algún detalle o el que se ve está escapando
-- [08:25] a ver ya, el cliente, buscáis cliente, receptor, cierto, giro
-- [08:30] ¿tú no tenías acceso a la determinada? No, no, no
-- [08:35] metes la tribrador ley.determino.cl, slash, de, a esto ahí, determinate
-- [08:54] a esto ahí, a eso, ya entrate ahí a aprobar, slash, ahí ponen slash, login, con elema yúscula
-- [09:08] creo que es elema yúscula, slash, login, slash, demo
-- [09:19] vale, no te martiro, puta la huella, la doble de mierda
-- [09:33] ahí, determinate, haga, ponen, en vez de tribrador ley, pone pro, punto, ahí
-- [09:46] ya la lingüezas, ya, ahí está, mira, ejemplo, anda de emisión, ventas, Kachay
-- [10:01] que aquí por ejemplo debí el azucarcal que vas a emitir, el documento
-- [10:05] por eso te preguntaba, a, si tú seleccionas el documento, ahí por ejemplo una factura,
-- [10:12] una boleta, una guía, pero no sé si te vas a hacer esto, porque así no te
-- [10:17] vaya a mariar, yo prefiero que te vais con lo, con lo de, con lo de ellos, que lo
-- [10:22] digan, ya, esto es lo que necesitamos. Sí, sí. Porque si no, este es como bienes
-- [10:28] para todas las empresas, pues entonces, y yo y a Kachay que ellos, hay flujos que
-- [10:33] son medio extraños de ellos. Sí. Obviamente yo no quisiera implementarlo,
-- [10:38] pero ellos están pagando. Sí, sí, hecho con la mía igual, como he estado
-- [10:43] medio complejo con el tema de la contabilidad de todo eso, me he visto
-- [10:46] video y siempre me encuentro con sorpresa en la reunión.
-- [10:51] Sí, pues, entonces, yo creo que hay que, piden en las reuniones
-- [10:55] diarias, maneje eso. Vale. De una, maneje eso, putas, hay que necesitar
-- [10:59] 20 minutitos en el grupo de wasapos. Vale.
-- [11:04] O sea, hay que poder participar, porque tenía una duda de la emisión. Vale.
-- [11:08] Sí, lo voy a mandar al tiro. Ya, pero, por ejemplo, muéchanos de la emisión.
-- [11:13] Aquí, ¿dónde? No, no, tú, no, sí. Vale.
-- [11:16] Ya, por ejemplo, eso del receptor, es los datos del cliente.
-- [11:22] Exacto. Es que ahí está raro, eso no te entiendo, Iván,
-- [11:26] ¿por qué tenéis cliente y aparte receptor?
-- [11:30] Ah, porque estoy en una búsqueda y este es como para buscar por root,
-- [11:33] solamente. Se cuesta lo mismo.
-- [11:36] No, veíos, ahí tenéis que dejar un puro campo, ¿estáis?
-- [11:40] Vale. Dejar el dato del receptor, el del cliente,
-- [11:45] puta, para la casa. Vale.
-- [11:48] ¿Estáis?
-- [11:49] Eh, tipo de documentos, por ejemplo, ahí tenía orden de venta,
-- [11:53] tipo de documentos. ¿Es necesario mostrar tipo de documentos?
-- [11:56] No, vos. El folio también, si va a ser automático,
-- [12:05] no necesitas todo.
-- [12:15] Ya.
-- [12:17] Acá venía lo que yo decía, si es producto o servicio.
-- [12:20] Exacto.
-- [12:22] Ahí está bien, mi flete, bien, buena.
-- [12:24] Entonces, de otro lado, chao.
-- [12:27] Sí, vos. O sea, valida lo con ello,
-- [12:29] pues eso es lo que le decía yo,
-- [12:30] tenéis que olvidar de ese campo, si así te lo pidieron.
-- [12:34] Vale.
-- [12:35] Por ejemplo, seleccionas servicio.
-- [12:40] Y ahí tenéis que poner la descripción del servicio.
-- [12:43] Ya, muy bien, muy bien.
-- [12:45] Ya, y por ejemplo, productos.
-- [12:47] Ponen producto, ya.
-- [12:50] Y si yo seleccionas producto, ya, y la bodega.
-- [12:52] Yo creo que la bodega está muy grande ahí.
-- [12:54] Sí, sí.
-- [12:54] La bodega debería ser alineada al otro lado.
-- [13:03] Ya, pero por ejemplo, si yo, ese producto
-- [13:05] está en más de una bodega,
-- [13:07] me tiene que permitir seleccionar
-- [13:09] cierta cantidad de cada bodega, vos.
-- [13:11] Exacto.
-- [13:13] Esa falta.
-- [13:14] Ah, lo que pasa es que este producto está solo en una.
-- [13:17] Ya, pero no tenía uno que tenga este más de una,
-- [13:19] para ver cómo lo va a controlar.
-- [13:21] A ver si es que el modo acá me aparece.
-- [13:38] Ahí te pregunta la cantidad solamente
-- [13:40] cuando agregáis la bodega, vos.
-- [13:43] Ah, buenísimo.
-- [13:45] Está muy bien, pero si lo dejaría yo.
-- [13:47] Cortito, este está muy grande.
-- [13:49] Sí, demasiado.
-- [13:51] Sí, esto debería ser como una línea,
-- [13:53] no más pues se ve muy grande como para...
-- [13:55] Vamos, solo corto.
-- [13:56] Una línea de cagando, no.
-- [13:58] Oh, o sea, menos, menos.
-- [14:00] Pero por ejemplo, el código tipo producto
-- [14:03] tiene que ser mucho más chico.
-- [14:04] Sí.
-- [14:05] Porque es un texto ya, ya sabéis,
-- [14:06] cuando va a ser más grande que la palabra producto.
-- [14:09] El artículo debería ir prácticamente
-- [14:12] en la mitad de una línea.
-- [14:15] Precio y cantidad, ese debería estar los dos juntos.
-- [14:18] ¿Cierto?
-- [14:19] El total, el subtotal, lo dejaría pos
-- [14:22] al precio por cantidad.
-- [14:24] ¿Cachaya?
-- [14:24] Vale.
-- [14:27] La bodega también, la bodega yo creo que
-- [14:29] debería hacer un cuadrito y si agregáis más de una,
-- [14:33] lo debería, no sé cómo los podríamos...
-- [14:36] Pero está muy buena esa idea de agregar bodegas, guau.
-- [14:40] Sí, sí.
-- [14:40] Me gustó la letra, guau.
-- [14:42] Cachaya aquí también, bueno, el quitar funciona tan bien, pues.
-- [14:46] Ya, está bien.
-- [14:46] Y aquí debería ir a agregar otro quita, en caso de...
-- [14:50] Sí, eso está súper bueno.
-- [14:52] Ya, eso es lo de detalle.
-- [14:54] Bueno, el descuento global también debería ir,
-- [14:57] puta...
-- [14:57] Quizá arriba, en un campo.
-- [15:00] Es que ese descuento global, en realidad,
-- [15:02] debería venir los totalizados, Carlos.
-- [15:05] Mira, sube, sube, sube la bordita al lado de allá.
-- [15:09] La bordita de allá, que hay que haber eso.
-- [15:11] Ahí debería ir el descuento global,
-- [15:16] porque ese descuento a nivel de la línea de detalle, o sea,
-- [15:21] no, lo estáis duplicando, si tenéis una teoría de descuento,
-- [15:25] el porcentaje de descuento de abajo
-- [15:26] debería ir el descuento global,
-- [15:27] el porcentaje que ese debería estar allá,
-- [15:29] por los totalizados.
+- [00:36] Esa debería tirarla en proceso
+- [00:38] Sí, aquí la tiré en desarrollo
+- [00:39] De hecho, mientras estábamos en la REU
+- [00:40] Ahí la tengo en desarrollo
+- [00:43] Y ahora estaba haciendo el tema de
+- [00:44] La contabilización de la cartola
+- [00:48] Entonces
+- [00:51] Lo que podría hacer
+- [00:52] Como para llegar el jueves con la emisión de documentos
+- [00:55] Dejar esa en pausa nomás
+- [00:57] Darle a la
+- [00:59] La de documentos
+- [01:00] Que quede todo bien
+- [01:01] Y lo que alcance a aprobar
+- [01:02] De aquí al jueves
+- [01:03] De los fixes que pidieron la semana pasada
+- [01:06] o si es que gustas
+- [01:08] porque igual, como te diste cuenta, son
+- [01:10] hartos, entonces
+- [01:11] creo que alcanza a tenerlos todos para el jueves
+- [01:14] pero ya si es que tenemos la integración
+- [01:15] es el medio avance
+- [01:16] claro, mira yo
+- [01:19] darle con la integración
+- [01:21] de GoSocket
+- [01:22] pero yo creo que la contabilización
+- [01:28] de la cartola
+- [01:28] ¿qué es? ¿cuáles son los ajustes?
+- [01:32] mira, hay que hacer
+- [01:34] de que quede con cada movimiento
+- [01:36] en la cartola, te acordás que había pedido que se mostrara
+- [01:38] como una sublista
+- [01:39] claro, entonces hay que hacer
+- [01:42] tus ajustes, probar de que funcionen los dos
+- [01:44] routes, porque
+- [01:44] también estoy haciendo testing, ya que como la IA se
+- [01:47] marea a caleta, ya en el proyecto ha tenido caleta
+- [01:50] he tenido que igual codear a mano
+- [01:52] parte igual me ayuda la IA
+- [01:53] y el testing tengo que hacerlo
+- [01:56] sí o sí, porque está
+- [01:57] me alucinando loco
+- [01:58] entonces, ahí igual
+- [02:01] me pasó por ejemplo hoy día, de que me di cuenta
+- [02:04] de que no me estaba funcionando
+- [02:05] La creación del mes contable
+- [02:08] Entonces ahí
+- [02:09] Hay que darle igual
+- [02:11] Su vuelta porque se pasan a llevar
+- [02:14] Cosas y cuando lo hacen ahí
+- [02:15] Se pone medio tonto, pero ahora ya le estoy
+- [02:17] Llevando un poco mal control
+- [02:19] Como te propuse
+- [02:24] Yo creo que sería mejor darle a la integración
+- [02:26] Finiquitar eso
+- [02:27] Y lo fixe ir viéndolo
+- [02:29] Lo que sobre tiempo
+- [02:30] Puta yo creo que la integración
+- [02:33] Así se va a tener lista
+- [02:35] Yo creo que mañana en la mañana
+- [02:38] Habría que matar eso
+- [02:38] Y durante la tarde de mañana
+- [02:41] Avanzar con algún punto de la cartola
+- [02:44] Vale
+- [02:45] De hecho esa es la que le di prioridad
+- [02:47] Porque los demás los dejé ahí en pendiente
+- [02:49] Mientras estaba de a dos tarjetas nomás en desarrollo
+- [02:52] Pero lo que falta ahí
+- [02:54] Carlos, sí, revisar bien el tema
+- [02:55] De la emisión, los campos
+- [02:58] Por ejemplo, en la emisión
+- [02:59] Debería agregar ya el tema de la bodega
+- [03:01] ¿Te acuerdas?
+- [03:02] De hecho, eso también estaba revisando
+- [03:05] que el cursor igual
+- [03:07] como le estoy pasando a las transcripciones de las reuniones
+- [03:09] ya por ejemplo
+- [03:14] ahí se te va a ir
+- [03:15] a la shit
+- [03:17] ¿cómo?
+- [03:18] no, no, todo lo contrario
+- [03:21] de hecho le tengo skills para que el loco
+- [03:23] no actúe solo, pero que me avise
+- [03:25] cuando se me están pasando puntos amigos
+- [03:27] no que aplique sin pensar, ¿cachai?
+- [03:30] ya, ok
+- [03:31] entonces por ejemplo acá
+- [03:32] aquí estamos, si estamos en el modo real
+- [03:34] Las bodegas ya se están trayendo
+- [03:38] Cuando, por ejemplo, le doy acá
+- [03:40] Lo primero que hace es confirmar el stock
+- [03:42] Para que el stock quede reservado
+- [03:43] Y después te da la opción de emitir, ¿cachai?
+- [03:47] Ya, perfecto
+- [03:48] Y, por ejemplo, de los temas de exportación
+- [03:51] Ya lo estábamos considerando
+- [03:53] Pero no se han probado, ¿cachai?
+- [03:54] Entonces, vamos a dejarlo acá
+- [03:56] Pero ojo, ojo, que esos datos de exportación
+- [03:58] Ahí tienes que controlar
+- [04:00] No, no, no, no
+- [04:02] Tienes que, por ejemplo, si es una factura
+- [04:04] de exportación, ahí pedir
+- [04:06] los datos, ¿cachai?
+- [04:08] Sí, bo. Por ejemplo, ahí
+- [04:10] Ah, pero ahí está emitiendo una orden de
+- [04:12] venta. Esto es una venta nomás, ¿cachai?
+- [04:14] Y aquí le voy a dar como exportación.
+- [04:18] Ya, pero por ejemplo, si es
+- [04:19] venta, ¿te muestra los datos de exportación igual?
+- [04:22] No. Ah, ya.
+- [04:28] No, no, no.
+- [04:31] Es que por eso ahí yo no te entiendo
+- [04:32] que no se cachube bien, porque
+- [04:34] o sea, puede emitir una orden
+- [04:37] de venta nomás, ¿po?
+- [04:39] ¿O no? Sí.
+- [04:41] que estoy emitiendo
+- [04:41] ¿y cómo yo podría emitir una factura
+- [04:44] directo? ¿o tengo que pasar
+- [04:46] por la orden de venta y después la convierto
+- [04:48] a factura?
+- [04:51] ahí me viaste, no te entendí
+- [04:53] yo lo que tenía entendido
+- [04:56] que las facturas eran desde las órdenes de venta
+- [04:58] ah ya, eso, eso
+- [05:00] entonces sí, yo le pido una orden de venta
+- [05:02] y la orden de venta y después la convierto a factura
+- [05:04] exacto
+- [05:05] ya, entonces la orden de venta puede ser
+- [05:08] como nacional, exportación
+- [05:10] o
+- [05:11] aquí tengo los tipos, el otro era
+- [05:14] el exento, ah y el servicio que también
+- [05:16] habían pedido tenerlo aparte
+- [05:18] eso te lo pidieron así ellos, venta
+- [05:21] sí, sí, porque en servicios
+- [05:24] por lo que ellos me decían, habían algunos ajustes
+- [05:26] que todavía no me los detallaban que se tenían que hacer
+- [05:28] que era diferente cuando era una venta normal
+- [05:29] pero ese campo
+- [05:34] así, tal cual como está ahí
+- [05:36] te lo pidieron ellos así
+- [05:37] sí, que recuerdo así
+- [05:39] porque yo recuerdo que
+- [05:42] cuando vimos con el
+- [05:44] Agustín, era que
+- [05:46] en productos, a nivel de detalle
+- [05:48] definir si era servicio
+- [05:50] o producto
+- [05:50] no, creo que ahí me estoy confundiendo yo entonces
+- [05:56] ¿por qué no le pedí una reunión
+- [05:58] a María José, María Jesús, perdón?
+- [06:00] ¿para definir su producto?
+- [06:02] sí, para dejarlos bien en claro y de seguir
+- [06:04] avance con la integración
+- [06:05] pregunta si se puede juntar hoy día
+- [06:07] unos 10 minutitos o 15 minutos
+- [06:10] vale
+- [06:11] ¿Para qué validez eso?
+- [06:14] Y así matáis la emisión
+- [06:16] Y también la confirmar
+- [06:21] De que me confirme
+- [06:23] Porque igual como salió la duda
+- [06:24] De si es que parte
+- [06:25] Desde una orden de venta
+- [06:25] Y después la emisión
+- [06:26] Hay que también aprovechar
+- [06:28] Sí, pues eso
+- [06:30] Pero o que te valide ella
+- [06:31] Si te
+- [06:32] Puede ser que aparezca
+- [06:33] Una emisión
+- [06:34] Desde
+- [06:35] O sea
+- [06:36] Una factura
+- [06:36] Directa
+- [06:37] Sin pasar por
+- [06:39] Una orden de venta
+- [06:40] ¿Me encontré?
+- [06:41] Ya, también validarse
+- [06:42] Que necesitan
+- [06:43] Que exista esa opción
+- [06:43] Sí
+- [06:45] Entonces validarse
+- [06:50] Necesitan división de facturas y orden de venta
+- [06:53] Oye, ¿este sería
+- [06:55] Nuestro tercer mes del proyecto?
+- [06:58] Creo que sí
+- [06:59] Creo que sí
+- [07:01] Sí, sí
+- [07:02] Ya, pero claro, llevamos dos nomás
+- [07:04] Dos meses
+- [07:05] Sí, este vendría a ser la partida del tercer mes
+- [07:07] Ya, ok
+- [07:09] Para octubre tenemos
+- [07:15] Tenemos que viajar, primeros días de octubre
+- [07:17] De Carlos, entonces tenemos que este mes
+- [07:19] Sí o sí a matarlo
+- [07:20] yo creo que voy a retomar porque igual estábamos
+- [07:23] haciendo reos con la María Jesús
+- [07:25] así como independientes, como para ir viendo
+- [07:27] el sistema antes de las reuniones de entrega
+- [07:29] así que igual, bueno, lo que sí
+- [07:31] no han hecho nada, nada, nada
+- [07:33] entre los tres locos, nada
+- [07:35] ya pero ahí yo creo que
+- [07:37] ¿sabéis lo que tenéis que hacer?
+- [07:38] sí, Carlos, ahora ya
+- [07:41] enfocarnos a un punto
+- [07:43] en particular, por ejemplo ya
+- [07:45] esta reunión se va a ver el tema de emisión
+- [07:47] esta es la emisión, ¿está aprobado?
+- [07:49] No, falta esto y esto otro
+- [07:50] Y no pasemos a flujo de caja
+- [07:52] Contabilidad, nada, nada, nada de eso
+- [07:55] ¿Cachai? Yo creo que hay que
+- [07:57] Ordenarnos con eso, ahora por ejemplo piden
+- [07:59] La reunión y puta
+- [08:00] Lo ideal que sea hoy día
+- [08:03] ¿Cachai? Vale
+- [08:04] ¿Ya?
+- [08:07] Porque si están, por lo que veo
+- [08:09] Tenemos que llegar de aquí a octubre
+- [08:10] O sea, primero de octubre
+- [08:12] Para poder viajar
+- [08:13] Y estar todavía con ellos
+- [08:16] Vale, vale
+- [08:18] No sé si por ejemplo de Basagris
+- [08:20] Que igual veamos como el proceso de acá
+- [08:22] Como se ve todo, por si hay algún detalle
+- [08:24] O el que se me está escapando
+- [08:25] A ver ya, el cliente
+- [08:28] Buscáis el cliente, receptor, cierto
+- [08:30] Giro
+- [08:30] ¿Tú no tenías acceso a DTMite ni nada?
+- [08:34] ¿A DTMite? No
+- [08:35] Métete a www.dmite.cl
+- [08:41] Slash
+- [08:42] D...
+- [08:49] DTMite
+- [08:54] DT
+- [08:54] A eso
+- [08:59] Ya, entrate ahí a
+- [09:01] A probar
+- [09:01] Slash
+- [09:02] Ahí pone Slash
+- [09:04] Login
+- [09:06] Con L mayúscula creo que es
+- [09:09] L mayúscula
+- [09:11] Slash
+- [09:16] Login
+- [09:16] Slash
+- [09:17] Demo
+- [09:22] A ver, espérate
+- [09:23] Confirmar
+- [09:26] Puta la guarda
+- [09:32] Ahí permite
+- [09:35] Ah, claro
+- [09:37] Pone en vez de www
+- [09:39] Pone pro
+- [09:40] Punto
+- [09:41] Ahí
+- [09:46] ya dale ingresar
+- [09:48] ya, ahí está, mira un ejemplo
+- [09:54] anda de emisión, ventas
+- [09:57] cachán que aquí por ejemplo te pide
+- [10:02] la sucursal que vas a emitir
+- [10:04] el documento, por eso te preguntaba
+- [10:06] si tú seleccionas el documento
+- [10:09] hay por ejemplo una factura
+- [10:12] una boleta, una guía
+- [10:13] pero no sé si te vas a hacer esto
+- [10:16] porque si no, te va a llamar y algo
+- [10:17] yo prefiero que te vayas con
+- [10:19] con lo de ellos
+- [10:22] que nos digan ya, esto es lo que necesitamos
+- [10:24] sí, sí
+- [10:25] Porque si no
+- [10:27] Este es como viernes para todas las empresas
+- [10:29] Pues entonces
+- [10:30] Y yo ya caché que ellos
+- [10:32] Hay flujos que son medio extraños de ellos
+- [10:35] Sí
+- [10:35] Obviamente yo no quisiera implementarlo
+- [10:38] Pero ellos están pagando
+- [10:40] Sí, sí, de hecho con la mía igual
+- [10:42] Como he estado medio complejo
+- [10:44] Con el tema de la contabilidad y todo eso
+- [10:46] Me he visto videos y siempre me encuentro
+- [10:48] Con sorpresas en las reuniones
+- [10:50] Sí, pues entonces
+- [10:52] Yo creo que hay que
+- [10:53] Pídele la reunión
+- [10:55] Y dígale a María Jesús
+- [10:56] De una
+- [10:57] María Jesús
+- [10:58] Puta
+- [10:58] Sabes que necesito
+- [10:59] 20 minutitos
+- [11:00] En el grupo de Whatsapp
+- [11:01] ¿Ok?
+- [11:04] O sea
+- [11:04] Y quien pueda participar
+- [11:05] Porque tenía una duda
+- [11:06] De la emisión
+- [11:07] Vale
+- [11:07] Sí, lo va a mandar al tiro
+- [11:08] Ya, pero por ejemplo
+- [11:10] Muéstrate la emisión
+- [11:11] ¿Aquí?
+- [11:13] ¿Dónde?
+- [11:14] No, no
+- [11:15] La tuve
+- [11:15] Sí
+- [11:15] Vale
+- [11:16] Ya
+- [11:16] Por ejemplo
+- [11:17] Eso del receptor
+- [11:19] Es los datos del cliente
+- [11:21] Exacto
+- [11:23] es que ahí está raro, eso no te entiendo
+- [11:26] Iván, ¿por qué tenéis cliente
+- [11:27] y aparte receptor?
+- [11:30] ah, porque esto es una búsqueda
+- [11:31] y esto es como para buscar por root, solamente
+- [11:33] se te cuenta lo mismo
+- [11:35] no, pues ahí
+- [11:37] tenés que dejar un puro
+- [11:38] un campo, ¿cachai?
+- [11:41] dejar datos del receptor
+- [11:44] el de cliente
+- [11:45] puta para la casa
+- [11:46] ¿cachai?
+- [11:50] tipo de documento
+- [11:52] Por ejemplo, ahí tenía orden de venta, tipo documento
+- [11:54] ¿Es necesario mostrar tipo documento?
+- [11:58] No
+- [11:58] El folio también, si va a ser automático
+- [12:03] No es necesario tampoco
+- [12:06] Acá venía lo que yo te decía
+- [12:18] Si es producto o servicio
+- [12:20] Exacto
+- [12:22] Está bien, mi flete, bien, buena
+- [12:24] Entonces del otro lado, chao
+- [12:26] O sea, valídalo con ello
+- [12:29] Eso es lo que te decía yo
+- [12:30] Te hay que olvidar de ese campo
+- [12:32] si así te lo pidieron
+- [12:33] vale
+- [12:34] por ejemplo, selecciona servicio
+- [12:37] y ahí tiene que poner la descripción
+- [12:42] del servicio
+- [12:43] muy bien, muy bien, ya, y por ejemplo
+- [12:46] productos, pone producto
+- [12:47] ya, y si yo selecciono
+- [12:51] el producto, ya, y la bodega
+- [12:52] yo creo que la bodega está muy grande ahí
+- [12:53] la bodega debería ser alineada al otro lado
+- [12:57] ya, pero por ejemplo
+- [13:04] si yo, ese producto está en más de una bodega
+- [13:06] me tiene que permitir
+- [13:08] Seleccionar cierta cantidad de cada bodega
+- [13:10] Exacto
+- [13:12] Eso falta
+- [13:13] Ah, lo que pasa es que este producto está solo en una
+- [13:15] Ya, pero no tenía otro que tenga
+- [13:18] Este más de una para ver cómo lo voy a controlar
+- [13:20] A ver si es que en el modo acá
+- [13:22] Aparece
+- [13:23] Y te pregunta la cantidad solamente cuando agrega otra bodega
+- [13:41] Ah, buenísimo
+- [13:44] Está muy bien, pero si lo dejaría yo
+- [13:47] Cortito este, está muy grande
+- [13:49] Sí, demasiado
+- [13:50] Esto debería ser como una línea
+- [13:53] se ve muy grande como para
+- [13:54] una línea de cagando
+- [13:58] pero por ejemplo
+- [14:01] el código tipo producto
+- [14:02] tiene que ser mucho más chico
+- [14:04] porque es un texto
+- [14:06] ya sabéis cuando va a ser más grande que la palabra
+- [14:08] producto, el artículo
+- [14:10] debería ir prácticamente
+- [14:12] la mitad de una línea
+- [14:14] precio y cantidad
+- [14:16] ese debería estar los dos juntos
+- [14:18] el total
+- [14:20] el subtotal lo dejaría post
+- [14:22] Al precio por cantidad
+- [14:24] ¿Cachai?
+- [14:24] Vale
+- [14:25] La bodega también
+- [14:28] La bodega yo creo que
+- [14:29] Debería ser
+- [14:30] Un cuadrito
+- [14:31] Si agregáis más de una
+- [14:32] Puta la debería
+- [14:34] No sé cómo lo podríamos
+- [14:35] Hay que
+- [14:36] Pero
+- [14:37] Está muy buena
+- [14:38] Esa idea de agregar bodega
+- [14:39] Sí, sí
+- [14:40] Me gustó que le daba
+- [14:41] ¿Cachai?
+- [14:43] Aquí también
+- [14:43] Bueno, el quitar funciona también
+- [14:44] Y aquí le permitiría
+- [14:47] Agregar otro ítem
+- [14:48] En caso de
+- [14:49] Sí, eso está
+- [14:50] Está súper bueno
+- [14:51] Ya, eso es lo de detalle
+- [14:54] Bueno, el descuento global también debería ir
+- [14:56] Quizá arriba
+- [14:58] Es que ese descuento global
+- [15:02] En realidad debería ir en los totalizados
+- [15:04] Joder, Carlos, mira, sube
+- [15:05] Sube la barrita al lado de allá
+- [15:08] La barrita de allá
+- [15:10] Ahí debería ir el descuento global
+- [15:12] Porque ese descuento
+- [15:17] Es a nivel de la línea de detalle
+- [15:18] O sea, no lo estáis duplicando
+- [15:21] Si tenéis descuento
+- [15:23] el porcentaje de descuento y abajo
+- [15:26] tenés descuento global. Porcentaje que
+- [15:28] ese día estará ya en los totalizados.
 - [15:30] Vale.
-- [15:33] Ya.
-- [15:34] Imagino que igual aquí se manejan de manera independiente,
-- [15:38] porque un producto puede tener un descuento
-- [15:40] y unas cantidades de productos deben tener un puente
-- [15:43] en un descuento global, po.
+- [15:32] ¿Ya?
+- [15:34] Me imagino que igual aquí
+- [15:35] se manejan de manera
+- [15:38] independiente porque un producto puede tener un descuento
+- [15:40] y una cantidad de productos deben tener
+- [15:42] un descuento global.
 - [15:44] Igual podría variarlo con la variación.
-- [15:46] No, el descuento global se aplica al nivel del totales,
-- [15:50] no por equis producto.
-- [15:51] Ah, vale.
-- [15:53] Por ejemplo, ese que tú tienes ahí,
-- [15:54] ese descuento es a la línea de detalle.
-- [15:56] Por ejemplo, no sé si la cantidad es uno,
-- [15:59] y el precio unitado, o sea, la cantidad 10,
-- [16:02] si el precio unitario de 1.962 van a ser,
-- [16:04] no sé po, los 19.620, ¿cierto?
-- [16:07] Sí.
-- [16:09] Y si la aplicas un 10% de descuento,
-- [16:13] ese 10% se la aplica a los 19.000 y algo, ¿caché?
-- [16:16] Claro.
-- [16:25] Este neto acá igual es todo de más.
-- [16:29] Porque aparece acá.
-- [16:31] Sí, pues eso, eso, los líneos no, no tiene que ir nada.
-- [16:35] Incluso cuando tú bajes, subes, subes un poquito.
-- [16:38] Esa barra de al lado, cuando tú bajes,
-- [16:41] esa barra debería llegar, se fija, el escuelo.
-- [16:43] Ah, vale.
-- [16:45] Vale.
-- [16:48] ¿Qué trae?
-- [16:49] Me imagino que igual, como pueden tener una lista muy grande,
-- [16:51] tienen que tener visible ahí el totalizado.
-- [16:52] Claro.
-- [16:56] Vagán.
-- [16:58] Y la referencia, tiene mucha página de la referencia,
-- [17:01] la verdad.
-- [17:03] Debo, por ejemplo, no, ponen la referencia.
-- [17:05] Ya, tipo, pero ahí tenéis que poner un tipo,
-- [17:09] si es una nulas.
-- [17:10] Por ejemplo, si es una, una anulación.
-- [17:20] Pero yo, por ejemplo, por el tipo de ruro,
-- [17:22] me recuerdo que ellos dijeron que no tenían como anulaciones
-- [17:25] de venta como talpo.
-- [17:27] Como exportan fruta.
-- [17:30] Ah, claro.
-- [17:31] Pero igual valídalo.
-- [17:32] Vale.
-- [17:36] Sé que me acuerdo de que la, la breja eso había dicho que no
-- [17:39] existía el concepto de Merma en su ruro.
-- [17:52] Y aquí una vez yo le doy confirmar stock,
-- [17:54] hace la reducción del stock de la bodega.
-- [17:57] O sea, como que lo dejan reserva.
+- [15:46] No, el descuento global se aplica
+- [15:48] a nivel de totales.
+- [15:50] No por X producto.
+- [15:51] Por ejemplo, ese que tú tienes ahí
+- [15:54] Ese descuento es a la línea de talla
+- [15:56] Por ejemplo, no sé, si la cantidad es 1
+- [15:58] Y el precio unitario
+- [15:59] O sea, cantidad 10
+- [16:01] Y el precio unitario de 1962
+- [16:04] Van a ser, no sé, los 19.620
+- [16:07] ¿Cierto?
+- [16:07] Sí
+- [16:08] Y si le aplicas un 10% de descuento
+- [16:11] Ese 10% se lo aplica
+- [16:14] A los 19.000 y algo, ¿caché?
+- [16:16] Claro
+- [16:16] Este neto acá igual, esto además
+- [16:27] Porque aparece acá
+- [16:30] Sí, pues eso
+- [16:32] Las líneas no, no tiene que ir nada ahí
+- [16:34] Incluso cuando tú bajes
+- [16:36] Sube, sube un poquito
+- [16:38] Esa barra de al lado
+- [16:39] Cuando tú bajes, esa barra debería quedarse
+- [16:42] Fija, el score
+- [16:43] Ah, vale
+- [16:43] Me imagino que igual como pueden tener una lista muy grande
+- [16:50] Tienen que tener visible ahí el totalizado
+- [16:51] Claro
+- [16:52] Y la referencia
+- [16:59] No tiene mucha página la referencia
+- [17:01] por ejemplo
+- [17:04] no, ponle referencia
+- [17:05] ya, tipo
+- [17:06] pero ahí tenés que poner un tipo
+- [17:09] si es una anulación
+- [17:10] por ejemplo, si es una
+- [17:12] una anulación
+- [17:15] pero yo, por ejemplo
+- [17:21] por el tipo de rubro, me recuerdo que ellos
+- [17:23] dijeron que no tenían como anulaciones de venta
+- [17:25] como tal
+- [17:25] como exportan fruta
+- [17:28] ah, claro
+- [17:30] pero igual valídalo
+- [17:32] me acuerdo de que la
+- [17:38] La primera vez que se había dicho que no existía el concepto de merma en su rubro.
+- [17:52] Y aquí una vez yo le doy confirmar stock.
+- [17:54] Hace la reducción del stock de la bodega.
+- [17:57] O sea como que lo deja en reserva.
 - [17:59] Y ahí me aparece recién el botón de facturar.
-- [18:09] Igual, esto está así, porque como en su momento se había
-- [18:12] pensado en también aplicar el tema de la aprobación,
-- [18:16] ese era el botón que debería pasar a la aprobación,
-- [18:18] espero como se eliminó, como este rastro de que no tira
-- [18:21] directamente a facturar.
-- [18:27] Yo creo que igual podríamos dejarlo, porque es,
-- [18:29] es un clic de más realmente, no hace la gran diferencia.
-- [18:34] Claro.
-- [18:34] Ese día quedarse a guardar o no?
-- [18:37] A guardar y después facturar.
-- [18:40] Claro, pero que el facturar lo vaya a pasar después cuando
-- [18:43] pase por todas las aprobaciones, pues.
-- [18:46] Es que eso voy, pues, porque por lo que tenía,
-- [18:48] por lo que dijeron, la aprobación era solamente
-- [18:51] para los compras, no para la venta.
-- [18:52] Y de hecho, pues, lo elimine las aprobaciones de lo que era
-- [18:55] ventas.
-- [18:58] Entonces, lo aquí me di una orden de venta.
-- [19:10] ¿Alo?
-- [19:11] Mmm.
-- [19:14] ¿Qué?
-- [19:15] Sí, pues, porque como te digo, como estaba contemplado
-- [19:18] las aprobaciones, quedó como rastro.
-- [19:20] ¿Tendría que validar si es que no, no dejamos la orden
-- [19:24] de venta?
-- [19:33] Claro, dejamos la orden de venta.
-- [19:36] Es que, o sea, yo mediría la, le daría a la,
-- [19:40] guardar, que trae la orden de venta.
-- [19:42] ¿Y dónde están los documentos emitidos,
-- [19:44] tu libro de ventas?
-- [19:46] Mi libro de, esos son los, ¿qué son esos?
-- [19:51] Aquí, por ejemplo, estos son, supuestamente,
-- [19:53] que ya están facturadas y contabilizados.
-- [20:02] ¿Y por qué te di un emitir de té?
-- [20:05] ¿Cómo?
-- [20:06] Ah, el emitir de té, ¿qué es lo que te hace?
-- [20:08] Emitir el menú.
-- [20:11] ¿Aquí pudí emitir, pues?
-- [20:13] Según la orden de venta.
-- [20:15] Sí.
-- [20:18] Y si tú evites la orden de venta,
-- [20:20] queda pendiente, ¿no?
-- [20:21] Exacto.
-- [20:24] ¿Y por qué?
-- [20:25] De hecho, aquí también aparece el estado aprobado,
-- [20:27] porque es como rastro de la aprobaciones.
-- [20:30] ¿Pero el paquete?
-- [20:32] Ahí me pierdo.
-- [20:33] ¿Para qué tenía el menú de emitir de té?
-- [20:36] ¿Por qué no lo hacía?
-- [20:38] Sí.
-- [20:39] ¿Por qué no lo emití desde el listado de órdenes de venta
-- [20:43] un botón que sea como facturar?
-- [20:46] Eso estaba pensando, porque ahí estaba.
-- [20:49] Eso, ¿qué haces?
-- [20:51] ¿Y tu libro de venta debería ser un listado
-- [20:54] de solamente las facturas,
-- [20:56] no la orden de venta, claro.
-- [20:58] Igual me pierdo calenta con los términos,
-- [21:06] por ejemplo, nota de crédito, guía y como que me...
-- [21:10] ¿Qué no entendí?
-- [21:12] Por ejemplo...
-- [21:14] ¿Qué es una nota de crédito?
-- [21:16] Ya, la nota de crédito es un documento tributario
-- [21:19] que te anula una venta.
-- [21:21] Si yo te vendo a ti algo por cien lucas
-- [21:24] y tú dices, hay que ser que no,
-- [21:26] no era el producto que yo quería.
-- [21:28] Anúlamelo.
-- [21:29] Para poder yo, y esa factura en sí,
-- [21:32] yo cuando te la emití, le informé al servicio
-- [21:34] que usted está en una venta,
-- [21:36] está registrado en el servicio como una venta
-- [21:38] para que lo haga.
-- [21:40] Entonces, yo no es que llegue y le elimine,
-- [21:42] porque yo en el servicio que usted tiene
-- [21:44] no puedo borrar ese documento.
-- [21:46] La única forma de anularlo es
-- [21:48] emitiendo una nota de crédito.
-- [21:50] Que esa nota de crédito te rebaja tu venta,
-- [21:52] ¿me explico?
-- [21:56] No, no entendí muy bien.
-- [21:58] Mira, tú por ejemplo, cuando haces una venta,
-- [22:00] me encuentro en casa y ya tú estás vendiendo computadores.
-- [22:03] Vale.
-- [22:05] Otro disco duro, ¿cierto?
-- [22:07] Tú me haces una factura o una boleta.
-- [22:09] Cualquiera de los dos.
-- [22:11] Tú me haces una boleta o factura
-- [22:13] por...
-- [22:20] Se cortó un poquitito.
-- [22:22] Yo, ahora sí.
-- [22:24] Tú me haces una factura a mí
-- [22:26] por 100 lucas.
-- [22:28] Pero tú también cuando emites esa factura,
-- [22:30] tú la informas
-- [22:32] al servicio que usted tiene
-- [22:34] que hiciste una venta de 100 lucas.
-- [22:36] ¿Ya?
-- [22:38] Sí.
-- [22:40] Es un comprobante de lo que estamos haciendo ahora
-- [22:42] al servicio que usted tiene.
-- [22:44] Pero pongan, pensemos en el escenario que tú
-- [22:46] la informas al S.I.,
-- [22:48] que con esa factura
-- [22:50] tú vendiste un disco duro a Sergio
-- [22:52] por 100 lucas, ¿ya?
-- [22:54] Perfecto.
-- [22:56] Entonces, yo si yo te digo,
-- [22:58] ¿sabes que no, yo te devuelvo el producto,
-- [23:00] tú no puedes ir al servicio puesto interno
-- [23:02] y eliminar esa factura.
-- [23:04] ¿Verdote?
-- [23:06] ¿Por qué?
-- [23:08] Porque tú esas 100 lucas,
-- [23:10] 100 lucas masivas,
-- [23:12] y yo en realidad te pagué 119 lucas.
-- [23:14] Para ti,
-- [23:16] son 100 lucas,
-- [23:18] pero 19 lucas que tú vas a tener que pagar
-- [23:20] al servicio puesto interno.
-- [23:22] ¿Verdote?
-- [23:25] Claro.
-- [23:27] Entonces, ¿no es que tú puedas ir
-- [23:29] y el servicio puesto interno viene a eliminar esto?
-- [23:31] No.
-- [23:33] La única forma es que tú tienes que emitir
-- [23:35] una nota de crédito,
-- [23:37] y esa nota de crédito te rebaja tu venta.
-- [23:39] Tú me devuelves esa 100 lucas a mí
-- [23:41] por 119 lucas.
-- [23:43] Y en cierto modo, tú me devuelves esa 119 lucas a mí,
-- [23:45] pero tú también
-- [23:47] no vas a tener que pagar esa 19 lucas
-- [23:49] ya al servicio puesto interno,
-- [23:51] porque estás rebajando con la nota de crédito.
-- [23:53] ¿Me explico?
-- [23:55] Entonces, yo estaba con la venta por 100,
-- [23:57] donde va incluido oliva, lo informé
-- [23:59] al servicio puesto interno.
-- [24:01] Tú me dijiste, oye, sé que esta cuestión está mala.
-- [24:03] Yo, para
-- [24:05] revertir eso,
-- [24:07] ¿estás siguiendo el IVA, por cierto?
-- [24:10] Claro. Todo igual.
-- [24:12] Todo el mismo valor de la factura,
-- [24:14] todo como lo informaste con 119 lucas a la SI,
-- [24:16] tú emitirás la nota de crédito 119 lucas.
-- [24:18] ¿Coché?
-- [24:20] Vale. Y tú la neteas.
-- [24:22] Entonces, esas dos, la factura con la nota de crédito
-- [24:26] se rebaja y quedan en cero.
-- [24:28] ¿Quién netear?
-- [24:30] Netear es como tomar...
-- [24:32] compararlo entre los dos.
-- [24:34] Es como la palabra de
-- [24:36] hacer una nota de crédito en netear,
-- [24:38] así como que no entiendo, ¿no?
-- [24:40] Claro. Bueno, en realidad como anulación
-- [24:42] no rebaja.
-- [24:44] Pero el servicio puesto interno,
-- [24:46] como sabe que esta nota de crédito
-- [24:48] está referenciando tal factura,
-- [24:50] o sea, yo las se cruzan entre ellos
-- [24:52] y, o sea, 119 por la factura,
+- [18:09] Igual esto está así porque como en su momento se había pensado en también aplicar el tema de las aprobaciones.
+- [18:16] Ese era el botón que debería pasar a las aprobaciones.
+- [18:18] Pero como se eliminó quedó como este rastro de que no tira directamente a facturar.
+- [18:22] Yo creo que igual podríamos dejarlo en MED
+- [18:29] Porque es un click de más realmente
+- [18:30] No hace la gran diferencia
+- [18:32] Claro, ese debería quedarse a guardar, ¿o no?
+- [18:37] A guardar y después facturar
+- [18:38] Claro
+- [18:40] Pero que el facturar lo vaya a pasar después cuando
+- [18:42] Pase por todas las aprobaciones
+- [18:45] Es que eso
+- [18:46] Porque por lo que tenía
+- [18:48] Por lo que dijeron, la aprobación era
+- [18:50] Solamente para las compras, no para la venta
+- [18:52] Y de hecho, eliminé las aprobaciones
+- [18:54] De lo que eran ventas
+- [18:56] Entonces, ¿para qué emitir una orden de venta?
+- [19:10] ¿Aló?
+- [19:14] Sí, puede ser
+- [19:15] Porque como te digo, como estaba
+- [19:16] Contemplado las aprobaciones
+- [19:19] Quedó como rastro, tendría que validar
+- [19:20] Si es que
+- [19:21] No dejamos la orden de venta
+- [19:24] Yo emitiría
+- [19:38] Le daría a la
+- [19:39] Guardar, ¿cachai? La orden de venta
+- [19:42] ¿Y dónde están los documentos emitidos?
+- [19:44] ¿Tu libro de ventas?
+- [19:45] mi libro de esos son los que son esos aquí por ejemplo estos son
+- [19:52] supuestamente que ya están facturada contabilizado pues es esto y por qué
+- [20:03] tenía un mitin de de cómo el emitir de te que lo que te hace emitir el menú
+- [20:09] aquí puede emitir según la orden de venta sí y si tú
+- [20:19] evite la orden de venta queda pendiente no exacto y de hecho aquí también aparece
+- [20:26] el estado aprobado porque es como rastro del de las aprobaciones
+- [20:37] porque no lo hace porque no lo emitir desde el listado de
+- [20:43] órdenes de venta un botón que sea como facturar eso estaba pensando porque ahí
+- [20:48] Y tu libro de venta
+- [20:53] Debe ser un listado de solamente
+- [20:55] Las facturas
+- [20:57] No las órdenes de venta
+- [20:58] Igual me pierdo calenta con los términos
+- [21:07] Por ejemplo, nota de crédito
+- [21:09] Guía
+- [21:09] ¿Qué no entendí?
+- [21:13] Por ejemplo
+- [21:13] ¿Qué es una nota de crédito?
+- [21:16] La nota de crédito es un documento tributario
+- [21:19] Que te anula una venta
+- [21:21] Si yo te vendo a ti
+- [21:23] Algo por 100 lucas
+- [21:24] y tú dices, hay que ser que no, no era
+- [21:26] el producto que yo quería
+- [21:28] anúlamelo, para poder yo
+- [21:30] y esa factura en sí
+- [21:32] yo cuando la emití, la informé al servicio
+- [21:34] de vuestro interno, es una venta, está registrada en el servicio
+- [21:36] como una venta y está aprobada
+- [21:39] ¿cachai?
+- [21:40] entonces yo no es que el JIG le elimine
+- [21:42] ¿por qué? porque yo en el servicio de vuestro interno
+- [21:44] no puedo borrar ese documento
+- [21:45] la única forma de anularlo es
+- [21:48] emitiendo una nota de crédito, que esa
+- [21:50] nota de crédito te rebaja
+- [21:52] tu venta, ¿me explico?
+- [21:53] No, no entendí muy bien
+- [21:57] Mira, tú por ejemplo
+- [21:59] Tú cuando haces una venta
+- [22:00] En cuanto a los casas ya tú estás vendiendo computadores
+- [22:03] Vale
+- [22:03] O discos duros, ¿cierto?
+- [22:06] Tú me haces una factura
+- [22:09] O una boleta, cualquiera de los dos
+- [22:10] Tú me haces la boleta o factura
+- [22:13] Por
+- [22:14] Se te cortó un poquitito
+- [22:21] Yo, ¿ahora sí?
+- [22:23] Sí
+- [22:23] Tú me haces una factura a mí
+- [22:26] Por 100 lucas
+- [22:28] Pero tú también cuando emites esa factura
+- [22:31] Tú la informas al servicio de puestos internos
+- [22:33] Que hiciste una venta de 100 lucas
+- [22:35] ¿Ya?
+- [22:36] Sí
+- [22:36] Es un comprobante de lo que estamos haciendo ahora con Gonzoque
+- [22:40] Y Gonzoque se encarga de informar al servicio de puestos internos
+- [22:42] Pero pongan, pensemos en el escenario
+- [22:44] Que tú le informas al SI
+- [22:46] Que con esa factura
+- [22:48] Tú vendiste un disco
+- [22:50] Un disco duro a Sergio por 100 lucas
+- [22:52] ¿Ya?
+- [22:54] Perfecto
+- [22:54] Entonces, yo si yo te digo, ¿Sabes qué?
+- [22:57] no, yo te devuelvo el producto
+- [22:59] tú no puedes ir al servicio puesto
+- [23:01] interno y eliminar esa factura
+- [23:03] ¿me cachai?
+- [23:05] para decirte eso, ¿por qué? porque tú
+- [23:07] esas 100 lucas, en realidad tú me vendiste
+- [23:09] 100 lucas masivas
+- [23:11] y yo en realidad te pagué 119
+- [23:13] lucas, para ti
+- [23:15] son 100 lucas
+- [23:17] pero 19 lucas que tú vas a tener que
+- [23:19] pagar al servicio puesto interno
+- [23:21] ¿me cachai?
+- [23:23] claro, entonces
+- [23:26] no es que tú puedas ir
+- [23:28] yo en el servicio constitucional y vengo a eliminar esto
+- [23:30] no, la única forma
+- [23:32] es que tú tienes que emitir una nota de crédito
+- [23:34] y esa nota de crédito te rebaja
+- [23:36] tus ventas, ¿cachai? entonces tú me
+- [23:38] emites una nota de crédito a mí
+- [23:39] por 119 lucas, ¿cachai?
+- [23:43] y en cierto modo tú me devuelves
+- [23:44] esas 119 lucas a mí
+- [23:46] pero tú también no vas a tener que
+- [23:48] pagar esas 119 lucas ya en el servicio
+- [23:50] constitucional porque estás rebajando con la nota de crédito
+- [23:53] ¿me explico?
+- [23:55] entonces yo te hago la venta
+- [23:56] por 100 donde va incluido el IVA
+- [23:58] lo informé al servicio de puestos internos
+- [24:00] y tú me dijiste, oye, sé que esta cuestión está mala
+- [24:02] yo, para
+- [24:04] revertir eso
+- [24:06] emito la nota de crédito considerando
+- [24:08] el IVA, ¿no es cierto?
+- [24:11] Claro, todo igual
+- [24:12] todo el mismo valor de la factura
+- [24:14] todo como lo informaste con 119 lucas
+- [24:16] al SI, tú emites la nota de crédito con 119 lucas
+- [24:18] ¿cachai? Vale
+- [24:20] Y tú la netea, se netea
+- [24:22] entonces esas dos, la factura con la nota de crédito
+- [24:24] se rebaja
+- [24:27] y quedan en cero. ¿Qué es netear?
+- [24:31] Netear es
+- [24:31] como compararlo
+- [24:34] entre los dos. Es como la
+- [24:35] palabra de hacer una nota de crédito
+- [24:37] es netear. Así como que lo entiendo, ¿no?
+- [24:40] Claro. Bueno, en realidad es como
+- [24:41] anulación o rebaja. Vale.
+- [24:43] Pero el servicio
+- [24:45] de crédito interno, como sabe que esta nota de crédito
+- [24:47] está referenciando tal factura,
+- [24:50] dice, ah, se cruzan
+- [24:51] entre ellos y dice ya, o sea,
+- [24:53] 119 por la factura
 - [24:54] 119 por la nota de crédito
-- [24:56] quedan cero.
-- [24:58] Vale. Entonces, la nota de crédito
-- [25:00] es el documento con el que yo informo
-- [25:02] al servicio puesto interno que es anulado
-- [25:04] y tal cosa.
-- [25:06] Ah, sí es.
-- [25:08] Entonces, por ejemplo, ahí me estoy adelantando un poco
-- [25:10] del género de netí, pero son dudas que tengo en la cabeza.
-- [25:12] Si yo, por ejemplo, hice ya, te facturé
-- [25:14] a, hice la nota de crédito de
-- [25:16] a, yo cuando, por ejemplo,
-- [25:18] pensando en estos, en estos logos,
-- [25:20] cuando hago todo ese sistema realmente
-- [25:22] no queda pagado como tal,
-- [25:24] pues yo cuando me vaya el módulo
-- [25:26] de tesorería en los pagos,
-- [25:28] ahí deberían aparecerme
-- [25:30] todos esos movimientos por rupo, ¿verdad?
-- [25:32] ¿Cómo, cómo de nuevo?
-- [25:36] No de ahí, no de queche.
-- [25:38] Porque esto a nivel de pagos.
-- [25:40] Por ejemplo, cuando yo tengo que hacer el pago
-- [25:42] de estas cosas, no se hace en esta parte
-- [25:44] porque en esta parte es como registrar los
-- [25:46] documentos, pues, ¿verdad?
-- [25:48] Registrar los movimientos y todo.
-- [25:50] Claro. Pero en sí, por ejemplo,
-- [25:52] cuando yo tengo que hacer esa devolución
-- [25:54] de plata al cliente, no tiene que
-- [25:56] ver nada al servicio puesto interno
-- [25:58] ni nada, pues yo soy el que hace
-- [26:00] la transferencia directamente.
-- [26:02] De caja. Vale, vale, vale.
-- [26:04] Entonces cachaya, aquí es la guía que me estoy
-- [26:06] haciendo al cuadro, le dejo aquí, pasa
-- [26:08] el movimiento de caja.
-- [26:10] Claro. Entonces, sobre esto mismo,
-- [26:19] como hay ventas que son
-- [26:21] de productos,
-- [26:23] de servicios
-- [26:25] y de exportaciones,
-- [26:27] se tienen que diferenciar, porque eso ya lo
-- [26:29] teníamos diferenciado.
-- [26:31] Perfecto.
-- [26:36] Por ejemplo, aprovechando también
-- [26:38] que aparecen ahí la otra visión
-- [26:40] de si no orden de venta, esta nota de crédito,
-- [26:42] nota de débito y ya de despacho.
-- [26:44] Ya.
-- [26:48] ¿Qué vendría a hacer, por ejemplo, la nota
-- [26:50] de débito?
-- [26:52] Ya, la nota de débito.
-- [26:54] Lo mismo, o sea, si, pero suma.
-- [26:56] Por ejemplo, tú me metiste
-- [26:58] la factura ya del disco, ¿cierto?
-- [27:00] Sí, sí, sí.
-- [27:02] Por la 100 lucas.
-- [27:04] La 100 lucas mayor, la 100.
-- [27:06] Exacto. Pero yo cuando te dije
-- [27:08] yo lo dije que lo quería con un cable
-- [27:10] bueno, ¿cierto?
-- [27:12] Y ese cable especial, tú lo vendí
-- [27:14] en 10 lucas.
-- [27:16] Entonces, chucha, se me olvidó
-- [27:18] en vez de emitir, es como
-- [27:20] emitir una factura nueva en la
-- [27:22] nota de débito, pero se hace
-- [27:24] la nota de débito referencial
-- [27:26] de la factura por la diferencia
-- [27:28] que falta, por las 10 lucas.
-- [27:30] Más el impuesto, ¿cierto?
-- [27:32] Ya, ya, entonces
-- [27:34] yo te emití la factura y
-- [27:36] activo a mí se me olvidó
+- [24:56] Quedan cero
+- [24:57] Vale, entonces la nota de crédito en sí
+- [25:01] Es el documento con el que yo informo
+- [25:03] Al servicio de impuesto interno que se anuló tal cosa
+- [25:05] Así es
+- [25:06] Entonces, por ejemplo, ya
+- [25:08] Ahí me estoy adelantando un poco, Sergio, no me arrepentís
+- [25:10] Pero son dudas que tengo en la cabeza
+- [25:11] Si yo, por ejemplo, hice, ya, te facturé
+- [25:14] A, hice la nota de crédito de A
+- [25:16] Yo cuando, por ejemplo
+- [25:19] Pensando en estos logos
+- [25:20] Cuando hago todo ese sistema
+- [25:22] Realmente no queda pagado como tal
+- [25:24] Pues yo cuando me vaya al módulo
+- [25:26] De tesorería en los pagos
+- [25:28] Ahí deberían aparecerme
+- [25:30] Todos esos movimientos por root, ¿verdad?
+- [25:35] ¿Cómo, cómo de nuevo?
+- [25:36] Ahí no te caché
+- [25:37] Porque esto a nivel de pagos, por ejemplo
+- [25:40] Cuando yo tengo que hacer el pago de estas cosas
+- [25:42] No se hace en esta parte
+- [25:44] Porque en esta parte es como registrar los documentos
+- [25:46] ¿Verdad?
+- [25:48] Registrar los movimientos y todo
+- [25:49] Pero en sí, por ejemplo, cuando yo tengo que hacer
+- [25:52] Esa devolución de plata al cliente
+- [25:54] No tiene que ver nada el servicio impuesto interno
+- [25:56] ni nada, porque yo soy el que hace la transferencia
+- [25:58] directamente.
+- [25:59] Claro, y ahí viene como el tema ya bancario,
+- [26:02] ¿cachai? O de caja.
+- [26:04] Vale, vale, vale. Entonces, ¿cachai? Aquí en la guía
+- [26:06] que me estoy haciendo en el cuaderno le dejo que
+- [26:07] pasa al movimiento de caja.
+- [26:10] Claro. Entonces,
+- [26:18] sobre esto mismo, como hay ventas
+- [26:20] que son
+- [26:21] de productos, de servicios
+- [26:24] y de
+- [26:25] exportaciones, se tienen que diferenciar, porque
+- [26:28] eso ya lo teníamos diferenciado.
+- [26:30] Por ejemplo, aprovechando también
+- [26:38] Que aparecen ahí las otras emisiones
+- [26:40] Sin orden de venta
+- [26:41] Nota de crédito, nota de débito y guía de despacho
+- [26:44] ¿Ya?
+- [26:47] ¿Qué vendría a ser, por ejemplo, la nota de débito?
+- [26:51] Lo mismo
+- [26:53] O sea, sí, pero suma
+- [26:56] Por ejemplo
+- [26:57] Tú me metiste la factura ya del disco
+- [27:00] ¿Cierto?
+- [27:02] Por la 100 lucas
+- [27:04] Pero yo cuando te dije
+- [27:08] Yo te dije que lo quería con un cable especial
+- [27:10] ¿Cachai?
+- [27:12] Y ese cable especial
+- [27:13] Tú lo vendí en 10 lucas
+- [27:15] Entonces, ah chucha
+- [27:17] Se me olvidó
+- [27:18] Es como emitir una factura nueva
+- [27:21] En realidad no es de débito
+- [27:22] Pero se hace la nota de débito
+- [27:25] Referenciando la factura
+- [27:27] Por la diferencia que faltó
+- [27:28] Por las 10 lucas
+- [27:30] Más el impuesto
+- [27:31] ya, ya, entonces
+- [27:34] yo te emití la factura
+- [27:35] o a ti o a mí se me ha olvidado
 - [27:38] informar o agregar el cable
-- [27:40] culeado y ahí yo, por ejemplo,
-- [27:42] para hacer la corrección, en vez
-- [27:44] de generar una nueva, con la nota
-- [27:46] de débito, la asocio, esa factura.
-- [27:48] Exacto.
-- [27:50] Y si
+- [27:40] y ahí yo por ejemplo para hacer
+- [27:42] la corrección, en vez de
+- [27:44] generar una nueva, con la nota de débito
+- [27:46] la asocio a esa factura
+- [27:48] exacto
+- [27:49] y así
 - [27:52] el servicio puesto interno va a decir
 - [27:54] tengo 100 lucas del disco
-- [27:56] más 10 lucas del cable.
-- [27:58] ¿Cachai? Entonces tenéis 110
-- [28:00] netos de tu venta
-- [28:02] y más el impuesto, ¿vale Iba?
-- [28:04] Sí, sí, sí.
-- [28:06] Bueno, esto es el valor síniva.
-- [28:08] El bruto es el valor coniva
-- [28:10] incluido. Y la guía de despacho,
-- [28:17] bueno, la guía de despacho en realidad
-- [28:19] no tiene más que nada,
-- [28:21] la guía se ocupa para el traslado
-- [28:23] de mercaderías, ¿Cachai?
-- [28:25] Es un documento válido que entonces
-- [28:27] el camión tiene que ir con la guía.
-- [28:29] Esto cuando, por ejemplo,
-- [28:31] yo hago como el...
-- [28:33] Ya, tú me compraste 100 discos duro
-- [28:35] y en la guía de despacho yo pongo
-- [28:37] que es, según la orden tanto,
-- [28:39] se tiene que hacer la entrega
-- [28:41] de estos discos a Sergio.
-- [28:43] Claro.
-- [28:46] ¿Y eso, por ejemplo, está bien
-- [28:48] que sea así como un ítem aparte,
-- [28:50] ¿no tendría que estar asociado
-- [28:52] también a la factura?
-- [28:54] Se puede enlazar a la factura.
-- [28:56] Tú una guía de despacho, por ejemplo,
-- [28:58] tú vas a hacer la guía de despacho
-- [29:00] que está lista para el 11 por la gente
-- [29:02] de bodega, que va a hacer
-- [29:04] una copia fiel de la factura
-- [29:06] con todos los productos
-- [29:08] para que le quiera al bodeguero
-- [29:10] para que prepare todo el pedido completo.
-- [29:12] Preparó el pedido completo
-- [29:14] y ahí recién facturó la guía
-- [29:16] para que ya se entrega al cliente.
-- [29:18] O puede ser que el camión vaya
-- [29:20] con la guía, el cliente
-- [29:22] recibió la mencadería
-- [29:24] y ahí recién se la facturó.
-- [29:26] Ah, entonces la guía de despacho
-- [29:28] vendría a hacer como
-- [29:30] hasta que llegue al cliente
-- [29:32] y ahí se facturó.
-- [29:34] Puede ser hasta que llegue
-- [29:36] hasta que salga o puede ser
-- [29:38] el camionero se puede ir con la guía
-- [29:40] y con la factura.
-- [29:42] Puede ser que el camionero sea de la misma empresa
-- [29:44] y puede hacer
-- [29:46] la recepción como algo así o no.
-- [29:48] No sé, en cierto modo
-- [29:50] no sé si tú no estés vendiendo
-- [29:52] una empresa y el otro lado
-- [29:54] está esperando algo en de bodega
-- [29:56] tú bailes y oye mira
-- [29:58] la guía y la factura
-- [30:00] le sirven casos de fiscalización.
-- [30:02] Si tú estás transportando alguna
-- [30:04] mencadería, si te paras lo sé
-- [30:06] por lo del servicio puesto interno
-- [30:08] y o caraminero
-- [30:10] eso puedes te ver en la mencadería
-- [30:12] entonces te dice ya, la guía
-- [30:14] no me gusta la guía.
-- [30:16] Ah, para patar destino a tal cliente
-- [30:18] que echáis todos estos productos y llevas.
-- [30:20] Perfecto, perfecto, perfecto.
-- [30:25] Lo otro también que ahora me acordé
-- [30:27] que hay que eso igual lo tengo
-- [30:29] pensado en el plan
-- [30:31] porque estos locos tenían cliente
-- [30:33] y
-- [30:35] que también eran proveedores, tengo que hacer
-- [30:37] que se asocien, que se crucen los campos
-- [30:39] porque los tengo separados.
-- [30:41] Sí, eso debe unificarlo.
-- [30:43] Sí, sí, sí.
-- [30:45] Y ahí tendría que tener todas las guías
-- [30:47] o sea, perdón, los datos de transferencia
-- [30:49] y me acuerdo que lo dijo Gustavo
-- [30:51] en la reunión, que se unifican esas dos cosas.
-- [30:53] Que creo que también lo tengo acá en el trélone
-- [30:55] una de las cartas anidado ahí.
+- [27:55] más 10 lucas del cable
+- [27:58] ¿cachai? entonces tenés 110
+- [28:00] es neto de tu venta
+- [28:02] y más el impuesto, más el IVA
+- [28:03] ¿se entiende?
+- [28:05] el neto es el valor sin IVA
+- [28:07] el bruto es el valor con IVA incluido
+- [28:10] y la guía de despacho
+- [28:16] bueno, la guía de despacho en realidad no tiene
+- [28:18] más que nada
+- [28:21] la guía se ocupa para el
+- [28:22] traslado de mercadería, ¿cachai?
+- [28:24] es un documento válido que entonces
+- [28:26] el camión tiene que ir con la guía
+- [28:28] esto es cuando
+- [28:30] por ejemplo yo hago como el
+- [28:32] ya, tú me compraste 100 discos duros
+- [28:34] y en la guía de despacho yo pongo
+- [28:36] que según la orden tanto
+- [28:38] se tiene que hacer la entrega
+- [28:40] de estos discos a Sergio
+- [28:42] claro
+- [28:43] y eso por ejemplo, está bien
+- [28:48] que sea así como un ítem aparte
+- [28:49] no tendría que estar asociado también
+- [28:51] a la factura
+- [28:52] se puede enlazar a la factura
+- [28:55] tú una guía de despacho, por ejemplo, tú haces la guía de despacho
+- [28:57] que está lista para
+- [28:59] la gente de bodega
+- [29:01] que va a ser una
+- [29:03] copia fiel de la factura con todos los
+- [29:05] producto y tú dices
+- [29:07] ya, le entrego a la guía algo de dinero
+- [29:09] para que prepare todo el pedido completo
+- [29:11] preparó el pedido completo
+- [29:13] y ahí recién facturó la guía para que ya se
+- [29:15] entregue al cliente, o puede ser
+- [29:17] que el camión vaya con la guía
+- [29:19] el cliente recibió
+- [29:21] la mercadería y ahí recién
+- [29:23] se la facturó, ¿ok?
+- [29:25] Ah, entonces la guía del despacho vendría a ser
+- [29:27] como hasta que llegue al cliente
+- [29:30] y ahí se factura
+- [29:30] Puede ser hasta que llegue
+- [29:33] o hasta que
+- [29:35] antes que salga
+- [29:37] puede ser el camionero
+- [29:39] con la guía y con la factura
+- [29:40] puede ser que el camionero sea de la misma
+- [29:43] empresa y pueda hacer la
+- [29:45] la recepción
+- [29:47] como algo así o no
+- [29:48] no sé, en cierto modo por ejemplo
+- [29:51] si tú le estás vendiendo a una empresa
+- [29:53] y el otro lado te va a esperar
+- [29:56] el buen de bodega
+- [29:56] tú vas y le dices oye mira
+- [29:58] la guía te sirve y la factura te sirve
+- [30:01] en caso de fiscalización
+- [30:02] si tú estás transportando alguna mercadería
+- [30:05] si te para, no sé, por lo del servicio
+- [30:07] puesto interno
+- [30:08] o carabinero, eso cuando te ve
+- [30:11] en la mercadería, te dicen
+- [30:12] ya, la guía, toma ahí está la guía
+- [30:14] ah, para tal destino
+- [30:16] a tal cliente, ¿cachai? todos estos productos
+- [30:18] llevan
+- [30:19] perfecto, perfecto, perfecto
+- [30:25] lo otro también que ahora me acordé
+- [30:27] que hay que, que eso igual lo tengo
+- [30:29] pensado en el plan, pues de que estos locos
+- [30:31] tenían cliente
+- [30:33] y que también
+- [30:35] eran proveedores, tengo que hacer que se asocien
+- [30:37] Que se crucen los campos porque los tengo separados
+- [30:39] Sí, eso tiene que unificarlo
+- [30:42] Sí, sí, sí
+- [30:43] Y ahí tendría que tener todas las guías
+- [30:46] O sea, perdón, los datos de transferencia
+- [30:48] Y me acuerdo que lo dijo Gustavo
+- [30:50] En la reunión, que se unificaron esas dos cosas
+- [30:52] Sí
+- [30:53] Que creo que también lo tengo acá en el trelo
+- [30:55] En una de las cards anidado ahí
 - [30:57] Ya, entonces
-- [30:59] me queda mucho más claro
-- [31:01] voy a hacer las correcciones que me dijiste visuales
-- [31:03] probar la emisión
-- [31:05] y coordinar la reunión
+- [30:59] Ya, me queda mucho más claro
+- [31:00] Voy a hacer las correcciones que me dijiste visuales
+- [31:04] Probar la emisión
+- [31:06] y coordinar la reunión
 - [31:07] con la María Jesús
-- [31:09] para tener mayor detalle, pero antes voy a hacer
-- [31:11] las pequeñas correcciones que habíamos dicho.
-- [31:15] Eso creo que no tengo más dudas
-- [31:17] Sergio, ya lo demás
-- [31:19] me tendría que forzar en pensar en las demás dudas
-- [31:21] pero ahí cuando las tengas la voy a notar
-- [31:23] y te las mando por pasar por último
-- [31:25] y cuando podáis avisar y hoy reunámonos
-- [31:27] lo damos. Vale, ok.
-- [31:29] Y eso
-- [31:31] de la, bueno, la princesita
-- [31:33] estábamos plenando con los chicos
+- [31:09] para tener mayor detalle
+- [31:10] pero antes voy a hacer
+- [31:11] esas pequeñas correcciones
+- [31:12] que habíamos dicho
+- [31:12] eso creo que no tengo
+- [31:16] más dudas
+- [31:17] Sergio
+- [31:18] ya los demás
+- [31:18] me tendría que forzar
+- [31:20] en pensar en las demás dudas
+- [31:21] pero ahí cuando las tenga
+- [31:22] las voy a anotar
+- [31:23] o te las mando por Whatsapp
+- [31:24] por último
+- [31:25] y cuando podáis me avisáis
+- [31:26] hoy reunámonos
+- [31:26] y le damos
+- [31:28] vale
+- [31:28] ok
+- [31:29] y eso pues
+- [31:31] de la
+- [31:31] bueno la princesita
+- [31:33] estábamos plenando
+- [31:34] con los chicos
 - [31:35] deja
-- [31:37] el jueves
-- [31:39] la reunión, pero
-- [31:41] como jueves también vamos a tener la reunión del más, güey
-- [31:43] voy a cachar
-- [31:45] Eso te quería decir, yo creo que ya la princesita
-- [31:47] y ahora el hielo soltivo.
-- [31:49] Ya.
-- [31:53] Apuyan a los muchachos con coordinar y todo
-- [31:55] por último hacer la peda y voy a presentar
-- [31:57] ahora el José
-- [31:59] Vale.
-- [32:01] Pero ya saltar eso porque
-- [32:03] por lo visto tenemos que integrar ahora
-- [32:05] a las finales de septiembre
-- [32:07] para poder viajar
-- [32:09] y está complica la cosa
-- [32:11] como la veo. Vale, vale.
-- [32:13] Hay mucha mucha pena por hacer
+- [31:35] el jueves
+- [31:38] la reunión, pero
+- [31:40] como el jueves también vamos a tener la reunión
+- [31:42] del MAUE, voy a cachar
+- [31:44] eso te quería decir, yo creo que ya
+- [31:46] la princesita y ahora el hielo sortivo
+- [31:49] ya
+- [31:49] apoyar a los muchachos con coordinar y todo
+- [31:54] por último hacer la pega hoy
+- [31:56] te voy a presentar ahora al José
+- [31:58] ¿cachai? vale
+- [31:59] pero ya saltar eso
+- [32:02] que por lo visto tenemos que entregar
+- [32:04] ahora a finales de septiembre
+- [32:06] para poder viajar
+- [32:08] y está complicada la cosa
+- [32:11] como la veo
+- [32:11] hay mucha, mucha pega por hacer
 - [32:15] yo por mi lado
-- [32:17] igual estoy hablando con un contador
-- [32:19] para que nos ayude, nos certifica
-- [32:21] la
-- [32:23] en realidad se hay que ir haciendo bien sincero
-- [32:25] yo creo que con los comprobantes
-- [32:27] los comprobantes lo he guardado
-- [32:29] los asientos contados que han entregado
-- [32:31] los asientos contados que han entregado
-- [32:33] Si, en la grabación
-- [32:35] la mente se va a pasar
-- [32:37] nos mandó un comprobante o mostró un comprobante
-- [32:39] si
-- [32:41] en la página de agroson, cierto?
-- [32:43] no se, si
-- [32:45] si en agroson
-- [32:47] si lo tengo, pero viendo la grabación
-- [32:49] se ve chico
-- [32:51] entonces igual podría ver lo idea de que haga la muestra y grabar
-- [32:53] o tiene que tenerlo más
-- [32:55] vale
-- [32:57] de ahí habla le harto en el grupo nomás
-- [32:59] si hiciste ahí
-- [33:01] voy y necesito esto, necesito esto acá
-- [33:03] dale a tú nomás
-- [33:05] pide nomás pide
-- [33:07] mientras ellos vean que nosotros estamos preguntando
-- [33:09] pidiendo cosas
-- [33:11] no van a tener ningún problema
-- [33:13] el momento que me llegue
-- [33:15] este guán del
-- [33:19] como se llama
-- [33:21] que cuando llegue este guán del bar
-- [33:23] y mira, voy a decir que se hay quietas preguntas
-- [33:25] tan así, no corresponde
-- [33:27] y entonces vemos qué hacemos
-- [33:29] vale
-- [33:31] pero en cierto modo esto es un desarrollo a la medida de ellos
-- [33:33] entonces ellos nos tienen que decir
-- [33:35] cómo tiene que ser, qué humo tiene que calcular
-- [33:37] qué es lo que tiene que hacer
-- [33:39] vale
-- [33:41] vale
-- [33:43] así que gán lo guán
-- [33:45] me tiene ultragorrente pero a ver
-- [33:47] ya, yo ahora voy a bajar el pasadito
-- [33:49] con un muchacho
-- [33:51] para el tema de la princesina
-- [33:53] que
-- [33:55] compartan por último, créate un grupo
-- [33:57] whatsapp con la princesina
-- [33:59] y ahí vamos canalizando todas las cosas con el
-- [34:01] un tanilo
-- [34:03] y que estén todos, el jose, el diego
-- [34:05] y yo
-- [34:07] ya
-- [34:09] vale, vale, vale
-- [34:11] eso ahorita
-- [34:13] ya pero
-- [34:15] te encanta cobrar tan pegas
-- [34:17] vas a intentar sacarlo lo antes posible
-- [34:19] para que lo revisemos juntos
-- [34:21] ya, me parece
-- [34:23] ok
-- [34:25] nos vemos, si
-- [34:27] nos vemos
+- [32:16] igual estoy hablando con un contador
+- [32:18] para que nos ayude, nos certifique
+- [32:20] en realidad
+- [32:23] yo siendo bien sincero
+- [32:24] yo creo que con los comprobantes
+- [32:26] los comprobantes los he guardado
+- [32:28] los asientos contables que me han entregado
+- [32:30] los asientos contables que me han entregado
+- [32:33] si, en la grabación
+- [32:34] La semana pasada
+- [32:36] Nos mandó un comprobante
+- [32:38] O mostró un comprobante
+- [32:39] En la página de AgroSoft
+- [32:43] ¿Cierto?
+- [32:45] Sí, en AgroSoft
+- [32:46] Sí lo tengo, pero viendo la grabación
+- [32:49] Se ve chico
+- [32:50] Entonces igual podría abrirlo hoy día
+- [32:52] De que haga la muestra y grabar
+- [32:53] O dile que te lo mande
+- [32:55] Vale
+- [32:56] De ahí háblale harto en el grupo
+- [32:59] Si insiste ahí, oye necesito esto
+- [33:02] Necesito esto acá
+- [33:03] pide nomás, pide
+- [33:06] mientras ellos vean que nosotros estamos
+- [33:08] preguntando, pidiendo cosas
+- [33:10] no van a tener ningún problema
+- [33:12] el momento que me llegue
+- [33:14] este weón del
+- [33:16] ¿cómo se llama?
+- [33:21] cuando llegue este weón del barrio
+- [33:23] mira, a ver si hay ciertas preguntas que están haciendo
+- [33:25] no corresponde, ah, ya perfecto
+- [33:27] ahí entonces, vemos qué hacemos
+- [33:29] vale, pero en cierto modo
+- [33:31] esto desarrolla la medida de ellos
+- [33:33] Entonces ellos nos tienen que decir
+- [33:35] Cómo tiene que ser, cómo tiene que calcular
+- [33:38] Qué es lo que tiene que hacer
+- [33:39] ¿Ya?
+- [33:42] Vale, vale
+- [33:42] Así que Carlos Juan, métele ultracorriente
+- [33:46] Pero al revés
+- [33:47] Yo ahora voy a bajar el pasadito con los muchachos
+- [33:50] Para el tema de la princesita
+- [33:52] Que
+- [33:53] Puta, si compartan
+- [33:56] Por último, create un grupo de Whatsapp
+- [33:58] Con la princesita
+- [33:58] Y ahí vamos canalizando todas las cosas con el Danilo
+- [34:02] Y que estén todos
+- [34:04] El José, el Diego y yo
+- [34:06] Vale
+- [34:06] ¿Ya?
+- [34:09] Vale, vale, vale
+- [34:10] Eso es un rito
+- [34:12] Ya, ovejito
+- [34:13] Ya, pero
+- [34:13] Te quedaste con harta pega
+- [34:15] Sí, dobro
+- [34:17] Vas a intentar sacarlo lo antes posible
+- [34:19] Para que lo revisemos juntos igual
+- [34:21] Ya, me parece
+- [34:22] Cuéntanos si también habéis leído
+- [34:24] Ok
+- [34:24] Yo perdí
+- [34:25] Muchas gracias
+- [34:26] Chau
+- [34:26] Hablamos, chau

@@ -1,2280 +1,1787 @@
-# Reu4 2026-07-30 (Whisper local)
+# Reu4 2026-07-30 (Whisper large-v3)
 
 Idioma: es (p=1.00)
-Modelo: faster-whisper `small` CPU int8 + VAD
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
 Fuente: E:\source\repos\Almahue\docs\erp-planificacion\agrosoft-levantamiento\fuentes\videos\reunion4-2026-07-30.mp4
 No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
 
-- [00:39] y fue aceptar la invitación
-- [00:45] Ya, igual te comento que dice Mario pero él la sigue
-- [00:49] Ah, ok
-- [00:51] Pues si has alguna intervención y le encontréis vos de mujer
-- [00:54] Ok, no hay problema
-- [00:58] Sergio dijo que iba a unir dentro de lo posible, así que si no tienen problemas podríamos partir
-- [01:03] Ah, si, no hay problema
-- [01:05] Perfecto
-- [01:08] Voy a echar de comenzar a grabar
-- [01:11] y me voy a compartir pantalla
-- [01:13] ¿Me comentan si se ve?
+- [00:39] Y fue aceptada la invitación.
+- [00:45] Ya. Igual te comento que dice Mario, pero él la sigue gritando.
+- [00:51] Por si hace alguna intervención y la encontráis vos de mujer.
+- [00:54] Ok, no hay problema.
+- [00:58] Sergio dijo que se iba a unir dentro de lo posible, así que si no tienen problemas podríamos partir.
+- [01:03] Ah, sí, no hay problema.
+- [01:05] Perfecto.
+- [01:07] Voy a aprovechar de comenzar a grabar.
+- [01:10] Y voy a compartir pantalla
+- [01:14] ¿Me comentan si se ve?
 - [01:33] Si se ve
-- [01:35] Perfecto
-- [01:38] Con respecto a lo que vendría a hacer la reunión de hoy
-- [01:44] les comento que lo que vendría a hacer en nuestro ambiente de desarrollo
-- [01:49] ya tenemos todos los módulos conectados y funcionando
-- [01:53] junto con la mayoría de las correcciones que no habían solicitado
-- [01:57] tanto en las que no aparecieron entre los
-- [02:00] como las que habíamos hablado en las reuniones
-- [02:04] Ya
-- [02:06] Acá como podemos ver, bueno, estamos directamente en el modo real
-- [02:10] con el mes activo y el modo spa, perfecto
-- [02:18] Entonces, vamos a verlo directamente
-- [02:21] más que nada por honor al tiempo en el módulo de administración
-- [02:25] pero la mayoría de las cosas con el aprobador
-- [02:28] igual vamos a intentar hacer un cambio de sesión
-- [02:30] donde se vea cómo llegan la aprobación
-- [02:33] Ya
-- [02:34] Partiendo por lo que vendría a hacer el módulo de administración
-- [02:37] realmente no hay muchos cambios
-- [02:39] con lo que vendría a hacer las empresas, usuarios y roles
-- [02:45] se mantienen prácticamente igual
-- [02:47] aquí por ejemplo
-- [02:49] y lo que vendría a hacer los sus roles
-- [02:51] se dejó esta columna donde te muestra ahora
-- [02:53] los usuarios que están dentro de ese rol
-- [02:55] y en caso de que quieras cambiarlos
-- [02:57] también te permite ir directamente donde están en su usuario
-- [02:59] y realizar el cambio de rol en caso de que lo necesites directamente desde acá
-- [03:03] Ya
-- [03:04] Junto con también la posibilidad aquí de realizar búsqueda de roles
-- [03:08] pensando en que en algún futuro podrían existir más usuarios
-- [03:11] por ende más roles
-- [03:13] Igual eso no queda rígido
-- [03:15] o sea, yo puedo poner un rol y eliminarlo igual
-- [03:18] o agregarle más funciones
-- [03:20] Exacto, de hecho, cuando uno va a eliminar un rol
-- [03:22] y si es que existe un usuario dentro de ese rol
-- [03:24] cuando uno no elimina, te dice qué rol quieres dejarles usuario
-- [03:28] Ya
-- [03:29] Así que como que no da cabida que queden usuarios sin rol
-- [03:32] en caso de que quieran hacer eliminación
-- [03:34] siempre sale esta advertencia
-- [03:35] o ya sabes qué tienes tu usuario acá
-- [03:37] Elige un rol, por ejemplo, aquí si fueran 20 usuarios
-- [03:39] podría aquí directamente asignarle un rol a los 20
-- [03:42] y aquí definiendo si es que alguno quieres que tenga un rol más o menos
-- [03:46] Ya no
-- [03:47] Pensando también en que los roles, por ejemplo
-- [03:49] se podrían crear
-- [03:52] una persona que necesitas que tenga un rol temporal
-- [03:55] que podría crear
-- [03:57] rol, vacaciones, digitador
-- [03:59] Entonces aquí le dan los permisos que necesites
-- [04:03] También tenemos, bueno, si eso es la implementación de este selector
-- [04:06] que te da como la opción de elegir todas las pantallas del módulo
-- [04:09] o poder dejándolas así
-- [04:11] y te lo muestra como parcial cubierto
-- [04:15] Toda la opción de minimizar
-- [04:17] Entonces tú vamos a crear este rol
-- [04:19] y este rol de vacaciones
-- [04:21] tengo una persona asignada
-- [04:23] para directamente eliminarlo cuando
-- [04:25] llegue ya la persona de vacaciones
-- [04:27] y el mismo sistema no mostraría
-- [04:29] qué rol deberíamos volver a asignarla al usuario
-- [04:31] que le dimos este rol temporal
-- [04:33] Ya
-- [04:35] Que más, agregamos esta pantallita
-- [04:37] que vendría a ser la planía de documentos
-- [04:40] acá pensando en que por empresa
-- [04:43] podrían necesitar un logo
-- [04:45] los documentos que se van en el primer futuro
-- [04:47] aquí se puede ir configurando
-- [04:49] Por ejemplo, acá en contenido
-- [04:52] si más no me equivoco
-- [04:54] podemos editar si es que tiene pie de página
-- [04:56] si es que muestra o no muestra el logo
-- [04:58] agregar columnas
-- [05:00] Pero por ejemplo se puede subir la imagen
-- [05:02] Exacto, de hecho acá en el diseño
-- [05:04] si más no me equivoco
-- [05:06] acá te permite seleccionar la imagen
-- [05:08] bueno, aquí no tengo ninguna imagen
-- [05:10] como un logo definitivo
-- [05:12] pero en caso de no
-- [05:14] queda con ese que vendría a ser el nombre
-- [05:16] de la empresa como temporal
-- [05:18] Ya
-- [05:21] y lo otro que se agregó son
-- [05:23] las reglas de aprobación
-- [05:25] Notimos que acá en el momento de realizar
-- [05:27] pruebas del sistema que teníamos
-- [05:29] que nos estábamos definiendo
-- [05:31] quién eran las personas que iban a aprobar
-- [05:33] las diferentes
-- [05:35] aprobaciones valga la redundancia
-- [05:37] que iba a tener el sistema
-- [05:39] esto pensando más que nada en las performas
-- [05:41] y las órdenes de compra
-- [05:43] y creo que había una más que se me está escapando
-- [05:45] Entonces, aquí es donde se define
-- [05:47] quiénes o quién persona van a ser
-- [05:49] los que iban a aprobar
-- [05:51] En este caso el melo funciona de la siguiente forma
-- [05:53] Acá por ejemplo
-- [05:55] podemos agregar una nueva regla
-- [05:57] y podemos definir a cuál de los módulos
-- [06:01] va a tener en exceso de aprobar
-- [06:03] esa regla
-- [06:05] y aquí podríamos definir la cantidad de usuarios
-- [06:07] Esto más adelante lo vamos a ver
-- [06:09] que podríamos pedirle
-- [06:11] a diferentes tipos de persona
-- [06:13] que aprueben por ejemplo
-- [06:15] las órdenes de compra, las proformas etc
-- [06:17] para tener diferentes opciones en caso de que se necesite
-- [06:19] tener
-- [06:21] diferenciación entre cada uno
-- [06:23] de las cosas a aprobar
-- [06:25] y aquí con la opción
-- [06:27] también de poder eliminar las reglas
-- [06:29] de manera rápida y editarla
-- [06:31] en caso de que sea necesario
-- [06:36] ahora vamos a ver lo que tendría a hacer
-- [06:38] la parte del módulo
-- [06:40] de contratistas
-- [06:42] el módulo de contratistas también
-- [06:44] el estado queda prácticamente igual
-- [06:46] los ingresos diarios
-- [06:50] se pueden ir configurando
-- [06:52] aquí van apareciendo los centros
-- [06:54] de costos que también se
-- [06:56] reconfiguraron previamente junto con sus labores
-- [06:58] como podemos ver, cada cual tiene
-- [07:00] su buscador
-- [07:02] las actividades
-- [07:04] el tipo
-- [07:06] consulta Carlos
-- [07:08] lo que pasa es que
-- [07:10] hayamos pedido que por ejemplo
-- [07:12] si estamos en Almagüe
-- [07:14] que solamente se le da los centros de costo de Almagüe
+- [01:34] Perfecto
+- [01:38] Con respecto a lo que vendría a ser
+- [01:44] La reunión de hoy
+- [01:45] Les comento que lo que vendría a ser
+- [01:48] Nuestro ambiente de desarrollo
+- [01:49] Ya tenemos todos los módulos
+- [01:52] Conectados y funcionando
+- [01:54] Junto con la mayoría de las
+- [01:56] Correcciones que nos habían solicitado
+- [01:58] Tanto en las que
+- [02:00] Nos aparecieron en Trello como las que
+- [02:01] habíamos hablado en las reuniones acá como podemos ver bueno estamos
+- [02:09] directamente en el modo real con el mes activo y el mago spa perfecto
+- [02:18] entonces vamos a verlo directamente más que nada por honor al tiempo en el
+- [02:24] módulo de administración pero la mayoría de las cosas con aprobador
+- [02:29] igual vamos a intentar hacer un cambio de sesión donde se vea cómo llegan las
+- [02:32] aprobación
+- [02:33] partiendo por lo que vendría a ser el módulo
+- [02:36] de administración, realmente no hay muchos cambios
+- [02:38] con lo que vendría a ser las
+- [02:40] empresas, usuarios
+- [02:44] y roles, se mantienen prácticamente
+- [02:46] igual, aquí por ejemplo
+- [02:48] lo que vendría a ser los roles
+- [02:50] se dejó esta columna donde te muestra
+- [02:52] ahora los usuarios que están dentro de ese rol
+- [02:54] y en caso de que quieras cambiarlos también te permite
+- [02:56] ir directamente donde están en su
+- [02:58] usuario y realizar el cambio de rol
+- [03:00] en caso de que lo necesites directamente
+- [03:02] desde acá
+- [03:02] Junto con también la posibilidad
+- [03:06] Aquí de realizar búsqueda de rol
+- [03:07] Pensando en que en algún futuro podrían existir
+- [03:10] Más usuarios por ende más roles
+- [03:12] Igual eso no queda
+- [03:14] Rígido, o sea yo puedo poner
+- [03:16] Un rol y eliminarle igual
+- [03:18] O agregarle más funciones
+- [03:19] Exacto, de hecho cuando uno va a eliminar un rol
+- [03:22] Y si es que existe un usuario dentro de ese rol
+- [03:24] Cuando uno lo elimina te dice
+- [03:25] Que rol quieres dejarle a su usuario
+- [03:27] Así que como que no da
+- [03:30] Cabida que queden usuarios sin rol
+- [03:31] En caso de que quieran hacer eliminación
+- [03:33] Siempre sale esta advertencia, oye sabes que tienes tu usuario acá
+- [03:36] Elige un rol, por ejemplo aquí
+- [03:37] Si fueran 20 usuarios, podría aquí
+- [03:39] Directamente asignarle un rol a los 20
+- [03:41] Y aquí ir definiendo si es que alguno
+- [03:43] Quieres que tenga un rol más o menos
+- [03:45] Pensando también en que
+- [03:47] Los roles por ejemplo
+- [03:48] Se podrían crear, ponte tú
+- [03:51] Una persona que necesitas que tenga
+- [03:53] Un rol temporal, aquí se podría crear
+- [03:55] Rol, vacaciones
+- [03:57] Digitador, entonces aquí
+- [03:59] Le dan los permisos que necesites
+- [04:01] También tenemos, bueno si eso es implementación de este selector
+- [04:05] Que te da como la opción de elegir todas las pantallas del módulo
+- [04:09] O puedes dejándolo así y te lo muestra como parcial cubierto
+- [04:14] Junto con la opción de minimizar
+- [04:16] Entonces ponte tú, vamos a crear este rol
+- [04:18] Y este rol de vacaciones, tengo una persona asignada
+- [04:22] Nosotros podríamos directamente eliminarlo cuando llegue ya la persona de vacaciones
+- [04:26] Y el mismo sistema nos mostraría que rol deberíamos volver a asignarla
+- [04:30] al usuario que le dimos este rol temporal.
+- [04:32] Ya.
+- [04:34] ¿Qué más? Agregamos esta
+- [04:35] pantallita que vendría a ser
+- [04:38] la planilla de documentos.
+- [04:39] Acá pensando en que por
+- [04:41] empresa podría necesitar un logo
+- [04:43] en los documentos que se van a imprimir a futuro.
+- [04:46] Aquí se puede ir configurando.
+- [04:48] Por ejemplo,
+- [04:49] acá en contenidos,
+- [04:51] si mal no me equivoco, podemos
+- [04:53] editar si es que tiene pie de página,
+- [04:55] si es que muestra o no muestra el logo.
+- [04:58] Agregar columnas.
+- [05:00] Pero, por ejemplo, ¿se puede subir la imagen?
+- [05:02] Exacto. De hecho, acá en el diseño, si mal no me equivoco, acá te permite seleccionar la imagen.
+- [05:08] Bueno, aquí no tengo ninguna imagen como un logo definitivo, pero en caso de no, queda con ese que vendría a ser el nombre de la empresa como temporal.
+- [05:19] Ya.
+- [05:21] Y lo otro que se agregó son las reglas de aprobación.
+- [05:25] Nos dimos cuenta en el momento de realizar pruebas del sistema que teníamos
+- [05:29] Que nos estábamos definiendo quiénes eran las personas que iban a aprobar las diferentes aprobaciones
+- [05:36] Valga la redundancia que iba a tener el sistema
+- [05:38] Esto pensando más que nada en las proformas y las órdenes de compra
+- [05:42] Y creo que había una más que se me está escapando
+- [05:44] Entonces aquí es donde se define quiénes o qué personas van a ser los que van a aprobar
+- [05:50] En este caso el menú funciona de la siguiente forma
+- [05:53] Acá por ejemplo podemos agregar una nueva regla
+- [05:57] Aquí podemos definir a cual de los módulos va a tener acceso de aprobar esa regla
+- [06:04] Y aquí podríamos definir la cantidad de usuarios
+- [06:07] Esto más adelante lo vamos a ver que
+- [06:10] Podríamos pedirle a diferentes tipos de personas
+- [06:13] Que aprueben por ejemplo las órdenes de compra, las performance, etc
+- [06:17] Para tener diferentes opciones en caso de que se necesite tener
+- [06:19] Diferenciación entre cada una de las cosas a probar
+- [06:25] Y aquí con la opción también de poder eliminar las reglas de manera rápida
+- [06:30] Y editarlas en caso de que sea necesario
+- [06:33] Ahora vamos a ver lo que vendría a ser la parte del módulo de contratistas
+- [06:41] En el módulo de contratistas también el listado queda prácticamente igual
+- [06:47] Los ingresos diarios se pueden ir configurando
+- [06:52] aquí van apareciendo los centros de costos
+- [06:54] que también se reconfiguraron
+- [06:56] previamente junto con sus labores
+- [06:58] como podemos ver cada cual tiene su buscador
+- [07:01] las actividades
+- [07:03] el tipo
+- [07:04] consulta
+- [07:06] Carlos, perdón, sí Carlos
+- [07:08] sí, lo que pasa es que
+- [07:10] habíamos pedido que por ejemplo
+- [07:12] si estamos en Almahue, que solamente
+- [07:14] se le dieran los centros de costos de Almahue
 - [07:16] vamos entonces aquí
-- [07:18] a notar ese ajuste porque
+- [07:18] anotar ese ajuste porque
 - [07:20] recuerdo que se había solicitado
 - [07:22] porque la idea es como que sea más rígido
-- [07:24] que lo que tenemos con el mente
-- [07:26] para editar el error de imputación
-- [07:28] buenas tardes
-- [07:31] hola moneje
-- [07:33] buenas tardes
-- [07:35] bien y tu? buenas Sergio
-- [07:37] bien también con Carlos
-- [07:39] bien gracias
-- [07:41] por Mario
-- [07:43] no está la Sígrit por Mario
-- [07:45] está infiltrada
-- [07:47] la encand de identidad
-- [07:49] es una consulta
-- [07:51] en los centros de costo
-- [07:53] de qué manera los van a manejar
-- [07:55] ustedes por ejemplo de un administrador
-- [07:57] global
-- [07:59] lo que pasa es que actualmente
-- [08:01] tenemos un centro de costo
-- [08:03] por empresa por ejemplo
-- [08:05] no está administración general
-- [08:07] sino que está administración Almagüe
-- [08:09] administración ALM
-- [08:11] administración Santa Pilar
-- [08:13] administración Los Palos
-- [08:15] cada empresa tiene
-- [08:17] ese centro de costo con apellido
-- [08:19] entonces la idea es que acá
-- [08:21] vayan los centros de costo por empresa
-- [08:23] por ejemplo
-- [08:25] todos los que empiezan con uno
-- [08:27] son DLM
-- [08:29] los que están con dos son de Almagüe
-- [08:31] los que están con tres
-- [08:33] y no me llevo cosas en de Santa Pilar
-- [08:35] por ejemplo ya lo entiendo
-- [08:39] pero ahí
-- [08:41] esos centros de costo como bien dices tú
-- [08:43] por ejemplo si yo estoy trabajando
-- [08:45] en la empresa Almagüe
-- [08:47] solamente los centros de costo Almagüe
-- [08:49] y si estoy en otra empresa X
-- [08:51] me lista los centros
-- [08:53] costos de la empresa X
-- [08:55] entonces aquí Carlos
-- [08:57] por ahí el mantener los centros costos
-- [08:59] no lo tienen
-- [09:01] los centros de costo
-- [09:03] entonces ahí
-- [09:09] yo creo que hay una confusión
-- [09:11] porque
-- [09:13] si te das cuenta arriba
-- [09:15] dice Almagüe SBA
-- [09:17] entonces
-- [09:19] entonces todo
-- [09:21] lo que carguen
-- [09:23] en esta pantalla por ejemplo si le ponen
+- [07:25] que es lo que tenemos actualmente para evitar
+- [07:26] el error de imputación
+- [07:28] Buenas tardes
+- [07:32] Hola María
+- [07:33] Buenas tardes, bien y tú?
+- [07:35] Buenas Sergio
+- [07:36] Bien también, ¿cómo estás Carlos?
+- [07:38] Bien, bien, gracias
+- [07:39] ¿Con Mario?
+- [07:41] No, está la Sigrid con Mario
+- [07:43] Sí, soy yo de nuevo
+- [07:46] Está infiltrada
+- [07:47] Blancán de identidad
+- [07:49] María Jesús, una consulta
+- [07:54] en los centros de costo
+- [07:57] ¿de qué manera los van a manejar
+- [07:59] ustedes, por ejemplo, de un administrador
+- [08:00] global?
+- [08:03] Lo que pasa es que actualmente
+- [08:05] tenemos un centro de costo por empresa
+- [08:07] por ejemplo, no está administración
+- [08:09] general, sino que está administración
+- [08:11] Almahue, administración ALM
+- [08:13] administración Santa Pilar, administración
+- [08:15] Los Palos
+- [08:15] ¿Cada empresa tiene su centro de costo
+- [08:19] con apellido. Entonces, la idea
+- [08:21] es que acá vayan los centros de
+- [08:23] costo por empresa.
+- [08:25] Por ejemplo, todos los que empiezan con
+- [08:27] uno son de LM.
+- [08:29] Los que están con dos son de Almagüe.
+- [08:32] Los que están
+- [08:33] con tres, si no me equivoco, son de Santa Pilar.
+- [08:38] Por ejemplo,
+- [08:39] ya te entiendo, pero ahí
+- [08:40] esos centros de costo, como bien dices tú,
+- [08:43] por ejemplo, si yo estoy trabajando
+- [08:45] en la empresa Almagüe, me deberían
+- [08:47] estar solamente los centros de costo de Almagüe,
+- [08:49] ¿cierto? Sí.
+- [08:50] Y si estoy en otra empresa X, me listo a los centros de costos de la empresa X.
+- [08:55] Exacto.
+- [08:56] Ya, entonces aquí, Carlos, mira, ¿puede ir al mantener de centros de costos?
+- [09:03] ¿No lo tienen?
+- [09:09] Centros de costos.
+- [09:10] Ya, entonces ahí yo creo que hay una confusión.
+- [09:14] ¿Por qué? Porque si te das cuenta arriba dice Armago SBA.
+- [09:18] Sí.
+- [09:18] entonces todo
+- [09:20] lo que carguen
+- [09:23] en esta pantalla, por ejemplo, si le ponen
 - [09:25] nuevo centro
-- [09:27] si le ponen nuevo centro Carlos
-- [09:29] cuando tú lo crees
-- [09:31] aquí este centro se va a asociar
+- [09:26] cuando tú
+- [09:28] lo crees, aquí
+- [09:31] este centro se va a asociar
 - [09:33] de forma automática directamente
-- [09:35] Almagüe SBA
-- [09:37] entonces hay que
-- [09:39] hay que aromar subido
-- [09:41] claro entonces en realidad la columna
-- [09:43] empresa no sé si sea necesaria
-- [09:45] porque toda la información que
-- [09:47] se visualiza en el sistema
-- [09:49] va a ir asociado a la empresa Almagüe SBA
-- [09:51] la que está seleccionada arriba
-- [09:53] lo explico? si
-- [09:55] se entiende Carlos? si
-- [09:57] si
-- [09:59] ok
-- [10:01] una pequeña interrupción
-- [10:03] oye consulta Sergio en esa metodología
-- [10:05] por ejemplo si yo estoy creando
-- [10:07] en Almagüe SBA y el centro de costo
-- [10:09] igual sería
-- [10:11] 10 100 daian Almagüe
-- [10:13] supongamos que estamos en Almagüe
-- [10:15] después quiero crear en Almagüe el 10 100
-- [10:17] pero que sea daian Almagüe
-- [10:19] no se va a amarear el sistema
-- [10:21] o se va a seguir un código
-- [10:23] que se adivende en la otra empresa
-- [10:25] por ejemplo tú si quieres un centro de costo
-- [10:27] que diga no sé
-- [10:29] no pero por ejemplo
-- [10:31] el 10 100
-- [10:33] y ese centro de costo
-- [10:35] ese código tú lo puedes utilizar en Almagüe
-- [10:37] o la otra
-- [10:39] la N empresa que tú tengas
-- [10:41] ya entiendes? ahí no va a ser
-- [10:43] es necesario mirar el apellido
+- [09:35] al MAW SBA
+- [09:36] entonces hay que
+- [09:39] dar un mal subido
+- [09:40] claro, entonces aquí en realidad
+- [09:42] la columna empresa, no sé si sea
+- [09:45] necesario porque toda la información que
+- [09:47] ustedes visualicen en el sistema
+- [09:49] va a ir asociado a la empresa
+- [09:51] AlmaUSP, a la que está seleccionada arriba.
+- [09:53] ¿Me explico? Sí.
+- [09:55] ¿Se entiende, Carlos?
+- [09:57] Sí, sí.
+- [09:59] Ok.
+- [10:00] Se agradece una pequeña interrupción.
+- [10:03] Oye, consulta, Sergio, en ese
+- [10:05] metodología, por ejemplo, si yo
+- [10:06] estoy creando en AlmaUSP y el
+- [10:08] centro de costo igual sería
+- [10:10] 10.100 Dayan
+- [10:12] AlmaUSP, supongamos que estamos en AlmaUSP,
+- [10:14] y yo después quiero crear en LM
+- [10:16] el 10100 pero que sea
+- [10:18] Dayana LM, ¿no se va a marear
+- [10:20] el sistema? ¿O tengo que igual seguir un
+- [10:22] código que sea diferente a la otra empresa?
+- [10:25] Por ejemplo, tú si quieres
+- [10:26] un centro de costo que diga, no sé
+- [10:28] un número, por ejemplo
+- [10:29] el 10100
+- [10:31] y ese centro de costo
+- [10:34] ese código, tú lo puedes utilizar
+- [10:36] en Almahue o en la otra
+- [10:38] la N empresa que tú tengas
+- [10:40] ¿Se entiende?
+- [10:42] Ahí no va a ser necesario agregarle
+- [10:44] el apellido
 - [10:45] al centro de costo
-- [10:47] porque tú
-- [10:49] vas a estar trabajando con la información
+- [10:47] porque tú, como digo, vas a estar
+- [10:49] trabajando con la información
 - [10:51] cargada de ese sistema
-- [10:57] o de esa empresa que está seleccionada
-- [10:59] entonces
-- [11:13] acá por ejemplo
-- [11:15] quizás claro por eso
-- [11:17] no pareciera que fuera de esta empresa
-- [11:19] pero claro según lo que nos dice Sergio
-- [11:21] estos deberían ser solamente los que corresponden
+- [10:53] ¿ya?
+- [10:56] o de esa
+- [10:58] empresa que estás seleccionando
+- [10:59] entonces acá
+- [11:13] por ejemplo
+- [11:14] quizás claro, por eso
+- [11:16] no pareciera que
+- [11:19] fuera de esta empresa, pero claro, según lo que nos dice
+- [11:21] Sergio, estos deberían ser solamente los que corresponden
 - [11:23] a la empresa que estamos actualmente
 - [11:25] claro
-- [11:27] entonces por ejemplo acá podemos ver
-- [11:32] una que ya tenemos pendiente
-- [11:36] están las servicios agrícolas del valle
-- [11:38] bueno aquí podemos ver también lo que
-- [11:45] vendría a hacer la asociación de los labores
-- [11:47] que aquí al seleccionar
-- [11:55] debería aparecer aquí habilitado la
-- [11:57] botón para poder
-- [11:59] agritarlos
-- [12:01] y ahí se puede asignar directamente
-- [12:06] a la pro forma
-- [12:08] bueno aquí un pequeño resumen
-- [12:10] lo que vendría a hacer las tarifas
-- [12:12] que también está configurables
-- [12:14] según lo solicitado
-- [12:16] donde también sería el contratista
-- [12:18] la labor
-- [12:20] se selecciona la unidad
-- [12:22] centro de costos y las vigencias
-- [12:24] y pasaríamos directo
-- [12:27] a lo que vendrían a hacer las
-- [12:29] pro formas
-- [12:31] aquí como estamos directamente en el administrador
-- [12:33] del sistema nos aparece el flujo completo
-- [12:35] que estos vendrían a hacer
-- [12:37] también los botones de aprobar y rechazar
-- [12:39] pero si un usuario
-- [12:41] está
-- [12:43] realizando la pro forma
-- [12:45] aquí le va a aparecer un botón de solicitar
-- [12:47] que de hecho si más no me cugo
-- [12:49] que tengo un usuario acá
-- [12:55] como le aparece el status
-- [12:57] cuando están esperados de la aprobación
-- [12:59] estos son nombres de demostración
-- [13:11] cualquier parecido con la realidad
-- [13:13] es mera coincidencia
-- [13:15] este se me impide confirmar el periodo
-- [13:19] estamos en el modo demo
-- [13:21] por eso aquí aparece información
-- [13:23] aquí estaba el modo real
-- [13:25] y este usuario que pidió la pro forma
-- [13:27] le aparecería así el flujo
-- [13:29] y su respectivo estado
-- [13:31] dependiente de aprobación
-- [13:33] hasta que se apruebe por parte del administrador
-- [13:35] y bueno en este caso
-- [13:40] dependiendo de los que aparezcan
-- [13:42] la parametrización
-- [13:44] de los que vendrían a hacer
-- [13:48] perdón
-- [13:50] en la administración de las reglas de aprobadores
-- [13:52] en este caso como podemos ver
-- [13:54] tenemos lo que vendrían a hacer para contratistas
-- [13:56] a Elena
-- [13:58] y al superadding
-- [14:00] que de hecho Elena está duplicada en dos reglas
-- [14:02] así que esta no vale
-- [14:04] que la podemos eliminar sin problemas
-- [14:07] entonces bueno
-- [14:09] a pesar de que estas dos personas tengan
-- [14:11] la opción de un asignarle el aprobador
-- [14:13] ellos dentro de su menú también pueden ver
-- [14:15] como aquí bien vimos
-- [14:17] con el administrador
-- [14:19] las demás aprobaciones
-- [14:21] a pesar de que sea para Elena
-- [14:23] el administrador también va a poder aprobar
-- [14:25] mostrándole una advertencia de que
-- [14:27] está aprobando al nombre de otra persona
-- [14:29] si desea continuar
-- [14:31] y también va a quedar evidencia de esto
-- [14:33] más que nada pensando en que
-- [14:35] hay alguna persona que esté realizando algún tipo de reemplazo
-- [14:37] o todo dependiendo de las reglas
-- [14:39] va a poder tener también la posibilidad de aprobar por el demás
-- [14:41] siempre y cuando se haya definido como
-- [14:43] en la configuración
-- [14:45] de aprobación así
-- [14:49] aquí también podemos ver un menú rápido
-- [14:51] pensando en que una persona podría tener
-- [14:53] muchas aprobaciones de lo que vendría a hacer solamente
-- [14:55] el sistema de las solicitudes que le han realizado
-- [14:57] acá la idea también
-- [14:59] es que junto con las notificaciones
-- [15:01] hay un contador de las que tenga pendiente
-- [15:03] para que la persona pueda estar
-- [15:05] de forma más rápida viendo cuáles son los
-- [15:07] que están ahí y no necesariamente
-- [15:09] dará notificaciones ya que esta se pueden marcar como
-- [15:11] leídas una vez uno le hace un click
-- [15:13] y lo que podríamos ver
-- [15:19] es el traspaso
-- [15:21] y los cierres
-- [15:23] y ahí en el tema de contratistas
-- [15:25] cuando igual haya un error que se detecta
-- [15:27] si ya está aprobada la proforma igual se puede
-- [15:29] reversar y editar
-- [15:31] exacto
-- [15:33] de hecho aquí por ejemplo
-- [15:35] debería parecerle el rechazar
-- [15:37] pero por ejemplo si ya la pusiera
-- [15:39] aprobada
-- [15:41] y después quisiera modificarla
-- [15:43] debería permitir
-- [15:45] antes de asociar
-- [15:47] la factura te deja editarlo desde acá
-- [15:49] y hay que asociarle el número
-- [15:54] de factura
-- [15:56] pero ahí aunque esté aprobada te deja modificarlo
-- [15:58] ya eso igual habría que me cambiarlo
-- [16:00] porque puede que yo esté aprobando algo
-- [16:02] y después la modifique la analista
-- [16:04] y yo no me percate de que lo edito
-- [16:06] perfecto
-- [16:09] claro ahí lo que se está aprobado debería
-- [16:11] quedar sin edición tampoco eliminar o no
-- [16:13] claro si está aprobada debería
-- [16:15] quedar solamente
-- [16:17] para asociar a la factura
-- [16:19] y en caso de poder reversar
-- [16:21] la aprobación
-- [16:23] pero que eso sea como competición de
-- [16:25] actualmente lo hacemos
-- [16:27] con clave no sé si se podrá
-- [16:29] y por ejemplo
-- [17:01] o sea igual está bien
-- [17:03] pero en caso
-- [17:05] a futuro no sé hay que asociar y ya deja
-- [17:07] de
-- [17:09] de como se llama de pertenecer
-- [17:11] o cambiar el rol
-- [17:13] la única solución
-- [17:15] es cambiar la clave para todo
-- [17:17] lo que pasa es que el tema
-- [17:19] de la clave no aparece solamente
-- [17:21] a nosotros por el perfil
-- [17:23] entonces un analista no le sale la opción
-- [17:25] de ingresar clave ni nada
-- [17:27] no claro entiendo entiendo
-- [17:29] pero como digo si es que
-- [17:31] un usuario que quisieran
-- [17:33] ah entonces cambiaría
-- [17:35] en el perfil simplemente
-- [17:37] claro es como que yo
-- [17:39] tengo la opción de
-- [17:41] hacer la reversa
+- [11:25] Claro. Entonces, por ejemplo, acá podemos ver una que ya tenemos pendiente. Están las servicios agrícolas del valle. Bueno, aquí podemos ver también lo que vendría a ser la asociación de las labores, que aquí, al seleccionar, debería aparecer aquí habilitada la... botón para poder habilitarlos. Ahí. Y ahí se puede asignar directamente a la proforma.
+- [12:08] Ya, buenísimo
+- [12:09] Bueno, aquí un pequeño resumen de lo que vendrían a ser las tarifas
+- [12:12] Que también está configurable, según lo solicitado
+- [12:14] Donde también se vería el contratista, la labor
+- [12:18] Se selecciona la unidad
+- [12:20] Centro de costos
+- [12:23] Y las vigencias
+- [12:24] Y pasaríamos directo a lo que vendrían a ser las proformas
+- [12:30] Aquí como estamos directamente en el administrador del sistema
+- [12:34] Nos aparece el flujo completo
+- [12:36] que estos vendrían a ser también los botones de aprobar y rechazar pero si un usuario está
+- [12:42] realizando la proforma aquí le va a aparecer un botón de solicitar que de hecho si mal no me
+- [12:48] equivoco tengo un usuario acá de cómo le aparece el estatus cuando están en espera de la aprobación
+- [12:58] estos son nombres de demostración cualquier parecido con la realidad es mera coincidencia
+- [13:14] disidencia. Entonces me pide confirmar el periodo. Estamos en el modo demo, por eso
+- [13:22] aquí aparece información, estaba en el modo real. Y este usuario que pidió la proforma
+- [13:28] le aparecería así el flujo y su respectivo estado dependiente de aprobación hasta que
+- [13:34] se apruebe por parte del administrador. Y bueno, en este caso, dependiendo de los que
+- [13:42] aparezcan en la parametrización de los que vendrían a ser perdón en la
+- [13:50] administración de las reglas de aprobadores en este caso como podemos
+- [13:53] ver tenemos lo que vendría a ser para contratistas
+- [13:57] a elena y el superadmin que de hecho elena está duplicada en dos reglas así
+- [14:02] que esta no vale que la podemos eliminar sin problema entonces bueno a pesar de
+- [14:09] que estas dos personas tengan la opción de una asignarle el aprobador ellos
+- [14:14] Dentro de su menú también pueden ver, como aquí bien vimos con el administrador, las demás aprobaciones a pesar de que sea para Elena, el administrador también va a poder aprobar y viceversa, mostrándole una advertencia de que está aprobando a nombre de otra persona si desea continuar y también va a quedar evidencia de esto más que nada pensando en que hay alguna persona que esté realizando algún tipo de reemplazo, todo dependiendo de las reglas va a poder tener también la posibilidad de aprobar por el demás,
+- [14:42] Siempre y cuando se haya definido como en la configuración de aprobación así
+- [14:46] Aquí también podemos ver un menú rápido
+- [14:51] Pensando en que una persona podría tener muchas aprobaciones
+- [14:54] De lo que vendría a ser solamente el sistema de las solicitudes que le han realizado
+- [14:58] Acá la idea también es que junto con las notificaciones
+- [15:01] Hay un contador de las que tenga pendiente
+- [15:04] Para que la persona pueda estar de forma más rápida
+- [15:06] Viendo cuáles son los que están ahí
+- [15:08] Y no necesariamente de aquellas notificaciones
+- [15:10] ya que estas se pueden marcar como
+- [15:11] leídas una vez uno las hace un clic
+- [15:14] y lo que podríamos ver
+- [15:20] el traspaso y los
+- [15:22] cierres. Y ahí en el tema
+- [15:24] de contratistas cuando igual haya un error
+- [15:26] que se detecte una vez que ya está aprobada
+- [15:28] la proforma, igual se puede reversar y editar
+- [15:30] Exacto
+- [15:32] Ya
+- [15:32] De hecho aquí por ejemplo debería aparecerle
+- [15:36] el rechazar
+- [15:37] Pero por ejemplo si yo la pusiera
+- [15:39] aprobada y después quisiera
+- [15:42] modificarla
+- [15:42] Debería permitir
+- [15:44] Antes de asociar la factura
+- [15:48] Te deja editarlo desde acá
+- [15:49] Y hay que asociarle el número de factura
+- [15:54] Pero ahí aunque esté aprobada
+- [15:56] Te deja modificarlo
+- [15:57] Exacto
+- [15:58] Ya eso igual habría que cambiarlo
+- [16:00] Porque puede que yo esté aprobando algo
+- [16:02] Y después lo modifique el analista
+- [16:03] Y yo no me percate de que lo editó
+- [16:05] Perfecto
+- [16:08] Claro, si está aprobado
+- [16:10] Debería quedar sin edición
+- [16:12] Tampoco eliminar, ¿o no?
+- [16:14] Claro, si está aprobada
+- [16:15] debería quedar solamente para asociar a la factura y en caso de poder reversar la aprobación pero que
+- [16:23] eso sea como competición d actualmente lo hacemos con clave no sé si se podrá por ejemplo si está
+- [17:03] bien pero en caso de futuro no sé x usuario ya deja de de cómo se llama de pertenecer o cambiar
+- [17:12] el rol, la única
+- [17:14] solución es cambiar la clave
+- [17:16] para todo. Lo que pasa es que
+- [17:18] el tema de la clave
+- [17:20] no aparece solamente a nosotros por el
+- [17:22] perfil. Entonces, un analista
+- [17:24] no le sale la opción de ingresar
+- [17:26] clave ni nada.
+- [17:28] No, claro, entiendo, entiendo. Pero
+- [17:30] como te digo, si es que un usuario
+- [17:32] quisiera ya
+- [17:33] entonces cambiaría el perfil
+- [17:36] simplemente. Claro.
+- [17:38] Es como que yo tengo la opción
+- [17:40] de hacer la reversa
 - [17:43] o el rechazo de documentos
-- [17:45] con clave pero por ejemplo
-- [17:47] el analista no tiene esa opción
-- [17:49] no le sale la opción de reversa
-- [17:51] claro entiendo
-- [17:53] yo creo que igual para dejarlo como un poquito más
+- [17:45] con clave, pero por ejemplo
+- [17:47] el analista no tiene esa opción, no le sale la opción
+- [17:49] de reversa
+- [17:50] claro, entiendo
+- [17:52] yo creo que igual para dejarlo como un poquito más
 - [17:55] estándar María Jesús
-- [17:57] lo podríamos dejar a nivel
-- [17:59] por usuario que cada usuario
-- [18:01] registre si es como supervisor
+- [17:56] lo podríamos dejar a nivel
+- [17:59] por usuario, que cada usuario
+- [18:00] si es como supervisor
 - [18:03] o registre
 - [18:05] su clave
-- [18:07] y después cada uno la va
-- [18:09] a manejar obviamente pero si tiene
-- [18:11] perfil digita su clave
-- [18:13] y va a poder hacer la reversa
-- [18:15] todo lo necesario claro
-- [18:17] puede editar
-- [18:19] pero sí como cada un usuario
-- [18:21] para que el tema de futuro
-- [18:23] si alguien no se tiene problemas a clave
-- [18:25] no tenga que afectar a todos
+- [18:06] y después cada uno
+- [18:09] la va a manejar obviamente
+- [18:10] pero si tiene perfil
+- [18:11] digita su clave y va a poder
+- [18:14] hacer la reverse de todo lo necesario
+- [18:16] claro, poder editar
+- [18:18] pero si como cada
+- [18:20] usuario su clave
+- [18:21] para que el tema de futuro si alguien
+- [18:24] tiene problemas a clave no tenga que
+- [18:26] afectar a todos
 - [18:27] como supervisores
 - [18:29] si
-- [18:31] si, lo ideal es que quede
-- [18:33] como la separación
-- [18:35] entre
-- [18:37] editar y modificar
-- [18:42] perfecto estoy tomando nota María que hay un poquitito
-- [18:44] pero el canso es escuchar bien
-- [19:04] entonces ahora
-- [19:09] con lo que vendría a ser las compras
-- [19:11] aquí podemos ver lo que vendría
-- [19:17] a ser la lista de los proveedores
-- [19:19] también tenemos un módulo
-- [19:21] de aprobación como lo vimos
-- [19:23] en el panel
-- [19:25] de los contratistas con las performas
-- [19:27] aquí como tal vendría a ser
-- [19:30] las órdenes de compra
-- [19:32] aquí podemos ver un detalle
-- [19:37] la cual es ya está anulada
-- [19:39] no cual está aprobada
-- [19:43] y otra con estado
-- [19:48] emitido
-- [19:55] en este caso también se podría realizar la impresión
-- [19:57] del documento pero si por lo que tenía entendido
-- [19:59] esta versión solamente
-- [20:01] muestra un pequeño detalle de
-- [20:03] lo que se trae de acá más no todo el detalle
-- [20:05] esto se tiene que todavía recalcular pero ya está funcionando
-- [20:07] conectado a la
-- [20:09] exportación en caso de que se necesite imprimir
-- [20:11] ya
-- [20:16] tendría a ser el panel donde se ven las recepciones
-- [20:18] y aquí
-- [20:25] el menú del libro de compras
-- [20:27] aquí no sé si es que era falta
-- [20:34] hay or detalle en lo que vendría a ser la órdenes
-- [20:36] de compra asociada
-- [20:38] a cada una
-- [20:40] que tenemos acá en la lista
-- [20:42] pero por ejemplo ahí se está viendo por factura
-- [20:46] si, exacto
-- [20:48] es por factura la órdenes de compra asociada
-- [20:50] de hecho acá ese nombre
-- [20:52] no aplicaría porque se ve por factura
-- [20:54] ya
-- [20:56] yo voy a anotar acá de que ese iniciar
-- [20:58] tiene que eliminarse
-- [21:01] pero ahí por ejemplo saldría la factura
-- [21:03] y en base al nombre
-- [21:05] del proveedor las órdenes de compra que tenemos
-- [21:07] para el proveedor
-- [21:09] bueno aquí dependiendo si es que tienen filtros
-- [21:11] para mostrarlo directamente por proveedor
-- [21:13] si porque cuando tú muestras el detalle
-- [21:15] es alevorador, anulada y emitida para eso
-- [21:17] ¿no?
-- [21:19] claro
-- [21:21] entonces ahí deberían aparecer no solamente
-- [21:23] las que están aprobadas y recepcionadas
-- [21:25] las de van no deberían aparecer ahí
-- [21:31] que en realidad sería la factura
-- [21:33] o sea ahí
-- [21:35] por ejemplo ahí vas a ver un registro
-- [21:37] una factura, ¿cierto?
-- [21:39] exacto
-- [21:41] va a estar la factura y la factura
-- [21:43] o va a estar en la sala solamente
-- [21:45] las órdenes de compra
-- [21:47] aprobadas
-- [21:49] aprobadas y recepcionadas
-- [21:51] lo que pasa es que son dos procesos distintos
-- [21:53] porque la aprobación
-- [21:55] la hace el jefe del departamento
-- [21:57] que solicitó el servicio en este caso
-- [21:59] o la exigencia
-- [22:01] y la recepción la hacemos nosotros un momento
-- [22:03] que el servicio se efectúa
-- [22:05] entonces necesitamos que tenga estado
-- [22:07] aprobado y estado recepcionado
-- [22:09] porque una vez que está aprobada
-- [22:11] solamente se aprueba
-- [22:13] para que se emita el documento
-- [22:15] o sea el servicio
-- [22:17] pero cuando se recepciona es cuando
-- [22:19] nosotros lo reconocemos al gasto
-- [22:21] que eso puede ser en el mismo mes
-- [22:23] un mes siguiente, dos meses después
-- [22:27] entonces con
-- [22:42] el módulo de ventas
-- [22:52] aquí como podemos ver tenemos
-- [22:54] el detalle de cada uno
-- [22:56] de los folios junto con
-- [22:58] un pequeño menú lateral acá donde podemos
-- [23:00] tener los que son compras
-- [23:02] o los que son despachados directamente
-- [23:04] ahí, ahí consulta
-- [23:09] será necesario comprar
-- [23:11] no estará separado eso
-- [23:13] si, debe ser
-- [23:15] debe estar solo ventas
-- [23:17] ah claro y los despachos
-- [23:19] donde como lo manejan
-- [23:21] es que los despachos
-- [23:23] lo que es
-- [23:25] los despachos deberían quedar solamente
-- [23:27] en el movimiento de bodega
-- [23:29] perfecto
-- [23:33] vamos a ver lo que es el movimiento
-- [23:35] y llevar un detalle
-- [23:37] pero en realidad el libro de ventas
-- [23:39] es el documento en sí
-- [23:41] que está asociado
-- [23:43] ahí los despachos
-- [23:45] claro, ustedes emiten guía igual
-- [23:47] si, emitimos guía
-- [23:49] perfecto, entonces lo van a migrar
+- [18:30] lo ideal es que quede como
+- [18:34] la separación entre
+- [18:36] editar y
+- [18:38] modificar
+- [18:39] Perfecto, estoy tomando nota, me había caído un poquitito pero alcanzo a escuchar bien
+- [18:45] Vamos entonces ahora con lo que vendría a ser las compras
+- [19:11] Aquí podemos ver lo que vendría a ser la lista de los proveedores
+- [19:18] También tenemos un módulo de aprobación
+- [19:22] Como lo vimos en el panel de los contratistas con las performance
+- [19:27] Aquí como tal vendría a ser las órdenes de compra
+- [19:33] Aquí podemos ver un detalle, la cual ya está anulada
+- [19:40] la cual está aprobada
+- [19:43] y otra con estado emitido
+- [19:49] en este caso también se podría
+- [19:56] realizar la impresión del documento
+- [19:58] pero si, por lo que tenía entendido
+- [19:59] esta versión solamente muestra un pequeño detalle
+- [20:02] de lo que se trae de acá
+- [20:04] más no todo el detalle, esto se tiene que todavía recalcular
+- [20:06] pero ya está funcionando y conectado
+- [20:08] a la exportación en caso de que
+- [20:10] se necesite imprimir
+- [20:12] esto tendría que ser el panel
+- [20:17] donde se ven las recepciones
+- [20:18] y aquí el menú
+- [20:26] del libro de compras
+- [20:27] Aquí no sé si es que hará falta
+- [20:34] Mayor detalle en lo que vendría a ser
+- [20:36] Las órdenes de compra asociadas
+- [20:38] A cada una
+- [20:39] De las que tenemos acá en la lista
+- [20:42] Pero por ejemplo ahí se está viendo por factura
+- [20:46] Sí, exacto
+- [20:48] Es por factura las órdenes de compra asociadas
+- [20:49] De hecho acá ese nombre
+- [20:51] No aplicaría porque se ve por factura
+- [20:54] Ya
+- [20:55] Vamos a anotar acá de que ese inicial
+- [20:58] Tiene que eliminarse
+- [20:59] Pero ahí por ejemplo saldría
+- [21:02] la factura y en base al
+- [21:05] nombre del proveedor, las órdenes de compra
+- [21:07] que tenemos para el proveedor?
+- [21:09] Bueno, aquí dependiendo si es que tienen filtro,
+- [21:11] claro, podrían mostrarlo directamente por proveedor.
+- [21:14] Sí, porque ahí cuando tú muestras
+- [21:15] el detalle sale borrador, anulada y emitida
+- [21:17] para eso, ¿no?
+- [21:19] Claro.
+- [21:20] Entonces ahí deberían aparecer no solamente las que
+- [21:23] están aprobadas y recepcionadas,
+- [21:25] las demás no deberían aparecer ahí.
+- [21:31] Que en realidad serían las
+- [21:32] facturas, o sea, ahí
+- [21:34] Por ejemplo, ahí vas a ver un registro de una factura, ¿cierto?
+- [21:38] Exacto.
+- [21:39] Va a estar la factura y la factura va a facturar o va a estar enlazada solamente a órdenes de compra aprobadas.
+- [21:50] Aprobadas y recepcionadas. Lo que pasa es que son dos procesos distintos porque la aprobación la hace el jefe del departamento que solicitó el servicio en este caso, o la exigencia.
+- [22:00] Y la recepción la hacemos nosotros en un momento en que el servicio se efectúa.
+- [22:05] Entonces, necesitamos que tenga estado aprobado y estado recepcionado.
+- [22:10] Porque una vez que está aprobada, solamente se aprueba para que se emita el documento o se haga el servicio.
+- [22:16] Pero cuando se recepciona es cuando nosotros reconocemos el gasto.
+- [22:21] Que eso puede ser en el mismo mes, un mes siguiente, dos meses después.
+- [22:26] Perfecto, te lo digo.
+- [22:27] entonces con el módulo de ventas y como podemos ver tenemos el detalle de cada
+- [22:56] uno de los folios junto con un pequeño menú lateral acá donde podemos tener los
+- [23:02] que son compras son los que son despachados directamente ahí hay un
+- [23:09] consulta será necesario comprar no estará separado
+- [23:14] los despachos donde como lo manejan es que los despachos lo que es los despachos deberían quedar
+- [23:27] solamente en el movimiento de bodega perfecto podemos ver los tipos de movimientos y llevar
+- [23:35] un detalle pero en realidad el libro de ventas es netamente el documento en sí
+- [23:40] Ahí los despachos
+- [23:45] entonces, claro, ustedes emiten guía
+- [23:47] igual, ¿cierto? Sí, emitimos guía
+- [23:49] Ya, perfecto, entonces lo van a migrar
 - [23:51] para lo que es inventario
-- [23:53] María Jesús, el tema del go socket
-- [23:55] aún no haber nada
-- [23:57] mira, go socket mandamos
-- [23:59] firmamos documentos
+- [23:52] María Jesús, el tema del GoSocket
+- [23:55] ¿Aún no ven nada?
+- [23:57] Mira, GoSocket, mandamos la
+- [23:59] ya firmamos documentos
 - [24:01] y ya llevan una semana que no se han
 - [24:03] contactado con nosotros
-- [24:05] yo pretendo el lunes ya pegar
+- [24:04] Yo pretendo el lunes ya pegar
 - [24:07] un pequeño apretón
 - [24:09] para saber si
-- [24:13] un rejuñón
-- [24:15] para saber si van a poder lograr
-- [24:17] que tengamos la conexión en septiembre
-- [24:19] y si no lo vamos a postergar hasta la
-- [24:21] otra temporada
-- [24:23] porque en septiembre
-- [24:25] se nos renueva
-- [24:27] el contrato con acepto
-- [24:31] entonces necesitamos que sea agosto
-- [24:33] si o si el cambio de facturador
-- [24:35] por qué sabrán de bravo, tanto si
-- [24:40] lo que yo veo es que el comercial es
-- [24:42] el lento
-- [24:46] porque le tenemos que insistir
-- [24:48] muchas veces para que te vayamos
-- [24:50] recién una reunión inicial
-- [24:52] después mantémoslo y si tuvemos
-- [24:58] para tener la segunda reunión con las propuestas
-- [25:00] y así ha ido muy lento el
-- [25:02] comercial
-- [25:05] entonces eso quedaría pendiente
-- [25:10] de confirmar si es que
-- [25:12] osea que el lunes voy a mandar correo
-- [25:14] y yo creo que
-- [25:16] si yo partiría
-- [25:18] en la emisión directa de momento
-- [25:20] con gosuke
-- [25:22] de la deportancia
-- [25:24] y después
-- [25:26] trabajaría como
-- [25:28] la doble digitación
-- [25:30] osea por ejemplo acá en el sistema
-- [25:32] si no podemos
-- [25:34] asociar el facturador ya podría ser
-- [25:36] como una segunda tapa pero en realidad lo
-- [25:38] que nos importa es que por ejemplo
-- [25:40] acá nosotros también podemos cargar el libro
-- [25:42] de compras o por último nosotros cargar los pds
-- [25:44] porque nosotros tenemos la opción
-- [25:46] de descargarlo actualmente de hace
-- [25:48] por ejemplo
-- [25:50] si usted ya tiene gosuke
-- [25:52] le da lo ok y le entrega
-- [25:54] el portal para que pueda emitir en agosto
-- [25:56] y nos entrega la documentación para integrarnos
-- [25:58] nosotros eso dos semanas ya
-- [26:00] tenemos la integración lista
-- [26:02] si nosotros no importa que las dos
-- [26:04] plataformas sean funcionando
-- [26:06] y ya después vemos como la integramos
-- [26:08] no no pero
-- [26:10] el foco por nuestro lado es que
-- [26:12] utilicen una sola plataforma
-- [26:14] y por debajo se integran las demás
-- [26:16] si le dice sería el escenario ideal
-- [26:18] igual nosotros queremos
-- [26:20] yo creo que unos dos meses de prueba
-- [26:22] con agrazofico
-- [26:24] en esta nueva plataforma
-- [26:26] claro si si eso la tenemos
-- [26:28] contemplado con varios que la idea es
-- [26:30] que cuando nosotros ya entreguemos
-- [26:32] bueno como la marcha
-- [26:34] la encarga lea pero
-- [26:36] se va a solicitar que ustedes
-- [26:38] trabajen con agrazo
+- [24:11] un rejuñón
+- [24:14] para saber si
+- [24:16] van a poder lograr que tengamos la conexión
+- [24:19] en septiembre y si no lo vamos a postergar
+- [24:21] hasta la otra temporada
+- [24:22] ya
+- [24:24] porque en septiembre se nos renueva
+- [24:26] el contrato con Acepto
+- [24:29] entonces necesitamos que sea
+- [24:33] agosto sí o sí el cambio de
+- [24:35] facturador
+- [24:35] ¿por qué se habrá devorado tanto si
+- [24:41] lo que yo veo es que el comercial es lento
+- [24:44] le tuvimos que insistir muchas veces
+- [24:50] para que te fuéramos recién a una reunión
+- [24:52] inicial
+- [24:53] para tener la segunda reunión con las propuestas
+- [25:00] y así ha ido muy lento
+- [25:01] el comercial
+- [25:02] entonces eso quedaría pendiente
+- [25:10] a confirmar si es que
+- [25:12] o sea yo el lunes voy a mandar
+- [25:13] correo
+- [25:15] ¿Usted partiría en la emisión directa de momento con GoSoccer, desde el portal, cierto?
+- [25:24] Sí.
+- [25:25] Y después, claro, después sería, bueno, ¿trabajaría como la doble digitación?
+- [25:29] O sea, por ejemplo, acá en el sistema, si no podemos asociar el facturador, ya podría ser como una segunda etapa.
+- [25:37] Pero en realidad lo que nos importa es que, por ejemplo, acá nosotros también podamos cargar el libro de compras.
+- [25:41] O por último, nosotros cargar los PDFs.
+- [25:44] Porque nosotros tenemos la opción de descargarlo
+- [25:46] actualmente de Acepta, por ejemplo.
+- [25:48] Ah, no, no, no. O sea, por ejemplo, si usted
+- [25:50] ya tiene GoSocker
+- [25:52] y le da el OK y le entrega el portal
+- [25:54] para que puedan emitir en agosto y nos
+- [25:56] entregan la documentación para integrarnos, nosotros
+- [25:58] esos dos semanas ya tenemos
+- [26:00] la integración lista. Ah, buenísimo.
+- [26:03] Si a nosotros nos importa que las dos plataformas
+- [26:04] estén funcionando, independiente que sean
+- [26:06] separadas. Y ya después vemos
+- [26:08] cómo las integramos.
+- [26:10] No, no, pero el foco
+- [26:12] por nuestro lado es que
+- [26:13] utilicen una sola plataforma
+- [26:15] y por debajo se integran las demás
+- [26:17] Sí, ese sería el escenario ideal
+- [26:20] Igual nosotros queremos hacer
+- [26:21] yo creo que unos dos meses de prueba
+- [26:23] con AgroSoft y con esta
+- [26:26] nueva plataforma
+- [26:27] Claro, sí, sí, eso lo tenemos contemplado
+- [26:30] con varios, que la idea es que cuando nosotros
+- [26:32] ya entreguemos, bueno
+- [26:33] como la marcha blanca en realidad, pero
+- [26:35] se va a solicitar
+- [26:38] que ustedes trabajen con AgroSoft
 - [26:40] nosotros vamos a ir replicando la información
-- [26:42] de la reunión rp
-- [26:44] y verificar que
-- [26:46] cuadre con lo que está generando agrazo
-- [26:48] replico si vamos a trabajar
-- [26:50] de manera espejo
-- [26:52] debemos hacer el mismo reporte para estar la misma formación
-- [26:54] así es
-- [26:56] y ya cuando tengamos eso listo
-- [26:58] bueno la integración con la continuación
-- [27:00] funcionando ahí probamos
-- [27:02] un día sólo rp
-- [27:04] perfecto funciona todo ok
-- [27:06] y ahí
-- [27:08] vamos pronto
-- [27:10] maravilloso igual acá
-- [27:15] han avanzado super rápido
-- [27:17] si no si ya
-- [27:19] bueno como les comenté
-- [27:21] en el momento de la reunión nosotros ya tenemos
-- [27:23] una experiencia en desarrollo rp
-- [27:25] y facturación ectronica entonces
-- [27:27] por eso el avance
-- [27:29] es un poquito más notorio
-- [27:31] igual por ejemplo si hay alguna
-- [27:33] no sé por algún módulo
-- [27:35] que nosotros lo estemos viendo como muy básico
-- [27:37] o muy similar a grossoff
-- [27:39] la idea es que igual nos puedan dar ideas
-- [27:41] como de mejora
-- [27:43] claro
-- [27:45] si suena el problema bueno ahí
-- [27:47] yo tenía un maravilloso con carlo
-- [27:49] hay una observación
-- [27:51] y bueno todos sabemos que
-- [27:53] todo el movimiento de la empresa
-- [27:55] se centraliza en la contabilidad
-- [27:57] entonces
-- [27:59] yo creo que ahí es que donde tenemos
-- [28:01] que darle un poquito más ojo
-- [28:03] para que sea
-- [28:05] totalmente
-- [28:07] modular y en caso de que a futuro
-- [28:09] usted necesite un nuevo módulo
-- [28:11] una nueva funcionalidad y que afecte la
-- [28:13] contabilidad la idea
-- [28:15] que lo podamos implementar rápido
-- [28:17] y que sea
-- [28:19] totalmente un producto escalable
-- [28:21] si
-- [28:23] buenisimo
-- [28:30] vamos entonces continuando con lo que
-- [28:32] vendría a ser el libro de venta
-- [28:34] bueno aquí como estamos en el administrador
-- [28:36] nos muestran todas las acciones
-- [28:38] que puede tener cada uno
-- [28:40] de los folios que aparecen acá
-- [28:42] donde tenemos el mil DTE
-- [28:44] que eso vendría a ser directamente
-- [28:46] con lo que va con grossoff
-- [28:48] por ende todavía no aplicaría
-- [28:50] tenemos la posibilidad de reversar
-- [28:52] utilizándose los que van
-- [28:54] a dock con
-- [28:56] y la posibilidad también de grabar y contabilizar
-- [28:58] donde advierte
-- [29:00] que proviene de una reserva
-- [29:02] de una reversa perdón en caso de que sea
-- [29:04] por ejemplo ahí
-- [29:09] como bueno alguna solución
-- [29:11] si se reversa
-- [29:13] una factura
-- [29:15] en realidad una factura electrónica no se puede
-- [29:17] como anular
-- [29:19] o reversar en el DCI
-- [29:21] sin hacerlo no te ha creído
-- [29:23] entonces ahí
-- [29:25] rápidamente como idea
-- [29:27] podría ser que al momento reversar
-- [29:29] debido al motivo de reversa
-- [29:31] si va a hacer una anulación
-- [29:33] total
-- [29:35] corrección de texto
-- [29:37] lo que pasa es que por ejemplo
-- [29:39] en el libro de ventas
-- [29:41] una venta en sí una factura de venta
-- [29:43] no va a afectar el motivo
-- [29:45] cuando nosotros ingresemos la nota de crédito
-- [29:47] y débito tenemos que asesiar a la factura
-- [29:49] por eso es la idea
-- [29:51] por ejemplo
-- [29:53] tú tienes la factura ¿cierto?
-- [29:55] si te dice el cliente en la factura tanto
-- [29:57] necesito que la anules
-- [29:59] para que se eviten el trabajo
-- [30:01] de ir al formulario de emisión
-- [30:03] de la nota de crédito, cajear toda la
-- [30:05] información de la factura
-- [30:07] para emitir la nota de crédito
-- [30:09] por ejemplo acá en tu libro de ventas solamente
-- [30:11] por el botón
-- [30:13] reversar o anular
-- [30:15] le pones anular
-- [30:17] y que te pida anulación masiva
-- [30:19] tu seleccionas anulación masiva
-- [30:21] y le das aceptar simplemente
-- [30:23] y ahí de forma automática te emite
-- [30:25] la nota de crédito por el total de la factura
-- [30:27] ¿me explico?
-- [30:29] osea te explicas pero no se como va a funcionar
-- [30:31] eso con el tema de gozocker
-- [30:33] porque gozocker igual cuando yo emite el documento
-- [30:35] de nota de crédito me va a llamar los datos
-- [30:37] del cliente
-- [30:39] si todo te lo llevo
-- [30:41] lo que pasa es que en el libro de venta
-- [30:43] no debiese quedar ningún documento anulado
-- [30:45] ni reversado
-- [30:47] se supone que esto se compara con el servicio impuesto interno
-- [30:49] entonces ¿cuáles son los motivos
-- [30:51] que no solo reversamos una factura
-- [30:53] es porque nos dimos cuenta que nos equivocamos
-- [30:55] en el centro de costo
-- [30:57] que nos equivocamos en la cuenta contable
-- [30:59] pero en si el documento existe
-- [31:01] y hay como una
-- [31:03] como una regla
-- [31:05] que por ejemplo si yo tengo
-- [31:07] el documento 300
-- [31:09] no puede
-- [31:11] no puede ingresar 2 300
-- [31:13] no claro
-- [31:15] porque el folio se asocia
-- [31:17] en los documentos
-- [31:19] en el libro de venta
-- [31:21] tiene que quedar todo siempre contabilizado
-- [31:23] lo que podemos hacer es modificar información
-- [31:25] pero si o si la factura existe
-- [31:27] ¿y qué información modificas
-- [31:29] ah pero modificas
-- [31:31] como contable en realidad
-- [31:33] exactamente modificación contable
-- [31:35] por ejemplo no pueden modificar
-- [31:37] los detalles
-- [31:39] no los que se modifican es por ejemplo
-- [31:41] no ser el centro de costo
-- [31:43] que era no ser Dayan y la cambiamos
-- [31:45] Siruela o la cambiamos Eresa
-- [31:47] que la imputamos en no sé
-- [31:49] venta exportación y la venta nacional
-- [31:51] eso de Tegus
-- [31:53] si los cambiamos en la factura
-- [31:55] y por eso existen reversas
-- [31:57] en el otro sistema
-- [31:59] pero no es que la factura en si queda anulada
-- [32:01] porque es una factura válida
-- [32:08] te entiendo
-- [32:10] claro porque en el rcb de lsi
-- [32:12] esa factura igual te registra
-- [32:14] y o si esa factura
-- [32:16] aunque esté anulada con una nota de crédito
-- [32:18] yo tengo que ingresar en mi libro de venta
-- [32:20] te entiendo
-- [32:24] pero entonces en realidad
-- [32:26] esa anulación
-- [32:28] no la marcaría como anulada
-- [32:30] simplemente que sería un acceso rápido
-- [32:32] y mentir la nota de crédito
-- [32:34] claro en este caso si yo ingreso
-- [32:36] una factura y la quiero reversar
-- [32:38] sería netamente para poder modificar
-- [32:40] algún dato
-- [32:42] pero dato contable
-- [32:47] entonces en cierto modo acá la acción
-- [32:49] sería solo la edición
-- [32:51] si
-- [32:55] sería grabar y contabilizar nomás
-- [32:57] y en caso de reversar sería
-- [32:59] para poder de nuevo contabilizarla
-- [33:01] pero si o si tiene que quedar contabilizada
-- [33:03] y el grabar y contabilizar
-- [33:05] a qué se refiere porque la factura ya está
-- [33:07] como creada
-- [33:09] ahí ya tengo una duda porque en este módulo
-- [33:11] yo no... ejemplo dice
-- [33:13] nuevo documento
-- [33:15] entonces yo ahí se supone que
-- [33:17] ingresar la nota de la factura
-- [33:19] la cuenta contable, centro de costo y toda la cantidad
-- [33:21] cierto?
-- [33:23] claro y el cliente
-- [33:25] la referencia
-- [33:27] hay que incorporar acá también
-- [33:29] y lo... si tiene descuento
-- [33:31] recargo
-- [33:33] ya
-- [33:35] entonces aquí sería solamente
-- [33:37] contabilizar
-- [33:39] guardar y contabilizar
-- [33:41] hay pero por ejemplo cuando le da
-- [33:43] guardar y contabilizar ahí se va a emitir el documento
-- [33:45] se va a ir al socket
-- [33:47] y se va a contabilizar
-- [33:49] cierto? o tú quieres por ejemplo
-- [33:51] cuando le pongas nuevo documento
-- [33:53] y ese se cree como un
-- [33:55] un borrador llévemoslo así
-- [33:57] y después cuando tú estés 100% segura
-- [33:59] desde el libre venta le das
-- [34:01] grabar y contabilizar
-- [34:03] ahí hay que ir con la duda porque
-- [34:05] nosotros vamos a facturar directo
-- [34:07] de go socket o directo del RP
-- [34:09] directo del RP
-- [34:11] como te decía
-- [34:13] todo lo que tú crees acá
-- [34:15] en una sola plataforma
-- [34:17] en el RP
-- [34:19] por debajo para ti va a ser totalmente
-- [34:21] transparente y por debajo va a enviar
-- [34:23] información a go socket y go socket
-- [34:25] se encarga de informar al ECI
-- [34:27] pero
-- [34:29] ustedes van a trabajar con una sola plataforma
-- [34:31] que sería al RP
-- [34:33] no entiendo
-- [34:36] entonces en ese caso si podría quedar
-- [34:38] a un lado un documento
-- [34:40] por eso tiene que ser
-- [34:42] pero claro queda acá
-- [34:44] como a un lado pero en realidad
-- [34:46] en el servicio nuestro interno
-- [34:48] es una venta válida o sea siempre a ser válida
-- [34:50] se trabaja con la nota de crédito
-- [34:52] pero bueno
-- [34:54] quizá lo que podríamos poner en este módulo
-- [34:56] sería que cuando uno ingrese al documento
-- [34:58] poner grabar
+- [26:42] en la reunión de ARP
+- [26:43] y verificar que
+- [26:46] cuadre con lo que está generando
+- [26:48] AgroSoft, ¿me explico?
+- [26:49] Sí, vamos a trabajar de manera espejo
+- [26:51] deberíamos hacer el mismo reporte y aparecer la misma información
+- [26:54] Así es
+- [26:55] y ya cuando tengamos eso listo
+- [26:57] la integración con la estructura se va funcionando
+- [27:00] ahí probamos
+- [27:01] y probemos un día solo
+- [27:03] RP, perfecto, funciona todo
+- [27:06] ok, y ahí
+- [27:07] nos vamos pronto
+- [27:09] Maravilloso, igual acá
+- [27:14] Yo siento que han avanzado súper rápido.
+- [27:18] Sí, no, sí, ya... Bueno, como les comenté, en su momento en la reunión nosotros ya tenemos una experiencia en desarrollo de RPA y facturación electrónica, entonces, por eso el avance es un poquito más notorio.
+- [27:32] Igual, por ejemplo, si hay alguna, no sé, algún módulo que nosotros lo estemos viendo como muy básico o muy similar a Grossof, la idea es que igual nos puedan dar ideas como de mejora.
+- [27:43] Claro.
+- [27:44] Sí, sin problema. Bueno, yo tenía, me reuní con Carlos, hay unas observaciones, bueno, todos sabemos que todo el movimiento de la empresa se centraliza en la contabilidad.
+- [27:57] Entonces, yo creo que ahí es que es donde tenemos que darle un poquito más de ojo para que sea totalmente modular y en caso que a futuro ustedes necesiten un nuevo módulo, una nueva funcionalidad que afecte la contabilidad,
+- [28:14] la idea que lo podamos implementar
+- [28:16] rápido y que sea
+- [28:18] totalmente un producto escalable
+- [28:20] si
+- [28:21] buenísimo
+- [28:23] dale Carlos
+- [28:28] vamos entonces
+- [28:30] continuando con lo que vendría a ser el libro de venta
+- [28:33] bueno aquí como estamos en el administrador
+- [28:34] nos muestran todas las acciones
+- [28:36] que puede tener
+- [28:38] cada uno de los folios que aparecen acá
+- [28:41] donde tenemos
+- [28:43] emir.de que eso vendría a ser directamente
+- [28:45] con lo que va con GoSocket por ende todavía
+- [28:46] no aplicaría. Tenemos la posibilidad de reversar, actualizándose los que van a DocCon, y la
+- [28:55] posibilidad también de grabar y contabilizar. Donde advierte que proviene de una reversa
+- [29:02] en caso de que sea. Por ejemplo ahí, como una solución, si se reversa una factura,
+- [29:14] En realidad una factura electrónica no se puede como anular o reversar en el DSI sin hacer una nota de crédito. Entonces ahí rápidamente, como idea, podría ser que al momento de reversar se pida el motivo de reversa. Si va a ser una anulación total, corrección de monto, corrección de texto. ¿Me explico?
+- [29:37] lo que pasa es que por ejemplo en el libro de ventas
+- [29:40] una venta en sí, una factura
+- [29:42] de venta, no va a afectar el motivo
+- [29:44] cuando nosotros ingresamos
+- [29:46] la nota de crédito y débito, tenemos que asociarla
+- [29:48] a la factura
+- [29:49] por eso es la idea, mira, por ejemplo
+- [29:52] tú tienes la factura, ¿cierto?
+- [29:54] y te dice el cliente la factura tanto
+- [29:56] necesito que la anules
+- [29:58] para que se eviten el trabajo
+- [30:00] de ir al formulario
+- [30:02] de emisión de la nota de crédito, cargar
+- [30:04] toda la información de la factura
+- [30:06] para emitir la nota de crédito, por ejemplo acá en tu libro de ventas solamente por el botón
+- [30:12] reversar o anular, ya vemoslo de ambas formas, le pones anular y que te pida anulación masiva
+- [30:18] tú seleccionas anulación masiva y le das aceptar simplemente y ahí de forma automática
+- [30:24] te emite la nota de crédito por el total de la cuenta. ¿Me explico?
+- [30:28] O sea, te explica, pero no sé cómo va a funcionar eso con el tema de GoSocket,
+- [30:32] porque GoSocket igual cuando yo emite el documento de nota de crédito me va a llamar
+- [30:36] los datos del cliente lo que pasa es que en el libro de venta no debiese quedar ningún documento
+- [30:43] anulado ni reversado aquí se supone que esto se compara con el servicio impuesto interno entonces
+- [30:50] cuáles son los motivos que nosotros reversamos una factura es porque nos dimos cuenta que nos
+- [30:54] equivocamos en el centro de costo que no nos equivocamos la cuenta contable pero en sí el
+- [30:59] documento existe y hay como una como una regla que por ejemplo si yo
+- [31:06] tengo el documento 300 no puede ingresar 2 300
+- [31:14] porque el folio en el libro de ventas tiene que quedar todo siempre
+- [31:22] contabilizado lo que podemos hacer es modificar información pero sí o sí la
+- [31:26] factura existe.
+- [31:28] ¿Y qué información? Ah, pero
+- [31:29] como contable en realidad.
+- [31:32] Exacto, modificación contable.
+- [31:35] Claro. Por ejemplo,
+- [31:36] ¿no pueden modificar los detalles, el monto,
+- [31:38] nada de eso? No, lo que se modifica
+- [31:40] es, por ejemplo, no sé, el centro de costo,
+- [31:43] que era, no sé, Dayane y la cambiamos
+- [31:44] a ciruela o la cambiamos a cereza,
+- [31:46] que la imputamos en, no sé,
+- [31:48] venta, exportación y la venta nacional.
+- [31:51] Esos detalles,
+- [31:52] sí los cambiamos en la factura y por eso
+- [31:54] existen reversas en
+- [31:56] el otro sistema, pero no es que la factura
+- [31:58] en sí quede anulada porque es una factura
+- [32:00] válida
+- [32:05] Te entiendo, te entiendo
+- [32:10] claro, porque el RCB del SI, esa factura
+- [32:12] igual está registrada, solamente se rebaja
+- [32:14] con la nota de crédito. Exacto, o sea, yo sí, esa factura
+- [32:15] aunque esté anulada con una nota de crédito
+- [32:18] yo tengo que ingresarla en mi libro de venta
+- [32:20] Te entiendo
+- [32:21] Ajá, pero entonces
+- [32:26] en realidad esa anulación
+- [32:27] no la marcaría como anulada, simplemente
+- [32:29] que sería un acceso rápido de emitir la nota
+- [32:32] de crédito
+- [32:32] Claro, o sea, en este caso
+- [32:34] si yo ingreso una factura y la quiero
+- [32:36] reversar, sería netamente para poder
+- [32:38] modificarle algún
+- [32:39] dato, pero dato contable
+- [32:43] Entonces, en cierto modo
+- [32:48] acá la acción sería solo
+- [32:49] la división
+- [32:50] Sí, sería grabar y contabilizar nomás
+- [32:56] y en caso de reversar
+- [32:57] sería reversar para poder
+- [32:59] de nuevo contabilizarla, pero sí o sí
+- [33:02] tiene que quedar contabilizada
+- [33:03] ¿Y el grabar y contabilizar a qué se refiere?
+- [33:06] porque la factura ya está como creado ahí yo tengo una duda porque en este módulo yo no siempre dice
+- [33:12] el nuevo documento yo no me metido ahí entonces yo ahí se supone que ingresa el retrato de la
+- [33:18] factura en la cuenta contable centro de costo y toda la cantidad cierto el cliente
+- [33:26] la referencia que hay que incorporar acá también y los si tienen descuentos recargos ya entonces
+- [33:35] aquí sería solamente contabilizar, guardar y contabilizar.
+- [33:41] Ah, ya, pero por ejemplo, cuando le das guardar y contabilizar,
+- [33:43] ahí se va a emitir el documento, se va a ir a GoSocket y se va a contabilizar, ¿cierto?
+- [33:49] O tú quieres, por ejemplo, cuando le pongas nuevo documento,
+- [33:52] y ese se cree como un borrador, llamémoslo así,
+- [33:56] y después que cuando tú estés 100% segura,
+- [33:59] desde el libro de venta le das grabar y contabilizar o al momento de guardar.
+- [34:03] Ahí hay que ir con la duda, porque nosotros vamos a facturar
+- [34:06] directo de GoSocket o directo
+- [34:08] del ERP?
+- [34:10] Directo del ERP.
+- [34:12] Todo lo que tú crees
+- [34:14] acá,
+- [34:16] en una sola plataforma, en el ERP,
+- [34:19] por debajo, para ti va a ser
+- [34:20] totalmente transparente, por debajo
+- [34:22] va a enviar la información a GoSocket
+- [34:24] y GoSocket se encarga de informar al SI.
+- [34:27] ¿Ya?
+- [34:27] Ya.
+- [34:28] Pero ustedes van a trabajar con una sola plataforma,
+- [34:31] que sería el ERP.
+- [34:32] entiendo
+- [34:34] entonces en ese caso si podría quedar
+- [34:38] anulado un documento
+- [34:40] por eso te decía yo
+- [34:41] pero claro queda acá
+- [34:44] como anulado pero en realidad
+- [34:46] en el servicio puesto interno
+- [34:48] es una venta válida aún, o sea siempre va a ser
+- [34:50] válida, se rebaja con la nota de crédito
+- [34:52] pero igual sería bueno
+- [34:54] quizá lo que podríamos poner en este
+- [34:56] módulo sería que cuando uno ingrese al
+- [34:58] documento poner grabar
 - [35:00] y en otra pestaña contabilizar
-- [35:02] y una vez que nosotros contabilicemos
-- [35:04] que se emita el documento
-- [35:06] como no ahí lo entendí
-- [35:11] lo que pasa es que no es que disacción
-- [35:13] grabar y contabilizar
-- [35:15] porque si no cuando yo lo creo
-- [35:17] que ha estado borradora
-- [35:19] claro que creo que ha estado borrador
-- [35:21] ah perfecto entonces ahí sería grabar
-- [35:23] y contabilizar
-- [35:25] y ahí se emitiría el documento
-- [35:27] claro
-- [35:29] lo que sí
-- [35:31] ahí falta Carlos
-- [35:33] de que
-- [35:35] si está en estado bueno para todos los documentos
-- [35:37] porque
-- [35:39] falta la representación gráfica
-- [35:41] del documento
-- [35:43] entonces por ejemplo
-- [35:45] cuando sea un borrador
-- [35:47] ese documento aún no ha sido informado justamente
-- [35:49] entonces la idea es que en el folio
-- [35:51] el folio
-- [35:53] el número del documento se convierta en un botoncito
-- [35:55] que cuando lo pinchen
-- [35:57] se abra el documento en formato
-- [35:59] de representación gráfica
-- [36:01] como una hoja
-- [36:03] con la información de la factura
-- [36:05] y si es borrador obviamente que aparezca
+- [35:02] Y una vez que nosotros contabilicemos
+- [35:05] ¿Qué se emite al documento?
+- [35:10] Ahí no te entendí
+- [35:11] Lo que pasa es que dice acción
+- [35:13] Grabar y contabilizar
+- [35:15] Porque si no, cuando yo lo creo
+- [35:17] Queda en estado borrador
+- [35:19] Claro, cuando yo lo creo queda en estado borrador
+- [35:22] Ah, perfecto, entonces ahí sería
+- [35:24] Grabar y contabilizar, y ahí se emitiría
+- [35:26] El documento
+- [35:27] Lo que sí, ahí falta
+- [35:32] Carlos
+- [35:33] De que si está en estado
+- [35:36] Bueno, para todos los documentos
+- [35:37] Porque
+- [35:37] Falta la representación gráfica del documento
+- [35:42] Entonces, por ejemplo
+- [35:45] Cuando sea un borrador
+- [35:46] Ese documento aún no ha sido informado
+- [35:48] Entonces la idea es que en el folio
+- [35:51] El folio, el número del documento
+- [35:53] Se convierte en un botoncito
+- [35:55] Que cuando lo pinchen
+- [35:57] Se abre el documento en formato
+- [35:59] De representación gráfica
+- [36:01] ¿Cachai? Como una hoja
+- [36:02] con la información de la factura
+- [36:04] y si es borrador, obviamente que aparezca
 - [36:07] que diga que es borrador
-- [36:09] y ya después cuando le den grabar
-- [36:11] y contabilizar
-- [36:13] ahí vamos a obtener el pdf final
-- [36:15] que no está
-- [36:17] que va a entregar un socket
+- [36:08] y ya después cuando le den grabar y contabilizar
+- [36:11] ahí vamos a obtener
+- [36:13] el PDF final
+- [36:14] que va a entregar GoSocket
+- [36:17] el PDF válido
 - [36:19] con el timbre electrónico
-- [36:21] entonces que parezca
-- [36:23] cuando uno le ve click
-- [36:25] con la marca de agua borrador ¿verdad?
-- [36:27] si se entiende por ello que es una duda con el arp
-- [36:29] porque por ejemplo nosotros
-- [36:31] estamos en el libro de ventas
+- [36:20] Entonces que aparezca
+- [36:24] cuando uno le dé clic
+- [36:25] con la marca de agua borrador, ¿verdad?
+- [36:28] Sí, se entiende, pero ahí yo
+- [36:29] quedo una duda con el ARP porque, por ejemplo
+- [36:31] nosotros estamos en el libro de ventas
 - [36:33] pero abajo dice emitir documento
 - [36:35] entonces se supone que la emisión
-- [36:37] del documento debía estar abajo
-- [36:39] para nosotros saber que estamos emitiendo
-- [36:41] pero en el libro de venta debería salir directamente
+- [36:37] del documento debiese estar abajo para nosotros
+- [36:39] saber que estamos emitiendo
+- [36:40] pero en el libro de ventas debería salir directamente
 - [36:43] para poder contabilizarlo
-- [36:45] y para contabilizarlo
-- [36:47] debíamos ingresar a qué cuenta contable
-- [36:49] y a qué centro de costo debería de ser imputada
-- [36:53] claro en realidad ahí debería ser
+- [36:44] y para contabilizarlo nosotros igual deberíamos
+- [36:47] ingresar a qué cuenta contable
+- [36:49] y a qué centro de costo debería ser imputado
+- [36:51] claro, en realidad ahí debería ser
 - [36:55] todo ese centro de costo
-- [36:57] y la cuenta mayor
-- [36:59] debería ser en la emisión directa
-- [37:01] es que esa es mi duda porque
-- [37:03] si nosotros vamos a meter un documento
-- [37:05] no debería ir en la factura
-- [37:07] la cuenta contable que nosotros estamos emitiendo
-- [37:09] si al final eso es un tema interno a nosotros
-- [37:11] al cliente no le interesa
-- [37:13] no pero a lo que voy yo
-- [37:15] es que por ejemplo
-- [37:17] de toda razón ahí
-- [37:19] en el tema del libro de venta
-- [37:21] en realidad debería estar toda la información
-- [37:23] que ya se emitió
-- [37:25] exacto en el libro de venta es como poder visualizar
-- [37:27] donde quedó imputada la textura
-- [37:29] por eso era mi duda
-- [37:31] y en emitir documento Carlos
-- [37:33] claro que esté toda la información para emitir
-- [37:35] el documento
-- [37:37] claro y ahí en ítem
-- [37:39] ahí te va a aparecer varias veces
-- [37:41] a tener que completar los datos
-- [37:43] por aquí
-- [37:45] el folio va a ser automático
-- [37:47] porque quien entrega el folio
-- [37:49] en este caso va a ser dos soques
-- [37:51] si
-- [37:54] por ejemplo ahí María Jesús
-- [37:56] lo que sería
-- [37:58] usted asocia la cuenta contable
-- [38:00] a nivel de detalle
-- [38:02] o sea la venta la imputamos
-- [38:04] la imputamos directa al plan de cuenta
-- [38:06] sería ahí por ejemplo
-- [38:08] venta exportación cereza
-- [38:10] claro pero una cuenta asociada
-- [38:12] y ahí
-- [38:14] por ejemplo tendríamos que agregar
-- [38:16] un campo
-- [38:18] que te pueda permitir buscar la cuenta contable
-- [38:20] claro
-- [38:22] y también el centro de costo
-- [38:24] el centro de costo también lo agrega por línea de detalle
-- [38:26] o va ya
-- [38:28] y ahí te también agrega el centro de costo
-- [38:30] y que usted acá cuando que mira el documento
-- [38:32] se ingrese la cuenta mayor
-- [38:34] la cuenta contable
-- [38:36] y el centro de costo
-- [38:38] y ya cuando lo emiten
-- [38:40] esos ya se va a contabilizar
-- [38:42] y se va a informar a los soques de una
-- [38:44] obviamente la cuenta mayor
-- [38:46] y el centro de costo
-- [38:48] no se les va a enviar a los soques
-- [38:50] porque ellos no necesitan esa información
-- [38:52] pero para el RP
-- [38:54] se necesita para generar asiento constable
-- [38:56] si como que
-- [38:58] estaríamos emitiendole y ingresándole al tiro
-- [39:00] claro emitiendo y contabilizando
-- [39:02] si
-- [39:06] se entendió Carlos
-- [39:08] si estoy tomando aquí nada
-- [39:10] entonces y en el libro de venta
-- [39:12] el botoncito de emitir documento
-- [39:14] eso se borraría
-- [39:16] y el grabar y contabilizar
-- [39:18] también en realidad
-- [39:20] osea acá en el libro de venta debería estar visualizado
-- [39:22] todos los documentos que yo emití
-- [39:24] para yo tener certeza
-- [39:26] de que eso debería estar en servicio impuesto interno
-- [39:28] para poder hacer un cruce
-- [39:30] en caso de que falta algún folio
-- [39:32] que haya quedado algo en la nube
-- [39:34] que haya habido algún error
-- [39:36] por aquí el libro de venta debería ser lo que yo ya emití
-- [39:38] y contabilizar
-- [39:40] claro y ahí en acciones lo que se podría agregar
-- [39:42] es hacer
-- [39:44] reenvíos del dos momentos tanto al formato
-- [39:46] pdf o xml
-- [39:48] a correo, acá sí que me refiero
-- [39:50] por ejemplo puede ser que no sea algún cliente tuyo
-- [39:52] te diga
-- [39:54] oye sabes que no me llegó el xml
-- [39:56] y el pdf de la factura
-- [39:58] y la idea es que de acá lo puedan hacer
-- [40:00] un reenvío
-- [40:02] selecciona el destinatario
-- [40:04] y la forma automática
-- [40:06] se va a juntar el xml
-- [40:08] y el pdf de la factura
-- [40:10] eso sería una buena opción
-- [40:12] en el libro de venta
-- [40:14] entonces
-- [40:24] este botón lo elimino o lo dejo como acceso
-- [40:26] directo a la emisión de documento
-- [40:28] no voy a terminarlo
-- [40:30] si, terminar, porque
-- [40:32] ahí no sé si van a trabajar por rol
-- [40:34] porque puede ser que un usuario tenga el rol
-- [40:36] de solamente visualizar el libro de venta
-- [40:38] y otro que se encargue
-- [40:40] a solo emisión de documento
-- [40:42] claro, ahí en el libro de venta
-- [40:44] podría estar la opción de descargar libros
-- [40:46] claro
-- [40:48] oye, y ahí María Jesús
-- [40:50] no les tinka a nivel de
-- [40:52] cabecera visualizar un totalizado
-- [40:54] o un botoncito que
-- [40:56] te resumo por ejemplo
-- [40:58] sería buena
-- [41:00] como el rcb de lsi
-- [41:02] ves que te dice cuánto son factura electrónica
-- [41:04] no, sería buenísimo
-- [41:06] que eso no haría un cruce
-- [41:08] de información más rápido
-- [41:10] claro, ahí voy a compararte una
-- [41:12] el totalizado
-- [41:14] y el lsi
-- [41:16] con tu totalizado del libro de venta
-- [41:18] si, buenísimo
-- [41:20] vamos entonces a
-- [41:30] revisar la pestaña con las cotizaciones
-- [41:32] donde aquí se pueden emitir
-- [41:40] también tiene la opción de buscar
-- [41:42] los clientes
-- [41:44] cambiar el estado
-- [41:46] por aquí pensamos que está muy igual en el administrador del sistema
-- [41:48] poniendo
-- [41:50] aquí aparezcan más opciones con la posibilidad
-- [41:52] de agregar más ítems también
-- [41:54] a la columna
-- [41:56] estas cotizaciones
-- [41:58] si mal no me equivoco también deberían pasar
-- [42:00] por aprobación, ¿verdad?
-- [42:07] estamos mutiando la Jesús
-- [42:09] y ahora sí, ¿cómo fue?
-- [42:11] las cotizaciones también tienen que pasar
-- [42:13] por proceso de aprobación, ¿verdad?
-- [42:15] mira, actualmente no trabajamos
-- [42:17] con cotizaciones pero lo ideal es
-- [42:19] implementarlo
-- [42:21] sí, porque hoy en día
-- [42:23] el encargado de aria el que se encarga
-- [42:25] es hacer la gestión de comprar y listo
-- [42:27] y después aprueba lo que compró
-- [42:29] pero no pasamos por un, por ejemplo, por un departamento
-- [42:31] que uno les puede tener que mandar
-- [42:33] tres cotizaciones, como se hace generalmente
+- [36:56] y la cuenta mayor debería
+- [36:59] ser en la emisión directa
+- [37:01] Es que esa es mi duda, porque si nosotros vamos a emitir un documento,
+- [37:05] ¿no debería ir en la factura la cuenta contable que nosotros estamos emitiendo?
+- [37:10] Si al final eso es un tema interno de nosotros, al cliente no le interesa.
+- [37:13] No, no, pero a lo que voy yo es que, por ejemplo,
+- [37:17] de toda la razón ahí en el tema del libro de venta,
+- [37:20] en realidad debería estar toda la información que ya se emitió.
+- [37:24] Exacto, para mí el libro de venta es como poder visualizar
+- [37:27] dónde quedó imputada la factura.
+- [37:29] Por eso era mi duda.
+- [37:29] Y en emitir documento, Carlos
+- [37:33] Claro, que esté toda la información para emitir el documento
+- [37:36] Claro, y ahí en ítem
+- [37:37] Ahí te va a aparecer María Jesús
+- [37:39] Pero dale
+- [37:40] Ah, tiene que completar los datos del receptor
+- [37:42] Hace una prueba por aquí
+- [37:43] Bueno, el folio va a ser automático, ¿cierto?
+- [37:47] Porque quien entrega el folio
+- [37:49] En este caso va a ser GoSocket
+- [37:50] Sí
+- [37:51] Por ejemplo, ahí María Jesús
+- [37:56] Lo que se haría
+- [37:57] Usted asocia la cuenta contable
+- [38:00] A nivel de detalle
+- [38:01] O sea, las ventas las imputamos directa al plan de cuentas. Sería ahí, por ejemplo, venta, exportación, cereza.
+- [38:11] Claro, pero una cuenta asociada, ¿no?
+- [38:12] Sí.
+- [38:14] Entonces, ahí, por ejemplo, tendríamos que agregar un campo que te pueda permitir buscar la cuenta contable.
+- [38:20] Sí.
+- [38:21] Claro.
+- [38:21] ¿Entiendes? Y también el centro de costo. El centro de costo también lo agrega por línea de detalle.
+- [38:26] Sí.
+- [38:27] Y ahí también agrega el centro de costo y que ustedes acá cuando que miren el documento se les ingrese la cuenta mayor, la cuenta contable y el centro de costo. Y ya cuando lo emiten, eso ya se va a contabilizar y se va a informar a GoSocket de una.
+- [38:45] Obviamente la cuenta mayor
+- [38:47] Y el centro de costo
+- [38:49] No se les va a enviar a GoZocker
+- [38:51] Porque ellos no necesitan esa información
+- [38:54] Pero para el RP
+- [38:55] Se necesita para generar asiento contable
+- [38:57] Sí, como que estaríamos
+- [38:59] Emitiéndole e ingresándole al tiro
+- [39:00] Claro, emitiendo y contabilizando
+- [39:03] Sí
+- [39:04] ¿Se ha entendido, Carlos?
+- [39:07] Sí, estoy tomando aquí
+- [39:08] Entonces, y en el libro de venta
+- [39:11] El botoncito de emitir documento
+- [39:14] Eso se borraría
+- [39:16] Y el grabar y contabilizar también en realidad.
+- [39:20] O sea, acá en el libro de venta debería estar visualizado todos los documentos que yo emití.
+- [39:25] Para yo tener certeza de que eso debería estar en el servicio de impuestos internos para poder hacer un cruce.
+- [39:30] En caso de que falte algún folio, que haya quedado algo en la nube, que haya habido algún error.
+- [39:36] Pero aquí el libro de venta debería ser lo que yo ya emití y contabilicé.
+- [39:39] Claro, y ahí en acciones lo que se podría agregar es hacer reenvío del documento tanto en formato PDF o XML, a correo, a casilla me refiero yo. Por ejemplo, puede ser que no sea algún cliente tuyo y te diga, oye, ¿sabes qué? No me llegó el XML y el PDF de la factura.
+- [39:58] y la idea es que de acá lo pueden hacer
+- [40:01] un reenvío, seleccionan
+- [40:03] el destinatario y
+- [40:04] de forma automática se va a adjuntar
+- [40:07] el XML y el PDF de la factura
+- [40:09] Ah, sí, buenísimo, eso sería
+- [40:11] una buena opción en el libro de venta
+- [40:14] Entonces, ¿este botón lo elimino
+- [40:25] o lo dejo como acceso directo a la emisión de documento?
+- [40:28] No, no se debe
+- [40:29] eliminarlo
+- [40:29] Sí, debe eliminarlo porque ahí no sé si van a
+- [40:33] trabajar por rol, porque puede ser que un usuario
+- [40:35] tenga el rol de solamente visualizar
+- [40:37] el libro de venta y otro que se
+- [40:39] encargue a
+- [40:40] solo emisión de documento
+- [40:43] claro, ahí en el libro de venta podría estar la opción de descargar
+- [40:45] libro nomás
+- [40:46] oye, y ahí María Jesús
+- [40:49] no le estinca
+- [40:50] a nivel de cabecera
+- [40:52] visualizar un totalizado
+- [40:54] o un botoncito que te resuma por ejemplo
+- [40:57] sería bueno
+- [40:59] como el
+- [41:01] RCB del SI, ves que te dice
+- [41:02] cuántos son factura electrónica
+- [41:04] No, estaría buenísimo. De hecho, eso nos haría un cruce de información más rápido.
+- [41:10] Claro, ahí tú vas a comparar de una el totalizado del SI con tu totalizado del libro de venta.
+- [41:18] Sí, buenísimo.
+- [41:28] Vamos entonces a revisar la pestaña con las cotizaciones, donde aquí se pueden emitir.
+- [41:40] También tiene la opción de buscar los clientes, cambiar el estado.
+- [41:45] Bueno, aquí pensamos que estamos igual en el administrador del sistema, por lo que aquí aparezcan más opciones con la posibilidad de agregar más ítems también a la columna.
+- [41:57] Estas cotizaciones, si mal no me equivoco, también deberían pasar por aprobación, ¿verdad?
+- [42:07] Estamos ya, María Jesús.
+- [42:10] Y ahora sí, ¿cómo fue?
+- [42:12] Las cotizaciones también tienen que pasar por proceso de aprobación, ¿verdad?
+- [42:16] Mira, actualmente no trabajamos con cotizaciones, pero lo ideal es implementarlo.
+- [42:21] Sí, porque hoy en día
+- [42:24] el encargado de área es el que se encarga de hacer
+- [42:26] la gestión de comprar y listo, y después aprueba
+- [42:28] lo que compró, pero no pasamos
+- [42:30] por un, por ejemplo, por un departamento
+- [42:31] que uno después tenga que mandar tres cotizaciones
+- [42:34] como se hace generalmente
 - [42:35] y como que se elija más arbitraria
 - [42:37] la compra
-- [42:41] en este caso sería bueno dejar
-- [42:43] esta página como registro de las cotizaciones
-- [42:45] hasta que se decida bien cómo
-- [42:47] va a realizarse el flujo
-- [42:49] sí, o sea igual hay que dejarlo y por último
+- [42:38] Perfecto, en ese caso sería bueno dejar esta página
+- [42:44] como registro de las cotizaciones hasta que
+- [42:46] se decida bien cómo va a realizarse
+- [42:48] el flujo
+- [42:49] Sí, o sea, igual hay que dejarlo y por último
 - [42:51] si seguimos con el mismo sistema actual
-- [42:53] se pone como cotización la
-- [42:55] que tiene cada jefatura y se aprueba, ¿no?
-- [42:59] perfecto, en un momento
-- [43:08] ya lo revisamos
-- [43:10] y bueno, aquí vendría a ser el
-- [43:12] registro de los clientes y los prospectos
-- [43:14] de cliente también que puedan surgir
-- [43:16] y en tipo de cliente nos las podemos crear
-- [43:25] cliente exportación
-- [43:27] y cliente nacional
-- [43:29] no, está definido como
-- [43:31] el tipo de cliente
-- [43:33] lo vamos a agregar
-- [43:35] sí, eso sería bueno porque actualmente
-- [43:37] el cliente exportación
-- [43:39] para poder crearlo, hay que pedir
-- [43:41] un generador de root
-- [43:43] en una página
-- [43:45] y ahí nos va dando un root
-- [43:47] en base a lo que vamos ingresando
-- [43:49] sí, hoy lo que
-- [43:53] también hay que avanzar, no sé si lo han logrado
-- [43:55] es el tema de la
-- [43:57] aduana, país de destino
-- [43:59] lo que pide la factura de exportación
-- [44:03] sí, lo que pasa es que se supone que
-- [44:05] por eso era mi duda si seguimos factura
-- [44:07] de directo acá, porque en GoSocket
-- [44:09] nosotros tenemos
-- [44:11] la información
-- [44:13] de los puertos
-- [44:15] el país destino
-- [44:17] eso los vamos a cargar, nosotros acá también
-- [44:19] se va a pedir la factura de exportación desde acá
-- [44:21] a ver, entonces sería pedir como
-- [44:23] el listado, no mas poco
-- [44:25] sí, incluso creo que está en la
-- [44:27] documentación del servicio de nuestro interno
-- [44:29] así que son
-- [44:31] códigos válidos
-- [44:33] o sea, en realidad son códigos estándares
-- [44:35] sí, eso, códigos válidos
-- [44:37] son códigos que
-- [44:39] en realidad se informan en LQML
-- [44:41] y se informan los códigos, por ejemplo
-- [44:43] no se manda el nombre del país ni nada
-- [44:45] son códigos no
-- [44:47] sí, porque ahí están
-- [44:49] los puertos
-- [44:51] de bar, que
-- [44:53] toda esa información que
-- [44:55] hay que sacar lo de
-- [44:57] el tipo de venta, la condición
-- [45:03] bueno, son
-- [45:05] manuales, de como ingresar a una factura
-- [45:07] de exportación que se hace a los podías compartir
-- [45:09] ya, genial
-- [45:11] sí, ya
-- [45:16] también está la nota de crédito, no te
-- [45:18] debes de exportación
-- [45:20] sí, y eso sería la mejor
-- [45:22] para que en GoSocket
-- [45:24] que nosotros en acepta
-- [45:26] si queremos emitir nota de crédito y debito
-- [45:28] de exportación, tenemos que volver a poner
-- [45:30] todos los datos, todos
-- [45:34] eso es lo que yo te decía de la nota de crédito
-- [45:36] para la factura
-- [45:38] que desde el libro
-- [45:40] de venta, si le pueden anular solamente
-- [45:42] indiques el motivo de referencia
-- [45:44] obviamente si una corrección de monto
-- [45:46] vaya a tener que te vale
-- [45:48] levantar la nota de crédito, porque ya
-- [45:50] precarga con toda la información
-- [45:52] de la factura
-- [45:54] pero por ejemplo si
-- [45:56] estás haciendo
-- [45:58] una nota
-- [46:00] de crédito por anulación
-- [46:02] completa
-- [46:04] ahí tu solamente
-- [46:06] selecciona esa opción y te das
-- [46:08] emitir nota de crédito, nada más
-- [46:10] para que vas a rellenar
-- [46:12] nuevamente los datos
-- [46:14] y lo mismo deberías hacer para la nota
-- [46:16] de crédito de exportación
-- [46:18] lo que pasa es que
-- [46:20] en la nota de crédito de exportación
-- [46:22] como la anulación es
-- [46:24] muy muy poca
-- [46:26] pero la emisión por corrección
-- [46:28] monto es
-- [46:30] el doble
-- [46:32] la factura lleva en asociado una nota de crédito
-- [46:34] de evito, que es cuando
-- [46:36] la factura se invite una vez que nos lo
-- [46:38] mandamos la fruta pero la nota de crédito
-- [46:40] y de evito es que la fruta se vende
-- [46:42] y empezamos con el yoga neo tumedades
-- [46:46] pues todas las facturas
-- [46:48] si o si tienen asociado una nota de crédito
-- [46:50] una nota de evito que se hace el momento
-- [46:52] en liquidación
-- [46:54] y es por corrigir
-- [46:56] corrigir monto
-- [46:58] o la nota de evito que es por
-- [47:00] el momento de la venta
+- [42:53] se pone como cotización la que
+- [42:55] tiene cada jefatura
+- [42:57] y se aprueba
+- [42:58] perfecto
+- [43:08] el documento ya lo revisamos
+- [43:10] y bueno aquí vendría a ser
+- [43:12] el registro de los clientes y los
+- [43:14] prospectos de clientes también que puedan
+- [43:16] surgir
+- [43:24] ¿y el tipo de clientes no se las podemos crear
+- [43:26] clientes exportación
+- [43:28] y clientes nacionales?
+- [43:30] no está definido como
+- [43:32] el tipo de cliente
+- [43:34] lo vamos a agregar si eso sería bueno porque actualmente el cliente exportación para poder
+- [43:39] crearlo hay que pedir un generador de root en una página y ahí nos va dando un root en base
+- [43:48] a lo que vamos ingresando hoy lo que también hay que avanzar no sé si lo han logrado ver el tema
+- [43:56] de la aduana país de destino lo que pide la factura exportación si lo que pasa es que se
+- [44:04] Por eso era mi duda si íbamos a facturar en directo acá, porque en GoSocket nosotros tenemos la información de los puertos, el país de destino.
+- [44:17] Eso lo vamos a cargar nosotros acá, también se va a emitir la factura de exportación desde acá.
+- [44:21] Ah, pero entonces sería pedir como el listado, a lo mejor.
+- [44:25] Sí, incluso creo que está en la documentación del servicio de vuestro interno.
+- [44:29] Así que son códigos válidos.
+- [44:32] Sí, o sea, en realidad son códigos estándar.
+- [44:34] esos códigos son válidos
+- [44:37] son códigos que en realidad
+- [44:39] se informan en el XML y se informan los códigos
+- [44:42] por ejemplo no se manda el nombre
+- [44:43] del país ni nada
+- [44:44] se manda como código
+- [44:46] sí porque ahí están
+- [44:49] los puertos de embarque
+- [44:52] toda esa información que
+- [44:54] hay que sacarlo
+- [44:55] del tipo de venta
+- [44:57] la condición
+- [44:59] nosotros tenemos un manual de cómo
+- [45:06] ingresado a una factura de exportación, quizás se los
+- [45:08] podría compartir.
+- [45:10] ¿Ya? ¿Gelio? Sí.
+- [45:12] Ya. También está
+- [45:17] la nota de crédito y nota de débito de exportación.
+- [45:20] Sí.
+- [45:21] Y esa sería la mejora que
+- [45:22] nos ofrece Boso. Que
+- [45:24] nosotros en Acepta, si queremos emitir
+- [45:27] nota de crédito y débito de exportación,
+- [45:29] tenemos que volver a poner todos
+- [45:31] los datos. Todos.
+- [45:33] Eso es lo que yo te decía de la
+- [45:35] nota de crédito. De la nota de crédito
+- [45:37] para la factura.
+- [45:39] Que desde el libro de ventas, si le pueden anular, solamente indiques el motivo de referencia. Obviamente, si es una corrección de monto, te va a levantar la nota de crédito ya precargada con toda la información de la factura.
+- [45:52] si estás haciendo una nota de crédito por anulación completa
+- [46:03] ahí tú solamente seleccionas esa opción y le das emitir nota de crédito nada más
+- [46:09] para que vas a rellenar nuevamente los datos
+- [46:13] y lo mismo debería ser para la nota de crédito de exportación
+- [46:17] lo que pasa es que en la nota de crédito de exportación
+- [46:22] como la anulación es muy
+- [46:24] muy poca, pero
+- [46:26] la emisión por corrección monto
+- [46:28] es el doble
+- [46:30] al final todas las facturas
+- [46:32] llevan asociada una nota de crédito
+- [46:34] débito, que es cuando
+- [46:35] la factura se emite una vez que nosotros
+- [46:38] mandamos la fruta, pero la nota de crédito
+- [46:40] y débito, una vez que la fruta se vende
+- [46:42] y empezamos con el yo gané o tú me debes
+- [46:44] entonces todas las facturas
+- [46:48] sí o sí tienen asociada una nota de crédito
+- [46:50] una nota de débito que se hace en el momento de la liquidación
+- [46:52] y es por
+- [46:54] corrige monto
+- [46:56] ya, o la nota
+- [46:58] de débito que es por aumento
+- [47:00] de la venta
 - [47:02] exacto
-- [47:04] por eso no hacía
-- [47:11] tan tedioso tener que emitir la nota
-- [47:13] de crédito y de evito porque el final era
-- [47:15] repetir datos
+- [47:03] por eso no se nos hacía tan tedioso
+- [47:11] tener que emitir la nota de crédito y débito
+- [47:13] porque al final era repetir
+- [47:16] datos
 - [47:17] y también
-- [47:19] estabas propensando el error porque
-- [47:21] te dejaba por ejemplo asociar una factura
-- [47:23] y ponerle distinto cliente
-- [47:27] entonces terminamos emitiendo
-- [47:29] una nota de débito a ponerla en la nota de crédito
+- [47:18] estabas propenso al error porque te dejaba
+- [47:21] por ejemplo asociar una factura
+- [47:22] y ponerle distinto cliente
+- [47:25] entonces terminábamos emitiendo
+- [47:29] una nota de débito para anular la nota de crédito
 - [47:31] y volver a emitir una nota de crédito
-- [47:33] para que la nota de crédito será tedioso
-- [47:35] si me imagino
-- [47:41] ok
-- [47:43] y hay una consulta por ejemplo cuando
-- [47:45] usted haga una anulación
-- [47:47] porque igual van a manejar
-- [47:49] el
-- [47:51] inventario
-- [47:53] como?
-- [47:55] acá igual ustedes van a manejar el inventario
-- [47:57] si
-- [47:59] entonces
-- [48:01] por ejemplo van a hacer la nota de crédito
-- [48:03] y bueno el producto inventariable
-- [48:05] debería ser el reingreso
-- [48:07] a la bodega
-- [48:09] o como lo van a manejar ahí
-- [48:11] lo que pasa es que
-- [48:13] en el inventario de
-- [48:15] ALM que son las existencias
-- [48:17] ahí necesitamos que en realidad
-- [48:19] el inventario esté en el módulo de la bodega
-- [48:21] de insumos
-- [48:23] que ahí está el modelo de bodega
-- [48:25] todo lo que tiene que ver con bodega
-- [48:27] y por el inventario de cajas de almagüe
-- [48:29] lo ideal es que nosotros podamos asociarla
-- [48:31] a la factura de venta de ALM
-- [48:33] que es un stock físico
-- [48:35] el inventario es
-- [48:37] es como
-- [48:39] yo vengo 100
-- [48:41] y compre 100
-- [48:43] no manejamos stock de un mes a otro
-- [48:52] o sea en realidad
+- [47:32] entonces era tedioso
+- [47:33] ok
+- [47:40] y una consulta
+- [47:43] por ejemplo cuando ustedes hagan una anulación
+- [47:45] porque acá igual
+- [47:47] van a manejar el
+- [47:48] el inventario
+- [47:51] ¿no?
+- [47:53] ¿cómo?
+- [47:54] acá igual ustedes van a manejar el inventario
+- [47:56] sí
+- [47:58] Entonces, por ejemplo, al hacer la nota de crédito
+- [48:02] Bueno, el producto inventariable
+- [48:04] Debería ser
+- [48:05] El reingreso a la bodega, ¿cierto?
+- [48:09] ¿O cómo lo van a manejar ahí?
+- [48:11] Lo que pasa es que
+- [48:12] En el inventario de
+- [48:14] ALM, que son las existencias
+- [48:16] Ahí necesitamos que
+- [48:18] En realidad el inventario esté en el módulo
+- [48:20] De la bodega, de insumos
+- [48:22] Que ahí esté el movimiento de bodega
+- [48:24] Todo lo que tenga que ver con bodega
+- [48:25] Y por el inventario de cajas de almagüe
+- [48:27] lo ideal es que nosotros podamos asociarla
+- [48:30] a la factura de venta del EME, pero nosotros
+- [48:32] nos contamos un inventario físico, un stock
+- [48:34] físico, el inventario es
+- [48:36] es como, yo vendo 100
+- [48:42] y compré 100
+- [48:42] no manejamos stock de un mes a otro
+- [48:45] ya, ok
+- [48:49] entiendo
+- [48:50] ya
+- [48:52] o sea, en realidad
 - [48:54] es como una bodega de paso
-- [48:56] exactamente una bodega de paso
-- [48:58] pero como el servicio impuesto interno
-- [49:00] no exige tener inventario
-- [49:02] el delivery exportador
-- [49:04] nos pide el archivo de
-- [49:06] por ejemplo con qué factura
-- [49:08] yo hice la compra y cuánta cantidad compré
-- [49:10] entonces qué hacemos nosotros
-- [49:12] ALM, almagüe no sé
-- [49:14] vendió 10.000 cajas
-- [49:16] entonces ALM al final de mes le hace la factura
-- [49:18] por 10.000 cajas pero no 10.100
-- [49:20] 9.000 no
+- [48:56] exacto, una bodega de paso
+- [48:58] pero como el servicio de impuestos internos nos exige
+- [49:00] tener inventario para la devolución
+- [49:02] del IVA exportador
+- [49:04] nos pide
+- [49:06] el archivo de por ejemplo con qué factura
+- [49:08] yo hice la compra y cuánta cantidad
+- [49:10] compré, entonces ¿qué hacemos nosotros?
+- [49:12] al EM, bueno, al más bueno
+- [49:14] se vendió 10.000 cajas
+- [49:16] entonces al EM a final de mes le hacen la factura
+- [49:18] por 10.000 cajas, pero no 10.100
+- [49:20] 9.000, no
 - [49:22] las que hizo son 10.000
 - [49:24] le emitimos la factura por 10.000
-- [49:26] y todo el stock en sí
-- [49:28] está en ALM
-- [49:30] ok
-- [49:40] hablando de eso
-- [49:42] no sé si en base a lo que recién dijeron
-- [49:44] tendríamos que hacer una modificación del modo de bodegas
-- [49:46] porque realmente en los movimientos
-- [49:48] donde entiendo es donde debería tener el registro
-- [49:50] de los
-- [49:52] ingresos que vienen por algo
-- [49:54] que no debería de haberse devuelto
-- [49:56] pero aquí debería estar el registro
-- [49:58] ¿verdad?
-- [50:00] si
-- [50:02] por ejemplo cuando usted ingresa
-- [50:04] o le llega el producto
-- [50:06] al ingreso como
-- [50:08] en almagüe
-- [50:10] no manejamos movimientos de bodegas
-- [50:12] en almagüe solamente ingresamos
-- [50:14] la factura como compra y venta
-- [50:16] directa
-- [50:18] entonces ahí nos mueven estos
-- [50:20] no, no movemos estos
-- [50:22] pero ahí voy a dejarlo como estando
-- [50:24] por si a futuro tienen
-- [50:26] el movimiento de estos
-- [50:28] los productos los marquen como inventareable o no
-- [50:30] cierto
-- [50:32] y cuando hagan
-- [50:34] un ingreso en mercadería
-- [50:36] y ese producto es inventareable
-- [50:38] se aumente el stock
-- [50:40] mira si ahora lo que podemos aquí dejar
-- [50:42] quizás por el tema de almagüe
-- [50:44] una carga de
-- [50:46] una carga masiva de excel
-- [50:48] porque nosotros todos los movimientos de caja
-- [50:50] y todo como el seguimiento de la caja en si
-- [50:52] la manejamos en la página
-- [50:54] de almagüe
-- [50:58] y se hace un paño de información de la caja en si
-- [51:00] entonces quizás sería bueno cargarlo
-- [51:02] acá y poner por ejemplo
-- [51:04] venta cliente
-- [51:06] o salida de bodega
-- [51:08] lo podríamos ver
-- [51:12] como lo tienen
-- [51:14] si, voy a dejar en los pendientes
-- [51:16] lo que lo voy a ir mandando
-- [51:18] entonces
-- [51:24] uno nos quedaría los
-- [51:26] módulos de contabilidad y de solididad
-- [51:28] que yo creo que aquí se viene lo mas
-- [51:30] fuerte
-- [51:32] partiendo con el de contabilidad
-- [51:34] aquí tenemos
-- [51:36] junto con la parametrización
-- [51:38] contabilizada plan de cuentas
-- [51:40] mas que nada por un tema
-- [51:42] de permisología que alguna persona vaya a tener
-- [51:44] quizás permisos para ingresar a parametrización
-- [51:46] y otra quizá contabilidad
-- [51:48] entonces no sé si es que
-- [51:50] eliminamos de alguno
-- [51:52] el acceso a plan de cuentas
-- [51:54] de parametrización o de contabilidad
-- [51:56] o los conservamos en ambos
-- [51:58] mira, todo lo que es
-- [52:00] yo todo lo que es
-- [52:02] indicadores plan de cuentas
-- [52:04] centro de costa, método de costa
-- [52:06] todo lo que sea
-- [52:08] informativo
-- [52:10] o parametrización, lo llevaría todo a parametrización
-- [52:12] perfecto
-- [52:14] así en caso de
-- [52:16] los perfiles no pueden ver ese
-- [52:18] módulo en si
-- [52:31] de esto también de lo que viene a hacer configuración
-- [52:33] tenemos el tema de los periodos contables
-- [52:35] ese también lo movemos a parametrización
-- [52:41] es que eso abre el mes y cerrarmeo
-- [52:43] si, si claro
-- [52:45] si ahí no se los puede confundir
-- [52:53] un poquito el tema de la parametrización
-- [52:55] porque en los periodos contables tendría que estar
-- [52:57] en el módulo de contabilidad
-- [52:59] en el módulo de contratista
-- [53:01] y en el módulo de insumo
-- [53:03] que vamos cerrando los meses por separado
-- [53:05] como un módulo independiente
-- [53:07] perfecto, me disculpan
-- [53:09] un momentito por favor
-- [53:16] lo que pasó
-- [53:26] disculpen, ahora sí
-- [53:30] entonces en ese caso lo dejamos
-- [53:32] dentro de contabilidad marín
-- [53:34] si, dejémoslo dentro de contabilidad
-- [53:36] todo lo que sea como abrir y cerrar mes
-- [53:38] dejémoslo en cada módulo
-- [53:40] perfecto, y tenemos este
-- [53:45] panel configurable del SII
-- [53:47] que este fue ideado
-- [53:49] por parte del
-- [53:51] equipo de desarrollo
-- [53:53] y
-- [53:55] no sabrías que este le darían utilidad
-- [53:57] porque recuerdo que este no lo utilizaban
-- [53:59] usted en el sistema que tenían
-- [54:02] no lo utilizábamos pero si hay
-- [54:04] una parte de configuración de las cuentas
-- [54:06] perfecto
-- [54:08] y esa cuenta la asocian por ejemplo
-- [54:10] por tipo de documento
-- [54:12] es que en realidad si la cuenta
-- [54:14] la van a asociar a nivel de detalle
-- [54:16] no debería mucho sentir
-- [54:18] como a nivel de tipo de documento
-- [54:20] pero recuerdo que en cada módulo
-- [54:25] de agrosofa hay que parametrizar
-- [54:27] todo lo que uno cree
-- [54:29] entonces quizá aquí se hace más fácil
-- [54:31] el poder parametrizarlo y más
-- [54:33] como más entendible
-- [54:41] entonces lo conservamos como para parametrizar
-- [54:43] si
-- [54:51] bueno aquí vendrían a hacer la información
-- [54:53] que se trae del banco central
-- [54:58] factores de honorario
-- [55:06] ese factor de honorario aquí responde
-- [55:08] lo que pasa es que los honorarios
-- [55:10] se van actualizando cada
-- [55:12] cierto tiempo hasta que vamos a llegar
-- [55:14] al 20% se supone de retención
-- [55:16] ah el porcentaje ya
-- [55:18] el porcentaje de retención
-- [55:20] en esa cosa sería bueno tener acá como un contador
-- [55:22] del porcentaje
-- [55:24] o sea lo que sería bueno
-- [55:26] es poder visualizar
-- [55:28] hasta por ejemplo hasta
-- [55:30] que se va a usar hasta
-- [55:32] febrero el 15%
-- [55:34] y además en adelante
-- [55:36] el 17, una cosa así
-- [55:38] claro
-- [55:40] como el distribuido de los periodos
-- [55:42] en el porcentaje
-- [55:44] claro
-- [55:46] como un historiante
-- [55:48] y el estado
-- [55:50] por ejemplo según la fecha que estás parada
-- [55:52] de cuál eres el indicador
-- [55:54] o el vigente
-- [55:56] correcto
-- [56:08] la bestaña de los presupuestos
-- [56:10] y
-- [56:23] lo que vendría a ser
-- [56:25] parte de
-- [56:27] la reportería
-- [56:32] lo que vendría a ser el libro diario
-- [56:34] y el libro mayor
-- [56:36] que a petición
-- [56:41] de lo que había solicitado Sergio
+- [49:26] Y todo el stock en sí está en LM
+- [49:30] Ok
+- [49:34] Hablando de eso
+- [49:41] No sé si en base a lo que recién dijeron
+- [49:44] Tendríamos que hacer una modificación del módulo de bodegas
+- [49:46] Porque realmente en los movimientos
+- [49:48] Por donde entiendo es donde debería tener el registro
+- [49:50] De los
+- [49:52] Ingresos que vienen por
+- [49:54] Algo que no debería haberse devuelto
+- [49:56] Pero aquí debería estar el registro, ¿verdad?
+- [49:59] Sí
+- [49:59] Por ahí por ejemplo
+- [50:02] cuando ustedes ingresan o les llega
+- [50:04] el producto, ¿cómo lo mueven?
+- [50:06] ¿Al ingreso cómo?
+- [50:08] En Almagüe
+- [50:08] no manejamos movimiento de bodega.
+- [50:13] En Almagüe solamente ingresamos
+- [50:14] la factura como compra y venta.
+- [50:17] Directa.
+- [50:17] Ah, entonces ahí lo mueven
+- [50:19] el concepto de stock. No, no movemos stock.
+- [50:22] Ya, pero ahí voy a dejarlo
+- [50:23] como estándar porque si a futuro tienen
+- [50:25] el movimiento de stock.
+- [50:28] La idea es que los productos los marquen
+- [50:30] como inventariable o no,
+- [50:31] cierto y cuando hagan no sé con un ingreso de mercadería y ese producto es inventariable se
+- [50:38] aumente el stock cierto dejar quizás en el tema alma web una carga de una carga masiva de excel
+- [50:47] porque nosotros todos los movimientos de caja y todo como el seguimiento de la caja en sí la
+- [50:53] manejamos en la página de almagüe y se hace un paño de información de la caja en sí entonces
+- [51:01] quizás eso sería bueno cargarlo acá y poner por ejemplo no se puede venta venta cliente o salida
+- [51:08] de bodegas y eso lo podríamos ver como lo tiene sí voy a dejar en los pendientes lo que le voy
+- [51:17] mandando ya entonces sólo nos quedarían los módulos de contabilidad y de su herida que yo
+- [51:29] Creo que aquí se viene lo más fuerte, partiendo con el de contabilidad.
+- [51:35] Aquí tenemos, junto con la parametrización contabilizada a plan de cuentas,
+- [51:40] más que nada por un tema de permisología, que alguna persona vaya a tener quizás permisos para ingresar a parametrización
+- [51:46] y otra quizás a contabilidad.
+- [51:49] Entonces, no sé si es que eliminamos de alguno el acceso a plan de cuentas de parametrización o de contabilidad
+- [51:56] o los conservamos en ambos.
+- [51:59] Mira, yo todo lo que es indicadores, plan de cuentas, centro de costo, elemento de costo,
+- [52:06] todo lo que sea informativo, lo llevaría todo a parametrización.
+- [52:14] Perfecto.
+- [52:14] Así en caso de los perfiles no pueden ver ese módulo en sí.
+- [52:31] Esto también de lo que vendría a ser configuración, tenemos el tema de los periodos contables.
+- [52:35] ¿Ese también lo movemos a parametrización?
+- [52:37] No, pero es que eso es abrir mes y cerrar mes, ¿o no?
+- [52:44] Sí, sí
+- [52:45] Si, ahí no se nos puede confundir un poquito el tema de la parametrización
+- [52:55] Porque los periodos contables tendrían que estar en el módulo de contabilidad
+- [52:59] En el módulo de contratista y en el módulo de insumos
+- [53:02] Que vamos cerrando los meses por separado, como módulo independiente
+- [53:06] Perfecto, me disculpan un momentito, por favor
+- [53:11] ¿Qué pasó?
+- [53:16] Disculpen, ahora sí
+- [53:26] Entonces, ¿en ese caso lo dejamos dentro de contabilidad, Mari?
+- [53:35] Sí, dejémoslo dentro de contabilidad
+- [53:36] Todo lo que sea como abrir y cerrar mes, dejémoslo en cada módulo
+- [53:40] Perfecto
+- [53:44] Y tenemos este panel configurable del SII
+- [53:47] Que este fue ideado por parte del equipo de desarrollo
+- [53:52] Y no sabría si es que este le daría utilidad
+- [53:57] Porque recuerdo que este no lo utilizaban ustedes en el sistema que tenían
+- [54:02] No lo utilizábamos, pero sí hay una parte de configuración de las cuentas.
+- [54:09] ¿Y esas cuentas las asocian, por ejemplo, por tipo de documento?
+- [54:13] Es que en realidad si la cuenta la van a asociar a nivel de detalle,
+- [54:17] no le vería mucho sentido como a nivel de tipo de documento.
+- [54:24] Sí, pero recuerdo que en cada módulo de AgroSoft hay que parametrizar todo lo que uno cree.
+- [54:29] Entonces quizá aquí se hace más fácil el poder parametrizarlo y más entendible.
+- [54:34] Entonces lo conservamos como para parametrizar
+- [54:43] Sí
+- [54:45] Bueno, aquí vendría a ser la información que se trae
+- [54:54] Del banco central
+- [54:55] Factores de honorario
+- [55:00] ¿Ese factor de honorario a quién responde?
+- [55:10] Lo que pasa es que
+- [55:10] Los honorarios se van actualizando
+- [55:11] Cada cierto tiempo hasta que vamos a llegar
+- [55:14] Al 20% se supone de retención
+- [55:16] Ah, el porcentaje ya
+- [55:18] El porcentaje de retención
+- [55:19] En ese caso sería bueno tener acá como un contador
+- [55:22] Del porcentaje
+- [55:23] o sea lo que sería
+- [55:26] bueno ahí es poder visualizar
+- [55:28] hasta por ejemplo
+- [55:30] hasta que
+- [55:31] se va a usar hasta febrero el
+- [55:34] 15% y desde marzo en adelante
+- [55:36] el 17% una cosa así
+- [55:37] claro
+- [55:39] como el distribuido de los periodos
+- [55:42] en porcentaje
+- [55:43] claro
+- [55:44] como un historial
+- [55:46] y el estado
+- [55:49] según la fecha que estás parado
+- [55:52] cuál es el
+- [55:53] indicador
+- [55:54] claro, el vigente
+- [55:56] perfecto
+- [56:08] la pestaña de los presupuestos
+- [56:11] y lo que vendría a ser
+- [56:24] parte de la reportería
+- [56:28] aquí tenemos lo que vendría a ser
+- [56:32] el libro diario
+- [56:33] y el libro mayor
+- [56:36] que a petición de lo que había
+- [56:41] solicitado Sergio
 - [56:43] aquí se agregaron los
 - [56:45] faltantes
 - [56:47] referente a estos reportes
-- [56:54] no sé si es que habría algo
-- [56:56] distinto
-- [56:58] ahí me quedo la duda con el libro mayor
+- [56:54] no sé si es que habría algo pendiente
+- [56:56] ahí me
+- [56:58] quedo la duda con el libro mayor
 - [57:00] porque
 - [57:02] una vez que tengamos toda la información
 - [57:04] ingresada
-- [57:06] aquí se va a ver como un tipo balance
-- [57:08] porque van a estar todas las cuentas con el débel
-- [57:10] a ver el saldo
-- [57:12] claro
-- [57:14] claro ahí
-- [57:16] debíamos bueno falta
-- [57:18] yo creo que el balance de 8 columnas
-- [57:20] cierto? si
-- [57:22] lo que debíamos tener
-- [57:24] no, sería otro
-- [57:28] otro menú que sería el balance
-- [57:30] que eso se va a alimentar según los movimientos
-- [57:32] del año
-- [57:34] del mayor, claro, lo que se vea actualmente acá
-- [57:36] sería como algo muy similar a un balance
-- [57:38] de 8 columnas
-- [57:40] por ejemplo banco te salen todos
-- [57:42] el saldo de que se movió la ver
-- [57:44] que se movió el débel, el saldo de odora, agredor
-- [57:46] se activó, pasivo, gasto, ingreso
-- [57:48] claro, ahí bueno
-- [57:50] Maria Jesús si nos pueden compartir hoy día
-- [57:52] por ejemplo algún balance
-- [57:54] un apartado
-- [57:56] una sección del balance que quería usted trabajar
-- [57:58] mira te voy a mandar el libro
-- [58:00] mayor como ejemplo de una cuenta en específico
-- [58:02] ya
-- [58:04] el balance
-- [58:06] ya
-- [58:08] y el libro de día no lo trabajamos mucho
-- [58:10] porque trabajamos más con el mayor
-- [58:12] como toda la información se va al mayor de la cuenta
-- [58:14] pero igual te voy a mandar el libro mayor
-- [58:16] como lo saca de informe
-- [58:18] osea por favor el libro de día
-- [58:20] ok, bien
-- [58:24] una contabilidad electrónica no tiene, ¿cierto?
-- [58:26] una empresa
-- [58:36] que igual depende del volumen
-- [58:38] de disfactoración, tengo entendido
-- [58:40] que están obligados
-- [58:42] a informar su contabilidad
-- [58:44] en formato
-- [59:01] el distritalio
-- [59:03] osea no, solo tenemos contabilidad electrónica
-- [59:05] por eso se lleva una vez que uno hace la renta
-- [59:07] no, no hacen nada mensualizar
-- [59:09] pero de donde lo sacan
-- [59:11] actualmente eso es que maila a ustedes
-- [59:13] actualmente eso lo sacamos
-- [59:15] del sistema y se lo enviamos al contador
-- [59:17] y el contador lo sube
-- [59:19] el contador externo
-- [59:21] tributario
-- [59:24] perfecto
-- [59:28] bueno y después se vea como yo creo que es una segunda etapa
-- [59:30] para ver
-- [59:32] porque eso se puede hacer
-- [59:34] automático ya
-- [59:36] de seguro lo que hace
-- [59:38] el contador
-- [59:40] toma todo su
-- [59:42] su contabilidad
-- [59:44] ¿cierto?
-- [59:46] es una forma
-- [59:48] a un formato que maile
-- [59:50] que es el formato que exige el lsi
-- [59:52] la firma con el certificado digital
-- [59:54] del representante legal
-- [59:56] y lo carga al servicio puesto de interna
-- [59:58] claro
-- [01:00:00] entonces ahí se podría trabajar
-- [01:00:02] hacer un trabajo de que
-- [01:00:04] simplemente acá la contabilidad electrónica
-- [01:00:06] y se envía directo
-- [01:00:08] al servicio
-- [01:00:10] ya
-- [01:00:12] obviamente eso viene
-- [01:00:14] a la revisión interna de ustedes
-- [01:00:16] claro
-- [01:00:24] si yo creo que es diable
-- [01:00:26] si pero eso lo podemos ver
+- [57:05] aquí se va a ver como un tipo de balance
+- [57:08] porque van a estar todas las cuentas con el
+- [57:10] debe, la ver, el saldo
+- [57:11] claro
+- [57:13] ahí diríamos
+- [57:17] falta yo creo que el balance
+- [57:19] de 8 columnas, cierto?
+- [57:22] queríamos tener
+- [57:23] sería otro
+- [57:27] menú que sería el balance
+- [57:29] que ese se va a alimentar según los movimientos
+- [57:31] del año
+- [57:33] del mayor, claro, lo que se ve actualmente
+- [57:35] acá sería como algo muy similar a un
+- [57:37] balance de 8 volúmenes
+- [57:39] por ejemplo, banco, te salen todos
+- [57:41] el saldo de que se movió la VER
+- [57:43] que se movió al DEVE, el saldo de ador, acreedor
+- [57:45] si activo, pasivo, gasto, ingreso
+- [57:47] claro, ahí bueno
+- [57:49] María Jesús, si nos pueden compartir hoy día
+- [57:51] por ejemplo, algún balance
+- [57:53] algún apartado
+- [57:55] una sección del balance que quiera usted
+- [57:57] trabajar? Mira, te voy a mandar
+- [57:59] el libro mayor como ejemplo de una
+- [58:01] cuenta en específico
+- [58:02] el balance
+- [58:05] y el libro
+- [58:07] diario en realidad no lo trabajamos
+- [58:09] mucho porque trabajamos más con el mayor
+- [58:11] como toda la información se va al mayor de la cuenta
+- [58:13] pero igual te voy a mandar
+- [58:16] el libro mayor como lo saca de informe
+- [58:18] o sea, por dar el libro diario
+- [58:19] Ok, genial
+- [58:20] Ustedes contabilidad electrónica no tienen
+- [58:26] Una empresa que igual depende del volumen de facturación, tengo entendido, que están obligados a informar su contabilidad en formato de diccionario.
+- [59:02] O sea, nosotros tenemos contabilidad electrónica, pero eso se hace una vez que uno hace la renta, no nos hacen hacer nada mensualizado.
+- [59:08] No, pero eso se hace cuando es la renta. ¿De dónde lo sacan actualmente eso de GML ustedes?
+- [59:12] actualmente eso lo sacamos del sistema y se lo enviamos al contador el contador lo sube
+- [59:20] el contador externo tributario
+- [59:28] una segunda etapa para ver porque eso se puede hacer automático ya el seguro lo que hace el
+- [59:38] El contador toma toda su contabilidad, la transforma a un formato GML, que es el formato que exige el DSI, la firma con el certificado digital del representante legal y lo carga al servicio de apuesto interno.
+- [59:58] Claro.
+- [59:58] entonces ahí se podría hacer un trabajo
+- [01:00:01] de que
+- [01:00:03] se implementa acá
+- [01:00:05] la contabilidad electrónica
+- [01:00:07] y se envía directo al servicio
+- [01:00:09] ya
+- [01:00:11] obviamente
+- [01:00:13] eso viene con una revisión
+- [01:00:15] interna de ustedes
+- [01:00:16] si yo creo que es viable
+- [01:00:25] si pero eso lo podemos ver
 - [01:00:28] porque igual también
-- [01:00:30] para ser sinceros
-- [01:00:32] es un trabajo
-- [01:00:34] certificarse con la cantidad de lectura
-- [01:00:36] que es como software de mercado
-- [01:00:40] si, yo creo que ahí
-- [01:00:42] igual ver como lo hacen en situs
-- [01:00:44] porque lo que yo he visto es que
-- [01:00:46] nosotros le mandamos la información
-- [01:00:48] por ejemplo le mandamos
-- [01:00:50] un formato mayor
-- [01:00:52] el libro diario, el balance
-- [01:00:54] todo el tema y él lo sube
-- [01:00:56] pero yo creo que lo sube en un formato
-- [01:00:58] más estandarizado
-- [01:01:00] no es tanto como
-- [01:01:02] el lsi tiene un plan de cuenta
-- [01:01:04] ¿cierto?
-- [01:01:06] y aparte
-- [01:01:08] hay que hacer que el match
-- [01:01:10] de las cuentas propias de ustedes
-- [01:01:12] a que cuenta del lsi corresponde
-- [01:01:14] si por lo que tengo entendido el contar
-- [01:01:16] se supone que sube la información
-- [01:01:18] y ahí que selecciona como
-- [01:01:20] el servicio impuesto interno no sube automático
-- [01:01:22] por lo que tengo entendido
-- [01:01:24] claro, en vez de pasarse al contador
-- [01:01:26] le dan acceso de acá al contador
-- [01:01:28] y él va a firmar
-- [01:01:30] de acá
-- [01:01:32] claro
-- [01:01:36] dale Carlos
-- [01:01:40] vale, vamos entonces con
-- [01:01:42] el módulo de tesorería
-- [01:01:44] bueno aquí en el flujo de caja no tenemos datos cargados
-- [01:01:46] pero se podrían cargar directamente
-- [01:01:48] donde
-- [01:01:50] se vería tanto la fecha
-- [01:01:52] el concepto ingreso
-- [01:01:54] y egreso
-- [01:01:58] junto con lo que vendría a ser
-- [01:02:00] las cartolas
-- [01:02:02] hecho aquí hay una
-- [01:02:07] si le damos trabajar
-- [01:02:09] me avorece la contabilización
-- [01:02:11] y con la posibilidad de
-- [01:02:21] ditarlo o eliminarlo
-- [01:02:30] uno con los pagos
-- [01:02:32] donde bueno aquí tenemos algunos que están activos
-- [01:02:34] y uno pendiente
-- [01:02:45] de los anticipos
-- [01:02:51] consulta Carlos
-- [01:02:53] ahí en el tema de cargar
-- [01:02:55] la cartola no se podría por ejemplo
-- [01:02:57] porque yo sé que actualmente
-- [01:02:59] se puede bajar el excel directo del servicio impuesto
-- [01:03:01] osea perdón del banco
-- [01:03:03] y cargarlo
-- [01:03:05] en este caso teniendo el excel
-- [01:03:07] podríamos cargarlo directamente acá
-- [01:03:11] y ahí por ejemplo seleccionar el movimiento
-- [01:03:13] y imputarlo directamente
-- [01:03:15] al movimiento
-- [01:03:17] y eso al tiro se vaya como calzando
-- [01:03:19] si, si, exacto
-- [01:03:21] podríamos realizarlo directamente así
-- [01:03:23] ahí
-- [01:03:25] ahí no entendía que
-- [01:03:27] qué se calzaría el movimiento
-- [01:03:29] lo que pasa es que por ejemplo
-- [01:03:31] si yo tengo 5 movimientos en el banco
-- [01:03:33] la primera semana de mes
-- [01:03:35] lo cargo el excel con los 5 movimientos
-- [01:03:37] y por ejemplo me aparecen los 5 movimientos pendientes
-- [01:03:39] probablemente en el banco
-- [01:03:41] y yo pesco un movimiento
-- [01:03:43] y pongo ingreso
-- [01:03:45] de venta factura 20
-- [01:03:47] entonces ahí yo lo contabilizo
-- [01:03:49] y al tiro me aparece calzado con el movimiento del banco
-- [01:03:51] entonces si yo voy trabajando directamente
-- [01:03:53] con la cartola
-- [01:03:59] sería una conciliación bancaria en dole
-- [01:04:01] exacto
-- [01:04:03] para ya te entiendo
-- [01:04:05] y dentro de ese excel por ejemplo
-- [01:04:07] va los datos del emisor
-- [01:04:09] o del que transfiere
-- [01:04:11] osea igual tenemos a ver
-- [01:04:13] tu movimiento que es venta de dolar
-- [01:04:15] y compra de dolar
-- [01:04:17] como en otra parte tener que buscar la información
-- [01:04:19] pero igual aparecería el movimiento
-- [01:04:21] contado donde nosotros podamos imputarlo
+- [01:00:29] para ser bien sincero
+- [01:00:31] es un trabajo
+- [01:00:33] certificarse con la contabilidad electrónica
+- [01:00:36] como software de mercado
+- [01:00:37] si, yo creo que ahí
+- [01:00:41] podríamos igual ver como lo hacen
+- [01:00:42] en sitios porque lo que yo he visto es que
+- [01:00:45] nosotros le mandamos la información
+- [01:00:47] pero por ejemplo le mandamos
+- [01:00:48] el libro mayor
+- [01:00:50] el libro diario, el balance, todo el tema
+- [01:00:53] y él lo sube, pero yo creo que lo sube
+- [01:00:55] en un formato más
+- [01:00:56] estandarizado, no es tanto como
+- [01:00:58] el S.I. tiene
+- [01:01:03] un plan de cuenta, ¿cierto?
+- [01:01:05] Sí. Y aparte
+- [01:01:07] hay que hacer que el match de las
+- [01:01:09] cuentas propias de ustedes
+- [01:01:10] a qué cuenta del SI corresponde.
+- [01:01:14] Sí, por lo que tengo
+- [01:01:15] entendido, el contador se supone que sube la información
+- [01:01:17] a su RP y ahí
+- [01:01:19] se selecciona como el del servicio impuesto interno
+- [01:01:21] o no es automático, por lo que tengo entendido.
+- [01:01:23] Claro, en vez de
+- [01:01:25] pasárselo al contador,
+- [01:01:26] le dan acceso desde acá al contador y él va a
+- [01:01:29] firmar
+- [01:01:30] desde acá.
+- [01:01:31] Vamos entonces con el módulo de tesorería, bueno aquí en el flujo de cajas no tenemos
+- [01:01:45] datos cargados, pero se podrían cargar directamente donde se vería tanto la fecha, el concepto
+- [01:01:53] de ingreso y egreso, junto con lo que vendría a ser las cartolas, de hecho aquí hay una,
+- [01:02:07] le damos trabajar aparece la contabilización y con la posibilidad de editarlo o eliminarlo
+- [01:02:22] luego los pagos donde bueno aquí tenemos algunos que están activos y uno pendiente los anticipos
+- [01:02:46] consulta carlos ahí en el tema de cargar la cartola no se podría por ejemplo porque yo sé
+- [01:02:58] que actualmente se puede bajar el excel directo del servicio impotente no sea perdón del banco
+- [01:03:03] y cargarlo en este caso teniendo el excel podríamos
+- [01:03:08] cargarlo directamente acá y ahí por ejemplo seleccionar el
+- [01:03:13] movimiento e imputarlo directamente al movimiento cosa que eso eso al tiro se
+- [01:03:18] vaya como calzando sí sí exacto podríamos realizarlo
+- [01:03:22] ¿Con qué se calzaría el movimiento?
+- [01:03:29] Lo que pasa es que, por ejemplo, si yo tengo cinco movimientos en el banco la primera semana del mes,
+- [01:03:35] lo cargo al Excel con los cinco movimientos.
+- [01:03:37] Y, por ejemplo, me aparecen los cinco movimientos pendientes, pero obviamente en el banco.
+- [01:03:41] Y yo pesco un movimiento y pongo, no sé, ingreso de, no sé, de venta a factura 20.
+- [01:03:48] Entonces, ahí yo lo contabilizo.
+- [01:03:49] Y al tiro me aparece calzado con el movimiento del banco.
+- [01:03:51] Entonces yo voy trabajando netamente con la cartola
+- [01:03:54] Sería una conciliación bancaria en realidad
+- [01:04:01] Exacto
+- [01:04:02] Para
+- [01:04:02] Ya te entiendo
+- [01:04:05] Y dentro de ese Excel por ejemplo
+- [01:04:07] Van los datos del emisor
+- [01:04:09] O del que transfiere
+- [01:04:11] O sea
+- [01:04:12] Igual tenemos harto movimiento que es venta de dólar
+- [01:04:15] Y compra de dólar
+- [01:04:16] Que ahí nosotros tenemos como en otra parte
+- [01:04:19] Tener que buscar la información
+- [01:04:20] Pero igual aparecería el movimiento contable
+- [01:04:22] Donde nosotros podemos imputarlo
 - [01:04:23] entonces al contabilizar el movimiento
-- [01:04:25] en sí de la cartola
-- [01:04:27] debería quedar contabilizado
-- [01:04:29] y conciliado
-- [01:04:31] ya te entiendo
-- [01:04:33] y ahí sería el que haría el lazado
-- [01:04:35] bueno cuando tiene facturas
-- [01:04:37] debería quedar lazado la factura
-- [01:04:41] claro
-- [01:04:43] sería un pago recibido
-- [01:04:45] y emitido igual
-- [01:04:47] ya
-- [01:04:49] y aquí la cartola trae
-- [01:04:51] ambos movimientos
-- [01:04:53] sí trae ambos movimientos
-- [01:04:55] trae cargos y abonos
-- [01:04:57] ahi ok
-- [01:05:01] osea que la cartola debería poder conciliar
-- [01:05:03] exacto
-- [01:05:05] le voy a mandar el excel que nosotros trabajamos
-- [01:05:07] para ingresar los movimientos
-- [01:05:09] de hecho
-- [01:05:11] teniendo eso porque
-- [01:05:13] esto nos está
-- [01:05:15] habilitado para
-- [01:05:17] tener el excel y que se procese
-- [01:05:19] pero si estaba contemplado porque lo habíamos conversado con la marina
-- [01:05:21] en un ruego anterior
-- [01:05:23] falta solamente tener el excel tipo
-- [01:05:25] para poder saber como esta la estructura
-- [01:05:27] y poder cargar los datos y hay que aparezca
-- [01:05:29] el selector
-- [01:05:31] dependiendo de lo que se quiera cargar
-- [01:05:33] si lo que pasa es que lo intentamos
-- [01:05:35] como que llegar a diario del banco
-- [01:05:37] y era un poco del deseo
-- [01:05:39] que lo mandaran como el pdf diario
-- [01:05:41] entonces mejor como actualmente
-- [01:05:43] lo llevamos en excel
-- [01:05:45] para que la cartola
-- [01:05:47] pueda cargar el excel
-- [01:05:49] perfecto
-- [01:05:51] y el correo
-- [01:05:53] diario
-- [01:05:55] no se podía hacer del excel
-- [01:05:59] es que no nos llega el correo diario
-- [01:06:01] no nos llega esa información
-- [01:06:05] ahi ok
-- [01:06:07] eso lo hacemos
-- [01:06:09] al banco y ver los movimientos del banco
-- [01:06:11] directo
-- [01:06:13] yo se que hay empresas
-- [01:06:15] que les llega automático pero no
-- [01:06:17] sé como hacer ese proceso para que el banco lo emita
-- [01:06:19] bueno pero ahí lo
-- [01:06:26] estoy a suena
-- [01:06:28] consulta
-- [01:06:30] oh se me fue
-- [01:06:32] era de la conciliación
-- [01:06:34] ya vuelvo
-- [01:06:36] ah eso ahí está
-- [01:06:38] bueno nos va a compartir el excel
-- [01:06:40] si
-- [01:06:42] pero ahí podrías destacarnos
-- [01:06:44] un registro
-- [01:06:46] de que tu conciliaste
-- [01:06:48] contra facturas
-- [01:06:50] y el asiento contable
-- [01:06:52] como te quedo
-- [01:06:54] actualmente
-- [01:06:56] en agrasoft
-- [01:06:58] tenemos el módulo de tesorería
-- [01:07:00] y en el módulo de tesorería
-- [01:07:02] tenemos una parte que se llama
-- [01:07:04] eh
-- [01:07:06] procesos diarios
-- [01:07:08] proveedores
-- [01:07:10] procesos diarios cliente
-- [01:07:12] entonces
-- [01:07:14] nosotros nos metemos a proveedores
-- [01:07:16] nosotros buscamos
-- [01:07:18] la pantalla
-- [01:07:20] ya mejor
-- [01:07:22] ya me deje meterme
-- [01:07:24] al sistema
-- [01:07:57] acá estamos en el m
-- [01:08:05] si yo ingresara
-- [01:08:07] el movimiento desde aquí
-- [01:08:09] me queda automático
-- [01:08:11] vamos a ser el, ya supongamos que hoy día
-- [01:08:13] nos pagaron
-- [01:08:15] con banco chile
-- [01:08:17] fue una transferencia
-- [01:08:19] y el código va a ser
-- [01:08:21] servicios
-- [01:08:23] nosotros acá ponemos el código financiero
-- [01:08:25] para el flujo de caja
-- [01:08:27] entonces acá supongamos que vamos a poner
-- [01:08:29] banco chile
-- [01:08:31] ese mantenedor nos faltaría también
-- [01:08:33] por el código financiero
-- [01:08:35] entonces acá por ejemplo
-- [01:08:37] ya tenemos una factura que es esta
-- [01:08:39] si yo la preto
-- [01:08:41] y pongo aquí ya
-- [01:08:43] estoy pagando en el banco chile
-- [01:08:45] y lo considero en pesos
-- [01:08:47] pongo pago factura
-- [01:08:49] 2777516
-- [01:08:51] prueba para después eliminarlo
-- [01:08:53] una consulta
-- [01:08:55] es tu visita al root
-- [01:08:57] y filtrante girado a
-- [01:08:59] banco chile
-- [01:09:01] si por ejemplo acá en la parte de arriba
-- [01:09:03] yo pongo con qué paillé
-- [01:09:05] ya
-- [01:09:07] para que no nos confundamos vamos a poner
-- [01:09:09] otro proveedor
-- [01:09:11] este por ejemplo es de
-- [01:09:13] una librería
-- [01:09:15] entonces yo selecciono
-- [01:09:17] esta factura
-- [01:09:19] ya son 49,900
-- [01:09:21] y yo pongo aquí el número
-- [01:09:23] se supone que aquí va el número de transacción
-- [01:09:25] pero yo puedo poner cualquier número para que se calce
-- [01:09:27] entonces yo
-- [01:09:29] número transacción de la cartola
+- [01:04:27] en sí de la cartola
+- [01:04:28] debería quedar contabilizado y conciliado
+- [01:04:31] ya lo entiendo, y ahí sería el que haría enlazado
+- [01:04:35] bueno, cuando tiene factura
+- [01:04:36] debería quedar enlazada la factura
+- [01:04:38] claro
+- [01:04:39] serían pagos recibidos
+- [01:04:43] y emitidos igual
+- [01:04:46] y aquí lo van a
+- [01:04:49] la cartola trae ambos movimientos
+- [01:04:52] sí, trae ambos movimientos
+- [01:04:54] Trae cargos y abonos
+- [01:04:55] Ah, ya, ok
+- [01:04:57] Entonces acá en la cartona deberían poder conciliar
+- [01:05:03] Exacto
+- [01:05:04] Le voy a mandar el Excel que nosotros
+- [01:05:06] Trabajamos para ingresar los movimientos
+- [01:05:08] Ok
+- [01:05:10] De hecho, teniendo eso
+- [01:05:12] Porque
+- [01:05:12] Esto no está habilitado
+- [01:05:16] Para subir el Excel y que se procese
+- [01:05:18] Pero sí estaba contemplado porque lo habíamos conversado
+- [01:05:20] Con la Mari en una reunión anterior
+- [01:05:22] Falta solamente
+- [01:05:24] tener el Excel tipo para poder saber
+- [01:05:26] cómo está la estructura y poder cargar los datos
+- [01:05:28] y que aparezca el selector
+- [01:05:30] dependiendo de lo que se quiera cargar
+- [01:05:32] Sí, lo que pasa es que lo intentamos
+- [01:05:34] como que llegara diario
+- [01:05:36] del banco
+- [01:05:37] y era un poco el deseo que nos mandaran
+- [01:05:40] como el PDF diario
+- [01:05:41] entonces mejor como actualmente lo llevamos en Excel
+- [01:05:44] que igual es un formato cartola
+- [01:05:46] puedes cargar el Excel
+- [01:05:48] Perfecto
+- [01:05:50] Ya, ahí
+- [01:05:51] bueno, el correo
+- [01:05:54] diario no se podía hacer
+- [01:05:56] en Excel?
+- [01:05:59] Es que no nos llega el correo diario.
+- [01:06:04] No nos llega esa información.
+- [01:06:07] Ok.
+- [01:06:09] Eso es lo que estamos pensando.
+- [01:06:10] Al banco y ver los movimientos del banco
+- [01:06:12] directo.
+- [01:06:14] Yo sé que hay empresas que les llega
+- [01:06:16] automático, pero no sé cómo
+- [01:06:18] hacer ese proceso para que el banco lo emita.
+- [01:06:25] Ah, bueno, pero ahí lo...
+- [01:06:27] ¿Tienes una consulta?
+- [01:06:30] Oh, se me fue.
+- [01:06:32] Era de la conciliación.
+- [01:06:35] Ya vuelvo.
+- [01:06:35] Ah, eso, eso, ahí está.
+- [01:06:37] Bueno, nos va a compartir el Excel, ¿cierto?
+- [01:06:40] Sí.
+- [01:06:41] Pero ahí podrías destacarnos algún registro de que tú conciliaste,
+- [01:06:49] contrafactura, ¿cierto?
+- [01:06:51] Y el asiento contable, ¿cómo te quedó?
+- [01:06:54] Ya, mira, lo que pasa es que actualmente en Agrasoft
+- [01:06:57] nosotros tenemos el módulo de tesorería.
+- [01:07:00] ¿Ya?
+- [01:07:00] Y en el modo de tesorería tenemos una parte que se llama Procesos Diarios Proveedores, Procesos Diarios Clientes.
+- [01:07:13] Entonces, si nosotros nos metemos a Proveedores, nosotros buscamos, no sé si les puedo, quizás les muestre la pantalla.
+- [01:07:20] Ya, mejor.
+- [01:07:21] Ya, déjame meterme al sistema.
+- [01:07:56] Ya.
+- [01:07:57] Acá estamos en el M.
+- [01:08:05] Vale.
+- [01:08:05] Si yo ingresara el movimiento desde aquí, me queda automático.
+- [01:08:10] Vamos a hacer el... Ya supongamos que hoy día nos pagaron con Banco Chile.
+- [01:08:17] Fue una transferencia y el código va a ser servicios.
+- [01:08:23] Entonces acá ponemos el código financiero para el flujo de caja.
+- [01:08:27] Entonces acá supongamos que vamos a poner Banco Chile.
+- [01:08:29] Ese mantenedor nos faltaría también por el código financiero, ¿no?
+- [01:08:34] Sí, entonces acá por ejemplo
+- [01:08:36] ya tenemos una factura que es esta
+- [01:08:39] si yo la aprieto
+- [01:08:41] y pongo que ya estoy pagando con el Banco
+- [01:08:43] Chile y lo considero en pesos
+- [01:08:45] pongo pago
+- [01:08:47] factura 2777
+- [01:08:49] 516 y voy a poner
+- [01:08:50] prueba para después eliminarlo
+- [01:08:52] Espérame, espérame
+- [01:08:54] Una consulta, tú pusiste al RUT
+- [01:08:57] y filtraste girado
+- [01:08:59] a Banco Chile
+- [01:09:00] Sí, por ejemplo acá en la parte de arriba
+- [01:09:03] yo pongo con qué payé
+- [01:09:04] para que no nos confundamos
+- [01:09:08] vamos a poner otro proveedor
+- [01:09:10] este por ejemplo
+- [01:09:12] es de una librería
+- [01:09:14] entonces yo selecciono esta factura
+- [01:09:18] ya son 49.900
+- [01:09:20] yo pongo aquí el número
+- [01:09:22] se supone que aquí va el número de transacción
+- [01:09:24] pero yo puedo poner cualquier número para que se calce
+- [01:09:26] entonces yo
+- [01:09:27] el número de transacción de la cartola
 - [01:09:31] exacto
-- [01:09:33] entonces
-- [01:09:35] como lo hacemos un manual y siempre ponemos el 1
-- [01:09:37] pero aquí debería ir por ejemplo
-- [01:09:39] el 5256
-- [01:09:41] que el número de cartola
-- [01:09:43] ya
-- [01:09:45] pincho la factura y le pongo grabar
-- [01:09:47] ya
-- [01:09:49] entonces acá se me hace este asiento contable
-- [01:09:51] que me movió banco
-- [01:09:55] por los 49
-- [01:09:57] y me rebajó el proveedor
-- [01:09:59] por los 49
-- [01:10:01] y me sale en peso y dólar al tipo de cambio
-- [01:10:03] del día
-- [01:10:05] y como selecciono a ustedes si es para
-- [01:10:07] tipo cambio al día o el congelado
-- [01:10:09] porque acá te pide la tasa de cambio
-- [01:10:11] al momento de poner la fecha
-- [01:10:13] para otro automático
-- [01:10:15] entonces por ejemplo el 14-7
-- [01:10:17] el tipo de cambio era 9-28
-- [01:10:19] yo acá lo puedo editar
-- [01:10:21] me da un segundito que me están llamando
-- [01:10:23] un solito uno
-- [01:10:25] ya
-- [01:11:02] ya
-- [01:11:04] entonces acá
-- [01:11:06] me queda el comprobante contable
+- [01:09:32] ya
+- [01:09:33] Entonces, como lo hacemos en un manual, siempre ponemos el 1, pero aquí debería ir, por ejemplo, el 5256, que es el número de cartola.
+- [01:09:44] Pincho la factura y le pongo grabar.
+- [01:09:49] Entonces, acá se me hace este asiento contable, que me movió banco por los 49 y me rebajó el proveedor por los 49.
+- [01:10:00] Y me sale en peso y dólar al tipo de cambio del día.
+- [01:10:03] ¿Y cómo seleccionan ustedes si es para el tipo de cambio al día o el congelado?
+- [01:10:09] Porque acá te pide la tasa de cambio al momento de poner la fecha
+- [01:10:13] Pero otra automática
+- [01:10:14] Entonces, por ejemplo, el 14 del 7, el tipo de cambio era 9.28
+- [01:10:19] Yo acá lo puedo editar
+- [01:10:20] ¿Me da un segundito? Que me están llamando
+- [01:10:22] Un segundito, uno
+- [01:10:23] ¿Sí?
+- [01:10:59] Ya, sorry
+- [01:11:01] Ya
+- [01:11:02] entonces acá
+- [01:11:05] me queda el comprobante contable
 - [01:11:08] en el módulo de contabilidad
-- [01:11:10] ya perfecto
-- [01:11:12] ahí se me fue decirte
-- [01:11:14] si no podías compartir el comprobante
-- [01:11:16] un pantalla
-- [01:11:18] si
-- [01:11:20] efectivamente estoy grabando
-- [01:11:24] igual este módulo lo vimos con Carlos
-- [01:11:26] la reunión pasada
-- [01:11:28] y le mostré
-- [01:11:30] el comprobante que se hacía en peso
-- [01:11:32] y dólar porque lo hicimos en las dos monedas
-- [01:11:34] y también le mostré que cuando lo hacemos
-- [01:11:36] en dólar nos calcula automáticamente
-- [01:11:38] la diferencia del tipo de cambio porque
-- [01:11:40] si tú te fijas acá
-- [01:11:42] si nosotros ingresáramos al movimiento
-- [01:11:44] sin meternos en este módulo
-- [01:11:46] nosotros tendríamos el anticipo
-- [01:11:48] que nos pagó la factura
-- [01:11:51] entonces al pinchar los dos
-- [01:11:53] no aparecería
-- [01:11:55] en monto cero en peso
-- [01:11:57] o en dólar dependiendo de cómo estemos pagando
-- [01:12:00] ok entiendo
-- [01:12:05] y ahí la tasa de cambio siempre la tienen que registrar
-- [01:12:07] a ustedes a mano
-- [01:12:09] la tasa de cambio se hace automática
-- [01:12:11] con la fecha que yo estoy poniendo del movimiento
-- [01:12:13] del banco
-- [01:12:20] pero cuál es un alimitante
-- [01:12:22] que por ejemplo
-- [01:12:24] las facturas
-- [01:12:26] las facturas de los productores
+- [01:11:09] ya, perfecto
+- [01:11:12] ahí se me fue a decir
+- [01:11:13] si nos podía compartir el comprobante
+- [01:11:15] en pantalla, ah, tú estás grabando
+- [01:11:17] Carlos, ¿no?
+- [01:11:18] sí, efectivamente estoy grabando
+- [01:11:21] igual este módulo lo vimos con Carlos
+- [01:11:25] en la reunión pasada
+- [01:11:26] y le mostré
+- [01:11:29] el comprobante que se hacía
+- [01:11:31] en peso y dólar porque lo hicimos en las
+- [01:11:34] dos monedas. Y también le mostré que
+- [01:11:36] cuando lo hacemos en dólar nos calcula automática
+- [01:11:38] la diferencia de tipo de cambio porque
+- [01:11:39] si tú te fijas acá
+- [01:11:41] si nosotros ingresáramos al movimiento
+- [01:11:43] sin meternos en este módulo
+- [01:11:45] nosotros tendríamos el anticipo y el
+- [01:11:48] pago de la factura. Entonces
+- [01:11:51] al pinchar los dos
+- [01:11:53] nos aparecería en monto
+- [01:11:55] cero en peso o en dólar dependiendo
+- [01:11:57] de cómo estemos pagando.
+- [01:12:00] Ok, entiendo.
+- [01:12:01] ¿y ahí la tasa de cambio siempre la tienen que registrar
+- [01:12:06] ustedes a mano?
+- [01:12:08] la tasa de cambio se hace automática con la fecha
+- [01:12:10] que yo estoy poniendo del movimiento del banco
+- [01:12:13] pero ¿cuál es
+- [01:12:19] una limitante? que por ejemplo
+- [01:12:21] las facturas
+- [01:12:24] de
+- [01:12:24] las facturas de los productores
 - [01:12:28] tienen un tipo de cambio promedio
 - [01:12:30] que muchas veces no existe
 - [01:12:33] el tipo de cambio
-- [01:12:35] como
-- [01:12:37] al barco central
-- [01:12:39] acordado claro
-- [01:12:43] y ahí usted igual lo digita la mano
-- [01:12:45] o sea la factura
-- [01:12:47] claro lo digitamos el tipo de cambio a mano
-- [01:12:49] que es uno de los casos que tenemos
-- [01:12:51] que sido sin modificar cuando nosotros ingresamos
+- [01:12:34] como
+- [01:12:37] en el banco central
+- [01:12:39] acordado, claro
+- [01:12:40] y ahí usted igual lo digita en la mano
+- [01:12:44] o sea, la factura
+- [01:12:47] claro, digitamos el tipo de cambio
+- [01:12:49] a mano, que es uno de los casos que tenemos que
+- [01:12:51] modificar cuando nosotros ingresamos
 - [01:12:53] un documento
-- [01:12:55] eso es las de productores
-- [01:12:57] y las de materiales
-- [01:12:59] que también es un tipo de cambio
-- [01:13:01] diferente
-- [01:13:03] al de la factura
-- [01:13:21] y ahí queda una vuelta y entonces Carlos
-- [01:13:23] a esa generación
-- [01:13:25] si
-- [01:13:27] con el video
-- [01:13:29] y todo el ambiente ahí va
-- [01:13:31] ok
-- [01:13:35] bueno y bien Jesús, igual tú nos comparte
-- [01:13:37] el tema de la cartora del banco
-- [01:13:39] y como usted queda el asiento
-- [01:13:41] si, si, si es lo posible
-- [01:13:43] si mira
-- [01:13:45] en puso por compartir tengo el manual
-- [01:13:47] de facturación de exportación
-- [01:13:49] ya
-- [01:13:51] el inventario en formato excel del que nos hacen
-- [01:13:53] tenemos en el manual
-- [01:13:55] un libro mayor, el balance
-- [01:13:57] el libro diario
-- [01:13:59] y el excel de las cartolas
-- [01:14:01] ok
-- [01:14:20] bueno realmente
-- [01:14:22] el módulo de tesorería
-- [01:14:24] a ver estoy compartiendo
-- [01:14:29] con lo que vamos a ver igual vamos a tener
+- [01:12:54] eso es las de productores
+- [01:12:57] y las de materiales, que también es un tipo
+- [01:12:59] de cambio
+- [01:12:59] diferente al de la
+- [01:13:03] factura
+- [01:13:04] y hay que darle una vuelta ahí entonces, Carlos, a esa
+- [01:13:23] generación
+- [01:13:24] sí
+- [01:13:25] Bueno, Irma y Jesús, igual tú nos compartes
+- [01:13:37] el tema de la cartona, el banco
+- [01:13:39] y cómo se queda el asiento
+- [01:13:41] si es lo posible
+- [01:13:42] Sí, mira
+- [01:13:44] en cosas por compartir
+- [01:13:47] tengo el manual de facturación y exportación
+- [01:13:49] el inventario
+- [01:13:51] en formato Excel
+- [01:13:52] del que tenemos en Almagüe
+- [01:13:54] un libro mayor
+- [01:13:56] el balance
+- [01:13:57] el libro diario y el Excel de las cartolas
+- [01:14:00] ok
+- [01:14:03] perfecto
+- [01:14:21] bueno, realmente del módulo
+- [01:14:23] de tesorería, ahora estoy compartiendo
+- [01:14:25] con lo que acabamos de ver
+- [01:14:30] igual vamos a tener que pasarle
 - [01:14:31] un refresh
-- [01:14:33] si que
-- [01:14:35] las otras pestañas que nos quedan pendientes vamos a
-- [01:14:37] más que nada a ver si es que queda algún tipo
-- [01:14:39] de feedback por parte
-- [01:14:41] de ustedes para tenerlo aquí en el registro
-- [01:14:43] la llamada
-- [01:14:45] tenemos
-- [01:14:47] bueno el tema de las cartolas que ahora hablamos
-- [01:14:49] con los pagos
-- [01:14:51] esto también
-- [01:14:55] va a ser lo que conversamos con
-- [01:14:57] el cómo se trae los datos también debería
-- [01:14:59] realizarse ajustes ¿verdad?
-- [01:15:03] no
-- [01:15:10] no está bien ahí
-- [01:15:15] porque ahí es donde yo ingresa la información
-- [01:15:17] del pago ¿cierto? exacto
-- [01:15:19] no esa es parte del día a día
-- [01:15:21] de la persona que ingrese las cartolas
-- [01:15:23] perfecto aquí está el módulo de los
-- [01:15:36] anticipos
-- [01:15:42] donde así estaría el
-- [01:15:44] menú para
-- [01:15:46] la solicitud
-- [01:15:53] y con los diferentes acciones que sería
-- [01:15:55] calzar o editar en este caso
-- [01:15:57] ya
-- [01:16:04] ahí sorre
-- [01:16:06] ahí sería
-- [01:16:08] anticipo que
-- [01:16:10] Almagüe entrega
-- [01:16:12] o lo anticipos que reciben
+- [01:14:33] así que las otras pestañas
+- [01:14:36] que nos quedan pendientes, vamos más que nada a ver
+- [01:14:37] si es que queda algún tipo de feedback
+- [01:14:39] por parte de
+- [01:14:42] ustedes para tenerlo aquí en el registro de la llamada
+- [01:14:44] tenemos
+- [01:14:45] Bueno, el tema de las cartolas ya lo hablamos
+- [01:14:49] Con los pagos
+- [01:14:51] Esto también
+- [01:14:55] En base a lo que conversamos
+- [01:14:56] Con el cómo se traen los datos
+- [01:14:58] También deberían realizarse ajustes, ¿verdad?
+- [01:15:09] No, no eso está bien ahí
+- [01:15:11] Porque ahí es donde yo voy a ingresar
+- [01:15:16] La información del pago, ¿cierto?
+- [01:15:18] Exacto
+- [01:15:19] No, eso es parte del día a día
+- [01:15:21] Como de la persona que ingresa las cartolas
+- [01:15:23] Perfecto
+- [01:15:35] Aquí está el módulo de los anticipos
+- [01:15:37] donde así estaría el menú
+- [01:15:43] para la
+- [01:15:45] solicitud
+- [01:15:47] y con las diferentes acciones
+- [01:15:54] que sería calzar o editar en este caso
+- [01:15:56] ya
+- [01:15:58] ahí, sorry, sorry
+- [01:16:05] ahí sería
+- [01:16:07] anticipo que
+- [01:16:09] al mago entrega
+- [01:16:11] o como, o los anticipos que reciben
 - [01:16:14] no, a los productores
-- [01:16:16] nosotros le damos anticipo
-- [01:16:18] ya
-- [01:16:20] por el lado de LM y por el lado de Almagüe
-- [01:16:22] son anticipos
-- [01:16:24] que recibimos de los clientes
-- [01:16:26] entiendo
-- [01:16:28] que es ALM
-- [01:16:33] otra empresa? si
-- [01:16:35] LM es la empresa de servicios
-- [01:16:37] donde nosotros concentramos lo que es
-- [01:16:39] Paki, materia prima
-- [01:16:41] la mano de obra
-- [01:16:43] y todo lo que conlleva
-- [01:16:45] a que nosotros entregamos un producto terminado
-- [01:16:47] a Almagüe
-- [01:16:49] y Almagüe se disponga a comprarlo
-- [01:16:51] y exportarlo
-- [01:16:53] por eso Almagüe no tiene inventario
-- [01:16:55] y tampoco tiene movimientos de bodega
-- [01:16:57] porque todo el movimiento lo concentra al LM
-- [01:16:59] ¿y ese movimiento
-- [01:17:01] donde lo manejan en otro sistema?
-- [01:17:03] el de ALM
-- [01:17:05] el de ALM no, el movimiento de bodega
-- [01:17:07] ahí tenemos el stock de materiales
-- [01:17:11] el stock de frutas
-- [01:17:13] lo tenemos en otro sistema
-- [01:17:15] que sería la página
-- [01:17:17] que está conectada con los Paki
-- [01:17:19] eso lo van a también
-- [01:17:21] lo van a centralizar acá
-- [01:17:23] o lo van a seguir trabajando por separado
-- [01:17:25] mira, ahí no sé
-- [01:17:27] no sé por qué en realidad
-- [01:17:29] lo que nosotros llevamos en el sistema actualmente
-- [01:17:31] es el tema de los materiales
-- [01:17:33] que eso sí
-- [01:17:35] lo tenemos
-- [01:17:37] por el módulo de bodega
-- [01:17:39] que vemos todos los movimientos
-- [01:17:41] si hay devoluciones, hay traspasos
-- [01:17:43] si hay ingresos
-- [01:17:45] o compra de
-- [01:17:47] de insumo
-- [01:17:49] ya, entiendo
-- [01:17:51] pero en sí como el movimiento de la fruta
-- [01:17:54] lo vemos directamente
-- [01:17:56] de los Paki
-- [01:18:00] aquí siguiendo
-- [01:18:12] tenemos el módulo
-- [01:18:14] de las nóvinas y atraso
-- [01:18:16] donde aquí debería
-- [01:18:19] bueno, no tenemos ninguna que esté
-- [01:18:21] en el estado
-- [01:18:23] atrasado
-- [01:18:25] así que no lo tengo el ejemplo en este momento
-- [01:18:27] pero aquí deberían aparecer
-- [01:18:29] ya
-- [01:18:31] esas nóvinas
-- [01:18:33] esas nóvinas serían
-- [01:18:35] lo que testen que pagar
-- [01:18:37] o cobrar
-- [01:18:39] sería claro, pagar o cobrar
-- [01:18:41] pero generalmente
-- [01:18:43] son parapagos
-- [01:18:45] que deberían aparecer todos los documentos
-- [01:18:47] que están pendientes
-- [01:18:49] y como la fecha histórica
-- [01:18:51] no sé, si llevan 30 días de antigüedad
-- [01:18:53] 90 días de antigüedad
-- [01:18:55] por ejemplo ahí
-- [01:18:57] si usted no sé
-- [01:18:59] bueno va a ser por lo que da
-- [01:19:01] es por pagar
-- [01:19:03] claro
-- [01:19:05] y ustedes
-- [01:19:07] fecha de vencimiento
-- [01:19:09] no trabajan con
-- [01:19:11] una nueva fecha de vencimiento
-- [01:19:13] o sea vencimiento
-- [01:19:15] a ver como lo aplicó
-- [01:19:17] tenemos la fecha de vencimiento del documento
-- [01:19:19] siento que es la factura de
-- [01:19:21] la factura recibida
-- [01:19:23] la factura de tu proveedor
-- [01:19:25] tiene la fecha de vencimiento
-- [01:19:27] esa factura de proveedor
-- [01:19:29] pero puede ser que tú
-- [01:19:31] tiene la fecha de vencimiento del 16 del 08
+- [01:16:16] nosotros les damos anticipo
+- [01:16:18] ya, ok
+- [01:16:20] y por el lado del M
+- [01:16:21] Y por el lado de Almahue son anticipos que recibimos de los clientes.
+- [01:16:27] Entiendo. ¿Qué es ALM? ¿Otra empresa?
+- [01:16:34] Sí, ALM es la empresa de servicios donde nosotros concentramos lo que es packing, materia prima, la mano de obra y todo lo que conlleva a que nosotros entregamos un producto terminado a Almahue.
+- [01:16:47] Y Almahue se empuja después a comprarlo y exportarlo.
+- [01:16:50] Entiendo, entiendo.
+- [01:16:51] Por eso Almagro no tiene inventario
+- [01:16:53] y tampoco tiene movimientos de bodega, porque
+- [01:16:55] todo el movimiento lo concentra el EME.
+- [01:16:58] ¿Y ese movimiento
+- [01:16:59] dónde lo manejan? ¿En otro sistema?
+- [01:17:02] ¿Cuál movimiento?
+- [01:17:03] El de ALM.
+- [01:17:05] ¿El de ALM no? ¿En el movimiento de bodega?
+- [01:17:07] Ahí tenemos el stock de materiales,
+- [01:17:10] el stock de fruta,
+- [01:17:14] lo tenemos en otro sistema
+- [01:17:15] que sería la página que está conectada con los
+- [01:17:17] packing.
+- [01:17:19] Eso lo van a también, lo van a
+- [01:17:21] centralizar acá después futuro o lo van a seguir trabajando por separado mira ahí no sé no sé por
+- [01:17:27] qué en realidad lo que nosotros llevamos en el sistema actualmente en el m el tema de los
+- [01:17:33] materiales que eso sí lo tenemos por el módulo de bodega que vemos todos los movimientos de
+- [01:17:41] devoluciones y traspasos si hay ingreso de compra de insumos pero en sí como el movimiento de la
+- [01:17:54] fruta lo vemos directamente de los páginas aquí siguiendo tenemos el módulo de las nóminas y
+- [01:18:16] atraso donde aquí debería bueno no tenemos ninguna que esté en el estado atrasado así
+- [01:18:25] Así que no tengo el ejemplo en este momento, pero aquí deberían aparecer.
+- [01:18:29] Ya.
+- [01:18:31] ¿Esas nóminas serían lo que ustedes tienen que pagar o cobrar?
+- [01:18:39] Sería, claro, pagar o cobrar.
+- [01:18:43] Pero generalmente son para pago.
+- [01:18:46] Y deberían aparecer todos los documentos que están pendientes y como la fecha histórica.
+- [01:18:51] No sé, pues si llevan 30 días de antigüedad, 90 días de antigüedad.
+- [01:18:57] Por ejemplo, ahí si ustedes, no sé, bueno, va a ser, como dices tú, por lo general es por pagar.
+- [01:19:03] Claro.
+- [01:19:07] Y ustedes, fecha de vencimiento, no trabajan con una nueva fecha de vencimiento.
+- [01:19:13] O sea, vencimiento, a ver cómo lo explico.
+- [01:19:16] Tenemos la fecha de admisión del documento, cierto, que es la factura recibida.
+- [01:19:21] ¿Cierto? Sí.
+- [01:19:22] La factura de tu proveedor.
+- [01:19:25] Tienes la fecha de vencimiento de esa factura
+- [01:19:26] de proveedor, pero
+- [01:19:28] puede ser que tú, no sé,
+- [01:19:30] tienes la fecha de vencimiento del 16 del 08,
 - [01:19:33] pero tú
-- [01:19:35] por aquí motivo renegocias
-- [01:19:37] no hay una fecha de pago
-- [01:19:39] esa fecha de pago también la van a registrar
-- [01:19:41] acá
-- [01:19:43] o sea si podemos
-- [01:19:45] editar la fecha de vencimiento
-- [01:19:47] sería ideal
-- [01:19:49] pero no sé, generalmente ponemos la fecha de vencimiento
-- [01:19:51] un momento de ingresar al documento
-- [01:19:53] es que la fecha del documento
-- [01:19:55] vencimiento es como la fecha
-- [01:19:57] del documento en sí
-- [01:19:59] que estás recibiendo, siento
-- [01:20:01] igual podemos trabajar a 30 días
-- [01:20:03] o a 90 días
-- [01:20:05] en algunos casos a un año
-- [01:20:08] va a depender de la negociación
-- [01:20:10] con el proveedor, por ejemplo los materiales
-- [01:20:12] generalmente son cada 3 meses los pagos
-- [01:20:14] y hay algunos que son cada 6 meses
-- [01:20:18] y ahí como por ejemplo
-- [01:20:20] y ahí como
-- [01:20:22] de quién parte se van a registrar la fecha de vencimiento
-- [01:20:24] es que nosotros en el módulo actual
-- [01:20:26] tenemos una parte donde se registran
-- [01:20:28] la fecha de vencimiento
-- [01:20:30] que es cuando ingresamos al documento
-- [01:20:34] por ejemplo teja
-- [01:20:36] compartiste pantalla de módulo
-- [01:20:38] mira acá
-- [01:20:48] ahí se ve
-- [01:20:50] acá ingresamos los datos
-- [01:20:52] en sí de la compra
-- [01:20:54] de la factura
-- [01:20:56] acá nosotros seleccionamos la orden de compra
-- [01:20:58] la que nos arroja
-- [01:21:00] automáticamente facturas
-- [01:21:02] por recibir proveedor
-- [01:21:04] por recibir servicio
-- [01:21:06] y acá
-- [01:21:08] nosotros ponemos la fecha de vencimiento
-- [01:21:10] acá vamos
-- [01:21:12] pero ahí recuerda Maria Jesús
-- [01:21:14] que se supone que con GoSocket
-- [01:21:16] cierto como GoSocket nos va
-- [01:21:18] a entregar los documentos recibidos
-- [01:21:20] cierto que esos documentos
-- [01:21:22] vienen con una fecha de vencimiento
-- [01:21:24] que le colocó el proveedor
-- [01:21:26] entonces
-- [01:21:28] en sí esa fecha de vencimiento
+- [01:19:34] por X motivo renegocias
+- [01:19:36] una nueva fecha de pago.
+- [01:19:39] ¿Esa fecha de pago también
+- [01:19:40] la van a registrar acá?
+- [01:19:44] O sea,
+- [01:19:45] si podemos registrar la fecha
+- [01:19:46] de vencimiento, sería ideal.
+- [01:19:49] Pero nosotros generalmente ponemos la fecha
+- [01:19:50] de vencimiento un momento de ingresar el documento no es que la fecha del documento
+- [01:19:55] del cimiento es como la fecha del documento en sí que están recibiendo ciento igual podemos
+- [01:20:02] trabajar a 30 días oa 90 días o en algunos casos a un año va a depender de la negociación con el
+- [01:20:11] proveedor por ejemplo los materiales generalmente son cada tres meses los pagos y hay algunos que
+- [01:20:16] son cada seis meses y como por ejemplo de la fecha vencimiento es que nosotros en el módulo
+- [01:20:26] actual tenemos una parte donde se registra la fecha de vencimiento y es cuando ingresamos el
+- [01:20:31] documento por ejemplo deja compartir la pantalla de acá ahí se ve acá ingresamos los datos en sí
+- [01:20:52] de la compra, de la factura
+- [01:20:55] acá nosotros seleccionamos
+- [01:20:57] la orden de compra, la que nos
+- [01:20:59] nos arroja automáticamente
+- [01:21:01] facturas por recibir
+- [01:21:02] proveedor
+- [01:21:03] facturas por recibir servicio
+- [01:21:06] y acá nosotros ponemos la fecha de vencimiento
+- [01:21:09] pero ahí recuerda
+- [01:21:13] María Jesús que se supone que con
+- [01:21:15] GoSocket, ¿cierto?
+- [01:21:17] como GoSocket nos va a entregar los documentos
+- [01:21:19] recibidos, ¿cierto?
+- [01:21:20] que esos documentos vienen con una fecha
+- [01:21:22] de vencimiento que le colocó el proveedor
+- [01:21:25] entonces
+- [01:21:26] en sí
+- [01:21:29] esa fecha de vencimiento
 - [01:21:30] es del documento
-- [01:21:32] del documento
-- [01:21:34] pero ustedes para el tema del pago
-- [01:21:36] te lo manejan otra fecha
-- [01:21:38] yo creo que
-- [01:21:40] el 80% de la factura
-- [01:21:42] es la fecha real
-- [01:21:44] de vencimiento
-- [01:21:46] que son prácticamente los servicios chicos
-- [01:21:48] y las que son de materiales
-- [01:21:50] y productores que han como
-- [01:21:52] más a plazo
-- [01:21:54] que es cuando la de productores se apaga una vez
-- [01:21:56] que se liquida la fruta
-- [01:21:58] y las de materiales
-- [01:22:00] dependiendo de la negociación
-- [01:22:02] del encargado Bodega
-- [01:22:04] claro
-- [01:22:06] por ejemplo ahí
-- [01:22:08] con GoSocket
-- [01:22:10] la integración con GoSocket en la RP
-- [01:22:12] ustedes prácticamente no poco
-- [01:22:14] y nada van a tener que registrar
-- [01:22:16] a mano las facturas de compra
-- [01:22:18] entonces crees en GoSocket
-- [01:22:20] la idea es que nos damos como una nómina de pago
-- [01:22:22] porque nosotros pongámonos en pago
-- [01:22:24] ¿Qué documentos están vencidos de aquí a tal fecha?
-- [01:22:26] ya
-- [01:22:28] ahí entonces mira Carlos
-- [01:22:30] si puedes compartir pantalla nuevamente por favor
-- [01:22:47] por ejemplo ahí en la fecha de vencimiento
-- [01:22:49] sería bueno agregar un labisino al lado
-- [01:22:51] como de edición
-- [01:22:53] para asociar la nueva fecha
-- [01:22:55] de vencimiento
-- [01:22:57] que en realidad ya para
-- [01:22:59] estar contenta ya vencida realmente
-- [01:23:01] pero ahí es Jesús
-- [01:23:03] el tema de edición de esa fecha de vencimiento
-- [01:23:05] necesita entrar a su habilidad
-- [01:23:07] ¿De quién editó? ¿Cuándo lo editó?
-- [01:23:09] o no da igual
-- [01:23:11] o sea es que en el módulo de tesorería
+- [01:21:33] pero ustedes para el tema del pago
+- [01:21:34] lo manejan otra fecha
+- [01:21:37] ¿cierto?
+- [01:21:38] yo creo que el 80%
+- [01:21:41] de la factura es la fecha
+- [01:21:43] real de vencimiento
+- [01:21:45] que son prácticamente los servicios
+- [01:21:47] chicos y las que son
+- [01:21:49] de materiales productores que han
+- [01:21:51] como más
+- [01:21:52] a plazo, que es cuando las de productores
+- [01:21:55] se apagan una vez que se liquida
+- [01:21:56] la fruta
+- [01:21:58] y las de materiales dependiendo de la
+- [01:22:01] negociación del encargado
+- [01:22:03] de bodega
+- [01:22:03] Claro, pero contigo ahí
+- [01:22:07] con GoSocker
+- [01:22:09] la integración con GoSocker en el ARP
+- [01:22:11] ustedes prácticamente no
+- [01:22:12] poco y nada van a tener que registrar
+- [01:22:14] a mano las facturas de compra
+- [01:22:17] Entonces con esa misma ficha
+- [01:22:19] la idea es que nos haga como una nómina de pago
+- [01:22:21] porque nosotros pongamos, no sé, ¿qué documentos
+- [01:22:23] están vencidos de aquí a tal fecha?
+- [01:22:26] Ya, pero ahí
+- [01:22:27] entonces, mira Carlos, si puedes compartir pantalla
+- [01:22:29] nuevamente, por favor
+- [01:22:30] por ejemplo, ahí las fechas de vencimiento
+- [01:22:48] sería bueno agregar un labicito al lado
+- [01:22:50] como de edición
+- [01:22:51] para asociar
+- [01:22:54] las nuevas fechas de vencimiento
+- [01:22:56] que en realidad
+- [01:22:57] para saber cuánto está ya vencida
+- [01:23:00] realmente, pero ahí
+- [01:23:02] María Jesús, el tema de edición de esa fecha de vencimiento
+- [01:23:05] ¿necesitan trazabilidad?
+- [01:23:06] ¿De quién editó? ¿Cuándo lo editó?
+- [01:23:09] ¿O da igual?
+- [01:23:10] O sea que en el módulo de tesorería
 - [01:23:13] la persona que puede editar
-- [01:23:15] solamente la encargaba tesorería
-- [01:23:17] yo debería poder solo visualizar
-- [01:23:19] entonces por perfil
-- [01:23:21] por rol
-- [01:23:23] no sé si es como
-- [01:23:25] su superamministrador de tesorería
-- [01:23:27] Carlos
-- [01:23:29] debería poder editar fecha de vencimiento
-- [01:23:31] sino solo visualizar
-- [01:23:33] por ejemplo si yo me meto ahí
-- [01:23:35] yo debería ver lo que está pendiente
-- [01:23:37] pero solo de manera informativa
-- [01:23:39] no poder editar porque al final la encargá de tesorería
-- [01:23:41] es la que se encarga
-- [01:23:43] de ver que posterga, que no
-- [01:23:45] que paga, que no
-- [01:23:47] y en el caso de los documentos
-- [01:23:49] por cobrar
-- [01:23:51] porque eso es lo que le deben a ustedes
-- [01:23:53] exacto
-- [01:23:55] ¿Has una gestión de cobranza?
-- [01:23:57] Mira, si, hace una gestión de cobranza
-- [01:23:59] pero es muy similar a
-- [01:24:01] como muy arcaica
-- [01:24:03] es como que yo veo, yo tengo un informe
-- [01:24:05] que se llama Inventario Balance
-- [01:24:07] ya y me salen
-- [01:24:09] por cliente
-- [01:24:11] o por proveedor
-- [01:24:13] el total de deuda
-- [01:24:15] por ejemplo, o de
-- [01:24:17] lo que yo le debo, lo que él me debe
-- [01:24:19] entonces ahí
-- [01:24:21] yo veo los clientes que yo tengo pendiente
-- [01:24:23] y me meto al detalle
-- [01:24:25] a ver qué documentos son y qué antigüedas tienen
+- [01:23:14] debiese ser solamente la encargada de tesorería
+- [01:23:16] Yo debería poder solo visualizar
+- [01:23:19] Ah, entonces por
+- [01:23:20] perfil, por rol
+- [01:23:22] Ya, ok, entonces si es como
+- [01:23:25] un super administrador
+- [01:23:27] de tesorería, Carlos
+- [01:23:28] debería poder editar fecha de vencimiento
+- [01:23:31] Si no, solo visualizar.
+- [01:23:33] Exacto. Por ejemplo, si yo me meto ahí, yo debería ver lo que está pendiente, pero solo de manera informativa.
+- [01:23:39] No poder editar porque al final la encargada de solería es la que se encarga de ver qué posterga, qué no, qué paga, qué no.
+- [01:23:47] Y en el caso de los documentos por cobrar, porque eso es lo que le deben a ustedes.
+- [01:23:53] Exacto.
+- [01:23:54] ¿Hace una gestión de cobranza?
+- [01:23:56] Mira, se hace una gestión de cobranza, pero es muy similar a, es como muy arcaica. Es como que yo veo, yo tengo un informe que se llama inventario balance. De ahí me salen por cliente o por proveedor el total de deuda, por ejemplo, o de lo que yo le debo, lo que él me debe.
+- [01:24:18] entonces ahí yo veo
+- [01:24:21] los clientes que yo tengo pendientes
+- [01:24:23] y me meto al detalle a ver que documentos
+- [01:24:26] son y que antigüedad tienen
 - [01:24:27] pero tengo que darme toda esa vuelta para saber
-- [01:24:29] entonces
-- [01:24:33] entonces ahí sería bueno, mira te parece
+- [01:24:29] ya entonces
+- [01:24:32] entonces ahí sería bueno, te parece
 - [01:24:35] que nosotros
-- [01:24:37] ha dado una propuesta para
-- [01:24:39] como hacer la cobranza
-- [01:24:41] de los documentos
-- [01:24:43] de venta de ustedes
-- [01:24:45] y por ejemplo, seguir una responsabilidad
-- [01:24:47] no sé, por compromiso de ficha de pago
-- [01:24:49] qué usuario registró
-- [01:24:51] no compromiso y tú también
-- [01:24:53] va a poder identificar en caso
-- [01:24:55] bueno, pensemos los
-- [01:24:57] no sé, como un poquito más estándar
-- [01:24:59] que el cliente
-- [01:25:01] no sé, dice te pago mañana
-- [01:25:03] perfecto, no, una confección
-- [01:25:05] de compromiso de mañana
-- [01:25:07] pasan cinco días y no paga
-- [01:25:09] si no, ahora sí que mañana
-- [01:25:11] ya hay entonces la idea que puedan seguir
-- [01:25:13] todo ese seguimiento
-- [01:25:15] mandar en la factura que tiene
-- [01:25:17] deuda por correo
-- [01:25:19] también hacerlo desde la plataforma
-- [01:25:21] y que quede un tracking completo
-- [01:25:23] de todo el movimiento que se tuvo que hacer
-- [01:25:25] para que ese cliente pague la factura
-- [01:25:27] sí, buenísimo
-- [01:25:29] ok
-- [01:25:35] perfecto
-- [01:25:40] bueno, aquí quedaría el módulo
-- [01:25:42] de la conciliación
-- [01:25:44] donde aquí debería aparecer
-- [01:25:46] el banco asignado
-- [01:25:48] el periodo y la cantidad de movimientos
-- [01:25:50] que juegaste este ejemplo, no tiene movimientos cargados
-- [01:25:52] por eso se ve un poco vacío, pero aquí debería
-- [01:25:54] aparecer una lista con los movimientos
-- [01:25:56] ahí deberían ser los movimientos
-- [01:25:58] de la cartola o no merezco
-- [01:26:00] si, la conciliación
-- [01:26:02] ahí deberían aparecer los
-- [01:26:04] de la cartola
+- [01:24:36] hagamos una propuesta para
+- [01:24:39] cómo hacer la cobranza
+- [01:24:40] de los documentos
+- [01:24:42] de venta de ustedes
+- [01:24:44] y por ejemplo seguir una trazabilidad
+- [01:24:47] no sé, compromiso de ficha
+- [01:24:49] de pago, qué usuario registró
+- [01:24:51] el nuevo compromiso, ahí tú también vas a
+- [01:24:53] poder identificar en caso
+- [01:24:55] bueno, pensemoslo, no sé
+- [01:24:57] como un poquito más estándar
+- [01:24:58] que el cliente
+- [01:25:01] no sé, te dice, te pago mañana
+- [01:25:03] perfecto, una fecha de compromiso
+- [01:25:05] de mañana, pasan cinco
+- [01:25:07] días y no paga y te contacta
+- [01:25:09] y te dice, no, ahora sí que mañana
+- [01:25:10] hay gente que puede seguir todo ese
+- [01:25:13] seguimiento, mandar
+- [01:25:15] la factura que tiene deuda
+- [01:25:17] por correo, también hacerlo
+- [01:25:19] desde la plataforma y que quede
+- [01:25:21] un tracking completo de todo el movimiento
+- [01:25:23] que se tuvo que hacer para que ese
+- [01:25:25] cliente pague la factura
+- [01:25:26] si, buenísimo
+- [01:25:28] ok
+- [01:25:34] perfecto
+- [01:25:41] bueno aquí quedaría el
+- [01:25:42] módulo de la conciliación
+- [01:25:44] donde aquí debería
+- [01:25:46] aparecer el banco asignado
+- [01:25:48] el periodo y la cantidad de
+- [01:25:50] movimientos que es justo este ejemplo, no tiene movimientos
+- [01:25:52] cargados por eso se ve un poco vacío pero aquí
+- [01:25:54] debería aparecer una lista con
+- [01:25:56] los movimientos
+- [01:25:57] ¿ahí no deberían ser los movimientos de la cartola?
+- [01:26:00] ¿o no María Jesús?
+- [01:26:02] sí, la conciliación
+- [01:26:04] ahí deberían aparecer los de la cartola
 - [01:26:06] y los de
-- [01:26:08] los de contualidad
-- [01:26:10] pero como lo vamos a ir haciendo
-- [01:26:12] directamente de la cartola
-- [01:26:14] no desviese como que aquí deberían
-- [01:26:16] aparecer los que no están conciliados
-- [01:26:18] o sea, igual podrían
-- [01:26:22] trabajar con Estado
-- [01:26:24] por defecto
+- [01:26:08] los de
+- [01:26:10] contabilidad, pero como lo vamos a ir
+- [01:26:12] haciendo directamente de la cartola
+- [01:26:14] no debiese
+- [01:26:16] como que aquí deberían aparecer los que no están conciliados
+- [01:26:18] o sea, igual
+- [01:26:22] podría trabajar con Estado
+- [01:26:23] por defecto
 - [01:26:26] que te cargue todos los que están pendientes
 - [01:26:28] a conciliar, pero que también
 - [01:26:30] puedas visualizar todos los que fueron conciliados
-- [01:26:32] y aquí igual sería bueno que quizá
-- [01:26:34] arriba tuviera como un resumen
-- [01:26:36] de los saldos
+- [01:26:32] y aquí igual sería bueno
+- [01:26:34] que quizás arriba tuviera como un resumen
+- [01:26:36] de los, como los saldos
 - [01:26:38] de conciliados y pendientes
-- [01:26:40] con las saldos
-- [01:26:42] diré que tiene que ser al banco
-- [01:26:44] bueno, unas caloritas arriba que de la pareja
-- [01:26:46] no se puscan ciliados tanto el cantidad
-- [01:26:48] o preciado o plata
-- [01:26:50] no, el monto
-- [01:26:52] monto
-- [01:26:54] ahora si se puede cantidad y monto
-- [01:26:56] si... igual se pueden los 2
-- [01:27:00] a ver si hay que asultarse o no
-- [01:27:02] agarre papa del caro y yo le
-- [01:27:05] Y aquí vendría a ser el registro de las cuentas corrientes con su respectivo detalle.
-- [01:27:16] ¿Ahí de las cuentas corrientes que se refieren María Jesús?
-- [01:27:24] ¿Serían las cuentas corrientes de la empresa, de la del banco?
-- [01:27:29] Ahí me perdió un poco de las cuentas corrientes.
-- [01:27:33] Creo que se había solicitado la REU2.
-- [01:27:37] ¿No crees que son las cuentas de tus clientes o de tus proveedores?
-- [01:27:47] Aquí, por haber quedado información, es que es lo mismo que la cartona.
-- [01:27:55] O ahí sería como un resumen, si yo pagué contratista, pagué proveedores, pagué productores,
-- [01:28:06] dependiendo de la clasificación que yo le dé al movimiento.
-- [01:28:10] Sí, parece que el pago de los proveedores por lo que tengo entendido, porque aquí te parece tipo proveedor.
-- [01:28:20] Pero por ejemplo, el tercero que dice pago contratista es un detalle que yo le agrego en la clasificación del proveedor.
-- [01:28:29] Parece que es la clasificación. Te lo voy a confirmar esto.
-- [01:28:33] Ah, ya sé lo que es. Leí arriba.
-- [01:28:49] ¿Qué dice sal de detalle por cliente, proveedora o productor?
-- [01:28:53] Ya, lo que pasa es que nosotros tenemos proveedores que también actúan como clientes.
-- [01:28:59] ¿Y qué pasa? A veces tenemos que compensar lo que yo le vendí y lo que ellos me vendieron.
-- [01:29:04] Entonces hay que buscar en dos módulos distintos, porque uno se ingresa por el módulo de proveedor
-- [01:29:09] y el otro por el módulo de cliente, lo mismo que el detalle de información.
-- [01:29:12] Entonces la idea acá era que, por ejemplo, yo buscaba, no sé, Sergio Sil...
-- [01:29:17] ¿Y mis ventas?
-- [01:29:29] Exacto.
-- [01:29:31] Si tenía anticipos, si yo tenía anticipos...
-- [01:29:38] Ah, pasa a ser como un estado de cuenta.
-- [01:29:41] Como un estado de cuenta del route, en realidad.
-- [01:29:43] ¿Qué es el nombre del menú? No sé si les parece, he estado de cuenta porque hay cuentas corrientes.
-- [01:29:52] Sí, sí, mejor.
-- [01:29:54] Perfecto.
-- [01:29:55] He estado de cuenta.
-- [01:29:57] En ese estado de cuenta te va a servir, o sea, y la factura y ventas, perdón, las compras y las ventas también deben aparecer
-- [01:30:11] si fueron pagadas por tanto por tu lado o para facturas de recibida.
-- [01:30:18] Sí, o sea, lo que aquí podríamos tener quizás un filtro como de poner todos o poner pendientes.
-- [01:30:24] Pero ya, entonces sería pendiente tanto compras y ventas de ese route.
-- [01:30:30] Claro, claro.
-- [01:30:32] Ya, entiendo.
-- [01:30:40] Ok.
-- [01:30:42] ¿Y que nadie las va a visualizar el pago y la factura desde acá, o solamente a nivel de grilla, no más?
-- [01:30:49] O sea, si podemos visualizar el pago y la factura, ideal.
-- [01:30:53] Porque si no, igual que ya vamos a ir a otro modo a lo revisar.
-- [01:30:56] Claro.
-- [01:30:58] Sí, creo que he linkeado ahí, Carlos, para que sea más fácil la visualización.
-- [01:31:04] ¿Y esto generaría reportes?
-- [01:31:09] Sí.
-- [01:31:11] ¿En PDF o en Excel?
-- [01:31:13] En Excel.
-- [01:31:15] Mira, Carlos, o sea, Sergio, todo te lo vamos a pedir en Excel y adicional el PDF en algunos casos,
-- [01:31:21] pero nosotros trabajamos prácticamente todo con Excel.
-- [01:31:24] Excel va sí o sí, entonces.
-- [01:31:26] Sí, sí o sí.
-- [01:31:28] Perfecto.
-- [01:31:33] Bueno, no sé si es que habrá alguna duda, quizás falta algo que mencionar, para que lo veamos de inmediato.
-- [01:31:39] O sea, por mi parte, tendré que mandarte ya como la reportabilidad del sistema
-- [01:31:45] y ver cuáles podemos mejorar como informe.
-- [01:31:49] Pero yo creo que estamos cubriendo...
-- [01:31:51] Ahí también te podría mandar un informe del movimiento de bodega,
-- [01:31:56] para que me vean por tipo de documento.
-- [01:32:00] Y María Jesús, si lo envíes también, tu plan de cuenta cómo lo exportas.
-- [01:32:07] ¿Lo tienes en formato de Excel?
-- [01:32:09] Sí, de hecho, lo adjunté en el trayo.
-- [01:32:12] En el trayo, sí, en el trayo lo tenemos adjuntos.
-- [01:32:14] Sí.
-- [01:32:15] Ah, ya, entonces hay que verlo.
-- [01:32:17] ¿Cuánto de costo?
-- [01:32:19] La idea es que eso, bueno, el módulo...
-- [01:32:22] Creo que lo incorpora hasta importación, ¿cierto?
-- [01:32:24] ¿Eso más tenemos?
-- [01:32:26] Sí, sí, sí.
-- [01:32:28] Entonces, bueno, la idea es que nos ajustemos a ese formado
-- [01:32:32] y poder probar la importación del plan de cuenta,
-- [01:32:36] que eso igual es un tema.
-- [01:32:39] ¿Con cuántos niveles del plan de cuenta trabajan ustedes, María Jesús?
-- [01:32:42] Con cinco.
-- [01:32:44] Con cinco, ok.
-- [01:32:49] Ya.
-- [01:32:52] Ya, entonces, yo creo que nos fuimos con alta vega.
-- [01:32:55] Yes.
-- [01:32:56] Buenísimo.
-- [01:32:59] Entonces, miren, no sé si que les parece,
-- [01:33:01] si coordinamos la reunión para el próximo jueves,
-- [01:33:04] porque igual le arto lo que...
-- [01:33:06] Bueno, si lo tenemos antes, genial.
-- [01:33:08] Pero yo creo que mínimo debería hacer para el próximo jueves
-- [01:33:11] para tener gran parte de los puntos ya listos.
-- [01:33:15] Sí, sería ideal.
-- [01:33:17] El próximo jueves ahí podría estar Agustín y Mario
-- [01:33:19] que actualmente están de vacaciones.
-- [01:33:21] Ah, genial.
-- [01:33:23] No sé que ahí podríamos dar una vuelta más completa
-- [01:33:25] en caso de que quieran agregar más cosas.
-- [01:33:27] Exacto.
-- [01:33:28] Perfecto.
-- [01:33:30] Ya pues.
-- [01:33:32] Entonces, quedamos en ese...
-- [01:33:34] Ah, bueno, Carlos Agenda.
-- [01:33:36] Sí.
-- [01:33:37] Para el próximo...
-- [01:33:39] La próxima semana.
-- [01:33:40] Ahí Carlos te paso los correos.
-- [01:33:42] El de Agustín creo que no lo tengo.
-- [01:33:44] Si lo puedes compartir en el grupo así para dejar
-- [01:33:47] en la agenda lista.
-- [01:33:49] Ya lo compartas al tiro.
-- [01:33:51] Ok.
+- [01:26:40] claro
+- [01:26:40] claro, unas caluguitas
+- [01:26:45] arriba que me parezca
+- [01:26:46] no sé, pues conciliados tanto
+- [01:26:47] en cantidad o precio o plata
+- [01:26:49] no, en monto
+- [01:26:51] monto
+- [01:26:53] ok
+- [01:26:54] Ahora, si se puede cantidad y monto, mejor
+- [01:26:57] Sí, igual se pueden los dos
+- [01:26:58] A ver si hay que asustarse o no
+- [01:27:02] Agarre papas, agarre millones
+- [01:27:03] Y aquí vendría a ser el registro de las cuentas corrientes
+- [01:27:12] Con su respectivo detalle
+- [01:27:16] ¿Y las cuentas corrientes a qué se refieren María Jesús?
+- [01:27:23] ¿Serían las cuentas corrientes de la empresa?
+- [01:27:27] ¿Las del banco?
+- [01:27:29] Ahí me perdí un poco de las cuentas corrientes
+- [01:27:32] Creo que se había solicitado
+- [01:27:35] La REU2
+- [01:27:36] No creo que sean las cuentas de tus clientes
+- [01:27:44] O de tus proveedores
+- [01:27:45] Aquí
+- [01:27:48] A ver qué información
+- [01:27:49] Es que es casi lo mismo que la cartona
+- [01:27:54] O ahí sería como un resumen
+- [01:28:03] Si yo pagué contratista, pagué proveedores
+- [01:28:06] Pagué productores, dependiendo de la clasificación
+- [01:28:08] Que yo le dé al movimiento
+- [01:28:09] si parece que el pago de los proveedores por lo que tengo entendido porque aquí te parece tipo
+- [01:28:15] proveedor pero por ejemplo el tercero que dice pago contratista es un detalle que yo le agrego
+- [01:28:24] en la clasificación del proveedor parece que la clasificación te lo voy a confirmar esto
+- [01:28:33] ya sé lo que es lo de arriba que dice sal de detalle por cliente proveedor o productor ya
+- [01:28:54] lo que pasa es que nosotros tenemos proveedores
+- [01:28:57] que también actúan como clientes
+- [01:28:59] y qué pasa, a veces tenemos que
+- [01:29:01] compensar lo que yo le vendí y lo que ellos
+- [01:29:03] me vendieron
+- [01:29:03] entonces hay que buscar en dos módulos
+- [01:29:07] distintos, porque uno se ingresa por el módulo
+- [01:29:09] de proveedor y el otro por el módulo de cliente
+- [01:29:11] lo mismo que el detalle de información
+- [01:29:12] entonces la idea acá era que por ejemplo
+- [01:29:15] yo buscaba, no sé, Sergio Silva
+- [01:29:17] en mis ventas
+- [01:29:28] exacto
+- [01:29:30] si tenían tipos
+- [01:29:36] si yo tenía anticipos
+- [01:29:37] ah, pasa a ser como un estado de cuenta
+- [01:29:40] como un estado de cuenta del RUT
+- [01:29:42] en realidad
+- [01:29:43] ¿qué es el nombre del menú? no sé qué le parece
+- [01:29:50] estado de cuenta porque cuentas corrientes
+- [01:29:52] sí, mejor
+- [01:29:54] estado de cuenta
+- [01:29:56] y en ese estado de cuenta
+- [01:30:02] te va a servir
+- [01:30:03] y la factura y ventas
+- [01:30:05] perdón, las compras
+- [01:30:08] y las ventas también deben aparecer
+- [01:30:11] si fueron pagadas
+- [01:30:12] tanto por pulado o por las facturas
+- [01:30:16] de recibida
+- [01:30:17] Sí, o sea, lo que aquí podríamos tener
+- [01:30:20] quizás un filtro como de poner
+- [01:30:21] todos o poner pendientes
+- [01:30:23] Pero ya, entonces sería pendiente
+- [01:30:28] tanto compras y ventas
+- [01:30:29] Claro
+- [01:30:30] Ya, entiendo
+- [01:30:33] Ok
+- [01:30:40] ¿Y quedaría enlazado a visualizar
+- [01:30:43] el pago y la factura?
+- [01:30:45] ¿Desde acá? ¿O solamente a nivel
+- [01:30:48] de grilla nomás?
+- [01:30:49] O sea, si podemos visualizar el pago y la factura
+- [01:30:51] ideal, porque si no igual
+- [01:30:53] tendríamos que ir a otro módulo a revisar
+- [01:30:55] Claro
+- [01:30:56] Sí, que quede linkeado ahí
+- [01:30:59] Carlos, para que
+- [01:31:00] sea más fácil la visualización
+- [01:31:03] ¿Y esto generaría reporte?
+- [01:31:08] Sí
+- [01:31:09] ¿En PDF o en Excel?
+- [01:31:12] En Excel
+- [01:31:13] Mira Carlos
+- [01:31:16] O sea Sergio, todo te lo vamos a pedir en Excel
+- [01:31:18] y adicional el PDF en algunos casos
+- [01:31:20] Pero nosotros trabajamos prácticamente todo con Excel
+- [01:31:22] Excel, ¿lo ha sido así entonces?
+- [01:31:26] Sí, sí o sí
+- [01:31:27] Perfecto
+- [01:31:28] Bueno, no sé si es que habrá alguna duda
+- [01:31:35] Quizás faltó algo que mencionar
+- [01:31:37] Para que lo veamos de inmediato
+- [01:31:38] O sea, por mi parte tendría que mandarte ya
+- [01:31:43] Como la reportabilidad del sistema
+- [01:31:45] Y ver cuáles podemos mejorar como informe
+- [01:31:48] Pero yo creo que estamos cubriendo
+- [01:31:51] Ah, y también te podría mandar un informe
+- [01:31:53] Del movimiento de bodega
+- [01:31:54] para que lo vean por tipo de documento
+- [01:31:58] María Jesús
+- [01:32:02] si nos envías también tu plan de cuenta
+- [01:32:04] cómo lo exportas
+- [01:32:07] ¿lo tienes en formato Excel?
+- [01:32:09] Sí, de hecho
+- [01:32:10] lo adjunté en el
+- [01:32:12] en el estrellas, sí, el intro lo tenemos
+- [01:32:13] junto
+- [01:32:14] la idea es que
+- [01:32:20] eso, bueno, el módulo
+- [01:32:21] creo que lo incorporaste, importación
+- [01:32:24] ¿Cierto? ¿Es un mantenedor?
+- [01:32:26] Sí, sí, sí
+- [01:32:28] Ya, entonces, bueno, la idea es que
+- [01:32:29] nos ajustemos a ese formato
+- [01:32:31] y poder probar la importación
+- [01:32:36] del plan de cuenta, que ese igual es un
+- [01:32:38] es un tema
+- [01:32:39] ¿Con cuántos niveles del plan de cuenta trabajan
+- [01:32:42] ustedes, María Jesús? Con cinco
+- [01:32:43] Cinco, ok
+- [01:32:47] Ya
+- [01:32:50] Yo creo que nos fuimos con alta pega
+- [01:32:55] Yes
+- [01:32:56] Buenísimo
+- [01:32:57] entonces, mira
+- [01:33:00] no sé si qué les parece si coordinamos
+- [01:33:02] la reunión para el próximo jueves
+- [01:33:04] porque igual le harto lo que, bueno
+- [01:33:06] si lo tenemos antes
+- [01:33:07] genial, pero yo creo que mínimo
+- [01:33:10] debería ser para el próximo jueves
+- [01:33:12] para tener gran parte de los puntos ya
+- [01:33:14] listos
+- [01:33:16] sí, sería ideal, el próximo jueves ahí podría
+- [01:33:18] estar Agustín y Mario que actualmente están de
+- [01:33:20] vacaciones
+- [01:33:20] entonces ahí podríamos dar una vuelta
+- [01:33:24] más completa en caso de que quieran
+- [01:33:25] agregar más cosas
+- [01:33:27] Exacto
+- [01:33:28] Perfecto
+- [01:33:30] Ya pues
+- [01:33:31] Entonces quedamos en eso
+- [01:33:34] Yo voy a agendar
+- [01:33:34] Ah bueno, Carlos agenda
+- [01:33:36] Para la próxima semana
+- [01:33:39] Ahí Carlos te paso los correos
+- [01:33:41] El de Agustín creo que no lo tengo
+- [01:33:43] María Jesús
+- [01:33:44] Si lo puedes compartir en el grupo
+- [01:33:46] Así para dejar la agenda lista
+- [01:33:49] Ya lo comparto al tiro
+- [01:33:50] Ok

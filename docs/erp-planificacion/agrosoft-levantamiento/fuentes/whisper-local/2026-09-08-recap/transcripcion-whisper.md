@@ -1,0 +1,454 @@
+# Recap Carlos/Sergio 2026-09-08 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-09-08 130041.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:22] Don Carlos. ¿Cómo estáis, Sergio? Puta, aquí he vuelto loco, weón. ¿Qué hora es? Va a ser la una de la tarde, weón. Todavía no puedo pararme. Ya, maldito. ¿Cómo les fue?
+- [00:33] Ahí entregaron el maldito spool, supuestamente, ahora lo estaba revisando, y claro, ahí lo entregaron para la factura internacional, por lo que dijo el Pablo, el mismo tendríamos que utilizar para lo que vendrían a ser las notas de crédito y débito referentes, solamente que tenemos que validar bien con María Jesús.
+- [00:51] cuáles son los datos de aduana
+- [00:52] que ellos están enviando porque por cliente
+- [00:54] no se envían igual, le pregunté a María Jesús
+- [00:56] y me dijo que lo revisara las facturas
+- [00:58] que ella había mandado
+- [00:59] así que tengo que darle esa revisión
+- [01:01] porque esas facturas que no son facturas reales
+- [01:04] y bueno
+- [01:07] fue eso más que nada con GoSocket
+- [01:09] aproveché la reunión
+- [01:12] de mostrarle a María Jesús
+- [01:14] el módulo de ventas como te había dicho
+- [01:16] y del módulo de ventas
+- [01:19] Solamente me hizo esos dos alcances que te mande
+- [01:22] Uno, que había dejado
+- [01:24] La asociación del centro de costos
+- [01:27] Para la factura en general
+- [01:28] Y tiene que ser por ítem
+- [01:29] Que eso lo voy a corregir ahora
+- [01:31] Y el tema de ALM
+- [01:34] Que ALM como es una empresa que si vende productos
+- [01:36] Porque me decía que la empresa
+- [01:38] Almahue como vende frutas no se devuelve nada
+- [01:40] Nada vuelve
+- [01:42] Pero en la otra
+- [01:43] Si ahí tiene que hacerse reintegración de stock
+- [01:46] En bodega cuando se hace alguna modificación
+- [01:48] de alguna factura y los clientes lo devuelven
+- [01:51] si se tienen que reintegrar ese stock
+- [01:53] pero fuera de eso
+- [01:54] dijo que estaba todo bien
+- [01:56] buenísimo, también le
+- [01:58] al tiro le pasé el cacho
+- [02:00] de Trello, le dije
+- [02:02] porque justo en la mañana, ayer no lo hice
+- [02:04] lo hice hoy día en la mañana, actualicé el Trello
+- [02:06] con todas las de ventas que habíamos hecho que ya están
+- [02:08] listas, fuera de ese pequeño alcance que me hizo
+- [02:10] en la reunión, le dije que necesitábamos
+- [02:13] de que nos hiciera
+- [02:14] los comentarios por ahí y de que por último
+- [02:16] si es que estaba todo bien
+- [02:18] Que la fuera pasando aprobado
+- [02:19] Para que nosotros nos vayamos despejando de Pégamo
+- [02:22] ¿Qué más, qué más, qué más?
+- [02:26] El 17
+- [02:28] No va a estar esa semana
+- [02:29] Se va de vacaciones dos semanas la Mario
+- [02:32] Chucha
+- [02:33] Así que dijo que la reunión ahí la íbamos a tener
+- [02:36] Que empezar a tomar con Mario y con Lupe
+- [02:37] Lo más probable
+- [02:38] Así que esta reunión
+- [02:41] Del jueves lo que deberíamos aprovechar
+- [02:44] Es de hacer
+- [02:45] Una muestra de otras cosas
+- [02:47] podríamos hacer por ejemplo
+- [02:48] que habíamos dicho
+- [02:51] de contabilizar
+- [02:53] podríamos aprovechar
+- [02:56] esa reunión para mostrar contabilizar
+- [02:57] y dijo que el martes 15 que vendría a ser el próximo martes
+- [03:00] el último día que ella podría estar
+- [03:01] podríamos hacer una reunión intermedia con ella
+- [03:03] para
+- [03:04] yo le dije que la idea sería como aprovechar esa reunión
+- [03:07] de lo que hablemos este jueves
+- [03:09] y de lo que nos vayan a dar este jueves de feedback
+- [03:11] junto con lo que nos van a dar del trelo
+- [03:13] nosotros ese día taparla en preguntas
+- [03:15] y llegar a acuerdos
+- [03:16] entonces esa reunión
+- [03:19] deberíamos
+- [03:19] hacerla para
+- [03:23] mañana
+- [03:25] ¿cómo para mañana?
+- [03:30] yo adelantaría la reunión para mañana
+- [03:33] la del jueves la adelanto para mañana
+- [03:35] ¿cachai?
+- [03:36] a ver si tienen disponibilidad ellos mañana
+- [03:38] ¿por qué? porque así tienes miércoles
+- [03:41] jueves completo
+- [03:41] o sea miércoles parte del miércoles ¿cierto?
+- [03:45] jueves completo, viernes completo
+- [03:47] y lunes ¿cierto?
+- [03:49] tenés cuatro días para avanzar lo que se defina mañana
+- [03:51] vale, sí, pero ahí te pediría
+- [03:55] que hoy día tengamos que hacer una revisión
+- [03:57] entre los dos de ese módulo antes de mostrarlo mañana
+- [03:59] ¿el cuál módulo?
+- [04:02] del
+- [04:02] de contabilizar
+- [04:04] porque en sí
+- [04:11] lo que es un módulo de venta
+- [04:13] ya dio el visto bueno de que está bien
+- [04:14] aparte de esos dos alcances, ¿cachai?
+- [04:18] no
+- [04:18] claro
+- [04:23] de llegar a la reunión, por ejemplo
+- [04:28] llegar a la reunión ya con tus correcciones, ¿cachai?
+- [04:30] ya, o sea
+- [04:37] creéis que podamos no contabilizar
+- [04:40] y aparte tenéis que crear el mantenedor
+- [04:42] ¿el mantenedor de centro de costos lo tienes?
+- [04:44] ¿mantenedor de centro de costos?
+- [04:46] creo que no
+- [04:47] creo que, o sea, tengo para crear los centros de costos
+- [04:50] solamente, pero como un mantenedor como tal
+- [04:52] no
+- [04:52] es un mantenedor, crea el centro de costos y después
+- [04:55] puedes dictarlo, ¿no?
+- [04:57] sí, sí, de hecho lo tengo
+- [04:58] te lo muestro aquí rapidito para compartir pantalla
+- [05:01] ¿se ve cierto?
+- [05:11] sí, espérate, déjame mandar una amiga a José
+- [05:13] que me está mandando una pregunta
+- [05:14] José
+- [05:57] bueno, claro
+- [05:58] cortito, cortito José, cortito
+- [06:01] sí, sí, cortito, corto
+- [06:03] como te gusta
+- [06:04] oye, tengo un tema
+- [06:06] ¿viste que estaba haciendo el caso de la descripción
+- [06:09] larga el otro día?
+- [06:11] ya lo hice, lo pasamos
+- [06:13] a producción, funciona
+- [06:15] pero el tema es que el pato
+- [06:17] me comentó que hay varios clientes que tienen
+- [06:19] en el campo nombre y descripción
+- [06:21] del producto lo mismo
+- [06:23] entonces a esos clientes se les va a empezar a duplicar
+- [06:25] en el pdf, les va a empezar a llegar
+- [06:27] mucho ese caso a soporte
+- [06:29] pero en teoría
+- [06:31] el cambio que hicimos está bueno
+- [06:33] porque ahora en el xml si se contemplan los dos campos
+- [06:36] ok
+- [06:36] lo dejamos así
+- [06:39] y que los cabros se tengan que mamar
+- [06:41] nomás si tienen que editar un jasper
+- [06:43] o no
+- [06:44] y no podía variar
+- [06:47] cuando cargué el producto que si es lo mismo
+- [06:49] el nombre con la descripción cargue solo el nombre
+- [06:51] Sí, sí, se puede hacer
+- [06:54] Eso, y la inscripción la guardé
+- [06:57] Después como en una nomás, po
+- [06:58] O no la conseguiría en la inserción
+- [07:00] Ahí no se va a mandar el XML, chico
+- [07:02] No, po, mientras la llene
+- [07:05] Ahí sí, po
+- [07:06] Ya, ok
+- [07:08] ¿Sí? ¿Se entiende?
+- [07:11] Sí, ya, vale
+- [07:12] Eso, ya, vale, chau
+- [07:14] Que les vaya bien
+- [07:15] Ya, estos son los centros de costo
+- [07:21] ¿Cierto?
+- [07:21] perfecto, código
+- [07:24] ya encargado, está, ok
+- [07:26] entonces, ahí cuando
+- [07:28] ahora lo que te dice María Jesús
+- [07:29] la contabilización, o sea, el flujo
+- [07:31] de la orden de venta, ¿cómo le pareció?
+- [07:34] sí, dijo que estaba todo bien, súper bien
+- [07:36] ah, y eso se me fue a preguntarle
+- [07:38] a María Jesús, pero igual no sé si es que le he
+- [07:40] preguntado a ella
+- [07:40] lo que también te había preguntado por Whatsapp
+- [07:44] de, ¿qué pasa por ejemplo
+- [07:46] con la anonación?
+- [07:47] ¿qué pasa?
+- [07:49] ¿qué pasa con la anonación sobre qué?
+- [07:51] sobre la contabilización
+- [07:53] si, mira acá te lo había mandado
+- [07:55] para que no mentiste
+- [07:56] que en este caso por ejemplo
+- [07:58] yo anulé esta factura a la 69
+- [07:59] ya
+- [08:01] ya la anulé
+- [08:02] ya, si, perfecto
+- [08:04] cachai, aquí está la nota de crédito
+- [08:05] tengo que hacer algo con este registro
+- [08:08] tengo que ponerle que fue anulado
+- [08:09] si, ese tenéis que dejarlo como anulado
+- [08:13] y por ejemplo
+- [08:16] la opción de anular de nuevo
+- [08:18] ya desaparece
+- [08:19] porque está anulado
+- [08:20] ¿me explico?
+- [08:21] Y la nota de crédito tiene que estar
+- [08:23] como conectado
+- [08:24] ¿Conectado?
+- [08:34] ¿Aló?
+- [08:37] Pensaba que estabas escribiendo una cosa
+- [08:38] Hay que dejar la nota de crédito
+- [08:40] con que se pueda enlazar a la factura
+- [08:42] ¿Cachai? Como que está enlazada
+- [08:44] No que se pueda
+- [08:45] ¿Cómo sería
+- [08:49] visualmente ese enlace
+- [08:52] Sergio?
+- [08:54] Porque aquí por ejemplo no le tengo nada
+- [08:55] Si te das cuenta hay un campo que es
+- [08:58] origen cadena
+- [08:59] y aquí debería ponerle
+- [09:03] anulado en tanto
+- [09:04] claro, sí
+- [09:07] es que en realidad para mí
+- [09:10] el anulado, por ejemplo, si está aceptado
+- [09:12] ese I
+- [09:12] ¿cómo lo puedo?
+- [09:16] sí, déjalo así, como decís tú
+- [09:17] o genera una propuesta, como se te ocurre
+- [09:20] vale
+- [09:21] pero sí que diga anulado
+- [09:24] y que aparezca el folio
+- [09:26] con el link, ¿cachai? que sea el link del folio
+- [09:28] sí, y aquí el estado también
+- [09:30] anulado
+- [09:30] No sé si el estado anulado
+- [09:33] Eso que estaba pensando
+- [09:34] Porque en realidad esa nota de crédito
+- [09:35] Esa factura fue aceptada por el SI
+- [09:37] Yo le agregaría bajito
+- [09:41] Un estado que diga
+- [09:42] Por ejemplo acá
+- [09:45] Este por ejemplo, origen cadena
+- [09:47] Está perfecto para ponerle
+- [09:48] Anulado en NC
+- [09:50] Número tanto, y listo
+- [09:52] Y le borramos la acción nomás para que se entienda que ese ya no es válido
+- [09:55] Solamente
+- [09:56] Ah, y eso, porque ese está todavía por contabilizar
+- [09:59] Y fue anulado
+- [10:00] Por contabilizar entiendo que igual tiene que ir
+- [10:02] Porque se tiene que ir asociando al anulado
+- [10:04] Entonces dejarle acá contabilizado
+- [10:06] Y el de acá dejarle en la cadena
+- [10:08] Ese actualización
+- [10:09] Y en realidad las funciones del anulado
+- [10:12] Solamente no se podría
+- [10:14] El botón anular de nuevo
+- [10:16] Pero podéis visualizar
+- [10:18] Y este porque es el de contabilizar
+- [10:20] Solamente que ese y ese es lo mismo
+- [10:22] Entonces hay que sacarlo
+- [10:24] Ese hay que sacarlo
+- [10:25] Ya
+- [10:26] mira
+- [10:30] elige
+- [10:32] visualmente
+- [10:35] me gusta más que aparezca el
+- [10:37] signo peso
+- [10:38] ese botoncito
+- [10:40] por ejemplo
+- [10:45] si no está contabilizado que aparezca en gris
+- [10:47] y si está contabilizado que aparezca en verdecito
+- [10:49] como está
+- [10:50] claro, claro
+- [10:52] y si por ejemplo está a tu lado
+- [10:54] esta de acá se elimina
+- [10:56] se sale
+- [10:57] o podríais dejarlo tal como dice el texto
+- [11:00] pero ese texto por contabilidad
+- [11:02] no sea un botón, sino que
+- [11:03] sea como dice aceptado CI
+- [11:05] pero arriba dice por contabilizar
+- [11:07] o contabilizado, ¿cachai?
+- [11:09] vale, sí, sí
+- [11:11] y ya con eso tendríamos la cadena
+- [11:13] oye, aparte de eso, porque quizás se me escape
+- [11:16] hay alguna como de estas otras asociaciones
+- [11:18] porque si te dais cuenta
+- [11:19] cuando hago nota de crédito o nota de débito
+- [11:21] se hace la cadena acá y ya queda claro más o menos lo que se hace
+- [11:24] entonces las facturas cuando se haga
+- [11:26] una modificación, también tendría que
+- [11:28] salir acá que está asociado a la
+- [11:29] nota de débito tanto, ¿cierto?
+- [11:33] Y por ejemplo
+- [11:34] si son más de una modificación
+- [11:35] podría colocar acá como un historial
+- [11:37] Ah, claro
+- [11:40] sí, porque puede ser
+- [11:42] que por ejemplo tú puedas, una factura
+- [11:43] no sé, de mil millones, y puedas corregir
+- [11:46] tres veces un monto, ¿cachai?
+- [11:48] Sí, pues sí, ese agua se va a
+- [11:50] llenar el choclón ahí de texto
+- [11:51] Sí, ahí sería
+- [11:54] bueno, por ejemplo, si son muchos, dejarle
+- [11:56] como, no sé, pues, NC
+- [11:57] o más
+- [11:59] más, no sé
+- [12:01] dejar la última
+- [12:04] modificación y un más que te muestre las que estaban
+- [12:06] antes. Claro, que te leaste
+- [12:08] como un modal, las tres referencias
+- [12:10] Sí
+- [12:10] Sí, me parece bien. Ya, esa me tinca, y así
+- [12:13] también dejamos limpio esto, porque por ejemplo
+- [12:16] en sí, igual, si es que no tenéis
+- [12:18] filtro, te va a salir aquí todo el choclón
+- [12:20] pero por ejemplo aquí los filtros, si queréis ver la nota de crédito
+- [12:22] nota de débito, ahora aquí hay
+- [12:24] harto registro, me ha funcionado caleta
+- [12:25] buenísimo
+- [12:28] oye, pero quedó contenta la María Jesús
+- [12:31] no me dijo nada
+- [12:32] esperaba que me dijera algo más
+- [12:34] y solamente me hizo esos alcances
+- [12:36] por ejemplo el libro de guías, que la guía de despacho
+- [12:39] no lo he metido a mente
+- [12:39] no se lo mostrebo, lo dejé solamente ahí en el trelo
+- [12:43] ah, y eso es lo otro Sergio
+- [12:44] porque mira, acá en la emisión
+- [12:47] de DTE, tengo estos botoncitos
+- [12:49] igual para emitir
+- [12:51] este tipo de documentos
+- [12:52] ya
+- [12:54] Y mi duda es, por ejemplo, acá
+- [12:57] Yo por lo que tenía hecho
+- [12:59] De que acá te apareciera el documento de referencia
+- [13:00] Que esto creo que te lo había dicho
+- [13:02] Y acá, si en caso de que no existiera
+- [13:04] Está la opción también del registro manual
+- [13:06] Sí, está bien
+- [13:08] Está bien que estos botoncitos
+- [13:11] Entonces también estén acá, ¿cierto?
+- [13:13] Para ese fin
+- [13:14] Porque aquí sería la emisión de los documentos como tal
+- [13:17] A mí me gustaría que estuvieran
+- [13:19] Más arriba, bueno
+- [13:20] Acá, ¿cierto?
+- [13:21] No sé si ahí, pero por ejemplo
+- [13:23] Donde dice el buscador
+- [13:25] A checar un poquito más el buscador
+- [13:27] Y a lo mejor el actualizar que sea otro color
+- [13:30] O no sé
+- [13:32] Pero qué es lo que pasa
+- [13:34] Porque si esta grilla crece
+- [13:35] Los botones se van a ir al final
+- [13:37] Sí, totalmente, sí, tienes razón
+- [13:39] Lo voy a tirar para arriba entonces
+- [13:40] Y
+- [13:42] Eso también te va a consultar
+- [13:45] Qué chucha es una guía de despacho
+- [13:47] Es como una factura
+- [13:50] pero en realidad esa no se va a tu libro
+- [13:52] de venta, no se lo quitan como venta
+- [13:54] al servicio de puestos internos, pero si es
+- [13:56] un documento tributario
+- [13:57] con el cual tú puedes transportar
+- [14:00] mercadería, ¿cachai?
+- [14:02] por ejemplo, yo estoy
+- [14:04] en Serena, ¿cierto?
+- [14:06] y yo te mando
+- [14:07] te cargo un camión de puros
+- [14:10] computadores
+- [14:10] se escucha
+- [14:15] puta la hueá
+- [14:16] entonces
+- [14:19] Entonces, yo te invito a una guía de despacho, pero puede ser porque es traslado entre bodegas.
+- [14:27] Puede ser que tú estés encargado de la bodega de Santiago y yo estoy moviendo la mercadería desde acá hacia Santiago, ¿cierto?
+- [14:34] Claro, vale.
+- [14:35] Pero yo tengo que emitirte una guía de despacho para que, en caso de fiscalización, el transportista presente esa guía de despacho
+- [14:44] y sepa que toda esa mercadería que lleva ahí no constituye venta, ¿ya?
+- [14:49] y es un traslado
+- [14:52] de tres bodegas
+- [14:53] vale
+- [14:56] entonces por eso está esta opción
+- [14:58] de tener solamente el libro
+- [15:00] de las guías porque aquí es donde
+- [15:01] se van administrando ellas al ser como
+- [15:03] un documento como aparte
+- [15:06] como para interno de la empresa
+- [15:07] claro
+- [15:09] hay veces que la guía si mueve
+- [15:12] stock, otras veces que no
+- [15:13] no mueve stock
+- [15:15] y este igual tendría que entonces tener
+- [15:19] interacción con las bodegas
+- [15:21] por hacer traslado
+- [15:22] claro, así es
+- [15:25] pero eso hay que
+- [15:27] validarlo con la
+- [15:29] María Jesús, pero esas dudas
+- [15:31] tenéis que anótalas y se las mandáis
+- [15:33] al grupo de Whatsapp o a Uncarepal
+- [15:35] vale
+- [15:35] ahora, el tema
+- [15:38] volviendo al tema del centro de costo
+- [15:40] el centro de costo se va a
+- [15:43] agregar al contabilizar
+- [15:45] ¿cierto? o en la emisión directa
+- [15:47] contabilizar
+- [15:49] ¿y en la emisión? ¿qué hay que hacer con la cuenta?
+- [15:54] no
+- [15:54] no, me dijo que al momento de contabilizar
+- [15:56] había que hacerlo en esta parte de acá
+- [15:57] se tiene que agregar aquí al ladito el centro de costo
+- [16:00] o sea, entonces
+- [16:01] ¿en la emisión hay que sacar la cuenta
+- [16:03] contable?
+- [16:06] es que no está en la emisión
+- [16:07] sí, si tú lo tenías en la emisión
+- [16:10] ¿o no?
+- [16:13] ¿lo sacaste?
+- [16:14] sí, si sabíamos qué hago
+- [16:15] pero lo sacaste de órdenes de venta, acuérdate
+- [16:18] Lo sacaste en orden de venta
+- [16:20] Pero la emisión de TV también lo sacaste
+- [16:22] Sí
+- [16:22] Ah ya, ok
+- [16:24] Entonces sí que Walma ha ordenado
+- [16:27] Al momento de ello realizarlo
+- [16:29] Ok, sí
+- [16:31] María Jesús me dijo que al momento
+- [16:34] Por ejemplo me dijo, si mira, eso tú podías agregarlo
+- [16:36] En las órdenes de venta, el centro de costo
+- [16:38] Y también
+- [16:39] La cuenta
+- [16:41] Pero ella prefería de que se hiciera acá
+- [16:44] Ya
+- [16:49] Ya, ok
+- [16:55] entonces ya, voy a
+- [16:58] formalizar ese pequeño ajuste
+- [17:00] mandar para que en el correo
+- [17:02] vean el trelo y la duda que tengo
+- [17:04] de lo que vendría a ser la guía
+- [17:06] de despacho
+- [17:07] y bueno, tenéis que ahora agregar entonces
+- [17:10] el centro de costo, hacer los ajustes
+- [17:12] del libre venta, los enlaces, cierto
+- [17:14] y el tema de la contabilización
+- [17:16] no adelantar la cuenta mayor
+- [17:18] y también el centro de costo
+- [17:20] perfecto
+- [17:22] buenísimo
+- [17:23] eso perrito, no le quito más tiempo
+- [17:25] y cualquier cosita le pregunto
+- [17:27] me vaya avisando, por lento
+- [17:29] muchas gracias
+- [17:32] a usted hablamos, chau chau

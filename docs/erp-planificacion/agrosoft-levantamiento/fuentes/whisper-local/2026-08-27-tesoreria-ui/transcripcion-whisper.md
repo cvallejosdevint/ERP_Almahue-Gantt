@@ -1,0 +1,947 @@
+# Interna tesoreria UI Carlos/Sergio 2026-08-27 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-27 172119.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:02] A ver, dale, déjalo. Sí, hay un poco mejor.
+- [00:27] ¿Carlos? ¿Podrías avisar al grupo que estamos?
+- [02:16] Bueno, María Jesús.
+- [03:26] Ya. Ah, con Guadalupe, verdad.
+- [03:45] Es Guadalupe, ¿cierto? ¿En serio?
+- [03:57] Oye, no escuché, weón. Oh, no, no.
+- [04:05] Oh, weón, no caché, weón.
+- [04:13] no se le escucha bien a ellos
+- [04:17] cuando están todos
+- [04:17] pero yo cuando pregunté los nombres
+- [04:35] me dijeron Francisca y Guadalupe
+- [04:38] ahí le tiene que haber dicho luego
+- [04:44] dale
+- [04:49] hola
+- [04:55] María Jesús
+- [05:04] hola
+- [05:06] sí, lo que pasa es que aquí está lloviendo torrencial
+- [05:09] se escucha muy bajo
+- [05:10] hay lluvia y eso
+- [05:11] hay rubia y crema
+- [05:12] chuta
+- [05:16] ¿Está todo bien?
+- [05:17] Sí, seguimos bien
+- [05:19] 1.33
+- [05:21] ¿No se empezó hace como 15 minutos?
+- [05:26] Se había salido el sol
+- [05:28] Está rarísimo
+- [05:32] Tropical, lluvia tropical
+- [05:38] Sí, está rara la verdad
+- [05:42] Mientras no se corte el internet
+- [05:44] Todo bien
+- [05:45] ¿Y el Mario?
+- [05:51] Mario está en otra reunión
+- [05:54] de hecho hoy yo creo que la reunión
+- [05:56] la vamos a hacer cortita porque en contabilidad
+- [05:58] estamos con un tema tributario
+- [06:00] que tenemos que resolver
+- [06:02] hoy día y
+- [06:04] Mario no sé a qué hora se va a desocupar de la reunión
+- [06:06] del
+- [06:07] ¿Iniciamos?
+- [06:11] o no sé si va a esperar
+- [06:12] Iniciamos nomás
+- [06:14] Igual estoy acá con Lupe y con Fran
+- [06:16] del área de tesorería y contabilidad
+- [06:18] Ya, perfecto
+- [06:22] Ok
+- [06:22] Sí, sí se ve.
+- [06:54] Francisco, ¿no?
+- [06:57] Sí.
+- [06:58] No me comentaron nada.
+- [07:10] ¿Se fue?
+- [07:11] ¿Aló?
+- [07:12] Ahí sí.
+- [07:15] Sí vi que se habían comunicado con Pablo por correo
+- [07:34] y que habían tenido un problema con la conexión.
+- [09:28] Oh, disculpa.
+- [09:32] ¿No escuchamos?
+- [09:33] Como que está copla, no escuchamos nosotros.
+- [09:35] No escucho bien,
+- [09:40] pero no sé si ustedes lo escuchan a nosotros.
+- [09:43] No, si lo escuchamos, pero nos escuchamos también nosotros mismos.
+- [09:47] ¿O doble?
+- [09:54] Ya, a lo mejor sí se escucha.
+- [09:59] A ver, dale, Carlos.
+- [10:03] Sí, se escucha mucho, muy fuerte el retorno.
+- [10:25] ¿María Jesús?
+- [10:27] ¿Sí?
+- [10:28] Disculpa que esté volvente, que se escucha mucho el retorno.
+- [10:30] Mientras Carlos habla, ¿se podrían montar?
+- [10:34] Un segundito, bien. Ya, gracias, disculpa. Ahí Carlos, también el tipo, habíamos comentado el tipo, si era anticipo, ahí mismo, no, ahí mismo, dentro de pago. No pago, el tipo, tipo, que es por, claro, y el anticipo productor, ese es el que habíamos visto con Lupe.
+- [12:22] Me dice la Lupe que está bien.
+- [12:24] Pregunta si el tipo de cambio va a poder ser manual
+- [12:43] Dice que si puede editar
+- [13:02] el monto del ingreso o del pago
+- [13:04] Sí, el tipo de cambio
+- [13:07] No, al momento de, por ejemplo, cuando va a calzar
+- [13:13] que esté la factura y el anticipo
+- [13:16] si el anticipo tiene algún error
+- [13:17] puede modificar el tipo de cambio
+- [13:20] para que se le modifiquen los dólares
+- [13:22] Ahí tendría que estar
+- [13:39] el monto del anticipo
+- [13:41] lo va a ajustar
+- [13:43] pero después cuando ya lo
+- [13:46] Ahí, consulta para Lupe
+- [13:50] ¿El monto del anticipo va a ir en pesos
+- [13:54] o va a ir en dólares?
+- [13:55] A ver, los anticipos de los productores siempre se trabaja en dólar, ¿ya? Porque así es su contrato. Pero yo igual hay veces en que les pago en peso, pero tengo que ver reflejado el monto en dólar y ahí es donde yo manipulo el tipo de cambio. ¿Me entiendes?
+- [14:25] Sí, entiendo, entiendo. Ah, claro, pero la factura está en pesos.
+- [14:29] ¿A eso es lo que tú necesitas ajustar para que calceas con el monto la factura?
+- [14:36] Claro, porque va a llegar un momento en que ellos me van a facturar y debo calzar, sí.
+- [14:42] Ya. Sí, eso lo podríamos dejar ahí editable cuando se haga como la conciliación
+- [14:52] contra el pago, el anticipo en realidad, versus la factura. ¿Se entendió, Carlos?
+- [15:02] pasa que eso yo lo modifico a ver yo necesito que quede al una vez que yo ingrese el anticipo
+- [15:11] de productor poder modificar el tipo de cambio porque los tipos de cambio suponte voy a tener
+- [15:17] como 10 anticipo en temporada y van a ser todos con diferente tipo cambio que yo les voy a les
+- [15:26] voy a dar ya que por ejemplo si colocan el tipo cambio tipo cambio aplicado no
+- [15:34] bajito carlos cuando dice 965 es se lo puede editar cierto
+- [15:41] entonces lo podría digitar desde ahí mismo ya entonces ahí no podría editar
+- [15:56] yo. Ya, ahí perfecto
+- [15:59] le haría.
+- [16:00] Eso sí que va
+- [16:01] a sugerir
+- [16:05] el tipo de cambio
+- [16:06] del día. El peso jamás
+- [16:50] se va a mover. Lo que cambiaría es como
+- [16:52] la reportería.
+- [16:54] Más que la cartola. La cartola
+- [16:55] en sí no se va a mover.
+- [17:01] Yo escucho.
+- [17:04] Sí.
+- [17:06] Sí, no sé si estoy pensando.
+- [17:08] Me parece que estamos con problemas de internet.
+- [17:10] No, no, yo lo escucho súper bien
+- [17:13] ¿Y ahora sí?
+- [17:23] Ahí sí, sí
+- [17:23] Y ahí se calma un poco la lluvia acá
+- [17:26] Lo que pasa es que cuando nosotros ingresamos los montos
+- [17:29] Y la cartola en peso, en peso y en dólar
+- [17:31] Esos montos no se mueven
+- [17:33] Lo que se mueve es el tipo de caldo para la conversión
+- [17:35] Claro, pero lo que dice María Jesús
+- [17:53] Es la cartola bancaria, ¿cierto?
+- [18:03] Ahí, si nosotros hacemos la conciliación mensualmente
+- [18:06] En sí la conciliación no se va a mover
+- [18:08] Pero sí necesitamos que los comprobantes posterior, más en tres, cuatro meses, cuando nosotros liquidemos, se pueda modificar el tipo de cambio.
+- [18:24] Entonces, claro, el tipo de cambio, Carlos, tiene que quedar editable.
+- [18:29] ¿Y esa edición tiene que quedar registro de que él lo hizo o no hay quejar histórico sobre ese ajuste?
+- [18:41] ¿Cómo?
+- [18:41] ¿Tiene que quedar un histórico o no?
+- [18:53] O sea, yo les daría que todo quedara con registro.
+- [18:57] Todo lo que se haga en el sistema
+- [18:58] quede con registro de usuario.
+- [19:23] Es una cartola, ¿cierto, Carlos?
+- [19:49] ¿Carlos?
+- [19:54] Ahora sí, Carlos. ¿Ustedes me escuchan? Sí, sí, sí, escuchamos. Carlos, pues.
+- [20:07] El movimiento que nosotros contabilizamos contra la cartola. Sí. Ahí sí. Ahí sí. Carlos, te perdemos.
+- [20:34] Sergio
+- [20:49] Sí, Carlos, eso es la cartola
+- [20:52] ¿Cierto? La del banco, la cartola bancaria
+- [20:54] Ya, ok
+- [20:58] Ahí, por ejemplo
+- [21:01] los movimientos, cuando pinchan movimientos
+- [21:03] esos serían
+- [21:05] los detalles, ¿cierto? Los detalles de la cartola
+- [21:07] Aquí lo que
+- [21:09] faltaría, creo que sería como
+- [21:11] asociar los documentos
+- [21:13] ¿No?
+- [21:22] María, ¿qué tal?
+- [21:23] ¿Qué tal, Lupe?
+- [21:24] Lo que pasa es que, por lo que, a ver, yo necesito para la conciliación bancaria es el registro de los movimientos que nosotros vamos a tener contablemente, de los anticipos, los pagos, con lo que vamos a subir la cartola. Y eso se tiene que detener.
+- [21:51] ¿Pero sería entonces contra asientos contables?
+- [21:54] ¿No contra, por ejemplo, contra una factura?
+- [21:57] ¿Contra un anticipo?
+- [22:02] Mira, ahí va a depender de cómo lo quieras ver
+- [22:06] Porque hay formas en que tú puedes subir la cartola
+- [22:10] Y el mismo movimiento de la cartola puede ir como asignándolo
+- [22:13] Que podría ser con factura, anticipo
+- [22:15] Así como lo estábamos viendo acá
+- [22:17] No, porque nosotros ingresamos la cartola, te siento
+- [22:20] Entonces, no sé cómo lo voy a crear para el final.
+- [22:24] Si preferís digitar toda la cartola o subir el archivo a la cartola y cada movimiento irlo contabilizando en la misma cartola.
+- [22:30] Ah, sí.
+- [22:31] Con la cartola.
+- [22:32] Sí, con la cartola.
+- [22:33] Ya, Sergio, lo ideal sería que nosotros podamos subir la cartola y que cada movimiento a la cartola lo podamos contabilizar.
+- [22:40] Por eso, pero esa contabilización lo van a asociar a alguna factura, asignándole a la cuenta anticipo.
+- [22:46] No, no me escuché yo. Te digo que, te preguntaba María Jesús, pero ahí, ese movimiento. ¿Puedes ver el detalle de la cartola en sí, Carlos? Ese sería como el detalle de la cartola, ¿cierto? Todos los movimientos bancarios.
+- [23:13] Es un movimiento. Es un movimiento que se va a contabilizar directo, ¿cierto? ¿Desde acá se va a generar la contabilización? ¿O será un proceso posterior? Que, por ejemplo, acá yo podría seleccionar ese movimiento está asociado a tal factura.
+- [23:35] Por ejemplo, si yo ahí pongo contabilizar, ¿qué se abre? Ah, te sale así como un asiento.
+- [23:43] No, pero ahí falta, yo creo que una, si se falta el tema de la parametrización de las cuentas, o se debería seleccionar de acá qué cuentas contables se va a asociar a ese agente, ¿no?
+- [23:59] O sea, lo que ahí podría ser, que como son los movimientos bancarios, cuando nosotros carguemos la cartula y está el abono y el cargo, asignarlo a lo que es si se mueve el banco al dedo o al haber, por el lado del banco. Y ahí se podría desplegar quizá una ventanilla donde uno pueda poner a la cuenta contable que lo va a cargar.
+- [24:21] Claro.
+- [24:22] Que sea la contracuenta del asiento.
+- [24:26] Ya, pero...
+- [24:27] ¿Se va a hacer proveedor con una factura o va a ser un anticipo o un traspaso?
+- [24:36] Pero ahí no lo vamos a asociar porque, mi pregunta es, van a tener la factura, ¿cierto?
+- [24:42] Tienen la factura, tienen los anticipos, son registros.
+- [24:47] Desde acá, ese movimiento bancario, ¿no lo vamos a asociar a alguna factura o algún anticipo?
+- [24:54] Es que sí, se puede asociar ahí mismo a la factura o al anticipo.
+- [24:58] ya ok o sea la conciliación bancaria cuando nosotros hacemos la subida de la cartola y
+- [25:10] además tenemos los movimientos contables solamente concilia la cuenta banco no concilia así porque
+- [25:16] obviamente la captura no viene la asignación de que si es pago a factura si anticipo si es
+- [25:23] de traspaso préstamo nada entonces de esta forma si nosotros
+- [25:29] contabilizamos directamente de la cartola obviamente se va a ir
+- [25:33] conciliando una al banco porque obviamente si lo contabilizamos ya se
+- [25:37] va a dar por conciliado ese movimiento y dos ahí mismo podemos agregar aquí es
+- [25:41] que estamos haciendo si estamos pagando la factura para tu sueldo
+- [25:47] ya
+- [25:50] Entonces, ahí cuando se contabilice también se va a enlazar al movimiento, al documento, o al movimiento de ARB. Ahí entonces tendríamos que agregar, dependiendo del tipo, si es que vamos a buscar el listado de la factura, ¿cierto? Para poder asociarla o anticipo, ¿cierto?
+- [26:11] Claro, lo que podemos hacer simplemente es poner como la cuenta contable, tipo de documento, número de documento. Y nosotros al poner el tipo de documento, por ejemplo, 33 y la factura 1 de tal proveedor, se va a igual calzar internamente en el módulo de proveedores.
+- [26:30] ¿Y ahí si no existe el documento?
+- [26:33] Si no existe, tiene que ir anticipo.
+- [26:39] Pero lo anticipo igual es.
+- [26:42] Y después se ingresa la factura.
+- [26:47] Igual se va a calzar en el momento que nosotros ingresemos la factura.
+- [26:50] Ahí va a ser el cruce.
+- [26:58] Oye, María Jesús, ¿no tiene algún asiento contable de algún movimiento bancario?
+- [27:04] ¿Se lo pueden enviar?
+- [27:06] Sí.
+- [27:15] Y la contabilización va a ser sí o sí a uno a uno, ¿cierto?
+- [27:22] Sí, contabilización a uno a uno.
+- [27:24] Mira, si quieres te comparto pantalla y como que te muestro cómo funciona el módulo de tesorería acá.
+- [27:30] Ya, mejor.
+- [27:31] Ya.
+- [27:35] Carlos está grabando, ¿cierto?
+- [27:48] Y ahí se ve.
+- [27:49] Sí.
+- [27:50] Ya, mira, nosotros nos vamos con el módulo de tesorería.
+- [27:53] Acá hay varias formas de hacer un movimiento bancario.
+- [27:56] Si nosotros nos vamos a pago de proveedores, y yo pongo que hay una transferencia hoy.
+- [28:02] Ya, voy a ver si Sandoval y Fuentes tienen un documento pendiente.
+- [28:05] ya, aquí tiene un documento que yo ya ingresé
+- [28:07] que está pendiente de pago, ¿cierto?
+- [28:10] ya mira, si yo
+- [28:11] lo pincho
+- [28:11] y acá le pongo que lo pagué con Banco Chile
+- [28:14] y acá ya voy a
+- [28:18] poner que es servicio
+- [28:20] aquí pongo el código
+- [28:22] financiero, para que después se me vaya
+- [28:24] el flujo de caja
+- [28:25] y acá el número
+- [28:32] aquí el número de la
+- [28:35] transferencia, pero siempre ponemos uno
+- [28:36] y yo lo contabilizo
+- [28:38] se me genera el ingreso
+- [28:41] al estar en el módulo de tesorería
+- [28:43] y se me hace el asiento contable
+- [28:45] de que disminuye el banco
+- [28:47] y disminuye el proveedor
+- [28:48] ya, entiendo
+- [28:50] ¿se ve ahí o no?
+- [28:53] o sea, no, aquí vemos
+- [28:55] seguimos viendo el pago proveedores
+- [28:56] pero nada más, la fórmula de pago proveedores
+- [28:59] deja ver si se puede
+- [29:00] compartir
+- [29:01] otra pestaña
+- [29:04] acá está, ¿ahí lo ven?
+- [29:08] sí
+- [29:08] Ya, este es el comprobante que se hace automático
+- [29:12] si yo ingreso directamente en el módulo de tesorería
+- [29:14] Ya, lo entiendo
+- [29:22] Ah, la cuenta contable es para el banco, sí
+- [29:25] Exacto, entonces al momento de yo solamente
+- [29:28] pinchar la factura
+- [29:31] ya se hace el asiento de que disminuyó banco
+- [29:34] y disminuyó la factura
+- [29:35] Usted tiene los proveedores también
+- [29:38] ¿A cada proveedor tiene asignada una cuenta contable?
+- [29:41] No, no, no, es la cuenta de proveedores
+- [29:44] que es la 210-4001
+- [29:45] lo que se diferencia es el auxiliar
+- [29:47] y el tipo de documento nomás
+- [29:49] ok
+- [29:51] pero en el caso de que yo no tuviera la factura
+- [29:56] ingresada, ahí yo tengo que ingresarlo
+- [29:58] por el módulo de contabilidad y ponerlo
+- [30:00] como un anticipo al proveedor
+- [30:02] entonces en ese caso
+- [30:04] veamos si tenemos
+- [30:06] un
+- [30:07] proveedor con anticipo
+- [30:10] no estás compartiendo eso por cierto
+- [30:12] no, antes de cumplir
+- [30:20] Ya voy a compartir todo.
+- [30:23] Ahí se ve, ¿cierto?
+- [30:26] Sí.
+- [30:27] Por ejemplo,
+- [30:29] acá tenemos
+- [30:43] una factura y un anticipo.
+- [30:47] Ya.
+- [30:49] En este caso, al momento
+- [30:51] de que se hizo el anticipo, o no se
+- [30:53] paga la factura porque son productores y al final
+- [30:55] se diquean al final de la temporada,
+- [30:57] o la factura no estaba ingresada.
+- [30:59] Puede ser cualquier caso.
+- [31:00] entonces en este caso si me meto al módulo de proveedores y yo quiero calzar esto yo aquí puedo
+- [31:08] apretar un anticipo y puedo apretar una factura asumiendo que aquí diera cero yo lo puedo grabar
+- [31:15] y ahí también se me hace el asiento contable de banco y proveedor ya que se anticipó proveedor
+- [31:24] Ah, ya, ya, ya, ya, ya, claro. El anticipo fue pagado, eso es lo que tú pagaste.
+- [31:36] Exacto. Dime.
+- [31:39] Y cuando registra el anticipo, igual se te... Ah, no, el anticipo no genera 100, ¿o sí?
+- [31:44] El anticipo igual genera 100, pero yo lo tengo que ingresar en el módulo de contabilidad, acá.
+- [31:49] Yo acá hago, por ejemplo, un egreso. Y como no tengo la factura, le pongo anticipo proveedor X y acá pongo la cuenta banco, disminuyendo el haber y el anticipo aumentando el debe.
+- [32:06] Ya entiendo. Y eso entonces, por ejemplo, cuando registro un anticipo en el RP, esa información, por ejemplo, el tipo comprobante, la cuenta, ¿eso lo vamos a registrar directamente en los anticipos?
+- [32:22] O sea, si se puede, sería ideal porque así nos verificaríamos al tiro que la cartola está completamente ingresada, porque al subir la cartola te saldrían los movimientos que ya están contabilizados y los que están pendientes. Entonces, al estar toda la cartola contabilizada, se da por conciliado el mes.
+- [32:49] Sí, porque así, por ejemplo, no tendría que estar registrando anticipo y comprobante por separado.
+- [32:54] Claro, no tendríamos que estar ingresando además la cartola manualmente.
+- [33:00] Sino que cargaríamos el archivo del banco y ahí cada movimiento lo iríamos contabilizando como encima de la cartola.
+- [33:09] Claro. ¿Ya, ok? ¿Me queda claro?
+- [33:17] Carlos, no sé si te entiendes.
+- [33:32] Ok, ok, ok.
+- [33:48] Ya.
+- [33:50] Dale, Carlos. No sé si...
+- [33:53] Ya. Sí vemos.
+- [33:59] ahí Carlos tendría
+- [34:12] la asociación de
+- [34:14] por ejemplo cuando ve el detalle de la cartola
+- [34:17] yo creo que ese módulo hay que agrandarlo
+- [34:19] un poquito más
+- [34:20] para que sea más cómodo para el tema de
+- [34:23] de contabilizar
+- [34:26] porque es igual más de que levantar otro módulo
+- [34:28] como lo que montó la María de Jesús
+- [34:31] si, si se ve
+- [34:57] es lo que estábamos hablando de la consideración
+- [35:07] ¿cierto? va a contabilizar
+- [35:08] Sí. Por ejemplo, ahí en esa parte de conciliación, ¿nos saldría a nosotros si hay algún movimiento pendiente de conciliar?
+- [35:18] ¿Y cómo se podría hacer para que la cartola, la que se carga, tiene los movimientos del banco para la conciliación?
+- [35:45] Aún no me queda, no entiendo bien cómo podríamos hacerlo para que se concilien los movimientos de manera automática.
+- [35:53] ¿Cuál sería el patrón?
+- [35:54] O sea, lo que pasa es que al subir la cartula, por ejemplo, nos van a salir 20 movimientos del mes o de la semana.
+- [36:04] Y entonces nosotros vamos a ir contabilizando uno a uno.
+- [36:07] Entonces, por ejemplo, de los 20 movimientos vamos a tener 15 contabilizados.
+- [36:14] Pero los 15 movimientos los vas a hacer igual uno a uno.
+- [36:21] Sí, los 15 movimientos igual tenemos que ingresar uno a uno.
+- [36:24] Lo único que evitaríamos es nosotros mover automática, o sea, manualmente la cuenta banco. Pero sí o sí el movimiento lo vamos a cargar a anticipo, a una factura, a un pago de sueldo, un pago de rendición. Lo único que estaríamos haciendo ahí sería la contraparte del banco.
+- [36:45] entonces de esa manera nos como que confirmamos de que al final de mes la cuenta banco va a estar
+- [36:54] 100% metida cuántos cuántos cuántos trabajan ustedes trabajamos con dos pero cada banco
+- [37:11] tiene dólar y peso y hay uno que tiene igual son tres bancos
+- [37:21] y por ejemplo en la conciliación del estado por ejemplo está activo pendiente y deberíamos tener
+- [37:29] uno como conciliado al 100 podríamos controlar por ejemplo de los de descargar la cartola 20
+- [37:37] movimiento cierto de esos de los cuales 15 solamente están cuadrados contabilizados
+- [37:47] quedan cinco deberíamos aquí indicar cuáles son las cartas que están con movimientos pendientes
+- [37:53] por contabilizar exacto mientras la cartola no esté completamente contabilizada no te va
+- [37:59] a parecer como lista como archivada por ejemplo te va a aparecer siempre pendiente ya ok entiendo
+- [38:09] ¿Y sería bueno, Carlos, por ejemplo, indicar de, no sé, 10 de 20 o 15 de 20, ¿cachai?
+- [38:16] Para saber cuál es el movimiento.
+- [38:18] O sea, por ejemplo, en conciliación, acá como dice estado pendiente o activo, podría ser conciliado o pendiente.
+- [38:27] Entonces ahí vamos a ver al tiro.
+- [38:29] Si queremos filtrar, por ejemplo, por los pendientes, vamos a ver al tiro cuáles son los movimientos que faltan por contabilizar.
+- [38:38] Eso mismo.
+- [38:40] Eso mismo.
+- [38:42] Es el grupo que está.
+- [39:16] que ahí lo íbamos a ver por banco
+- [39:23] para saber
+- [39:25] los montos en peso
+- [39:27] y dólar
+- [39:28] o a lo mejor Lupe se refiere
+- [39:47] a un totalizado
+- [39:49] sí, habíamos quedado de acuerdo en que
+- [39:51] lo íbamos como a separar
+- [39:53] creo
+- [39:54] llegó Mario ahora a la reunión
+- [39:59] sí
+- [39:59] ¿viste Mario?
+- [40:05] creo que no, no lo escuchó
+- [40:06] No está, la señal está mala. ¿No escuchan?
+- [40:12] Sí, sí.
+- [40:15] Pasa que habíamos quedado y nos vamos a separar los bancos.
+- [40:23] Sorry, se escucharon muy bien.
+- [40:33] Sí, es que nos parece que nosotros tenemos que llamar de señal.
+- [40:39] Ahora lo escucho bien, yo lo escucho bien por lo menos.
+- [40:41] ¿Carlo, tú?
+- [40:44] Carlos parece que está bien
+- [40:45] se fue la lluvia
+- [40:51] se fue la lluvia
+- [40:53] perdimos a Carlos
+- [40:55] ¿cómo llegamos al salto final?
+- [41:01] ¿a qué salto?
+- [41:02] ¿salto de apertura?
+- [41:04] ¿o se está como un dato nomás?
+- [41:06] no, está como
+- [41:07] sí, estamos en modo
+- [41:10] ¿cómo se hace?
+- [41:14] conversamos con Sergio
+- [41:16] para tener los saldos de los bancos siempre con la cuenta
+- [41:19] abajo o no?
+- [41:54] Estamos preocupados, Carmen
+- [41:55] en la lluvia
+- [42:04] Mario estaba
+- [42:19] preguntando por el tema del saldo
+- [42:21] pero estos son los hitos de pruebas
+- [42:23] en esta época
+- [42:24] pero Lupe decía que
+- [42:29] Se tenía que separar por banco.
+- [42:34] Sí, porque necesito, claro, necesito, Subonte, revisar solo dólar.
+- [42:41] Necesito saber qué saldo tiene la cuenta dólar.
+- [42:46] Lo mismo con la de Yuan, porque también trabajamos con el banco en Yuan.
+- [42:51] Y en peso.
+- [42:56] Ok.
+- [42:56] ¿En qué banco quiero revisar?
+- [43:07] Sí, hace como dice Mario
+- [43:09] Y ahí por ejemplo los registros
+- [43:11] no podrían editarse ni eliminarse tampoco
+- [43:13] ¿Cierto?
+- [43:15] No, acá no
+- [43:16] No, porque el flujo de caja
+- [43:19] es directamente los movimientos del banco
+- [43:21] Claro, entonces ahí
+- [43:23] no sé si
+- [43:31] dentro de los filtros que se muestran ahí
+- [43:34] No sé si necesitan alguno o eliminar alguno.
+- [43:50] Carlos, o sea, Sergio, creo, no te escuchamos lo último, perdón.
+- [43:54] Ajá. No, de los filtros que se muestran ahí, no sé si necesitan eliminar o agregar alguno.
+- [44:02] Los filtros.
+- [44:05] Mira, por lo que entiendo del flujo de caja, lo que quieren filtrar es si el movimiento se hizo en dólar o se hizo en peso.
+- [44:13] pero no si se hizo por qué banco
+- [44:15] porque el flujo de caja al final es la suma
+- [44:16] de todos los bancos
+- [44:18] lo que pasa es que
+- [44:32] ¿qué quiere decir con el flujo de caja?
+- [44:33] tú quieres ver cuánto plata se te movió
+- [44:35] ahora puede ser obviamente
+- [44:37] en dólar y peso pero no tiene
+- [44:38] a mí un sentido, no tiene sentido que lo vayas por banco
+- [44:41] pero por moneda sí
+- [44:44] por moneda sí
+- [44:45] pero por banco no
+- [44:46] porque al final tú veis los totales
+- [44:49] cuando revisamos el flujo de caja
+- [44:50] que ni por cuánta plata se movió en el mes
+- [44:52] o sea
+- [44:55] o sea entonces aquí
+- [44:57] sacaríamos el banco
+- [44:58] o sea si lo quieren mantener
+- [45:01] no afecta en nada
+- [45:03] pero si yo haría
+- [45:05] por ejemplo quizá el informe del flujo de caja
+- [45:07] que podamos sacar los movimientos
+- [45:09] si se hizo en pesos
+- [45:11] o se hizo en dólar
+- [45:12] ya que sería la moneda
+- [45:16] Pero al final, si tuviéramos Banco de Chile, Scotiabank y Itaú, necesitamos ver cuánto se movió en el mes de los tres bancos en conjunto.
+- [45:26] ¿Cuánto tengo?
+- [45:27] Claro.
+- [45:29] Pero si por moneda...
+- [45:31] ¿De ahí, por ejemplo, los rangos de fecha o sería por periodo?
+- [45:59] ¿Cómo por periodo?
+- [46:02] O sea, ¿y la idea es que sea mensualizado? Por ejemplo, si tenemos tres meses de histórico...
+- [46:13] Yo se escucha, ¿no? María Jesús, ¿no está María Jesús? ¿Tú me escuchas, Carlos?
+- [46:30] Aló, aló, María Jesús. ¿Sí, sí, está ahí, está?
+- [46:41] Mira, caímos.
+- [46:44] ¿Volví?
+- [46:45] Sí, ahí sí.
+- [46:48] Carlos nos mandó la mala señal para acá.
+- [46:56] No me acuerdo qué estaba diciendo.
+- [47:14] Sí, actuales. Eso mismo.
+- [47:28] ¿Y eliminaríamos los otros filtros?
+- [47:50] Sí, porque igual podemos filtrar después por banco
+- [47:53] Entonces dejamos los mismos filtros
+- [47:56] Pero dejar arribita en un flujo de caja
+- [48:00] Que me muestre por moneda
+- [48:02] Por ejemplo, los saltos que aparecerían por banco
+- [48:24] O sea, por moneda serían los reales de cada banco
+- [48:28] o haría la conversión si yo ingresé en dólar
+- [48:33] me lo haría la conversión a peso
+- [48:34] igual me lo mostraría dentro del saldo peso
+- [48:36] Buena pregunta
+- [48:39] ¿Y no se podría hacer
+- [49:12] de ambas, por ejemplo, que me aparezcan
+- [49:15] los tres saldos en cada
+- [49:16] banco que pertenece
+- [49:18] la moneda y si yo apretara
+- [49:20] por ejemplo todos, me hice
+- [49:22] la conversión de cuánto tengo dinero en total
+- [49:24] ¿Y a qué conversión salía?
+- [49:29] Sería como al tipo
+- [49:30] de cambio del día
+- [49:31] a pesos
+- [49:33] claro
+- [49:34] o digitarían la conversión
+- [49:41] el tipo de cambio
+- [49:43] es igual
+- [49:49] ahí sería como
+- [49:50] ahí te va a suceder el número
+- [49:54] porque o sea el usuario puede
+- [49:57] registrar cualquier tipo de cambio
+- [49:59] y no va a ser un valor real
+- [50:01] entonces lo que habría que hacer
+- [50:04] es dejar los saltos
+- [50:05] pero por tipo de moneda. Claro, que el Banco Chile en pesos tenga su saldo, en dólares su saldo y en yuanes su saldo.
+- [50:19] No entiendo.
+- [50:20] ¿Es como un caja y no es como un dólar?
+- [50:23] No, no es como un peso.
+- [50:25] ¿El Banco de dólares o el Banco de monedas?
+- [50:26] No, o sea, se toma automático.
+- [50:29] ¿O que lo convierte?
+- [50:29] Sí, lo convierte a momento cuando también salga.
+- [50:31] nosotros podríamos sacar el flujo en dólares
+- [50:34] pero también tienen el mismo
+- [50:36] cuadro
+- [50:36] ok
+- [50:38] ahí
+- [50:59] sería el saldo
+- [51:04] el saldo por tipo
+- [51:06] cambio, por moneda
+- [51:08] por banco
+- [51:11] por ejemplo el Banco Chile
+- [51:13] puede controlar las tres monedas
+- [51:15] o manejar las tres monedas
+- [51:17] si, lo que pasa es que actualmente
+- [51:22] nosotros cuando sacamos el flujo de caja
+- [51:23] como tenemos los movimientos contabilizados
+- [51:25] y el flujo de caja es lo real que se movió
+- [51:27] podemos hacer la conversión
+- [51:29] al tipo de cambio que fue ingresado
+- [51:32] al movimiento
+- [51:32] ¿y ese detalle, el tipo de cambio lo van a necesitar
+- [51:40] acá o no lo deberíamos mostrar?
+- [51:42] lo que pasa es que
+- [51:43] lo que yo tengo entendido es que al final
+- [51:45] la idea es que toda la contabilización
+- [51:47] de todo el sistema tenga las 3 conversiones
+- [51:50] o sea, si yo por ejemplo
+- [51:51] estoy contabilizando cualquier movimiento
+- [51:54] 27 de agosto
+- [51:57] el mismo movimiento que está en peso
+- [51:59] yo lo puedo ver en dólar al tipo de cambio
+- [52:01] el 27 de agosto y lo puedo ver en yuan
+- [52:03] al tipo de cambio el 27 de agosto
+- [52:04] para el tema de la reportabilidad
+- [52:07] Ah, recuerdo que eso lo habíamos
+- [52:11] visto que era
+- [52:13] lo que se hizo en el market
+- [52:15] ¿no Mario?
+- [52:18] Mario se fue
+- [52:19] Sí, pero por eso
+- [52:22] necesitábamos que el sistema
+- [52:24] llamara los tipos de cambio al banco central
+- [52:26] porque la idea es que todos los movimientos queden
+- [52:28] en triple moneda
+- [52:29] de hecho si se pueden en más moneda ideal
+- [52:32] pero ahora no urge la triple moneda
+- [52:34] entonces al tener la triple moneda
+- [52:37] en el flujo de caja igual podríamos
+- [52:38] sacar los saldos reales del movimiento
+- [52:40] en pesos, en dólares y en yuanes
+- [52:41] y también verlo por separado de que se
+- [52:44] pagó en pesos, que se pagó en dólares y que se
+- [52:46] pagó en yuanes
+- [53:19] ¿lo que pasa con el flujo de caja si se va a alimentar
+- [53:21] de la información contable?
+- [53:23] porque actualmente nosotros en el código financiero
+- [53:26] alimentamos el flujo de caja
+- [53:28] Cuando nosotros hacemos cualquier movimiento bancario, uno de los requisitos es ingresar el código financiero. Y con el código financiero nosotros parametrizamos el flujo de caja actualmente. Entonces, como son movimientos ya contabilizados a un tipo de cambio que se respetó en su momento, el flujo de caja igual debería tener esa interacción de poder mostrarme los saldos en dólar y yo no en pesos.
+- [53:55] Pero ahí
+- [54:22] tengo una duda María Jesús
+- [54:24] porque bueno, hace un ratito
+- [54:27] tú mencionaste que el tipo de cambio
+- [54:28] en tema de anticipo
+- [54:31] eso se podía editar igual
+- [54:33] Ah, pero el del movimiento bancario no
+- [54:35] Claro, o sea
+- [54:37] la idea de poder modificar
+- [54:39] el tipo de cambio del anticipo es porque
+- [54:41] a veces nosotros pagamos en peso
+- [54:43] pero se va a respetar
+- [54:45] del banco si le dieron por ejemplo 10 millones
+- [54:47] del banco nunca se va a mover
+- [54:50] no va a influir el tipo de cambio
+- [54:52] porque si yo tengo
+- [54:53] un movimiento en pesos de 10 millones
+- [54:56] contablemente voy a tener los mismos
+- [54:57] 10 millones
+- [54:58] ¿cuál es el tema? que a veces nosotros
+- [55:01] negociamos un tipo de cambio sobre todo con los productores
+- [55:04] y ahí nosotros necesitamos
+- [55:05] modificar el tipo de cambio para que esos
+- [55:07] 10 millones sean un ejemplo
+- [55:09] 10 mil dólares
+- [55:10] pero no te cambien
+- [55:16] saldo del banco
+- [55:17] el real
+- [55:18] lo único que te cambia es lo que le aparece
+- [55:21] al productor para poder calzar
+- [55:23] el día de mañana con una factura
+- [55:25] es la liquidación
+- [55:27] entonces ahí por ejemplo tendríamos que
+- [55:35] el movimiento social según la fecha
+- [55:38] para hacer el tipo de cambio
+- [55:40] si, todos los movimientos
+- [55:42] si se está llamando del tipo de cambio
+- [55:44] del banco central diario
+- [55:45] si nosotros ingresamos un movimiento el lunes
+- [55:48] que es el tipo de cambio del banco del lunes
+- [55:50] yo creo que el 95%
+- [55:55] de la contabilidad va a quedar con el tipo de cambio
+- [55:57] histórico de la fecha en que se realizó
+- [55:58] lo único que va a hacer
+- [56:00] es modificar el tema de los productores
+- [56:03] pero es súper
+- [56:05] específico el tema
+- [56:07] que es por
+- [56:08] el tipo de cambio de
+- [56:10] negociación, que muchas veces tampoco
+- [56:12] existe
+- [56:13] en el banco
+- [56:16] ahí sí, lo que bueno, cuando se migre
+- [56:22] la data
+- [56:23] información del año pasado no sí o sea si vas a cargar la data desde cinco años
+- [56:38] entonces también hacer la carga del tipo de cambio
+- [56:48] Nosotros actualmente
+- [56:52] Tenemos el tipo de cambio
+- [56:53] Peso y dólar, lo que no tenemos es yuanes
+- [56:56] Ahí lo tenéis que ver cómo cargarlo
+- [57:18] Ya, ok
+- [57:19] Miren, les muestro
+- [57:21] Un comprobante contable para que vean
+- [57:24] Cómo se hace el tipo de cambio
+- [57:25] Ya
+- [57:26] Por ejemplo, acá mismo
+- [57:36] Yo selecciono la fecha
+- [57:40] La cuenta
+- [57:46] Ya
+- [57:59] ahí está el banco y aquí está el código financiero con el cual yo parametrizó el flujo de caja
+- [58:09] entonces supongamos que ya es un pago de servicios ya que pongo ya mil pesos o diez mil pesos y a mí
+- [58:20] el tipo de cambio aparece automático por el tipo de cambio del día de la fecha si te fijas cama
+- [58:26] aparece el tipo de cambio del día entonces final yo me preocupo solamente de contabilizar si estoy
+- [58:34] en peso en pesos y estoy en dólar en dólar pero como el tipo de cambio aparece automático me
+- [58:40] calcula automáticamente los dólares yo no los dígitos porque está trabajando en peso o dólar
+- [58:53] el banco peso ingresé el monto en peso y aquí tengo marcado que está en peso entonces el tipo
+- [59:02] de cambio que me aparece en el comprobante
+- [59:04] me calcula automáticamente los dólares
+- [59:07] ya, o sea
+- [59:08] entonces es por la cuenta y es por
+- [59:10] la fecha
+- [59:11] es por la fecha
+- [59:13] todo
+- [59:15] si yo pusiera por ejemplo acá
+- [59:19] no sé
+- [59:20] a ver, cualquier cuenta, sobre giro
+- [59:22] no, aquí también es más caro
+- [59:23] donaciones
+- [59:26] acá igual me lo calcula automático
+- [59:33] porque nuestra contabilidad estando en dos monedas entonces todo todo lo que yo haga en el sistema me
+- [59:44] lo calcula automático y la tercera moneda como la controlan actualmente la controlamos en un
+- [59:54] ex en un power bien pero la idea es que toda la información salga del sistema por eso este
+- [59:58] este rp nos quedó limitado porque nosotros acá nos dijeron que no podíamos tener triple moneda
+- [01:00:07] Y ahí, por ejemplo, en ese caso, si quisieran
+- [01:00:08] generar ese comprobante
+- [01:00:10] diario, seleccionarían la cuenta
+- [01:00:13] y el tipo de cambio sería para
+- [01:00:14] tipo de cambio dólar, tipo de cambio
+- [01:00:16] iránico, ¿no?
+- [01:00:18] Claro, por ejemplo, si yo acá el movimiento fuera en
+- [01:00:20] Joan, aquí yo podría apretar Joan.
+- [01:00:23] Ahora, si yo
+- [01:00:23] por ejemplo acá fuera Joan, apreto Joan.
+- [01:00:27] No, no, sí, lo entiendo.
+- [01:00:29] Y ahí te va a mostrar.
+- [01:00:31] Exacto.
+- [01:00:33] ¿Y a dónde yo?
+- [01:00:34] Yo acá
+- [01:00:35] acá, esto
+- [01:00:41] es la
+- [01:00:43] llamada del banco central que hacen
+- [01:00:45] de este sistema
+- [01:00:46] entonces por ejemplo, todas las mañanas se actualiza
+- [01:00:50] esto, quizás acá
+- [01:00:51] por ejemplo, en vez de poner UF, UTM y
+- [01:00:53] IPC, podrían ser más monedas
+- [01:00:56] yo creo que es un tema de
+- [01:00:57] de querer
+- [01:01:00] querer es poder
+- [01:01:02] claro
+- [01:01:04] porque por ejemplo, yo no ocupo
+- [01:01:05] la UF, la UTM, el IPC
+- [01:01:07] entonces finales para mí son datos vacíos a mí lo que me importa el tipo de cambio dólar y en este
+- [01:01:13] caso igual y en un futuro también va a ser euro si me queda claro que ver carlos como podríamos
+- [01:01:32] hacer la carga histórica no es la de dólares y pesos a dólares simplemente no es tan complejo
+- [01:01:48] Dice Carlos si le manda la base
+- [01:01:55] Porque nosotros la tenemos
+- [01:01:56] Yo tengo la base de AgroSoft
+- [01:01:59] Como la base de datos
+- [01:02:01] Como la sábana
+- [01:02:03] O sea, a lo mejor le sirve para verla
+- [01:02:05] Para hacer como la carga masiva
+- [01:02:07] Aquí viene con todo lo que está diciendo
+- [01:02:13] La gestión
+- [01:02:14] El código financiero, la cuenta contable
+- [01:02:17] Que están usando, comprobante
+- [01:02:18] también el tipo de cambio
+- [01:02:21] si viene un paño de información
+- [01:02:23] está toda la información contable
+- [01:02:25] claro
+- [01:02:26] y eso que es lo que es un archivo
+- [01:02:32] un excel
+- [01:02:33] como quieran
+- [01:02:35] un excel puede ser lo más fácil o lo peor
+- [01:02:37] ya
+- [01:02:39] ya bueno
+- [01:02:44] no se cuantos registros deben ser
+- [01:02:46] como unos
+- [01:02:46] un poquito más
+- [01:02:49] pero ahí se los puedo mandar
+- [01:02:52] Perfecto
+- [01:02:59] Y acá lo de pagos
+- [01:03:01] No sé si lo logramos ver
+- [01:03:02] Era pago
+- [01:03:26] Era pago
+- [01:03:30] O estado de cuenta
+- [01:03:33] Ahí Lupe
+- [01:03:35] Que se tenía que agrupar
+- [01:03:37] Por Ruth
+- [01:03:39] No me deja ver
+- [01:03:46] A ver
+- [01:03:46] Era estado de cuenta entonces
+- [01:04:00] nosotros la vemos muy chica
+- [01:04:10] pero no está compartiendo
+- [01:04:15] no
+- [01:04:16] no se puede entender la presentación
+- [01:04:20] no se que
+- [01:04:22] o comparta la verdad
+- [01:04:24] pero
+- [01:04:24] creo que ahí está compartiendo yo
+- [01:04:28] no creo que es un problema
+- [01:04:35] de
+- [01:04:35] solución rápida reinicia
+- [01:04:56] ahí si
+- [01:05:02] la nómina de pago
+- [01:05:09] esta me ha estado de cuenta
+- [01:05:14] recuerdo que esa era la que tenía que
+- [01:05:16] listar
+- [01:05:17] si mal no recuerdo era lo que listaba
+- [01:05:20] los pagos
+- [01:05:21] o sea
+- [01:05:25] no me acuerdo
+- [01:05:26] esta iba a ser nuestra nómina
+- [01:05:30] de pago
+- [01:05:31] si, si, si, escucha
+- [01:05:39] Sí, esta iba a ser la nómina de pago y en donde yo podría modificar qué se modifica.
+- [01:05:47] Ah, los periodos, la fecha.
+- [01:05:49] Claro, la fecha.
+- [01:05:51] Sí, ahí ya, de las facturas, ¿cierto? Del pecho de vencimiento.
+- [01:05:54] Claro.
+- [01:05:55] O sea, para la semana, controlarlo por semana.
+- [01:05:58] Por semana. Ah, ya.
+- [01:06:01] Es que acá está por semana, pero yo creo que estado de cuenta o era pago, ¿te acuerdas?
+- [01:06:07] que habíamos dicho que era para agrupar tanto las compras y ventas
+- [01:06:12] de un solo RUT. No me acuerdo cuál era, si era estado de cuenta.
+- [01:06:17] Porque acá, claro, lo que dice la nómina de pago es, por ejemplo,
+- [01:06:20] por semana, si se pincha una semana.
+- [01:06:36] Aquí, por ejemplo, el mover, Carlos, creo que se tenía que mover
+- [01:06:51] a la otra semana, ¿cierto?
+- [01:06:52] Sí, sí ocurre. El totalizado de las semanas de todos los... Sí. Sí, porque hay facturas. Lo que pasa es que yo tengo facturas que se pagan, supongo, estamos ahora en agosto y se pagan en diciembre.
+- [01:07:35] Sí, sí ocurre
+- [01:07:43] harto, sobre todo con las facturas de materiales
+- [01:07:46] que con ellas
+- [01:07:47] tenemos un crédito
+- [01:07:50] de hartos meses
+- [01:07:51] Y no se podría
+- [01:08:06] colocar todas las
+- [01:08:09] semanas del año porque yo igual
+- [01:08:10] a veces me voy a otras
+- [01:08:12] semanas para ver qué es lo que tengo
+- [01:08:14] en esas semanas
+- [01:08:15] No hace por mes
+- [01:08:30] y ahí yo selecciono la semana
+- [01:08:32] consulta eso no se puede alimentar de la fecha de vencimiento que no lo ponga a la factura momento
+- [01:08:40] ingresarlo si eso está así pero puede ser que la factura ya está contabilizada entonces no se
+- [01:08:48] podría editar la fecha de nacimiento
+- [01:08:49] seguro que hablamos
+- [01:08:50] yo para el PAM
+- [01:08:52] es que por ejemplo a las de materiales
+- [01:08:55] si le ponemos seis meses no te van a aparecer
+- [01:08:57] pero tenés que pagar el mes siguiente
+- [01:08:58] no, pero me va a aparecer en seis meses
+- [01:09:00] pero la fecha corresponde
+- [01:09:02] por eso necesito ver
+- [01:09:05] las otras semanas
+- [01:09:06] ya, pero así sí estaría bien
+- [01:09:11] ya, genial
+- [01:09:15] bueno
+- [01:09:21] no está bien
+- [01:09:38] ahí pero ahí está duplicado
+- [01:09:41] atrasado, idea mía
+- [01:09:42] no he dicho nada
+- [01:09:51] ya
+- [01:09:56] pero eso
+- [01:10:02] ahí de egresos podría decir
+- [01:10:04] nómina semanal de pagos
+- [01:10:06] nomás
+- [01:10:11] el título arriba
+- [01:10:14] porque ahí yo voy a poder exportar
+- [01:11:21] solo lo que, lo de la semana
+- [01:11:23] no, del periodo
+- [01:11:25] Sí, sería bueno. Lo que pasa es que igual necesitamos ir viendo más adelante lo que tenemos que pagar.
+- [01:11:52] Así que si hay algo que nos haga ver, sería ideal.
+- [01:12:00] ¿Podría ser como todos los meses del año? ¿O puede ser que revisen dos años?
+- [01:12:05] ¿Un año?
+- [01:12:09] Un año.
+- [01:12:12] Ah, ya, sí.
+- [01:12:46] Ahí yo creo que no sería necesario por día, ¿cierto? Sería año y mes nomás.
+- [01:12:51] No, año y mes, sí.
+- [01:12:55] Ahí en los filtros, ¿qué filtros son los que tienes?
+- [01:13:48] Ahí en el detalle se listaría todos los movimientos de ese cliente, ¿cierto?
+- [01:13:52] Voy a ir viendo las facturas.
+- [01:14:12] ¿Qué opinas tú?
+- [01:14:13] ahí yo tengo una duda
+- [01:14:15] parece que grité
+- [01:14:22] ya
+- [01:14:22] vamos a ver todos los movimientos del RU
+- [01:14:25] sí
+- [01:14:26] ahí tengo una duda, el tipo
+- [01:14:29] es necesario o cuando sea
+- [01:14:31] por ejemplo si tiene
+- [01:14:32] el tipo, ¿cómo se mostraría en ese caso?
+- [01:14:40] ¿qué tipo?
+- [01:14:42] si miras, ¿puedes cerrar ahí la pantalla?
+- [01:14:45] ahí
+- [01:14:45] como cliente y proveedor entonces sí debería ser el grupo no el tipo de cuenta debería hacer el
+- [01:14:59] filtro de lo que nosotros queramos buscar no como que salga el estado completo de toda la
+- [01:15:04] información sino que por ejemplo pusiéramos lm y nos saliera si tiene anticipo si tiene
+- [01:15:10] pago, si está como cliente, como proveedor
+- [01:15:13] porque ahí puede ser
+- [01:15:21] un filtro, vamos a ver que filtre
+- [01:15:22] Alema
+- [01:15:24] entonces ahí
+- [01:15:36] claro
+- [01:15:38] y ahí en esa vista
+- [01:15:44] nos va a salir todo lo que tiene el proveedor
+- [01:15:46] ¿cierto? si es cliente
+- [01:15:48] tiene facturas
+- [01:15:50] anticipo
+- [01:15:52] ahí mi pregunta
+- [01:15:54] por ejemplo, el tipo
+- [01:15:56] aparece como proveedor
+- [01:15:58] entonces lo que dice
+- [01:16:00] maría jesús puede ser que puede ser que ese esa sociedad lm service sea cliente y además
+- [01:16:09] sea proveedor cierto si tenemos casos de que hay que son clientes y proveedor entonces cuando
+- [01:16:16] queremos compensar las cuentas nos complica un poco porque tenemos que ir al módulo de
+- [01:16:21] cliente de ver cómo tienen clientes de proveedores tenemos que hacer la compensación entonces yo lo
+- [01:16:28] que haría, por ejemplo, ese es, no sé,
+- [01:16:30] como sugerencias, cambiaría la columna
+- [01:16:33] tipo y dejaría el root en realidad
+- [01:16:34] y
+- [01:16:36] alguna, dos
+- [01:16:38] columnas que diga, no sé,
+- [01:16:40] con un check
+- [01:16:42] que diga, no sé, si es proveedor
+- [01:16:44] sí o no, y si es cliente
+- [01:16:46] sí o no.
+- [01:16:48] Por ejemplo, en esta vista
+- [01:16:50] yo eliminaría el detalle que está abajo
+- [01:16:52] y solamente
+- [01:16:55] dejaría para poder filtrar
+- [01:16:57] el root que quiero ver
+- [01:16:59] y ahí me salga todo el detalle
+- [01:17:01] del root
+- [01:17:02] o sea lo que
+- [01:17:08] o sea lo que
+- [01:17:15] muestras ahora por ejemplo cuando pinchas detalle
+- [01:17:17] Carlos
+- [01:17:18] eso que te lo muestra en la vista anterior
+- [01:17:26] con el detalle de todos los
+- [01:17:28] movimientos y de las ventas, las compras
+- [01:17:30] pero además que te indique
+- [01:17:32] si es cliente o proveedor
+- [01:17:33] eso mismo
+- [01:17:36] y ahí que uno pueda por ejemplo
+- [01:17:46] pinchar ciertos movimientos y todavía no apareciendo
+- [01:17:49] el total
+- [01:17:50] por ejemplo en caso de las facturas
+- [01:17:56] como pueden ver la columna ICETOC
+- [01:17:58] está relacionada al folio
+- [01:18:01] y ahí vas a poder verlo
+- [01:18:03] en el libro de venta directo
+- [01:18:05] sí
+- [01:18:06] aquí igual te debería aparecer
+- [01:18:18] lo que está pendiente y lo que está calzado
+- [01:18:21] ya
+- [01:18:24] por ejemplo
+- [01:18:28] te refieres por ejemplo si esa venta no tiene
+- [01:18:31] un pago recibido
+- [01:18:33] se debería marcar
+- [01:18:35] de alguna manera?
+- [01:18:37] O sea, debería estar en estado pendiente, claro.
+- [01:18:40] Pero, por ejemplo, si ella hizo
+- [01:18:42] el pago asociado y lo calcé,
+- [01:18:44] debiese aparecer solamente
+- [01:18:46] si yo quiero poner como
+- [01:18:47] no sé, consulta histórica
+- [01:18:49] o solo pendientes.
+- [01:18:52] Ya, ok. Tanto
+- [01:18:53] las 20 compras, ¿cierto? Por ejemplo, como pago
+- [01:18:56] efectuado. Sí.
+- [01:18:58] Ok.
+- [01:19:14] ¿Consulta? Por ejemplo,
+- [01:19:17] como vamos a
+- [01:19:19] eliminar, o sea, editar
+- [01:19:21] esta parte
+- [01:19:22] del RP, podría ser
+- [01:19:25] que, por ejemplo, si
+- [01:19:27] la factura aparece calzada
+- [01:19:29] yo puedo apretar la factura
+- [01:19:31] y ahí se me despliegue la ventanilla
+- [01:19:33] de con qué anticipo se calzó
+- [01:19:35] o en qué comprobante se calzó
+- [01:19:37] Ah, ya. Sí, eso podría ser
+- [01:19:41] lo que podríamos hacer ahí
+- [01:19:43] María Jesús, es que
+- [01:19:45] por ejemplo, si está calzada
+- [01:19:47] un botoncito como el ver detalle
+- [01:19:49] pero el ver detalle que te liste debajito
+- [01:19:51] del registro, debajo
+- [01:19:53] como los movimientos asociados
+- [01:19:55] no sé si lo explico
+- [01:19:56] claro, sí, porque actualmente
+- [01:19:59] nosotros podemos bajar un reporte
+- [01:20:01] pero el reporte es como angorroso
+- [01:20:03] entonces te aparece el comprobante en un lado
+- [01:20:05] después te aparece con qué se calzó en otro lado
+- [01:20:08] entonces, Fidel, igual
+- [01:20:09] es un seguimiento muy
+- [01:20:11] arcaico
+- [01:20:12] sí
+- [01:20:14] en reportería
+- [01:20:20] ya vamos a tener que ver eso
+- [01:20:21] yo creo que, la verdad
+- [01:20:29] por mi lado me tengo que ir a otra reunión
+- [01:20:31] ahora
+- [01:20:31] ya se nos pasamos
+- [01:20:35] la verdad que nos vamos a poner
+- [01:20:37] todos justes, no sé si
+- [01:20:39] bueno, está agendada
+- [01:20:40] para el próximo jueves
+- [01:20:42] el mismo horario, así que
+- [01:20:45] esperamos llegar
+- [01:20:47] nosotros vamos a tener también tiempo
+- [01:20:49] a revisar las tarjetas
+- [01:20:51] que nos dejaron entre ellos
+- [01:20:52] Perfecto, de igual forma
+- [01:20:55] todo lo que se va a avanzar, lo que lo justo
+- [01:20:57] es que nos mencionaron acá
+- [01:20:59] se va a crear como tarjeta
+- [01:21:00] para que ustedes también la puedan ir validando
+- [01:21:03] en línea durante la semana
+- [01:21:04] Ya, buenísimo
+- [01:21:07] Ya pues, quedamos en eso
+- [01:21:11] Muchas, muchas gracias
+- [01:21:13] Gracias a ustedes
+- [01:21:15] Muchas gracias
+- [01:21:16] Nos vemos
+- [01:21:18] Chau, chau.

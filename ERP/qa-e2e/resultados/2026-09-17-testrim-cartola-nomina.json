@@ -1,0 +1,44 @@
+{
+  "stamp": "2026-09-17",
+  "base": "http://127.0.0.1:5174",
+  "pass": 7,
+  "fail": 0,
+  "blocked": 0,
+  "results": [
+    {
+      "id": "SERGIO-LOGIN",
+      "result": "PASS",
+      "evidence": "Login OK → http://127.0.0.1:5174/"
+    },
+    {
+      "id": "SERGIO-DEMO",
+      "result": "PASS",
+      "evidence": "Modo demo fresco (agosto 2026)"
+    },
+    {
+      "id": "SERGIO-CARTOLA",
+      "result": "PASS",
+      "evidence": "Cartola Estado ago14 abierta con DEP-910 y COM-20"
+    },
+    {
+      "id": "SERGIO-INGRESO-SIN-NOMINA",
+      "result": "PASS",
+      "evidence": "Contabilizar DEP-910 (ingreso) no muestra Nómina"
+    },
+    {
+      "id": "SERGIO-EGRESO-NOMINA",
+      "result": "PASS",
+      "evidence": "COM-20 muestra Nómina y se elige 2026-08-S2"
+    },
+    {
+      "id": "SERGIO-LOTE-INGRESO",
+      "result": "PASS",
+      "evidence": "Filtro Ingresos oculta Asociar nómina"
+    },
+    {
+      "id": "SERGIO-LOTE-EGRESO",
+      "result": "PASS",
+      "evidence": "Egreso COM-20 asociado a nómina 2026-08-S2"
+    }
+  ]
+}

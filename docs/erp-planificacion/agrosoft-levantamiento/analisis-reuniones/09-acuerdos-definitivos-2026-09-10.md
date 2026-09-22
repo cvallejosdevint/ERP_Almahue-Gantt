@@ -4,7 +4,9 @@ Fuente primaria: transcripciones `fuentes/`. Minutas tl;dv = índice. Cliente en
 
 Este archivo **no borra** acuerdos viejos: cada reunión queda intacta; la columna «Vigente» dice si un acuerdo posterior lo pisó.
 
-Documento hermano visual: canvas `acuerdos-reuniones-almahue.canvas.tsx`.
+**Sucesor (17/09):** el lote Whisper large-v3 y la demo del **lunes 14/09** están en [`11-ciclo-vida-whisper-v3-2026-09-17.md`](11-ciclo-vida-whisper-v3-2026-09-17.md) y la lista fina contrastada con código en [`12-acuerdos-lunes-14-y-codigo.md`](12-acuerdos-lunes-14-y-codigo.md). Este `09` queda como corte al 10/09.
+
+Documento hermano visual (corte 10/09): canvas `acuerdos-reuniones-almahue.canvas.tsx`.
 
 ---
 

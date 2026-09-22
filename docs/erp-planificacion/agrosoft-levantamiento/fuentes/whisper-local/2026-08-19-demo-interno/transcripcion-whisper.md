@@ -1,0 +1,236 @@
+# Demo interno Carlos/Sergio 2026-08-19 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-19 162555.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:00] Quito, ahora sí. Ya, ahora sí. Entonces, lo que te decía, que una orden de venta es un documento comercial, no es un documento tributario electrónico, no tiene ni una validez ante el Servicio de Puesto Interno.
+- [00:10] Ah, ya. ¿Ya? En cambio, por ejemplo, tú emites una factura electrónica, que es una factura de venta, y esa sí tiene un, influye en un documento tributario electrónico, ese tú lo tienes que declarar en el Servicio de Puesto Interno, ¿ya?
+- [00:25] Entonces, desde acá tú puedes emitir una boleta, una factura,
+- [00:30] también documentos comerciales, cotización, orden de venta,
+- [00:34] orden de compra, ese tipo de cosas.
+- [00:36] Las puedes emitir desde acá.
+- [00:38] Pero me acuerdo que en la reunión pasada habían dicho
+- [00:41] que dejáramos la emisión de venta y compra aparte,
+- [00:43] si de hecho las tengo acá también la emisión de compra.
+- [00:46] Pero ojo, ojo, que las compras son distintas.
+- [00:48] Por eso digo yo que, por ejemplo, yo puedo...
+- [00:51] Tú no vas a emitir una factura de compra.
+- [00:54] O sea, puedes emitir una factura de compra
+- [00:56] Pero el foco de ellos
+- [00:59] Van a ingresar las facturas de compra
+- [01:00] Y esas facturas de compra vienen
+- [01:02] Del SI o tu proveedor
+- [01:04] ¿Cachai?
+- [01:05] No sé si me entendí el flujo bien
+- [01:08] Por ejemplo, yo te vendo una cosa a ti
+- [01:10] Claro, cuando yo compro realmente
+- [01:12] ¿Tú me das una factura?
+- [01:14] Yo te emito una factura de mía
+- [01:15] Yo por mi lado una factura de venta
+- [01:17] Pero para tu lado, tú la recepcionas
+- [01:20] Y es una factura de compra recibida
+- [01:22] ¿Ya?
+- [01:23] ¿Vale? ¿Este es el flujo?
+- [01:25] ¿Se entiende ahí claro?
+- [01:26] Ya, pero puede darte el caso
+- [01:29] Mira, escucha este
+- [01:30] Puede darte el caso que yo
+- [01:32] Puede ser que no tenga factura de venta
+- [01:35] ¿Cierto? Pero necesito
+- [01:37] Necesito comprarte algo a ti
+- [01:39] O
+- [01:41] Digamos el flujo
+- [01:42] Tú me compraste algo a mí, yo te vendí
+- [01:44] Una factura de venta
+- [01:46] Puede darse el flujo de que
+- [01:48] Yo no tengo para emitir factura
+- [01:51] de venta, ¿cierto? pero tú necesitas
+- [01:53] comprarme algo a mí, porque soy una empresa y
+- [01:55] necesito factura vos, claro
+- [01:57] entonces puede ser que tú no
+- [01:59] dependiendo del giro también
+- [02:01] dependiendo del giro, por ejemplo, no sé
+- [02:03] el tema de los berry, las empresas que como
+- [02:05] que exportan berry, ellos tienen que
+- [02:06] o mueven berry dentro del país, tienen que
+- [02:09] generar, ellos declarar ese impuesto
+- [02:11] del berry, ¿cachai? entonces en ese
+- [02:13] caso, por ejemplo, tú me compras
+- [02:15] algo a mí, tú emites
+- [02:17] una factura de compra
+- [02:19] es una factura de compra
+- [02:21] recibida, ¿me explico?
+- [02:24] ahí me pierdo un poquitito en los conceptos
+- [02:26] en ese caso, por ejemplo, es como para
+- [02:28] en el caso de que se haga la compra
+- [02:31] que de como el registro
+- [02:32] contable
+- [02:34] claro, tú estás declarando esa
+- [02:36] venta, o esa, perdón, esa compra
+- [02:39] tú la declaras, tú declaras
+- [02:40] tú retienes ese impuesto
+- [02:42] pero por ejemplo, si yo te invito una factura a ti
+- [02:45] que para ti también es una factura
+- [02:46] de compra recibida
+- [02:48] o digamos una factura recibida
+- [02:50] ¿cierto? pero tú la declaras
+- [02:52] tú la declaras dentro de tu compra
+- [02:55] del servicio impuesto interno
+- [02:56] ¿ya?
+- [02:58] y yo declaro en mis ventas
+- [03:01] declaro esa factura
+- [03:02] ¿cachai?
+- [03:04] entonces los dos declararíamos para el servicio
+- [03:08] impuesto interno que se realizó compra y venta por nuestro lado
+- [03:10] claro
+- [03:12] yo declaro como venta, yo tengo que pagar el IVA
+- [03:15] y tú lo declaras como compra
+- [03:17] pero tú me pagaste ese IVA a mí
+- [03:19] entonces a ti se te rebaja
+- [03:20] ¿cachai? ¿me explico no?
+- [03:22] Claro, porque ahí el IVA pasó directamente
+- [03:24] como de mí hacia ti.
+- [03:26] Claro, y yo sé que
+- [03:27] tú me lo pagaste a mí y yo soy
+- [03:30] el que he encargado de
+- [03:31] pagarlo en el servicio de oferta interna.
+- [03:34] Ya.
+- [03:36] Entonces, por eso digo yo que ahí
+- [03:38] esas compras, no es que
+- [03:39] el cliente, o en este caso
+- [03:42] Armagüez, va a emitir una
+- [03:44] factura de compra, porque eso puede ser
+- [03:46] solamente compras recibidas.
+- [03:47] ¿Me explico?
+- [03:50] Entonces ahí no pasan por la emisión.
+- [03:52] La idea es que ellos van a
+- [03:53] Las facturas de compra
+- [03:54] Las vamos a sincronizar desde GoSocket
+- [03:57] ¿Cierto?
+- [03:59] Y las vamos a almacenar en su libro de compra
+- [04:01] ¿Me explico?
+- [04:02] Sí, sí
+- [04:03] Eso hay que tenerlo bien claro
+- [04:06] Hagamos la misión
+- [04:16] Como no están cargados los
+- [04:17] Los folios
+- [04:20] Tira error el
+- [04:21] El GoSocket que no hay folios
+- [04:23] Pero está conectado y tira el error
+- [04:24] Ya, ok
+- [04:30] Acá
+- [04:32] Por ejemplo, aquí quería llegar yo. Por ejemplo, viste que tú en los datos generales, tú pusiste que puedes poner el indicador de venta. Si es una venta, baja, baja. Ahí está. Eso yo creo que ahí te confundiste. ¿Por qué? Porque era, por ejemplo, si es producto o servicio, ¿cachai?
+- [04:54] y dependiendo del indicador
+- [04:57] de venta, si era
+- [04:58] producto, tenías que al momento
+- [05:01] de irte a los ítems, te tenías
+- [05:03] que pedir en la bodega
+- [05:05] para mover
+- [05:06] ya, pero si es servicio
+- [05:08] ese no te pide bodega
+- [05:11] ¿me explico, no?
+- [05:12] ah, ya lo tienes acá, ah, perfecto
+- [05:17] sí, ahí quedó
+- [05:19] quedó bien, ya, ok
+- [05:21] entonces el otro indicador yo creo que
+- [05:23] valídalo con María Jesús
+- [05:24] Tú, bueno, con el Mario vamos a ver qué va a salir, no, el Mario lo peor.
+- [05:29] El Mario me dice, voy a preguntar, a todo lo que le pregunto me dice voy a preguntar.
+- [05:33] Sí, que en realidad no tienes conocimiento.
+- [05:36] No, estamos medio fritos ahí.
+- [05:42] Pero por ejemplo acá, te trae las bodegas donde están, o sea, los productos que están.
+- [05:48] Aquí te lo voy a seleccionar, tiene la cantidad, voy a editar el precio que habían pedido, agregar el descuento.
+- [05:54] La cuenta donde se va a asociar.
+- [05:57] Ya, la cuenta, sí.
+- [05:58] cachay y acá por ejemplo me faltaría lo de la de la bodega
+- [06:04] porque creo que se lo había dejado en el módulo de compras erróneamente si mal no me equivoco
+- [06:14] si si si
+- [06:18] el de compras también de hecho el de la bodega lo tenía si lo tenía acá pero no sé por qué se
+- [06:52] me borró creo que era porque estaba haciendo no estaba haciendo el descuento hay que seleccionar
+- [07:06] el producto ahora cargo mira ya que en este caso como tiene solamente una bodega no te salen los
+- [07:14] menús para seleccionar cuántos de esta bodega y agregar otra porque solamente están una vez
+- [07:19] no solamente tengo esto creado como estaba haciendo el test rápido le pedí que volviera
+- [07:27] con uno no más caché pero momento de tener un producto con dos bodegas te da la opción de
+- [07:34] agregar otra bodega y por bodega cuántos quieres vender sin reverencia la previsualización funciona
+- [07:45] así el borrador también funciona y deberíamos solicitar la aprobación perfecto estado pendiente
+- [07:58] de aprobación en bandeja de aportaciones de orden de venta entonces bueno aquí como estoy
+- [08:02] del admin me la va a mostrar igual. Ya. Que esta debería aprobar la Catalina Vega, pero
+- [08:09] como estamos del admin, me permite igual. Y por ejemplo, el usuario que la solicitó
+- [08:13] también puede tener esta vista. Y acá, por ejemplo, te dice, si son más, te dice que
+- [08:18] este está pendiente y los demás no te van a decir nada. Pues cuando este esté listo
+- [08:21] te dice aprobado y el que sigue te dice pendiente. Perfecto, entiendo. El pin del admin. Que
+- [08:35] Como he hecho hartos cambios, borro la base de datos completa para que no queden residuos y se me olvidó cuál es la clave del admin.
+- [08:45] 4821 parece que es este.
+- [08:49] ¡Ah! No sale bloqueado, si lo había puesto.
+- [08:52] No debería salir, debería salir el asterisco acá.
+- [08:56] Y ahí te sale auxilizada.
+- [08:59] Aprobada.
+- [09:04] Y no me realizó la misión.
+- [09:06] No sé ejecutó.
+- [09:07] A lo mejor lo deje aquí en el backend
+- [09:15] Con el .en
+- [09:18] Para que pruebe local nomás
+- [09:20] Puta Carlos, me tengo que ir al otro
+- [09:32] Ya, pero por ejemplo
+- [09:34] Ya con estas correcciones puedo trabajar alto
+- [09:36] Así que no hay problema
+- [09:37] Ya, acorrígelo de la venta
+- [09:39] Eso es un poquito
+- [09:41] Urgente
+- [09:43] Ahí igual en el desarrollo si es que me pierdo
+- [09:46] Te pido ayuda, porque igual estaba medio perdido en los conceptos
+- [09:48] Pero como te digo, por último ahora ya voy a averiguar
+- [09:50] Y trabajar y cualquier cosita por último te la voy a ir mandando
+- [09:52] por WhatsApp y cuando podamos nos juntamos
+- [09:54] Dale, mira, por ejemplo ahí
+- [09:56] yo lo que haría
+- [09:57] haría un mantenedor
+- [10:00] un administrador de los documentos de venta
+- [10:02] que se pueden emitir, ¿ya?
+- [10:04] y un mantenedor de los documentos de compra
+- [10:06] a emitir, a emitir, ojo
+- [10:08] que en este caso en realidad sería
+- [10:10] solamente la factura de compra emitida
+- [10:12] Claro
+- [10:13] y el
+- [10:15] Ah, pero ahora que
+- [10:18] igual usted un poco tiene razón
+- [10:20] que también podían ellos registrar
+- [10:22] manualmente algunas facturas
+- [10:24] ¿por verdad que no habían dicho eso?
+- [10:26] sí, sí, me acuerdo que lo habían mencionado
+- [10:28] pero lo que pasa es que en esa reunión
+- [10:30] también como éramos mucha gente
+- [10:31] me acuerdo que
+- [10:34] habían hartas definiciones que no estaban
+- [10:36] claras entre la María y el otro tipo
+- [10:38] oye, ¿y la María Jesús va a participar
+- [10:40] en la reunión del jueves o está de vacaciones
+- [10:42] esta semana?
+- [10:44] está de vacaciones, me dijo el Mario
+- [10:45] así que operativamente
+- [10:52] no creo que tengamos mucho feedback esta semana
+- [10:54] pero por último mostramos
+- [10:55] ya por ejemplo, no sé, teniendo estas correcciones
+- [10:57] dejo publicado en la página y que se metan nomás
+- [10:59] para mostrarles que está todo funcionando en línea
+- [11:02] pasarles credenciales
+- [11:04] y que prueben
+- [11:04] yo me interesa agregar la venta
+- [11:07] en los documentos emitidos, las compras déjalo
+- [11:09] como lo tienes, pero por ejemplo déjale que son
+- [11:12] recibidos
+- [11:13] y tiene que haber una factura de compra
+- [11:16] que ese sería emitida
+- [11:17] ¿sí?
+- [11:19] vale
+- [11:20] Ya, eso
+- [11:22] Con eso, si lo tenemos por mañana
+- [11:25] Flor
+- [11:26] Eso
+- [11:27] Me voy al otro río
+- [11:30] Porque en 5 minutos voy a preparar una cosita
+- [11:33] Eso, que lo vaya bien, nos vemos
+- [11:35] Vale, gracias, chau

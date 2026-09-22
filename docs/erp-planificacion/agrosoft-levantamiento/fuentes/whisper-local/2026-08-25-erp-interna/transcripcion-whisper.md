@@ -1,0 +1,653 @@
+# Interna ERP Carlos/Sergio 2026-08-25 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-25 112308.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:02] Ya, Carlos, antes de vernos a la vega, quería saber qué onda, cómo estás, el motivo de que te, no sé, llegar al nivel de tratamiento, o sea, yo estoy totalmente de acuerdo, yo hace un par de años atrás, los 30, 29, por ahí,
+- [00:36] los achacos de los 30
+- [00:39] con crisis de pánico
+- [00:40] no la pasé muy bien
+- [00:42] entonces
+- [00:46] yo el tema mental
+- [00:47] yo el tema mental
+- [00:50] yo creo que es totalmente cuidado
+- [00:52] pero me gustaría saber
+- [00:54] qué onda
+- [00:54] por qué
+- [00:58] te afectó tanto
+- [01:00] no sé si los temas de
+- [01:01] Benedeo, de Almagüe
+- [01:04] y me gustaría que tú
+- [01:06] o sea, bien sincero, me digas, si es que Sergio
+- [01:07] o yo, no sé,
+- [01:09] yo no voy a verlo, no me das,
+- [01:12] o no, puta,
+- [01:14] a la revés estamos cagados,
+- [01:15] hay que tomarlo. El único que podríamos
+- [01:17] como omitir de por ahora
+- [01:19] es el tema de Benedev, entonces
+- [01:21] quiero
+- [01:23] saber para que tú también estés bien, poco.
+- [04:35] Puta, o sea,
+- [04:36] ¿sabés qué, Juan?
+- [04:37] Creo que lo que tú
+- [04:39] mencionas a mí me pasó, me pasó
+- [04:41] en
+- [04:43] no en la otra pega la primera vez que tuve como formal de facturación electrónica
+- [04:50] en facturación se le ejecuta igual en esa empresa igual la escala es rápido y ful ful ful pega y no
+- [04:57] sé por tres años ya era cargo de un área completa entonces pero me pasó que después ya todos los
+- [05:04] días viernes me tenía que reunir con los dueños de la empresa que eran cuatro de los cuales ya
+- [05:10] aprendí un kilo poco pero llegó un momento que yo ya me paso por ejemplo yo me iba los días viernes
+- [05:16] a las 54 la mañana y entrar a 89 me a las 45 la mañana para preparar informes de la presentación
+- [05:24] caché y en cierto modo super bien pero claro constantemente estaba con esa como esa ansiedad
+- [05:32] para bien realmente bueno se pone esas mismas reuniones estaba el gerente operaciones y se
+- [05:39] callampean mal al gerente de operaciones pero a mí no directo, entonces igual tú me afectabas y me empezó a generar nerviosismo y ahí me pasó algo similar a lo que hiciste tú, no quería ir a trabajar los viernes, faltaba los viernes, para evitar ese tipo de reunión, después me di cuenta que no en esa pega, después me cambié, también me tuve que ir a como consultor
+- [06:07] de facturación electrónica
+- [06:09] con un software grande que es SAP
+- [06:11] y
+- [06:13] puta, sabiendo poco
+- [06:15] pero sabéis que siempre me di cuenta
+- [06:18] ahí, en esa pega, que igual
+- [06:19] no sabéis nada con
+- [06:21] tratar de entender
+- [06:23] por qué el nerviosismo
+- [06:25] ¿ya? yo creo que
+- [06:28] o ese estrés
+- [06:30] porque ese estrés
+- [06:31] se lo genera uno mismo
+- [06:33] uno mismo porque uno
+- [06:35] a lo mejor de repente
+- [06:36] no se da el tiempo o no
+- [06:39] lo analizáis bien, ¿cachai? Y uno se pone
+- [06:41] contra la espada de la pared solo.
+- [06:44] ¿Entendés? Entonces
+- [06:44] yo creo que
+- [06:46] es un tema de que
+- [06:49] uno, uno se
+- [06:51] tiene que organizar y de repente
+- [06:53] si te va mal o va a ir
+- [06:55] a la presentación y hubo un error, es
+- [06:57] parte de él nomás, ¿cachai?
+- [07:00] Obviamente si
+- [07:01] quieres que te salga toda la perfección,
+- [07:03] te vas a volver loco.
+- [07:07] Entonces
+- [07:07] disputa como consejo
+- [07:11] digo
+- [07:11] o enfrentarlo, ¿cachai?
+- [07:14] trata de no evadir
+- [07:16] ese momento, enfrentalo
+- [07:18] si te fue mal
+- [07:20] hay que aprender el motivo, por qué
+- [07:22] pero debes ir tranquilo
+- [07:24] tratar de estar lo más tranquilo posible
+- [07:27] y
+- [07:27] preparado, pero con
+- [07:30] anterioridad, ¿cachai? no sé, una semanita
+- [07:32] antes ya, si voy bien
+- [07:34] ¿por qué? porque claro, yo sé
+- [07:36] lo que te pasó ahora en este caso la princesita obviamente no es tan solo eso puede ser lo que tú
+- [07:41] dices que claro que viene de antes el tema de personalidad pero la única forma de mejorar eso
+- [07:49] es ensayando y ensayando tienes que ir al leone así porque tú lo puedes hacer en tu casa con tu
+- [07:56] familia pero no es lo mismo ya después cuando estoy con una persona desconocida que el que
+- [08:04] el weón de repente a lo mejor, claro, el weón
+- [08:06] son más, son más pesados,
+- [08:08] weón, son, no sé, weón.
+- [08:10] Pero en cierto modo hay que pensar
+- [08:12] que tú salir de esa reunión y esa persona no es
+- [08:14] nada tuyo, weón. No va a
+- [08:16] afectar tu día a día, no va a
+- [08:17] estar con él compartiendo,
+- [08:20] es un tema netamente laboral.
+- [08:23] Y voy a llegar que el día de él
+- [08:24] se cambie, se vaya, weón, o tú no se
+- [08:26] cambies de pega, lo que sea, no lo veis
+- [08:28] más y listo, ¿cachai?
+- [08:30] Pero sí, sí, yo sé
+- [08:32] que te pueden hacer afectan las cosas afectan una discusión en una presentación perfecta pero
+- [08:40] también tiene que ver mirar la rola de la moneda cuando te va mal claro bueno uno se siente mal
+- [08:48] caché la pasa mal tejerá nerviosismo pero después si cuando te va bien no disfruté el doble
+- [08:56] entonces
+- [08:59] yo te aconsejo
+- [09:02] tómatelo como más relajado
+- [09:04] pero dame un segundo
+- [09:08] Carlos
+- [09:09] Carlos, sorry
+- [10:44] ya lo que te decía
+- [10:47] tómatelo
+- [10:49] relajado
+- [10:51] si necesitas apoyo de mi parte, dime
+- [10:54] es que Sergio, no me siento bien acá
+- [10:56] ayúdame con esto
+- [10:58] bueno, si
+- [10:59] yo ya
+- [11:03] no es que tampoco
+- [11:04] pero ya tengo harto conocimiento
+- [11:07] del tema de cómo presentar
+- [11:09] por dónde ir
+- [11:11] cómo evadir
+- [11:12] de repente no sé
+- [11:13] si tenés que confrontación a alguien
+- [11:16] de buena forma, siempre con respeto
+- [11:19] de educación
+- [11:19] tenés que hacerlo porque no podés aguantar
+- [11:22] tampoco que alguien te pase de barco
+- [11:24] entonces
+- [11:26] yo siempre he dicho eso
+- [11:28] los muchachos, si viene un cliente
+- [11:30] y te viste, ni te ves que te vas a odiar
+- [11:32] tú pescáis, permiso, yo no estoy
+- [11:34] para esto, te retiráis
+- [11:36] y si el cliente viene hacia mí y me dice
+- [11:38] ay, este con que se cree, me colgó
+- [11:40] el teléfono, si se le colgó
+- [11:42] usted está faltando de respeto
+- [11:44] nada, entonces voy a bajar el servicio, perfecto
+- [11:46] lo desactivo ahora yo
+- [11:47] o lo solicito para mañana
+- [11:50] ¿cachai?
+- [11:52] aquí no es
+- [11:53] yo no, no es por un
+- [11:57] no, puta
+- [11:58] un colaborador bueno el partner de uno como si yo siempre he dicho que la empresa lo hace la
+- [12:04] hace la gente no uno no lo doy la empresa la hace la gente entonces si bien no sé por la
+- [12:11] princesita que va a tener y luego ante falta respeto con alto respeto tranquilidad permiso
+- [12:20] y ya después se ve como ya un tema interno a la empresa de que se hace con ese tipo
+- [12:25] también una vendedora
+- [12:29] te emite, un cliente
+- [12:30] la trata mal, se usa a llorar
+- [12:33] y yo lo más sano, ya, perfecto
+- [12:35] tú no atiendes más a esta persona
+- [12:37] aunque el cliente te pide
+- [12:39] contacte, tú no lo pescas
+- [12:41] lo derivas
+- [12:42] porque a lo mejor, claro, hay gente
+- [12:47] que en sí, a lo mejor no se llevan bien
+- [12:49] por depresión, no sé
+- [12:51] a lo mejor, digo, el loco
+- [12:52] no sé, es pesado, bueno, por algo
+- [12:55] a lo mejor también ha pasado por tantos sellers
+- [12:57] uno no sabe
+- [12:58] pero
+- [13:01] por eso digo yo que
+- [13:15] tenés que tomártelo tranquilo
+- [13:17] independiente de que tú sientas que él se está aprovechando
+- [13:20] no está cagando
+- [13:21] no, tú por tu lado estás haciendo bien tu pega
+- [13:24] no estás apoyando bien
+- [13:25] como por ese lado
+- [13:27] ese es tu foco
+- [13:28] no te preocupes si el lugar
+- [13:31] no nos cobra
+- [13:34] o no nos paga
+- [13:35] por ejemplo si nosotros te pedimos apoyo
+- [13:37] para poder hacer un QA
+- [13:39] es esto, ¿cachai?
+- [13:42] no vayáis más allá, no metáis
+- [13:43] código, yo creo que ya
+- [13:45] como habíamos hablado la otra vez
+- [13:46] el código deja solo a los muchachos, muchachos
+- [13:49] esta no funciona, no funciona
+- [13:50] y ya, y si por ejemplo, si tú me dices
+- [13:53] ¿sabes qué Sergio? yo no voy a hacer la reunión
+- [13:55] con Danilo, por este motivo y esto
+- [13:57] entonces, ¿por qué motivo? yo no sé
+- [13:59] los muchachos no me enteraron de esto bien, perfecto
+- [14:01] yo voy con los muchachos y digo, ¿qué pasa?
+- [14:03] aquí van
+- [14:04] necesito que alguien se haga cargo de esto
+- [14:07] y que esa persona le entregue a Danilo
+- [14:09] porque se corrió la reunión
+- [14:11] y este viejo no va a estar de buena forma
+- [14:13] ¿cachai?
+- [14:16] pero tenéis que conversarlo
+- [14:17] tenéis que decirles, hay que ser
+- [14:19] como lo que te dije esta semana
+- [14:21] creo que no es sano
+- [14:26] para ti y para nadie
+- [14:27] que estar todo el fin de semana preparando
+- [14:29] una reunión para el día de lunes
+- [14:30] ¿por qué? porque te maquinéis todo el día
+- [14:35] estar todo el día
+- [14:36] con la estrella y un fin de semana
+- [14:38] esa guay déjala para el día
+- [14:41] de semana
+- [14:42] el día de semana
+- [14:44] a lo mejor corre a la reunión
+- [14:47] déjala para el día miércoles
+- [14:49] ¿por qué? porque así
+- [14:51] te maquineas el lunes y martes
+- [14:53] pero aparte de maquinearte
+- [14:54] igual te despejáis con la otra carga de pega
+- [14:57] pero cuando estáis
+- [14:59] el fin de semana no sé
+- [15:00] si no estáis sin tu hija
+- [15:03] puta guay
+- [15:05] puedes sobrepensar muchas las cosas
+- [15:07] no vayas a dormir
+- [15:10] te vayas para acostar
+- [15:11] y vas a empezar el rocejón de guata
+- [15:13] cosas así
+- [15:14] la pura ansiedad
+- [15:16] tómatelo con tranquilidad
+- [15:23] por lo que tengo entendido
+- [15:26] que esta es como tu primera pega
+- [15:27] de desarrollo, full desarrollo
+- [15:29] entonces
+- [15:31] que no te gane la ansiedad
+- [15:34] relájate
+- [15:36] si necesitas ayuda
+- [15:37] el Diego y el José
+- [15:40] igual tienen
+- [15:40] exposición, temas de que tú no sepas algo, también, levántalo, entre todos te podemos ayudar, bueno, ya, así que, bueno, tranquilo, y bueno, y yo, a mí me ayudó muchísimo en su momento la acupuntura, bueno, ¿sí?
+- [16:03] No, yo me hice en todo el cuerpo, en los tobillos, en la planta de los pies, en las rodillas, en el lado de la columna, aquí en el hombro, en la frente, en la cabeza, todo así.
+- [16:35] pero bueno
+- [16:37] bueno es que yo llevé
+- [16:40] sin mentirte estuve como
+- [16:42] dos años, bueno y la marihuana yo la dejé
+- [16:44] por lo mismo también
+- [16:45] yo dejé de fumar por eso mismo
+- [16:49] porque yo fumaba y me empezaban a dar las crisis
+- [16:51] era eso, yo no podía
+- [17:07] yo estuve como un año y medio, dos años
+- [17:09] que era como un ejemplo, yo me acostaba
+- [17:11] cerraba los ojos, después la zona de la cama
+- [17:13] y era como que nunca dormía
+- [17:14] entonces yo
+- [17:18] cuando fui a como un tour a la primera vez
+- [17:20] Fui, bueno, y me hice la cultura. Llegué, yo trabajaba en el, al frente de Costanera, por ahí. Y yo vivía en Maipú, bueno, eran como dos y hora y media de viaje para la casa.
+- [17:34] Y llegué como a las ocho y media de la noche
+- [17:38] Y llegué a tomar once
+- [17:39] Estaba un rato ahí con la familia
+- [17:41] Y después me ponía a trabajar para determinar
+- [17:42] Y
+- [17:44] No, bueno, llegué ese día
+- [17:47] Y me estiré en la cama
+- [17:49] Y dormí de las ocho y media hasta las ocho de la mañana
+- [17:52] Al otro día
+- [17:53] Pero bueno, descansé así
+- [17:55] Dormí raja, raja, raja, raja
+- [17:57] Bueno, yo creo que
+- [18:00] Ese fue el día que más descansé
+- [18:02] Y
+- [18:04] Y después seguí yendo y me hicieron, después me hicieron en la espalda, güey.
+- [18:10] En la espalda, porque la primera sesión fue, no en la espalda,
+- [18:14] en los puntos claves, así como las piernas, tobillo, muñeca, hombro, cabeza.
+- [18:19] Y después me hicieron en la espalda, como en la orilla de la columna, ¿cachai?
+- [18:24] Como, no así recto, sino que como de costado la hoja.
+- [18:31] Y me hicieron, ya, cuéntese.
+- [18:32] yo estaba así como tirado
+- [18:34] sentado en la camisa, tirado hacia adelante
+- [18:36] y me dice ya acuéstese
+- [18:38] y me voy parando así
+- [18:39] así, un dolor
+- [18:42] un dolor rígido
+- [18:43] y el loco me ayuda así, me pone una manta
+- [18:45] y me ayuda a acostarme
+- [18:46] y yo, me voy acostando
+- [18:48] porque tenía mucha tensión
+- [18:50] y ahí
+- [18:53] también me liberó
+- [18:56] calentita
+- [18:57] y ahora yo no voy a ese tiempo
+- [19:00] no voy a ese tiempo y pero yo creo que puta pasa que gente que o sea yo por lo menos y mi
+- [19:08] hermano le da lo mismo que sufrimos esas crisis poco sufrimos como temporalmente nos dan eso
+- [19:14] tenemos esos episodios entonces no sabía hacer como controlar la entrada cada persona
+- [19:28] y lo más sano
+- [19:33] es asumir cuando te están dando
+- [19:34] ¿caché?
+- [19:38] decir
+- [19:38] me está dando una crisis
+- [19:40] y tratar de relajar
+- [19:42] saber que no te vaya a morir
+- [19:44] no te vaya a brotar el lobo con algo
+- [19:46] sino que va a pasar sola
+- [19:48] porque igual
+- [19:50] el peor error que hace mucha gente
+- [19:52] es como que batallar
+- [19:53] para que no te debo
+- [19:55] porque yo creo que todos quieren eso
+- [19:57] entonces
+- [20:00] pero bueno, yo creo que más que nada aceptarla
+- [20:02] si te da, perfecto
+- [20:05] no se me irá a recostar, voy a tratar de dormir
+- [20:06] un rato, lo que sea
+- [20:07] entonces
+- [20:11] eso, gordito, yo creo que no
+- [20:14] te estreses, ni trata de
+- [20:16] tener la calma
+- [20:17] no todo
+- [20:20] es malo en la vida
+- [20:22] no, no, porque
+- [21:13] en cierto modo nunca voy a poder medirte contra eso
+- [21:15] no, por eso yo creo que
+- [21:49] O sea, el que no la haya podido entender nunca
+- [21:51] el cerebro a una caja pandora,
+- [21:53] pues
+- [21:54] cualquier momento,
+- [21:57] no sé, cualquier cosa
+- [21:59] puede ser una buena, tiene mucho poder.
+- [22:01] Entonces, no sabéis nada
+- [22:03] con luchar contra el power.
+- [22:05] Más que nada, subir y decir,
+- [22:06] estoy así, voy a bajarle
+- [22:09] un cambio. O no sé,
+- [22:11] me tiene estresado esto,
+- [22:13] voy a practicarlo más.
+- [22:15] ¿A qué puedo hacer?
+- [22:17] ¿Cachai? Por ejemplo, no sé,
+- [22:18] si te afecta el tema de comunicación
+- [22:21] o preparar, no sé, lo que sea
+- [22:23] ya, güey, esto
+- [22:24] porque uno, en realidad, uno se estresa por
+- [22:27] cosas que no
+- [22:28] no has terminado
+- [22:30] si eso es lo que te genera el estrés o la ansiedad
+- [22:33] pues hay que pensar que, no sé
+- [22:35] llevamos poco tiempo, no sé, en el
+- [22:37] RP, llevamos dos meses con Cueva
+- [22:39] ya tenemos
+- [22:41] gran parte del producto
+- [22:42] y en dos o tres meses te acordás y dices
+- [22:45] ah, entregamos esta guada filete ya
+- [22:46] o Danilo va a llegar en dos semanas más
+- [22:49] y va a empezar a funcionar sin problema
+- [22:50] y a lo mejor no voy a hablar más con él
+- [22:52] entonces yo creo que
+- [22:55] ya tenéis que pensar
+- [22:56] en dos o tres semanas o a la próxima
+- [22:59] no va a estar así o no va a ser así
+- [23:01] voy a tener que entregar estos proyectos
+- [23:03] a lo mejor va a llegar otro proyecto
+- [23:05] entonces
+- [23:07] piénsalo de esa manera
+- [23:10] y acepta que está ahí así
+- [23:13] porque es una condición tuya nomás
+- [23:15] quizás como decís tú siempre
+- [23:19] lo evitaste
+- [23:23] pero igual ahora tenés que ser fuerte
+- [23:25] y no me va a matar
+- [23:28] no me va a matar
+- [23:31] si me va como el hoy en la reunión
+- [23:33] me fue como el hoy y estoy relleno
+- [23:34] puta bueno el cliente
+- [23:37] me hizo mierda
+- [23:40] va a llegar más clientes
+- [23:45] pero no te
+- [23:46] no te caigas la cabeza
+- [23:48] por temas laborales
+- [23:50] yo creo que si es tema familiar
+- [23:53] tu hija, cosas así, ahí si vale la pena
+- [23:55] cagarse la cabeza
+- [23:56] pero por temas laborales
+- [23:58] bueno
+- [23:58] nada es perfecto
+- [24:16] te meten ya como 15, 13 años
+- [24:18] en el mercado y todos tienen errores
+- [24:20] y pues no, no por eso
+- [24:23] hemos perdido todos los clientes
+- [24:25] o se ha ido a pique, no, ha seguido creciendo
+- [24:28] solamente hay que ser constante
+- [24:30] y tener un buen servicio de postventa
+- [24:32] y listo
+- [24:37] así que, querido, dale nomás
+- [24:39] dale nomás, relájate
+- [24:41] y asúmelo nomás
+- [24:43] ¿estás así por temas?
+- [24:45] ¿estás así por temas?
+- [24:46] ¿qué me molesta? ¿qué me pone ansioso?
+- [24:50] esto ya, ¿cómo lo resuelvo?
+- [24:52] ¿cómo lo mejoro?
+- [24:53] ¿cómo evitarlo?
+- [24:55] si lo podía evitar
+- [24:56] nunca vaya a enfrentarlo
+- [24:59] Nunca voy a salir con una victoria en ese caso, de ese tema. Pero si lo enfrentáis, a lo mejor, claro, puede ser que lo enfrentáis y te fue mal. Ya, no importa, pero lo enfrentaste.
+- [25:13] después la próxima, ya lo enfrenté
+- [25:16] pero ahora me fue mejor, bacán
+- [25:18] estoy mejorando, y después cuando ya veis que
+- [25:20] no sé, tres o cuatro veces, la verdad
+- [25:22] te va bien, y tenés la fórmula
+- [25:24] para que te vaya bien, y no te genera
+- [25:26] ansiedad, no te genera estrés
+- [25:27] después va a ser otra cosa, ¿cachai?
+- [25:30] va a ser otra cosa que te va a generar ese miedo
+- [25:32] y
+- [25:33] si no lo enfrentáis, no, carajo
+- [25:36] imagínate cuando yo estaba con esa crisis de ansiedad
+- [25:38] y yo no podía salir del gaso
+- [25:40] que era, pensaba que
+- [25:42] hacer caca en todos lados. En serio, yo tenía que viajar dos horas y media y me subía a la micro con
+- [25:50] la ansiedad así de tres. Me voy a hacer, me voy a hacer, me voy a hacer. ¿Dónde hay un baño? ¿Dónde
+- [25:54] hay? Ah, si me dan ganas. ¿En qué baño? Bueno, pensaba en todo. ¿Por dónde iba? Miraba buscando
+- [25:58] baños. Acá se decía, ya, si me dan ganas, me entro aquí. Cacha vos, güey. Bueno, imagínense,
+- [26:07] así estaba yo. Y después, imagínense que después cuando ya empezamos a salir de vacaciones con las
+- [26:13] familia, por tema de economía mejor, viajamos para acá, para Serena, y para Serena son
+- [26:19] seis horas. Y yo dije, con chiste madre, ¿y dónde pasa el baño y esto? Así. Después
+- [26:25] de poco se me fui acostumbrando y dije, weón, ya, weón, si me hago, me hago caca y me hago,
+- [26:30] me hago nomás, weón. Si te ponía a pensar, sí, sí, así, listo, ya, filo, me hice.
+- [26:39] Iba a hacer una anécdota, todos estaban a ganar de la risa, pero ya.
+- [26:43] yo no podía ir ni a la playa
+- [26:45] no podía ir
+- [26:46] porque
+- [26:47] no comía nada
+- [26:49] si me como algo me voy a ir por el baño
+- [26:52] no
+- [26:53] la mente
+- [26:56] es muy fuerte
+- [26:58] pero uno
+- [27:01] tiene que aceptar nomás las cosas
+- [27:02] pero si ya no
+- [27:05] es como es
+- [27:07] si te dan
+- [27:10] ya bienvenido
+- [27:11] ¿Cómo lo superamos?
+- [27:15] Obviamente, pero igual, temas de terapia,
+- [27:18] mi hermana fue a mucha terapia
+- [27:20] también cuando la dieron.
+- [27:22] Claro, y son cositas
+- [27:24] que a lo mejor fueron de muchos años
+- [27:26] atrás, y que ahora
+- [27:28] florecen, porque uno ya es más viejo.
+- [27:31] Entonces,
+- [27:34] uno no las
+- [27:36] sabe controlar, pero
+- [27:37] después llega un momento que si
+- [27:39] logras vivir con ello
+- [27:41] así que
+- [27:48] eso gordito
+- [27:49] vamos a hacer tres
+- [27:50] vamos a hacer tres
+- [27:52] oye puta
+- [27:57] para no estresarte
+- [27:59] voy a agendar para esta semana
+- [28:06] yo creo a final de la semana
+- [28:08] el viernes voy a hablar con el
+- [28:09] de Esteban
+- [28:10] ya
+- [28:11] porque tratamos de avanzar
+- [28:14] estos días
+- [28:15] lo del RP, por no ser que tenemos
+- [28:17] pendiente
+- [28:19] podría hacerte un seguimiento de los folios
+- [28:21] con la gente
+- [28:23] ya, por lento
+- [28:43] ya
+- [29:08] si, estoy subiendo aquí
+- [29:23] potas
+- [29:37] ahí, si veo
+- [29:48] o te escuché
+- [30:08] te escuché
+- [30:08] te escuché super mal
+- [30:12] no sé si eso está ahí contando al día
+- [30:19] o no
+- [30:20] ya, perfecto
+- [30:50] buenísimo
+- [30:50] también podría ser
+- [31:31] oye, me acuerdo del tema del
+- [31:33] había un punto que hablamos
+- [31:35] era el de
+- [31:39] las compras, ¿te acuerdas que era
+- [31:41] ah, la cartola
+- [31:43] esta es la cartola para pago, ¿no?
+- [31:46] o la nómina, no, la nómina
+- [31:47] era la nómina
+- [31:48] ¿cuál era la nómina en el menú nómina?
+- [31:53] aquí
+- [31:53] te acuerdas que
+- [31:56] querían que por ejemplo la nómina
+- [31:57] para pago
+- [31:59] claro, pero ahí por ejemplo, recuérdate
+- [32:06] que era por ejemplo la nómina
+- [32:08] iba a listar todos los documentos por pagar
+- [32:11] ¿cierto?
+- [32:13] según la semana
+- [32:14] ¿sí? entonces
+- [32:16] claro, ¿cachai? entonces ahí hay que
+- [32:21] hacer que por ejemplo cuando pueda
+- [32:23] ver el detalle
+- [32:23] ver un detalle de todos los documentos que tiene por
+- [32:27] pagar ¿cierto?
+- [32:28] Entonces, el por pagar, ahí en ese detalle, ella puede editar la semana del documento. ¿Me explico? Sí, no a nivel contable. Por ejemplo, entonces, el pesca, en realidad los documentos van a tener la fecha de pago según la fecha de vencimiento, ¿cierto?
+- [32:56] ¿Cierto? Esa va a ser la fecha de vencimiento, pero que hay una nómina, ¿vos?
+- [33:01] Acuérdate que esa nómina, a ver cómo te explico, la nómina es pues semanal, ¿cierto?
+- [33:10] Entonces, no sé, la semana 1, ahí por ejemplo puede ser que esa nómina puede ser, así lo vería yo.
+- [33:16] Tú estás trabajando ahora arriba en el periodo de agosto, ¿cierto?
+- [33:19] Y agosto tiene 4 semanas, 5 semanas, ¿cierto?
+- [33:22] Entonces aquí deberíamos tener la nómina S1 de la semana 1, nómina S2, que sea el totalizado de lo que va a pagar, ¿cierto? Entonces tienen que ser cuatro semanas, ¿ya? Entonces ahí siempre van a haber cuatro registros como máximo, ¿ya?
+- [33:55] y que a lo mejor podéis trabajar
+- [33:58] con las que están pendientes
+- [33:59] de pagar
+- [34:01] y también poder filtrar
+- [34:04] las pagadas
+- [34:05] ya
+- [34:07] entonces, claro
+- [34:15] no, pero de momento
+- [34:17] filtranlos todos, yo digo que deberían
+- [34:19] filtrarlos todos inicialmente para que ellos vean
+- [34:21] y después les preguntamos
+- [34:22] o si se puede como configurar que ellos trabajen
+- [34:25] claro
+- [34:29] ya, entonces
+- [34:33] por ejemplo yo en esa nómina
+- [34:37] si la pincho, la primera
+- [34:39] la idea es que me levante
+- [34:42] un detalle de todos los documentos
+- [34:44] que están por pagar
+- [34:45] entonces esa grilla de documentos
+- [34:49] tiene que tener un buscador
+- [34:51] para poder yo
+- [34:53] buscar por ejemplo, no sé, por folio
+- [34:55] por el proveedor
+- [34:57] ¿cachai?
+- [35:07] claro, una grilla
+- [35:08] con el listado completo de los documentos
+- [35:12] que voy a pagar de esa nómina
+- [35:13] y poder filtrar, ¿Cierto? Por documento.
+- [35:25] Por documento. Entonces, por ejemplo, si dentro de la nómina de semana uno
+- [35:30] tiene 20 documentos, pero de los cuales 20 documentos, de esos 20,
+- [35:36] dos tienen que moverlo a la semana dos, ¿Me explico? O a la semana tres de agosto.
+- [35:40] ¿Cachai? Entonces ahí, en esa grilla, en ese listado, el usuario puede decir,
+- [35:46] ya, esta factura
+- [35:47] la voy a mover para
+- [35:49] nómina de semana 3.
+- [35:51] ¿Me explico?
+- [35:57] No, no sé
+- [35:58] si he marcado, no sé si he marcado,
+- [36:00] pero sí que se movió.
+- [36:04] ¿Cierto? Ah, ya.
+- [36:13] O sea, si lo podía agregar, mejor.
+- [36:17] ¿Cierto?
+- [36:18] ¿Pero se entendió la idea?
+- [36:21] Ya. Pero es que el de pagos
+- [36:39] iba a ir asociado al root, ¿cierto?
+- [36:43] Entonces,
+- [36:44] claro, en cierto modo,
+- [36:45] Por ejemplo, yo puedo tener 20 facturas de un proveedor, ¿cierto?
+- [36:50] Que las pagué durante todo agosto, en la semana 1, 2, 3, 4, 5, ¿cierto?
+- [36:56] Entonces ahí, solamente en pago debería haber las facturas que le he pagado a ese buen poco, ¿cachai?
+- [37:08] ¿Me explico?
+- [37:08] Entonces, por ejemplo, si tienen 5 facturas y 2 de la primera semana,
+- [37:13] una de la semana 2
+- [37:16] otra de la semana 3, otra de la semana 4
+- [37:18] ahí tenéis las 5, ¿cierto?
+- [37:20] pero si yo voy a pago en la semana 3
+- [37:22] filtro por ese proveedor
+- [37:26] pagada, va a tener 2 o 3
+- [37:28] facturas, ¿caché?
+- [37:39] claro
+- [37:40] no, está bien ahí
+- [37:42] está bien ahí dentro de esa
+- [37:45] sartilla, bueno, me parece bien
+- [37:47] lo que sí
+- [37:49] es cuando tú filtres
+- [37:50] apliques un filtro, sería bueno que te diga
+- [37:53] cuál es el filtro, ¿cachai?
+- [37:55] Me voy a poner el filtro por, no sé, por pago
+- [37:57] o no sé en qué podría ir el estado.
+- [38:08] Ya, filtro, aplicar, dale aplicar.
+- [38:12] Pero cierra entonces
+- [38:13] la columna, ahí cierra.
+- [38:16] Ah, te limpia el filtro.
+- [38:18] O sea, oculta el filtro, perdón.
+- [38:22] ¿Cachai? Que yo no sé
+- [38:23] ahí qué estoy filtrando.
+- [38:27] ¿No cachai?
+- [38:29] Claro, si es un filtro
+- [38:30] compuesto, que te diga todos los filtros que tienes.
+- [38:33] yo a la puta si pudiera
+- [38:45] avanzar con eso y tío, genial
+- [38:47] ya
+- [39:02] lo otro Carlos
+- [39:03] para que te ordenes tú también
+- [39:06] y no te planifiquen
+- [39:08] mejor
+- [39:08] para que te planifiquen mejor
+- [39:11] trabajemos con el Trello
+- [39:13] ahora durante el día
+- [39:15] un día de mañana trata de hacer una limpieza
+- [39:18] porque por ejemplo en desarrollo
+- [39:19] tenéis caleta de tarjeta
+- [39:21] hay algunas tarjetas que están rechazadas
+- [39:24] por parte de Almagüe
+- [39:25] entonces
+- [39:27] la idea es que esas las puedas
+- [39:34] limpia
+- [39:35] el tablero y deja bien
+- [39:37] claro, por ejemplo, trabaja siempre
+- [39:39] con una o máximo dos tarjetas
+- [39:41] que están en curso, que están en desarrollo
+- [39:43] todas las otras muévelas como
+- [39:45] pendiente
+- [39:46] y las que están
+- [39:49] rechazadas hay que retomarlas
+- [39:51] y no sé, pues si ya están listas
+- [39:53] volver a pasárselas a la gente de Almagüe
+- [39:56] para que, y en el grupo
+- [39:58] tú andas mencionándole,
+- [39:59] hace la limpieza
+- [40:01] y le decís, estimado, tengo todas estas
+- [40:04] tarjetas en la columna de por revisar
+- [40:05] de Almagüe, por favor su
+- [40:08] feedback, ¿cachai? Y es la única forma
+- [40:10] porque si no, vamos a depender
+- [40:12] todas las semanas de la reunión, ¿cachai?
+- [40:15] Entonces,
+- [40:18] exacto.
+- [40:21] ¿Ya?
+- [40:23] Así, a lo mejor
+- [40:24] va a llegar un momento que ni siquiera
+- [40:26] tengamos que tener la reunión,
+- [40:28] ¿no?
+- [40:29] O sea, las vamos a tener, pero va a ir en unos puntos específicos.
+- [40:33] No va a ser todo el flujo completo.
+- [40:37] ¿Ya?
+- [40:40] Ya buscamos.
+- [40:41] Avísame ahí cómo te va.
+- [40:43] Y si es necesario nos juntamos.
+- [40:45] ¿Te parece?
+- [40:47] ¿Ya?
+- [40:48] Que te vaya excelente.
+- [40:51] Vale, hablamos. Cuídate, que estés bien.
+- [40:53] Chau, chau.

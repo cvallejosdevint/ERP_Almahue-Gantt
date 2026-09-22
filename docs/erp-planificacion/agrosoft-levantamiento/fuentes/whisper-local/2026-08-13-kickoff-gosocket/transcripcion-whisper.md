@@ -1,0 +1,496 @@
+# Kickoff GoSocket 2026-08-13 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-13 123318.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:08] María, lo dejo como obligatorio, ¿cierto? Sí. Ahí envía la actualización.
+- [00:22] Bien, vamos a ver. María, consulta, ¿aún no han podido avanzar con el tema del contrato?
+- [00:53] La verdad es que Cristian no nos ha respondido nada sobre el contrato. Yo ya le mandé la
+- [00:57] la consulta
+- [00:59] y le pregunté por la factura
+- [01:01] que tenía buena diferencia, que me la aclaró
+- [01:03] y le pregunté por el contrato
+- [01:05] pero no me ha respondido nada
+- [01:06] yo le había dejado el aviso pero igual voy a tener
+- [01:09] que presionarlo más
+- [01:11] o sea, en el caso de que ustedes quieran
+- [01:13] salir en agosto con Iofactur
+- [01:16] que sería lo ideal, pero
+- [01:17] si, o sea, nosotros no tenemos ningún problema
+- [01:19] en que nos manden el contrato firme
+- [01:21] y ya está todo aprobado por parte de gerencia
+- [01:23] ya
+- [01:24] vamos a ver
+- [01:27] lo que sí vamos a tener un poco de desfase
+- [01:32] es la carga de documentos porque
+- [01:34] nos están haciendo bastante difícil
+- [01:36] por el lado de aceptar la entrega de información
+- [01:38] Sí, lo que comentábamos
+- [01:41] esta semana también
+- [01:43] sí, suele pasar
+- [01:45] es normal que pase eso, la verdad
+- [01:47] pero mira, no te preocupes
+- [01:49] de gran manera por eso porque igual
+- [01:51] podemos avanzar
+- [01:53] con lo demás mientras
+- [01:55] y la carga la podemos hacer finalizando ya
+- [01:57] el proceso de implementación
+- [01:59] Bien
+- [01:59] Bien
+- [02:01] ¿Y cuántos documentos son?
+- [02:06] Una vez tú me comentaste
+- [02:07] Yo creo que por el lado de Almagüe
+- [02:10] No son tantos porque alcanzamos a estar
+- [02:12] Un año con ellos, debiesen ser
+- [02:14] Alrededor de unos mil, mil doscientos
+- [02:16] Ah, no, son muchos
+- [02:18] Para descargarlos del servicio
+- [02:20] Sí, no hay por el lado
+- [02:21] Lo que pasa es que por el lado del servicio
+- [02:23] Por tener acepto no nos queda
+- [02:26] El respaldo en el servicio
+- [02:27] No, no, ahí claro
+- [02:33] Tienen que solicitarlo
+- [02:34] Sí, de hecho, nosotros perdimos el historial de Almagüe por lo mismo, porque hicimos el cambio a acepta y no nos confirmaron que había quedado bien cargado a la base. Y una vez que hicimos el cambio y aceptamos todo, nos dijeron como que teníamos problemas y perdimos el historial completo.
+- [02:52] ¡Oh, qué mal!
+- [02:53] Sí. Menos mal teníamos todo impreso.
+- [02:56] o sea, igual se puede descargar
+- [03:00] del servicio esa información pero
+- [03:02] es más complejo
+- [03:04] por siendo tantos documentos es una tarea
+- [03:06] bastante compleja
+- [03:08] porque más encima
+- [03:10] igual me
+- [03:12] interesaría saber la forma porque
+- [03:14] por el lado del
+- [03:16] mago igual dimos perdido el
+- [03:18] historial y yo prefiero recuperarlo
+- [03:20] sí, lo que pasa es que el servicio
+- [03:22] te deja descargar de 20 documentos máximo
+- [03:24] entonces
+- [03:26] se puede descargar el archivo de respaldo
+- [03:28] pero es una tarea estar
+- [03:30] 20x20, es una tarea
+- [03:32] enorme, mira si gustas podemos
+- [03:34] verlo en otra reunión
+- [03:35] bien, podemos verlo en otra reunión
+- [03:38] para ver si es que hay alguna posibilidad
+- [03:40] de hacer algo y yo te apoyo, bien, yo te apoyo
+- [03:42] con el
+- [03:43] en la misma llamada, bien
+- [03:46] bueno, ahí le mandé la consulta
+- [03:50] a Cristian para que nos dé información del contrato
+- [03:53] bien, yo actualmente estoy
+- [03:54] trabajando aún en las representaciones gráficas
+- [03:57] Pero es algo que finalmente se puede hacer bastante rápido. Entonces, una vez que me informen que el contrato ya está firmado, les aviso para que podamos habilitar y yo facturo.
+- [04:09] Y bueno, respecto al tema de la implementación por API, ¿tienen algún avance, alguna duda respecto a la integración?
+- [04:24] Ahí te dejo con los expertos, Carlos y Sergio.
+- [04:26] No hay problema, no hay problema. Pablo, mira, estábamos revisando y sí, con la documentación que nos entregaron hemos podido adelantar harto trabajo. Ya tenemos aproximadamente la estructura de cómo vamos a enviarle la información mediante la app y cómo la estamos armando. Lo que sí tenía la duda es si es que por esto del contrato todavía no tenemos las credenciales para generar en el ambiente adecuado, ¿verdad?
+- [04:49] Sí, eso mismo le iba a comentar. No, para Cuba no es necesario el contrato. Yo ahora voy a ya crear el ambiente para que ustedes puedan, en este caso, ya emitir los documentos. Así que saliendo de la reunión, les mando las credenciales y para que ustedes se puedan conectar.
+- [05:05] Ahora, necesito que uno de los testers lo ideal es que sepa manejar también el portal
+- [05:16] Porque ahí es donde va a estar concentrada la mayor parte de los documentos
+- [05:21] Y las validaciones que van a tener que hacer van a estar en este sector
+- [05:25] Entonces, si se pueden, pueden ingresar a la empresa, más que nada
+- [05:31] Perfecto, perfecto
+- [05:34] Tendríamos que decidir
+- [05:36] Porque me imagino que es más que nada como para
+- [05:38] Mientras nosotros realizamos las gestiones desde la API
+- [05:40] Poder comprobar desde el sitio que todo quedó correcto, ¿verdad?
+- [05:43] Claro, desde el mismo sitio
+- [05:45] Perfecto
+- [05:46] Voy a asignarme a las empresas
+- [05:49] Ahí vemos con cuál vamos a trabajar
+- [05:52] Lo ideal es que sea con ambas
+- [05:53] Bien, para validar la integración de los datos
+- [05:55] Pero es súper importante que ustedes se integren también a la plataforma
+- [06:01] Porque así pueden ver in situ
+- [06:04] Cuáles son los errores que están generando los documentos
+- [06:07] En el caso de que tengan alguno
+- [06:08] Perfecto
+- [06:09] Bien, denme un segundito
+- [06:11] Me estoy asignando la empresa
+- [06:12] Y les comparto pantalla para que vayamos revisando
+- [06:15] No hay problema
+- [06:16] Voy a aprovechar de dejar grabando desde ahora
+- [06:22] Para que tengamos el respaldo del compartido de pantalla
+- [06:24] Ay, perdón
+- [06:59] Comentenme si se ve la pantalla
+- [07:30] Si se ve la pantalla
+- [07:33] Se ve
+- [07:33] ya vamos a ingresar a cualquiera de los ruts por ejemplo al mago exportaciones cpa y este
+- [07:48] del portal bien lo primero tiene que registrarse tiene que registrarse en el ambiente está mismo
+- [07:55] este mismo link les va a servir sólo voy a dejar el mismo el mismo chat solamente es ingresar una
+- [08:04] vez que ya hayan ingresado me confirman para yo poder en este caso agregarlos a la empresa bien
+- [08:11] y una vez que estén acá este es el portal de gozo que es muy simple utilizarlo acá en el inbox
+- [08:20] tenemos la gestión de los folios cierto recuerden que en cual por el tema de los folios maría como
+- [08:28] dan muy poquitos lo ideal es que los cargamos manual ya en productivos serán automáticos
+- [08:32] pero de alguna manera igual tenemos que
+- [08:35] como tenemos que trabajar acá
+- [08:37] tenemos que sí o sí tener folios
+- [08:39] entonces, en la opción de emitidos
+- [08:41] hay que tener paciencia igual con el ambiente
+- [08:47] de cuate, de menos recursos que el
+- [08:48] de productivo, bastante menos
+- [08:50] tenemos este filtro de documentos
+- [08:52] entonces ustedes una vez que emiten
+- [08:55] el documento, lo ideal es que lo emitan con
+- [08:57] la fecha del día
+- [08:58] para que no se les pierda el mismo filtro
+- [09:00] y tienen la opción acá de
+- [09:02] fecha de emisión del documento
+- [09:05] Acá solamente seleccionan últimos tres meses y la opción de buscar.
+- [09:09] Y con eso ya les va a mostrar en este caso todos los documentos que han emitido.
+- [09:13] Bien.
+- [09:14] Acá no tenemos ningún ejemplo para que lo podamos ver, pero voy a ir a otra empresa.
+- [09:22] Buscar otra empresa para que vean cómo se ven los documentos bien y dónde consultar el tipo de errores que tiene.
+- [09:29] Bien.
+- [09:30] Inbox.
+- [09:30] Vamos a emitido nuevamente.
+- [09:41] Y acá, por ejemplo, tenemos documentos que son creados desde el día.
+- [09:45] Bien.
+- [09:45] Si se fijan, primero tenemos un pequeño ícono que ya nos está indicando, nos está diciendo el estado del documento, ¿bien?
+- [09:53] Y tenemos otro que más abajo que dice rechazado, ¿bien?
+- [09:57] Yo acá les recomiendo que presionen el control y al ingresar al documento tienen que presionar el folio o cualquier sección de esta parte del documento.
+- [10:07] Por ejemplo, esta factura electrónica que está rechazada la vamos a revisar, ¿bien?
+- [10:22] Acá tenemos el detalle del documento, ¿bien?
+- [10:24] No es el XML como tal, pero es mayormente el detalle donde podemos ver los datos que estamos entregando, tanto en el detalle, la referencia del documento, la información del emisor y el receptor, ¿bien?
+- [10:39] Y en la parte de abajo, que es lo que más nos importa, tenemos las notas. Y acá es donde se ven los errores. Por ejemplo, este documento tiene un error que es rechazado por error de carátula.
+- [10:50] Cuando hay un error que ustedes no lo conocen realmente o no tienen cómo identificarlo, lo ideal es que me lo consulten, ¿bien?
+- [10:58] Pero, por ejemplo, un error de carátula generalmente se ocasiona cuando no se informa correctamente la resolución, el número de resolución y la fecha de resolución en los documentos que están emitiendo, ¿bien?
+- [11:10] Entonces, cuando vean este tipo de errores, me los pueden mandar por correo electrónico y yo les voy a responder a qué se debe y qué es lo que deben corregir, ¿bien?
+- [11:17] acá en este apartado tenemos varias cosas importantes
+- [11:21] que nos van a servir para poder avanzar con el proyecto
+- [11:25] por ejemplo, la descarga del XML
+- [11:27] el proceso de la API es que ustedes envían el request
+- [11:30] este request se transforma por medio de un XSLT
+- [11:35] de un mapeo, ¿bien?
+- [11:37] entonces acá nosotros tenemos dos opciones
+- [11:39] tenemos descargar el XML en el cual se construyó nuestro documento
+- [11:43] y en el archivo de integración tenemos el documento
+- [11:46] que ustedes enviaron sin procesar o sea en crudo bien entonces si nosotros les determinamos si es
+- [11:53] que este error se generó después del mapeo o es la información que ustedes nos enviaron al portal
+- [11:59] bien también tenemos acá la opción del pdf cierto esto es súper importante porque pueden descargar
+- [12:06] el pdf con la representación actual que está cargada y si piden un cambio por ejemplo yo
+- [12:13] cargo la representación gráfica
+- [12:15] no es necesario volver a emitir
+- [12:18] un documento, sino que puede venirse un documento
+- [12:20] antiguo y aquí en el combo box
+- [12:22] está la opción de regenerar pdf
+- [12:24] lo que hace esta opción es
+- [12:26] tomar la representación
+- [12:28] gráfica antigua, eliminarla
+- [12:30] y tomar la nueva que yo he cargado
+- [12:32] bien, entonces no es necesario siempre que
+- [12:34] hay un ajuste en la representación
+- [12:36] gráfica, no es necesario reemitir
+- [12:38] sino que simplemente regenerarlo
+- [12:39] bien, bueno y eso en mayor
+- [12:42] detalle, eso es el portal
+- [12:43] Es una herramienta bastante simple de utilizar
+- [12:46] Y con esto
+- [12:47] Es importante que ustedes puedan trabajar
+- [12:50] Con esto porque da mayor
+- [12:52] Certeza de
+- [12:53] El error que le está generando
+- [12:55] Incluso muchas veces aquí los errores de esquema
+- [12:58] Que son los más comunes
+- [12:59] Aquí informa cuál es el nodo que tiene problema
+- [13:01] Y qué es lo que está ocurriendo con ese nodo
+- [13:04] ¿Bien?
+- [13:05] ¿Alguna duda o consulta por el momento?
+- [13:09] Por mi parte no
+- [13:10] Por mi parte tampoco
+- [13:12] Yo los puedo agregar al ambiente
+- [13:14] Yo los puedo agregar al ambiente
+- [13:16] Directamente, pero es más complejo
+- [13:19] Lo que podríamos hacer es que
+- [13:21] Ustedes se enrollen
+- [13:23] Bien, tienen que hacerlo en el link
+- [13:24] Y una vez que se enrollen me avisan
+- [13:26] Y yo los agrego a todos al portal
+- [13:29] Al portal de pruebas
+- [13:30] ¿Lo hacemos de inmediato?
+- [13:36] Si gustan pueden hacerlo de inmediato
+- [13:38] No demora mucho hacerlo
+- [13:40] ¿Hay algún
+- [13:41] Límite, por ejemplo, con el dominio
+- [13:44] Con el cual nos registremos o no es necesario
+- [13:46] Que sean del mismo dominio
+- [13:47] No es necesario que sean del mismo dominio
+- [13:50] Más que nada por correo
+- [13:52] Perfecto, voy a registrarme de inmediato
+- [13:54] Si tienen algún incidente
+- [13:59] Me comentan
+- [13:59] Al menos al ingresar al link me aparece
+- [14:20] Login más no registro como tal
+- [14:23] No aparece registrarse
+- [14:27] La opción no registrarse
+- [14:29] No, aparece solamente correo y contraseña
+- [14:31] Y olvidó contraseña
+- [14:33] Vamos a validar
+- [14:35] Ese es un cambio que creo que estaban haciendo
+- [14:37] porque quieren juntar
+- [14:39] ya, ok
+- [14:41] ya, entonces
+- [14:43] vamos a ingresar al siguiente link
+- [14:45] eso significa que
+- [14:57] unificaron las bases de datos, así que vamos a ingresar
+- [15:00] al link que yo les acabo de dejar
+- [15:01] www.gosegget.net
+- [15:03] o www.gosegget.net
+- [15:05] me sale lo mismo, no me deja
+- [15:21] registrarme
+- [15:22] sí, aparece la misma página
+- [15:25] ya, quizás por algún motivo
+- [15:36] deshabilitaron momentáneamente el registro
+- [15:40] Ya, los correos electrónicos son los que con los cuales ustedes están actualmente, ¿cierto?
+- [15:45] Sí.
+- [15:45] Vamos a intentar hacer algo.
+- [15:48] Los voy a agregar directamente y les debería llegar un correo de que yo los agregué, por ende, realicen el proceso de registro.
+- [15:57] Voy primero con María.
+- [16:03] Ahí dejé en el chat mi mail que se agregó con usuario temporal aquí en la rubia.
+- [16:10] Ya, hagamos la prueba. Primero lo voy a hacer con Almagüe y voy a agregar a María y Carlos.
+- [16:15] Y Mario, por favor.
+- [16:19] Ya.
+- [16:21] Sí, amigo, te mando igual el correo por chat.
+- [16:24] Sí, sí, perfecto.
+- [17:10] ¿Puedes validar, María, si es que te dio un correo?
+- [17:15] Dependiendo de la casilla, igual puede demorar.
+- [17:17] Voy a actualizar la casilla.
+- [17:18] Aún no me ha llevado nada.
+- [17:23] Voy a agregar a Carlos.
+- [17:25] ¡Enmigo!
+- [17:26] Ya.
+- [17:27] Coméntanos qué es lo que dice, por favor.
+- [17:30] Dice, estimada María Jesús,
+- [17:32] ahora usted puede acceder desde GoSocket
+- [17:34] a los documentos tributarios electrónicos de AlmaWex
+- [17:36] por S.P.A. Sigue estos pasos
+- [17:38] para registrarse y activar su cuenta
+- [17:39] Ya, perfecto, ahí debería haber un link
+- [17:42] Sí, me arrojó un link
+- [17:46] y me mandó un correo de contraseña
+- [17:47] Sí, esos
+- [17:50] son los datos como para
+- [17:52] poder iniciar por el momento
+- [17:53] Ya. Este proceso
+- [18:01] en productivo, María
+- [18:02] lo más probable es que solamente usted
+- [18:05] tenga el acceso a agregar gente
+- [18:07] yo solamente le agrego a usted y ahí estoy
+- [18:09] administra para todas las demás personas que quiere que quiere ingresar bien bien
+- [18:14] aquí recién me llegó el mail no me deja entre a ver si si coloco entrar me manda
+- [18:44] la página principal como de volver a entrar de nuevo podemos traer una pantalla voy a
+- [18:56] compartir la pantalla ya tiene ingresar pero el link al sandbox se ve ahí
+- [19:19] y pongo ingresar con los datos que me mandaste y pongo a entrar me manda de nuestra pantalla
+- [19:35] y coloca y la opción de login ese es el ese es el producto intenta ingresar ahí arriba me aparece
+- [19:49] error y me manda la pantalla de cosas que tenemos y si ya vamos a hacer lo siguiente coloque la
+- [19:54] opción de login y vamos vamos a solicitar una olvidó su contraseña ahí maría me está comentando
+- [20:14] Cristian que les va a mandar hoy día el borrador
+- [20:16] para que lo puedan revisar
+- [20:17] buenísimo
+- [20:19] ahí va a llegar un correito para poder hacer
+- [20:31] el cambio de contraseña, antes de colocar
+- [20:33] las contraseñas lo ideal es que lo coloquemos en un
+- [20:35] notepad
+- [20:36] Carlos, ¿tú pudiste
+- [21:08] ingresar o aún no?
+- [21:10] pude, me estaba pasando lo mismo
+- [21:12] y al parecer
+- [21:14] es por la
+- [21:16] url, me fijé que estaba
+- [21:18] entrando en la que viene en el correo que no
+- [21:20] me funcionaba, pero la que está
+- [21:22] en el chat que es Sandbox 2
+- [21:24] esa me funcionó
+- [21:25] ¿esa te funcionó?
+- [21:27] sí, esa me funcionó, la que viene en el mismo correo
+- [21:29] no me funcionó
+- [21:34] ya, sí
+- [21:36] puede ser un tema de bloqueo
+- [21:39] pero ahora haciendo el cambio
+- [21:41] de contraseña debería poder ingresar
+- [21:42] debería poder ingresar sin problema
+- [21:44] creo que ahí pudiste entrar
+- [21:53] María
+- [21:54] yo lo estoy agregando
+- [22:04] mira, si te fijas arriba
+- [22:06] Ahí, coloca aceptar
+- [22:09] Cierra todo
+- [22:09] Arriba tienes el nombre de la empresa
+- [22:15] Almagüe Export S.P.A
+- [22:16] Ya
+- [22:18] Ahí están las dos empresas
+- [22:20] Me falta agregar a Carlos
+- [22:25] A la otra empresa
+- [22:28] Cuando yo te agregue
+- [22:29] Carlos, tienes que reiniciar sesión
+- [22:32] Vale
+- [22:32] Yo también estoy, solo aguanto con Almagüe
+- [22:38] También logro entrar
+- [22:39] Ahí están agregados los tres
+- [23:11] Mario y Carlos, por favor ahí
+- [23:14] Reinicien
+- [23:15] La sesión, cerrar sesión del mismo botón
+- [23:18] Donde aparece su nombre, dice cerrar sesión
+- [23:20] Y volver a ingresar
+- [23:22] Y aquí les voy a explicar
+- [23:24] Lo más importante que es el cómo obtener
+- [23:27] Las Happy Keys
+- [23:28] Las Happy Keys de QA
+- [23:30] Ahí dicenme cuándo pueden ingresar
+- [23:55] Ahí pude ingresar
+- [23:58] Y ahora salen las dos
+- [24:00] Ya
+- [24:02] Vamos a hacerlo con el Mago Export
+- [24:05] Bien, lo va a hacer María ya que está compartiendo. Ahí María, selecciona tu nombre y dice configuraciones. Bien, vamos a ingresar en configuraciones. Ya, aquí es muy importante, María, en la opción de certificados, ingresa a esa opción, por favor.
+- [24:29] Acá tienen que cargar el certificado digital del representante legal
+- [24:35] O de la persona que va a firmar los documentos
+- [24:37] Ya
+- [24:38] Bien, aquí se tiene que hacer un match
+- [24:40] El certificado que esté agregado acá
+- [24:42] También tiene que estar como usuario en el servicio de impuestos internos
+- [24:45] Con el permiso de firma
+- [24:46] Bien
+- [24:47] Sin eso, el servicio nos va a indicar
+- [24:49] De que el usuario no tiene permisos para emitir
+- [24:51] Bien
+- [24:52] Bien
+- [24:53] Eso es por parte tuya
+- [24:55] Y lo otro, la opción de API Keys
+- [24:56] ¿Con falta, Pablo?
+- [24:58] ¿Sí?
+- [24:58] ¿Te acuerdas que en la reunión pasada vimos el tema de anular los folios emitidos en modo PRO?
+- [25:05] Sí.
+- [25:06] Ya, yo te comentaba que la idea era que el MAWI-LM quedara con el representante legal Nico.
+- [25:14] Pero a mí me dejó eliminar los folios con el certificado digital de Don Pablo, que es el otro representante legal.
+- [25:21] ¿Eso se puede modificar en el servicio?
+- [25:23] Sí, pero creo que se demora muchísimo.
+- [25:26] lo que pasa es que el certificado digital del representante legal nosotros lo necesitamos
+- [25:35] solamente para modificar la información de la empresa por ejemplo la casilla de intercambio
+- [25:41] que es información crítica para el negocio bien pero esto principalmente este certificado no es
+- [25:47] necesario el del representante legal puede ser el tuyo por ejemplo pero que tenga permisos de
+- [25:53] firman el servicio, puede ser cualquier otro
+- [25:55] certificado, más que nada
+- [25:57] tiene que ser el certificado de un usuario firmante
+- [25:59] ya
+- [26:01] bueno y respecto
+- [26:03] me acuerdo que
+- [26:05] enviamos las casillas de
+- [26:07] de usuario con el de Nico
+- [26:09] así que creo que él puede firmar con los dos
+- [26:11] sí
+- [26:12] igual de todas formas
+- [26:14] el certificado digital del representante legal
+- [26:17] es
+- [26:18] no precisamente tiene los permisos de firma
+- [26:21] Ojo con eso, puede que no los tenga también
+- [26:23] O sea, tiene que ahí ingresar en el apartado
+- [26:25] De usuarios y ver que él esté
+- [26:27] Yo por lo que recuerdo, lo que vimos
+- [26:29] Si estaban, así que no deberían tener problemas
+- [26:31] Para firmar, así que
+- [26:33] Antes de que Carlos emita documentos
+- [26:36] Hacia el portal de pruebas
+- [26:37] El certificado ya tiene que estar cargado
+- [26:39] Porque si no, nos van a salir como rechazados
+- [26:41] ¿Bien?
+- [26:42] Bien
+- [26:42] Eso por parte tuya
+- [26:46] ¿Bien? Por parte de los chicos
+- [26:48] De Carlos
+- [26:48] en la opción vea la opción que dice a piquis por favor perfecto aquí estoy ahora en donde dice
+- [27:02] agregar a piqui presiona luego maría para que lo veamos solamente es colocar básica autentication
+- [27:11] y confirmar con eso ya van a tener a piquis para cuba tienen límite de 10 10 a piquis utilizables
+- [27:20] Para que puedan, en este caso, hacer uso
+- [27:22] Para el productivo
+- [27:23] Ya es necesario avisarnos
+- [27:26] Porque ya en el productivo se entrega por lo generalmente
+- [27:28] Una, y se las entrego yo
+- [27:30] Bien, así que ya con eso
+- [27:32] Pueden, en este caso
+- [27:34] Hacer la emisión de los documentos
+- [27:36] Bien, ahora
+- [27:38] María, necesitamos
+- [27:40] Cargar los
+- [27:42] CAF, para eso vamos a ir a la opción
+- [27:44] Que dice Inbox a la izquierda
+- [27:46] Y vamos a ir a la opción
+- [27:52] Que dice Gestión de Folios
+- [27:54] ya, acá en el servicio
+- [28:04] impuesto interno, en la opción de
+- [28:06] de QA, cierto
+- [28:08] está la opción de solicitar folios
+- [28:10] es muy sencillo
+- [28:13] solicita los folios
+- [28:14] y te van a entregar un archivo CAF
+- [28:16] tú lo arrastras a este
+- [28:18] lugar o elegir archivo
+- [28:20] y con eso le das a cargar
+- [28:22] y eso es todo, con eso ya se cargan los folios
+- [28:25] para que puedan operar
+- [28:26] son las mismas cosas que hicimos
+- [28:28] para eliminar los folios solicitados, cierto
+- [28:30] Sí, donde tú estabas en la opción de eliminar los folios
+- [28:34] Dos más arriba dice
+- [28:35] Solicitar folio
+- [28:36] Y lo puedes cargar en este
+- [28:39] Apartado, si en algún momento
+- [28:41] Carlos, el API
+- [28:43] Te entrega como mensaje de error
+- [28:45] De que no existe el rango de
+- [28:47] Folio o el rango de números
+- [28:49] Es porque le falta folio
+- [28:51] Y lo tienes que ver con María para que te cargue nuevos folios
+- [28:53] Perfecto
+- [28:58] Bien, así que, bueno, eso más que nada
+- [29:00] El tema de
+- [29:02] yo facturo María, eso sí, la carga de folias
+- [29:05] es en otra parte, así que eso
+- [29:07] en su momento lo veremos ya
+- [29:09] entre los dos
+- [29:10] bien, así que bueno, ¿tienen alguna
+- [29:14] duda, consulta hasta el momento?
+- [29:17] por mi parte no
+- [29:18] no, hasta el momento no
+- [29:20] es bastante simple
+- [29:21] intuitivo ocupar el portal
+- [29:24] bien, así que si necesitan
+- [29:26] probar cosas en el portal
+- [29:28] ahí están a libertad de hacer
+- [29:30] lo que gusten con él, ¿bien?
+- [29:32] así que bueno
+- [29:34] eso más que nada
+- [29:35] me comentó Cristian como te decía
+- [29:38] María, que ya les van a enviar el borrador
+- [29:40] me va a copiar a mí, así que yo también voy a estar
+- [29:42] al tanto de eso, y una vez que ya
+- [29:44] tengamos firmado eso, podemos ver
+- [29:46] el tema de Iofactura entre los dos
+- [29:48] ya, buenísimo
+- [29:50] así que eso, eso chicos
+- [29:52] por el momento, ¿hay algún otro punto que tengan que
+- [29:54] revisar? ¿algo más
+- [29:56] adicional? de momento
+- [29:58] no, lo que sí Pablo, no habría problema
+- [30:00] En caso de cualquier cosita, mandarte un correito
+- [30:02] Para dudas, ¿verdad?
+- [30:04] No, no hay problema, de hecho si me quieren hablar
+- [30:06] Por Teams, también lo pueden hacer
+- [30:08] Así lo vemos mucho más rápido el tema
+- [30:10] Perfecto, perfecto
+- [30:13] Bien
+- [30:13] Así que bueno, eso chicos, por el momento
+- [30:16] Estamos en contacto
+- [30:18] Cualquier cosita ahí me pueden contactar
+- [30:20] Y bueno, ojalá les vaya bien con las pruebas también
+- [30:23] Perfecto, Pablo, muchas gracias
+- [30:25] En caso de cualquier cosita estaríamos en contacto
+- [30:28] Sí, no hay problema
+- [30:29] ahí voy a estar atento
+- [30:30] gracias Pablo
+- [30:32] un gusto, que estén muy bien
+- [30:35] hasta luego
+- [30:37] que estén muy bien

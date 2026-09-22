@@ -1,0 +1,183 @@
+# Interna GoSocket Carlos/Sergio 2026-08-05 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-05 120048.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:03] Ahí sí, ahí se ve, sí, ahora sí.
+- [00:06] Yo lo que digo, por ejemplo, esta es el back ERP, y este sería API facturación electrónica, que esta acá sería el GoSocket.
+- [00:26] Entonces, ¿cuál es mi idea? Por ejemplo, desde el front se va al back, ¿cierto?
+- [00:33] Claro.
+- [00:34] Y este one va a tener aquí BD.
+- [00:38] Claro.
+- [00:39] Lo primero que va a hacer es registrar la petición
+- [00:45] Exacto
+- [00:45] Y luego de esto
+- [00:48] Este one le va a devolver
+- [00:49] Y este back se va a encargar de llamar a la APFE
+- [00:53] ¿Cierto?
+- [00:54] Con el JSON
+- [00:55] Y con el nombre del
+- [00:59] Facturador
+- [01:00] Para decirle cual va a tirar
+- [01:01] Que en este caso sería GoSocket
+- [01:03] JSON y
+- [01:05] ¿Ya?
+- [01:08] Vale
+- [01:08] y acá a este weón le voy a
+- [01:11] aumentar el xml
+- [01:13] ¿cierto? exacto
+- [01:15] entonces este weón
+- [01:17] va a devolver y debería
+- [01:19] ser como la respuesta
+- [01:21] de esta petición
+- [01:22] que también actualiza la base de datos
+- [01:25] ¿cachai? y aquí
+- [01:27] después que actualiza la base de datos
+- [01:29] tiene la última respuesta ¿cierto?
+- [01:32] ¿me entendí?
+- [01:33] si, si, ahí te entendí mejor
+- [01:34] este igual, este tiene que manejar
+- [01:38] Acá un lock
+- [01:39] Un lock del servicio
+- [01:41] Del API
+- [01:42] Nada más que eso, un lock
+- [01:45] Para ver qué es lo que llegó
+- [01:47] Y monitoreo
+- [01:48] Pero en sí, este
+- [01:51] No se conecta a base de datos, nada
+- [01:53] Vale, en ese caso Sergio
+- [01:55] ¿Esa API
+- [01:57] Viviría igual dentro del MAC del ERP?
+- [01:59] ¿O tendríamos que dejarlo en un proyecto aparte?
+- [02:04] No, este es un proyecto aparte
+- [02:06] Vale
+- [02:06] Un servicio totalmente aparte
+- [02:09] Vale, entonces
+- [02:10] Si serían
+- [02:11] A nivel de lo que vendría a ser
+- [02:15] Almahue, sería
+- [02:16] Desde el front pasa al back
+- [02:18] Ahí serían los dos proyectos propios
+- [02:21] De Almahue, del back registra
+- [02:23] La BD que también sería parte de Almahue
+- [02:25] Y ahí pasaría a este proyecto que me imagino
+- [02:27] Que también va a servir para los demás RP
+- [02:28] Conectarse a él como
+- [02:30] Un proyecto intermedio entre GoSocket y los RP
+- [02:33] ¿Verdad?
+- [02:35] Exacto
+- [02:35] Este one tiene que tener a Pique
+- [02:38] un sistema de seguridad porque va a tener interacción con otros sistemas que van a
+- [02:45] consultar claro entonces cuál es mi idea que después esto se convierta así no sé
+- [02:51] el futuro va a haber otro bueno pero bueno aquí va a ser sí esa es la idea ya no hoy día mira
+- [03:05] como ya con el tema de lo que vendría a ser
+- [03:07] Almahue, prácticamente al fin y al cabo
+- [03:09] el feedback, bueno apliqué
+- [03:11] el de la reunión pasada, faltaría ya
+- [03:13] después el de la marcha blanca que tendríamos
+- [03:15] que tener con ello, así que voy a hacer
+- [03:17] la conexión, voy a hacer este
+- [03:19] proyecto de la API, hacer la conexión
+- [03:21] con el bug de RP y empezar a hacer pruebas
+- [03:23] ya
+- [03:25] aparte mañana tenemos la REU
+- [03:27] hay que ver
+- [03:29] porque mañana tenían también la reunión con
+- [03:31] GoSocket
+- [03:31] ¿Ellos?
+- [03:33] Sí, no sé si te cachaste en la reunión
+- [03:35] Que estaban coordinando para este jueves
+- [03:37] La reunión con María
+- [03:39] El Pablo
+- [03:40] Bueno, mañana yo tengo
+- [03:50] Reunión de 9 y media a 10 con
+- [03:51] Almahue, pero Almahue Market
+- [03:53] Con la PP
+- [03:55] Y Carlos, mañana te puse una reunión
+- [03:58] A las 10
+- [03:59] Eso estaba viendo, sí
+- [04:00] Necesitamos de tu ayuda
+- [04:03] Cuénteme, ¿quién necesita?
+- [04:05] Lo que pasa es que llegó un cliente BND, el primero
+- [04:07] y hay que hacerle
+- [04:11] una capacitación
+- [04:12] ¿de qué?
+- [04:14] del portal de BND
+- [04:15] entonces, puto, el José
+- [04:18] el Diego se fue de vacaciones
+- [04:20] entonces está hasta la recacha con
+- [04:22] Pegas, de Demite y
+- [04:24] de Almagüez la presentación
+- [04:26] mañana, entonces está
+- [04:28] re complicado para hacer la demo mañana
+- [04:30] entonces a ver si me podía apoyar con eso
+- [04:32] porque yo después de esa reunión
+- [04:34] a las 10 tengo otra
+- [04:35] la de Almagüez
+- [04:37] Sí, sí, de hecho, mira, en ese caso voy a ahora terminar rapidiño al MAUE, que quedó bien, y en la tarde, por último día, no tengo nada que hacer en la tarde, me pongo ahí a su conversa con el José, que me dé su pequeña orientación, de hecho ahora le voy a empezar a hablar, a ver si es que hay algo que me tenga que enterar más nuevo del proyecto que no haya visto, y en la tarde empezar a ver, revisar, y mañana, en la capacitación es lo más fácil del mundo, Sergio,
+- [05:05] voy grabando igual, dejo todo grabado
+- [05:08] y en caso de que se me olvide algo lo agendamos
+- [05:10] para una segunda reunión, pues si no, no hay nada
+- [05:12] ya, bacán, genial
+- [05:14] el cliente es medio
+- [05:16] re hueveado
+- [05:17] es informático el loco y dice
+- [05:19] yo soy informático, yo sé todo lo que usted hace
+- [05:22] así que no le prestemos
+- [05:24] mucha oreja
+- [05:25] presentemos
+- [05:28] esto si funciona
+- [05:29] como tiene que conectar y eso
+- [05:31] pero igual háblale a José porque José me dijo que iba
+- [05:33] contigo, o sea, tenía que hablar yo contigo
+- [05:37] primero, después de eso
+- [05:39] que tú háblale nomás y para que coordinen
+- [05:41] que se haga como, que es lo que se tiene
+- [05:43] que mostrar y eso. Ya, sí, no
+- [05:45] no hay ningún problema
+- [05:46] Ya, vale. Oye, Carlos, entonces
+- [05:48] trata de solucionar el tema de la base
+- [05:50] bueno, el tema del diseño
+- [05:53] de las cotizaciones, la orden de compra
+- [05:54] está bueno, lo que ahora
+- [05:57] después que hay que trabajar es el tema
+- [05:58] del balance. Vale
+- [06:00] Parece que la María Jesús ya te mandó eso
+- [06:03] Sí, creo que acá lo tengo en el Trello
+- [06:04] Ya, entonces
+- [06:07] Eso hay que también avanzarlo
+- [06:09] ¿Ya?
+- [06:11] Mira, me borraste el historial de navegación
+- [06:13] ¿Qué?
+- [06:16] Me borró el historial de navegación
+- [06:18] No tengo Trello, como que nunca
+- [06:20] Nunca he visto el Trello, Sergio, nunca he trabajado
+- [06:23] Oye, a través
+- [06:27] Hablé con Mario ayer, que es Mario Villo
+- [06:29] Que es como el líder del proyecto
+- [06:31] Ajá
+- [06:32] Y él ayer volvió de vacaciones, así que se juntó con María Jesús para ver el avance del proyecto y la loca dijo, no, que ya va, súper, súper bien.
+- [06:43] Buena, bacán, bacán, bacán, bacán, bacán.
+- [06:46] Así que hay que seguir ese mismo ritmo. Yo le dije, ¿sabés qué, Mario? Aquí a la quincena de septiembre ya nosotros ya vamos a tener todo listo, todo terminado, con todo y todo.
+- [06:55] Sí.
+- [06:55] y en octubre la idea es que vamos a estar ahí por allá para qué para hacer el cierre del proyecto
+- [07:04] estos locos donde están en rancaba rancaba rango algo así se llama vale así que yo creo que voy a
+- [07:12] coordinar y ahí te vas a buscar y no nos vamos a llamar al cliente llevo palet llevo palet que
+- [07:20] dan harta fruta nomás.
+- [07:21] Ah, más. Yo, billetera,
+- [07:24] ¿no? Pensar en los proyectos.
+- [07:27] Eso, eso.
+- [07:29] Sí, o...
+- [07:30] Ya, ya, Carlos.
+- [07:32] Ya, viejito.
+- [07:33] Avísame, por favor, cómo te va con el tema de la base de datos.
+- [07:35] Vale. Bueno, de mañana. Bueno, ah.
+- [07:38] Habla con María Jesús.
+- [07:40] Dile que si puedes agendar
+- [07:41] para mañana, pero en la
+- [07:44] tarde, güey. Vale.
+- [07:46] Ya, por último,
+- [07:47] tíralo como a veces a ver mi calendario
+- [07:49] ¿Qué es lo que está?

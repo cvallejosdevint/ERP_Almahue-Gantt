@@ -1,0 +1,635 @@
+{
+  "stamp": "2026-09-10",
+  "base": "http://127.0.0.1:5174",
+  "pass": 27,
+  "fail": 0,
+  "results": [
+    {
+      "id": "VEN-LOGIN",
+      "result": "PASS",
+      "evidence": "Login OK → http://127.0.0.1:5174/"
+    },
+    {
+      "id": "VEN-EMPRESA",
+      "result": "PASS",
+      "evidence": "Selector empresa (hint EXPORT)"
+    },
+    {
+      "id": "VEN-CLI-LIST",
+      "result": "PASS",
+      "evidence": "Filtros=true",
+      "extra": {
+        "inputs": [
+          {
+            "type": "text",
+            "aria": "Buscar",
+            "placeholder": "Buscar…",
+            "name": ""
+          }
+        ],
+        "filterSelects": [
+          {
+            "label": "Estado",
+            "options": [
+              " · Todos",
+              "true · Activo",
+              "false · Inactivo"
+            ]
+          },
+          {
+            "label": "Por página515Todos",
+            "options": [
+              "5 · 5",
+              "15 · 15",
+              "all · Todos"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "VEN-CLI-FORM",
+      "result": "PASS",
+      "evidence": "Alta cliente: 17 inputs",
+      "extra": {
+        "inputs": [
+          {
+            "type": "text",
+            "aria": "Buscar",
+            "placeholder": "Buscar…",
+            "name": ""
+          },
+          {
+            "type": "number",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "number",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Razón social…",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Correo…",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Vendedor…",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "76.543.210-K",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "email",
+            "aria": "",
+            "placeholder": "facturacion@cliente.cl",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Jorge Sánchez",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Calle y número",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Comuna SII",
+            "name": ""
+          },
+          {
+            "type": "text",
+            "aria": "",
+            "placeholder": "Ciudad",
+            "name": ""
+          },
+          {
+            "type": "checkbox",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          },
+          {
+            "type": "checkbox",
+            "aria": "",
+            "placeholder": "",
+            "name": ""
+          }
+        ],
+        "labels": [
+          "Admin Almahue",
+          "ALMAHUE EXPORT SPA",
+          "Buscar",
+          "Estado",
+          "Línea crédito desde",
+          "Línea crédito hasta",
+          "Razón social",
+          "Correo",
+          "Vendedor",
+          "RUT",
+          "Por página515Todos",
+          "RUT",
+          "Razón social",
+          "Línea de crédito",
+          "Correo (envío de documentos)",
+          "Casilla a la que se enviará la factura al emitirla. Sin servidor de correo configurado, el envío queda deshabilitado.",
+          "Vendedor",
+          "Dirección fiscal",
+          "Comuna",
+          "Ciudad",
+          "Productor (fruta)",
+          "Activo",
+          "Activo",
+          "Activo"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-LIST",
+      "result": "PASS",
+      "evidence": "Filtros=true",
+      "extra": {
+        "buttons": [
+          "Borradores 3",
+          "Nueva orden",
+          "Filtros"
+        ],
+        "filterSelects": [
+          {
+            "label": "Estado",
+            "options": [
+              " · Todos",
+              "BORRADOR · Borrador",
+              "CONFIRMADA · Confirmada",
+              "EMITIDO · Emitida",
+              "ANULADO · Anulada"
+            ]
+          }
+        ],
+        "estados": [
+          " · Todos",
+          "BORRADOR · Borrador",
+          "CONFIRMADA · Confirmada",
+          "EMITIDO · Emitida",
+          "ANULADO · Anulada"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-ROWS",
+      "result": "PASS",
+      "evidence": "Filas listado: 2"
+    },
+    {
+      "id": "VEN-OV-INPUTS-NAC",
+      "result": "PASS",
+      "evidence": "Indicador opciones: VENTA · Venta | SERVICIO · Servicio | EXENTO · Exento | EXPORTACION · Exportación",
+      "extra": {
+        "selects": [
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "CREDITO",
+                "label": "Crédito"
+              },
+              {
+                "value": "CONTADO",
+                "label": "Contado"
+              },
+              {
+                "value": "TRANSFERENCIA",
+                "label": "Transferencia"
+              }
+            ]
+          },
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "VENTA",
+                "label": "Venta"
+              },
+              {
+                "value": "SERVICIO",
+                "label": "Servicio"
+              },
+              {
+                "value": "EXENTO",
+                "label": "Exento"
+              },
+              {
+                "value": "EXPORTACION",
+                "label": "Exportación"
+              }
+            ]
+          }
+        ],
+        "formaPago": [
+          "CREDITO · Crédito",
+          "CONTADO · Contado",
+          "TRANSFERENCIA · Transferencia"
+        ],
+        "combos": [
+          {
+            "aria": "Buscar cliente…"
+          }
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-PANEL-VENTA",
+      "result": "PASS",
+      "evidence": "Panel visible=true extraExport=false",
+      "extra": {
+        "visible": true,
+        "text": "Subtotal\n$0\nDescuento global (%)\nDescuento\n-$0\nMonto neto\n$0\nExento\n$0\nIVA\n$0\nTotal\n$0",
+        "extraVisible": false,
+        "extraText": "",
+        "totalUsd": "Total"
+      }
+    },
+    {
+      "id": "VEN-OV-PANEL-EXPORT-ALTA",
+      "result": "PASS",
+      "evidence": "Panel exportación USD + COMEX en alta",
+      "extra": {
+        "visible": true,
+        "text": "Subtotal USD\n$0.00\nDescuento global (%)\nDescuento\n-$0.00\nMonto neto USD\n$0.00\nExento USD\n$0.00\nIVA\n$0.00\nTotal USD\n$0.00",
+        "extraVisible": true,
+        "extraText": "EXPORTACIÓN / OTRA MONEDA\nMoneda transacción\n13 · USD\nCajas\n1\nTipo de cambio\n—\nTotal CLP\n$0\nExento CLP\n$0\nPaís receptor\n225 · Estados Unidos\nPaís destino\n225 · Estados Unidos\nCláusula\n5 · FOB\nVía\n1 · Marítima\nModalidad\n9 · Consignación libre\nPuerto embarque\n—\nPuerto desembarque\n—\nTipo bulto\n22 · Caja de cartón",
+        "totalUsd": "Total USD"
+      }
+    },
+    {
+      "id": "VEN-OV-COMEX-STEP2",
+      "result": "PASS",
+      "evidence": "cliente=true COMEX visible=true"
+    },
+    {
+      "id": "VEN-OV-PAISES",
+      "result": "PASS",
+      "evidence": "Opciones país: 225 · Estados Unidos | 336 · China | 563 · Países Bajos | 826 · Reino Unido | 276 · Alemania | 250 · Francia | 380 · Italia | 392 · Japón | 124 · Canadá | 076 · Brasil",
+      "extra": {
+        "paises": [
+          "225 · Estados Unidos",
+          "336 · China",
+          "563 · Países Bajos",
+          "826 · Reino Unido",
+          "276 · Alemania",
+          "250 · Francia",
+          "380 · Italia",
+          "392 · Japón",
+          "124 · Canadá",
+          "076 · Brasil"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-VIAS",
+      "result": "PASS",
+      "evidence": "1 · Marítima | 4 · Aérea",
+      "extra": {
+        "vias": [
+          "1 · Marítima",
+          "4 · Aérea"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-CLAUSULAS",
+      "result": "PASS",
+      "evidence": "5 · FOB | 1 · CIF",
+      "extra": {
+        "clausulas": [
+          "5 · FOB",
+          "1 · CIF"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-MONEDAS",
+      "result": "PASS",
+      "evidence": "13 · USD",
+      "extra": {
+        "monedas": [
+          "13 · USD"
+        ]
+      }
+    },
+    {
+      "id": "VEN-OV-PANEL-EXPORT-STEP2",
+      "result": "PASS",
+      "evidence": "EXPORTACIÓN / OTRA MONEDA\nMoneda transacción\n13 · USD\nCajas\n1\nTipo de cambio\n—\nTotal CLP\n$0\nExento CLP\n$0\nPaís receptor\n225 · Estados Unidos\nPaís destino\n225 · Estados Unidos\nCláusula\n5 · FOB\nVía\n1 · Marítima\nModalidad\n9 · Consignación libre\nPuerto embarque\n—\nPuerto desembarque\n—\nTipo bulto\n22 · Caj",
+      "extra": {
+        "visible": true,
+        "text": "Subtotal USD\n$0.00\nDescuento global (%)\nDescuento\n-$0.00\nMonto neto USD\n$0.00\nExento USD\n$0.00\nIVA\n$0.00\nTotal USD\n$0.00",
+        "extraVisible": true,
+        "extraText": "EXPORTACIÓN / OTRA MONEDA\nMoneda transacción\n13 · USD\nCajas\n1\nTipo de cambio\n—\nTotal CLP\n$0\nExento CLP\n$0\nPaís receptor\n225 · Estados Unidos\nPaís destino\n225 · Estados Unidos\nCláusula\n5 · FOB\nVía\n1 · Marítima\nModalidad\n9 · Consignación libre\nPuerto embarque\n—\nPuerto desembarque\n—\nTipo bulto\n22 · Caja de cartón",
+        "totalUsd": "Total USD"
+      }
+    },
+    {
+      "id": "VEN-OV-BORRADORES-MODAL",
+      "result": "PASS",
+      "evidence": "Modal abierto"
+    },
+    {
+      "id": "VEN-OV-PANEL-BORRADOR",
+      "result": "PASS",
+      "evidence": "indicador=VENTA extra=true",
+      "extra": {
+        "visible": true,
+        "text": "Subtotal USD\n$9,690,000.00\nDescuento global (%)\nDescuento\n-$0.00\nMonto neto USD\n$9,690,000.00\nExento USD\n$9,690,000.00\nIVA\n$0.00\nTotal USD\n$9,690,000.00",
+        "extraVisible": true,
+        "extraText": "EXPORTACIÓN / OTRA MONEDA\nMoneda transacción\n13 · USD\nCajas\n321\nTipo de cambio\n—\nTotal CLP\n$0\nExento CLP\n$0\nPaís receptor\n225 · Estados Unidos\nPaís destino\n225 · Estados Unidos\nCláusula\n5 · FOB\nVía\n1 · Marítima\nModalidad\n9 · Consignación libre\nPuerto embarque\n—\nPuerto desembarque\n—\nTipo bulto\n22 · Caja de cartón",
+        "totalUsd": "Total USD"
+      }
+    },
+    {
+      "id": "VEN-EMITIR-PICKER",
+      "result": "PASS",
+      "evidence": "Tipos sin OV: Nota de crédito | Nota de débito | Guía de despacho",
+      "extra": {
+        "buttons": [
+          "Administración",
+          "Parametrización",
+          "Contratistas",
+          "Ventas",
+          "OPERACIÓN",
+          "LIBROS",
+          "MAESTROS",
+          "Compras",
+          "Insumos / Bodega",
+          "Contabilidad",
+          "Tesorería",
+          "Cerrar sesión",
+          "MODO DEMO",
+          "2026-09 Septiembre",
+          "ALMAHUE EXPORT SPA",
+          "2",
+          "A Admin Almahue Administrador",
+          "Borradores 3",
+          "Nota de crédito",
+          "Nota de débito",
+          "Guía de despacho",
+          "Ir a Órdenes de venta",
+          "Actualizar"
+        ],
+        "inputs": [
+          {
+            "type": "text",
+            "aria": "Buscar orden de venta",
+            "placeholder": "Folio, cliente o RUT…",
+            "name": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "VEN-EMITIR-NC",
+      "result": "PASS",
+      "evidence": "Tipos SII origen: ,33,34,52,56,61,110,111,112",
+      "extra": {
+        "selects": [
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "CREDITO",
+                "label": "Crédito"
+              },
+              {
+                "value": "CONTADO",
+                "label": "Contado"
+              },
+              {
+                "value": "TRANSFERENCIA",
+                "label": "Transferencia"
+              }
+            ]
+          },
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "",
+                "label": "Seleccionar…"
+              },
+              {
+                "value": "33",
+                "label": "33"
+              },
+              {
+                "value": "34",
+                "label": "34"
+              },
+              {
+                "value": "52",
+                "label": "52"
+              },
+              {
+                "value": "56",
+                "label": "56"
+              },
+              {
+                "value": "61",
+                "label": "61"
+              },
+              {
+                "value": "110",
+                "label": "110"
+              },
+              {
+                "value": "111",
+                "label": "111"
+              },
+              {
+                "value": "112",
+                "label": "112"
+              }
+            ]
+          },
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "1",
+                "label": "1 · Anula el documento de referencia"
+              },
+              {
+                "value": "2",
+                "label": "2 · Corrige texto"
+              },
+              {
+                "value": "3",
+                "label": "3 · Corrige montos"
+              }
+            ]
+          },
+          {
+            "label": "",
+            "options": [
+              {
+                "value": "VENTA",
+                "label": "Venta"
+              },
+              {
+                "value": "SERVICIO",
+                "label": "Servicio"
+              },
+              {
+                "value": "EXENTO",
+                "label": "Exento"
+              },
+              {
+                "value": "EXPORTACION",
+                "label": "Exportación"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "VEN-EMITIR-ND",
+      "result": "PASS",
+      "evidence": "http://127.0.0.1:5174/comercial/emitir?tipo=ND"
+    },
+    {
+      "id": "VEN-EMITIR-GUIA",
+      "result": "PASS",
+      "evidence": "http://127.0.0.1:5174/comercial/emitir?tipo=GUIA"
+    },
+    {
+      "id": "VEN-LIBRO-FILTROS",
+      "result": "PASS",
+      "evidence": "110=true 101=false OV=false",
+      "extra": {
+        "filterSelects": [
+          {
+            "label": "Tipo de documento",
+            "options": [
+              " · Todos",
+              "39 · 39 · Boleta afecta",
+              "41 · 41 · Boleta exenta",
+              "33 · 33 · Factura afecta",
+              "34 · 34 · Factura exenta",
+              "56 · 56 · Nota de débito",
+              "61 · 61 · Nota de crédito",
+              "52 · 52 · Guía de despacho",
+              "110 · 110 · Factura exportación",
+              "111 · 111 · Nota de débito exportación",
+              "112 · 112 · Nota de crédito exportación"
+            ]
+          },
+          {
+            "label": "Estado",
+            "options": [
+              " · Todos",
+              "EMITIDO · Por contabilizar",
+              "CONTABILIZADA · Contabilizada"
+            ]
+          }
+        ],
+        "buttons": [
+          "Administración",
+          "Parametrización",
+          "Contratistas",
+          "Ventas",
+          "OPERACIÓN",
+          "LIBROS",
+          "MAESTROS",
+          "Compras",
+          "Insumos / Bodega",
+          "Contabilidad",
+          "Tesorería",
+          "Cerrar sesión",
+          "MODO DEMO",
+          "2026-09 Septiembre",
+          "ALMAHUE EXPORT SPA",
+          "2",
+          "A Admin Almahue Administrador",
+          "Carga",
+          "RESUMEN POR TIPO DE DOCUMENTO 0 docs · Total $0",
+          "Filtros",
+          "Aplicar",
+          "CSV",
+          "Excel",
+          "Columnas"
+        ]
+      }
+    },
+    {
+      "id": "VEN-LIBRO-SIN-101",
+      "result": "PASS",
+      "evidence": "Sin 101"
+    },
+    {
+      "id": "VEN-LIBRO-SIN-OV",
+      "result": "PASS",
+      "evidence": "Libro sin tipo OV"
+    },
+    {
+      "id": "VEN-LIBRO-110",
+      "result": "PASS",
+      "evidence": "Filtro incluye 110 factura exportación"
+    },
+    {
+      "id": "VEN-GUIAS",
+      "result": "PASS",
+      "evidence": "Libro de guías",
+      "extra": {
+        "buttons": [
+          "Emitir guía",
+          "Filtros"
+        ]
+      }
+    },
+    {
+      "id": "VEN-SIN-COTIZ",
+      "result": "PASS",
+      "evidence": "Redirect http://127.0.0.1:5174/compras/ordenes"
+    }
+  ]
+}

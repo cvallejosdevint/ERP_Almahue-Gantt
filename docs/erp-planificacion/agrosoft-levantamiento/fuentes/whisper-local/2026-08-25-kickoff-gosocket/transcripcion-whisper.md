@@ -1,0 +1,236 @@
+# Kickoff GoSocket 2026-08-25 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-08-25 122402.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:38] Acceso a GoSocket, que sabes que no, me deja entrar con las líneas anteriores.
+- [00:43] Ya. Es el... Hola.
+- [00:48] Buenas tardes, Carlos, ¿cómo estás? Todo bien, todo bien.
+- [00:56] Y ahí está oficina... Hay dos certificados cargados en Almahuexport.
+- [01:02] Sí.
+- [01:04] Y... Service.
+- [01:11] Y en ALM solo uno.
+- [01:16] Ya, ¿creería que están correctos? Tienen que validar igual que el owner de cada certificado esté como firmante en el servicio.
+- [01:33] Sí, creería que está todo correcto.
+- [01:50] ¿Sí?
+- [01:51] Nicolás Andrés Villela Larraín.
+- [01:57] Sí, él es de ALM.
+- [02:00] Ya. Sí, sí, está todo correcto. Veo todo correcto.
+- [02:20] Consulta, Paula, ¿dónde puedo revisar si están como firmante en el servicio?
+- [02:23] En la pantalla de usuarios, pero de Cuba. Si gustas, me muestras pantalla y te guío para que vayamos a verlo.
+- [02:35] Ya. ¿Ahí te está viendo?
+- [02:52] Sí.
+- [02:54] Ya, Gama Mexica es un certificado de técnico.
+- [02:57] Sí, servicio online, factura electrónica, sistema de facturación de mercado, menú postulantes, ambiente de certificación.
+- [03:14] y vamos a bajar a la que dice
+- [03:17] actualización de datos de empresa
+- [03:19] autorizada
+- [03:20] ahí está la mantención de usuarios
+- [03:34] ¿me acaba de decir algo?
+- [03:42] sí
+- [03:42] tienen que estar
+- [03:45] el firmante de ustedes
+- [03:47] en CUA
+- [03:49] también tiene que estar Janet Lara
+- [03:51] que es la segunda
+- [03:52] el primero que es
+- [03:55] Leury, también un usuario nuestro
+- [03:57] Él no actúa como firmante
+- [03:59] Pero en el caso que necesitemos
+- [04:01] Hacer alguna certificación
+- [04:04] O algo por el estilo
+- [04:04] Él es nuestro certificador
+- [04:07] Entonces, ideal
+- [04:09] Que en ambas empresas esté Janet y Nicolás
+- [04:12] Creo que lo habíamos dejado
+- [04:13] Sí, lo habíamos dejado
+- [04:15] Pero mi duda era con
+- [04:18] Con Almagüe, con el certificado de Don Pablo
+- [04:20] Porque yo quería que fuera Nico
+- [04:22] Pero por lo que vi
+- [04:23] Don Pablo nomás está autorizado para solicitar folios
+- [04:27] ya ya hay que tener ojo igual porque nicolás no tiene los permisos que está solamente con
+- [04:35] administrador pero no tiene los permisos para solicitar anular nada tienes que darle los
+- [04:40] permisos que quiera todos y con eso ya va a poder hacer todo lo que tenemos en mente
+- [04:53] ¿qué más?
+- [04:58] yo creo que con eso ya podríamos
+- [05:00] intentar hacer una prueba de consumo
+- [05:02] a la API, no sé si
+- [05:03] Carlos ya puede
+- [05:05] intentar hacerlo
+- [05:06] igual, más que nada
+- [05:27] lo que queremos probar es que se le asigne
+- [05:30] en folio, es lo principal
+- [05:31] independiente que esté o no bien el documento
+- [05:34] eso ya ustedes lo van
+- [05:35] configurando más adelante
+- [05:38] pero lo importante es eso
+- [05:40] que tengamos primero la confirmación de que el gestor está entregando folio revise la
+- [06:07] mantención de usuarios de almagüe y no me aparecen los que habían configurado como
+- [06:16] como perdón que estoy revisando la mantención de usuarios de almagüe pero almagüe exportó
+- [06:25] servicio al mago export en el servicio impuesto interno ya no me apetece lo que
+- [06:34] hemos configurado muestra mi pantalla nuevamente voy
+- [07:01] nos falta
+- [07:06] porque nosotros habíamos hecho con el certificado de nico
+- [07:08] Igual, ahí María
+- [07:50] igual no tiene
+- [07:53] importancia con qué certificado se realice
+- [07:55] o sea, lo importante es tener el acceso
+- [07:57] simplemente
+- [07:57] Mira, por ejemplo acá
+- [08:00] ingresé con el
+- [08:03] certificado digital de Nicolás
+- [08:04] y con el de Nicolás
+- [08:06] me aparece en la mantención de usuario
+- [08:08] autorizado, que me aparece
+- [08:10] ¿Estás viendo export?
+- [08:13] En Almagüe export
+- [08:14] Sí
+- [08:15] Nos falta en service
+- [08:18] No, en ALM estaba
+- [08:20] Fue el primero que vimos
+- [08:22] ¿Estás 100% segura?
+- [08:27] Revisemos el otro
+- [08:28] Ya, pero mira
+- [08:30] En este, en Almagüe, yo no tengo
+- [08:32] Nicolás, ¿lo agrego?
+- [08:34] Sí, sí, tienes que agregarlo
+- [08:36] Igual, es que por eso te comento
+- [08:38] el certificado que esté cargado en el portal de gozo que puede ser cualquier certificado incluso
+- [08:45] el tuyo por ejemplo puedes cargar el folio pero tienes que tener los permisos ya no se
+- [08:52] voy a hacerlo con la del nico sí sí yo lo que te recomiendo es que si las dos empresas están
+- [09:00] unidas por decirlo así no es un holding no trabajes solamente con un usuario cosa de
+- [09:06] que en el futuro si es que no tengan que estar revisando el certificado digital de cada empresa
+- [09:11] de cierta forma centralizar en un solo usuario firmante si te entiendo ya voy a
+- [09:20] Mira, ¿no ves? Acá está el LMService.
+- [09:30] Y en el LMService tenemos a
+- [09:32] Lauri y a
+- [09:34] Janeth.
+- [09:39] Ya, perfecto. Sí, ya con eso estaríamos
+- [09:41] listos.
+- [09:45] Ya, volví.
+- [10:46] Sí, ahí no te quedaste callado.
+- [10:48] Carlos nos va a compartir
+- [10:54] por teléfono, ¿cierto?
+- [10:56] Sí, sí. Buenas tardes a todos.
+- [11:54] Hola Sergio
+- [11:58] Bienvenido, ¿ustedes cómo están?
+- [12:03] ¿Todo bien por acá?
+- [12:05] Qué bueno
+- [12:06] Oye, sorry, estuve
+- [12:07] en otra reunión, no quería escapar
+- [12:10] Una consulta, van a hacer pruebas
+- [12:12] de emisión de integrado, ¿no?
+- [12:17] Perfecto, los folios
+- [12:19] realmente de prueba ya fueron cargados
+- [12:21] Sí
+- [12:23] Ok
+- [12:25] Esto fue export o service?
+- [13:30] Export
+- [13:31] consulta a Carlos, ustedes agregaron ya el
+- [13:51] BillerID, ¿cierto?
+- [14:11] no, tengo un documento
+- [14:13] ¿puedes mostrarme
+- [14:16] el request? o sea, perdón
+- [14:18] el response de la API, porfis, porque
+- [14:20] ahí llega el Global Document ID
+- [14:22] lo necesito para hacer esa búsqueda
+- [14:25] sí, sí
+- [14:42] de hecho, no veo que se haya
+- [14:51] consumido un
+- [14:53] folio, igual no te preocupes, mira
+- [15:39] lo ideal, primero, es
+- [15:43] validar el request
+- [15:45] o sea, perdón, el response
+- [15:47] ¿por qué? porque si te entrega
+- [15:49] global document ID positivo
+- [15:51] o sea, cualquier global document ID
+- [15:53] que no sea el 0000-000
+- [15:56] significa que tú tienes un documento válido
+- [15:59] independiente que esté rechazado o no
+- [16:00] entonces, si tú envías
+- [16:03] recibes un 200
+- [16:05] con problema de esquema
+- [16:06] no te va a asignar folios
+- [16:08] pero
+- [16:09] si te entrega un global document ID 000
+- [16:12] cero es porque tienes
+- [16:14] un problema de esquema, ¿bien? esto lo dejo
+- [16:16] claro porque la API
+- [16:17] por lo general no rechaza
+- [16:19] no es común que la API rechace
+- [16:22] documentos, salvo unos pequeños casos
+- [16:24] que son de lectura del
+- [16:26] documento, ¿bien? porque no existe
+- [16:28] en este caso la estructura de que pueda leerlo
+- [16:30] la API, en eso te lo puede rechazar
+- [16:32] y cuando hay falta de folios
+- [16:34] entonces
+- [16:36] si tú recibes Global Document ID
+- [16:38] ya sabemos que
+- [16:39] el portal no está entregando folios
+- [16:52] Claro, sí, sí, sí, sí. Ahí lo ideal es que emitan el documento e independiente de que salga o no, bien, el response, lo ideal es que me lo manden por correo para yo poder validar qué es lo que pasó, si es que hay algún flujo que no se está generando.
+- [17:32] Habíamos quedado en que íbamos a hacer todo este proceso en Almago Export, pero finalmente con María habilitamos los dos ambientes, así que cualquiera de los dos está disponible para que lo pueda hacer.
+- [17:43] Yo les pasé la API Key de Almahue Service
+- [17:46] Por correo también
+- [17:48] Se los pasé hoy en la mañana
+- [17:49] Ya, ahí para que hagan el switch en el caso de que quieran
+- [17:52] Probar también Service
+- [17:53] Consulta, lo que pasa es que vimos el correo
+- [17:59] De
+- [17:59] Del archivo que se juntó en el
+- [18:03] En la primera carga de folio
+- [18:05] Y es
+- [18:07] ALM Service o Almahue Export
+- [18:09] Para que no se confundan
+- [18:11] Yo lo, o sea
+- [18:14] Yo pensé que los dos se llamaban Almahue
+- [18:17] yo la diferenciaba con
+- [18:19] export y service
+- [18:20] no, es ALM service
+- [18:23] y Almahue export
+- [18:24] por eso, yo lo trataba
+- [18:27] así como service y export
+- [18:28] porque igual finalmente las dos son Almahue
+- [18:31] entonces yo la
+- [18:33] intento diferenciar de esa manera
+- [18:35] así que bueno, quedaría solamente
+- [18:37] eso, igual Carlos si necesitas algún
+- [18:39] apoyo o algo, también me puedes escribir
+- [18:41] por Teams, ahí también
+- [18:43] nos podemos comunicar
+- [18:45] perfecto
+- [19:01] Bien, entonces, bueno, quedo a la espera. Bien, y cualquier duda o consulta, ahí voy a estar atento a cualquier cosita.
+- [19:09] Pablo, consulta, una vez que nosotros firmamos el contrato, ¿te adjuntamos en la confirmación?
+- [19:17] Solamente necesito que me avise María, puede ser por el tiempo. Ya firmamos contrato, porque eso, lo que pasa es que Cristian lo toma y lo agrega a nuestro administrador de proyecto.
+- [19:28] Entonces, si yo veo en el administrador que ya está cargado y está con el doble check de la firma, yo ya puedo hacer el paso productivo. Es solamente que me avise y yo reviso si es que el estado ya está como firmado.
+- [19:42] Ya, buenísimo.
+- [19:43] Bien, y bueno, respecto a
+- [19:46] videofacturo
+- [19:46] podríamos hacer la habilitación
+- [19:50] yo creo que
+- [19:52] en una semana menos, bien
+- [19:54] para que ustedes lo puedan probar
+- [19:56] así que ahí nos quedaría pendiente
+- [19:58] una red, María
+- [20:00] para igual comentarle acerca de esto
+- [20:02] Ya, buenísimo
+- [20:05] No recuerdo, hicimos
+- [20:06] capacitación, ¿o no?
+- [20:08] No, no hemos hecho capacitación
+- [20:10] No, ya, perfecto, pero igual
+- [20:12] de todas formas el aplicativo es súper amigable
+- [20:15] y es súper intuitivo
+- [20:16] es muy parecido al
+- [20:18] al portal gratuito, al servicio impuesto interno
+- [20:21] entonces tampoco
+- [20:22] yo creo que más que una capacitación
+- [20:25] va a ser como una inducción
+- [20:26] a que lo puedan ocupar
+- [20:28] buenísimo
+- [20:30] bien, así que eso
+- [20:32] eso por el momento por mi parte
+- [20:34] por mi parte igual
+- [20:38] ok

@@ -4,7 +4,8 @@
   "main": "index.js",
     "scripts": {
       "test": "node run-e2e-manual.mjs",
-      "testrim:ventas": "node run-e2e-ventas.mjs"
+      "testrim:ventas": "node run-e2e-ventas.mjs",
+      "testrim:cartola-nomina": "node run-e2e-cartola-nomina.mjs"
     },
   "keywords": [],
   "author": "",

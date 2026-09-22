@@ -1,0 +1,314 @@
+﻿[
+    {
+        "id":  "reu5",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu5\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu5\\transcripcion-whisper.md",
+        "title":  "Reu5 2026-08-03 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion5-2026-08-03.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1ngQEINfyiHPVu5nDZFt8Zsasgh65sob9",
+        "driveOldId":  "119rdMx8D9Ffdgc8lFAGKqpp37gmFZZoO"
+    },
+    {
+        "id":  "2026-08-19",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-19-demo-interno\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-19-demo-interno\\transcripcion-whisper.md",
+        "title":  "Demo interno Carlos/Sergio 2026-08-19 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-19 162555.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1gZSKcB0KbSL8WqoHKSncjv0doF2J5vu8",
+        "driveOldId":  "1fsjs8lgDFwYCrOBXP7BywPMnaCi31f8r"
+    },
+    {
+        "id":  "2026-08-05-gosocket",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-05-gosocket-interna\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-05-gosocket-interna\\transcripcion-whisper.md",
+        "title":  "Interna GoSocket Carlos/Sergio 2026-08-05 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-05 120048.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1hNVPuBh0Sus28YzE2KCOMBr8KpbkVpuB",
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-09-14-tesoreria",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-tesoreria\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-tesoreria\\transcripcion-whisper.md",
+        "title":  "Interna tesoreria cartolas Carlos/Sergio 2026-09-14 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion-2026-09-14-interna-tesoreria-carlos-sergio.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-14-interna-tesoreria.md"
+                   ],
+        "driveParent":  null,
+        "driveOldId":  null
+    },
+    {
+        "id":  "sergio-2026-09-10",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\sergio-2026-09-10\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\sergio-2026-09-10\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio 2026-09-10 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-09-10 102149.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-10-interna-carlos-sergio.md"
+                   ],
+        "driveParent":  "1llT43AOQYLNDNFso1VtuFoD7DusIgq8z",
+        "driveOldId":  "1VQR-YoBUJJNZmx9mhnD00oVZq4DV7hBF"
+    },
+    {
+        "id":  "2026-09-01-trello",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\sergio-2026-09-01\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\sergio-2026-09-01\\transcripcion-whisper.md",
+        "title":  "Interna Trello cartola Carlos/Sergio 2026-09-01 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-09-01 132744.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1AHxWmJshoHsCN6sBG4FeNa-Hz7fUL6xh",
+        "driveOldId":  "1cgvHYTFDN4HyCRgDro6HCE3ozvvKg1E1"
+    },
+    {
+        "id":  "2026-08-20-manana",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-20-manana\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-20-manana\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio manana 2026-08-20 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-20 105836.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1_NFQMYrTNhBsvpZHTgrSQTWM9aR58iG2",
+        "driveOldId":  "19WH1zy7pVWkOA2hQ4CpF1B09dLgNz9yM"
+    },
+    {
+        "id":  "2026-09-03",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-03-interna\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-03-interna\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio 2026-09-03 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-09-03 110956.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1Ek8-flw-8mngWjcdDO5b0Vel46HzoB6A",
+        "driveOldId":  "1_G_3FbxzNlnKGeB0m65xK34-bNueD-8B"
+    },
+    {
+        "id":  "2026-08-04-gosocket",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-04-gosocket\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-04-gosocket\\transcripcion-whisper.md",
+        "title":  "GoSocket con MJ 2026-08-04 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-04 123705.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1kNU8nqt3yMRo8WLpOYPUFznaPufMuer1",
+        "driveOldId":  null
+    },
+    {
+        "id":  "reu3",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu3\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu3\\transcripcion-whisper.md",
+        "title":  "Reu3 2026-07-28 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion3-2026-07-28.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1G2e1pzqAk7Q0LxfPtMqajKQdzjPfCYDJ",
+        "driveOldId":  "1TohdPw_LnhPO80k0TQgMhvc7-rrKO3T9"
+    },
+    {
+        "id":  "2026-09-07",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-07-interna\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-07-interna\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio 2026-09-07 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\Screen Recording 2026-09-07 162654.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1xaYS2NrTVsawjJX5FANZfdf4ZtaTI8yC",
+        "driveOldId":  "1U1nIoUjnDstb9DuNM_sMQtTZIhQ2zu9z"
+    },
+    {
+        "id":  "2026-08-20-tarde",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-20-tarde\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-20-tarde\\transcripcion-whisper.md",
+        "title":  "Cliente Lupe y Mario 2026-08-20 tarde (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-20 174935.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1IQzJ3rA_B24_VA0hJIpOPj07azZV5Yyt",
+        "driveOldId":  "1CpXaaqaLZMBvmKmSAzJ4Qwyw-qWLDLFf"
+    },
+    {
+        "id":  "2026-09-14-manana",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-manana\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-manana\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio manana 2026-09-14 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion-2026-09-14-interna-manana-carlos-sergio.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-14-interna-manana.md"
+                   ],
+        "driveParent":  null,
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-09-14-mediodia",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-mediodia\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-interna-mediodia\\transcripcion-whisper.md",
+        "title":  "Interna Carlos/Sergio mediodia 2026-09-14 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion-2026-09-14-interna-mediodia-carlos-sergio.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-14-interna-mediodia.md"
+                   ],
+        "driveParent":  null,
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-08-13-kickoff",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-13-kickoff-gosocket\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-13-kickoff-gosocket\\transcripcion-whisper.md",
+        "title":  "Kickoff GoSocket 2026-08-13 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-13 123318.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1qwcK999JrJSJIqXyY8IvrvUJZ_vAg79n",
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-08-25-erp",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-25-erp-interna\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-25-erp-interna\\transcripcion-whisper.md",
+        "title":  "Interna ERP Carlos/Sergio 2026-08-25 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-25 112308.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1xoD2PPSOH_Xk_GcC4gFTLLdJxeZEUwsn",
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-08-25-kickoff",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-25-kickoff-gosocket\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-25-kickoff-gosocket\\transcripcion-whisper.md",
+        "title":  "Kickoff GoSocket 2026-08-25 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-25 122402.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1jBQgIUIvZUl-TmBZKMjQBIkj-p5LASfj",
+        "driveOldId":  null
+    },
+    {
+        "id":  "reu6",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu6\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu6\\transcripcion-whisper.md",
+        "title":  "Reu6 2026-08-06 MJ y Agustin (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-06 170730.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1xRzs8i5yttetyyYd0EZqX0hKq0Vg8fqh",
+        "driveOldId":  "1pUhBr02NSAVhRamhIZAzD8WQ9vWCxLaW"
+    },
+    {
+        "id":  "demo-2026-09-10",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\demo-2026-09-10\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\demo-2026-09-10\\transcripcion-whisper.md",
+        "title":  "Demo cliente avances 2026-09-10 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion-2026-09-10-demo-cliente.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-10-demo-cliente.md"
+                   ],
+        "driveParent":  "15ny579CdVB2-WZDZwqTz-Y2pXH2EAH5A",
+        "driveOldId":  "1c-ijfpRu9do_4Uwlfpi--4ewgs-Ob14p"
+    },
+    {
+        "id":  "2026-08-27-tesoreria-ui",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-27-tesoreria-ui\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-08-27-tesoreria-ui\\transcripcion-whisper.md",
+        "title":  "Interna tesoreria UI Carlos/Sergio 2026-08-27 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-08-27 172119.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1QQz2Sisz71uWCVbpD0I5fHa07KKnSTI-",
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-09-08-seguimiento",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-08-seguimiento-gosocket\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-08-seguimiento-gosocket\\transcripcion-whisper.md",
+        "title":  "Seguimiento GoSocket 2026-09-08 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-09-08 123129.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1795kwsTaDMN51uxO5vWarsNBcjBUD3dc",
+        "driveOldId":  null
+    },
+    {
+        "id":  "2026-09-08-recap",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-08-recap\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-08-recap\\transcripcion-whisper.md",
+        "title":  "Recap Carlos/Sergio 2026-09-08 (Whisper large-v3)",
+        "source":  "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-09-08 130041.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1Jnj0S8Cq-2ZTQ__2UuCkfSOsFzkmHxQY",
+        "driveOldId":  null
+    },
+    {
+        "id":  "reu2",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu2\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu2\\transcripcion-whisper.md",
+        "title":  "Reu2 2026-07-23 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion2-2026-07-23.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1wSj_ydbt2TlOkKeIl7FHkalomzARuezG",
+        "driveOldId":  "1IzyDFppCGtJHPH4lnp3GuTCZJedKVoDS"
+    },
+    {
+        "id":  "reu4",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu4\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu4\\transcripcion-whisper.md",
+        "title":  "Reu4 2026-07-30 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion4-2026-07-30.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1erykUjjfIiS1ue2m77JvvhJB8e0FrVDQ",
+        "driveOldId":  "18fgey_RAOKtfESS6fxJOny47TlqSEabi"
+    },
+    {
+        "id":  "2026-09-14-demo",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-demo-avances\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\2026-09-14-demo-avances\\transcripcion-whisper.md",
+        "title":  "Demo cliente avances 2026-09-14 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion-2026-09-14-demo-avances.mp4",
+        "copyTo":  [
+                       "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\transcripcion-2026-09-14-demo-avances.md"
+                   ],
+        "driveParent":  null,
+        "driveOldId":  null
+    },
+    {
+        "id":  "reu1",
+        "audio":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu1\\audio.wav",
+        "out":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\whisper-local\\reu1\\transcripcion-whisper.md",
+        "title":  "Reu1 2026-07-21 (Whisper large-v3)",
+        "source":  "E:\\source\\repos\\Almahue\\docs\\erp-planificacion\\agrosoft-levantamiento\\fuentes\\videos\\reunion1-2026-07-21.mp4",
+        "copyTo":  [
+
+                   ],
+        "driveParent":  "1dWXHflMukKNxMB_9I0tCb-siGRQDeB3k",
+        "driveOldId":  "1Xea2op_5vr8U_kgWVP11va1JdXiZfmzs"
+    }
+]

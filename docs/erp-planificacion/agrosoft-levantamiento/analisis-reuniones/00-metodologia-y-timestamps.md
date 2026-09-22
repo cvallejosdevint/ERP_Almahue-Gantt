@@ -68,3 +68,8 @@ Formato: `[T <marca cruda> ≈ <tiempo real>]`, indicando **quién** habla y si 
 | `05-agosto-19-20.md` | 19/08 demo interno, 20/08 mañana y tarde |
 | `06-tesoreria-28-08-y-gosocket.md` | 28/08 tesorería + frontera con GoSocket |
 | `07-triage-skip-blocked.md` | Los 40 SKIP + 1 BLOCKED de QA revisados contra transcripción |
+| `08-consolidado-y-plan.md` | Consolidado 03/09 (quién en sala, minutas rotas, plan) |
+| `09-acuerdos-definitivos-2026-09-10.md` | Acuerdos vigentes al **10/09** + estado código de ese corte |
+| `10-propuesta-dte-exportacion-2026-09-10.md` | Propuesta DTE exportación (10/09) |
+| `11-ciclo-vida-whisper-v3-2026-09-17.md` | **Ciclo de vida** (as-is/to-be) + acuerdos **semanales** + obsolescencia hasta el 14/09 |
+| `12-acuerdos-lunes-14-y-codigo.md` | **Lista fina 14/09**: cada acuerdo vs back y vs front |

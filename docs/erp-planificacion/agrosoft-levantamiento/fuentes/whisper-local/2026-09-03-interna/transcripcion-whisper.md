@@ -1,0 +1,647 @@
+# Interna Carlos/Sergio 2026-09-03 (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-09-03 110956.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:38] Carlos. ¿Cómo estáis Sergio? ¿Y tú? Bien, bien. Qué bueno. Vamos, vamos, a la revisión.
+- [00:50] Vamos a ver. Se ve cierto. ¿Tu vieja? Ahí está la doña. Le dieron un mes más de licencia, así que tiene que seguir yendo a Guinea.
+- [01:05] ¿Qué tiene?
+- [01:09] Le sacaron la rodilla y le pusieron
+- [01:11] Una prótesis
+- [01:13] Llevaba un mes
+- [01:17] Ahora le dieron otro mes más de reposo
+- [01:19] Está bien, sí está bien
+- [01:23] Igual me imagino que es por lo demandante
+- [01:25] Que era su trabajo igual que le dieron el mes de reposo
+- [01:27] Para que se recupere bien
+- [01:28] ¿En qué trabaja?
+- [01:31] Trabaja en la parte de cultura
+- [01:33] De la municipalidad de San Bernardo
+- [01:34] Específico en la Casa de la Cultura
+- [01:36] Y tiene que gestionar eventos
+- [01:39] Todas las cuestiones, andar viendo
+- [01:40] De repente tiene que andar caminando
+- [01:42] De la Muni para la Casa de la Cultura
+- [01:44] Después a Dideco, entonces
+- [01:46] Tiene que caminar cada letra
+- [01:48] ¿Verdad?
+- [01:50] ¿Verdad?
+- [01:54] ¿Verdad? ¿No? ¿Cierto?
+- [01:55] ¿Se ve cierto?
+- [01:57] Sí, veo
+- [01:58] Entonces, esto si te das cuenta está en lo publicado
+- [02:04] Está corriendo el local
+- [02:07] Ya, estoy bien, sigo
+- [02:14] entonces vamos a elegir un cliente
+- [02:17] aquí ya eliminé esos campos
+- [02:19] que estaban demás, de hecho la vista se ha cortado bastante
+- [02:21] queda bien bonita
+- [02:22] los indicadores, el de venta
+- [02:26] forma de pago de crédito, la fecha de la emisión
+- [02:28] fecha de vencimiento
+- [02:30] este campo yo creo que no aplica
+- [02:32] así la verdad, tengo la duda si es que va con fecha de vencimiento
+- [02:35] si, si, si
+- [02:37] la fecha de vencimiento es importante
+- [02:38] para los documentos, tanto emitidos como recibidos
+- [02:41] tiene que ir COC, cierto?
+- [02:45] no es obligatorio
+- [02:46] Pero si es importante
+- [02:48] Y yo creo que gran parte lo ocupa
+- [02:50] Vale, vale, vale, entonces lo vamos a dejar ahí
+- [02:52] Aquí tenemos la vista
+- [02:56] Para los detalles del ítem
+- [02:58] Si te das cuenta aquí ya lo dejé más comprimido
+- [03:01] Para que sea más agradable la vista
+- [03:02] Vamos a agregar
+- [03:04] Un ítem más
+- [03:05] Y este se queda
+- [03:07] Fijo para poder visualizar la info
+- [03:10] Con el descuento global
+- [03:11] El neto que también está acá y ya no aparece abajo
+- [03:14] oye
+- [03:16] porque si te das cuenta
+- [03:20] de cierto modo como que
+- [03:22] igual ocupa harto espacio
+- [03:23] por ejemplo ahí ya tení
+- [03:25] en la pantalla completa tení
+- [03:27] solo cuatro ítems
+- [03:28] se podría agregar cuando le pones
+- [03:31] agregar ítem que no que se agregue
+- [03:33] como una caluga completa sino que se agregue
+- [03:36] un campo debajo por ejemplo
+- [03:37] de ese tipo
+- [03:38] como que se vaya construyendo una grilla
+- [03:41] no sé si me explico
+- [03:42] Ah, sí, sí, sí, sí, de hecho me parece muy buena idea, lo voy a implementar
+- [03:46] Ya, buena, buenísimo
+- [03:48] Todavía no agregamos ítems a otras bodegas, puta, a ver si será
+- [03:54] Pero lo mismo, acá por ejemplo si existiera más por este ítem, podría agregarlo a más bodegas
+- [04:01] De hecho a ver si es que en el modo demo se puede visualizar mejor
+- [04:04] Voy a dejarlo para la reunión de la tarde que aparezca
+- [04:08] El cliente no tiene dirección fiscal, ya
+- [04:11] Ah, y eso es lo otro
+- [04:13] En cuanto a los clientes
+- [04:15] Al maestro de clientes
+- [04:17] Por lo que había solicitado
+- [04:20] Socket, tuve que agregarle obligatorio
+- [04:21] La dirección fiscal, la comuna
+- [04:23] Ciudad
+- [04:24] Sí, eso es obligatorio, muy bien
+- [04:27] Me di cuenta ahí en el
+- [04:28] En los testing
+- [04:30] Entonces creo que este si funciona
+- [04:34] Bueno
+- [04:37] Vamos a omitir
+- [04:39] las bodegas porque no me lo está tomando bien el modem, lo voy a corregir
+- [04:42] vamos con este que tiene que estar en una pura bodega no más
+- [04:52] porque acá te quería mostrar cómo se veía como lo dejé al momento de que
+- [04:56] tenga más bodegas igual lo dejé para que se vea más comprimido ocupa menos el
+- [04:59] espacio cuando son más de una bodega entonces el siguiente
+- [05:07] aquí podríamos colocar una referencia confirmamos el stock
+- [05:16] se hace la así como reserva del stock y aquí podría
+- [05:21] facturarlo directamente entonces parece factura cargada
+- [05:29] hoy pero porque le voy a seguir aquí tengo un error del wizard porque aquí
+- [05:35] debería salirme la emisión del documento directo con facturar
+- [05:40] no me debería pasar para que se pase el flujo real de ellos debería ser la orden
+- [05:47] de venta, tú la te vas a guardar, ¿cierto?
+- [05:48] Guardar la orden de venta. Aquí, si te das cuenta,
+- [05:51] cambió el wizard al emitir DT, ¿cachai?
+- [05:53] Pero lo hizo automático. En vez de hacerle
+- [05:55] clic acá y darle a facturar,
+- [05:56] se hace como automático esa vista. Voy a hacer lo que se pasa
+- [05:58] a esta página nomás.
+- [06:00] No, no, no. O sea, yo ahí, mira,
+- [06:03] tú estás en órdenes de venta. Vamos a
+- [06:04] emitir una nueva, tú vuelves a órdenes de venta.
+- [06:07] Cuando estés acá, una nueva
+- [06:09] orden de venta, cuando tú la crees,
+- [06:11] ahí le das, no sé,
+- [06:13] guardar. Ahí no sé
+- [06:15] porque ahí debería ser, ¿por qué confirmar
+- [06:17] stock? debería como guardar
+- [06:19] simplemente
+- [06:19] lo había hecho así para
+- [06:22] para que en caso de que alguien o dos personas
+- [06:25] estén haciendo la venta
+- [06:26] primero confirmen el stock y después vendan
+- [06:29] no, pero es que eso, por ejemplo
+- [06:31] cuando ahí en el
+- [06:33] botón guardar, ¿cachai?
+- [06:35] eh, obviamente
+- [06:37] le va a validar
+- [06:38] va a hacer la validación, ahí
+- [06:40] antes de insertar el movimiento
+- [06:42] debería preguntar si hay stock
+- [06:44] Si no hay stock, claro, ahí te debería tirar alerta
+- [06:47] ¿Cachai? Vale
+- [06:48] Entonces, ahí lo que debería hacer es
+- [06:51] Guardar, ¿cierto? Guardar documento
+- [06:53] Acá en la orden de venta le das a guardar
+- [06:54] Y te debería devolver a nota del libro
+- [06:57] A esa, ahí, ahí debería devolver
+- [06:58] ¿Cachai?
+- [07:00] Y de que aparezca el registro ahí
+- [07:02] Que creaste, el nuevo, ¿me explico?
+- [07:05] Vale, y lo está dejando acá
+- [07:06] No, no
+- [07:08] Ahí, no, porque en cierto modo
+- [07:10] Es como que
+- [07:11] Porque puede ser que ellos tengan separado
+- [07:14] el flujo o el proceso de
+- [07:16] órdenes de venta, ¿cachai?
+- [07:17] Y no necesariamente
+- [07:19] tienen que ir a emitir
+- [07:21] porque tienen que esperar el flujo de aprobaciones.
+- [07:24] ¿Cachai?
+- [07:26] Entonces a lo mejor esta persona
+- [07:27] o el usuario se va a poner...
+- [07:29] Es que por lo que habían dicho
+- [07:31] en lo que estábamos en la reunión con Mario Lupo
+- [07:33] Ah, eso lo compra. Eso lo compra
+- [07:35] las aprobaciones, po.
+- [07:38] Ya, ya pero...
+- [07:40] Yo lo tiraría
+- [07:41] no sé si... es que en realidad
+- [07:43] si vaya a emitir
+- [07:44] directo
+- [07:45] ¿cachai?
+- [07:47] puta validémoslo
+- [07:48] con ellos
+- [07:48] mejor en la reunión
+- [07:49] validémoslo con ellos
+- [07:51] cuál es lo más cómodo
+- [07:52] si a lo mejor
+- [07:53] yo estoy equivocado
+- [07:54] que tiene que ser
+- [07:55] directo
+- [07:56] desde la orden de venta
+- [07:57] y emitir
+- [07:57] activar la factura
+- [07:58] y todo eso
+- [07:59] o
+- [08:00] que vaya por parte
+- [08:02] vale
+- [08:05] y si emitir
+- [08:11] la factura
+- [08:12] ¿cómo?
+- [08:13] ¿la integró?
+- [08:14] no me la guardo
+- [08:20] ¿qué está pasando?
+- [08:22] ¿por qué no está
+- [08:23] con la fecha de hoy?
+- [08:24] No, voy a buscarlo en Tamodora, ¿no?
+- [08:28] Un par de horas.
+- [08:37] Ya, cantidad, material, siguiente.
+- [08:41] Ya, sin referencia, confirmar stock.
+- [08:43] Va a duplicar la página para no perder esto.
+- [08:53] Uh-huh.
+- [08:55] Ahí está, ¿no?
+- [08:56] ¿Por qué le hizo con fecha de ayer, la weá?
+- [09:02] Ya, pero no fue ahí.
+- [09:04] ¿Qué hay que confirmar?
+- [09:08] Bueno, ahí quedaría registrada en la página de mi dirpo.
+- [09:12] ¿Sí?
+- [09:12] Entonces, si yo le doy a facturar de ahí
+- [09:15] O de acá, debería hacer lo mismo
+- [09:17] Y tirar a GoSocket
+- [09:18] Lo que sí, vamos a abrir GoSocket antes
+- [09:23] Para ver los registros
+- [09:24] Esto que tengo las claves acá
+- [09:42] Estamos en Almagüez
+- [10:24] Almagüez, por si estamos bien
+- [10:26] Cambio el estado que hice
+- [10:44] Por enviar a la entidad tributaria
+- [10:46] Del 3 al 9
+- [10:51] Está haciendo en la mañana
+- [10:53] Sí, por eso está en ese estado
+- [10:54] Estos son donde llegan las emisiones
+- [10:57] ¿Cachai?
+- [10:58] Es una prueba que está haciendo en la mañana
+- [11:00] Que todavía no está revisado por
+- [11:02] El sí, pero por ejemplo así quedaría
+- [11:04] Cuando ya está validada que esta es la prueba que hice ayer
+- [11:06] Así aparece como harto rato
+- [11:09] Y después te aparece si es rechazo
+- [11:11] O si está aprobado
+- [11:13] Se demora caleta, si la cuestión
+- [11:14] Entonces ahora
+- [11:16] Mientras se vaya a subsocket
+- [11:18] No hay drama
+- [11:19] Entonces vamos a darle aquí a facturar
+- [11:22] Y aquí aparece la parte
+- [11:27] de misión de documento, no
+- [11:28] está como el hoyo, va a tener que corregirlo rápido
+- [11:30] siguiente
+- [11:33] aquí me hace como revisar si esto es parte
+- [11:35] del proceso de aprobación, y aquí recién va
+- [11:37] la misión de documento
+- [11:38] no, está mal eso
+- [11:40] y eso
+- [11:43] eso, eso, como ejemplo documento
+- [11:45] y ahí se miró
+- [11:46] ya, ya
+- [11:49] ¿dónde está? abre el pdf
+- [11:50] ¿puedo abrir el pdf?
+- [11:52] ¿este de acá?
+- [11:54] o sea, aquí lo descargo, y eso también tengo una duda
+- [11:57] Porque aquí se descarga con la representación gráfica
+- [11:59] De GoSocket
+- [12:00] ¿Cachai? Mira, de hecho
+- [12:01] Sí, está bien
+- [12:03] Está bien
+- [12:04] Y aquí también tengo para descargar el XML
+- [12:08] Pero eso es como más para mí
+- [12:09] No, está bien también el XML
+- [12:12] Eso está perfecto
+- [12:13] Y ahí llega, si te das cuenta
+- [12:16] Comercialpacking
+- [12:18] Le habíamos tirado una cuestión que costaba 500 pesos
+- [12:20] Sí, 500 pesos, ahí está
+- [12:21] Y GoSocket
+- [12:28] Bueno, lo cerré
+- [12:29] Espera, te voy a dejar esta cuestión
+- [12:38] Me ocupe tanto espacio
+- [12:41] Porque la vista de la cosa que graba
+- [12:43] Me molesta
+- [12:43] Entonces ya ahora lo voy a buscar
+- [12:46] Ah y por ejemplo tengo este botón
+- [12:51] Como te digo se demora
+- [12:52] Que aquí podéis ver
+- [12:54] Voy a actualizar por ejemplo aquí
+- [12:56] Está igual
+- [12:58] El webhook pero es lento
+- [13:01] Es lenta la respuesta entonces aquí lo podéis
+- [13:02] Forzar para ver si es que se actualizó
+- [13:05] O no también acá en GoSocket
+- [13:06] Ahí llegó el segundo
+- [13:06] Ok
+- [13:08] Acá si nos vamos a
+- [13:14] Forum, perdón que estoy tomando seguido
+- [13:16] Se va a abrir la pestaña de ahí
+- [13:19] Con los detalles
+- [13:21] No, pero eso a mí me da igual
+- [13:25] No quiero darle foco a ello
+- [13:27] En la presentación, pero me interesa que en el
+- [13:30] RP esté funcionando el flujo de emisión
+- [13:32] De perfect
+- [13:33] Y acá por ejemplo
+- [13:34] El tema de
+- [13:36] Descargar el PDF
+- [13:37] Sí tiene que ser
+- [13:39] Así lo tengo que hacer
+- [13:42] que cuando el buen pinche
+- [13:44] ve el PDF, no descargarlo, ojo
+- [13:46] no descargarlo, ver el PDF
+- [13:49] ver el documento
+- [13:50] obviamente haga la pega de ir a
+- [13:52] descargarlo con un SOC, es cierto, y te lo
+- [13:54] cargue en la base de datos
+- [13:55] esa descarga
+- [13:57] como tener una previsualización y la opción de descargar
+- [14:00] como lo teníamos en el otro, ¿cierto?
+- [14:06] no, o sea, yo ahí lo que haría, levanto
+- [14:08] el PDF nomás y ahí quieren si lo
+- [14:10] descargan o no sé
+- [14:11] eso te estoy diciendo
+- [14:12] cuando le di acá, me de descargar
+- [14:15] Que se previsualice el PDF
+- [14:18] Y la opción de descargarlo
+- [14:19] Eso, ya, sí
+- [14:21] Sí, ahí lo entendí bien
+- [14:23] Eso, pero para que el usuario
+- [14:26] Sea transparente
+- [14:27] No sé, voy a descargarlo
+- [14:29] No
+- [14:30] Como que esto es
+- [14:33] Todo, todo, todo del RP
+- [14:34] Ah, sí, sí, esto es más que nada
+- [14:37] Para mostrarte que está llegando la info
+- [14:39] No, no, no, sí, sí
+- [14:41] Igual tenemos que hacerlo dentro de la demostración
+- [14:43] De hoy día
+- [14:43] Pero lo que voy yo que
+- [14:46] En sí, los botones
+- [14:49] Es un llamado a la acción de visualizar
+- [14:51] Visualizar PDF, no va a ser el descargar
+- [14:54] Esto ya no sirve entonces
+- [14:55] Ese tienes que cambiarlo
+- [14:58] Por el del PDF
+- [14:59] De GhostSocket
+- [15:01] ¿Me explico?
+- [15:03] Sí, sí
+- [15:05] Y bueno, tengo que corregir el wizard
+- [15:09] Porque todavía tiene rastro
+- [15:11] Del sistema de aprobación
+- [15:13] Voy a corregirlo para que quede
+- [15:15] más simplificado, porque tiene como
+- [15:17] seis veces que pasar a esa página siguiente
+- [15:19] ya, eso
+- [15:26] mira, hoy día devuelve poco a esto
+- [15:28] trata de dejarlo
+- [15:30] juntémonos antes, pero tiene que estar
+- [15:32] funcionando filete
+- [15:34] para que
+- [15:36] enfoquemos la reunión sobre esto
+- [15:38] ¿cachai? la orden de venta
+- [15:40] que funcione bien
+- [15:41] yo como digo
+- [15:43] si voy a dejar en la orden de venta
+- [15:46] guardar, eso de que
+- [15:48] emitir, facturar desde allá, no lo pondría
+- [15:51] claro, sería
+- [15:52] pasar como una vez por acá, darle guardar
+- [15:54] y de acá darle facturar
+- [15:56] exacto, si, si, te entendí
+- [15:58] porque está demasiado
+- [16:00] con muchos pasos la weá
+- [16:01] porque podría ser las dos cosas
+- [16:04] en dos lados, no, pues la idea es que sea un orden
+- [16:06] si, si, si
+- [16:08] y bueno, si ellos después nos dicen
+- [16:10] no, es que yo quiero al momento de guardar la orden de venta
+- [16:12] ¿te quiero facturar? ya weá
+- [16:14] ya lo vemos, pero la idea es que sea
+- [16:16] con un orden, caché
+- [16:18] Vale, vale
+- [16:20] Igual, por las correcciones de la semana pasada
+- [16:23] Yo voy a decir que se dio foco
+- [16:25] A como estábamos ya
+- [16:27] Con Gozoke, se dio foco directamente
+- [16:29] Esta semana a eso y que la próxima semana
+- [16:31] Vamos a presentar los avances de lo que habían solicitado
+- [16:33] El módulo de tesorería
+- [16:34] Que cualquier pega
+- [16:37] Claro, por eso, pero aquí
+- [16:40] Mata esto
+- [16:41] Porque aquí te falta también armonar
+- [16:44] Enviándote el crédito
+- [16:46] ¿Cachai?
+- [16:47] y tenés que, por ejemplo, la visualizar
+- [16:51] PDF. Descargar el XML
+- [16:52] ya lo tienes, ¿o no?
+- [16:54] Sí, sí.
+- [16:59] Consultar estado.
+- [17:01] No sé si lo tienes.
+- [17:02] Te aparece acá el estado.
+- [17:05] Pero el estado del GoSocket,
+- [17:06] ¿cómo le actualizas el estado?
+- [17:08] Acá. ¿Pero está consumiendo el servicio de ahí?
+- [17:12] Sí, de hecho, acá todavía está
+- [17:14] el folio pendiente, pero si te das cuenta
+- [17:16] este que es el folio 56
+- [17:18] Dice que folio CI 56
+- [17:19] Este ya está listo
+- [17:20] Si te vayas a ver acá
+- [17:21] Oye pero no te asignan
+- [17:23] ¿Tiro el folio de ellos?
+- [17:26] Eh no
+- [17:26] Pues que
+- [17:26] Este sistema de sandbox
+- [17:28] Que tienen
+- [17:29] Como de prueba
+- [17:30] Se demora caleta
+- [17:31] Y el folio si te lo asignan
+- [17:33] Porque está ahí
+- [17:33] Va numérico
+- [17:34] Ya y ese folio
+- [17:36] ¿Por qué no lo rescatas tú?
+- [17:38] Lo voy a rescatar
+- [17:39] Lo que pasa es que
+- [17:39] Lo tenía así
+- [17:40] Para que
+- [17:40] Esa parte te reflejara
+- [17:42] Solamente como el estado pendiente
+- [17:44] Nomás
+- [17:44] Pero lo voy a dejar acá
+- [17:45] Como
+- [17:46] Como ítem
+- [17:47] No, porque en cierto modo
+- [17:49] Ese folio, ojo ahí Carlos
+- [17:51] El folio que te están devolviendo
+- [17:53] Por ejemplo, el folio SI56
+- [17:55] Es el folio que tienes que poner
+- [17:57] En la primera columna
+- [17:58] De esa tabla
+- [18:01] ¿Me cachai?
+- [18:05] ¿Y esto que se está dejando aquí?
+- [18:09] Eso tienes que cambiar
+- [18:10] Yo lo que ya te decía
+- [18:12] ¿Es un link a eso?
+- [18:15] Sí, es un link
+- [18:15] Eso está muy bien
+- [18:18] Está muy bien. Lo mismo, pero poner el folio
+- [18:20] de estos muchachos.
+- [18:23] Incluso ahí, si podés cambiar,
+- [18:25] por ejemplo, el ojito,
+- [18:26] el botón del ojito,
+- [18:29] dejarlo allá, ¿cachai? Como parte
+- [18:30] del link. No sé cómo podréis, a lo mejor
+- [18:32] podréis crearte un botón que se convierta
+- [18:34] en un botoncito adentro que aparezca el
+- [18:36] folio. Mirá, entonces
+- [18:38] ¿qué te pasa yo?
+- [18:44] Ando a contar
+- [18:45] mis libros, el libro
+- [18:49] de ventas. ¿Viste? Ahí aparece
+- [18:58] el folio. El folio es un botón
+- [19:00] Abajito, ponle un botón
+- [19:02] Y si tú pinchas te abre el PDF
+- [19:03] Vale
+- [19:04] Eso mismo, y en el otro lado
+- [19:07] En el otro lado, en el armahue
+- [19:09] En el armahue
+- [19:10] Sácase ese botón de ojito ahí, ¿cachai?
+- [19:14] Vale
+- [19:15] Y si te das cuenta también, te emite
+- [19:18] Mira, anda, te emite
+- [19:19] Al primer botoncito
+- [19:23] El check verde que está ahí
+- [19:24] Ese, si tú lo pinchas
+- [19:26] Te muestra el tracking del documento
+- [19:29] ¿Cachai? A eso igual tenéis que agregarlo
+- [19:31] Tenés que agregar un tracking de que cuando fue emitido, la fecha y hora en que fue emitido, por qué usuario fue emitido.
+- [19:41] Todo eso, en ese ojito, lo reemplazaría para que te levante el tracking, ¿cachai?
+- [19:46] Vale. ¿Qué otros datos podrían ir dentro del tracking?
+- [19:55] El correo. Por ejemplo, también eso lo tenemos que considerar cuando hay que mandar correo a la casilla del cliente, ¿cachai?
+- [20:04] enviar, no, no caché
+- [20:07] mira, tú cuando emites una factura
+- [20:10] tú eres el administrador de clientes
+- [20:11] tienes, andate al administrador de clientes
+- [20:13] los maestros
+- [20:14] ya, tú tienes esos dos, edítalos
+- [20:17] edita uno, ya
+- [20:21] por ejemplo aquí tenés, te falta el campo
+- [20:23] correo, vale
+- [20:26] te falta el campo correo
+- [20:30] y cuando tú agregues un correo a ese cliente
+- [20:33] incluso yo le dejaría
+- [20:36] por ejemplo
+- [20:36] dejaría así, los datos
+- [20:40] del cliente, dentro de
+- [20:42] como los datos generales, que serían
+- [20:43] estos, después pondría un dato
+- [20:45] de contacto, ¿ya?
+- [20:48] Contacto, que
+- [20:50] se puede hacer, no sé, por una persona
+- [20:52] y un correo. Nombre de persona
+- [20:54] y correo, ¿ya?
+- [20:57] Carlos, ¿no te vieron?
+- [20:58] Ya, entonces, un nombre
+- [21:01] de una pestañita.
+- [21:03] Esto sea como general,
+- [21:05] otra pestañita que sea de contacto, ¿cachai?
+- [21:07] O, puta, va a ser la más simple,
+- [21:09] después lo vemos en tips y lo mejor.
+- [21:10] Deja así como
+- [21:12] Aquí agregarle el campo correo
+- [21:14] Ya, si el cliente
+- [21:16] Tiene un correo registrado en su
+- [21:18] Mantenedor, cuando invitas
+- [21:20] Una orden de venta, tienes que
+- [21:22] Informar esa orden de venta al
+- [21:24] Correo del cliente, ¿cachai?
+- [21:26] Que le pregunte
+- [21:27] Y después cuando tú factures
+- [21:30] Cuando la factura ha sido así
+- [21:31] Tienes que mandar el correo
+- [21:34] Al cliente, ¿lo explico?
+- [21:37] Vale
+- [21:37] Y ahí por ejemplo me imagino que en el tracking
+- [21:42] Debería salir de que se envió el correo a la casilla
+- [21:44] Tanto
+- [21:44] Claro
+- [21:46] Y eso por ejemplo entonces para enviarlo
+- [21:50] Cuando yo esté acá
+- [21:51] Perdón
+- [21:53] Acá sería como
+- [21:56] Un botón de enviar
+- [21:57] Es que cuando tú lo emites
+- [22:00] Tienes que mandarse de una
+- [22:02] Automáticamente
+- [22:03] Y acá también podrías como reenviar
+- [22:07] Vale
+- [22:08] Bueno igual eso va a quedar
+- [22:11] Como
+- [22:12] Porque todavía no tenemos
+- [22:15] Servicios de envío de correo
+- [22:16] Lo dejaría como opción nomás pero no funcionaría
+- [22:19] Claro pero ahí tenéis que
+- [22:21] Dentro de la administración
+- [22:23] Tenéis que dejar para que ellos puedan configurar
+- [22:25] Su SBTP
+- [22:26] O su servidor de correo
+- [22:28] Vale
+- [22:29] ¿Me caché?
+- [22:31] Sí, sí, sí
+- [22:34] Entonces ya, simplificar
+- [22:37] La orden de venta
+- [22:38] De que el botón de facturar solamente sea en emitir
+- [22:41] Y en el otro sea como guardar
+- [22:43] Y no alertito por cada paso que hace
+- [22:48] De esos verdecitos
+- [22:50] Sino que alertan ya cuando está emitido
+- [22:52] Nomás el documento
+- [22:53] Vale, la alerta es de arriba
+- [22:54] ¿Sí?
+- [22:56] Sí, sí, sí, vale
+- [22:57] ¿Ya?
+- [22:59] Ya, ahorita
+- [22:59] ¿Qué otra cosita? No se me escapa nada, ¿cierto?
+- [23:02] Bueno, el folio, ¿me acuerdas del folio?
+- [23:04] El ojito, que ya se...
+- [23:05] El ojito tiene que ver la...
+- [23:06] Hay que implementar el tranqui, ¿no?
+- [23:08] Eso tiene que ir, sí o sí
+- [23:09] Vale
+- [23:10] El estado como lo tienes ahí está súper bien
+- [23:12] Pero el folio pendiente
+- [23:15] No debería ya tener el folio pendiente
+- [23:16] Porque costó que te entregas folio de una
+- [23:18] Claro, el estado del pendiente realmente
+- [23:21] La revisión del CI
+- [23:22] Exacto, entonces todo ese tracking
+- [23:24] Tienes que agregarlo dentro del ojito
+- [23:26] Pero el folio tiene que aparecer allá como un botón
+- [23:28] Y poder abrirlo desde ahí
+- [23:29] Vale, vale, oye Sergio
+- [23:32] Otra cosa que te quería consultar
+- [23:33] Que igual siento que
+- [23:35] Uno, me falta caleta por hacer
+- [23:39] Me falta mucho por hacer
+- [23:40] Y dos, estoy terrible mareado
+- [23:42] si te das cuenta
+- [23:43] me meto a una reunión, entiendo algo
+- [23:46] y anoto, tomo videos, toda la cuestión
+- [23:48] pero como que no lo estoy aplicando bien
+- [23:51] entonces no sé si es que
+- [23:52] este fin de semana nos podríamos
+- [23:54] conectar a hacer una maratón o algo
+- [23:56] porque
+- [23:56] y también para calmarme la ansiedad
+- [23:59] estoy durmiendo menos que la chucha
+- [24:01] oye, si
+- [24:03] sin ningún problema, coordinemos el
+- [24:06] fin de semana y yo voy a estar en la casa
+- [24:08] entonces
+- [24:09] igual le meto más de noche
+- [24:11] por tema del fin de semana
+- [24:13] me acomodo
+- [24:16] si necesito que me conecte a la luna en la mañana
+- [24:17] lo hago, pero necesito uno
+- [24:19] terminar esta guada, y dos, porque de verdad psicológicamente
+- [24:22] no me tengo
+- [24:23] ni una fe, como que cada día que pasa
+- [24:26] no me creo nada, no lo hago presencial
+- [24:27] ni lo digo ni nada, porque mientras más lo digo
+- [24:29] más lo creo, pero
+- [24:31] necesito tener calma mental de esta guada
+- [24:33] de que va a funcionar
+- [24:34] no, o sea, ya tenés la integración
+- [24:37] pero no me creo Sergio, no me creo
+- [24:39] el cuento
+- [24:40] Pero no piñesquís por muchos lados
+- [24:45] Entonces ahora es un ejemplo
+- [24:46] Y ya tenés claro lo que hay que hacer
+- [24:48] Para esta presentación
+- [24:49] Enfócate en eso, no en lo futuro
+- [24:52] Entonces vamos, coordenémonos
+- [24:54] Alíñate para que la presentación del día
+- [24:57] Se enfoque solamente en eso
+- [24:58] Ordenes de venta, la facturación
+- [25:00] Integración con GoSocket
+- [25:01] Visualización del PDF, el tracking
+- [25:04] Nada más que eso
+- [25:05] ¿Ya? Entonces y eso déjalo una tarjeta
+- [25:09] en la reunión y lo dejáis para que
+- [25:10] entregue la reunión tanto
+- [25:12] y para que la revisen ellos.
+- [25:14] Vale.
+- [25:15] ¿Ya? Vale.
+- [25:18] Pero el fin de semana, si queréis ayuda,
+- [25:20] nos juntamos, pero vamos a un punto específico.
+- [25:23] No veamos el mundo
+- [25:24] completo, sino que me decís que es el que necesito
+- [25:26] esta hora. ¿Cómo va? Ya, nos juntamos
+- [25:28] y a esto tenemos que llegar. Perfecto.
+- [25:31] Matamos a Mil. Si dura 10 minutos,
+- [25:32] 20 minutos, la matamos. Tú te vas,
+- [25:35] te vas enfocado a eso. Full, full, full,
+- [25:36] full. Ya lo tengo listo.
+- [25:38] Nos juntamos, revisamos y ya, otro punto
+- [25:40] Oye, necesito esto, ¿cómo es?
+- [25:42] Ese punto
+- [25:43] Pero no nos mariemos
+- [25:46] Porque esto va a ser un mundo igual
+- [25:48] Complejo, ¿cachai?
+- [25:50] Entonces, absorberlo todo de una
+- [25:52] Va a ser imposible
+- [25:53] Sí, sí, está acuático
+- [25:55] Entonces vayamos por partes
+- [25:58] Nos ataquemos puntos específicos
+- [26:00] Vale
+- [26:01] Vale, éxito
+- [26:03] Hablamos
+- [26:05] Chau
