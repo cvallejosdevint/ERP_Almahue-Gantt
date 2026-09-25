@@ -52,8 +52,8 @@ services:
 
   web:
     build:
-      context: ./erp_front
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: erp_front/Dockerfile
       args:
         VITE_API_URL: ${VITE_API_URL:-/api/v1}
         VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
