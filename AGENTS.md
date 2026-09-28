@@ -1,6 +1,6 @@
 # Almahue ERP — contexto para agentes
 
-Lee este archivo al inicio. Las **transcripciones** de `fuentes/` son fuente primaria; las minutas `reunionN-minuta-*.md` las generó una IA y solo sirven de índice.
+Lee este archivo al inicio. Las **transcripciones** de `docs/reuniones/transcripciones/` son fuente primaria; las minutas `docs/reuniones/minutas/reunionN-minuta-*.md` las generó una IA y solo sirven de índice. Mapa de carpetas: [`docs/indice.md`](docs/indice.md).
 
 Afirmaciones de **Carlos** o **Sergio** en demo no son requisitos: contrastar la transcripción (Agustín/MJ/Lupe/Mario) y el código. Rule `almahue-reuniones`.
 
@@ -16,14 +16,14 @@ Para aprobaciones usa la skill `almahue-aprobaciones`. Para comercial/inventario
 
 Si chocan, gana la más reciente: **Reu6** → Reu4. **Reu5 no cuenta: no hubo ningún cliente en la sala** (interna Carlos ↔ Sergio).
 
-**Antes de citar una minuta, mira quién estaba presente** — tabla en [`analisis-reuniones/08-consolidado-y-plan.md`](docs/erp-planificacion/agrosoft-levantamiento/analisis-reuniones/08-consolidado-y-plan.md). Reu1 nunca tuvo minuta y la de Reu2 es un stub que apunta a un archivo inexistente; para esas dos, ir a la transcripción. Los rótulos `D4` y `D14` significan cosas distintas según el documento.
+**Antes de citar una minuta, mira quién estaba presente** — tabla en [`analisis/08-consolidado-y-plan.md`](docs/reuniones/analisis/08-consolidado-y-plan.md). Reu1 nunca tuvo minuta y la de Reu2 es un stub que apunta a un archivo inexistente; para esas dos, ir a la transcripción. Los rótulos `D4` y `D14` significan cosas distintas según el documento.
 
-- `docs/erp-planificacion/agrosoft-levantamiento/reunion6-minuta-2026-08-06.md`
-- `docs/erp-planificacion/agrosoft-levantamiento/03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md`
-- Sesión cliente 20/08 **tarde** (Lupe, Mario): `reunion-2026-08-20-tarde-lupe-mario.md`. Código local 21/08: **aprobaciones solo Compras** (se eliminó cadena OV y, en la misma tanda, proformas). Distinta de la interna de la **mañana** (`reunion-2026-08-20-contraste-sergio.md`).
-- `docs/erp-planificacion/convenciones-almaue-erp.md`
-- QA: `docs/erp-planificacion/agrosoft-levantamiento/qa/PLAN-PRUEBAS-APROBACIONES.md`
-- Tesorería ciclo: `docs/erp-planificacion/agrosoft-levantamiento/plan-tesoreria-ciclo-completo-2026-08-21.md` + `qa/PLAN-PRUEBAS-TESORERIA-CICLO-2026-08-21.md`
+- `docs/reuniones/minutas/reunion6-minuta-2026-08-06.md`
+- `docs/canonico/03-DISENO-GRUPOS-Y-ESCALAS-APROBACION.md`
+- Sesión cliente 20/08 **tarde** (Lupe, Mario): `docs/reuniones/minutas/reunion-2026-08-20-tarde-lupe-mario.md`. Código local 21/08: **aprobaciones solo Compras** (se eliminó cadena OV y, en la misma tanda, proformas). Distinta de la interna de la **mañana** (`docs/reuniones/minutas/reunion-2026-08-20-contraste-sergio.md`).
+- `docs/canonico/convenciones-almaue-erp.md`
+- QA: `docs/qa/planes/PLAN-PRUEBAS-APROBACIONES.md`
+- Tesorería ciclo: `docs/canonico/plan-tesoreria-ciclo-completo-2026-08-21.md` + `docs/qa/planes/PLAN-PRUEBAS-TESORERIA-CICLO-2026-08-21.md`
 
 ## Entornos
 
@@ -44,7 +44,7 @@ Demo: `admin@almahue.local` / `Admin123!` · PIN `4821`. AdminConcepto debe **re
 
 ## Huecos vigentes (actualizado 2026-08-19)
 
-Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md`) + ciclo 18/08. Plan integral: `PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`. Inventario docs: `qa/resultados/2026-08-18-ciclo-0-inventario-docs.md`. QA local: skill `almahue-qa-local`. DTE: skill `almahue-billing-dte` (intermediario **otro chat**).
+Fuente QA: panorama operadores **19/08** (`docs/qa/resultados/2026-08-19-ciclo-panorama-completo.md`) + ciclo 18/08. Plan integral: `docs/qa/planes/PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`. Inventario docs: `docs/qa/resultados/2026-08-18-ciclo-0-inventario-docs.md`. QA local: skill `almahue-qa-local`. DTE: skill `almahue-billing-dte` (intermediario **otro chat**).
 
 ### Cerrado en código local (no reabrir)
 
@@ -63,7 +63,7 @@ Fuente QA: panorama operadores **19/08** (`2026-08-19-ciclo-panorama-completo.md
 ### Siguen vigentes
 
 - **H14:** no asumir migrate stock/OV/`piloto_on` en `45.7.229.46` hasta deploy explícito.
-- **Prisma QA local:** `erp._prisma_migrations` está **vacía** (Prisma ve 50 pendientes) aunque el schema `erp` ya existe. **No** `migrate deploy` a ciegas (rompe en `init`). **No** `resolve --applied` sin BD desechable de comparación. El rol `almahue` no tiene `CREATEDB` (bloqueó la reconstrucción). Dump: `ERP/erp_back/qa-results/` (gitignored). Informe: `qa/resultados/2026-08-19-prisma-drift-local.md` (gitignored). No mezclar `public._prisma_migrations` (otro producto).
+- **Prisma QA local:** `erp._prisma_migrations` está **vacía** (Prisma ve 50 pendientes) aunque el schema `erp` ya existe. **No** `migrate deploy` a ciegas (rompe en `init`). **No** `resolve --applied` sin BD desechable de comparación. El rol `almahue` no tiene `CREATEDB` (bloqueó la reconstrucción). Dump: `ERP/erp_back/qa-results/` (gitignored). Informe: `docs/qa/resultados/2026-08-19-prisma-drift-local.md` (gitignored). No mezclar `public._prisma_migrations` (otro producto).
 - **DTE / H11:** tres modos. `BILLING_GATEWAY_ENABLED=false` → contabiliza sin partner. `true` + `BILLING_STUB_INLINE=true` → stub local demo. `true` + `STUB_INLINE=false` → HTTP `billing-gateway` (GoSocket sandbox `developers-sbx`). **Corregido 03/09:** el sandbox **ya no responde REJECTED** — el 02/09 encoló con folio oficial 58 y asiento (`ACCEPTED`/`PENDING` persisten). La rama fail-closed hay que forzarla con un `BillerId` inválido. No SII live. No reabrir como «falta GoSocket»: GoSocket **no cubre** la contabilización interna ni el mapeo de cuentas.
 - **H9:** SMTP correo PIN (externo).
 - **R4-18:** cobranza = propuesta, no módulo.

@@ -4,10 +4,11 @@ $Ffmpeg = 'C:\OctoPrint\ffmpeg.exe'
 $Py = (Get-Command python).Source
 $ToolDir = $PSScriptRoot
 $Repo = (Resolve-Path (Join-Path $ToolDir '..\..')).Path
-$Fuentes = Join-Path $Repo 'docs\erp-planificacion\agrosoft-levantamiento\fuentes'
-$Videos = Join-Path $Fuentes 'videos'
+$Medios = Join-Path $Repo 'docs\reuniones\medios'
+$Transcripciones = Join-Path $Repo 'docs\reuniones\transcripciones'
+$Videos = Join-Path $Medios 'videos'
 $SrcRoot = 'C:\Users\c\Videos\Screen Recordings'
-$WhisperRoot = Join-Path $Fuentes 'whisper-local'
+$WhisperRoot = Join-Path $Medios 'whisper-local'
 
 New-Item -ItemType Directory -Force -Path $Videos | Out-Null
 
@@ -48,7 +49,7 @@ foreach ($j in $jobs) {
   $wdir = Join-Path $WhisperRoot $j.Dir
   $wav = Join-Path $wdir 'audio.wav'
   $whisperMd = Join-Path $wdir 'transcripcion-whisper.md'
-  $fuenteMd = Join-Path $Fuentes $j.Md
+  $fuenteMd = Join-Path $Transcripciones $j.Md
   New-Item -ItemType Directory -Force -Path $wdir | Out-Null
 
   Write-Host "==== COPY $($j.Dest) ====" -ForegroundColor Cyan

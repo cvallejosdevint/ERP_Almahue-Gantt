@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Hoy: el trabajo y la factura van separados",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "facturar",
+        "label": "Qué hace Facturar",
+        "focus": ["jornada", "proforma", "definitiva", "facturar", "orden"],
+        "note": "Facturar arma una orden ya ingresada y da el trabajo por facturado antes de la factura del proveedor."
+      },
+      {
+        "id": "cierre",
+        "label": "Dónde se anotan los pesos",
+        "focus": ["definitiva", "cierre", "provisoria"],
+        "note": "El costo entra a contabilidad al cerrar el mes, como deuda provisoria."
+      },
+      {
+        "id": "sii",
+        "label": "La factura del SII",
+        "focus": ["factura", "contabilizar", "provisoria", "pago"],
+        "note": "Esa deuda baja solo si la factura se contabiliza y queda unida a la orden."
+      }
+    ]
+  },
+  "lanes": [
+    { "id": "trabajo", "label": "Contratistas" },
+    { "id": "compras", "label": "Compras" },
+    { "id": "cuentas", "label": "Contabilidad" },
+    { "id": "pago", "label": "Tesorería" }
+  ],
+  "mainPath": ["jornada", "proforma", "definitiva", "facturar", "orden"],
+  "nodes": [
+    { "id": "jornada", "lane": "trabajo", "col": 0, "type": "frontend", "label": "Jornada", "sublabel": "horas y precio", "width": 150 },
+    { "id": "proforma", "lane": "trabajo", "col": 1, "type": "frontend", "label": "Proforma", "sublabel": "paquete en borrador", "width": 150 },
+    { "id": "definitiva", "lane": "trabajo", "col": 2, "type": "security", "label": "Definitiva", "sublabel": "supervisor, sin clave", "width": 150 },
+    { "id": "facturar", "lane": "trabajo", "col": 3, "type": "security", "label": "Facturar", "sublabel": "corte: no es factura", "tag": "corte", "width": 150 },
+    { "id": "orden", "lane": "compras", "col": 4, "type": "backend", "label": "Orden ingresada", "sublabel": "salta la aprobación", "tag": "corte", "width": 156 },
+    { "id": "cierre", "lane": "cuentas", "col": 3, "type": "database", "label": "Cierre de mes", "sublabel": "Traspasar y cerrar", "width": 150 },
+    { "id": "provisoria", "lane": "cuentas", "col": 4, "type": "database", "label": "Deuda provisoria", "sublabel": "facturas por recibir", "tag": "corte", "width": 160 },
+    { "id": "factura", "lane": "compras", "col": 5, "type": "external", "label": "Factura SII", "sublabel": "llega por GoSocket", "width": 150 },
+    { "id": "contabilizar", "lane": "cuentas", "col": 5, "type": "backend", "label": "Contabilizar", "sublabel": "cruza si está unida", "tag": "corte", "width": 156 },
+    { "id": "pago", "lane": "pago", "col": 5, "type": "cloud", "label": "Pago", "sublabel": "después de anotar", "width": 150 }
+  ],
+  "edges": [
+    { "id": "e1", "from": "jornada", "to": "proforma" },
+    { "id": "e2", "from": "proforma", "to": "definitiva", "label": "aprueba" },
+    { "id": "e3", "from": "definitiva", "to": "facturar", "variant": "emphasis" },
+    { "id": "e4", "from": "facturar", "to": "orden", "label": "crea la orden", "variant": "security" },
+    { "id": "e5", "from": "definitiva", "to": "cierre", "label": "al cerrar" },
+    { "id": "e6", "from": "cierre", "to": "provisoria", "label": "anota el costo" },
+    { "id": "e7", "from": "factura", "to": "contabilizar", "label": "si se une", "variant": "dashed" },
+    { "id": "e8", "from": "contabilizar", "to": "pago", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Cortes",
+      "items": [
+        "Facturar crea la orden ya ingresada, sin la factura del proveedor",
+        "El costo se anota al cerrar el mes; la factura del SII no lo baja sola"
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 $ToolDir = $PSScriptRoot
 $Repo = (Resolve-Path (Join-Path $ToolDir '..\..')).Path
-$Fuentes = Join-Path $Repo 'docs\erp-planificacion\agrosoft-levantamiento\fuentes'
+$Fuentes = Join-Path $Repo 'docs\reuniones\transcripciones'
 $OutDir = Join-Path $ToolDir 'out'
 $PromptFile = Join-Path $ToolDir 'prompts\system-es-cl.md'
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null

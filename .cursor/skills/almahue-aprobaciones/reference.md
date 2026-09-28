@@ -20,7 +20,7 @@ Admin **no** es miembro ni nodo. N1 tope **$500.000** → **Laura Soto** (`lsoto
 | Ricardo Muñoz | rmunoz@almahue.cl | N1 Contratistas |
 | Tomás Vidal / Ana Torres | tvidal@ / atorres@ | Bodega / tesorería |
 
-Método: `qa/resultados/2026-08-18-ciclo-desde-cero-metodo.md`.
+Método: `docs/qa/resultados/2026-08-18-ciclo-desde-cero-metodo.md`.
 
 ## B. Seed demo EMP-1 (`npm run seed` + `seed:aprobaciones-f2`)
 

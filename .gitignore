@@ -14,27 +14,29 @@ ERP/backups/*.backup
 
 # Extracciones locales de reuniones (no versionar)
 .tmp-video/
-06-CARTOLA*.xls
+
+# Cartolas bancarias (extractos; no versionar)
+docs/datos/cartolas/*.xls
 
 # Videos de reuniones (pesados; viven en disco local)
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/videos/*.mp4
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/cronologia/**/frames/
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-19-demo-interno/audio.wav
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-19-demo-interno/frames/
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/audio.wav
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/frames/
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/2026-08-20-reunion-sergio/transcribe.py
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/whisper-local/**/audio.wav
-docs/erp-planificacion/agrosoft-levantamiento/fuentes/whisper-local/**/frames/
+docs/reuniones/medios/videos/*.mp4
+docs/reuniones/medios/cronologia/**/frames/
+docs/reuniones/medios/2026-08-19-demo-interno/audio.wav
+docs/reuniones/medios/2026-08-19-demo-interno/frames/
+docs/reuniones/medios/2026-08-20-reunion-sergio/audio.wav
+docs/reuniones/medios/2026-08-20-reunion-sergio/frames/
+docs/reuniones/medios/2026-08-20-reunion-sergio/transcribe.py
+docs/reuniones/medios/whisper-local/**/audio.wav
+docs/reuniones/medios/whisper-local/**/frames/
 
 
 # API keys de herramientas externas (tl;dv, Trello). Copiar tools/.env.example → tools/.env
 tools/.env
 tools/.env.local
-docs/erp-planificacion/agrosoft-levantamiento/.env.trello
+docs/reuniones/.env.trello
 
 # Dependencias locales de scripts de captura Playwright
-docs/erp-planificacion/agrosoft-levantamiento/node_modules/
+docs/reuniones/node_modules/
 
 # QA temporal / Playwright local
 ERP/.qa-tmp/
@@ -45,12 +47,12 @@ ERP/qa-reu4-*/session-*.json
 ERP/qa-reu4-*/qa-sessions.json
 
 # Informes de corrida QA (solo local; en git: README + PLANTILLA)
-docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*
-!docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/README.md
-!docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/PLANTILLA.md
+docs/qa/resultados/*
+!docs/qa/resultados/README.md
+!docs/qa/resultados/PLANTILLA.md
 
 # Dumps QA con tokens (nunca versionar)
-docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/*-raw.md
+docs/qa/resultados/*-raw.md
 
 # Capturas temporales para tarjetas Trello QA
 .tmp-trello-qa/

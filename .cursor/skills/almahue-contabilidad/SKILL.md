@@ -20,4 +20,4 @@ Módulo **existe** (asientos, periodos, centralización, plan de cuentas, balanc
 - Tesorería (cartolas, conciliación) es otro módulo; cobranza R4-18 y SMTP diferidos.
 - Productor no es maestro de contraparte.
 
-Integridad UI↔Prisma: `docs/auditoria-integridad-secundaria.md`. El as-is 14/08 está `{deprecado}`.
+Integridad UI↔Prisma: `docs/historico/auditoria-integridad-secundaria.md`. El as-is 14/08 está `{deprecado}`.

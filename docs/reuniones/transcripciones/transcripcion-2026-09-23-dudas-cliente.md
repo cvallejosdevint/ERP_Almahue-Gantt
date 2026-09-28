@@ -1,0 +1,487 @@
+# Reunión dudas cliente 2026-09-23 (~64 min)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-09-23 181114.mp4
+Reunión con Mario y Lupe (cliente). Agustín no estuvo (contingencia familiar) y María Jesús estaba de vacaciones. Whisper puede oír mal: contrastar con el video.
+
+- [00:00] En pleno caos. No, yo creo que antes sería lo ideal porque ya con mucho caos no creo que estén como al cien por ciento.
+- [00:17] No, no, sí, pero para poder nosotros analizar, analizar bien el detalle, las papas queman.
+- [00:27] Entonces, porque si vamos en un momento como normal, llamémoslo así como relajado, no vamos a poder identificar los dolores que ustedes tienen en pleno, en pleno, pleno temporal, ¿sí? O temporal, tal.
+- [00:45] Ya, sí. Ya, pero sí, en octubre todavía documentalmente no hay tanto movimiento.
+- [00:55] Ya.
+- [00:57] Eso ya viene siendo en noviembre. Noviembre, sí. A mediados de noviembre.
+- [01:04] Ya, ok. Entonces sería bueno ir. O sea, la idea es que tú estés también, po.
+- [01:11] Sí.
+- [01:12] Podría ser la última semana de octubre, ¿o no? O muy...
+- [01:19] No sé. Yo, por lo que tenía entendido, que iban a venir como las primeras semanas de octubre.
+- [01:29] Claro, esa no es nuestra idea, pero igual hay hartos puntos que, por ejemplo, queríamos conversar con el 17-09, que hay varios cuales no lo han hecho, entonces, no tiene mucho sentido ir a antes sin esa revisión previa de ustedes.
+- [01:48] Ahora me voy a desmutar de la voz.
+- [01:50] Entonces, si estamos ya, ya prácticamente con el producto final.
+- [01:55] Ya.
+- [01:57] Pero bueno, hay que alinearnos con...
+- [02:03] Con Mario, Agustín, contigo. Como Mario está liderando el proyecto, yo creo que sí sería bueno conversarlo con él, porque él igual en temporada va a estar vuelto loco, así que no sé.
+- [02:20] ¿Cómo están muchachos? Bien, ¿y tú Mario? Bien, perdón la demora, se me atrasó la reunión.
+- [02:35] No te enojes.
+- [02:39] Oye, Mario. Bueno, no sé si hay que esperar a alguien más.
+- [02:47] ¿Lo escuchan? Sí, se escucha.
+- [02:54] ¿Y tú o nosotros? Parece que no.
+- [02:59] No, parece que no. No lo escuchan.
+- [03:06] Nosotros no lo escuchamos.
+- [03:08] ¿Lo escuchan? Sí.
+- [03:10] ¿Sí?
+- [03:11] No, como que no se quiere cambiar a la tele.
+- [03:18] A ver si lo escuchamos acá.
+- [03:24] Ya es buenísimo, funciona igual.
+- [03:27] ¿Lo escuchan?
+- [03:30] Sí. Ya, genial. Oye, Mario, no sé si alguien más va a participar. Eh, no, no. Agustín tuvo una contingencia familiar, así que no va a poder estar. Y la María Jesús está de vacaciones esta semana, así que estamos yo con la Lupe.
+- [03:48] Dale, no hay problema. Oye, Mario, bueno, estábamos conversando con Lupe, que estamos viendo en qué semana teníamos planificado nosotros en ir para allá, ¿ya?
+- [04:02] Pero estamos ahí, queríamos definir bien, la idea es que nosotros cuando estemos allá, es mucha gran parte del producto ya casi acabado, para poder ajustar algunos detalles o trabajar netamente en temas de informes, ¿ya?
+- [04:20] Entonces, ¿cuál es lo que me dice que la tercera semana, Lupe, era que tú estabas de vacaciones, cierto?
+- [04:26] Sí, la semana del 12.
+- [04:30] La semana del 12, claro.
+- [04:32] Entonces, la idea es que poder tener... Ya la semana del 12 no podríamos ir, sino que podría ser la siguiente, que sería la semana del 19. Ahí tú estarías, Lupe, ¿cierto?
+- [04:48] Sí, ahí estaríamos todos.
+- [04:51] Claro, la semana del 19 y... Pero mi pregunta es, ahí no tienen mucho fuerte, ¿cierto? Como para poder atendernos, o sea...
+- [05:01] Dando los tipos de cosas, y probando en conjunto, ese tipo de cosas, ¿no?
+- [05:06] ¿En qué sentido? Con el tema del...
+- [05:09] El tema de carga, de carga laboral de ustedes. La semana del 19.
+- [05:14] No, yo creo que todavía no. Yo creo que ya la semana 45 para adelante ya empieza la fruta.
+- [05:20] En la semana 45 estaríamos a estar un día más o menos ahí, viendo todos los ajustes.
+- [05:26] ¿Cuál sería esa semana 45?
+- [05:30] La del 2 de noviembre.
+- [05:33] Ah, la del 2. Ya. Ok, ok. O sea, igual le acomodaría si vamos el 26. Puede ser el 19 o se van el 26, ¿o no?
+- [05:46] Sí, yo creo que sí.
+- [05:49] ¿Por qué lo digo? Porque igual para también no solo ganar tiempo y llevar gran parte ya corregido, ¿cachai? Entonces estar allá y prácticamente... celebrar nomás, po.
+- [06:03] Esa semanita trabajar full temas de reporte, temas contables y ese tipo de cosas. Pero como el gran grueso, la idea es ya llevarlo listo. Llegar listo esa semana. Como digo, 19-26 nos coordinamos los lineamientos.
+- [06:36] Yo, por ejemplo, voy a estar más en otra. Bueno, contarle la metroteca con documentos, cuestiones.
+- [06:42] Agustín también va a estar en otra. Ya es más difícil.
+- [06:48] Pero yo creo que sí. La semana 26 debería funcionar igual.
+- [06:55] Ya. Genial. Igual lo voy a dejar en mi calendario.
+- [06:59] Lo voy a dejar en la semana 26 y lo voy a dejar en mi calendario. Necesita el móvil.
+- [07:09] Listo. Agendado.
+- [07:15] Ya. Ahora vamos a los...
+- [07:20] Bueno, como les comenté la semana pasada, agregamos un poquito más de fuerza al proyecto y avanzamos en lo que es compras, contratista y tesorería, ¿no Carlos?
+- [07:40] Así es.
+- [07:42] Entonces, queremos presentar los avances y para poder ya...
+- [07:48] Ir avanzando un poquito a paso firme. Lo que sí notamos que hay algunos puntos, Mario, que tú, algunas tarjetas que nos diste feedback. Así que yo creo que ya, la verdad que lo revisamos hoy día. Para serte bien sincero, hoy día nos dimos cuenta.
+- [08:04] Pero, una consulta antes de seguir. ¿Esta reemplaza la reunión de mañana o mañana nos va a juntar igual?
+- [08:11] Uy, buena pregunta. La verdad que teníamos que...
+- [08:18] Yo creo que reemplaza la de mañana, Mario, porque vamos a presentar el avance. O, si quieren, vemos solamente dudas, pero igual las dudas tenían relación con el avance. O, si quieren, nos juntamos mañana de nuevo, pero sería un poquito replicar lo de hoy.
+- [08:39] Claro, estoy pensando. Entonces, bueno, como te había contado, nos juntamos ayer con el equipo acá para definir ciertas cosas.
+- [08:55] Por lo general nos pusimos a diagramar un poco los procesos para que quede más claro, o sea, para nosotros estar tranquilos que estamos atajando todo y para que ustedes al final lo que van a desarrollar realmente cumpla las expectativas, ¿vale?
+- [09:10] Claro, curva.
+- [09:11] Entonces, estoy pensando que al final…
+- [09:24] Pero mañana ¿quién participaría?
+- [09:27] O sea, los que estamos siempre, pues la Fran y Agustín. Nosotros dos.
+- [09:33] Ya, bien. Pensando en que hoy día voy a mover más las dudas. O sea, podemos darle foco a eso, la verdad que no habría problema, pero igual, Jhonny, presentaríamos parte de lo que ya se avanzó, pero vamos a las dudas en específico.
+- [09:57] Ya. Ya, perfecto. Bueno, y si tú nos tienes que a lo mejor presentar esos diagramas o esos flujos, no sé si los tienen, para que los puedan compartir.
+- [10:12] Yo creo que a lo mejor eso lo podemos dejar para mañana, para presentárselos con calma y con el equipo completo.
+- [10:17] Ya, ok. Ya, perfecto.
+- [10:20] Entonces, Carlos, no sé si puedes compartir pantalla para que vamos a las dudas que teníamos sobre el módulo contratista, que era...
+- [10:28] Ah, no, vamos primero a los de compras. A los de compras, que la verdad que era cómo se iba a administrar.
+- [10:39] Para que llegara lo que es la nómina semanal. Ya, mira, aquí como pueden ver, tenemos, ya está sincronizando esto con, bueno, lo van a ver mañana de nuevo, para que se entienda la duda. Esto ya sincroniza con GoSocket, ¿ya? Los documentos recibidos. Desde acá, en los pendientes van a poder aceptar y reclamar estos documentos, ¿ya? Pero tenemos una duda.
+- [11:08] Hay casos de facturas recibidas que vienen sin fecha de vencimiento, ya. En ese caso, la vamos, la van a asignar desde acá, desde el libro de compras o se va dentro de la nómina semanal que te aparezcan como registro sin fecha de vencimiento y que puedan ustedes asignárselo manualmente.
+- [11:32] ¿Por qué no tendría fecha de vencimiento? Porque al contado. Algunas vienen al contado.
+- [11:45] Entonces esas no te van a dar fecha de vencimiento. Y hay algunas que las emiten sin fecha de vencimiento. No lo colocan.
+- [11:53] Sí, es que no es obligatorio el campo para el servicio puesto interno.
+- [11:57] Y ahí tú lo tomas como opción que son a 30 días.
+- [12:01] Ok, por ejemplo, yo diría tomarse lo que dijimos ayer del proveedor.
+- [12:08] Nosotros habíamos pensado, Sergio, una cosa de la que estábamos conversando ayer,
+- [12:12] que era que, claro, cuando hacemos la orden de compra y elegimos al proveedor,
+- [12:16] Nuestro maestro, esos proveedores ya tengan como su, por así decirlo, sus condiciones de pago, ¿Verdad?
+- [12:24] Sería la parametrización acá, que cada uno tenga como su especificación de la fecha de caducidad.
+- [12:31] Claro. Ah, que puede ser a 30, 60, 90 días.
+- [12:35] Claro, que puede quedar ahí estipulado, así como por defecto, obviamente cuando el usuario está haciendo la orden de compra, lo puede editar si lo merece, ¿Verdad?
+- [12:46] Y después la factura asociada a esa orden de compra queda con esa fecha, con esas fechas de vencimiento, que con la que ya trabajamos tenemos todo acuerdo con los proveedores, ¿vale?
+- [12:56] Sería entonces aquí como dejar como una fecha tentativa y que aparezca al momento de recibir el documento, ¿verdad?
+- [13:04] Claro, porque ahí va a ser la orden de compra y cuando elija el proveedor, ese proveedor ya viene con esas fechas de vencimiento, ya sea del método del IVA.
+- [13:17] Una... un documento que no sea de un proveedor que tengan registrado.
+- [13:30] Es que en algún momento lo vas a tener que ingresar porque voy a tener que generar la orden de compra.
+- [13:35] ¿En ese caso sería bueno que les pregunte o que les advierta si este proveedor no está registrado o desea registrarlo?
+- [13:42] No. Claro, o sea, le va a salir la alerta en este caso a la LUPE, a Contabilidad.
+- [13:48] Hay que tener esta factura y no hace match con ningún proveedor que tenemos como nuestro registro, ¿Verdad?
+- [13:54] Y en caso de que, por ejemplo, no exista ese proveedor, la factura debería quedarse sin poder hacer movimiento hasta que se registre el proveedor aquí en el master, ¿Verdad?
+- [14:02] Exacto.
+- [14:03] Perfecto.
+- [14:04] Queda como en alerta o, no sé, mostrando ahí en rojo al usuario, ¿Verdad?
+- [14:09] O sea, ¿No se va a poder tampoco aceptar o reclamar? ¿O solo reclamar?
+- [14:15] No va a tener que quedar ahí porque a lo mejor alguien pidió ese servicio pero no generó orden de compra.
+- [14:22] Puede ser que el usuario nunca hizo el flujo completo. Llegó la factura. Le va a salir un mito ahí y va a empezar a disparar de quien es.
+- [14:47] ¿Pero qué haría con stand-by? No sé si se rechaza el tiro.
+- [14:50] No, si tenemos siete días para hacer el movimiento.
+- [14:54] Ya, ok.
+- [14:58] Sí, le van a tirar la oreja a la persona que no siguió el flujo.
+- [15:03] Claro.
+- [15:06] No hizo cotizaciones, no hizo presupuesto, no hizo la orden de compra, ¿entendés? Nada.
+- [15:13] Entiendo, entiendo.
+- [15:25] Como lo que hablábamos el otro día, Mario, que puede ser que la orden de compra nazca, o sea, nace dentro, puede nacer dentro de una proforma, o qué sentido tiene la proforma, para ser siempre sincero, porque yo lo había entendido que era como una preorden de compra.
+- [15:47] Claro, o sea, es como un respaldo al final, más que una proforma, yo lo veo como una cotización, o un presupuesto, o sea, que haya pedido.
+- [15:57] Pero no nace así como sistemáticamente de ahí, al final nace de la digitación directa de la orden de compra. Lo que nosotros pedimos es que el usuario que está viendo el servicio, en este caso por ejemplo yo, Mario y yo estoy viendo el servicio de software, yo vaya aquí y genere obviamente el servicio de desarrollo software, la plataforma de contabilidad, obviamente los montos, el proveedor, el neto, IVA, todo el tema.
+- [16:24] Y en adjunto le pongo a la Lupe, o no a la Lupe, al sistema, dejo la cotización que hicimos, el presupuesto que ustedes me dieron, ¿está bien?
+- [16:31] Ya, la cotización recibida. Y tú generas una orden de compra juntando ya.
+- [16:36] La propuesta que me mandó comercial de ustedes, la juntaría ahí, ¿está bien? Y ahí yo genero la orden de compra.
+- [16:43] Después cuando llegue la factura por GoSocket, ahí pa' hacer el match, y después sigue el flujo completo.
+- [16:50] Ok. Pero ahí, por ejemplo...
+- [16:55] Y después, obviamente, cuando la LUPE tiene que pagar, tiene todos los respaldos para ver, oye, esta es la cotización, esta es la orden de compra, esta es la factura, están los tipos de cambio de venta, todos los montos bien asignados, se registra en todas las monedas correspondientes, está todo en orden.
+- [17:14] Ya, ok. Pero, por ejemplo, para el caso de los contratistas, porque nosotros, si podés compartir pantalla, perdón, ¿ya está el módulo contratista, Carlos?
+- [17:26] Nosotros habíamos construido, estamos construyendo una proforma, pero según los
+- [17:32] ingresos diarios que se van creando para un contratista.
+- [17:39] Entonces ahí, por ejemplo, si puedes ver las parametrizaciones primero para que se entienda la carga previa.
+- [17:45] Por ejemplo, esto ya es la parametrización de contratista. Ahí, Carlos, si te puedo explicar, me va a dar algo.
+- [17:55] Sí, claro.
+- [17:56] Aquí, por ejemplo, tenemos lo que vendría a ser la carga de las labores, las actividades, y las asociaciones de estas labores con actividades, junto con lo que vendría a ser las unidades de control y los tipos de contrato.
+- [18:13] Entonces, esta sería como la primera etapa donde se parametriza todo lo que va a utilizarse del módulo de contratistas, donde después, claro, efectivamente, aquí en el listado se ingresa lo que vendría a ser cada uno de los contratistas.
+- [18:26] ¿Y en el ingreso diario es donde se hace la carga de estas parametrizaciones?
+- [18:31] Que aquí en ingreso diario sería como lo que se le tiene que pagar al contratista, ¿cierto? Así lo entiendo yo.
+- [18:39] Sí, sí es así.
+- [18:42] Perfecto, entonces, y ahí es donde después de las tarifas, se agrega el ingreso diario como que se está construyendo el detalle de lo que yo le tengo que pagar al contratista.
+- [18:56] Luego, en proforma y factura, nosotros dejamos que pueden crear una nueva proforma seleccionando el contratista.
+- [19:04] ¿Puedo darle a crear una nueva proforma?
+- [19:07] Por ejemplo, seleccionan el contratista y ahí, como pueden ver, los ingresos pendientes son los ingresos diarios que están pendientes de asignación.
+- [19:17] ¿Se entiende?
+- [19:19] Ya.
+- [19:20] Entonces, ¿y aquí qué es lo que vamos a hacer?
+- [19:22] Ahí se puede visualizar.
+- [19:25] ¿En qué momento yo coloco ahí cuáles son todos los movimientos, todas las
+- [19:32] labores que el Contradicta hizo? Serían en ingresos diarios. En ingresos diarios yo voy cargando la información de los labores que hizo el Contradicta, ¿cierto?
+- [19:47] Y después yo voy a, por ejemplo, ¿puedes cargar una…? Sí, por supuesto.
+- [20:01] No creo que pase septiembre.
+- [20:08] Ese fue el 18, parece.
+- [20:10] Ay, sí. La caña, la caña del 18.
+- [20:14] Obviamente el precio yo creo que viene definido por la labor, ¿no? Más que digitarlo, ¿no?
+- [20:21] Lo que pasa es que ese valor lo da don Pablo.
+- [20:26] No, pero eso es cosa de los pobres. Claro. Ya, ingresaste lo que hicieron.
+- [20:34] Por ejemplo, y ahí tenemos, si se dan cuenta, hay dos pendientes, que es cuadrilla packing, perdón,
+- [20:41] para el contratista, cuadrilla packing. Tenemos dos labores sin asignar, ¿cierto? Que es la de 100.000 pesos y la de 29.900.
+- [20:52] Y luego vamos a proforma, yo creo una nueva proforma, y ahí me listan las dos que están pendientes, ¿se entiende?
+- [21:04] Si la seleccionas, selecciona la... Aquí hay un ajuste que vamos a hacer, porque el previsualizar está mal, que ese va a ser como un totalizado. Vamos a dejar el totalizado, entonces tienes que seleccionar la primera, Carlos.
+- [21:21] Y al seleccionarlas, abajito te va a aparecer el total, así como lo hizo ahora, ¿cachai? Y en base a esto, se bajen de CODOS.
+- [21:31] Nosotros estábamos, esa es la duda que tenemos en realidad. En base a esto deberíamos crear la proforma y la proforma después poder construirla o traspasarla a una orden de compra.
+- [21:43] No, la proforma es en este módulo, es como la orden de compra.
+- [21:53] Y cuando el contratista me emita la factura a mí o usted emite una factura de compra hacia él.
+- [22:07] En el módulo que tenemos ahora nosotros creamos la proforma y la proforma queda ahí, entonces el momento de contabilizarla, yo tomo la proforma y se contabiliza, es como la orden de compra.
+- [22:20] Pero en realidad nunca se asocia a la factura del proveedor.
+- [22:26] Sí, se asocia a la factura, porque yo le doy la proforma y ellos me facturan.
+- [22:34] Referenciando la proforma en este caso.
+- [22:37] Referenciando la proforma.
+- [22:38] Y ahí se contabiliza. Ah, entonces en el libro de compras podrían ustedes asociar órdenes de compra y proforma entonces.
+- [22:48] Sí. Según el módulo. Igual en el caso del módulo contratista, no alcanzamos a revisarlo ayer, entonces sería bueno igual dejarlo un poquito en stand-by.
+- [23:01] Más o menos por ahí va la lógica, ¿cachai? Sí.
+- [23:04] Pero aguántenmelo un poco, para poder revisarlo. Ya, ok.
+- [23:09] Porque al final, claro, ¿qué nos pasa? Que estábamos avanzando un poco como cada uno por su parte. Entonces, ahora cambiamos la forma de trabajar interna y vamos, estamos con reuniones semanales y todo para ir coordinando igual cómo le afectan todos los módulos a todos, ¿cachai?
+- [23:25] Entiendo, entiendo. Ya, perfecto. Pero bueno, nosotros igual vamos a hacer este ajuste, o sea, creo que hasta aquí.
+- [23:33] No, por ahí el tema. No, no, no.
+- [23:35] Hasta antes de hacer la asociación, al parecer estamos bien.
+- [23:39] Claro, va por ahí, pero aguántenme un poco como contratista.
+- [23:43] Perfecto, ya, ok. Vamos a compra. Bueno, compra es la duda de la fecha de vencimiento que ya la resolvimos.
+- [23:53] Lo que... ¿Cuál era la otra duda, Carlos?
+- [24:01] Con respecto a lo que vendría a ser la contabilización de acá, que si mal no me equivoco, aquí tenemos un botón.
+- [24:10] Que es para contabilizar y registrar el pago. Entonces, la duda era si es que servía desde acá o tenía que verse directamente desde el otro módulo de contabilidad o tesorería.
+- [24:21] ¿Cómo así? No te caché.
+- [24:26] Para el registro del pago.
+- [24:28] Por ejemplo, en ventas, para que se entienda el ejemplo, anda venta, Carlos. En ventas, pueden contabilizar desde acá. Y si tienen alguna por contabilizar, sí, ahí viene una.
+- [24:45] Por ejemplo, así fue como lo solicitó María Jesús, que está el detalle de la factura y cada línea de detalle una cuenta contable y un centro de costo.
+- [24:55] Ya, perfecto.
+- [24:56] ¿Esto va a ser igual para las compras o va a ser una cuenta contable por proveedor?
+- [25:02] Yo creo que queda parametrizado al final, ¿no? Cómo afecta al final la contabilización.
+- [25:12] Lo que pasa es que ahí se va a contabilizar automático.
+- [25:18] En el libro de compras, ¿por qué va a tener la orden de compra?
+- [25:22] Ah, claro. Si tiene orden de compra, ahí pueden, sí, por el detalle, cada línea de detalle de la orden de compra va a tener una cuenta contable y un centro de costo, ¿no?
+- [25:33] Correcto. Viene con ese de close ya.
+- [25:36] Ya. Ah, o sea, entonces las facturas no se van a, las recibidas no se van a poder contabilizar hasta asociar una orden de compra o una proforma.
+- [25:49] ¿Qué es lo que hablamos ayer? Al final queda, cuando está la OC, las facturas por recibir.
+- [25:56] ¿Facturas por recibir?
+- [25:58] Sí.
+- [25:59] ¿Y de ahí?
+- [26:00] Después llegaba la factura con la OC, como había proveedor, y facturas por pagar.
+- [26:09] Se metía más las facturas por recibir.
+- [26:12] Claro.
+- [26:17] Ya, entonces. Ah, ya. Y eso, Carlos, no sé si agregamos la orden de compra, poder asociar la cuenta y el centro de costo.
+- [26:24] No, no está... Ya, eso hay que dejarlo en un localito para poder agregarlo.
+- [26:28] ¿Qué usaba? ¿La orden de compra?
+- [26:33] Sí, mira, mete la orden de compra. Pasa directo la...
+- [26:37] ...coba contabilizada. No, no, pero es el
+- [26:42] documento recibido, sino que es la orden de compra. Como al generarla,
+- [26:50] me acuerdo, ítem contra el punto 2.
+- [26:56] Sí, aquí vas a centro de costo.
+- [27:00] Ah, pero nos faltaría la cuenta.
+- [27:02] Faltaría la cuenta.
+- [27:04] Eso hay que agregarlo también.
+- [27:06] ¿Lo agregaríamos entonces acá y ya vendría la contabilización realizada?
+- [27:10] Sí, claro. Una vez que llegue la factura se va a contabilizar según la información de la...
+- [27:18] Uy, y tengo una pregunta. Porque hay casos, bueno nos ha tocado que...
+- [27:27] El cliente genera la orden de compra, pero la facturación que le hace el proveedor es parcializada.
+- [27:33] Puede ser que el 50% le facture en este mes, el otro 60%, perdón, el otro 50% en dos meses más.
+- [27:41] Ahí, ¿cómo van a contabilizar? Ahí se tendría que ir recepcionando...
+- [27:48] Claro, que es lo que hablábamos ayer en el tema cuando teníamos como una...
+- [27:52] Tendríamos como esta OC madre, por así decirlo, que conversamos.
+- [27:58] Que es como grande. Después, si llega parcializada, debería generarse como una OC hija para que se asocie a esa factura.
+- [28:07] Te lo explico. Tendríamos la OC 100, por ejemplo, por 100.000 y 10 cajas.
+- [28:15] Si llega la factura parcializada, tendría que generarse como la OC 100.1 que haga el neteo con la factura.
+- [28:23] Porque ya viene asociada a la 100.
+- [28:27] ¿Y quién contabiliza ahí? Pensando en que se pueda contabilizar, porque si no queda todo el rato parcializado.
+- [28:38] Y esto es lo que conversábamos ayer, nos va a pasar mucho en insumos. Y después, obviamente, cuando llegue el resto de la factura, sería la 100.2 y se cierra como todo el caso.
+- [28:50] ¿Pero ahí quién contabiliza? ¿Contabilizan las órdenes de compra hijo o la madre? La hija.
+- [28:59] O sea, en cierto modo, la madre no va a contabilizar nada. Es solamente el control que sirve.
+- [29:05] Claro, no va a contabilizar nada. Eso. No haría nada.
+- [29:11] Entonces ahí, en la emisión de la orden de compra, tendríamos que saber identificar cuándo es una orden madre.
+- [29:18] Porque, por ejemplo, si es una orden madre, no te debería pedir centro de costo ni cuenta, ¿o sí?
+- [29:28] Yo creo que sí.
+- [29:31] O de la madre se debería heredar a la otra, pues, ¿verdad?
+- [29:33] Sí, claro. Y hereda todo el resto, ¿no?
+- [29:36] Claro. Y de la hija se podría dejar como un centro de costo diferente o, al ser como del mismo concepto, por así decirlo, deberían ser todos igual, ¿verdad?
+- [29:47] Deberían ser todos igual.
+- [29:49] Pero es que hay una minuta, por ejemplo, puede ser que, no sé, de la orden de compra que se genere en ustedes, puede tener dos líneas de detalle, ¿cierto?
+- [30:00] Y cada línea de talla tiene una cuenta con tablas diferentes. Y lo mismo un centro de costo diferente. Ambas líneas.
+- [30:09] Y la factura que estoy recibiendo este mes de mi proveedor, está asociada a la primera línea de la orden de compra.
+- [30:18] Entonces, esa orden de compra hija que voy a crear yo, va a tener que ser con una sola línea.
+- [30:26] Claro. Va a ser de una sola línea que hace similar la factura.
+- [30:32] Ahora, si es la línea 1, por ejemplo, si la factura 2 llega de nuevo por la línea 1, ahí no va a ser macho. Va a tener la alerta o la va a rechazar. Ahora, si llega por la línea 2, se completa la orden madre. Pero respeta, obviamente, el centro de costo y la cuenta contable según la línea, al final.
+- [30:54] Claro, lo que pasa es que en el formato de QML, cada proveedor o cada empresa en sí trabaja con códigos de productos totalmente distintos.
+- [31:07] A no ser que ustedes le exijan que el código de producto de cada línea sea acorde a los códigos de ustedes, porque puede ser que las dos líneas, por ejemplo, sean de 100.000 pesos cada línea, y si te piden la factura por 100.000 pesos, tú no vas a saber a qué línea corresponde esa factura, a no ser que nosotros, cuando si la factura, no se me ocurre cómo.
+- [31:51] ¿Cómo construir órdenes de compra, hijo? Claro, empezando para que sea como automático.
+- [32:02] Lo que pasa es que la orden de compra madre va a estar aprobada, solamente va a faltar la recepción,
+- [32:13] y la recepción es la que hay que ir haciendo parcializada. ¿Me entiendes o no?
+- [32:37] Entonces, si en la orden de compra yo tengo mil cajas y la factura yo recepcioné cien, ¿me debiese dejar recepcionar solo cien? Y me va a dejar como ese ítem, como la orden de compra hija, uno. Tomándome todos los datos de la orden de compra de madre.
+- [33:06] Por eso decía, datos de cabecera, el detalle no podría ser el mismo.
+- [33:13] Lo que pasa es que si yo tengo una orden de compra, esa orden de compra yo la voy a hacer por mil maletas y la factura va a venir por 100 maletas, porque va a venir asociada a esa orden de compra y se van a recepcionar siempre.
+- [33:34] Claro, por eso, ese movimiento, ese asiento va a ir solo con tiempo.
+- [33:42] Sí.
+- [33:42] Y después, después de que me lleguen 200 más, iba a ser la hija dos, pero de esa misma orden de compra.
+- [33:50] Entonces ahí cuando sea una orden de compra, o sea, la factura que sea de monto menor a la orden de compra,
+- [34:04] desde ahí vamos a tener que hacer que se genere o se cree la orden de compra hija, con el movimiento, con el monto de la factura recibida.
+- [34:15] Claro.
+- [34:18] Claro, en el caso cuando el monto es igual, al final queda al tiro y listo nomás.
+- [34:23] Claro, ahí se cierra, ahí se contabiliza y listo, pasa, pasa, se cierra esa orden.
+- [34:29] Claro, va a ver cómo contabilizar las órdenes de compra pequeñas.
+- [34:35] Claro, las facturas que son parcializadas, ese es el tema, ese es el problema.
+- [34:38] Sí, ese es el caso.
+- [34:40] No, pero yo lo entendí, no sé Carlos si tú lo entendiste.
+- [34:43] Algo.
+- [34:47] Y lo más seguro es que nos pase más que nada con los insumos, si al final ahí están, cuando son cajas, materiales de ese tipo, que nos mandan, porque claro, acá por lo general se hace una orden de compra, corrígeme Lupe, por montos grandes, y después obviamente se van recepcionando como por baches, al final por grupitos, ¿y qué va a pasar? Pueden pasar dos casos, que al final,
+- [35:17] Cuando van llegando las órdenes de compra hija, se va como consumiendo este stock, por así decirlo, que tiene la orden de compra grande, y si al final termina machado la cantidad en el monto, se cierra.
+- [35:31] Y si la última factura llega por un monto mayor y mayor cantidad de caja, va a quedar en el aire, o sea, va a quedar ahí pendiente.
+- [35:49] Te cotizaron, no sé, las mil cajas, ¿cierto?
+- [35:57] Pero dentro del transcurso del proceso tú le dijiste, oye, sé que necesito doscientas más, ¿cierto?
+- [36:03] Pero tu orden de compra tú le hiciste por mil, pero la factura recibida de mil doscientas, mil doscientas cajas.
+- [36:11] Ahí, en ese caso, ¿qué es lo que se debería hacer?
+- [36:14] ¿Se debería, al final, el usuario que está viendo esa factura o esa recepción?
+- [36:20] Va a tener que adelantar la solicitud y que al final se modifique la orden de compra, ¿ok? La orden de compra más.
+- [36:26] Y esa edición va a ser como, yo creo, una vez y la va a poder modificar con gerencia, ¿ok?
+- [36:35] Claro, claro. O sea, si aumenta, se supone que debería pasar por el flujo de aprobaciones siempre y cuando cumpla con las condiciones.
+- [36:45] Ok, entonces se debería editar la orden de compra.
+- [36:51] Y no sé por si el módulo pasó de 1.000 a 10.000. Pucha, ahí necesita la aprobación del gerente ahora. Según nuestra cadena de aprobación.
+- [37:00] Obviamente va a tener que seguir el flujo. Y ahí obviamente la persona va a tener que dar las explicaciones de qué pasó.
+- [37:05] Porque ahora está pidiendo más. Y al final nos sirve para ponerle como un poco de control también.
+- [37:12] Entiendo. Y ese flujo, Mario, por ejemplo, no sé, el que estamos planteando. ¿Puede que te tome más de 7 días?
+- [37:24] ¿Volver a aprobar todo? Claro, por ejemplo, si de 7.000 pasó a 10.000.
+- [37:31] No, no diríguese, no diríguese. Tiene que moverse rápido. Bueno, ahí va a depender obviamente de la gestión que haga el usuario, pero si el usuario va a apretar el zapato, no va a estar una semana ahí aguantando la factura.
+- [37:43] Sí, más que nada porque después de los 7 días ya pasa automáticamente a aprobar, entonces...
+- [37:48] Por eso la pregunta. Si el proceso iba a ser un poco más largo de siete días, lo mejor sería que la rechacen y pidan que refacturen. Pero si no, de buena parte, siete días.
+- [37:59] Contrabe. Que va a haber el tema de la contabilización. Va a haber que esa factura no está contabilizada y va a haber la orden de compra que no coincide en los montos.
+- [38:11] Entonces, va a ir donde el encargado y se tiene que agilizar eso, sí, en menos de siete días.
+- [38:18] En el día de hoy, yo diría que ha regularizado todo. Máximo al finir aquí el ERP va a estar ahí con la mansaleta en rojo que hay una factura que no cuadra con la orden de compra.
+- [38:34] Claro. Eso es lo que también nos faltó. Hay que implementar el tema de la notificación cuando la factura viene sin referencia de orden de compra.
+- [38:46] Claro.
+- [38:48] En ese caso, cuando viene sin la referencia, obviamente tiene que quedar la alerta y tiene que quedar la opción de asignar manualmente.
+- [38:55] De hecho, aquí ya avisa, no lo avisa con una alerta, pero avisa que no viene con la orden de compra asociada.
+- [39:02] Claro, ahí va a tener que entrar en contabilidad, me imagino, y va a tener que al final asignarla a la orden de compra que tiene ahí pendiente.
+- [39:09] Obviamente el sistema no le va a mostrar las órdenes de compra que ya están asociadas a alguna factura. O las facturas de compra que son de ese proveedor, a lo mejor.
+- [39:21] Sí, una idea que acá vamos a implementar es que levanto el modal y te va a listar solamente la orden de compra de ese proveedor, pero que estén pendientes de asignación.
+- [39:31] En el XML no viene la factura, la orden de compra, pero si yo me voy a la orden de compra, debo revisar si hay alguna orden de compra para eso. Eso es lo que yo haría.
+- [39:44] ¿Cómo? Lo escuché muy bien, Lupe.
+- [39:47] Lo que pasa es que ahí está diciendo que en el XML no viene la OC, ¿cierto?
+- [39:53] Claro, en la factura.
+- [39:54] En la factura. Pero yo tengo que revisar primero si hay una orden de compra asociada a ese proveedor.
+- [40:03] Claro. La idea es que aquí te va a listar todas las órdenes de compra que tenga ese proveedor.
+- [40:12] O siempre y cuando que estén órdenes de compra abiertas o no cerradas.
+- [40:17] Claro, y debería avisar, o sea, en este caso, pueden haber más casos, yo creo que eso es lo que habla Lupe, pueden haber casos donde la factura llegó y ni siquiera existe orden de compra de ese proveedor, o la factura llegó, hay una orden de compra, no viene referenciada, entonces hay que asignarla manualmente. Entonces, al final son como dos tipos de alertas que al final pueden generarse.
+- [40:39] Ya, ok.
+- [40:45] En ese caso, por ejemplo, si llegase sin orden de compra asociada, porque igual en las órdenes de compra pasa por el tema de las aprobaciones internas, no sé si es que se debería tener la opción de que desde acá se genere, en caso de que no exista, tener la opción de generarla y directamente que llegue la notificación a los aprobadores, porque sería igual como un tema que deberían revisar luego, ¿verdad?
+- [41:13] Claro, o sea, creo que te va a salir el botón de generar orden de compra y te va a redirigir al generador de orden de compra o no, no me puedo acertar el paso de aprobación al final.
+- [41:23] Entonces sería como el filtro que busque por la razón social y si no existe que tenga la opción de ir al generador de la orden de compra.
+- [41:30] Claro. Ya, genial.
+- [41:32] Pero ahí por temas de permisos, ¿quién revisa el libro de compra va a ser la misma persona que genera orden de compra?
+- [41:40] Sí, tenés toda la razón.
+- [41:41] Entonces, no solo, que sea como contablemente, suponte yo, lo que haría es que me comunicaría con la persona encargada y él tiene que volver a hacer la orden de compra y avisarme para poder yo contabilizar esas facturas.
+- [41:56] Perfecto. Sí, porque hay por temas de permiso o por dónde.
+- [42:00] Tienes toda la razón. Claro, en el caso que ya está creada la voy a asignar.
+- [42:03] Claro.
+- [42:04] Tú asigna.
+- [42:05] Claro, sí.
+- [42:06] Pero si no...
+- [42:07] Solamente...
+- [42:08] Un botón de alerta y le aparece al final al...
+- [42:12] Claro, no se asocian a usuarios. Lo que sería bueno, por ejemplo Lupe, tú dijiste que tú revisas y no viene con orden de compra o no existe la orden de compra. En ese caso, ¿qué haces tú? ¿Tú te comunicas con quién? Con el que pidió el servicio. ¿Cómo sabes tú quién lo pidió? Fui investigando.
+- [42:43] El poder de conocer el negocio.
+- [42:45] Es que estaba pensando, por ejemplo, acá, si no tiene orden de compra, no existe la orden de compra, manualmente enviar como la alerta al usuario que tú selecciones.
+- [42:55] Eso es lo mismo, pero al final, claro, el proveedor no está 100% asignado a un solo usuario, ¿cachai?
+- [43:02] No, no, claro, pero no lo digo yo, desde acá el libro de compra, por ejemplo, Lupe está revisando esa factura, la factura X, ¿cierto?
+- [43:11] Y dice, oye, ¿sabes qué? Es del proveedor Juanito y Juanito, en realidad, no tiene orden de compra abierta.
+- [43:17] Entonces, oye, tengo que ver ya, Juanito, ¿quién pidió este servicio? Lo pidió el Mario, por ejemplo.
+- [43:25] Entonces, desde acá, de la misma plataforma, mandaron una alerta a Mario que tal factura está sin orden de compra.
+- [43:33] O sea, más que nada, mandarle la petición o la solicitud de que genere la orden de compra.
+- [43:38] Para esa factura, no sé si lo explico.
+- [43:41] No, porque ahí le mandaría un correo a él, ¿cierto?
+- [43:45] Claro.
+- [43:47] Sí, la idea es que mandarle un correito al usuario Mario, diciéndole, oye Mario, tengo la factura de este proveedor, óleo tanto, pero el monto tanto.
+- [43:56] Pero, por ejemplo, ahí...
+- [43:58] Y tú tendrías que generar ahí la orden de compra.
+- [44:00] Sí, pues ahí me va a pedir generar la orden de compra.
+- [44:02] Pero ahí, por ejemplo, el sistema, cómo va a saber que la factura que llegó de PIN...
+- [44:08] El de Mario. No, no, el sistema no lo va a saber automático, sino que Lupe va a tener que decir, oye, a esto, la factura de PIN, le tengo que notificar al Mario. Selecciono al Mario como usuario y le pongo enviar notificación Ahí también podríamos utilizar el sistema de notificaciones que tenemos acá y, por ejemplo, no sé, si le llega al Mario y le da clic, podría llevarlo directamente al generador de orden de compra con el root y que ingrese los datos de ERP.
+- [44:40] Así sería Lupe que selecciona, por ejemplo, este no tiene orden de compra, selecciona aquí en el visualizador, notificar a, escriba aquí dentro de los usuarios que están registrados en la plataforma y le llegue el correo y también le llega aquí una notificación, que es la notificación para facilitarle igual un poco la vida a Mario que lo haga rápido, que se le abra el generador con el root pero que él ingrese el detalle
+- [45:06] Pero sí, lo importante para ambos es el tema de ver la forma de tener trazabilidad sobre esa petición o ese envío hacia el usuario.
+- [45:19] ¿Por qué? Porque Lupe puede mandar la petición y Mario puede decir, nunca me llegó.
+- [45:25] Podríamos agregar acá un estado o una información. Por ejemplo, cuando ya se notificó que aquí aparezca un ícono de información y cuando pasa el mouse por encima...
+- [45:34] Se notificó a Mario en la fecha tanto. Y ese se puede ir también actualizando.
+- [45:38] Perfecto, sí, eso. Bueno, ya.
+- [45:41] Claro, y al final...
+- [45:43] Sí, porque en todo sistema, en todo sistema los usuarios dicen, oye, yo no...
+- [45:49] No me llegó, nunca.
+- [45:50] Naima avisó.
+- [45:51] Sí, pues, seleccionar la clasicidad en ese caso es súper importante.
+- [46:02] Ya, y ¿qué otras dudas teníamos sobre, bueno, estas compras?
+- [46:11] Ah, aprovechando aquí una duda, y también con lo que vendría a ser esto que viene acá, que es lo que vendría a ser la asociación de los centros de costo, teníamos también la duda de que la parametrización en un principio en el plan de cuentas se había solicitado de que esa asociación se hiciera desde acá.
+- [46:35] A la cuenta, a la cuenta, vaya. Directamente a la cuenta.
+- [46:42] Pero cuando hacemos la asociación directamente, acá en la cartola, también nos pregunta la misma información, entonces nuestra duda era si es que prevalecía esta configuración del plan de cuentas que se solicitó casi en los principios de la creación del ERP, si es que la dejáramos, porque si se dan cuenta también tiene la opción de exigir el centro de costo, elemento de costo y área de negocio.
+- [47:11] Yo creo que nos quedamos con ese punto. Para que nos confirmen, sí, porque nos da conflicto como esta implementación se hizo casi al principio y la implementación de la parte de acá, cuando intentamos hacer la asociación y no tiene, por ejemplo, el tema de lo que vendría a ser, perdón que se me fue el nombre, centro de costo.
+- [47:34] Exacto, cuando no vendría directamente el centro de costo o venía, por ejemplo, que exigiera especies o cualquiera de esta exigencia, nos hacía venir a editarlo desde acá antes de poder hacerlo acá en la contabilización de la cartola.
+- [47:49] Entonces, para saber dónde predomina, dónde se hereda, cuál dejamos y cuál eliminamos.
+- [47:54] Ya, deja este caché, vamos a conversarlo.
+- [48:02] Perfecto, porque eso también pegaría lo que vendría a ser acá la...
+- [48:09] Es la orden de compras, ahí también, si se deja del otro lado, aquí lo heredaríamos, o si es que tiene que ser de manera independiente que se vaya ingresando desde acá, eliminarlo desde acá, o que no sea exigente y que sea una sugerencia solamente.
+- [48:20] Claro. En realidad afecta a todo, tanto compra, venta, y tesorería.
+- [48:28] Exactamente. ¿Qué más? Creo que eso era, ya el otro vendría a ser la parte de tesorería directamente.
+- [48:40] Uy, espérame, es que yo iba a levantar un punto, pero no se me acordó.
+- [48:44] Ah, perdón. Me anticipé mucho.
+- [48:48] No, no, no. Dale nomás, a ver si me acuerdo.
+- [48:51] Igual nos vamos a juntar mañana, así que...
+- [48:54] De aquí a mañana, además que no he acordado.
+- [48:57] Lo que vendría a ser acá también, la parte de las cartolas. Acá, como pueden ver, dejamos los filtros para dejar también los egresos.
+- [49:06] Y aquí se puede hacer una asociación masiva, en caso de que, por ejemplo, estos egresos correspondan directamente a una nómina, se pueden hacer directamente la asociación a cada semana correspondiente, mes y año, y también se puede hacer de manera individual, que esto fue una de las últimas cosas que conversamos, donde se hace la contracuenta, código financiero, destino, y aquí vendría a ser la asignación de la nómina.
+- [49:36] Porque desconozco si en algún caso se dará de que varias de las cuentas vayan también a la misma
+- [49:44] contracuenta, código financiero, destino, o lo dejamos solamente para lo que vendría a ser la nómina.
+- [49:48] Estoy pensando.
+- [49:55] Lo que más le convenga, así que si no tienen la respuesta hoy día, por último mañana.
+- [49:59] Lo voy a pensar.
+- [50:01] Sí, la idea es que sea cómodo también para ustedes.
+- [50:04] Pero ahí, Lupe, esa selección, por ejemplo, para asignar la...
+- [50:11] La nómina semanal. ¿Te queda cómodo así, cierto? ¿O no?
+- [50:17] Sí, sí se queda cómoda.
+- [50:22] Ojo que esto se habilita solamente para los egresos.
+- [50:24] Sí, de hecho aquí el filtro cuando están todos no aparece la opción de seleccionar masivamente.
+- [50:29] Ya.
+- [50:36] Bien, la duda que teníamos.
+- [50:38] ¿Sí?
+- [50:39] Sí, sí está bien.
+- [50:41] Perfecto.
+- [50:42] Y también lo que vendría a ser acá, contracuentas, código financiero, destino es...
+- [50:47] Aparte de lo que le estábamos diciendo del plan de cuentas también, ahí quedaría eso pendiente.
+- [50:52] ¿Y qué más? De la nómina semanal. Bueno, aquí tenemos solamente una cargada, así que me voy a apoyar de lo que vendría a ser el modo demo.
+- [51:13] Tenemos lo que vendría a ser la duda si es que, por ejemplo, acá en esta parte, porque pensando en que estamos viendo siempre el periodo contable seleccionado, no sé si es que...
+- [51:25] En algún punto será necesario que tengan la opción de ver todos los pendientes independiente la semana y el mes.
+- [51:35] Sí. Perfecto.
+- [51:38] Sí, porque yo voy revisando para adelante.
+- [51:43] Entonces, lo que me imagino sería quizás dejar como una pestañita aparte que sea solamente los pendientes de todos los periodos para que no tengamos como tanto filtro acá.
+- [51:52] Ya.
+- [51:53] Porque de momento los que tenemos son los que habían pedido que dejar solamente los pendientes, pero va a la semana de este periodo.
+- [52:00] Sí.
+- [52:01] Entonces aquí sería como dejar uno nuevo que filtre los pendientes de todos los periodos.
+- [52:06] Hasta esta semana, porque al final la semana es como un hasta, ¿no?
+- [52:11] Si gustan también lo podríamos dejar para que sea desde hasta.
+- [52:14] Igual que eso también serviría en caso de que necesiten exportar la información, porque se puede exportar esta planilla.
+- [52:27] Claro, o sea, me causa como cosas que desde acta, puta, justo te trato una semana y quedó algo pendiente y no lo viste, ese tabú, ¿verdad?
+- [52:38] Es que yo trabajo con semanas. Yo trabajo con semanas. Si esta semana hay algo de agosto, tendría que caerme...
+- [52:56] O quizás un visualizador de semanas.
+- [52:59] Yo creo que no.
+- [53:01] Cosa de que sea como...
+- [53:03] Dar clic acá y que aquí muestre todas las semanas y que te muestre con un numerito qué movimientos pendientes tiene cada esa semana.
+- [53:11] Ahí en mi Excel, parece que tengo aquí.
+- [53:16] Espérate. ¿Cuál?
+- [53:19] Ese. Ahí, ¿no veis? Yo voy viendo todas las semanas.
+- [53:23] Y me va dando. Entonces yo me meto en esa semana y veo qué es lo que tengo que pagar.
+- [53:31] Mira, le puedo compartir un poco el Excel.
+- [53:44] Ahí están cuando lo vean. Voy a dejar de compartir un poquitito.
+- [53:53] Sí, sí, yo veo. Ahí estoy viendo.
+- [53:57] ¿Se ve? Ah, claro, sale año, semana y fecha de pago.
+- [54:02] ¿Están viendo el Excel o...? Sí, el Excel sí.
+- [54:07] Aquí usted pasa... No lo veo.
+- [54:11] ¿Qué no ven? ¿El Excel? ¿Sí?
+- [54:14] ¿Están viendo el Excel, verdad? Sí, sí.
+- [54:17] Ah, ya. Bien.
+- [54:19] Suponte yo aquí, en semana yo filtro, aquí me está diciendo que yo otra vez estoy trabajando en la semana 39, en la 39 que tengo ahí, pero yo también ya está, suponte esta semana, yo ya estoy revisando qué es lo que tengo para la próxima semana.
+- [54:38] Claro, sería bueno tener arriba como una tablita así, como ayuda memoria, qué tiene pendiente para atrás en la semana que está y qué tiene pendiente la próxima semana.
+- [54:52] Claro, y las semanas así, porque suponte, mira, es que yo la tengo filtrada. Aquí, desfiltro, borras por semana. A mí me da hasta todo.
+- [55:01] No se vieron si los filtros están compartiendo solamente la ventana y no se alcanzan a ver los filtros.
+- [55:09] Qué buceo.
+- [55:15] Si comparten la pantalla completa se alcanza a ver todo, pero si comparten solamente la ventana, se ve solamente la ventana.
+- [55:21] Qué elegido. ¿Ahora sí?
+- [55:32] Ahí sí.
+- [55:38] Acá, Lupe, desfiltramos el número de semana y acá tiene toda la trazabilidad de todas las semanas que tiene información. Obviamente le debería marcar aquí la semana 39 y todos los pagos que tiene hacia adelante.
+- [55:50] Ah, perfecto.
+- [55:52] Por empresa, lo que está en peso, en dólar. Esto es como al final una sumatoria, al final, totalizado, por así decirlo.
+- [56:05] Eso también porque, por ejemplo, el sistema actualmente funciona mucho con los filtros que están en la parte superior y en este caso no hay como posibilidad o no lo teníamos contemplado de que dentro de una empresa se pueda ver los datos de otra. No sé si es que acá también...
+- [56:25] Esta es la flexibilidad del Excel, pero cuando esté trabajando por empresa al final va a tener que ver por empresa cómo está la cosa.
+- [56:32] Ah, perfecto. Entonces no habría problema en eso.
+- [56:35] En ese caso si nos podrían mandar este excel igual ahora estaba grabando la reunión así que igual lo tengo visualizado en caso de que pese mucho voy a agregar una pestañita para que intentar replicar esta vista con los datos que vamos cargando. Carlos yo creo que sería bueno como lo veo yo es como el calendario de google
+- [57:03] Cuando tú filtras, por ejemplo, por día, semana, mes, aplicar ese tipo de visualización.
+- [57:12] Claro. Al final es un calendario para saber qué...
+- [57:24] Mira, yo creo que vamos a generar una propuesta sobre esa visualización, porque no sé si el mismo Excel va a quedar cómodo igual.
+- [57:34] Porque igual son hartas, van a ser hartas semanas, de forma...
+- [57:39] Obviamente al final la herramienta tiene que ser algo mejor, pero más o menos esa es la lógica al final que necesitas estar visualizando.
+- [57:47] Ahí puede ser que yo busque qué semanas quiero ver.
+- [57:51] Claro.
+- [57:54] Lo otro también que quería consultar, porque aplicamos de todas formas diferentes estados, no sé si están viendo en la pantalleta.
+- [58:02] Aplicamos diferentes estados y por ejemplo bueno aquí vienen los días de atraso uno puede ir filtrando aquí se filtra solamente por semana y mes en esta vista pero aquí se pueden ver los días de atrasos que tiene cada una y por ejemplo implementamos de que cuando pase de 30 días se le agregue el estado crítico no sé si es que
+- [58:24] Convendría tener como este aviso extra cuando pasen cierta cantidad de días, que ya no sea solamente atrasada, sino que sea crítico y cambie el color, de que sea configurable, de que aquí, por ejemplo, haya un configurador de los plazos, como para que vaya como esta alerta y lo vayan ajustando a sus necesidades.
+- [58:43] Sí, eso sí.
+- [58:55] ¿Cuántos días son críticos? El proveedor puede decir cuántos días son críticos, porque a lo mejor varía uno de otro, no sé.
+- [59:04] Y la idea de eso también es que tengan, por ejemplo, filtros rápidos en caso de que necesiten, por ejemplo, uno para los 30 y otro para los 90,
+- [59:11] de que si necesitan filtros solamente los que están en el que vendría a ser 90, que podría ser como súper crítico, que lo puedan filtrar rápidamente.
+- [59:18] O también ordenar en caso...
+- [59:20] De los días, pero siento que igual este filtro de ordenador por días, cuando son mucha información, no sirve tanto como para la visualización.
+- [59:28] Perfecto, entonces haríamos como un mantenedor para que puedan ir agregando...
+- [59:34] Yo creo, bueno si hay FPS ya es como más para ayuda para la gestión interna al final de tesorería.
+- [59:40] Por eso al final quiero que sea un maestro que esté en tesorería, porque es de ellos.
+- [59:43] Exacto, de hecho yo creo que lo dejaría aquí también, porque vendría a ser la única parte que interactúe con la nómina semanal, que es donde se realizan los...
+- [59:51] Así como se agrandan los plazos de los días de pago.
+- [59:54] Genial, lo dejaría entonces como una opción allá arribita donde levanto una nueva pestañita y tengan como la opción ahí bien visual de cómo ordenarlo.
+- [01:00:02] Y bueno, por mi parte estoy viendo mi torpedo. Creo que no tengo más dudas, creo que ya las preguntamos todas. No sé Sergio si es que se me estará escapando alguna de las que hablamos.
+- [01:00:19] Había una, pero es de módulo contratista, entonces no sé si va a haber una.
+- [01:00:24] Sí, contratista stand-by mientras.
+- [01:00:26] Sí.
+- [01:00:27] Perfecto.
+- [01:00:31] ¿Ya? O sea, eso igual es...
+- [01:00:33] Súper.
+- [01:00:34] Hasta luego. Bueno, si nos pueden compartir los flujos que definieron ayer, Mario.
+- [01:00:39] Sí, pues obvio.
+- [01:00:40] ¿No?
+- [01:00:41] Sí, obvio. Al final, claro, lo estamos diagramando un poco para que quede como el esqueleto un poquito bien... bien como... bien clarito para los dos, ¿cachai?
+- [01:00:52] Buenísima. Y para cachar más o menos, por ejemplo, el diagrama tiene todos estos flujos que estábamos conversando, o sea, qué pasa cuando la orden de compra y la recepción llegan por distintos montes, llegan por menos, llegan parcializadas, cómo se van registrando, en qué momento se van registrando la contabilidad, qué paso va pasando, ¿cachai?
+- [01:01:10] Entiendo. Al final es como una guía más o menos de apoyo.
+- [01:01:16] Sí, genial, eso nos va a servir bastante para entender el flujo entre los módulos.
+- [01:01:24] Ah, y la última pregunta. Bueno, Carlos me había comentado que en el módulo contratista trabajó con Rodrigo, ¿era, Carlos?
+- [01:01:35] Sí, sí, con Rodrigo.
+- [01:01:38] Entonces quería ver si, bueno, si nos podrías apoyar un poquito también en el módulo contratista o lo ven ustedes internos.
+- [01:01:46] Ya, si igual le podemos decir.
+- [01:01:48] Sí, no, pero o sea, lo vamos a llamar, pero igual lo quiero que lo veamos todos juntos internos.
+- [01:01:54] No, claro, claro. Pero más que nada como él, recuerdo que en la reunión él como que tenía, manejaba o trabajaba directo con contratistas.
+- [01:02:03] Claro, claro. Si al final en esto del diagrama y todo queremos minimizar esto que nos pasó recién, ¿cachai? Que la parametrización está por un lado y después obviamente le afecta a otro módulo y no lo tenemos conectado, ¿cachai?
+- [01:02:16] Claro.
+- [01:02:18] Eso de aquí para adelante queremos quitar, que no vuelva a pasar ese tipo de cosas, ¿cachai?
+- [01:02:22] Perfecto. ¿Ya?
+- [01:02:27] No sé si tienen más dudas. Por mi parte no. Nos fuimos con harta pega. Eso.
+- [01:02:36] Super. Mañana entonces nos juntamos en horario normal. Claro. Mañana sería como para presentar
+- [01:02:42] la gran parte de lo que vieron, pero con un poquito más de detalle. Y levantamos igual las dudas así
+- [01:02:50] ante todos. Hacemos que también quede respaldo y todos quedemos claritos de lo que está pendiente y que es lo que tenemos que ir resolviendo.
+- [01:02:58] Y déjenme un espacio a mí para mostrarles un poco cómo estamos armando los diagramas, como a los últimos 10 minutitos me los dejan. Más que nada para mostrarles cómo los podemos ir compartiendo.
+- [01:03:10] Si quieres lo podemos ver antes de la reunión, así después de la misma reunión ya sabemos para dónde va la cosa.
+- [01:03:17] Ya, mejor parto yo mañana entonces. Vale, bacán.
+- [01:03:22] Genial.
+- [01:03:24] Ya, Lupe.
+- [01:03:25] Mario, muchas gracias por su tiempo. Gracias chicos.
+- [01:03:29] Muchas gracias a ustedes. Nos vemos mañana.
+- [01:03:32] Nos vemos, que estén bien.
+- [01:03:34] Igual.

@@ -1,6 +1,6 @@
 # Transcripciones locales (Ollama)
 
-Depura `docs/erp-planificacion/agrosoft-levantamiento/fuentes/transcripcion*.md` **sin APIs de pago**.
+Depura `docs/reuniones/transcripciones/transcripcion*.md` **sin APIs de pago**.
 
 ## Requisitos
 

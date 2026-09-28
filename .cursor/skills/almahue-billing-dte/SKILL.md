@@ -43,7 +43,7 @@ El intermediario es multi-ERP: no hardcodear sociedades, RUT ni resoluciones. Es
 
 `BillingEmissionResult`: `emissionId`, `partner`, `connectionMode`, `status`, `folioOficial` | `folioSimulado`, ids partner, `messages`, `disclaimer`, `artifacts` (incluye `dummy` si el gateway lo devuelve), `stub`.
 
-GoSocket y credenciales reales viven en `billing-gateway` (repo/proceso aparte), no en el ERP. Sandbox QA: `https://developers-sbx.gosocket.net/api/v1/` (no usar `developers.gosocket.net/sandbox`, bloqueado). **BIL-007** (SII/partner real) no es FAIL si el gateway está en modo stub; no inventar que SII está live. Sin CAF en portal, GoSocket rechaza por rango de folios. **BIL-007 sigue SKIP hasta CAF;** checklist operativo (sin live, sin cambiar emisión): `docs/erp-planificacion/agrosoft-levantamiento/qa/resultados/2026-08-19-checklist-caf-portal.md`.
+GoSocket y credenciales reales viven en `billing-gateway` (repo/proceso aparte), no en el ERP. Sandbox QA: `https://developers-sbx.gosocket.net/api/v1/` (no usar `developers.gosocket.net/sandbox`, bloqueado). **BIL-007** (SII/partner real) no es FAIL si el gateway está en modo stub; no inventar que SII está live. Sin CAF en portal, GoSocket rechaza por rango de folios. **BIL-007 sigue SKIP hasta CAF;** checklist operativo (sin live, sin cambiar emisión): `docs/qa/resultados/2026-08-19-checklist-caf-portal.md`.
 
 ## No hacer
 
@@ -53,4 +53,4 @@ GoSocket y credenciales reales viven en `billing-gateway` (repo/proceso aparte),
 
 Plantillas OC/cotización: editor `plantillaDoc` + print HTML; no PDF servidor ni DTE.
 
-QA: `docs/erp-planificacion/agrosoft-levantamiento/qa/PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md` (BIL). Recorte histórico stub: `docs/plan-de-pruebas-v1.md` (no estado OC). Informes 19/08: `qa/resultados/2026-08-19-billing-errores-*.md`.
+QA: `docs/qa/planes/PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md` (BIL). Recorte histórico stub: `docs/historico/plan-de-pruebas-v1.md` (no estado OC). Informes 19/08: `docs/qa/resultados/2026-08-19-billing-errores-*.md`.

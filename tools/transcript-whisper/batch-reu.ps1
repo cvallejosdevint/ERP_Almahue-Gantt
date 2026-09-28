@@ -16,9 +16,9 @@ param(
 $ErrorActionPreference = 'Stop'
 $ToolDir = $PSScriptRoot
 $Repo = (Resolve-Path (Join-Path $ToolDir '..\..')).Path
-$Fuentes = Join-Path $Repo 'docs\erp-planificacion\agrosoft-levantamiento\fuentes'
-$Videos = Join-Path $Fuentes 'videos'
-$OutRoot = Join-Path $Fuentes 'whisper-local'
+$Medios = Join-Path $Repo 'docs\reuniones\medios'
+$Videos = Join-Path $Medios 'videos'
+$OutRoot = Join-Path $Medios 'whisper-local'
 $Ffmpeg = 'C:\OctoPrint\ffmpeg.exe'
 $Py = (Get-Command python -ErrorAction SilentlyContinue).Source
 if (-not $Py) { throw 'python no encontrado' }

@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Propuesta: orden primero, factura del SII después",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "orden",
+        "label": "La orden entra a compras",
+        "focus": ["jornada", "proforma", "definitiva", "generar", "aprobar", "orden"],
+        "note": "La proforma solo pide la orden. Esa orden espera en Aprobaciones."
+      },
+      {
+        "id": "costo",
+        "label": "El costo del mes",
+        "focus": ["definitiva", "cierre", "provisoria"],
+        "note": "Al cerrar el mes se anota la deuda provisoria, mientras la factura no llega."
+      },
+      {
+        "id": "factura",
+        "label": "Llega la factura real",
+        "focus": ["orden", "factura", "contabilizar", "pago"],
+        "note": "Contabilizar la factura unida a la orden reemplaza la deuda provisoria y deja el pago."
+      }
+    ]
+  },
+  "lanes": [
+    { "id": "trabajo", "label": "Contratistas" },
+    { "id": "compras", "label": "Compras" },
+    { "id": "cuentas", "label": "Contabilidad" },
+    { "id": "pago", "label": "Tesorería" }
+  ],
+  "mainPath": ["jornada", "proforma", "definitiva", "generar", "aprobar", "orden", "factura", "contabilizar", "pago"],
+  "nodes": [
+    { "id": "jornada", "lane": "trabajo", "col": 0, "type": "frontend", "label": "Jornada", "sublabel": "con precio", "width": 132 },
+    { "id": "proforma", "lane": "trabajo", "col": 1, "type": "frontend", "label": "Proforma", "sublabel": "el paquete", "width": 132 },
+    { "id": "definitiva", "lane": "trabajo", "col": 2, "type": "security", "label": "Definitiva", "sublabel": "supervisor", "width": 132 },
+    { "id": "generar", "lane": "trabajo", "col": 3, "type": "backend", "label": "Pedir orden", "sublabel": "no es factura", "width": 132 },
+    { "id": "aprobar", "lane": "compras", "col": 3, "type": "security", "label": "Aprobación", "sublabel": "en compras", "width": 132 },
+    { "id": "orden", "lane": "compras", "col": 4, "type": "backend", "label": "Orden lista", "sublabel": "ya aprobada", "width": 132 },
+    { "id": "cierre", "lane": "cuentas", "col": 3, "type": "database", "label": "Cierre", "sublabel": "fin de mes", "width": 132 },
+    { "id": "provisoria", "lane": "cuentas", "col": 4, "type": "database", "label": "Provisoria", "sublabel": "por recibir", "width": 132 },
+    { "id": "factura", "lane": "compras", "col": 5, "type": "external", "label": "Factura SII", "sublabel": "unida", "width": 132 },
+    { "id": "contabilizar", "lane": "cuentas", "col": 5, "type": "backend", "label": "Contabilizar", "sublabel": "reemplaza", "width": 140 },
+    { "id": "pago", "lane": "pago", "col": 5, "type": "cloud", "label": "Pago", "sublabel": "tesorería", "width": 132 }
+  ],
+  "edges": [
+    { "id": "e1", "from": "jornada", "to": "proforma" },
+    { "id": "e2", "from": "proforma", "to": "definitiva" },
+    { "id": "e3", "from": "definitiva", "to": "generar", "variant": "emphasis" },
+    { "id": "e4", "from": "generar", "to": "aprobar", "label": "entra a compras" },
+    { "id": "e5", "from": "aprobar", "to": "orden", "variant": "emphasis" },
+    { "id": "e6", "from": "definitiva", "to": "cierre", "label": "fin de mes" },
+    { "id": "e7", "from": "cierre", "to": "provisoria", "label": "anota el costo" },
+    { "id": "e8", "from": "orden", "to": "factura", "label": "el proveedor factura" },
+    { "id": "e9", "from": "factura", "to": "contabilizar", "variant": "emphasis" },
+    { "id": "e10", "from": "contabilizar", "to": "provisoria", "label": "la reemplaza", "role": "return" },
+    { "id": "e11", "from": "contabilizar", "to": "pago" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Propuesta, no construida",
+      "items": [
+        "La proforma pide la orden y esa orden espera aprobación",
+        "La factura del SII, al contabilizarla, reemplaza la deuda provisoria"
+      ]
+    }
+  ]
+}

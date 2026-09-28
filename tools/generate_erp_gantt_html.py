@@ -9,9 +9,9 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-JSON_PATH = ROOT / "docs" / "erp-planificacion" / "erp_dependencias.json"
-OUT_DIR = ROOT / "docs" / "erp-planificacion"
-LOGO_PATH = OUT_DIR / "assets" / "logo-devint-horizontal.png"
+JSON_PATH = ROOT / "docs" / "historico" / "gantt" / "erp_dependencias.json"
+OUT_DIR = ROOT / "docs" / "historico" / "gantt"
+LOGO_PATH = ROOT / "docs" / "diagramas" / "assets" / "logo-devint-horizontal.png"
 OUT_PATHS = [
     OUT_DIR / "erp_gantt_devint_6_meses.html",  # nombre principal (Devint)
     OUT_DIR / "erp_gantt_6_meses.html",           # alias

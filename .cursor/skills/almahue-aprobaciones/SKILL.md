@@ -39,4 +39,4 @@ Grupo (quién solicita → aprobador inicial)
 ## Additional resources
 
 - Escenarios S1–S6 (seed-f2) y usuarios EMP-BOOT: [reference.md](reference.md)
-- Plan QA: `docs/erp-planificacion/agrosoft-levantamiento/qa/PLAN-PRUEBAS-APROBACIONES.md`
+- Plan QA: `docs/qa/planes/PLAN-PRUEBAS-APROBACIONES.md`

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "2026-09-24-reunion",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-24-reunion\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-24-reunion\\transcripcion-whisper.md",
+    "title": "Reunión 2026-09-24",
+    "source": "Screen Recording 2026-09-24 171357.mp4",
+    "copyTo": [
+      "E:\\source\\repos\\Almahue\\docs\\reuniones\\transcripciones\\transcripcion-2026-09-24-reunion.md"
+    ]
+  }
+]

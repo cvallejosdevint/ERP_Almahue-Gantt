@@ -9,7 +9,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "docs" / "erp-planificacion"
+OUT_DIR = ROOT / "docs" / "historico" / "gantt"
 PROJECT_START = date(2026, 7, 13)  # lunes
 PROJECT_END_TARGET = date(2027, 1, 9)  # viernes go-live
 

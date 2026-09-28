@@ -1,0 +1,38 @@
+> **{deprecado}** — 2026-08-18. Conservar como archivo. No usar como fuente de verdad.
+> Sustituye: [`docs/matriz-asis-tobe.md`](../../../matriz-asis-tobe.md) + [`qa/HUERFANOS-H1-H14.md`](../qa/HUERFANOS-H1-H14.md). Motivo: paquete 06/08 pre-OV unificado y pre-pipeline v2.
+
+# Entrega documentación Reu4 → Reu5 + AS-IS
+
+**Fecha:** 2026-08-06  
+**Alcance:** Cobertura absoluta desde aclaración GoSocket en Reunión 4 (~L250) hasta Reunión 5; contexto Reu1–3 solo donde sigue vigente o explica contradicciones.
+
+## Cómo leer
+
+| # | Documento | Uso |
+|---|---|---|
+| 1 | [01-TOMA-REQUERIMIENTOS.md](01-TOMA-REQUERIMIENTOS.md) | Catálogo REQ trazable a transcripción/minuta + estado AS-IS |
+| 2 | [02-BPMN-FLUJOS.md](02-BPMN-FLUJOS.md) | Flujos con gateways XOR/AND y cobertura del ERP actual |
+| 3 | [03-AS-IS-ERP-ACTUAL.md](03-AS-IS-ERP-ACTUAL.md) | Estado real del sistema (menú, APIs, gaps, diferidos) |
+
+## Ancla de producto (Reu4 L250–266)
+
+> El cliente preguntó si facturarían en GoSocket o en el ERP. Respuesta canónica: **una sola plataforma = ERP**; GoSocket es integración **transparente por debajo** (no portal paralelo).
+
+## Fuentes
+
+- `../docs/reuniones/transcripciones/transcripcion-reunion4.md`
+- `../fuentes/reunion4-minuta-tldv-2026-07-30.md` · `../reunion4-minuta-2026-07-30.md`
+- `../docs/reuniones/transcripciones/transcripcion-reunion5.md`
+- `../fuentes/reunion5-minuta-tldv-2026-08-03.md` · `../reunion5-minuta-2026-08-03.md`
+- Contexto: `transcripcion-reunion2.md`, `transcripcion-reunion3.md`
+
+## Relacionado (post docs GoSocket 05/08/2026)
+
+- Fuentes GoSocket: [`../fuentes/gosocket-2026-08-05/`](../fuentes/gosocket-2026-08-05/)
+- Fuentes MJ (export/cartolas/contables): [`../fuentes/mj-compartidos-2026-07-30/`](../fuentes/mj-compartidos-2026-07-30/)
+- Propuesta **billing-gateway** (repo separado): [`../partners-hub/00-PLAN-IMPLEMENTACION.md`](../partners-hub/00-PLAN-IMPLEMENTACION.md)
+
+## Fuera de este paquete
+
+- Guiones / rutas de presentación
+- Código del Hub / adapter GoSocket (ver plan partners-hub; no forma parte de esta entrega AS-IS)

@@ -3,9 +3,10 @@ $ErrorActionPreference = 'Stop'
 $Ffmpeg = 'C:\OctoPrint\ffmpeg.exe'
 $ToolDir = $PSScriptRoot
 $Repo = (Resolve-Path (Join-Path $ToolDir '..\..')).Path
-$Fuentes = Join-Path $Repo 'docs\erp-planificacion\agrosoft-levantamiento\fuentes'
-$Videos = Join-Path $Fuentes 'videos'
-$Whisper = Join-Path $Fuentes 'whisper-local'
+$Medios = Join-Path $Repo 'docs\reuniones\medios'
+$Transcripciones = Join-Path $Repo 'docs\reuniones\transcripciones'
+$Videos = Join-Path $Medios 'videos'
+$Whisper = Join-Path $Medios 'whisper-local'
 $Src = 'C:\Users\c\Videos\Screen Recordings'
 
 function Ensure-Wav {
@@ -59,7 +60,7 @@ $jobs = @(
     video = (Join-Path $Videos 'reunion-2026-09-14-interna-tesoreria-carlos-sergio.mp4')
     dir = '2026-09-14-interna-tesoreria'
     title = 'Interna tesoreria cartolas Carlos/Sergio 2026-09-14 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-14-interna-tesoreria.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-14-interna-tesoreria.md')
     driveParent = $null
     driveOldId = $null
   }
@@ -68,7 +69,7 @@ $jobs = @(
     video = (Join-Path $Src 'Screen Recording 2026-09-10 102149.mp4')
     dir = 'sergio-2026-09-10'
     title = 'Interna Carlos/Sergio 2026-09-10 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-10-interna-carlos-sergio.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-10-interna-carlos-sergio.md')
     driveParent = '1llT43AOQYLNDNFso1VtuFoD7DusIgq8z'
     driveOldId = '1VQR-YoBUJJNZmx9mhnD00oVZq4DV7hBF'
   }
@@ -140,7 +141,7 @@ $jobs = @(
     video = (Join-Path $Videos 'reunion-2026-09-14-interna-manana-carlos-sergio.mp4')
     dir = '2026-09-14-interna-manana'
     title = 'Interna Carlos/Sergio manana 2026-09-14 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-14-interna-manana.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-14-interna-manana.md')
     driveParent = $null
     driveOldId = $null
   }
@@ -149,7 +150,7 @@ $jobs = @(
     video = (Join-Path $Videos 'reunion-2026-09-14-interna-mediodia-carlos-sergio.mp4')
     dir = '2026-09-14-interna-mediodia'
     title = 'Interna Carlos/Sergio mediodia 2026-09-14 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-14-interna-mediodia.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-14-interna-mediodia.md')
     driveParent = $null
     driveOldId = $null
   }
@@ -194,7 +195,7 @@ $jobs = @(
     video = (Join-Path $Videos 'reunion-2026-09-10-demo-cliente.mp4')
     dir = 'demo-2026-09-10'
     title = 'Demo cliente avances 2026-09-10 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-10-demo-cliente.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-10-demo-cliente.md')
     driveParent = '15ny579CdVB2-WZDZwqTz-Y2pXH2EAH5A'
     driveOldId = '1c-ijfpRu9do_4Uwlfpi--4ewgs-Ob14p'
   }
@@ -248,7 +249,7 @@ $jobs = @(
     video = (Join-Path $Videos 'reunion-2026-09-14-demo-avances.mp4')
     dir = '2026-09-14-demo-avances'
     title = 'Demo cliente avances 2026-09-14 (Whisper large-v3)'
-    fuente = (Join-Path $Fuentes 'transcripcion-2026-09-14-demo-avances.md')
+    fuente = (Join-Path $Transcripciones 'transcripcion-2026-09-14-demo-avances.md')
     driveParent = $null
     driveOldId = $null
   }
