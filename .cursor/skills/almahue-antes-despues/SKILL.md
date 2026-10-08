@@ -29,21 +29,22 @@ Playwright (`plugin-playwright-playwright`). No uses el navegador interno de Cur
 
 - Front local `http://localhost:5174`. Si no responde, `.cursor/scripts/start-local-stack.ps1`.
 - Login demo `admin@almahue.local` / `Admin123!` solo si la sesión no está abierta.
-- La foto muestra menú, contenido y paneles laterales. No achiques el viewport. No uses zoom del navegador: recorta la ventana.
-- Captura del viewport, no de la página completa.
+- Antes de cada foto: `setViewportSize({ width: 1536, height: 960 })`. Zoom del navegador en 100%. Una ventana más baja (por ejemplo 711 de alto) o con zoom corta el borde derecho y el pie: el nombre de la empresa, las tarjetas y las columnas quedan a la mitad.
+- Captura del viewport, no de la página completa, y sin recortarla después. La foto muestra menú, contenido y paneles laterales.
+- El PNG tiene que medir **1536×960**. Si el alto es menor, no la uses y no la copies a otra sesión: vuelve a sacarla con el viewport de arriba. El antes y el después de un par miden lo mismo. Si un antes viejo no mide 1536×960, no se reutiliza.
 - No pulses Guardar, Sincronizar, Contabilizar, Vincular, Enviar ni Pagar para sacar la foto. Si el cambio está en un modal, ábrelo y detente antes del botón que confirma.
 - Si cambias el periodo de la sesión para encuadrar, déjalo como estaba.
 - El después de un combo o una lista tiene que mostrarlos abiertos. Un desplegable cerrado no sirve de después.
-- Si el antes ya existe en otra sesión y esa pantalla no cambió, copia ese PNG. No la vuelvas a sacar.
+- Si el antes ya existe en otra sesión, esa pantalla no cambió y el PNG mide 1536×960, cópialo. No lo vuelvas a sacar. Si mide otra cosa, está cortado: no lo copies.
 
 ## Recuadro NUEVO
 
-Solo en el después de la comparación. Mide cada control nuevo con `getBoundingClientRect` (píxeles CSS). Lee el ancho del PNG. La escala es `anchoPng / anchoCss`. En esta máquina el PNG sale a 1920 y el CSS a 1536, así que la escala es 1,25. Dibujar el CSS directo sobre el PNG corre el recuadro.
+Solo en el después de la comparación. Mide cada control nuevo con `getBoundingClientRect` (píxeles CSS). La captura va con escala CSS, así el PNG sale 1536×960 y la escala es 1. No asumas 1,25. Si el PNG no mide 1536 de ancho, la escala es `anchoPng / 1536`. Dibujar los píxeles CSS sobre un PNG de otro tamaño corre el recuadro.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/skills/almahue-antes-despues/marcar-nuevo.ps1 `
   -Image docs/sesiones/<tema>-YYYY-MM-DD/despues-<pantalla>.png `
-  -Scale 1.25 `
+  -Scale 1 `
   -Boxes "x,y,w,h;x,y,w,h"
 ```
 
