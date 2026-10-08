@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Lo que no se mostró después del 6 de octubre</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lo que no se mostró después del 6 de octubre</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-09. La página del 6 de octubre ya reunió la cadena, los indicadores, la revaluación y el libro de José. La del 7 mostró los asientos con su cuenta. Esto es lo que quedó fuera de esas dos: el cruce de montos corregido, y lo acordado el 1 de octubre sobre la ficha de la empresa, la devolución a proveedor y la guía de insumos. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. Detalle del cruce: <a href="../cruce-montos-corregido-2026-10-07/comparacion.html">comparación</a> y <a href="../cruce-montos-corregido-2026-10-07/recorrido.html">recorrido</a>. Detalle de la empresa y la guía: <a href="../acuerdos-0110-2026-10-07/comparacion.html">comparación</a> y <a href="../acuerdos-0110-2026-10-07/recorrido.html">recorrido</a>.</p>
+  </header>
+
+  <section>
+    <h2>OC-2026-0005: la ficha de 45 días llega a la orden</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/04-oc-plazo-30.png" alt="Orden de compra con condición de pago en 30 días" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-oc-plazo-marcado.png" alt="Orden de compra con condición de pago en 45 días" />
+      </figure>
+    </div>
+    <p class="nota">Proveedor QA-CRUCE PLAZO 45, RUT 76.111.222-8. El combo deja de ofrecer solo 30, 60 o 90 y toma los 45 días de la ficha. No se apretó Enviar a aprobación.</p>
+  </section>
+
+  <section>
+    <h2>La misma OC en dólares: el IVA no entra a la cadena</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/05-oc-usd-items.png" alt="Ítem de 10 por 100 dólares con total equivalente mezclado" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-oc-items-marcado.png" alt="Total con IVA aparte de la cadena, 1.171.936 pesos" />
+      </figure>
+    </div>
+    <p class="nota">Ítem QA-CRUCE CAJA, 10 x 100 USD. Neto 1.000 x TC 984,82 del 06-10-2026 = 984.820 pesos, y ese es el monto de la cadena. El total con IVA, 1.171.936 pesos, queda fuera de la cadena. No se volvió a convertir el equivalente.</p>
+  </section>
+
+  <section>
+    <h2>OV 101606909119: el Total CLP toma el descuento</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/07-descuento-global.png" alt="Orden de venta con descuento 10 por ciento y total en pesos sin descontar" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-ov-descuento-marcado.png" alt="Total CLP 16.667 con el descuento aplicado" />
+      </figure>
+    </div>
+    <p class="nota">El descuento del 10% se escribió de nuevo en pantalla. 18 USD x 925,97 = 16.667 pesos. El tipo de cambio de la orden sigue en 925,97. No se apretó Guardar, así que la orden confirmada no cambió.</p>
+  </section>
+
+  <section>
+    <h2>Asiento 20260034: dólar y yuan del 30-09-2026</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/08-comprobante-venta.png" alt="Comprobante de venta con tipo de cambio que no era el del día del asiento" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-comprobante-marcado.png" alt="Comprobante con tipo de cambio del 30 de septiembre" />
+      </figure>
+    </div>
+    <p class="nota">FACTURA 9/2026, pesos 290.598. T dólar 969,7 y T yuan 144,483, la fila del 30-09. No se apretó Editar ni Imprimir. El asiento 20260029 de la compra 33-1001 no se tocó: sigue en neto 199.900.</p>
+  </section>
+
+  <section>
+    <h2>Nómina semana 2026-09-S3: el saldo muestra neto e IVA</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/13-nomina-bruto.png" alt="Nómina con saldo bruto sin separar neto e IVA" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-nomina-marcado.png" alt="Nómina con desglose de neto e IVA bajo el saldo" />
+      </figure>
+    </div>
+    <p class="nota">Agrícola Los Naranjos Ltda, documento 33-1001, vencimiento 21-10-2026. El saldo a pagar sigue en 237.881. Debajo se lee neto 199.900 e IVA 37.981. El vencimiento no se movió. No se apretó Pagar.</p>
+  </section>
+
+  <section>
+    <h2>Centralización de septiembre: preview, sin confirmar</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/09-centralizacion-preview.png" alt="Preview de centralización con ventas en neto y bodega con monto" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-centralizacion-marcado.png" alt="Preview con ventas neto más IVA y bodega omitida" />
+      </figure>
+    </div>
+    <p class="nota">Asientos creados: 0. Ventas 32 pendientes pasan de 2.016.786 (solo neto) a 2.233.931 (neto más IVA cuando hay IVA). Bodega: 0 pendientes, 44 omitidos, 0 pesos. Compras sigue en 30.000 y contratistas en 175.000. No se apretó Confirmar.</p>
+  </section>
+
+  <section>
+    <h2>Pago en dólares contra factura en pesos</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/10-pago-usd.png" alt="Formulario de pago con base de 1,02 pesos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-pago-marcado.png" alt="Formulario de pago con base de 984.820 pesos" />
+      </figure>
+    </div>
+    <p class="nota">Monto 1.000, moneda de pago USD, moneda de la factura CLP, TC 984,8200. 1.000 x 984,82 = 984.820. No se eligió proveedor y no se apretó Crear.</p>
+  </section>
+
+  <section>
+    <h2>Cereza export: el piso vigente se lee en la ficha</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/11-precio-compra.png" alt="Artículo con precio de compra en cero" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-piso-marcado.png" alt="Aviso de piso vigente en 1.850 pesos" />
+      </figure>
+    </div>
+    <p class="nota">Artículo EX-CEREZA-CAJ. El precio de compra sigue en 0. El piso que usa la venta es el costo promedio, 1.850 pesos. No se apretó Guardar cambios.</p>
+  </section>
+
+  <section>
+    <h2>Monedas: el yuan muestra el indicador</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../cruce-montos-2026-10-07/15-monedas.png" alt="Pantalla de monedas con yuan sin indicador" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../cruce-montos-corregido-2026-10-07/despues-monedas-marcado.png" alt="Yuan con indicador 146,84 y cuatro monedas con valor de BC" />
+      </figure>
+    </div>
+    <p class="nota">USD, EUR, CNY y UF tienen valor de indicador mayor que cero, por eso el contador marca 4. La serie del Banco Central no se inventó: el yuan sigue en Manual. No se apretó Sincronizar.</p>
+  </section>
+
+  <section>
+    <h2>Ficha de empresa</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/antes-empresa.png" alt="Ficha de ALM SERVICES sin casillas de comportamiento" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/despues-empresa-marcado.png" alt="Ficha de ALM SERVICES con las dos casillas marcadas" />
+      </figure>
+    </div>
+    <p class="nota">En crear y editar empresa hay dos casillas: Permite devolución a proveedor, y Recibe insumos con guía. En ALM SERVICES quedaron marcadas. En ALMAHUE EXPORT quedan apagadas. No se apretó Guardar cambios.</p>
+  </section>
+
+  <section>
+    <h2>Movimiento de bodega en la exportadora</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/antes-movimiento-devolucion.png" alt="Combo de tipo con salida a proveedor y devolución" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/despues-movimiento-devolucion-marcado.png" alt="Combo de tipo sin devolución, en ALMAHUE EXPORT" />
+      </figure>
+    </div>
+    <p class="nota">Con la sesión en ALMAHUE EXPORT, el tipo de movimiento ya no ofrece Salida proveedor, Devolución ni Devolución / NC. Siguen Entrada proveedor y Traslado entre bodegas. No se apretó Crear.</p>
+  </section>
+
+  <section>
+    <h2>Guía de insumos recibida</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/antes-guias-ventas.png" alt="Libro de guías de ventas, sin recepción de insumos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="../acuerdos-0110-2026-10-07/despues-guias-insumos-marcado.png" alt="Alta de guía de insumos recibida en ALM SERVICES" />
+      </figure>
+    </div>
+    <p class="nota">Antes la única guía era la de ventas. Ahora, con la empresa ALM SERVICES, Insumos / Bodega tiene Guías de insumos recibidas: número de guía física, proveedor, artículo, cantidad y bodega de destino. Al confirmar, el stock entra una sola vez. No se apretó Crear. La factura de fin de mes sigue asociándose a la orden en el libro de compras.</p>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>
