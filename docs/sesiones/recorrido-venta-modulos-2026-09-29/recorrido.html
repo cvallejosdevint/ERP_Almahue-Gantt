@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>De la orden de venta al asiento y a tesorería</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --card: #fff;
+      --ventas: #166534;
+      --conta: #1d4ed8;
+      --teso: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.35 "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 16px 0;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 10px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 6px 16px 10px;
+      align-items: start;
+    }
+    nav {
+      position: sticky;
+      top: 12px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 4px;
+    }
+    nav button.step {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      width: 100%;
+      text-align: left;
+      border: 0;
+      background: transparent;
+      border-radius: 8px;
+      padding: 4px 6px;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+    }
+    nav button.step.on { background: #f5f5f4; }
+    .n {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    main { min-width: 0; }
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+    }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button, .pins button.pin {
+      font: inherit;
+      cursor: pointer;
+    }
+    .actions button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 8px;
+      padding: 6px 12px;
+    }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .stage { background: transparent; }
+    .frame {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .frame img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: calc(100vh - 168px);
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+    }
+    button.pin {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      margin: -13px 0 0 -13px;
+      padding: 0;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.4);
+      z-index: 1;
+      opacity: .4;
+    }
+    button.pin.ventas { background: var(--ventas); }
+    button.pin.conta { background: var(--conta); }
+    button.pin.teso { background: var(--teso); }
+    button.pin.on {
+      width: 36px;
+      height: 36px;
+      margin: -18px 0 0 -18px;
+      font-size: 16px;
+      opacity: .8;
+      outline: 3px solid #facc15;
+      z-index: 2;
+    }
+    .card {
+      margin-top: 6px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De la orden al asiento. El número va sobre el botón o el campo.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div class="stage" id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "1. Lista de órdenes",
+        img: "01-ordenes-venta.png",
+        alt: "Listado de órdenes de venta, varias en estado Facturada",
+        pins: [
+          { x: 88.9, y: 35.5, t: "Todos", d: "Primero la lista. El periodo de la sesión es agosto y estas órdenes son de septiembre: Todos muestra los otros meses. Facturada significa que esa orden ya tiene DTE." },
+          { x: 93.8, y: 13.1, t: "Nueva orden", d: "Este botón sale de la lista y abre Nueva orden. Ahí van el cliente, los ítems y las referencias. Guardar va al final, y sin ítem no crea la orden. No genera asiento ni deuda." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "2. Nueva orden, datos",
+        img: "02-nueva-orden.png",
+        alt: "Formulario de nueva orden de venta, pestaña de datos",
+        pins: [
+          { x: 47.6, y: 38, t: "Cliente", d: "Primer dato: el cliente. La orden no es un DTE y acá no se pide cuenta contable. La fecha de emisión tiene que caer en el periodo de la sesión." },
+          { x: 33.5, y: 92.7, t: "Fecha vencimiento", d: "Sigue en la misma pestaña. Si se llena, el asiento y la cuenta corriente la heredan al contabilizar. Si queda vacía, tesorería usa la fecha del documento más 30 días." },
+          { x: 33.5, y: 26.2, t: "Ítems", d: "Esta pestaña abre el detalle. Sin un artículo con precio y bodega, Guardar no crea la orden." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "3. Ítems",
+        img: "02b-items.png",
+        alt: "Pestaña Ítems de la nueva orden, con artículo, cantidad, precio y bodega",
+        pins: [
+          { x: 24.5, y: 47.3, t: "Tipo", d: "Producto, servicio o flete. Producto pide un artículo del catálogo y una bodega con stock." },
+          { x: 40.5, y: 46.8, t: "Artículo", d: "Hay que elegir el artículo. Si la línea queda sin catálogo, la orden no se genera." },
+          { x: 54.6, y: 46.8, t: "Cantidad", d: "Cantidad a vender. En un producto tiene que coincidir con lo que sale de la bodega." },
+          { x: 61.1, y: 46.8, t: "Precio unitario", d: "Precio mayor a cero. El descuento % de al lado es opcional. No se puede vender bajo el precio de compra del maestro." },
+          { x: 34.9, y: 51.7, t: "Bodega", d: "Bodega de salida y stock disponible. Sin bodega, Siguiente no deja pasar y Guardar no crea la orden." },
+          { x: 73.6, y: 69.9, t: "Siguiente", d: "Abre referencias. Guardar ya se ve a la derecha, pero todavía no: falta esa pestaña." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "4. Referencias y guardar",
+        img: "02c-referencias.png",
+        alt: "Pestaña Referencias y pagos, con tipo, folio y Guardar",
+        pins: [
+          { x: 33.6, y: 40.4, t: "Tipo referencia", d: "Opcional. Sin referencia, orden de compra, nota de pedido, factura de exportación o HES." },
+          { x: 62.2, y: 40.4, t: "Folio referencia", d: "Folio de esa referencia, si se eligió una. Observaciones, más abajo, también es opcional." },
+          { x: 89.6, y: 52.9, t: "Guardar", d: "Recién acá se genera la orden, y solo si el ítem tiene artículo, precio y bodega. Queda confirmada. No crea asiento. Lo que sigue es Emitir DTE." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "5. Emitir el DTE",
+        img: "03-emitir-dte.png",
+        alt: "Emitir DTE: órdenes confirmadas con botón Facturar",
+        pins: [
+          { x: 89.7, y: 54.1, t: "Editar la orden", d: "El lápiz vuelve a la orden, la pantalla anterior. No emite el documento." },
+          { x: 23.1, y: 34.1, t: "Nota de crédito", d: "Nota de crédito, nota de débito y guía son otras emisiones, sin orden. La factura de esta lista no sale por acá." },
+          { x: 93.4, y: 54.1, t: "Facturar", d: "Este es el botón que sigue: emite el DTE, la orden pasa a Facturada y el libro queda en Por contabilizar. Todavía no hay asiento ni deuda." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "6. Libro de ventas",
+        img: "04-libro-ventas.png",
+        alt: "Libro de ventas con una fila contabilizada y otra por contabilizar",
+        pins: [
+          { x: 78.7, y: 79, t: "Todos", d: "Muestra documentos fuera de agosto. La factura 87 ya dice Contabilizada y en Origen figura el asiento 20260026. La 86 sigue en Por contabilizar." },
+          { x: 85.7, y: 92.3, t: "Aviso de la factura 86", d: "El ícono junto a Por contabilizar avisa ítems sin cuenta." },
+          { x: 97.7, y: 93.3, t: "Contabilizar", d: "Abre el modal del paso siguiente. Esta factura 86 no se guardó." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "7. Contabilizar",
+        img: "05-modal-contabilizar.png",
+        alt: "Modal Por contabilizar de la factura 86",
+        pins: [
+          { x: 47.4, y: 57, t: "Cuenta del ítem", d: "Combo de la cuenta de ingreso. El recuadro de arriba avisa el comprobante: debe CLIENTES (o CLIENTES EXPORTACION) y, si hay IVA, IVA débito." },
+          { x: 68.1, y: 57, t: "Centro de costo", d: "Combo del centro. Si la cuenta del plan lo exige, Guardar no sigue sin él." },
+          { x: 87.7, y: 57, t: "Área de negocio", d: "Combo del área de negocio del ítem. Si la cuenta del plan la exige, Guardar no sigue sin ella." },
+          { x: 50, y: 66.5, t: "Glosa", d: "Campo de la glosa: FACTURA 9/2026. Si el documento trae tipo de cambio, se agrega TC: valor." },
+          { x: 94.6, y: 74.8, t: "Guardar", d: "Crea el asiento tipo VENTAS, deja la factura Contabilizada y anota en tesorería lo que el cliente debe. Esta factura 86 no se guardó." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "8. El comprobante",
+        img: "06-asientos-lista.png",
+        alt: "Listado de asientos filtrado por 20260033",
+        pins: [
+          { x: 48.2, y: 35.2, t: "Buscar", d: "El número 20260033 es el comprobante de la factura folio 88, cereza, total $266.382. Todos muestra el asiento de septiembre. El tipo es VENTAS y la glosa FACTURA 9/2026." },
+          { x: 88.7, y: 55.7, t: "Ver", d: "Abre las líneas. La columna Cuenta muestra el código del plan. Este comprobante es de septiembre y entra al libro diario y al mayor de 2026-09." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "9. Líneas del asiento",
+        img: "07-asiento-detalle.png",
+        alt: "Detalle del asiento 20260033 con cuentas del plan, tipo 33 y folio 88",
+        pins: [
+          { x: 31.1, y: 59.3, t: "Cuenta", d: "Línea por cobrar: 1-1-04-01-001 (110401001) CLIENTES, debe $266.382. Es factura afecta, no exportación, por eso no usa Clientes exportación. El haber del ítem es 5-1-01-01-002 (510101002) INGRESO POR VENTA FRUTA M.INTERNO, $223.850." },
+          { x: 41.4, y: 59.3, t: "Tipo", d: "33 es el tipo de DTE de la factura afecta. Va en la línea de clientes. Las otras líneas no llevan referencia." },
+          { x: 43.9, y: 59.3, t: "Nro", d: "88 es el folio oficial del DTE. El vencimiento 30-10-2026 es la fecha de cobro: la factura no traía vencimiento, y queda la fecha del documento más 30 días. Imprimir abre la hoja del paso siguiente." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "10. Vista impresa",
+        img: "10-comprobante-impreso.png",
+        alt: "Comprobante de ventas 20260033 impreso, con cuenta, tipo 33, folio 88 y vencimiento",
+        pins: [
+          { x: 3.8, y: 27.4, t: "Cuenta", d: "En la hoja la cuenta sale con el código de 9 dígitos del plan: 110401001 CLIENTES y 510101002 INGRESO POR VENTA FRUTA M.INTERNO. El centro 1002 va en la columna CC." },
+          { x: 41, y: 27.4, t: "Tipo", d: "33 es el tipo de DTE, factura afecta. Queda en la referencia de la línea de clientes." },
+          { x: 44.3, y: 27.4, t: "Nro", d: "88 es el folio oficial del DTE, no el número del comprobante. El comprobante es 20260033, arriba a la derecha." },
+          { x: 49.8, y: 27.4, t: "Vcto", d: "30/10/2026 es la fecha de cobro. La factura no traía vencimiento, así que son 30 días desde el 30/09/2026. Solo va en la línea de clientes." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "11. Deuda del cliente",
+        img: "08-cuenta-corriente.png",
+        alt: "Estado de cuenta de ALM SERVICES con saldo cliente 11008",
+        pins: [
+          { x: 28.8, y: 27.1, t: "Buscar RUT", d: "Campo para el cliente. ALM SERVICES queda con saldo cliente $11.008, el mismo total del asiento 20260026." },
+          { x: 79.3, y: 44.7, t: "Todos", d: "Sin este visto, agosto oculta el movimiento de septiembre." },
+          { x: 93.7, y: 54.9, t: "Detalle", d: "Abre el movimiento de la venta." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "12. El movimiento de la venta",
+        img: "09-cuenta-detalle.png",
+        alt: "Detalle de cuenta corriente con la venta pendiente de 11008",
+        pins: [
+          { x: 30.7, y: 45.6, t: "Pendientes", d: "Filtro de lo que todavía no se cobra. La línea es la factura 87: folio FA-101606909135-8812, debe $11.008, estado Pendiente." },
+          { x: 37.2, y: 55.9, t: "Folio", d: "Enlace del documento. Es una venta, no un pago. Al cobrar, el haber rebaja este saldo y no se crea otro asiento de la venta." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "13. Cobrar",
+        img: "11-pagos.png",
+        alt: "Formulario de nuevo pago precargado con la factura de ALM SERVICES",
+        pins: [
+          { x: 39.5, y: 40.5, t: "Cliente", d: "El libro abre este formulario solo si la factura ya está contabilizada. El cliente y el monto $11.008 vienen cargados." },
+          { x: 60.5, y: 63.4, t: "Documentos a calzar", d: "Campo del folio FA-101606909135-8812. El cobro queda amarrado a esa factura y rebaja la cuenta corriente. No genera otro asiento de la venta." },
+          { x: 68.1, y: 80.9, t: "Crear", d: "No se apretó. Cancelar cerró el formulario y la deuda de $11.008 sigue pendiente." }
+        ]
+      }
+    ];
+
+    let step = 0;
+    let pin = 0;
+
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i;
+      pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+
+    show(0, 0);
+  </script>
+</body>
+</html>

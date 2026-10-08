@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>De dónde sale el dato del libro y de la nómina</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.compras { background: var(--compras); }
+    button.pin.param { background: var(--param); }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De dónde sale lo que después se ve en el libro y en la nómina.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Parametrización", cls: "param",
+        title: "1. Ficha del proveedor",
+        img: "origen-ficha-proveedor.png",
+        alt: "Ficha de Agricola Los Naranjos Ltda, sin guardar",
+        pins: [
+          { x: 66.6, y: 17, t: "Razón social", d: "Este nombre es la contraparte. El libro lo muestra en la fila y la nómina lo usa como proveedor del documento por pagar. En esta ficha es Agricola Los Naranjos Ltda, RUT 76.210.103-3." },
+          { x: 36.9, y: 38, t: "Condición del NETO", d: "Los días se guardan en el proveedor y se sugieren al armar la orden. La nómina fecha el vencimiento con los días que queden en esa orden. Acá está Sin definir. No se apretó Guardar ficha." },
+          { x: 69.2, y: 38, t: "Día de pago del IVA", d: "También vive en el proveedor. En esta ficha está en 10 días. Es dato de la ficha, aparte de los días del neto que viajan con la orden." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "2. Orden de compra",
+        img: "origen-ordenes.png",
+        alt: "Listado de órdenes de compra, sin crear ni enviar ninguna",
+        pins: [
+          { x: 93.2, y: 14.4, t: "Nueva orden", d: "Acá nace la orden: número, proveedor y días de pago. Esos días son los que, más adelante, fechan el vencimiento de la nómina. No se creó ninguna." },
+          { x: 25.5, y: 53.4, t: "Número", d: "OC-2026-0002. Ese número es el que el libro puede vincular a la factura, si el XML no lo trae o si Contabilidad lo asigna." },
+          { x: 47.3, y: 52.8, t: "Proveedor y estado", d: "La razón social tiene que ser la de la ficha. Esta fila está pendiente de aprobación. Contabilizar la factura espera una orden aprobada. No se envió a aprobación." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "3. Nace la fila del libro",
+        img: "despues-fila-acciones.png",
+        alt: "Libro de compras en Pendientes, con Sincronizar Pendientes a la vista",
+        pins: [
+          { x: 87.5, y: 9.6, t: "Sincronizar Pendientes", d: "Este botón pide a GoSocket el folio, el RUT, los montos y, si viene, la OC del XML. Con eso se escribe la fila del libro. No se apretó: las facturas 57 y 59 ya estaban." },
+          { x: 24.5, y: 94.9, t: "Factura 57", d: "La fila ya muestra tipo, folio, razón social, neto y estado. ALM SERVICES SPA no tiene ficha, y el XML no trae OC: por eso la fila dice Sin proveedor y Sin vínculo ERP." },
+          { x: 43.5, y: 97.7, t: "Sin vínculo ERP", d: "Si el XML no trae la orden, el vínculo se completa en Asociar orden. Ese paso está en la comparación, con el recuadro verde. El vínculo es el que trae los días de la orden. No se vinculó." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "4. Nace lo que lista la nómina",
+        img: "despues-fila-acciones.png",
+        alt: "Factura 57 ya contabilizada en el libro de compras",
+        pins: [
+          { x: 71.9, y: 94.6, t: "Contabilizada", d: "Al pasar a este estado se escribe el asiento y el documento por pagar: contraparte del proveedor, monto del total, vencimiento con los días de la orden y la semana de esa fecha. La nómina solo lee esa línea y la agrupa por semana. La factura 57 ya estaba así. No se apretó Contabilizar ni Registrar pago." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

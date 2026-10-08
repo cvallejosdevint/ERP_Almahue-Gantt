@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Recorrido - grupos de OC y de proformas</title>
+    <title>Recorrido - aprobaciones unificadas y piso</title>
   <style>
     :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
     * { box-sizing: border-box; }
@@ -39,7 +39,7 @@
 </head>
 <body>
   <header>
-    <h1>De dónde sale el grupo de aprobación.</h1>
+    <h1>De dónde sale el grupo, el piso y quién queda sin grupo.</h1>
     <div class="bar">
       <h2 id="title"></h2>
       <div class="actions">
@@ -59,57 +59,91 @@
     const steps = [
       {
         mod: "Parametrización", cls: "param",
-        title: "1. Familias en reglas",
-        img: "despues-reglas.png",
-        alt: "Reglas de aprobación con Órdenes de compra y Proformas, sin recuadros",
+        title: "1. Piso en el mapa de OC",
+        img: "despues-reglas-piso.png",
+        alt: "Mapa de OC con Felipe Castro a partir de 500.000, sin recuadros",
         pins: [
-          { x: 50.9, y: 29.8, t: "Órdenes de compra y Proformas", d: "Los dos botones salen del tipo del grupo: OC o proforma. La tabla de abajo es la cadena de órdenes de compra que ya existía. No se apretó Configurar ni Guardar." }
+          { x: 40.7, y: 38.2, t: "Piso de Felipe", d: "Administración, reglas de aprobación. Felipe Castro entra si el monto es mayor o igual a 500.000. Natalia Bravo cierra la cadena. No se envió una OC." },
+          { x: 55.7, y: 24.5, t: "Proformas", d: "El otro tipo de cadena. No usa los grupos de órdenes de compra. No se apretó Configurar." }
         ]
       },
       {
         mod: "Parametrización", cls: "param",
         title: "2. Cadena de proformas",
-        img: "despues-proformas.png",
-        alt: "Mapa de proformas vacío, sin los grupos de OC",
+        img: "despues-proformas-cadena.png",
+        alt: "Mapa de proformas con Bruno Lagos y Carlos, sin recuadros",
         pins: [
-          { x: 55.7, y: 29.8, t: "Proformas", d: "Con Proformas activo, el mapa no usa los grupos de OC. El aviso aparece porque todavía no hay grupos de proformas. No se creó ninguno." }
+          { x: 40.7, y: 38.2, t: "Bruno Lagos", d: "Con Proformas activo, el mapa muestra proformas test. Bruno Lagos entra desde 5.000. Carlos cierra la cadena. No se usa Compras - packing export." }
         ]
       },
       {
         mod: "Parametrización", cls: "param",
-        title: "3. Listas separadas",
-        img: "despues-grupos.png",
-        alt: "Panel de configuración con grupos de OC y grupos de proformas",
+        title: "3. Una sola lista",
+        img: "despues-grupos-unificados.png",
+        alt: "Configuración con una tabla de grupos, tipo y contadores, sin recuadros",
         pins: [
-          { x: 63.8, y: 63.3, t: "Grupos de proformas", d: "Esta sección lista solo grupos de tipo proforma. La de arriba es solo OC. Un integrante puede estar en uno de cada familia. No se mezclan." },
-          { x: 93.5, y: 63.3, t: "Nuevo grupo", d: "El alta de esta sección deja el tipo fijo en Proformas. No se apretó Guardar." }
+          { x: 92.3, y: 23.7, t: "Filtro Tipo", d: "Configurar, Grupos. Un combo filtra Todos, Órdenes de compra o Proformas. La tabla de abajo es la misma lista." },
+          { x: 66.0, y: 70.1, t: "Sin grupo de OC", d: "Cuenta usuarios activos de la empresa de la sesión que no están en un grupo de Compras. El enlace abre Usuarios con ese filtro. No se apretó Guardar." },
+          { x: 81.3, y: 70.1, t: "Sin grupo de proformas", d: "La misma cuenta para Contratistas. Un usuario puede estar en un grupo de cada tipo. No se mezclan." }
         ]
       },
       {
         mod: "Parametrización", cls: "param",
-        title: "4. Integrante de OC",
-        img: "despues-usuario.png",
-        alt: "Elena Rojas con el selector de grupo de OC abierto",
+        title: "4. Filtro de tipo, abierto",
+        img: "despues-filtro-tipo.png",
+        alt: "Combo Tipo abierto con Todos, Órdenes de compra y Proformas",
         pins: [
-          { x: 39.4, y: 70.0, t: "Grupo de órdenes de compra", d: "Elena Rojas tiene el rol Compras, que escribe órdenes de compra. Por eso aparece este selector y no el de proformas. La opción marcada es el grupo donde ya es integrante. El aprobador de la escala se asigna en Reglas de aprobación. Se apretó Cancelar." }
+          { x: 92.3, y: 33.6, t: "Órdenes de compra o Proformas", d: "El combo está abierto. Elegir una opción deja en la tabla solo ese tipo. No se cambió. No se apretó Aplicar filtros." }
         ]
       },
       {
         mod: "Parametrización", cls: "param",
-        title: "5. Integrante de proformas",
-        img: "despues-usuario-proforma.png",
-        alt: "Bruno Lagos con el selector de grupo de proformas abierto",
-        pins: [
-          { x: 39.4, y: 70.0, t: "Grupo de proformas", d: "Bruno Lagos tiene el rol Contratistas, que escribe proformas y no escribe OC. Solo aparece este selector. No hay grupos de ese tipo, así que la opción es Sin grupo de proformas. Se apretó Cancelar." }
-        ]
-      },
-      {
-        mod: "Parametrización", cls: "param",
-        title: "6. Tipo al crear el grupo",
+        title: "5. Alta: tipo e integrantes",
         img: "despues-grupo-nuevo.png",
-        alt: "Alta de grupo con tipo Proformas y integrantes de esa pantalla",
+        alt: "Nuevo grupo con tipo abierto, Elena y Felipe marcados, sin guardar",
         pins: [
-          { x: 34.1, y: 18.8, t: "Tipo Proformas", d: "El tipo queda en Proformas porque el alta salió de esa sección. Abajo solo aparecen roles que escriben proformas. No se apretó Guardar." }
+          { x: 49.7, y: 24.9, t: "Tipo", d: "Un solo alta. El tipo se elige acá: órdenes de compra o proformas. Está abierto. No queda fijo por una sección." },
+          { x: 49.7, y: 56.0, t: "Integrantes primero", d: "Elena Rojas y Felipe Castro están marcados. Solo aparecen quienes pueden escribir esa pantalla. Se apretó Cancelar." },
+          { x: 49.7, y: 84.8, t: "Aprobador final", d: "Se elige entre los integrantes marcados y cierra la cadena. Vacío mientras no hay nadie marcado. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "6. Suplencia por tipo",
+        img: "despues-suplencia.png",
+        alt: "Nueva suplencia con tipo, grupos, rol a suplir y suplente, sin guardar",
+        pins: [
+          { x: 50.0, y: 28.4, t: "Tipo", d: "Primero el tipo: órdenes de compra o proformas. De ahí salen los grupos." },
+          { x: 50.0, y: 36.6, t: "Grupos donde está activo", d: "Con Órdenes de compra aparece Compras - packing export. Hay que marcar al menos uno. No se marcó." },
+          { x: 39.6, y: 44.8, t: "Rol a suplir", d: "Después de los grupos. Lista a quienes firman en esos grupos. El suplente va al lado. Se apretó Cancelar. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "7. Simulador bajo el piso",
+        img: "despues-simulador.png",
+        alt: "Simulador con 100.000 y bajo_umbral, sin enviar una OC",
+        pins: [
+          { x: 79.1, y: 44.0, t: "bajo_umbral", d: "Grupo Compras - packing export, monto 100.000. El primer escalón es 500.000, así que no pide aprobación. No se envió una OC. No se guardó." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "8. Admin de concepto",
+        img: "despues-admin-concepto.png",
+        alt: "Agregar administrador de concepto con Proformas y Bruno Lagos y Carlos, sin agregar",
+        pins: [
+          { x: 76.2, y: 40.5, t: "Usuarios del tipo", d: "El módulo está en Proformas. El combo Usuario abierto lista a Bruno Lagos y Carlos, que están en el grupo de proformas. Se apretó Cancelar. No se apretó Agregar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "9. Destino del contador",
+        img: "despues-usuarios-sin-grupo.png",
+        alt: "Usuarios filtrados a sin grupo de Compras, sin guardar",
+        pins: [
+          { x: 43.6, y: 16.8, t: "Filtro sin grupo", d: "Sale del contador ámbar. La URL trae sinGrupo=Compras. Son los usuarios de la empresa de la sesión." },
+          { x: 54.0, y: 53.6, t: "Andres Pino", d: "Rol Ventas, sin grupo de OC en esta empresa. No se apretó Guardar usuario." }
         ]
       }
     ];

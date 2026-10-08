@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido cruce de montos</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: 1; outline: 3px solid #fff; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .leyenda { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
+    .leyenda button { font: inherit; cursor: pointer; border: 0; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+    .chip { display: inline-block; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 700; padding: 2px 8px; }
+    .nexo { margin: 0 0 6px; padding: 6px 8px; border-radius: 8px; background: #fafaf9; border-left: 4px solid var(--anillo, #a8a29e); }
+    .saltos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .saltos button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: #fafaf9; border-radius: 8px; padding: 3px 8px; font-size: 12px; }
+    .dots { display: inline-flex; gap: 3px; margin-left: 4px; vertical-align: middle; }
+    .dots i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .velo { position: absolute; inset: 0; background: rgba(28,25,23,.28); border-radius: 10px; z-index: 2; }
+    .debe { position: absolute; z-index: 5; transform: translate(0, -115%); background: #fff; border: 2px solid #15803d; border-radius: 8px; padding: 3px 7px; font-size: 12px; line-height: 1.2; max-width: 168px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+    .debe.der { transform: translate(-100%, -115%); }
+    .debe.abajo { transform: translate(0, 6px); }
+    .debe.der.abajo { transform: translate(-100%, 6px); }
+    .debe .mal { display: block; color: #be123c; text-decoration: line-through; }
+    .debe .bien { display: block; color: #15803d; font-weight: 700; }
+    .dialog { position: absolute; z-index: 6; top: 8px; left: 8px; width: min(280px, 34%); max-height: 32%; overflow: auto; background: #fff; border: 2px solid #15803d; border-radius: 12px; padding: 8px 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .dialog h3 { margin: 0 0 4px; font-size: 0.95rem; }
+    .dialog ul { margin: 0; padding-left: 18px; }
+    .dialog li { margin: 2px 0; }
+    .dialog p { margin: 6px 0 0; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cruce de montos, 07-10-2026. ALMAHUE EXPORT SPA, modo real, periodo 2026-09.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div class="leyenda" id="leyenda"></div>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const hilos = {
+      P: { nombre: "Plazo", color: "#6d28d9" },
+      D: { nombre: "Dólar", color: "#0e7490" },
+      N: { nombre: "Neto e IVA", color: "#be123c" },
+      R: { nombre: "Rebaja", color: "#a21caf" }
+    };
+    function listaH(item) { return Array.isArray(item.h) ? item.h : [item.h]; }
+    const steps = [
+      {
+        mod: "Parametrización", cls: "param",
+        title: "1. Proveedor de prueba, 45 días",
+        img: "02-ficha-45.png",
+        alt: "Ficha nueva del proveedor QA-CRUCE PLAZO 45, condición del neto en 45, antes de guardar",
+        pins: [
+          { x: 32.9, y: 44.6, h: "P", va: [2], t: "Condición del NETO: 45", nexo: "Aquí se marca el origen del hilo Plazo: 45 días, proveedor QA-CRUCE PLAZO 45. En el paso 3 la OC de este mismo proveedor muestra 30.", d: "RUT 76.111.222-8, giro Proveedor de prueba cruce de montos, dirección Camino Fundo El Maiten 1200, San Fernando. Se eligió Ingresar días y se escribió 45. El aviso de la ficha dice que ese número se sugiere al armar la OC. En este paso todavía no se había apretado Guardar ficha." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "2. La ficha quedó guardada",
+        img: "03-proveedor-lista.png",
+        alt: "Lista de proveedores con la fila QA-CRUCE PLAZO 45 activa",
+        pins: [
+          { x: 60.0, y: 63.9, h: "P", va: [0, 2], t: "Fila 76.111.222-8", nexo: "Es el mismo proveedor marcado en el paso 1, con 45 días. La lista no muestra el 45. En el paso 3, al elegirlo, la OC queda en 30.", d: "Guardar ficha lo dejó ACTIVO. Identificador cmuybkb1d0028fctyy4hdnsrg. Razón QA-CRUCE PLAZO 45, giro Proveedor de prueba cruce de montos." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "3. La OC muestra 30 días",
+        img: "04-oc-plazo-30.png",
+        alt: "Nueva orden de compra del proveedor QA-CRUCE con condición de pago en 30 días",
+        pins: [
+          { x: 31.3, y: 64.1, h: "P", va: [0], t: "Condición de pago: 30 días", nexo: "Esto está mal. En el paso 1 se marcó 45 días. Aquí, para el mismo QA-CRUCE PLAZO 45, la condición de pago muestra 30.", d: "Proveedor 76.111.222-8. El giro se copió de la ficha. Fecha 07/10/2026, moneda todavía CLP, totales en $0. Compras > Nueva orden de compra, paso 1. No se apretó Enviar a aprobación. El mismo 30 vuelve a verse en el paso 5, ya guardado." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "4. Ítem 10 x 100 USD",
+        img: "05-oc-usd-items.png",
+        alt: "Paso de ítems de la OC en dólares, con equivalente, IVA y cadena",
+        pins: [
+          { x: 49.8, y: 53.0, h: "D", va: [5, 9, 10, 13], t: "Neto 1.000 USD, equivalente $984.820", nexo: "Aquí se marca el dólar de esta OC: TC $984,82, equivalente $984.820. En el paso 6 la OV usa otro, 925,97. En el paso 10 la centralización usa otro, 965,50. En el paso 11 este mismo 984,82 deja una base de CLP 1,02. El paso 14 es la ficha de este $984,82.", d: "Ítem QA-CRUCE CAJA 10 x 100 USD. Cantidad 10, precio 100 USD. Centro 1002, VENTA EXPORTACIÓN CEREZAS. Cuenta en Seleccionar. 1.000 x 984,82 = 984.820. Periodo de sesión septiembre 2026, fecha del documento 07/10/2026, dólar del 06-10-2026." },
+          { x: 96.5, y: 33.9, h: "N", va: [7, 8], t: "IVA $190 y total $1.190", nexo: "Aquí se marca el quiebre neto / IVA. Neto 1.000 USD, IVA $190, total $1.190, equivalente del total $1.171.936. El marcador Dólar de esta pantalla usa solo el neto, $984.820. El mismo quiebre, en una compra ya hecha, está en los pasos 8 y 9: asiento $199.900 y nómina $237.881.", d: "1.190 x 984,82 = 1.171.936. El panel usa el total con IVA. El equivalente bajo los ítems y la cadena usan el neto." },
+          { x: 33.2, y: 82.0, h: "N", va: [], t: "Cadena por $984.820", nexo: "Como se marcó recién en esta pantalla: el neto en pesos es $984.820 y el total con IVA es $1.171.936. La cadena toma $984.820 y deja el IVA afuera.", d: "Paso 1 Felipe Castro desde $500.000. Paso 2 Natalia Bravo cierra la cadena. No se apretó Enviar a aprobación." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "5. Borrador OC-2026-0005",
+        img: "06-oc-borrador.png",
+        alt: "OC-2026-0005 guardada como borrador, con aviso de que no se envió a aprobación",
+        pins: [
+          { x: 31.3, y: 64.1, h: "P", va: [0, 2], t: "Sigue en 30 días", nexo: "Como se marcó en el paso 1, la ficha decía 45. En el paso 3 la OC ya mostraba 30. Guardado el borrador, OC-2026-0005 sigue en 30.", d: "Aviso: Borrador guardado. No se envió a aprobación. Id cmuybnqca002yfctylip30057, fecha 2026-10-07, USD, afecto, BORRADOR. No se apretó Enviar a aprobación." },
+          { x: 96.5, y: 28.0, h: "N", va: [3], t: "Panel: neto 1.000, IVA 190, total 1.190", nexo: "Como se marcó en el paso 4: neto 1.000, IVA 190, total 1.190, equivalente $1.171.936 a TC $984,82. Lo que quedó grabado es el neto, 1.000 USD. El IVA y el peso siguen solo en esta pantalla.", d: "La cadena sigue diciendo Monto $984.820, el neto, no el total con IVA." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "6. Descuento 10% en la OV 101606909119",
+        img: "07-descuento-global.png",
+        alt: "Edición de la orden de venta 101606909119 con descuento global 10 sin guardar",
+        pins: [
+          { x: 95.0, y: 27.5, h: "R", va: [11], t: "Descuento global 10", nexo: "Aquí se marca la rebaja: 10% sobre 20 USD. La cabecera queda en 18. En esta misma pantalla la línea sigue en 20 y el Total CLP en $18.519. El artículo es EX-CEREZA-CAJ; su precio de compra en 0 está en el paso 12.", d: "OV 101606909119, Importadora Pacific Fruit SpA, exportación. Bodega BDGCER, disponible 8.231. No se apretó Guardar. El 10% está solo en pantalla." },
+          { x: 70.2, y: 59.8, h: "R", va: [], t: "La línea sigue en $20,00", nexo: "Esto está mal. El descuento marcado arriba bajó la cabecera a 18 USD. La línea sigue mostrando $20,00.", d: "El subtotal de la línea no recibe el 10%." },
+          { x: 96.2, y: 66.3, h: ["R", "D"], va: [3, 9, 13], t: "Total CLP $18.519", nexo: "Esto está mal, y junta dos hilos. Rebaja: el neto ya es 18 USD, pero $18.519 es 20 x 925,97. Dólar: este 925,97 no es el $984,82 marcado en el paso 4 ni el 965,50 del paso 10.", d: "18 x 925,97 = 16.667,46. Moneda 13, DOLAR USA. No se facturó y no se guardó." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "7. Comprobante 20260034",
+        img: "08-comprobante-venta.png",
+        alt: "Detalle del asiento 20260034, factura de ventas del 30-09-2026, con columnas de dólar y yuan",
+        pins: [
+          { x: 82.0, y: 44.1, h: ["N", "D"], va: [9, 12, 13], t: "Columnas T dólar y T yuan", nexo: "Hilo Neto: aquí el comprobante sí incluye el IVA, $244.200 + $46.398 = $290.598. En el paso 10 la centralización de ventas suma netos, sin ese IVA. Hilo Dólar: yuan y dólar se recalculan al abrir. En el paso 13 el yuan no tiene serie. El $984,82 marcado en el paso 4 es del 06-10; esta factura es del 30-09.", d: "Asiento 20260034, FACTURA 9/2026, contabilizado. Vencimiento de clientes 30-10-2026. No se apretó Editar ni Imprimir." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "8. Asiento de la compra 33-1001",
+        img: "14-asiento-neto.png",
+        alt: "Lista de asientos con el registro de compra 33-1001 en 199.900 pesos",
+        pins: [
+          { x: 68.8, y: 84.7, h: "N", va: [3, 8], t: "Debe y haber $199.900", nexo: "Aquí se marca el neto contable de la compra 33-1001: $199.900. En el paso 9 la misma compra muestra saldo $237.881. Es el mismo quiebre del paso 4, donde se guardó el neto (1.000 USD) y el panel mostraba el total con IVA (1.190).", d: "Asiento 20260029, 21-09-2026, MANUAL, contabilizado. En la lista, la compra 57 (20260031) y la 56 (20260030) están en $10.000, también neto." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "9. La nómina pide $237.881",
+        img: "13-nomina-bruto.png",
+        alt: "Nómina semanal de septiembre 2026, semana S3, documento 33-1001 con saldo 237.881",
+        pins: [
+          { x: 65.1, y: 90.7, h: "N", va: [7], t: "Saldo $237.881", nexo: "Como se marcó en el paso 8, el asiento de 33-1001 es $199.900. Aquí el valor es $237.881. 199.900 x 1,19 = 237.881. El comprobante cobra el neto y la nómina cobra el neto más IVA.", d: "Agricola Los Naranjos Ltda, RUT 76.210.103-3, semana S3, pendiente, 0 días de atraso. No se apretó Sincronizar, Ver ni Mover." },
+          { x: 26.2, y: 48.8, h: "P", va: [2], t: "A pagar de la semana $237.881", nexo: "El vencimiento 21-10-2026 es 30 días después del 21-09. Es el mismo corte a 30 que se marcó en el paso 3, donde la ficha decía 45 y la OC quedó en 30. Este documento es de otro proveedor.", d: "La semana S3 a pagar es $237.881. El mes septiembre marca $1.403.486 en 5 documentos." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "10. Preview de centralización",
+        img: "09-centralizacion-preview.png",
+        alt: "Centralización masiva de septiembre 2026 después de Preview, con cero asientos creados",
+        pins: [
+          { x: 37.2, y: 58.9, h: ["N", "D"], va: [3, 5, 6, 13], t: "Ventas $2.016.786", nexo: "Hilo Neto: en el paso 7 el comprobante incluye IVA ($244.200 + $46.398). Aquí ventas es $2.016.786, suma de netos. Hilo Dólar: esta pantalla usa 965,50. En el paso 4 se marcó $984,82 y en el paso 6, 925,97.", d: "Preview, 80 pendientes, 0 omitidos, asientos creados 0, monto a centralizar $5.413.642. No se apretó Confirmar." },
+          { x: 88.2, y: 58.9, h: "N", va: [7], t: "Bodega $3.191.856", nexo: "Compras pendientes $30.000 son tres netos de $10.000. El 33-1001 marcado en el paso 8 ($199.900, neto) ya está contabilizado y no entra en esos $30.000. Bodega suma $3.191.856 de movimientos, aparte de la factura.", d: "Contratistas: 1 pendiente, $175.000, el neto de la proforma tal como está guardado. La grilla abre con ventas de $7,50 y $1.850. Preview no crea asientos." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "11. Pago en USD, sin crear",
+        img: "10-pago-usd.png",
+        alt: "Formulario de nuevo pago con moneda USD, monto 1.000 y base en pesos de 1,02",
+        pins: [
+          { x: 62.1, y: 30.2, h: "D", va: [3], t: "Monto 1.000, pago en USD", nexo: "Se escribió el mismo 1.000 USD marcado en el paso 4. Allá, a $984,82, el equivalente era $984.820. El documento 57 es la compra cuyo asiento, en la lista del paso 8, es neto $10.000.", d: "Fecha 07/10/2026, pago / cobro total, transferencia, pendiente. Moneda factura CLP. Proveedor en Seleccionar. No se apretó Crear." },
+          { x: 62.1, y: 53.8, h: "D", va: [3, 13], t: "TC aplicado 984,8200", nexo: "Es el mismo $984,82 marcado en el paso 4 y publicado en el paso 14. 1.000 x 984,82 = 984.820.", d: "Sugerido por Banco Central de la fecha del pago." },
+          { x: 74.2, y: 84.8, h: "D", va: [3], t: "Base ≈ CLP 1,02", nexo: "Esto está mal. Con el TC marcado arriba, 984,8200, 1.000 USD son $984.820, el equivalente del paso 4. Aquí la base muestra CLP 1,02.", d: "1.000 / 984,82 = 1,015, que la pantalla redondea a 1,02 y rotula como CLP. No se apretó Crear." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "12. Piso de venta de la cereza",
+        img: "11-precio-compra.png",
+        alt: "Ficha del artículo EX-CEREZA-CAJ con precio de compra en 0",
+        pins: [
+          { x: 53.5, y: 65.6, h: "R", va: [5], t: "Precio de compra 0", nexo: "Es el artículo de la línea marcada en el paso 6, EX-CEREZA-CAJ, la de los $20,00 que no bajaron con el 10%. Aquí el precio de compra es 0. El piso usa el costo promedio, 1.850, y esta ficha no lo muestra.", d: "Cereza export caja 5 kg, familia Fruta, unidad CAJ. No se apretó Guardar cambios. El 0 sigue igual que al abrir." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "13. El yuan no tiene serie",
+        img: "15-monedas.png",
+        alt: "Mantenedor de monedas con CNY en serie no asignada y cero monedas que sincronizan",
+        pins: [
+          { x: 51.0, y: 59.9, h: "D", va: [6, 13], t: "CNY, serie no asignada", nexo: "El yuan con el que el paso 7 rellena el comprobante no tiene serie aquí: No asignada. En el paso 14 el mismo yuan sí tiene valor, $146,84. El dólar $984,82 de los pasos 4 y 11 tampoco tiene serie en esta lista.", d: "Monedas activas: BRL, CLP, CNY y USD. Sync Manual. Agregar una moneda no agrega una columna de tipo de cambio. UTM no está en esta lista." },
+          { x: 93.7, y: 24.1, h: "D", va: [13], t: "Sincronizan con BC: 0", nexo: "El encabezado dice 0. En el paso 14 los indicadores del 06-10 están cargados: dólar $984,82 y yuan $146,84.", d: "El maestro de monedas y la tabla de indicadores no se leen como la misma lista." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "14. Indicadores del 06-10-2026",
+        img: "16-indicadores.png",
+        alt: "Indicadores del Banco Central con dólar 984,82 y yuan 146,84 del 06-10-2026",
+        pins: [
+          { x: 45.2, y: 29.2, h: "D", va: [3, 5, 9, 10], t: "Dólar $984,82", nexo: "Este $984,82 es el dólar marcado en el paso 4, donde 1.000 USD dieron $984.820, y el TC 984,8200 del paso 11. La OV del paso 6 mostró otro valor, 925,97. La centralización del paso 10 mostró otro, 965,50.", d: "Vigente 2026-10-06, Dólar Observado, CSV Importado. Última sync 06-10-2026, 5:26:50 p. m., OK. No se apretó Sincronizar Hoy." },
+          { x: 59.2, y: 34.0, h: "D", va: [6, 12], t: "Yuan $146,84 y UF $41.098,15", nexo: "Yuan $146,84. En el paso 13 ese yuan estaba sin serie. El comprobante del paso 7 arma T yuan al abrirse, con la fila de su fecha, no con el maestro. La UF se ve aquí. La cadena de la OC del paso 4 no la usa.", d: "Mismo día: EUR $1.108,41. Fuente BCCh, CSV Importado." }
+        ]
+      }
+    ];
+
+    const corrs = [
+      { nota: "La ficha está bien. No hay que cambiar el 45. La OC del paso 3 debe copiarlo.", items: [
+        { x: 32.9, y: 44.6, bien: "Correcto: 45 días", nota: "La orden de compra tiene que mostrar este 45, no 30." }
+      ]},
+      { nota: "El proveedor quedó guardado. El arreglo es al armar la OC: leer 45, no sustituirlo por 30.", items: [
+        { x: 60, y: 63.9, bien: "Al elegir esta fila, la OC debe salir en 45 días", chip: "OC en 45 días" }
+      ]},
+      { nota: "Reemplazar 30 por el 45 de la ficha del mismo proveedor.", items: [
+        { x: 31.3, y: 64.1, mal: "30 días", bien: "45 días" }
+      ]},
+      { nota: "El neto en pesos, 1.000 x 984,82 = 984.820, se usa una sola vez en la cadena. El total con IVA se rotula aparte y no entra a la cadena.", items: [
+        { x: 49.8, y: 53, bien: "Neto en pesos: $984.820", chip: "$984.820", nota: "Este equivalente está bien si el TC del documento es $984,82." },
+        { x: 78, y: 36, mal: "Total equiv. junto al neto", chipMal: "Total equiv.", bien: "Total con IVA $1.171.936, fuera de la cadena", chip: "$1.171.936 aparte" },
+        { x: 33.2, y: 78, bien: "Cadena: monto neto $984.820, una sola vez", chip: "Cadena $984.820" }
+      ]},
+      { nota: "Al guardar, el plazo sigue el de la ficha. El campo grabado es el neto 1.000 USD.", items: [
+        { x: 31.3, y: 64.1, mal: "30 días", bien: "45 días" },
+        { x: 78, y: 32, bien: "Guardado: neto 1.000 USD. IVA $190 solo en pantalla, rotulado", chip: "Neto 1.000 USD" }
+      ]},
+      { nota: "El 10% deja el neto en 18 USD. El Total CLP tiene que salir de 18, no de 20. 18 x 925,97 = 16.667. El 925,97 es el TC de esta OV y no se reemplaza en esta corrección.", items: [
+        { x: 70.2, y: 59.8, mal: "Línea $20,00 manda el peso", chipMal: "Línea $20", bien: "El peso sale del neto $18,00", chip: "Peso desde $18" },
+        { x: 96.2, y: 66.3, mal: "$18.519", bien: "$16.667" }
+      ]},
+      { nota: "Los pesos están bien: $244.200 + IVA $46.398 = $290.598. Dólar y yuan no se recalculan al abrir.", items: [
+        { x: 82, y: 44.1, mal: "T dólar y T yuan al abrir", chipMal: "TC al abrir", bien: "TC guardado el 30-09, o la columna vacía", chip: "TC del 30-09" }
+      ]},
+      { nota: "El asiento en $199.900 está bien: es el neto. No hay que pasarlo a $237.881. La deuda con IVA se ve en la nómina, desglosada.", items: [
+        { x: 68.8, y: 84.7, bien: "Correcto: neto $199.900" }
+      ]},
+      { nota: "El saldo $237.881 se mantiene, pero tiene que mostrar de dónde sale. 199.900 x 1,19 = 237.881, IVA $37.981. El vencimiento no se toca: es otro proveedor.", items: [
+        { x: 65.1, y: 78, mal: "$237.881 sin desglose", chipMal: "$237.881", bien: "$237.881 = neto $199.900 + IVA $37.981", chip: "+ IVA $37.981" },
+        { x: 26.2, y: 48.8, bien: "La semana muestra el mismo desglose", chip: "Mismo desglose" }
+      ]},
+      { nota: "No hay un total único para reemplazar $2.016.786: hay facturas exentas. El arreglo es el criterio. El 965,50 no es el TC de los otros pasos; cada documento usa el de su fecha. Bodega no se confirma.", items: [
+        { x: 37.2, y: 58.9, mal: "$2.016.786 solo netos", chipMal: "Solo netos", bien: "Neto + IVA si es afecta; solo neto si es exenta", chip: "Neto + IVA si afecta" },
+        { x: 88.2, y: 58.9, mal: "Bodega $3.191.856", chipMal: "$3.191.856", bien: "No abonar PROVEEDORES por salidas de venta", chip: "No a proveedores" }
+      ]},
+      { nota: "1.000 USD x 984,82 = 984.820. La base no es 1,02.", items: [
+        { x: 62.1, y: 53.8, bien: "TC $984,82 se mantiene" },
+        { x: 74.2, y: 84.8, mal: "CLP 1,02", bien: "$984.820" }
+      ]},
+      { nota: "El 0 puede seguir como precio de compra. La ficha tiene que mostrar el piso que realmente usa.", items: [
+        { x: 53.5, y: 65.6, mal: "0 y el piso no se ve", chipMal: "Piso oculto", bien: "Piso vigente: costo promedio $1.850", chip: "Piso $1.850" }
+      ]},
+      { nota: "No se inventa un código de serie. El yuan y el dólar quedan ligados al valor que ya está en Indicadores.", items: [
+        { x: 51, y: 59.9, mal: "Serie no asignada", bien: "CNY ligado a $146,84", chip: "CNY $146,84" },
+        { x: 70, y: 22, mal: "Sincronizan con BC: 0", chipMal: "Sync: 0", bien: "Contar USD, EUR, CNY y UF", chip: "USD EUR CNY UF" }
+      ]},
+      { nota: "Esta pantalla es la referencia del 06-10. No se cambian estos números. La OC y el pago de ese día usan $984,82. La OV en 925,97 y la centralización en 965,50 son las que hay que alinear con la fecha de cada documento.", items: [
+        { x: 48, y: 36, bien: "Referencia correcta: USD $984,82", chip: "USD $984,82" },
+        { x: 72, y: 36, bien: "Referencia correcta: CNY $146,84", chip: "CNY $146,84" }
+      ]}
+    ];
+    let step = 0, pin = 0, corrigiendo = false;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const leyenda = document.getElementById("leyenda");
+
+    function anillo(item) {
+      const hs = listaH(item);
+      if (hs.length === 1) return "0 0 0 3px " + hilos[hs[0]].color;
+      return "0 0 0 3px " + hilos[hs[0]].color + ", 0 0 0 6px " + hilos[hs[1]].color;
+    }
+
+    Object.keys(hilos).forEach((id) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = id + " " + hilos[id].nombre;
+      b.style.background = hilos[id].color;
+      b.addEventListener("click", () => {
+        for (let i = 0; i < steps.length; i++) {
+          const p = steps[i].pins.findIndex((item) => listaH(item).includes(id));
+          if (p >= 0) { show(i, p); break; }
+        }
+      });
+      leyenda.appendChild(b);
+    });
+
+    steps.forEach((s, i) => {
+      const ids = [...new Set(s.pins.flatMap(listaH))];
+      const dots = ids.map((id) => `<i style="background:${hilos[id].color}" title="${hilos[id].nombre}"></i>`).join("");
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}<span class="dots">${dots}</span></span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      corrigiendo = false;
+      step = i; pin = p;
+      const s = steps[i];
+      const item = s.pins[p];
+      const hs = listaH(item);
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = false;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((pinItem, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = pinItem.x + "%";
+        b.style.top = pinItem.y + "%";
+        b.style.boxShadow = anillo(pinItem);
+        b.textContent = String(idx + 1);
+        b.title = listaH(pinItem).map((id) => hilos[id].nombre).join(", ") + ": " + pinItem.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const chips = hs.map((id) => `<span class="chip" style="background:${hilos[id].color}">${id} ${hilos[id].nombre}</span>`).join("");
+      const saltos = (item.va || []).map((idx) => `<button type="button" data-ir="${idx}">Ir al paso ${idx + 1}</button>`).join("");
+      card.innerHTML = `<div class="chips">${chips}</div><h3>${item.t}</h3><p class="nexo" style="--anillo:${hilos[hs[0]].color}">${item.nexo}</p><p>${item.d}</p><div class="saltos">${saltos}</div>`;
+      card.querySelectorAll("[data-ir]").forEach((b) => b.addEventListener("click", () => {
+        const dest = Number(b.dataset.ir);
+        const shared = steps[dest].pins.findIndex((pinItem) => listaH(pinItem).some((id) => hs.includes(id)));
+        show(dest, shared >= 0 ? shared : 0);
+      }));
+    }
+    function enterCorr() {
+      corrigiendo = true;
+      const s = steps[step];
+      const c = corrs[step];
+      title.textContent = s.title + " · Corrección";
+      prev.disabled = false;
+      next.disabled = step === steps.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === step));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      const velo = document.createElement("div");
+      velo.className = "velo";
+      frame.appendChild(velo);
+      c.items.forEach((it) => {
+        const tag = document.createElement("div");
+        const abajo = it.y < 72;
+        tag.className = "debe" + (it.x >= 60 ? " der" : "") + (abajo ? " abajo" : "");
+        tag.style.left = it.x + "%";
+        tag.style.top = (it.y < 30 ? 30 : it.y) + "%";
+        if (it.mal) {
+          const mal = document.createElement("span");
+          mal.className = "mal";
+          mal.textContent = it.chipMal || it.mal;
+          tag.appendChild(mal);
+        }
+        const bien = document.createElement("span");
+        bien.className = "bien";
+        bien.textContent = it.chip || it.bien;
+        tag.appendChild(bien);
+        frame.appendChild(tag);
+      });
+      const dialog = document.createElement("div");
+      dialog.className = "dialog";
+      dialog.setAttribute("role", "dialog");
+      const h = document.createElement("h3");
+      h.textContent = "Cómo debería verse";
+      dialog.appendChild(h);
+      const ul = document.createElement("ul");
+      c.items.forEach((it) => {
+        const li = document.createElement("li");
+        li.textContent = (it.mal ? it.mal + " pasa a " : "") + it.bien + (it.nota ? ". " + it.nota : "");
+        ul.appendChild(li);
+      });
+      dialog.appendChild(ul);
+      const pie = document.createElement("p");
+      pie.textContent = c.nota;
+      dialog.appendChild(pie);
+      frame.appendChild(dialog);
+      stage.appendChild(frame);
+      card.innerHTML = "<h3>Corrección de esta pantalla</h3><p>" + c.nota + "</p>";
+    }
+    function forward() {
+      const s = steps[step];
+      if (corrigiendo) {
+        if (step < steps.length - 1) show(step + 1, 0);
+        return;
+      }
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else enterCorr();
+    }
+    function back() {
+      if (corrigiendo) {
+        show(step, steps[step].pins.length - 1);
+        return;
+      }
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

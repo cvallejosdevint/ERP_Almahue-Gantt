@@ -1,0 +1,221 @@
+# Kickoff GoSocket 2026-09-15 Pablo y MJ (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-09-15 121112.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [01:03] Buenas tardes, ¿cómo están? Ay, se hizo la uña. Hola, buenas.
+- [01:09] ¿Qué tal? ¿Cómo les va? ¿Viene a ti, Pablo?
+- [01:17] Todo bien, todo bien. Qué bueno. ¿Nos escuchan ahí? Yo escucho bien.
+- [01:35] Bueno, Pablo, no hemos tenido mayores impulsos...
+- [01:45] ¿Tú querés comer por ese lado? En serio, voy a tener que insistirles.
+- [02:20] imagino que quizás está en otro otra cosa
+- [02:35] bien y respecto a la implementación es seguir las pruebas que han hecho
+- [02:41] entre el 5 y el día
+- [02:44] Y están bastante buenas las pruebas
+- [02:49] Hola, buenas, por si acaso
+- [02:51] Me voy a ir muteando porque
+- [02:53] Tuve un problema con mis audífonos
+- [02:55] Y los tengo en el parlante para que no se vayan a escuchar doble
+- [02:57] Ah, ya, vale
+- [02:59] No sé si vas a ir
+- [03:03] Igual mi correo
+- [03:05] Sí, sí
+- [03:06] Sí, de los duplicados
+- [03:09] Sí
+- [03:11] Sí, esa información
+- [03:12] Es siempre mejor no duplicarla
+- [03:15] y darle el funcionamiento correspondiente al nodo, porque ¿qué es lo que ocurre?
+- [03:21] Voy a compartir pantalla.
+- [03:28] Nosotros las representaciones gráficas, y esto es por una normativa que hay vigente,
+- [03:34] una normativa del nombre de ítem, lo que hacemos es que se duplica.
+- [03:42] Acá en esta representación gráfica no alcanza a salir, pero aquí saldría lo mismo dos veces.
+- [03:47] Esto es una fórmula que lo que hace es concatenar ambos nodos
+- [03:51] en el caso de que ustedes necesiten más información
+- [03:53] para mostrar en la descripción
+- [03:55] del producto. Entonces,
+- [03:58] al hacer esto,
+- [03:59] lo que vamos a hacer en la representación gráfica
+- [04:01] oficial es que esto se va a duplicar.
+- [04:04] Entonces, desde ya yo les comento
+- [04:06] que esto eviten hacerlo
+- [04:07] y intenten, si no lo van a enviar,
+- [04:09] no lo van a utilizar, no lo envíen.
+- [04:11] Pero déjenlo disponible en el caso de que
+- [04:13] el negocio lo necesite. Porque en algún
+- [04:15] momento lo van a necesitar, en el caso
+- [04:17] de que tengan que informar detalles.
+- [04:19] Perfecto
+- [04:22] Entonces, más que nada eso
+- [04:24] Por lo demás veo súper bien los documentos
+- [04:27] Veo que no están con reparo
+- [04:29] Están recibidos directamente
+- [04:31] Y no hay información adicional
+- [04:33] Creería que estamos bien por estar en ese lado
+- [04:36] Genial
+- [04:39] En ese caso entonces
+- [04:40] Bueno, como se podría utilizar
+- [04:43] Yo creo que
+- [04:44] En la parte que vendría a ser
+- [04:47] Dentro del RP María Jesús
+- [04:49] Yo creo que vamos a agregar el apartado
+- [04:51] De agregar una descripción que va a ser opcional
+- [04:53] Para los ítems que queden en bodega
+- [04:55] Para que ese ítem quede disponible
+- [04:57] En caso de que a futuro se necesite
+- [04:59] Pero sería como un campo opcional
+- [05:00] No hay problema con eso, ¿verdad?
+- [05:02] No, no hay problema con eso
+- [05:03] Perfecto, ahí quedaría alineado
+- [05:06] Y también le daríamos el uso
+- [05:07] Y enviaríamos con el XML
+- [05:09] Bueno, y ahora lo que toca en este caso
+- [05:15] Es realizar pruebas
+- [05:16] Y validar cuáles son las informaciones que necesitan
+- [05:19] Yo les debo las representaciones gráficas
+- [05:21] las tengo que crear. Ahora que ya tienen un set de pruebas válido, voy a crear la información
+- [05:27] para que la puedan, en este caso, tomar desde el mismo documento. Entonces eso, quedaría
+- [05:34] pendiente de mi parte crear, en este caso, las representaciones gráficas que ya me mandó
+- [05:39] María Jesús, adecuarme un poco a lo que necesitan, y ya con eso pasaríamos a la segunda
+- [05:46] la fase de pruebas, que sería
+- [05:49] en este caso hacer la validación
+- [05:50] de la data que va en el documento.
+- [05:55] Perfecto.
+- [05:57] Perfecto.
+- [05:58] Bien, o sea, igual de nuestra
+- [06:00] forma estamos avanzando
+- [06:02] independiente que esté o no
+- [06:04] el contrato
+- [06:06] voy a seguir insistiendo
+- [06:08] María Jesús, que de verdad
+- [06:10] lo único que puedo hacer
+- [06:12] es comentarle a
+- [06:14] Cristian que vea el tema
+- [06:15] y lo único que puedo hacer es re-insistir
+- [06:19] si, me imagino
+- [06:21] yo creo que quizás si no tengo respuesta
+- [06:23] porque la idea es tener respuesta de aquí a octubre
+- [06:25] lo que pasa es que yo hoy en día me voy de vacaciones
+- [06:27] entonces la reunión
+- [06:29] de la próxima semana la va a liderar
+- [06:32] Mario Confrancista
+- [06:33] y la idea es que
+- [06:35] si no tengo respuesta de aquí a
+- [06:37] una o dos semanas yo creo que voy a tratar de
+- [06:39] contactarme de nuevo con
+- [06:41] el área comercial
+- [06:43] para que si es que me pueden asignar a otra
+- [06:45] ejecutivo.
+- [06:47] Ya.
+- [06:50] Mira, con eso mismo
+- [06:51] le voy a comentar que apuro un poco
+- [06:53] el tema.
+- [06:55] Por eso mismo le voy a comentar que, o por lo menos
+- [06:57] la próxima semana, pedirle que
+- [06:59] se sume, en este caso, a la
+- [07:01] reunión. De hecho, en esta reunión
+- [07:03] tuvo que haberse sumado también.
+- [07:07] ¿Ya? Así que eso.
+- [07:10] Les voy a comentar cuando
+- [07:11] estén listas las representaciones gráficas.
+- [07:13] Esto demora. Demora harto porque
+- [07:15] es harto diseño que hay que hacer.
+- [07:16] entonces yo creería que de aquí a la próxima semana
+- [07:19] ya debería estar listo
+- [07:22] pero igual de todas formas
+- [07:23] yo les voy a comentar
+- [07:24] respecto al tema del funcionamiento Carlos de los métodos
+- [07:27] en este caso para obtener los PDF
+- [07:29] igual ya están funcionando
+- [07:31] porque toman una predeterminada
+- [07:32] así que igual ahí tú puedes probar
+- [07:34] y en este caso hacer las pruebas que necesitas
+- [07:37] respecto al tema del JetDoc
+- [07:38] también, que es súper importante
+- [07:41] perfecto, si actualmente de hecho teníamos
+- [07:43] la implementación y estaba trayendo este
+- [07:45] que está mostrando lo estábamos logrando traer al sistema no sé si después del ajuste de la
+- [07:49] representación tendríamos que cambiar algo o con el mismo que ya tenemos va a traer la
+- [07:53] representación actualizada no no de hecho al momento de realizar la emisión del nuevo
+- [08:00] documento ya va a salir la representación gráfica porque eso que nos manda el portal
+- [08:04] Ah, genial.
+- [08:04] Hay portales que deciden, ah, tengo esta representación, entonces voy a realizar el documento en base a esto nuevo.
+- [08:11] Ahora, hay ahí un hack.
+- [08:14] En el caso de que ustedes quieran probar las representaciones gráficas nuevas con documentos antiguos,
+- [08:20] que es la regeneración del PDF.
+- [08:22] Eso por la API no lo puedes hacer, pero sí lo puedes hacer acá por el portal.
+- [08:26] En la opción de descarga PDF, está esta opción, regenerar PDF.
+- [08:30] Lo que hace el portal ahí es desechar la representación gráfica antigua
+- [08:33] ¿Bien?
+- [08:34] Porque el documento sí o sí se queda con la representación
+- [08:37] En el momento que fue emitido
+- [08:38] Desecha la antigua
+- [08:40] Y toma una nueva en el caso que yo cargue una
+- [08:43] Ah, genial, perfecto
+- [08:45] Entonces, ahí si quieren
+- [08:46] Por alguna casualidad
+- [08:48] Regenerar documentos antiguos con el PDF
+- [08:50] Se puede hacer, ¿ya?
+- [08:52] Para que nadie lo crean que es estático
+- [08:54] Ah, genial, perfecto
+- [08:58] Así que, bueno, yo veo bastante avanzado el proyecto
+- [09:00] la verdad María Jesús
+- [09:01] no tienen
+- [09:04] una fecha
+- [09:05] aproximada en que quieran salir
+- [09:08] a productivo con la solución
+- [09:10] lo que pasa es que nosotros
+- [09:12] hubiésemos salido
+- [09:14] a productivo ahora en septiembre
+- [09:16] pero como tenemos que estar en marcha
+- [09:17] en el tema de los contratos
+- [09:19] y de la
+- [09:22] plataforma de Gozart
+- [09:23] la que debería funcionar más rápido
+- [09:25] con la oficial
+- [09:28] La YoFacturo
+- [09:30] Eso, la YoFacturo
+- [09:32] No hemos podido avanzar
+- [09:34] Mucha sí, sí ha sido un problema eso
+- [09:39] Si no ya estaríamos habilitados porque
+- [09:41] Realmente nos demoramos en activarlo
+- [09:43] Uno o dos días
+- [09:44] Sí, yo soy un feliz
+- [09:47] Pasturado en septiembre con
+- [09:49] La YoFacturo
+- [09:49] Mira, voy a sumar ahora
+- [09:53] Mi PMO, ya para que
+- [09:55] Ahí insista y
+- [09:56] Ver qué es lo que está ocurriendo
+- [09:58] puede que, igual yo tampoco
+- [10:00] he tenido información de parte de Christian
+- [10:02] entonces capaz que quizás
+- [10:04] está haciendo alguna acción
+- [10:05] por el área legislativa
+- [10:07] la verdad no lo sé
+- [10:09] pero igual no he tenido información
+- [10:11] entonces le voy a pedir ahí que me dé
+- [10:13] un feedback si es que
+- [10:15] está ocurriendo algo o no
+- [10:17] así que
+- [10:19] intentaré hacer todo lo posible
+- [10:22] para que por lo menos a finales de septiembre
+- [10:24] si está firmado el contrato
+- [10:26] podamos hacer por lo menos la habilitación de Iofactura.
+- [10:28] ¿Bien?
+- [10:30] Sería bastante bueno.
+- [10:32] Bien, así que eso
+- [10:34] queda pendiente de mi parte.
+- [10:37] Ya, Pablo. Igual te voy a
+- [10:38] mandar por Tim el
+- [10:40] correo de las personas que hay que delegar para la próxima reunión.
+- [10:45] Perfecto. Para hacer
+- [10:46] la actualización de la
+- [10:48] cita, por favor.
+- [10:49] Sí, ningún problema.
+- [10:51] Ya, Pablo. Muchas gracias.
+- [10:52] Que estén muy bien, María Jesús, para dedicarnos a esta conversación.
+- [10:56] Ya, Pablo. Muchas gracias. Que estén muy bien.
+- [10:57] Que les vaya muy bien
+- [10:59] Hasta luego

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Asiento de ventas - antes y después (29/09/2026)</title>
+  <style>
+    body {
+      margin: 0;
+      font: 16px/1.45 "Segoe UI", sans-serif;
+      background: #f4f1ea;
+      color: #1c1917;
+    }
+    header, section {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 28px 32px 8px;
+    }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    header p, .nota { color: #44403c; max-width: 85ch; }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid #e7e5e4;
+    }
+    th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e7e5e4; vertical-align: top; }
+    th { background: #fafaf9; }
+    @media (max-width: 900px) {
+      .pair { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contabilizar ventas: mismo documento, otro comprobante</h1>
+    <p>
+      Misma factura 86 del libro de ventas (ALM SERVICES, $1.850, 18/09/2026), antes y después del ajuste.
+      El documento ya traía cliente, neto, IVA, fecha y líneas. El asiento no usaba parte de eso.
+    </p>
+    <p>
+      Base: comprobante 4969 de María Jesús, plan de cuentas que ella entregó, y Reu2/Reu4 (cuenta y centro de costo por ítem, clientes de exportación aparte de clientes nacionales).
+    </p>
+  </header>
+
+  <section>
+    <h2>Pantalla de contabilizar</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-modal.png" alt="Modal anterior: solo cuenta y centro de costo, glosa Contabiliza folio" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-modal.png" alt="Modal nuevo: área de negocio, glosa FACTURA 9/2026 y aviso del comprobante VENTAS" />
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué cambió en esta factura</h2>
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Antes</th><th>Después</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tipo de comprobante</td>
+          <td>MANUAL</td>
+          <td>VENTAS</td>
+        </tr>
+        <tr>
+          <td>Glosa</td>
+          <td>Contabiliza FA-101606909134-8542</td>
+          <td>FACTURA 9/2026. Si el documento trae tipo de cambio, se agrega TC: valor.</td>
+        </tr>
+        <tr>
+          <td>Debe</td>
+          <td>La cuenta CLIENTES de Config SII, o la primera cuenta imputable</td>
+          <td>1-1-04-01-001 CLIENTES. Si la venta es exportación, 1-1-04-01-002 CLIENTES EXPORTACION.</td>
+        </tr>
+        <tr>
+          <td>Haber</td>
+          <td>Cuenta y centro de costo del ítem. El centro podía quedar vacío.</td>
+          <td>Igual, más área de negocio. Si la cuenta del plan exige centro o área, Guardar no sigue sin ellos.</td>
+        </tr>
+        <tr>
+          <td>IVA</td>
+          <td>Se agregaba si el documento tenía IVA</td>
+          <td>Sigue igual. Esta factura es afecta, así que el aviso lo dice. Una exportación sin IVA no lleva esa línea.</td>
+        </tr>
+        <tr>
+          <td>Vencimiento y dólares</td>
+          <td>El documento los podía tener y el asiento los ignoraba</td>
+          <td>Si el documento tiene vencimiento, va en la línea del cliente. Si tiene monto en otra moneda y tipo de cambio, van en cada línea. Esta factura 33 no los trae, por eso el aviso no los muestra.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="nota">
+      No se contabilizó la factura 86. La captura de después es el modal listo para guardar. Las pruebas del servicio comercial (43) pasan.
+    </p>
+  </section>
+
+  <section>
+    <h2>Qué sigue sin poder llenarse</h2>
+    <p class="nota">
+      En el comprobante 4969 la línea del cliente trae un 111 y un 1494. La glosa dice FACTURA y 111 en el SII es nota de crédito de exportación. No hay de dónde copiar ese par, así que el asiento no lo inventa.
+    </p>
+  </section>
+</body>
+</html>

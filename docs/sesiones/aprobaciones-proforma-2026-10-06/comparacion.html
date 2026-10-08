@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Grupos de OC y de proformas - antes y después</title>
+  <title>Aprobaciones unificadas y piso de monto - antes y después</title>
   <style>
     :root { color-scheme: light; }
     body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
@@ -34,38 +34,128 @@
 </head>
 <body>
   <header>
-    <h1>Grupos de OC y de proformas - antes y después</h1>
-    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-09. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra.</p>
+    <h1>Aprobaciones unificadas y piso de monto - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-09. Lo que faltaba desde la muestra del 1 de octubre: una sola lista de grupos, tipo en el alta, filtro OC o Proformas, contadores de usuarios sin grupo, suplencias por tipo, AdminConcepto filtrado y el piso de monto (la OC chica no pide el primer escalón). El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. Para mostrarlo, sigue <a href="recorrido.html">el recorrido</a>. Indicadores de Felipe: <a href="../felipe-indicadores-bc-2026-10-05/comparacion.html">comparación</a> y <a href="../felipe-indicadores-bc-2026-10-05/recorrido.html">recorrido</a>.</p>
   </header>
 
   <section>
-    <h2>Reglas de aprobación</h2>
+    <h2>Lista única de grupos</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
-        <img src="antes-reglas.png" alt="Reglas de aprobación con una sola cadena de compras" />
+        <img src="despues-grupos.png" alt="Panel de configuración con dos listas, una de OC y otra de proformas" />
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-reglas-marcado.png" alt="Reglas de aprobación con los botones Órdenes de compra y Proformas" />
+        <img src="despues-grupos-unificados-marcado.png" alt="Una sola tabla con columna Tipo y contadores ámbar de usuarios sin grupo" />
       </figure>
     </div>
-    <p class="nota">La barra tiene dos familias: Órdenes de compra y Proformas. La cadena de OC sigue igual: Compras - packing export, Felipe Castro y Natalia Bravo. Al elegir Proformas esa cadena no se muestra. No se guardó ni se creó ningún grupo.</p>
+    <p class="nota">Las dos secciones pasan a una tabla. El tipo (órdenes de compra o proformas) va en la columna y en el filtro. Abajo, los contadores ámbar llevan a Usuarios con el filtro sin grupo. No se apretó Guardar ni se creó un grupo.</p>
   </section>
 
   <section>
-    <h2>Usuario, grupo como integrante</h2>
+    <h2>Filtro de tipo, abierto</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
-        <img src="antes-usuario.png" alt="Elena Rojas con un solo check de grupos de aprobación" />
+        <img src="despues-grupos-unificados.png" alt="Filtro Tipo cerrado en Todos" />
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-usuario-marcado.png" alt="Selector de grupo de OC abierto, sin guardar" />
+        <img src="despues-filtro-tipo-marcado.png" alt="Filtro Tipo abierto con Todos, Órdenes de compra y Proformas" />
       </figure>
     </div>
-    <p class="nota">Elena Rojas tiene el rol Compras, que escribe órdenes de compra. Antes había un solo check de grupos. Ahora el selector es solo el de OC y está abierto en Compras - packing export. El de proformas no aparece porque este rol no escribe esa pantalla. Se apretó Cancelar. No se guardó.</p>
+    <p class="nota">El combo Tipo está abierto: Todos, Órdenes de compra, Proformas. Filtra la misma lista. No se cambió el filtro. No se apretó Aplicar filtros.</p>
+  </section>
+
+  <section>
+    <h2>Piso de monto en el mapa</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-reglas.png" alt="Mapa de OC con Felipe Castro y Natalia Bravo, sin el texto de piso" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-reglas-piso-marcado.png" alt="Felipe Castro con el piso mayor o igual a 500.000 pesos" />
+      </figure>
+    </div>
+    <p class="nota">Felipe Castro entra cuando el monto es mayor o igual a 500.000. Natalia Bravo cierra la cadena. Una OC de 100.000 no le pide el primer escalón. No se envió una OC. No se apretó Configurar.</p>
+  </section>
+
+  <section>
+    <h2>Simulador bajo el piso</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-reglas-piso.png" alt="Mapa con el piso de Felipe en 500.000" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-simulador-marcado.png" alt="Simulador con 100.000 y estado bajo_umbral, sin pedir aprobación" />
+      </figure>
+    </div>
+    <p class="nota">Con el grupo Compras - packing export y 100.000 el simulador responde bajo_umbral: el monto no alcanza el primer escalón y no pide aprobación. No se envió una OC. No se guardó.</p>
+  </section>
+
+  <section>
+    <h2>Alta de grupo: tipo e integrantes primero</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-grupos.png" alt="Dos botones Nuevo grupo, uno por familia, con el tipo fijo de esa sección" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-grupo-nuevo-marcado.png" alt="Alta de grupo con tipo abierto, integrantes marcados y aprobador final entre ellos" />
+      </figure>
+    </div>
+    <p class="nota">Un solo alta. El tipo se elige en el formulario (órdenes de compra o proformas), abierto. Los integrantes van primero. Elena Rojas y Felipe Castro están marcados; el aprobador final se elige solo entre los marcados. Se apretó Cancelar. No se apretó Guardar.</p>
+  </section>
+
+  <section>
+    <h2>Suplencia por tipo y grupos</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-grupos-unificados.png" alt="Panel de grupos, sin el formulario de suplencia" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-suplencia-marcado.png" alt="Nueva suplencia: tipo, grupos donde está activo, rol a suplir y suplente" />
+      </figure>
+    </div>
+    <p class="nota">El orden es Tipo, luego los grupos donde el titular está activo, luego Rol a suplir y Suplente. Con Órdenes de compra aparece Compras - packing export. Se apretó Cancelar. No se apretó Guardar.</p>
+  </section>
+
+  <section>
+    <h2>Admin de concepto, filtrado por tipo</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-grupos-unificados.png" alt="Panel de grupos, sin el alta de administrador de concepto" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-admin-concepto-marcado.png" alt="Alta de administrador con módulo Proformas y la lista de usuario abierta: Bruno Lagos y Carlos" />
+      </figure>
+    </div>
+    <p class="nota">Con el módulo en Proformas, el combo Usuario abierto lista solo a quienes están en un grupo de ese tipo: Bruno Lagos y Carlos. Se apretó Cancelar. No se apretó Agregar.</p>
+  </section>
+
+  <section>
+    <h2>Usuarios sin grupo de OC</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-usuario.png" alt="Usuario Elena Rojas sin el filtro de quienes no tienen grupo" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-usuarios-sin-grupo-marcado.png" alt="Lista de usuarios filtrada a sin grupo de Compras, con Andres Pino sin grupo en esta empresa" />
+      </figure>
+    </div>
+    <p class="nota">El contador ámbar abre Usuarios con el filtro sin grupo de Compras. Andres Pino tiene rol Ventas y figura sin grupo en esta empresa. No se apretó Guardar usuario.</p>
   </section>
 
   <div class="visor" id="visor" hidden>

@@ -1,0 +1,1389 @@
+# Reunion interna 2026-09-30
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-09-30 154412.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [00:00] O sea, más que nada, mi consulta era si tenían algo que explicar o algo que vieron en la reunión respecto a los diagramas que mandaron ellos, porque mandaron el medio documento.
+- [00:10] Es que eso fue lo que nos presentaron a nosotros en la reunión pasada.
+- [00:15] Ya.
+- [00:18] Pero si te dais cuenta, no sé si lo revisaste y tenés dudas sobre algún, por aparte del flujo que no entiendes o piensas que no aplica.
+- [00:27] Deja descargarlo que estoy del mar.
+- [00:30] Y esto para acá
+- [01:15] Y les comparto pantalla
+- [01:17] Ya, vista general del proceso
+- [01:28] A ver, esto
+- [01:33] Ya lo había visto, maestro administrado por admin
+- [01:35] Jefe de contabilidad
+- [01:36] Ya, pero aquí no me meto
+- [01:39] Días de pago de la lista, digitados en la OC
+- [01:41] Ya, esto
+- [01:43] Días de pago de la lista
+- [01:44] Se refiere a lo que estábamos hablando el otro día
+- [01:47] de la fecha de vencimiento que se le va a asignar en la parametrización exacto el por proveedor se
+- [01:54] configuran dos fechas una para el neto y otra para el iva si entonces son dos fechas si ellos
+- [02:04] por ejemplo es que la verdad es un flujo nuevo y la verdad que no tenía que existir porque por
+- [02:09] Por ejemplo, ellos hacen órdenes de compra a la cotota, a los 2 millones.
+- [02:16] A lo mejor los van a pagar en 90 días, pero...
+- [02:20] Pagan primero el IVA.
+- [02:21] Que ya acuerdan con su proveedor para pagar el IVA a su proveedor para que el proveedor pague el IVA al de ese IVA.
+- [02:33] Entonces, por eso tienen dos...
+- [02:35] esa factura por ejemplo lo que reciben no sé de mil millones de pesos que
+- [02:41] corresponde no sé 190 millones de pesos de iva
+- [02:46] o 19 no sé cuántas 19
+- [02:50] ellos pagan primero durante el mes
+- [02:55] para que su proveedor pueda pagar ese iva y después 90 días le pagan el resto
+- [03:01] el neto de la falta
+- [03:02] ¿cachai?
+- [03:05] ya
+- [03:05] entonces deja
+- [03:06] anotar algo
+- [03:07] para entenderme después
+- [03:09] manejando fechas
+- [03:12] y esas fechas
+- [03:13] yo recuerdo
+- [03:14] que el Carlos
+- [03:14] había creado una
+- [03:15] la otra la creo yo
+- [03:16] y
+- [03:16] creo las dos ya
+- [03:18] las creo las dos
+- [03:19] si
+- [03:19] ah ya
+- [03:20] tenemos que hacer
+- [03:22] el
+- [03:24] march
+- [03:24] yes
+- [03:25] vale
+- [03:26] una es
+- [03:30] de pago de IVA
+- [03:31] y la otra
+- [03:31] ¿cuál era?
+- [03:32] pago neto
+- [03:33] pago neto
+- [03:34] ya
+- [03:44] Ahora, después pasa a la orden de compra, tipo de compra, ya, eso, orden de compra, yo no me meto, sí, en la emisión de la orden de compra, así que esto no es mío.
+- [03:59] No, pero la idea es que la puedas asociar.
+- [04:03] Claro, no, eso yo lo tengo listo, que se puedan asociar la orden de compra que está registrada.
+- [04:07] después de recepción
+- [04:10] con guío con factura parcial
+- [04:12] creo se hija
+- [04:13] ya esto es lo que me dijiste
+- [04:15] si no venía completa
+- [04:16] si el monto de la factura
+- [04:20] no era completo
+- [04:21] o sea si el monto de la factura
+- [04:24] no cuadra
+- [04:26] no es igual
+- [04:27] a la de la OC
+- [04:29] o sea si es un monto inferior
+- [04:31] quiere decir que
+- [04:33] es una facturación parcializada
+- [04:35] claro
+- [04:36] Entonces desde ahí por ejemplo
+- [04:39] Existe la orden de compra
+- [04:41] La 100
+- [04:42] Igual en el documento se detalla bien esa parte
+- [04:45] Esta es como la parte de los puntos bien general
+- [04:47] Claro
+- [04:48] Factura se reconoce por número de guía
+- [05:04] De factura
+- [05:05] Estamos bien
+- [05:09] Validación de monto y cantidad
+- [05:10] También estamos bien con eso
+- [05:12] Pago línea neto más línea IVA pendiente de pago
+- [05:15] Este si no me tengo que meter
+- [05:20] Si alerta en recepción a factura
+- [05:24] el usuario creador, modifica la OC
+- [05:26] la aprobación
+- [05:27] ¿Qué pasa señores?
+- [05:30] Buenas tardes
+- [05:30] ¿Qué pasa contratista?
+- [05:38] Maestro de proveedores
+- [05:39] Día de pago
+- [05:40] Día de pago
+- [05:42] Ya no, este creo que lo tengo claro
+- [05:48] Sí, eso es más que nada
+- [05:50] como la parte de cómo se junta
+- [05:52] la parametrización del proveedor
+- [05:54] con la orden de compra
+- [05:56] Vale
+- [05:58] Este no tengo dudas
+- [06:00] tipo de compra, aprobación y
+- [06:02] modificaciones
+- [06:04] ya, esta aprobación
+- [06:08] se supone que es para aprobar
+- [06:10] la factura de
+- [06:12] perdón, la OC
+- [06:13] ya, y luego
+- [06:16] de la OC cuando está aceptada
+- [06:18] tengo que pasar a
+- [06:20] ¿cuánto se llama?
+- [06:23] a tener la factura de compra
+- [06:24] y si está asociada a la OC aprobada
+- [06:27] puedo aceptar la factura de compra
+- [06:29] pero ahí tengo una duda
+- [06:30] porque por lo que explicaste con Socket
+- [06:32] tiene como
+- [06:34] un acuse recibo
+- [06:36] y después tiene una aceptación
+- [06:38] gatillo los dos de una
+- [06:40] que mande el acuse recibo y la aceptación
+- [06:42] o prefieren una opción para que sea
+- [06:46] en pendientes acuse recibo
+- [06:48] después
+- [06:49] aceptar o rechazar
+- [06:51] y rechazar obviamente con sus opciones
+- [06:54] yo creo que cuando se
+- [06:56] se trae la info
+- [06:58] hacia nosotros
+- [06:59] debería
+- [07:01] Hacer como el acuso de recibo al tiro
+- [07:04] Cuando llega el RP
+- [07:06] No sé la verdad
+- [07:08] Ver lo que me imaginaba
+- [07:09] Sergio
+- [07:13] No quiero hablar de Sergio
+- [07:21] Lo dejamos sin palabras
+- [07:23] Lo dejamos crazy
+- [07:26] Está preguntándole a la IA
+- [07:30] Está procesando el trompo
+- [07:32] Sergio
+- [07:33] Carlos cualquiera en reunión con el Mauer
+- [07:36] Tiene que
+- [07:39] Dejarlos por separado, José
+- [07:41] El acuse comercial, el acuse mercadería
+- [07:44] Todo eso separado
+- [07:45] Pero que el usuario lo gatille
+- [07:47] No que sea automático al traer la información desde allá
+- [07:50] Ya, todo por separado
+- [07:51] Y que sea paso a paso
+- [07:53] Y que quede en la trazabilidad
+- [07:54] Exacto
+- [07:56] En realidad tendría que agregar un botoncito más
+- [07:58] Cuando está pendiente la aceptación
+- [08:00] Que acuse mercadería
+- [08:02] O sea, primero tendría que hacer
+- [08:05] el acuse de recibo
+- [08:08] del documento
+- [08:09] y después del acuse de recibo
+- [08:12] del documento, tendría que desplegar los botones
+- [08:14] aceptar o rechazar
+- [08:15] y ahí tendría que elegir
+- [08:18] el acuse de mercadería
+- [08:19] claro, tú puedes dar acuse
+- [08:21] de recibo y luego
+- [08:24] un rechazo, porque no quiere decir
+- [08:26] que acuse de recibo es que tú estás aceptando
+- [08:28] claro, ya, ok
+- [08:34] Oye, consulta
+- [08:43] que estoy viendo
+- [08:44] que las voces se pueden editar
+- [08:47] las voces aprobadas, se pueden editar
+- [08:49] Sí, se pueden editar, ¿por qué?
+- [08:53] porque puede ser que
+- [08:54] algún caso, no sé
+- [08:57] tú recibiste la factura
+- [08:59] y te emitieron
+- [09:01] la factura por más plata
+- [09:03] y es porque realmente tú tendrías que haber hecho
+- [09:05] una orden de compra un poquito más elevada
+- [09:07] entonces, ahí
+- [09:08] esa orden de compra, como ya está creada
+- [09:11] y está aceptada
+- [09:12] y tú tienes que la editas
+- [09:14] y pasa por todo el flujo de aprobación nuevamente
+- [09:17] ¿cachai?
+- [09:18] ¿y qué pasa? entonces, supongo que
+- [09:21] nos va a llegar el caso de que yo ya
+- [09:23] tenga asociada la factura de compra a la OCDE
+- [09:24] que me haya llegado, se haya
+- [09:26] aceptado, y después tenga que editar
+- [09:28] la OCDE o no?
+- [09:31] no, no creo
+- [09:33] si tú tienes la orden
+- [09:35] de compra cerrada, quiere decir cerrada
+- [09:37] que porque la factura
+- [09:38] cuadra con la orden de compra
+- [09:40] y ahí ya muere el flujo
+- [09:43] ¿cachai? queda como una orden de compra
+- [09:45] cerrada, pero si
+- [09:47] la factura, la orden de compra
+- [09:48] tiene un saldo pendiente
+- [09:50] por facturar por parte del proveedor
+- [09:52] si ahí si se puede hacer una edición
+- [09:55] ¿cachai? entonces si se edita
+- [09:57] la OC actualmente
+- [09:59] bueno, a ese flujo no me he metido
+- [10:01] no sé cómo editar una OC en el sistema
+- [10:02] pero queda abierta
+- [10:05] Entonces, ¿qué pasa si queda abierta
+- [10:09] después de que ya asocié la factura y la acepté?
+- [10:13] Por eso te digo yo, si tienes
+- [10:14] saldo como pendiente de facturar
+- [10:16] Es que la factura es la que te va a decir
+- [10:18] si es que necesitas modificación
+- [10:20] No necesariamente
+- [10:24] Porque si no hace
+- [10:26] si viene con más o menos
+- [10:28] No, por eso
+- [10:30] porque tú si es parcial
+- [10:31] por ejemplo, no sé, de 100 lucas
+- [10:34] la factura y la orden de compra es de 200 lucas
+- [10:36] ¿Cierto?
+- [10:37] Pero cuando te vayan a emitir la segunda factura
+- [10:42] No va a ser de 100 lucas
+- [10:43] Sino que va a ser 150
+- [10:44] Entonces tú esa factura
+- [10:46] Esa orden de compra
+- [10:47] Tiene que pasar por el flujo de edición
+- [10:49] Y pasar de nuevo por las aprobaciones
+- [10:52] ¿Me entendió, no?
+- [11:01] Sí, estoy
+- [11:01] Ya no
+- [11:05] Pero preguntaba más que nada
+- [11:07] Si
+- [11:08] Permito que se pueda asociar nuevamente
+- [11:12] una orden de compra
+- [11:14] porque
+- [11:16] ahí en ese caso quedaría
+- [11:18] abierta y en teoría
+- [11:22] sí debería poder asociar otra factura
+- [11:23] a la orden de compra, sí
+- [11:27] esa orden de compra se puede asociar a
+- [11:29] n facturas, siempre y cuando
+- [11:33] el monto cuadre
+- [11:34] claro, y qué pasa si
+- [11:37] tengo una orden de compra, no sé, de 10 productos
+- [11:39] y la factura me llega
+- [11:40] me llega por 10
+- [11:43] y después la orden de compra
+- [11:45] le pongo 9
+- [11:46] ¿Como un monto inferior?
+- [11:51] Sí
+- [11:51] No, ahí no podría editar
+- [11:53] Si esto asocia a una factura de compra
+- [11:56] O una factura recibida
+- [11:58] La edición de la orden de compra
+- [12:01] No puede bajar el monto de la factura
+- [12:03] ¿Cachai?
+- [12:04] Ya
+- [12:05] ¿Podría ser igual o superior?
+- [12:11] Ya, vale
+- [12:12] No sé, se puede editar
+- [12:14] Y los montos
+- [12:17] Las cantidades
+- [12:18] Ah no, las cantidades y montos
+- [12:20] No se podrían editar
+- [12:22] O sea, cantidad y montos
+- [12:24] O sea, no puede ser inferior
+- [12:26] Al monto de la factura
+- [12:27] Ya
+- [12:36] Ok
+- [12:38] Guía
+- [12:45] Yo no he visto que han emitido
+- [12:50] Carlos, tú lo has visto
+- [12:51] No
+- [12:52] Ni han hablado de la guía
+- [12:58] Porque aquí pusieron
+- [13:02] Igual registro número de guía
+- [13:04] Queda factura pendiente
+- [13:06] ¿Y tiene libro comercial?
+- [13:10] Libro de guía de despacho
+- [13:11] Claro, guía de despacho
+- [13:13] No, no lo han dicho nada
+- [13:16] Qué buen punto
+- [13:17] Hay que levantarnos el jueves, Carlos
+- [13:19] ¿Cuándo jueves? ¿Mañana?
+- [13:21] Sí, mañana
+- [13:22] Uy, ya se fue la semana
+- [13:24] Voy a obviar esto por mientras
+- [13:34] Llegan a la asociación de las facturas
+- [13:41] Ya, no, este flujo lo tengo claro
+- [13:43] Validaciones de las facturas y alertas
+- [13:49] Esto también creo que lo tengo claro
+- [13:52] Sí
+- [13:54] Registro contable
+- [13:56] Y paso a pago
+- [13:58] Pendiente
+- [14:00] No, está pendiente la validación de ello
+- [14:02] Ah, ya
+- [14:04] cierre de una seca
+- [14:09] un saldo, si el saldo restante no se
+- [14:11] recibirá la OCDE, madre, se ajusta
+- [14:13] a lo recibido y se cierra
+- [14:14] ah, claro, ya, entiendo
+- [14:19] ya, ya, sí
+- [14:24] trans LP, USD, yuan
+- [14:28] oye, las órdenes
+- [14:31] de compra, ¿todas van a ser en peso?
+- [14:33] porque las facturas que recibo siempre sí o sí van a ser
+- [14:41] en peso
+- [14:41] y tengo que hacer un cuento
+- [14:45] no, no, no
+- [14:46] pueden ser en, los tres tipos de moneda
+- [14:49] la orden de compra
+- [14:50] entonces para hacer el match yo tendría que hacer la conversión
+- [14:53] con el tipo de moneda
+- [14:55] que está en el día
+- [14:56] ahí Carlos
+- [14:58] ahí está
+- [15:00] estipulado, tipo de cambio generado
+- [15:03] por ejemplo el 17C del día
+- [15:05] de la factura en USD cuando llegan
+- [15:07] Yuan, cuando llegan USD
+- [15:09] es que eso igual me puede generar
+- [15:11] una diferencia de un
+- [15:13] peso y ya no va a tener match
+- [15:15] es que yo
+- [15:17] por lo que tengo entendido
+- [15:18] Hacen esas modificaciones
+- [15:20] Sí, por ahí lo ajustan
+- [15:22] Ajustan la orden de compra para que cuadre con la factura
+- [15:24] Sí
+- [15:25] Ah, ya
+- [15:27] De hecho
+- [15:29] Dentro de lo que se tiene que hacer más adelante también
+- [15:32] Es que la orden de compra
+- [15:34] En esos casos
+- [15:34] De el match ideal
+- [15:37] Automáticamente para que se haga el ajuste
+- [15:41] Ya, ok, entonces puede hacer la diferenciación
+- [15:43] Si hay match perfecto, imperfecto
+- [15:45] Y el imperfecto que te diga que no calza
+- [15:47] Con la OCE
+- [15:48] Claro
+- [15:49] Claro, pero ahí por ejemplo
+- [15:51] Ahí ese match, después la idea es que
+- [15:53] Asocian la factura a la orden de compra
+- [15:56] Y que hagan como
+- [15:57] El autoajuste
+- [16:00] Llamémoslo así
+- [16:01] Y edite la orden de compra
+- [16:03] Y calce de una con la factura
+- [16:06] Vale
+- [16:08] De caso
+- [16:09] Para que no pase por una edición directa de la OCEVO
+- [16:12] Sino que en el mismo panel
+- [16:14] Ellos pueden decir ya autoajustar
+- [16:16] Ah, y que se ajuste la orden de compra hacia el monto de la factura.
+- [16:20] Claro.
+- [16:23] Vale.
+- [16:24] Los estados de los C en la base auxiliana...
+- [16:31] Esto no recuerdo haberlo leído.
+- [16:33] No sé, pendiente de aprobación...
+- [16:35] Actual, pendiente, pendiente de aprobación...
+- [16:39] Es que ahí está el juego del flujo como completo.
+- [16:43] Sí, no, creo que no tengo dudas con eso. Campos de la base de datos auxiliar.
+- [16:47] Pero esa página no la pesqué igual, no tiene ni un día.
+- [16:52] ¿Ya?
+- [16:53] Eso ya está todo en la orden de compra.
+- [16:55] reglas clave para el desarrollo de pago permiso de división sólo el creador y
+- [17:01] su jefatura directa y está en la océana pero esto ya está hecho saldo de la océana
+- [17:06] hay como un resumen de las cosas que
+- [17:10] con otros módulos ya no esto lo tengo claro
+- [17:15] y acá próximos pasos de basura ya sí y la documentación de gusto que también me
+- [17:22] claro así que estamos y ahora cuando el que no debo de tener
+- [17:27] jose bueno porque el arreglo mañana
+- [17:32] los juegos a las 4 de la tarde de un rollo con ellos
+- [17:38] igual podríamos correrla por viernes
+- [17:42] mañana al final del día mira para el viernes si podría ser
+- [17:48] porque mañana tengo reunión presencial entonces no me puedo amanecer hoy día
+- [17:53] Recuerden que tengo que hacer merch también
+- [17:55] Después de que el Jose termine
+- [18:01] Tengo que hacer merch y pegarle su QA
+- [18:03] Igual que funcione
+- [18:04] Entonces no sé si lleguemos para el viernes
+- [18:07] O por último
+- [18:11] Bueno igual
+- [18:13] Tengo cambios que mostrar
+- [18:14] Hay un ajuste, el Pipe igual hizo
+- [18:17] Su avance, lo tengo integrado ya
+- [18:19] Así que podemos por último mostrar eso mañana
+- [18:21] Oye yo igual tengo
+- [18:22] Avance, igual si quieren los dejo arriba
+- [18:24] Pero lo que si estaba
+- [18:27] topando en el envío de notificaciones
+- [18:28] porque implementé para que sea
+- [18:30] envío de notificaciones y o correo
+- [18:33] bueno
+- [18:34] entonces aparte podía juntar
+- [18:36] el xml o el pdf del documento
+- [18:39] pero caché
+- [18:41] que estaban usando una cuestión de smtp
+- [18:43] todavía no está
+- [18:45] implementado así
+- [18:45] claro, entonces en eso estoy topando
+- [18:48] de hecho eso es lo que le íbamos a encargar
+- [18:51] al Felipe que hiciera ahora
+- [18:52] después de que terminara lo del banco central
+- [18:54] ah ya
+- [18:55] Pero por ahora igual lo dejé enviando notificación
+- [18:58] Y faltaría el tema del correo
+- [19:00] Ya bueno
+- [19:02] Entonces mañana
+- [19:04] Y ya para la próxima semana
+- [19:06] Tener esos ajustes
+- [19:07] De compra
+- [19:09] Igual hay que considerar que a pesar de que presentaron
+- [19:12] Esto la semana pasada
+- [19:14] Porque yo hablé por interno con el Mario
+- [19:15] Y no lo entregó rápido ni lo subí al trelo
+- [19:18] Me lo mandó ese mismo día, ¿por qué?
+- [19:19] Porque estaban haciendo unas validaciones
+- [19:21] De hecho este no es el mismo documento que nos mostraron en la presentación
+- [19:24] Tiene un par de ajustes más
+- [19:27] Pero casi la opinión
+- [19:29] Más ya entonces Mario
+- [19:30] Ya
+- [19:35] Entonces
+- [19:36] Avísanos José cuando ya tengáis los cambios
+- [19:40] O sea ya para mañana
+- [19:41] Seguimos con la red de mañana
+- [19:43] Y ya sería con la próxima semana
+- [19:45] Para mostrar esto
+- [19:46] Claro
+- [19:47] Ok ya entonces mañana
+- [19:51] Carlos hay que darle foco a
+- [19:53] Contratistas
+- [19:54] Para que podamos
+- [19:57] Pasarle peguita al Diego
+- [19:59] Está aburrido el Diego
+- [20:00] Claro weón
+- [20:02] Yo sabía que ibas a decir algo
+- [20:06] Súper aburrido
+- [20:07] Mira que está aburrido
+- [20:09] Es que ahí
+- [20:12] Si me preguntáis a mí
+- [20:14] Mientras, porque ese diagrama
+- [20:16] Es el que ellos definen lo que hay que hacer
+- [20:18] Porque mañana va a pasar lo que no ha pasado
+- [20:20] Todas las reuniones de que vamos a mostrar algo
+- [20:21] Nos van a decir que lo cambiemos
+- [20:23] Y después van a llegar con un diagrama que lo modifiquemos
+- [20:25] No le veo mucho
+- [20:26] No, no, no, no me entendiste
+- [20:28] Te digo que mañana hay que meter presión
+- [20:30] Para que nos entreguen contratistas
+- [20:32] Ah, vale, vale, vale
+- [20:33] Sí, para poder pasarle pega al Diego
+- [20:35] Ok, ok
+- [20:39] Ya, pues eso es muchacho
+- [20:42] Yo creo que
+- [20:42] Más que ver
+- [20:45] Por ahora, Diego
+- [20:47] Chipe libre
+- [20:49] Gracias
+- [20:53] No, no, se te acaba de descansar
+- [20:56] vamos a meter presión mañana
+- [21:02] para que nos entregue el contratista
+- [21:04] quien tenía contratista era la Lupe
+- [21:06] o no Carlos?
+- [21:08] te digo de inmediato
+- [21:09] con lo que dijeron la otra vez
+- [21:12] con lo que recuerdo también
+- [21:14] de hecho la Lupe tenía
+- [21:16] los dos temas de nosotros
+- [21:17] si
+- [21:18] el tema es que ahora se usan esos diagramas
+- [21:22] uy concholoros
+- [21:24] me tengo que ir, me tengo que ir, voy de reunión
+- [21:26] muchas gracias, chao
+- [21:27] chao, para acá
+- [21:28] ya
+- [21:32] ya, mañana vamos a ver
+- [21:41] si es que nos pueden
+- [21:43] nos pueden entregar algo de contrarista
+- [21:45] y si no, a esperar no nos ha podido
+- [21:47] así es
+- [21:48] si apenas tengan información me dicen
+- [21:50] me hacen llegar
+- [21:51] por mientras si no tienen nada más que
+- [21:54] que pueda aportar
+- [21:58] no me hagan más pego
+- [22:00] Ya, aprovechemos la reunión
+- [22:08] Sentía daño si compartí pantalla
+- [22:11] Ya
+- [22:15] Primero lo más fácil
+- [22:18] Que es lo que hizo el pibe
+- [22:20] El pibe se pegó el show con la integración del banco central
+- [22:23] Que la dejó bien bonita
+- [22:25] Y también con
+- [22:29] también la parametrización de monedas que hizo el pibe
+- [22:36] al momento de agregar una nueva moneda ahora
+- [22:39] te muestran las que tiene el banco central para que se haga el tiro la
+- [22:42] asociación
+- [22:44] por ejemplo
+- [22:48] y eso fue lo que agrega ayer y le dio una bifia que tiene la unidad de
+- [22:54] fomento por ejemplo y ahí puede agregar cualquier moneda ambiente permite
+- [22:57] agregar otras que no tenga el banco central esto como para hacer la
+- [23:01] asociación solamente y al momento de estar acá
+- [23:07] dependiendo de las monedas que tengas acá y si están con la asociación te hace
+- [23:11] la consulta y puedes traer el histórico directamente
+- [23:15] entonces ya no necesitamos directamente que ellos nos manden el histórico que
+- [23:20] habían dicho que iban a mandar lo sacamos directamente del banco central
+- [23:25] y lo único que sí por ejemplo que le pille que trae las tres monedas nomás
+- [23:31] pues por ejemplo la uef que se agregó del banco central no la está trayendo
+- [23:34] que eso ya se lo notifique y dijo que iba a ser la corrección y también hace
+- [23:38] la programación automática y se va sincronizando día a día de hecho si se
+- [23:43] dan cuenta esto está publicado en el servidor directamente
+- [23:47] y de hecho ya está en el trelo pasado para ellos para que lo revisen
+- [23:53] ¿Qué más le pilla acá? Le pilla que esta cuestión de foco de reporte no sirve de nada y le dije que lo reemplazara con algún comentario, esta parte de acá, para que vayan agregando comentarios, si es que se ocupa en tal empresa, tal proveedor, cualquier cosa.
+- [24:06] ¿Cuál es tu comentario?
+- [24:07] Un comentario y también de que tenga la posibilidad de acá en las monedas ver el histórico de cada una de ellas.
+- [24:13] Ok.
+- [24:14] Acá también tenía el filtro para ir viendo por monedas, ¿cachai?
+- [24:18] La moneda de fomento, como dije, no está funcionando
+- [24:21] Porque está trayendo las monedas principales
+- [24:22] Un beso chileno no debería mostrarlo
+- [24:25] Y ahí ya tenemos
+- [24:27] Más o menos
+- [24:28] El histórico que traje de este mes
+- [24:30] Que traje del 22 al 25, creo
+- [24:32] Ah, pero ¿por qué valor cero?
+- [24:36] No, no había fijado eso
+- [24:37] Vamos a pasarlo al tiro
+- [24:39] Buen ojo
+- [24:40] ¡Uy, son las 3! ¡Me tengo que ir!
+- [24:49] ¡Ya!
+- [24:50] Te salió igual
+- [24:54] Que más
+- [24:57] Que esto lo tengo en local
+- [24:58] Bueno ahí también le voy a mostrar
+- [25:02] Al Sergio
+- [25:03] Este superior mega didáctico
+- [25:06] Visualización
+- [25:08] Que más que nada
+- [25:10] Lo hice pensando en tenerlo en las reuniones
+- [25:12] Y ir dándole siguiente para que no se vaya
+- [25:14] A ningún punto
+- [25:14] Pero es como
+- [25:17] El cómo se realiza el flujo completo
+- [25:19] desde la venta
+- [25:21] hasta la contabilidad
+- [25:22] y aquí esto de parte de la soriría
+- [25:23] esta me costó caleta
+- [25:25] para los clientes
+- [25:26] para que te evite
+- [25:31] cuando parta un cliente
+- [25:32] este paso a paso
+- [25:34] de todo lo que tiene que hacer previamente
+- [25:37] para llegar a
+- [25:38] emitir al final una factura
+- [25:41] si le dais cuenta
+- [25:44] me da el siguiente
+- [25:45] va cambiando la descripción igual
+- [25:48] está dando el detalle ahí abajito
+- [25:50] Se va iluminando ahí, pasa el 1, el 2, este está flotando en el aire, no sé por qué.
+- [25:57] Ah, porque saqué las capturas de pantalla de nuevo, verdad, que se veían muy pequeñas.
+- [26:03] Yo tengo que hacerle el ajuste.
+- [26:05] ¿Cachai? Es que te dice todo el paso a paso y te explica qué es lo que corresponde a cada cosa.
+- [26:12] Diego, ni nos pesca, guau. Chao, Diego.
+- [26:13] Está impresionado, está tan impresionado que se mutió.
+- [26:19] ¿Cachai? Y bueno, viendo de esa perspectiva, acá...
+- [26:25] En ventas
+- [26:26] Vamos a hacer una radio nomás
+- [26:31] Almawe, siguiente
+- [26:35] Vender
+- [26:38] 132
+- [26:40] Siguiente
+- [26:44] Ahí la guarda, genero ese
+- [26:51] Número 37
+- [26:53] Aquí vendría a ser ese de ahí
+- [26:54] Aquí te deja poder visualizarlo
+- [26:57] Ah, la representación también la actualicé
+- [26:59] Según lo que solicitó Almawe
+- [27:01] Qué bonita
+- [27:04] Aquí en la emisión
+- [27:08] Es ese de ahí, lo podemos editar
+- [27:11] Lo vamos a hacer
+- [27:13] Vamos a capturarlo de inmediato
+- [27:14] Nos sale el detalle
+- [27:15] Confirmar
+- [27:17] Aquí nos debería tirar directamente cuando confirme
+- [27:21] Al libro de ventas
+- [27:25] Con el detalle
+- [27:26] Perfecto
+- [27:27] Y le damos a contabilizar
+- [27:29] Y nos muestra la información
+- [27:30] Buena
+- [27:33] ¿Te acuerdas que nos faltaba agregar el área de negocio?
+- [27:37] ¿Sí?
+- [27:38] Ahora no
+- [27:39] Pero sin área de negocio
+- [27:42] Ok, tenemos un momento que tenía aquí anotado las cuentas que elegir para que quede bien.
+- [27:50] Esta vez fue la esa.
+- [27:56] Centro Augusto va a bajarle exportación cereza y este va a bajarle el pack que se lo tengo ahí de testing.
+- [28:03] La grosa también se puede dictar.
+- [28:06] Vamos a guardar.
+- [28:08] Queda contabilizada.
+- [28:11] Y ahora nosotros nos vamos acá
+- [28:13] En comprobantes asientos
+- [28:15] Nos genera este de acá
+- [28:17] Y al momento de revisarlo
+- [28:20] Aquí tenemos la información
+- [28:22] Aquí vendría a ser la cuenta
+- [28:24] El tipo que esto es lo que pregunté en la mañana en el grupo
+- [28:28] No sé si cachaste
+- [28:29] Sí, sí
+- [28:30] La fecha de vencimiento, los desde haber
+- [28:32] Bueno, esto como es nacional nos sale esta información de acá
+- [28:35] Y al momento de imprimir sale este hermoso documento
+- [28:39] Que está cargado del documento de ellos, que de hecho me voy a permitir darlo acá al lado
+- [28:45] Este es el que nos enviaron la otra vez
+- [28:47] Guardar como PDF
+- [28:51] Guardar
+- [28:53] Vamos a abrir y se ve mejor
+- [28:57] Este es el de nosotros y este es el que tenían ellos
+- [28:59] Lo dejé con estas líneas que separaran bien los detalles
+- [29:01] Porque esta me gustaba que no
+- [29:03] No estuviera bien definido
+- [29:05] Y eso visto bueno, tesorería
+- [29:10] firma 1, firma 2, recibe conforme
+- [29:13] ah, ya
+- [29:15] está copiado tal cual
+- [29:17] y abajo los totalizados también
+- [29:19] y acá, ahí está cuadrado
+- [29:21] exacto
+- [29:26] lo que sí, acá
+- [29:27] no debería ponerlo en dólar
+- [29:30] porque fue nacional, sí
+- [29:31] eso, ¿por qué lo tienen así de ello?
+- [29:35] ah, no, está internacional, cliente de exportación
+- [29:38] sí, porque hay uno en el tipo 111
+- [29:42] sí, tipo 111
+- [29:44] así que está bien que aparezca con dólar
+- [29:45] con el de nosotros, como es nacional no aparece
+- [29:47] claro, habría que generar
+- [29:49] una exportación para ver como queda
+- [29:51] claro, y este sería el tipo de cambio
+- [29:53] tengo que preguntar bien
+- [29:55] que es el AUX y ver si es que
+- [29:57] por ejemplo necesitan que salga toda esta
+- [29:58] información de detalle, porque estos son de
+- [30:00] el primero, ¿cachai? viene con toda esa información
+- [30:03] en la glosa, viene el tipo de
+- [30:05] cambio, viene cierta
+- [30:07] información, por acá de momento no hay
+- [30:08] el centro de costo, el auxiliar
+- [30:10] pero el centro de costo viene acá
+- [30:12] es tipo igual, entonces no le vi
+- [30:15] mayor
+- [30:16] relevancia que aparezca
+- [30:19] entonces ahí que no paliden bien
+- [30:21] que información debe traer la glosa
+- [30:23] está bueno
+- [30:25] el asiento contable
+- [30:30] tiene que cuadrar el debe y el haber
+- [30:32] si
+- [30:32] y tenis por ejemplo la cuenta de cliente
+- [30:36] que esa después se va a hacer como
+- [30:38] la cuenta por
+- [30:40] pagar
+- [30:40] por parte de tu cliente
+- [30:43] o por cobrar
+- [30:45] en realidad, ha sido una venta
+- [30:47] claro, claro
+- [30:47] y estos dos serían como el detalle
+- [30:51] de eso
+- [30:51] así que hay que
+- [30:58] tenemos igual
+- [31:01] que mostrar
+- [31:02] y esto si te das cuenta son los que
+- [31:10] la cuenta es la que ingresamos al momento
+- [31:12] de, perdón, esta de acá
+- [31:14] esa es la de
+- [31:17] ya
+- [31:18] es la de detalle, ¿no?
+- [31:20] Sí, la que ingresamos al momento de realizar la contabilización
+- [31:24] ¿Y la de cliente?
+- [31:26] ¿La asociaste a la cuenta al cliente?
+- [31:30] Es que tienen una cuenta general
+- [31:31] Que se llama clientes
+- [31:32] Ah, y todos los asientos de venta
+- [31:36] Tenían que asociar a un cliente, ¿no?
+- [31:38] Exacto
+- [31:39] A esa cuenta
+- [31:40] Sí, sí
+- [31:41] Y acá podemos ver
+- [31:51] Bueno, esta es la previsualización interna del sistema
+- [31:55] Y aquí no sé si, por ejemplo
+- [31:59] Sería bueno también mostrar la información del cliente
+- [32:02] Del cual se
+- [32:03] Se generó
+- [32:04] Aquí arribita
+- [32:06] Igual
+- [32:09] Lo dejé así por mientras
+- [32:10] Pero ya como la funcionalidad está
+- [32:12] Eso ya sería agregar como información adicional
+- [32:14] Y tiene el scroll
+- [32:18] Y también me fijé igual de que
+- [32:20] Que agrada bien grande esta pantalla
+- [32:22] En caso de que aparezca más
+- [32:23] Más ítem
+- [32:24] Está bonito, está bueno
+- [32:29] Está bien bueno
+- [32:34] Ya entonces con esto igual tenemos un gran avance
+- [32:39] Sí, ahora
+- [32:41] Me falta publicarlo, sí, me falta publicarlo y dejarle, de hecho, eso quiero hacer, pues, dejar, primero, matear todo lo que es tesorería, que acá habían unas cosas de la última reunión que me faltaron arreglar, que eso también he estado haciendo entre luna y martes, para poder dejar las tarjetas de Trello listas, por ejemplo, ahora te deja editar los badgets, de estos como banderitos de notificación, te deja editar y agregar más, ¿cachai?
+- [33:06] Ah, bueno, bueno.
+- [33:06] elegirles color ahí. Ajá, se parece a la de Trello, cuando seleccionas la etiqueta.
+- [33:12] Sí, sí, cambié la visualización de acá arriba para que podamos tener, te acordás que nos
+- [33:18] pidieron tener un histórico igual para que veas lo que tenía atrasado, entonces
+- [33:22] por ejemplo acá te pregunta desde hasta, por ejemplo no sé si le pongo 1025,
+- [33:29] entonces muestra información y acá en el modo demo se nota más de que te dice los
+- [33:35] pendiente y los atrasados, ¿cachai? cero pendiente y cero atrasado, ¿cachai?
+- [33:40] entonces ahí lo pueden ir viendo, me falta hacer de que estos sean filtros igual cuando
+- [33:45] tú le das clic, eso también sería bueno poder clicarle obtener filtro y aquí
+- [33:51] también puedes ver solamente los pendientes que es lo que ya necesitaba
+- [33:53] por ejemplo con el atrasado histórico marcando pendiente y ahí está lo que
+- [33:57] había pedido la lupe y este demuestra el periodo actual más ordenado por así decirlo
+- [34:03] Ya, entonces con eso estamos
+- [34:11] O sea, ¿y qué más te falta
+- [34:14] Para ajustar en tesorería? ¿Nada o solo publicar?
+- [34:17] Solamente publicar
+- [34:19] Y ya vamos a mover las tarjetas
+- [34:20] De Telo porque me imagino
+- [34:22] Que cuando hagan
+- [34:23] El diagrama que están implementando
+- [34:26] Con el Mario quizás van a venir algunos ajustes
+- [34:28] Ya, bueno
+- [34:30] Así es
+- [34:34] Ya, estamos
+- [34:35] Entonces mañana hay que levantar, hay que pedirle un poquito más
+- [34:40] De corriente, sí, eso
+- [34:41] al ver el diagrama por ejemplo que entregaron para compras lo encontre bueno
+- [34:47] porque igual te dice los módulos como se comunican cada uno que de repente esa
+- [34:50] cosa a mi como que se me va y lo encuentro bueno como va a tener como un margen de trabajo y ver la
+- [34:55] comunicación porque como igual es harta cosa nueva se me va un
+- [35:01] poquitito ahí pero con eso el margen de trabajo se ajusta caleta ahora por
+- [35:05] ejemplo terminando los ajustes que tiene también lo vamos a poder pasar la info
+- [35:09] directamente a tesorería
+- [35:10] como ya viene
+- [35:13] estipulado ahí, y ya si salen de ese marco
+- [35:15] ya tienen que notificarlo
+- [35:17] oye, yo creo que ahora
+- [35:23] afinando el tema de los asientos
+- [35:25] después hay que meternos a los libros
+- [35:27] libros de contable
+- [35:28] que sería por ejemplo el balance
+- [35:31] el libro mayor, el libro diario
+- [35:33] y yo creo que ya
+- [35:35] o sea, pero teniendo ya
+- [35:37] ya tenía asiento en realidad generado
+- [35:39] si
+- [35:40] Que deberían aquí verse reflejados
+- [35:44] Pues cierto
+- [35:45] Pero ahí después
+- [35:47] Después lo vais viendo
+- [35:49] Yo creo que hay que matar compra
+- [35:50] Contabilizar compra y ahí la hacemos
+- [35:54] Ah, que está bueno
+- [35:55] Cuando pasas ahí en el modo demo se te pasa a gusto
+- [35:58] ¿Cachai? Así, tal cual
+- [36:04] Bueno, acá de repente
+- [36:06] Igual pasa de que te pillas información
+- [36:08] Que viene con
+- [36:09] Que como se agregaron tablas nuevas
+- [36:12] Te deja como un ID bien feo
+- [36:13] la web pero ahora si los regulares quedaron regulados y aquí en esta
+- [36:23] previsualización en las de máxima no me equivoco y 650 en el plan y ahora no
+- [36:27] truquemos estos son los que hicimos antes de que asociáramos las cuentas
+- [36:34] y esto está calladas tienen asociados son las últimas pruebas del día de hoy
+- [36:37] ahí el hecho de que hace una limpieza de eso esto está local
+- [36:42] la local todavía no publicó esta actualización de hecho al voy a hacer
+- [36:46] eso mismo de pegar una limpieza avisar si alma web de que se va a borrar la
+- [36:50] data anterior para que respalden si es que han subido en la parametrización de
+- [36:55] que está bien mostrar igual de ciertas cosas para exportar
+- [36:58] entonces para que respalden la información y después le importen nueva
+- [37:01] y hacer un borrado o sea pero de contabilidad más que nada
+- [37:06] yo lo haría
+- [37:08] todo lo que es parametrización, esas cosas
+- [37:10] dejárselas, porque a lo mejor
+- [37:11] claro, no
+- [37:13] va a ser un trabajo extra
+- [37:15] pero los contables
+- [37:18] las cosas contables
+- [37:20] eso es de partir desde cero
+- [37:22] para que después igual la IA
+- [37:24] te diga, sabés que ya ahora
+- [37:25] tu balance de 8 columnas se cuadra
+- [37:28] con los asientos que generaste
+- [37:29] si, de hecho ahora
+- [37:33] de negocio no tienen públicas
+- [37:35] tienen que publicar porque si no después no te va a dejar
+- [37:37] hacer la contabilización publicado no tiene nada de negocio
+- [37:46] de lo más consulta algo aparte pero existe alguna forma en el mac de cerrar
+- [37:55] una hueá que esté pegada por la resucha
+- [37:56] Sí, botón derecho
+- [37:58] forzar salida
+- [37:59] Dale para arriba en el dock
+- [38:02] cuando te muestre los 3 dedos
+- [38:04] para arriba
+- [38:05] Muchas gracias, weón
+- [38:08] Se quedó pegado
+- [38:09] Se quedó pegado
+- [38:12] el forzar apagado
+- [38:13] Media hora pegado el perro
+- [38:16] culiado el cursor, weón
+- [38:17] Y entonces, ahora Sergio
+- [38:22] lo que voy a hacer ahora a la tardecita es publicar
+- [38:24] Y voy a pasar las tarjetas de tesorería
+- [38:26] Al cubado, al maue
+- [38:28] Bacán, excelente
+- [38:30] Vamos, nice
+- [38:33] Si, mira, yo creo que ya
+- [38:36] Contratista
+- [38:37] Ese flujo me interesa que lo maten
+- [38:39] Y después yo creo que ya
+- [38:42] La otra semana, Carlos, voy a meterte
+- [38:44] Full contabilidad, bueno
+- [38:45] Ajá, vas de contador
+- [38:47] Eso
+- [38:48] Pero bueno, va a ser
+- [38:52] Simple, bueno
+- [38:53] va a ser súper simple, ya entendiendo
+- [38:55] obviamente compra, tesorería
+- [38:57] mucho más simple, entonces
+- [38:58] ya después ellos van a tener que decir
+- [39:01] que bueno, pueden considerar esto en contabilidad
+- [39:03] o esto otro, no sé
+- [39:04] bueno, igual yo creo que ellos han dado cuenta
+- [39:07] de que hay hartos flujos de ellos que son
+- [39:08] que nosotros no cachamos, entonces tienen que
+- [39:10] levantar la mano los buenos también
+- [39:12] sí, no, si no saben ellos
+- [39:15] ellos saben que este desarrollo es totalmente
+- [39:17] la medida para ellos, entonces ellos no tienen
+- [39:19] que decir que la hueá sea así, asada
+- [39:21] nosotros lo hacemos
+- [39:23] y el loguito también cambió, que es terrible
+- [39:25] bueno
+- [39:25] el loguito, está un poco más inventado
+- [39:30] por la IA, ah y la parametrización
+- [39:31] por la plantilla de documentos, mira
+- [39:33] excelente
+- [39:37] pero ojo que ese
+- [39:39] va a ser solamente para los documentos
+- [39:41] comerciales en realidad
+- [39:42] porque los de electrónico
+- [39:46] vienen desde GoSocket
+- [39:47] exacto, y ahí quizás vayan a pedir alguna
+- [39:49] modificación
+- [39:50] Claro pero eso tiene que verlo con
+- [39:52] Ahora por ejemplo
+- [39:54] Eso también, si te diste cuenta
+- [39:56] La cinta contable no se basa nada en este
+- [39:58] No, está bien
+- [40:00] Está bien así, porque lo me basé en el que mandaron
+- [40:02] Claro
+- [40:04] Ese diseño yo creo que
+- [40:06] Iba a ser a la medida, pero no
+- [40:07] Es que ellos lo van a diseñar
+- [40:10] Directo en la plataforma
+- [40:10] Genial
+- [40:12] Yo creo que no va a ser
+- [40:21] Oye Sergio
+- [40:23] De esta shit
+- [40:25] por ejemplo
+- [40:27] para las comparaciones
+- [40:29] antes y después
+- [40:29] igual
+- [40:31] está aquí
+- [40:33] ¿cachai?
+- [40:33] entonces igual
+- [40:34] de repente
+- [40:34] en las reuniones
+- [40:36] quizás hasta sirve
+- [40:37] también esta chat
+- [40:38] si está bueno
+- [40:40] esa parte no la vi
+- [40:41] porque no la entendí
+- [40:42] cuando me dijiste
+- [40:42] volver al inicio
+- [40:43] ah si pues mira acá
+- [40:44] porque yo te mandé este link
+- [40:45] si le da ahí
+- [40:46] volver al inicio
+- [40:47] ah nunca vi esa weá
+- [40:49] aquí por ejemplo
+- [40:50] tiene esta
+- [40:51] que son
+- [40:51] porque yo le
+- [40:54] La IA de repente le pedía agua
+- [40:56] Y no le entendía bien
+- [40:58] O de repente
+- [40:59] ¿Qué cambiaste?
+- [41:01] De repente eran cambios solamente del backbone
+- [41:03] Entonces con esto también sirve
+- [41:06] Galeta, así como decirle, miren
+- [41:07] Como se dieron cuenta antes de la reunión esto era así
+- [41:09] Y ahora lo modificamos y tiene otros cambios nuevos
+- [41:11] De ahí también vienen con unas explicaciones
+- [41:18] Ya, está bueno eso
+- [41:20] Entonces esto también
+- [41:21] Se lo podemos dejar disponible a ellos
+- [41:24] Bueno, si te diste cuenta
+- [41:26] Está almacenado en el GitHub page
+- [41:28] nomás porque una landing page
+- [41:29] no tiene ningún brillo
+- [41:31] pero la utilidad de estas dos cuestiones
+- [41:34] lo encuentro súper bueno
+- [41:35] y ahí por ejemplo, no sé, sacan captura de pantalla
+- [41:38] de cualquier cosa porque igual una baja
+- [41:39] ver el sistema, loguearse, aquí en cambio
+- [41:41] le da ahí el recorrido completo nomás
+- [41:43] de siguiente nomás
+- [41:45] sé que sí, esto está bueno
+- [41:48] sé que no, aquí el paso 7
+- [41:49] le faltó el punto 3
+- [41:50] listo, chao
+- [41:53] sí, está bien
+- [41:54] incluso esta web para las
+- [41:57] compra, que ya está el flujo definido por ellos, también nos va a servir.
+- [42:02] Sí, y aquí si te das cuenta le puso colorcito por las áreas también, si se pegó el show,
+- [42:09] se pegó buen show. Y acá eso sí, por ejemplo, hasta la parte de tesorería no le continué.
+- [42:19] Ahí mostró parte de lo que es tesorería, te queda con el saldo del cliente, el mismo
+- [42:27] tarde lo siento tanto, abre el movimiento de la venta, te muestra el estado de cuenta igual, folio...
+- [42:36] Un crack. ¡Buena!
+- [42:42] Volvió Don José. ¿Cómo le fue? ¿Ustedes callan con unos pre-cospos?
+- [42:51] No, no, fácil. Easy peasy.
+- [42:56] Ya tengo un desarrollo
+- [43:00] Nuevo, Diego
+- [43:00] Estaba desocupado
+- [43:03] Cheve libre, clean
+- [43:05] Cheve libre, clean, clean
+- [43:07] Te vi muy aburrido, Diego
+- [43:09] Cinco minutos duró el cheve libre
+- [43:12] Eso es una cosa que no estaba cuando lo dijiste
+- [43:14] Lo sentí así en la sangre
+- [43:16] Dijo, oh, tiene desocupado
+- [43:18] Diego, no
+- [43:19] Lo tengo
+- [43:26] te hablo que ahora habrá de whatsapp
+- [43:29] canero el cabro canero
+- [43:36] en serio jose?
+- [43:54] hay santo en la corte
+- [43:56] No, no
+- [43:58] Si tu papá me llevó
+- [44:04] Soy amigo de José Robles
+- [44:06] Suboficial
+- [44:08] Con mayor razón
+- [44:12] Vos lo andais más influenciando vos, ven para acá
+- [44:18] No, Diego, es una pega entre tenis
+- [44:20] ¿En serio?
+- [44:22] ¿Tú crees que...?
+- [44:24] prendí la cámara y vendí al tiro. Te felicito. Vendiste más que la Nathalie este mes.
+- [44:31] No, no. No fui solo, Gerardo. Me dejó agotado.
+- [44:38] ¿A vos siempre te dejan agotado? El niño abandonado.
+- [44:43] ¿Con qué te dejó abandonado? Un cliente que quería una integración.
+- [44:52] ¿Pero por qué te dejó abandonado?
+- [44:54] Ah, porque yo le dije...
+- [44:56] No, yo puedo a las 3, no puedo a otro horario
+- [44:58] Y él me dijo...
+- [45:00] Pucha, que tengo otro cliente a las 3
+- [45:02] ¿Cómo te dijo?
+- [45:04] ¿Cómo te dijo?
+- [45:06] ¿Cómo te dijo?
+- [45:08] Se está destirando
+- [45:10] Se está destirando
+- [45:12] Celoso
+- [45:14] No, ese es de Pablito
+- [45:16] Ese es de Pablito, no lo toquen
+- [45:18] Hacen, venden servicios, hacen facturas de exportación, venden esos servicios al extranjero
+- [45:29] y necesitan hacer una integración con el C-Sex.
+- [45:34] C-Sex.
+- [45:35] ¿Qué?
+- [45:36] Con el C-Sex.
+- [45:37] C-Seven.
+- [45:38] C-Seven.
+- [45:39] Mira, búscalo.
+- [45:40] Yo no lo conocía.
+- [45:41] Tiene una cuestión porque tenéis que declarar algunos datos de algunas exportaciones, tanto
+- [45:49] de productos como de servicios yo tampoco pero se hace contra la factura de exportación y lo
+- [45:56] tienen que hacer para todas las facturas que emitan ellos y este cliente ahora me estaban
+- [46:05] contando que son desde formulario en la misma data de la factura entonces ellos quieren ahorrarse el
+- [46:12] paso de entrar así se rellenar estos datos y ya directamente la factura cuando se mide
+- [46:22] pero el único tema que tiene es que no tienen una contraparte técnica porque la cuestión es
+- [46:30] del ministerio del gobierno entonces pero si dijeron que les hablaron de que hay una
+- [46:37] integración pero una opción de integración pero que el loco no tenía ni idea así que
+- [46:44] les dije que nosotros íbamos a dar una vuelta
+- [46:46] a ver si pillábamos algo
+- [46:48] claro, iban a mandar algún chino
+- [46:50] a ver cuál es la hueá
+- [46:52] ay, es que tiene la mitad de la cabeza pelada
+- [46:56] oye, a mí el coño
+- [46:58] se lo está viendo el chicle con hueón
+- [47:00] oh, te lo piteaste
+- [47:06] otra vez
+- [47:08] en cualquier momento cerco
+- [47:10] te mato
+- [47:11] si
+- [47:13] déjame seco nomás
+- [47:15] entonces hay una integración
+- [47:33] ya
+- [47:33] pero hoy lo ven exportación
+- [47:37] lo ven multimoneda
+- [47:38] no pero yo creo que
+- [47:41] la exportación puede ser en otra moneda
+- [47:43] pero yo creo que
+- [47:47] pero esa weá no vaya a ser tipo de cambio
+- [47:49] ni una de esas mierdas
+- [47:50] no, pues no, no, no
+- [47:52] de hecho quedaron, me mostraron el formulario
+- [47:56] en realidad la factura de exportación
+- [47:58] ya está declarada, pues está informada
+- [48:00] sí, sí, de hecho
+- [48:01] este formulario lo tienen que llevar cuando la factura ya llegó
+- [48:04] vale, sí
+- [48:04] y bueno
+- [48:11] que te vaya bien
+- [48:12] Ahora igual
+- [48:18] Una de las locas tenía como
+- [48:21] Igual tenía su lado técnico
+- [48:23] Y me habló
+- [48:24] Dijo, no sé, se podrá haciendo scrapping
+- [48:27] Y
+- [48:28] Dile que el 1 de diciembre esa guana se puede hacer
+- [48:33] Ilegal
+- [48:34] Pero ahí
+- [48:37] Yo le dije, sí, yo creo que sí
+- [48:39] Pero igual tenemos que investigar
+- [48:41] si es que hay otro método, algo más oficial
+- [48:43] uy, ¿qué voy a hacer el 1 de diciembre
+- [48:45] en los abogados Scrapper?
+- [48:47] o sea, cuando tengan datos
+- [48:49] personales, ¿no? por ejemplo, yo hago Scrapper
+- [48:51] hacia Holmer y entro con
+- [48:53] los datos personales de alguien
+- [48:55] oye, pero no iba a ser de que
+- [48:57] iban a retrasar la ley hasta como diciembre
+- [48:59] el próximo año, esa guada está en el congreso
+- [49:01] todavía esa guada no la han hablado, ¿no?
+- [49:03] ahí yo, están acá
+- [49:04] luego yo mañana
+- [49:07] tengo reunión sobre eso, así que yo no voy a quitar
+- [49:09] oye, espérate, ¿por qué va a ser
+- [49:15] ilegal, weón?
+- [49:17] porque va a ocupar datos de clientes o estudios
+- [49:19] personales, por ejemplo, yo entro a
+- [49:21] Holmed y veo todos los datos personales
+- [49:22] lo voy a buscar a una página, lo voy a buscar a otra página
+- [49:25] y voy a tener DPA, pues
+- [49:26] no, pues no tengo DPA, entonces no hay ningún consentimiento
+- [49:29] por ejemplo, de la otra parte que yo voy a
+- [49:31] rescatar esos datos
+- [49:32] y aparte yo saco nombres, saco transacciones
+- [49:36] saco weas de banco
+- [49:37] y qué vamos a hacer ahí no es que depende de quien le pega
+- [49:50] no en determinado usuario tiene datos de clientes pero tú por lo menos con ninguno
+- [49:58] escribe buscar datos de crédito yo creo que van a surgir las subempresas que van a vender
+- [50:04] de esos servicios es que para eso tendría como que como lo van a hacer por el dpa que tengan
+- [50:16] el papel que le diga 6 que yo como s y si tenemos una asociación y si yo te doy que
+- [50:23] saque los datos si yo creo que se van a hacer entonces desde mire que sea que el dpa con
+- [50:27] Por eso nosotros tenemos que ir
+- [50:30] A Sergio y con todos los partners
+- [50:32] El de seguir nuestro partner
+- [50:34] El de seguir
+- [50:35] Cast, casa de mi partner
+- [50:38] Esa ley se va a ir a la verga este año
+- [50:42] Yo creo que sí
+- [50:44] Yo creo que por una parte se va a ir a la verga
+- [50:46] La van a posponer
+- [50:47] Es que deberían posponer
+- [50:49] Pero dentro de
+- [50:51] Van a salir
+- [50:54] El primero de diciembre hasta la quincena
+- [50:56] Y van a decir, ya bueno, esta hueá la voy a renazar
+- [50:58] Como lo hicieron
+- [51:00] Con la hueá de los comprobantes electrónicos
+- [51:02] O lo van a implementar
+- [51:04] Pero todavía te van a dejar hacerlo
+- [51:05] Así como que van a hacer la lista gorda
+- [51:08] Como gradualmente
+- [51:09] Sí
+- [51:09] Según que supuestamente
+- [51:14] La IP también va a ser un dato
+- [51:15] Prioritario
+- [51:17] Sí, eso personal
+- [51:18] No está ni claro
+- [51:22] Todo lo que van a controlar
+- [51:23] Todo funciona así
+- [51:27] En este país
+- [51:28] Así que
+- [51:29] Exacto
+- [51:30] Toda la hueá al lote
+- [51:31] Sí
+- [51:32] Subieron la benzina
+- [51:34] Ya corten la agua
+- [51:34] ¿Qué más quieren ya?
+- [51:36] Oye
+- [51:36] Si la van a subir mañana
+- [51:37] Oye
+- [51:38] Menos mal que ando a pata
+- [51:43] Con Junor
+- [51:43] Creo que nos va a ir a pata
+- [51:44] Al Maui con el Sergio
+- [51:46] Vas a tener que andar a callitos
+- [51:49] Uno se nos arriba
+- [51:49] Y uno se nos arriba
+- [51:50] No, pero
+- [51:52] Carlos
+- [51:53] El Sergio tiene plata
+- [51:54] Sergio dijo que iba a arrendar
+- [51:57] Todo Rancagua para ti
+- [51:59] Todo Rancagua
+- [52:02] Bueno
+- [52:07] Y una suite con la María Jesús
+- [52:10] Cash
+- [52:11] El Pink House
+- [52:13] Presidente
+- [52:15] Deja de embarazar
+- [52:17] No quiero más agua
+- [52:21] Sergio, ¿tú tendrías más hijos, no?
+- [52:30] ¿Cuántos hijos tenía Sergio, aparte del Diego y el José?
+- [52:40] Oh, se me está cayendo el internet
+- [52:42] Ahí está el niño
+- [52:44] Oh, ¿qué está pasando?
+- [52:47] ¿Cuántos hijos tenía?
+- [52:48] Tengo cuatro niñas
+- [52:53] Cuatro niñas
+- [52:58] Para viajarte para el Loli
+- [53:00] Coche de tu Mario
+- [53:03] Muchas gracias
+- [53:08] ¿Me escucharon?
+- [53:12] ¿Me escucharon o no?
+- [53:14] Sí, sí
+- [53:14] Sí, se está yendo el internet
+- [53:21] Ahí volví, sí, buena cabros
+- [53:30] Por fin, saqué la versión estable
+- [53:36] Todo cueca, concha suave
+- [53:38] Eso
+- [53:38] Tengo que subir algo
+- [53:40] Oye, José, ¿subiste tu cambio?
+- [53:44] ¿Qué tenías ahí, cierto?
+- [53:46] No, creo que no
+- [53:47] Oye, José, ¿qué no tenías
+- [53:51] Reunión con la princesita?
+- [53:53] Oye, ¿qué harían ustedes en mi...
+- [54:02] Vamos, Sergio, viste, estoy para el lobo, ¿vale?
+- [54:07] El Michel, la culpa es mía, si vos te comprometías
+- [54:09] al último minuto
+- [54:10] Mira, de partir de la reunión que tuviste
+- [54:15] que fuiste con el cliente a las 3 de la tarde
+- [54:17] yo no tenía idea, más encima
+- [54:20] te hicieron un hueá
+- [54:21] nada si me dijo de no voy a participar pero era el único orden que yo tenía así que habrá las 5
+- [54:35] pero igual para que no se te olvide probaste al fin y al cabo de parís
+- [54:40] parís sí pero es lo que te dije no no tengo como la validación en el parís de que efectivamente se
+- [54:49] porque me arroja un error y ahí quería entrar a su chivo para ver si es que se puede ya oye
+- [54:56] llegó en lo de replay podía ver algo no está listo ya falta probar pero con la ley que puede hacer
+- [55:07] el login y me falta aprobarlo porque lo subí falta desbloquear no pero si lo probaste no
+- [55:16] Oye Diego, voy a decirle a los jugadores del canal de YouTube de Don Peklo, donde sale el programa de Sergio Freire, para que salgamos como BNDF.
+- [55:29] Cacha, cacha.
+- [55:31] Ya, espérate, pero espérate, le vamos a cambiar el nombre, todavía no.
+- [55:35] Lo había pensado, como yo soy el único que puede aparecer ahí, yo me presto ahí, me muestro en cámara para hacer el producto.
+- [55:42] ¡Ah, Carlos no sabe!
+- [55:44] Ah, ¿no?
+- [55:47] No, no lo había contado, weón
+- [55:48] Ya me echaron ya, weón
+- [55:50] Puta la weá, weón
+- [55:51] ¿Cómo que hoy es mi último día, weón?
+- [55:56] Ya llegó tu reemplazo
+- [55:57] Pero está descendido al cliente
+- [56:00] ¿Te acuerdas de Felipe Espinosa?
+- [56:06] Sí, sí
+- [56:07] Es nuestro nuevo socio
+- [56:10] ¿Es nuestro nuevo socio?
+- [56:12] Sí, weón
+- [56:13] entonces ya no le tengo que vender
+- [56:16] se va a vender al mismo
+- [56:17] ya sabe todo
+- [56:20] pero igual no voy a poner
+- [56:22] nada ahí en el grupo
+- [56:23] es solo Felipe, los demás no saben
+- [56:26] ah buena
+- [56:27] igual vamos a hacer esa jugada
+- [56:30] vamos a estar más tranquilos
+- [56:32] por ese lado, entonces Felipe como que no
+- [56:34] va a estar allá
+- [56:36] en la otra vereda
+- [56:38] gracias
+- [56:39] va a ser tu palo blanco
+- [56:41] buena, bacán
+- [56:42] así que ya tenemos ahí
+- [56:46] la mitad de los clientes
+- [56:48] de Detemite
+- [56:48] que se tenga la cartera completa nomás
+- [56:52] que Detemite diga que ya no quiere ser cliente
+- [57:01] y que lo traiga para acá nomás
+- [57:02] ah pero buena
+- [57:06] oye pero volviendo al tema
+- [57:08] para empezar a hacerle proporción a la aplicación
+- [57:11] Pues si ya la tenemos bien avanzada
+- [57:13] Hay que ver el nombre
+- [57:14] Pero hay que cambiar el nombre
+- [57:17] Ya, hagamos esas modificaciones
+- [57:20] Y por ejemplo
+- [57:21] También estaba pensando en tener tarjetitas
+- [57:24] Porque cada vez que vaya a un comercio
+- [57:25] O alguna hueá así, tener tarjetitas, dejarla ahí
+- [57:27] Y como se pueden meter, tenerla en la cuenta demo
+- [57:30] Ready
+- [57:31] Claro
+- [57:32] Estaría bueno
+- [57:35] Arte con las partidas culiando a enteros sociables
+- [57:38] Eso
+- [57:39] Puta que hizo bien
+- [57:47] El sillatra culiao
+- [57:49] Puta que está rico
+- [57:51] Dame el número
+- [57:53] El número es 35 centímetros
+- [58:01] Pata 48
+- [58:04] lo vacío lo vacío por dentro
+- [58:18] voto todo
+- [58:22] hoy son las 3 tengo reunión
+- [58:28] y a las 4 tengo otra reunión
+- [58:31] así que me viro
+- [58:32] chao
+- [58:32] eso no es la cenicienta la que tiene que irse a la
+- [58:36] es la princesita
+- [58:40] Oye, Carlos
+- [58:51] Acuérdate que la semana del
+- [58:53] 23 de octubre
+- [58:56] Vamos al Mahue
+- [58:57] 26, perdón
+- [58:59] 26 de octubre
+- [59:01] Vale, vale, vale
+- [59:02] Depiladito, por favor
+- [59:05] Las manitos con crema
+- [59:08] te voy a pagar la pedicure
+- [59:13] el 26 ahí va
+- [59:20] le aconsejo al tío
+- [59:21] ya tiene experiencia
+- [59:23] para estar conmigo es que pone a él
+- [59:29] no sé
+- [59:31] Carlos, ¿tú has visto el video
+- [59:35] del tío
+- [59:37] Creo que lo conseguí, creo que se lo compas
+- [59:40] Creo que lo vi
+- [59:43] Como mexicanos los buenos
+- [59:45] Pero todos callamos
+- [59:50] Los corridos tombados
+- [59:51] Pasaron a ser otro tipo de corridos
+- [59:53] Corridos de cambio
+- [59:55] Corridos chupados
+- [59:59] Claro
+- [01:00:00] Corridos paseados
+- [01:00:04] jajajajaja
+- [01:00:06] ¿Cuál es esa banda?
+- [01:00:07] Oye, ya, dijimos al Jose que tiene reunión
+- [01:00:10] Ay, que tengo reunión
+- [01:00:11] Ay, me van a abandonar, espérenme
+- [01:00:16] Jajajajaja
+- [01:00:18] Lo que pasa es que es fácil, pues si desaparece todo el día
+- [01:00:20] Llega a las dos últimas horas
+- [01:00:21] No, que lindo
+- [01:00:24] Me encima en la noche
+- [01:00:26] No, que estoy durmiendo
+- [01:00:28] A las nueve
+- [01:00:31] Tengo que hacer el amor
+- [01:00:32] Son cuatro horas
+- [01:00:36] Cuatro horas
+- [01:00:40] Cuatro horas alongando
+- [01:00:41] Puro desentiendo
+- [01:00:52] A los poros penales
+- [01:00:56] No está bueno
+- [01:01:00] No se hace un sticker
+- [01:01:02] ¿Qué?
+- [01:01:05] No se hace un sticker
+- [01:01:06] No se hace un sticker
+- [01:01:06] ¿Qué weá?
+- [01:01:09] ¿Por qué?
+- [01:01:10] ¿Estás en el sticker?
+- [01:01:12] Ah, deslongando
+- [01:01:13] 5 horas deslongando
+- [01:01:16] O 5 minutos de placer
+- [01:01:17] Y dice que tiene mucho trabajo
+- [01:01:20] ¡Buena Diego!
+- [01:01:21] Mira el correo
+- [01:01:23] ¿Dónde está?
+- [01:01:27] ¿Qué muestra?
+- [01:01:28] ¿Un correo?
+- [01:01:30] ¿Qué es mi correo?
+- [01:01:33] Llegaron los bonitos
+- [01:01:34] Ay, ay, ay
+- [01:01:36] Llegaron los
+- [01:01:37] Las cinco lucas
+- [01:01:38] A ver, voy a ver al tiro
+- [01:01:43] A ver si es verdad
+- [01:01:44] Voy hablando de bonos
+- [01:01:45] Sergio, ¿qué hora apaga?
+- [01:01:49] Le están gritando las manos
+- [01:01:51] Se nos empezó a cortar
+- [01:01:52] Puta, el internet es malo
+- [01:01:55] No escucho nada weon
+- [01:01:59] Ay se las dejo
+- [01:02:01] A mi no me ha pasado ni nada
+- [01:02:03] No he trabajado en nada
+- [01:02:05] Porque querí
+- [01:02:06] Oye como que no weon
+- [01:02:15] Chistá el tuyo weon
+- [01:02:17] Voy a ver el aplicativo
+- [01:02:19] Correo no me llegó
+- [01:02:20] Ah
+- [01:02:21] Voy a ver el aplicativo del banco
+- [01:02:26] Me tiro el chicle para que llegue el señal, por dios
+- [01:02:30] A ver, a ver, a ver si es verdad
+- [01:02:33] A ver si es verdad
+- [01:02:35] Ah, si llegó, muchas gracias
+- [01:02:42] Agradecido
+- [01:02:43] Agradecido con el de arriba
+- [01:02:45] Porque estoy arrodillado
+- [01:02:48] Que hueón
+- [01:02:50] Que hueón
+- [01:02:53] Se huea solo, mi compa
+- [01:02:59] hoy día quería comer sopita de pan
+- [01:03:01] oye, compré los
+- [01:03:11] PC de Diego
+- [01:03:13] bueno, que tal
+- [01:03:15] cuando te llevas
+- [01:03:16] estoy más desagrado que la concha
+- [01:03:18] como no llorar
+- [01:03:20] pero hace que prueben
+- [01:03:24] que jueguen un mes y los devolví
+- [01:03:25] claro
+- [01:03:26] eso bien por taquen
+- [01:03:29] No me preguntamos que querían jugar
+- [01:03:31] No, pero
+- [01:03:33] ¿Le compraste Starro, Sergio?
+- [01:03:37] Sí, weón
+- [01:03:38] Buena, weón
+- [01:03:39] Y eso de Naida, weón
+- [01:03:42] Y dos, conchazo
+- [01:03:44] Oye, ¿y el Note lo vas a comprar, Fidon?
+- [01:03:47] Sí, pero yo creo que el otro mes sí
+- [01:03:49] ¿Canoce?
+- [01:03:58] José, mándale esa weá a la Annie, por favor, te lo pido
+- [01:04:00] No puedo tener reunión
+- [01:04:04] No te estoy juntando mucho
+- [01:04:11] Con el Gerardo
+- [01:04:13] Te estoy volviendo
+- [01:04:15] Sí, bueno
+- [01:04:17] Ese no se atreve
+- [01:04:18] Ni solo a reunión
+- [01:04:20] Ese sí que es
+- [01:04:21] Ya, chao entonces
+- [01:04:24] Un placer, muchas gracias
+- [01:04:28] Cuídense
+- [01:04:28] Nos vemos chucho
+- [01:04:32] Buen fin de semana, chao
+- [01:04:33] Está buena la pastilla
+- [01:04:39] 5 lucas
+- [01:04:44] Chao
+- [01:04:46] Puro hueco
+- [01:04:51] Puro huequita
+- [01:04:52] Nos vemos
+- [01:04:53] Nos vemos
+- [01:04:54] Chau

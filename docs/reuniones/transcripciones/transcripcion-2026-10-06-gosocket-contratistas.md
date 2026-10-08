@@ -1,0 +1,723 @@
+# Reunion 2026-10-06 GoSocket y contratistas - Pablo y MJ (Whisper large-v3)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-10-06 124123.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [01:29] Hola, ¿cómo están? Hola, buenas tardes. Hola, buenas. Hola. Muy bien, gracias. Qué bueno, qué bueno. Hola, Sergio. Buenos días, ¿cómo están? Buenas tardes, ¿verdad? Bien y tú? Buenas tardes, todo bien. Bien, bien. Bueno, ¿nos falta nadie más? No, hay que preguntar. Ya, perfecto. Bueno, avances, ¿alguna duda hasta el momento, Carlos?
+- [02:21] En el tema del desarrollo, no sé si han podido hacer pruebas de emisión.
+- [02:30] Sí, teníamos una duda, no sé si Sergio me podría ayudar, referente a las guías, si es que están como documento recibido.
+- [02:45] ¿Cómo las guías? No entendí.
+- [02:50] Te refiero a que...
+- [02:51] Te explico, Pablo. Lo que pasa es que en la gestión de los documentos recibidos, puede ser que antes de recibir la factura, también puedan recibir una guía de despacho por parte de su proveedor.
+- [03:12] entonces
+- [03:14] puede ser que ellos
+- [03:17] reciban la mercadería
+- [03:19] con una guía física
+- [03:21] pero
+- [03:24] la pregunta va
+- [03:27] es sobre si
+- [03:28] en GoSocket
+- [03:30] esas guías recibidas
+- [03:33] o emitidas por los proveedores
+- [03:34] van a estar disponibles en su portal
+- [03:37] o en su API para poder nosotros
+- [03:39] sincronizarlas y hacer
+- [03:41] una validación tanto a la guía física
+- [03:43] verso la
+- [03:45] guía digital que se
+- [03:47] obtuvo desde Consoque
+- [03:48] ya, ok
+- [03:49] y esto lo, ustedes
+- [03:52] se están reemitiendo documentos entre las
+- [03:55] empresas, como les comentaba
+- [03:56] o no han puesto a prueba eso
+- [03:58] si, estamos emitiendo documentos
+- [04:01] pero no estábamos
+- [04:02] haciendo la emisión de guías como tal
+- [04:05] ya
+- [04:07] lo que podrían probar, bien
+- [04:10] para que ustedes tengan la seguridad, es emitirse
+- [04:12] una guía y debería aparecer
+- [04:14] en este caso en los recibidos
+- [04:15] de la otra empresa, ahí para que hagan
+- [04:18] las validaciones
+- [04:18] ya, perfecto
+- [04:22] o sea, sería como una factura normal
+- [04:24] una guía y debería aparecer
+- [04:26] en el recibido de la otra empresa
+- [04:27] claro, sí
+- [04:29] ok, sí
+- [04:31] igual voy a validar con
+- [04:35] porque por ejemplo estoy viendo documentos
+- [04:38] productivos de otra empresa y está
+- [04:39] la guía de despacho, por ende
+- [04:41] van a poder
+- [04:42] van a poder también adquirir la guía de despacho
+- [04:45] desde lo recibido
+- [04:46] perfecto
+- [04:54] aquí veo todas las guías
+- [04:56] de despacho, sí
+- [04:58] deberían poder obtenerlo
+- [05:00] entonces Carlos, habría que hacer
+- [05:02] esa prueba
+- [05:03] vale, vale
+- [05:07] esa era la duda, Pablo, sobre las guías
+- [05:09] pero sí hemos hecho varias pruebas
+- [05:12] de factura, tanto el documento emitido
+- [05:14] y también como lo recibido
+- [05:16] Y respecto a la emisión
+- [05:20] ¿No han tenido algún inconveniente?
+- [05:23] ¿Algún error por ejemplo?
+- [05:29] Con la emisión no
+- [05:30] De momento no hemos presentado ningún tipo de problema
+- [05:33] Ya hicimos las correcciones
+- [05:34] De los duplicados que teníamos
+- [05:35] Así que vamos por buen camino
+- [05:37] Ah ya de hecho si estoy viendo
+- [05:40] Bastantes pruebas que han emitido
+- [05:42] Están bastante avanzados
+- [05:46] Tengo unos rechazos acá que podríamos revisarlos
+- [05:48] Pero
+- [05:49] Si veo bastante buenas las pruebas
+- [05:57] ya, hay algunos, no sé si viste
+- [06:06] algunos ejemplos, la factura 85
+- [06:08] por ejemplo, ahí tienen un mensaje
+- [06:10] de error, abre este igual
+- [06:12] es del 18 de septiembre
+- [06:14] ya
+- [06:17] Carlos, ahí lo que vamos
+- [06:20] a hacer, ya para ir definiendo
+- [06:22] en este caso
+- [06:22] los ajustes que vamos a tener que implementar con
+- [06:25] las representaciones gráficas
+- [06:27] es que me envíen
+- [06:29] el plan de pruebas, no sé si ustedes
+- [06:32] manejan un plan de pruebas respecto al tema
+- [06:34] de la emisión de los
+- [06:36] documentos en cuba con la emisión verdad sí con la emisión
+- [06:48] pero fue la emisión un plan de prueba me refiero a que envíen por ejemplo coloquen
+- [06:54] una tabla con los distintos tipos de documentos y prueben en este caso tres
+- [07:00] documentos de cada de cada tipo para que podamos determinar si es que
+- [07:05] están saliendo o no correctamente y así nosotros poder con maría jesús después
+- [07:12] ahondar en el tema de la construcción
+- [07:14] del documento
+- [07:16] perfecto, entonces no sé si eso lo pueden
+- [07:18] hacer por cada documento, hacer unas
+- [07:20] tres muestras, cuatro muestras
+- [07:22] y ya cuando estén
+- [07:23] en CUA, tú me avisas
+- [07:26] y yo los tomo para poder revisar si hay que tener
+- [07:28] algún rechazo, algún reparo y así poder validar
+- [07:30] que esté todo correcto
+- [07:32] perfecto, ningún problema
+- [07:33] eso nos quedaría pendiente entonces
+- [07:37] bien, la verdad es que estoy viendo
+- [07:40] varios documentos que están bastante avanzados
+- [07:42] en el desarrollo de la implementación
+- [07:45] la verdad
+- [07:46] es de buen gusto
+- [07:48] verlo así
+- [07:49] y bueno
+- [07:52] María Jesús
+- [07:54] algún avance
+- [07:56] por parte nuestra, no sé si te respondió
+- [07:59] Cristian
+- [07:59] respecto al correo
+- [08:01] no, no me ha respondido nada
+- [08:03] estaba esperando a ver
+- [08:06] si es que tenían alguna llamada
+- [08:08] o algo, porque sí, de hecho estaba
+- [08:10] José Grado
+- [08:10] yo no voy a gestionar
+- [08:17] María Jesús, no te preocupes
+- [08:18] ya, muchas gracias Pablo
+- [08:20] así que eso
+- [08:22] queda pendiente eso de hacer las pruebas
+- [08:24] Carlos, Sergio
+- [08:26] alguna otra duda
+- [08:27] que tengamos pendiente
+- [08:30] menos por mi parte no
+- [08:34] ya, perfecto
+- [08:38] bien entonces eso
+- [08:39] espero las pruebas
+- [08:41] cuando ya tengamos las pruebas Carlos
+- [08:44] te doy mis
+- [08:45] mis notas en el caso de que
+- [08:48] haya algún incidente con algún
+- [08:49] con algún documento para que lo solventemos
+- [08:52] y ya María Jesús
+- [08:53] yo voy a levantar por parte mía el mismo
+- [08:56] correo que tú mandaste
+- [08:57] para que tome carta en el asunto respecto al
+- [09:00] contrato porque a mí igual me interesa bastante
+- [09:01] ya que activamos por lo menos Iofacturo
+- [09:04] Sí, por favor Pablo
+- [09:06] Ya, así que eso
+- [09:07] eso estimado por el momento
+- [09:09] Ya, muchas gracias
+- [09:12] Gracias
+- [09:12] Que estén muy bien
+- [09:15] Muchas gracias a todos
+- [09:17] María Jesús, no sé si nos vamos a quedar
+- [09:20] A ver algo de controlista
+- [09:21] Sí
+- [09:22] Ya, yo me retiro
+- [09:26] Que estén bien
+- [09:27] Gracias Pablo
+- [09:28] Estaba leyendo un WhatsApp también
+- [09:31] Está bien movida la mañana
+- [09:35] Bien movida y con alta lluvia
+- [09:40] Sí, acá igual está muy lluvioso
+- [09:45] Que para nosotros esto es terrible
+- [09:47] Ah, verdad, por la fruta
+- [09:50] Por la fruta
+- [09:52] Si a esta altura no debería llover
+- [09:58] Porque la fruta como ya está cuajada
+- [10:00] Si le queda humedad se pudre
+- [10:03] Y también se machuca
+- [10:05] ¿Y qué hacen en ese caso?
+- [10:10] Rezar
+- [10:11] Lo que pasa es que
+- [10:14] Lo que pasa es que
+- [10:16] Los productores que tienen techo
+- [10:19] sufren menos este cambio de clima, pero los que no tienen techo tienen que tomar
+- [10:25] carta en el asunto de si deciden secar, que eso igual es un costo adicional,
+- [10:30] o el tema del raleo, si lo hacen o no lo hacen, entonces igual es complicado.
+- [10:45] ¿Quién es que es tan rápido?
+- [10:57] Yo.
+- [10:57] Ya, le mando un correo
+- [11:25] Con un
+- [11:26] Word
+- [11:28] Donde estaba armando la trazabilidad
+- [11:30] Del módulo de contratista
+- [11:31] Para que lo tengan de respaldo
+- [11:35] Y adicional
+- [11:37] ¿Dónde lo enviaste?
+- [11:42] Lo envié recién
+- [11:43] ¿Les compartí pantalla, cierto?
+- [12:05] No
+- [12:06] ¿Dónde es mi pantalla?
+- [12:08] Ah, sí, sí veo.
+- [12:10] Yo sí la veo.
+- [12:12] Ya.
+- [12:13] Este es el archivo que quiero adelantarles para que vayamos conversando como el fin del módulo de contratista.
+- [12:23] Lo hice muy enfocado al área agrícola porque nosotros como exportadora es muy poco lo que tenemos de contratista.
+- [12:35] ¿Me escuchan?
+- [12:36] Sí, se escucha.
+- [12:37] Ya, entonces el flujo sería crearla al contratista en el módulo, hacer los registros diarios, ahí nos vamos a saltar el tema del contrato porque no fue necesario si tomamos de base AgroSmart.
+- [12:56] En AgroSoft es necesario, pero en AgroSmart no. Así que vamos a una fusión de los dos ERP.
+- [13:03] Después se emite la proforma, pasa a aprobación, a facturación y pago.
+- [13:08] Consulta, ¿la proforma pasa por el flujo de aprobaciones?
+- [13:14] Sí, lo que pasa es que, más abajo voy a explicar, pero la proforma no es una para la factura, sino que son varias informaciones de ingresos diarios.
+- [13:29] Entonces, por ejemplo, con los contratistas tú tienes un día que, no sé, trabajas, no sé, raleo.
+- [13:37] Al otro día trabajas desmaye.
+- [13:40] Al otro día trabajas, no sé, aplicación.
+- [13:45] Entonces, ¿cuál es la idea?
+- [13:46] Que nosotros podamos seleccionar todas las faenas diarias y emitir la proforma.
+- [13:52] Y que la proforma se asocie a una factura.
+- [13:54] Pueden haber 10 proformas que se asocien a una factura.
+- [14:07] Sí, se escucha, se escucha. Estaba pensando yo.
+- [14:11] Entonces, no sé, vamos a ir por partes.
+- [14:13] Ya, mira, nosotros lo que necesitamos es una parte que se pueda ingresar la ficha del contratista.
+- [14:19] Y en la ficha del contratista necesitamos el código, que es el número del contratista.
+- [14:24] Por ejemplo, si tenemos 10 contratistas creados, al crear uno nuevo sería el número 11.
+- [14:30] Vale.
+- [14:31] A diferencia del código de proveedores, que es el RUT.
+- [14:35] Ah, ok.
+- [14:37] Ya. Necesitamos el código, el root y el nombre del contratista. Obviamente la dirección y la persona que lo crea, que quede ahí plasmado.
+- [14:48] Perfecto.
+- [14:51] Ya. Después nosotros tenemos el ingreso a la información diaria. Acá la idea es seleccionar la empresa, la temporada y el predio podría ser...
+- [15:02] quise eliminar el predio
+- [15:09] o que no sea necesario
+- [15:12] claro, que sea opcional
+- [15:15] porque por el lado de agrícola necesitamos predio
+- [15:18] pero por el lado de ALM
+- [15:20] no necesitamos predio, necesitamos
+- [15:22] la información de si es
+- [15:24] jornal o
+- [15:26] a trato
+- [15:26] solamente
+- [15:28] ¿en ese caso sería
+- [15:34] como para una empresa nomás tener el
+- [15:36] predio o que sea como un dato opcional
+- [15:38] para las dos?
+- [15:40] Un dato opcional para las dos.
+- [15:42] Ok.
+- [15:46] Lo que pasa es que actualmente estamos trabajando
+- [15:49] con dos empresas, pero la idea
+- [15:51] después es poder crear más empresas
+- [15:53] dentro de la
+- [15:55] plataforma. Pero que en realidad
+- [16:00] el funcionamiento sea transversal.
+- [16:02] Vale.
+- [16:06] Ya, entonces, ¿qué necesitamos
+- [16:08] que tenga la información?
+- [16:11] La fecha,
+- [16:12] el sector,
+- [16:16] el cuartel,
+- [16:16] la faena, la forma de pago, la unidad, el contratista, el trabajador no es necesario,
+- [16:27] la duración, el valor unitario del trato o jornada, la cantidad y el total.
+- [16:36] Que abajo le puse lo que necesitábamos acá.
+- [16:39] De casualidad, por ejemplo, para lo que vendría a ser el cuartel y la faena,
+- [16:45] ¿Es necesario, por ejemplo, que haya como un mantenedor para que se vaya agregando esa información?
+- [16:51] ¿O la van escribiendo solamente a mano?
+- [16:55] No, lo ideal es que tenga mantenedor
+- [16:57] Perfecto
+- [16:59] ¿Cuáles son, por ejemplo, los datos, aparte de cuartel faena, que podrían tener como su propio mantenedor?
+- [17:06] Y obviamente contratista
+- [17:07] No, sería cuartel faena y por el lado de ALM tendría que ser quizás servicio administrativo o armado de cajas, cosas como muy puntuales.
+- [17:22] Ah, perfecto, perfecto.
+- [17:26] Sí. Y a una vez que ingresamos la información diaria, se va a generar la proforma, que es como la orden de compra.
+- [17:37] Y ahí les puse un ejemplo, dime.
+- [17:39] Ahí, María Jesús, ¿el ingreso diario pasa a ser el detalle de la proforma?
+- [17:45] Sí.
+- [17:47] ¿Y puede ser que, por ejemplo, en ingresos diarios ustedes lo seleccionen y de hecho se construya la proforma, ¿cierto?
+- [17:56] Exacto.
+- [17:57] hay consulta también
+- [18:01] por ejemplo, me imagino que cuando
+- [18:02] hacen los ingresos diarios
+- [18:03] todavía no se asocian a una proforma
+- [18:06] es el momento de generar la proforma que yo veo
+- [18:08] todos los ingresos disponibles de tal proveedor
+- [18:10] y los puedo asociar, ¿verdad?
+- [18:12] sí, mira, la idea es que
+- [18:14] cada vez que nosotros ingresemos el ingreso
+- [18:16] diario y se guarde
+- [18:17] se envía a aprobación de la jefatura
+- [18:20] ah, el ingreso diario entonces sería
+- [18:24] el que pasa por aprobaciones
+- [18:26] claro
+- [18:27] el ingreso a diario es lo que pasa por aprobación
+- [18:30] ¿cómo le?
+- [18:34] entonces
+- [18:34] ¿no es la proforma?
+- [18:37] lo que pasa es que acá
+- [18:38] la proforma se
+- [18:40] emite con el ingreso a diario
+- [18:42] no, claro, pero aquí
+- [18:44] por ejemplo lo que tú me dices
+- [18:46] es que puede ser que la proforma
+- [18:48] es que mira, no sé si Carlos puedes
+- [18:50] compartir pantalla para que
+- [18:52] le puedas
+- [18:53] ¿Puedes mostrar lo que ya está hecho como el tema de la proforma?
+- [19:00] Voy.
+- [19:02] Para que se entienda lo que llevamos en el avance.
+- [19:07] Ya.
+- [19:08] Pero ahí María Jesús, por ejemplo, puede ser, no sé si se va a dar,
+- [19:13] que los ingresos diarios se van a convertir uno a uno en una proforma.
+- [19:20] o puede ser que en ingresos diarios yo lo sea el detalle de una sola pro forma
+- [19:27] entonces ahí el monto igual va a ser mucho mayor
+- [19:43] por ejemplo si yo todos los días tengo trabajo van a ser 30 personas que se
+- [19:48] hicieron una factura eso no no no por ejemplo como tú bien dices
+- [19:54] 30 ingresos diarios en el día, ¿cierto?
+- [19:57] ¿Ya?
+- [19:58] Y de esos 30, yo los puedo
+- [20:00] convertir en 2 proformas
+- [20:03] o 3 proformas.
+- [20:05] ¿Cierto? Que sería
+- [20:06] de 10 cada una.
+- [20:08] De 10 ingresos diarios.
+- [20:10] Entonces, en sí
+- [20:12] la aprobación de la proforma
+- [20:14] o sea, si tú dices que va a
+- [20:16] pasar el ingreso diario,
+- [20:18] ¿sería un proceso
+- [20:20] por separado cada uno?
+- [20:22] Por ejemplo, la ingresa diaria
+- [20:23] uno va a pasar por el flujo
+- [20:26] de aprobación, que obviamente ese ingreso
+- [20:28] diario puede ser, no sé, de
+- [20:29] mil
+- [20:30] y el otro va a ser
+- [20:34] de mil dólares y el otro va a ser de tres mil
+- [20:36] ¿cierto?
+- [20:37] Entonces a lo mejor como son montos
+- [20:40] chiquititos van a ser
+- [20:41] a diferencia que si se agrupan todos
+- [20:43] no sé si va a pasar por
+- [20:48] algún flujo de aprobación al ser
+- [20:50] montos chicos, pero en sí la proforma
+- [20:52] se va a convertir en una de 30.000 dólares.
+- [20:54] Que sí, esa proforma
+- [20:56] debería pasar por aprobación.
+- [20:58] Dependiendo.
+- [20:59] Lo otro sería que, por ejemplo,
+- [21:02] cuando uno va ingresando
+- [21:04] la información diaria, uno tenga
+- [21:05] la opción de seleccionar cuántas quiere mandar
+- [21:08] a aprobación.
+- [21:09] Y ahí se genera una proforma con los movimientos
+- [21:11] que uno seleccione.
+- [21:14] Ya entiendo.
+- [21:15] ¿Puedes crear una nueva proforma, Carlos?
+- [21:19] Por supuesto.
+- [21:20] Lo que sí, acá no tengo
+- [21:21] movimientos diarios pero aquí deberían aparecer los pendientes diarios
+- [21:27] ¿Puedes crear un ingreso diario?
+- [21:30] Vamos a cerrar
+- [21:31] Por ejemplo aquí María Jesús se registraría como lo que te dice
+- [21:39] los ingresos, los trabajos diarios, ¿cierto?
+- [21:41] ¿Ya?
+- [21:42] ¿Cuántas horas?
+- [21:53] Falta tipo de contrato pero creo que es opcional
+- [21:56] Tienes que crear para que se nos pida obligatorio el tipo de contrato
+- [22:12] Sí
+- [22:13] Por ejemplo, ahí María Jesús se creó un ingreso diario, ¿cierto?
+- [23:14] Y en Proforma, se da la Proforma, vamos a crear la Proforma.
+- [23:18] Cuando se le describe la Proforma, te va a solicitar el contratista, ¿cierto?
+- [23:23] Y va a listar todos los ingresos diarios de ese contratista.
+- [23:27] ¿Ya?
+- [23:27] Perfecto.
+- [23:28] Entonces ahí, por ejemplo, ya seleccionó uno, el packing de cereza, ¿cierto?
+- [23:34] Sí.
+- [23:35] y ahí por ejemplo puede ser
+- [23:37] n ingresos diarios, puede ser 10
+- [23:39] y yo solamente selecciono 5 y me voy
+- [23:41] calculando el total de esa proforma
+- [23:43] ya te entiendo, si, así
+- [23:45] entonces ya y esas
+- [23:47] 5 que yo ya creé la proforma
+- [23:49] después ya no van a estar disponibles para crear
+- [23:51] una nueva proforma
+- [23:53] ya, ahí se evita
+- [23:55] la duplicidad
+- [23:56] claro, entonces mi pregunta era
+- [23:59] ¿va a pasar
+- [24:01] el flujo de aprobación la proforma
+- [24:03] o los ingresos diarios?
+- [24:05] En este caso, esta proforma pasaría a aprobación y una vez que se apruebe, la idea es poder hacer el match con la factura que nos emitan.
+- [24:22] ¿Cómo va a estar conectado con AgroCosa, con CosaT?
+- [24:25] ya, esa es
+- [24:30] mi otra duda, entonces también
+- [24:32] en el módulo de compra
+- [24:34] documentos recibidos
+- [24:36] vamos a poder asociar
+- [24:38] proforma o
+- [24:40] órdenes de compra
+- [24:41] si
+- [24:42] ok
+- [24:45] y ahí por ejemplo si la proforma
+- [24:48] es como
+- [24:50] volviendo al caso de las órdenes de compra
+- [24:53] cuando son órdenes de compra madre
+- [24:54] se puede dar un caso de que
+- [24:57] la proforma
+- [24:59] venga como facturada
+- [25:01] parcialmente
+- [25:02] por el proveedor?
+- [25:07] Por ejemplo, esto es de 9600 y el proveedor
+- [25:09] emite la factura por 5600.
+- [25:14] No, y la idea
+- [25:15] es que la
+- [25:16] proforma no quede parcializada
+- [25:18] con la facturación. Porque se supone
+- [25:21] que en base a las proformas que nosotros
+- [25:22] seleccionemos mensualmente, le vamos a mandar
+- [25:25] el detalle al contratista para que emita la factura.
+- [25:30] Ah, entonces la factura
+- [25:31] recibida va a ser, puede seleccionar
+- [25:33] N proforma.
+- [25:35] Sí, lo que pasa es que debería
+- [25:37] siempre el contratista tener
+- [25:39] una previa aprobación de la proforma
+- [25:41] para poder emitir la factura, porque
+- [25:43] igual es una negociación entre
+- [25:44] nosotros y el contratista.
+- [25:52] Entonces, ¿las proformas las envían
+- [25:54] a los contratistas en algún momento?
+- [25:57] Sí, la proforma
+- [25:58] se compara con el
+- [26:00] contratista y se emite la factura.
+- [26:04] Por eso nos sirve que sean
+- [26:05] varias proformas, porque nosotros podemos ir enviando
+- [26:07] a la información semanal en base a los avances del trabajo.
+- [26:13] Ya entiendo.
+- [26:15] O sea, en cierto modo...
+- [26:18] Ya, ok.
+- [26:18] Y ahora me calzo un poquito ya.
+- [26:21] Entonces serían los ingresos diarios, ¿cierto?
+- [26:23] Se podría crear una proforma diaria, ¿cierto?
+- [26:27] Y al final de la semana tendrían cinco proformas.
+- [26:31] O puede ser una proforma semanal.
+- [26:33] Puede ser que los ingresos diarios los podamos agrupar
+- [26:35] en base a rango
+- [26:38] de fecha o a labor
+- [26:40] no sé, que tengamos
+- [26:41] una movilidad de agrupación
+- [26:43] entonces al final del mes si el cliente
+- [26:46] o el proveedor va a tener
+- [26:48] casi cuatro proformas emitidas
+- [26:49] a su nombre, ¿cierto?
+- [26:51] exacto
+- [26:52] entonces ya cuando las tenga emitidas
+- [26:55] y ahí por ejemplo ustedes
+- [26:57] como que hacen cierre
+- [27:00] de proformas y le mandan
+- [27:02] un correíto, algo
+- [27:03] con las cuatro proformas
+- [27:05] juntas? ¿Cómo hace
+- [27:07] esa formalización?
+- [27:08] Se hace el cierre de los trabajos
+- [27:11] y se conversa
+- [27:13] con el contratista.
+- [27:16] Ok.
+- [27:18] Eso hay que
+- [27:19] entonces, hay que considerarlo, Carlos,
+- [27:21] para poder seleccionar
+- [27:23] proforma. Y cuando
+- [27:25] se hace el envío o ese cierre
+- [27:27] de proforma hacia el proveedor,
+- [27:28] la proforma pasa a un estado específico.
+- [27:32] Por ejemplo, no sé, puede enviar
+- [27:33] a proveedor o enviado a contratista
+- [27:35] para saber por ejemplo cuáles están
+- [27:38] pendientes de envío
+- [27:41] porque puede ser que estas cuatro
+- [27:43] actualmente imprimimos
+- [27:45] la factura del sistema y se la pasamos al contratista
+- [27:47] pero
+- [27:49] la proforma
+- [27:50] si la proforma
+- [27:52] pero si se puede generar
+- [27:54] algún correo de contacto
+- [27:56] y que una vez que está aprobada
+- [27:58] se envía
+- [28:00] al mail del contacto
+- [28:02] igual sería bueno
+- [28:03] Ya, ok
+- [28:06] Sí, porque ahí por ejemplo, ustedes pueden tener
+- [28:08] hacer, no sé, durante el
+- [28:10] mes, por dar un
+- [28:12] ejemplo, puede ser que le manden
+- [28:14] dos envíos, dos proformas
+- [28:16] durante el mes, que sea
+- [28:18] a mediados del mes, le mando
+- [28:20] las proformas de las dos primeras
+- [28:22] semanas y al final del mes
+- [28:23] esas dos proformas que ya se las
+- [28:26] informe al proveedor, no deberían
+- [28:28] poder incluirse en el
+- [28:30] en el segundo envío que le voy a hacer al cierre de mes con las últimas dos pro formas del mes
+- [28:38] sí ahora la idea del envío a la reforma independiente que por nosotros está aprobada
+- [28:45] por él también no sea es como la factura es como yo de la envío y si tú no me reclaman los precios
+- [28:51] o los trabajos la doy por aprobada para poder asociar a la factura pero si ha pasado que
+- [28:57] tenemos diferencias con el contratista en precio o en jornada por eso hay una previa
+- [29:04] revisión antes de la facturación ok y qué pasa con esas por forma por ejemplo si el contratista
+- [29:13] dice ya no se me envía este cuadro pro forma la pro forma 4 no me cuadra el precio de la rechazo
+- [29:20] hoy que hacen hacer un ajuste la edita si hay la idea si llegamos acuerdo poder modificar la
+- [29:26] reforma que está en cuestionamiento y ahí como como entonces en ese caso se tendría que editar
+- [29:33] el ingreso diario que está en cuestión sí ahí se modifica el origen y ahí por ejemplo todas esas
+- [29:48] formas por lo que estoy entendiendo entonces sería la pro forma pasaría por un flujo aprobación
+- [29:53] interno, ¿cierto?
+- [29:55] Por la jefatura,
+- [29:57] lo que definan ustedes.
+- [29:59] Luego de la aprobación, se envía
+- [30:00] al contratista y el contratista
+- [30:03] también hace una aprobación,
+- [30:05] ¿cierto?
+- [30:06] Está check la proforma
+- [30:08] por parte del contratista.
+- [30:10] Ahí recién ustedes podrían asociar
+- [30:13] esas proformas
+- [30:14] a la factura recibida.
+- [30:16] Exacto. O sea, en realidad
+- [30:21] con el envío de la proforma ya no se nos
+- [30:23] damos por check en la aprobación
+- [30:25] del contratista, a menos que él no haga una alerta
+- [30:27] de que no está de acuerdo
+- [30:29] con la información.
+- [30:33] Y ahí, por ejemplo, si ya pasó el flujo de aprobación
+- [30:36] esa proforma,
+- [30:38] el flujo
+- [30:39] interno de aprobación,
+- [30:41] al editar, ¿tiene que volver a pasar
+- [30:43] nuevamente por el flujo de aprobación?
+- [30:45] Sí. Sí, como que en realidad
+- [30:49] si nosotros queremos...
+- [30:54] ¿Aló?
+- [30:55] Se le cortó a las chicas. ¿Me escuchan?
+- [30:58] Yo te escucho. ¿Carlos?
+- [31:04] Yo te escucho. ¿Me escuchas, Toby?
+- [31:05] Aló, aló, aló. ¿Me caí yo o nos caímos todos? Parece que nos caímos todos. ¿Tú me escucháis?
+- [31:20] Ahora sí te escucho, pero no escuchaba a nadie. Sí, como que se cayó esta cosa un ratito.
+- [31:36] Bueno, mientras vuelve María Jesús, estaba pensando cómo podríamos hacer para que el proveedor apruebe o rechace en el sistema.
+- [31:41] no, no
+- [31:44] es que claro, como dice María Jesús
+- [31:46] si la hacen el envío
+- [31:48] el envío al proveedor
+- [31:50] de la proforma
+- [31:51] marcarla como notificada a proveedor
+- [31:54] ¿me entendí?
+- [31:56] ahí solamente las que
+- [31:58] estén como notificada a proveedor
+- [32:00] deberían listarse en
+- [32:02] las compras
+- [32:03] ¿me explico?
+- [32:05] vale, como tener el tracking solamente de que se envió
+- [32:08] Mira estoy dibujando
+- [32:11] Haciendo un dibujito aquí
+- [32:12] De como
+- [32:14] De como sería el flujo
+- [32:22] Se lo pueden ver
+- [32:23] Para que
+- [32:24] Entonces por ejemplo
+- [32:41] Aquí lo que había construido el Diego
+- [32:42] Del menú de traspaso y cierre
+- [32:44] Si lo podemos aplicar para el envío de las performas por cliente
+- [32:47] ¿Cómo?
+- [32:53] Es que el Diego había generado este módulo
+- [32:55] De traspaso y cierre
+- [32:57] Este submódulo en contratista
+- [32:59] Entonces acá podríamos tener agrupados
+- [33:04] Así como por periodo
+- [33:07] Podría ser por mes o por semana
+- [33:10] Por lo que necesiten ellos
+- [33:11] Para que vayan viendo las performas que tengan
+- [33:13] Por cada uno de los clientes, los estados
+- [33:15] Claro
+- [33:17] Y ahí por ejemplo
+- [33:18] Desde acá que se cierre la
+- [33:20] La semana por así decirlo
+- [33:23] O sea, no sé, si le vamos a dar cierre de semana
+- [33:27] Me acuerdo que habían comentado
+- [33:29] en algún momento de que se como que se hace como un cierre semanal de la de las
+- [33:33] pro formas iguales o también nos faltaría preguntar
+- [33:38] se salieron de la llamada parece que falló el anet brígido
+- [33:46] para hablar del grupo a lo mejor la lluvia
+- [34:24] al menos igual por ejemplo creo creo que nos faltaría como hacer como el tema de
+- [34:38] las notificaciones
+- [34:39] de las aprobaciones
+- [34:42] que hay que incluirlas
+- [34:43] nuevamente
+- [34:43] el tracking
+- [34:45] de las notificaciones
+- [34:47] y
+- [34:48] tener como ese
+- [34:50] preguntar si es que
+- [34:51] va a ser necesario
+- [34:52] ese cierre
+- [34:53] ah se les cortó
+- [34:54] la luz Sergio
+- [34:55] ya te quedamos
+- [35:07] con las dos páginas
+- [35:08] del documento
+- [35:09] no pero
+- [35:11] yo creo que
+- [35:12] estoy
+- [35:12] bastante claro
+- [35:13] este es mi pizarra
+- [35:23] que en realidad es una cortina
+- [35:24] mirá lo que te envié
+- [35:40] ingresos diarios
+- [35:50] pasan la proforma
+- [35:52] 1, 2, 3
+- [35:54] los dos cheques
+- [35:57] que pasa por la aprobación interna
+- [35:59] se envía notificación
+- [36:01] o envío
+- [36:03] contratista
+- [36:04] y eso después pasa a poder asociar
+- [36:07] al documento recibido
+- [36:11] del contratista
+- [36:12] ahí pasaría como al módulo
+- [36:14] de compras
+- [36:16] entonces por ejemplo los documentos recibidos
+- [36:23] se podrían asociar tanto a las órdenes de compras
+- [36:25] como a las proformas
+- [36:27] y por lo que dijo María Jesús
+- [36:33] no serían parcializadas
+- [36:35] sería como justo o se modifica
+- [36:37] Sí, eso es lo que
+- [36:40] funciona
+- [36:41] pero yo creo que con esto está muy bueno
+- [36:43] está simple
+- [36:44] Sí, hicieron mucho lo justo que necesitamos
+- [36:47] La edición de la proforma
+- [36:50] para poder
+- [36:51] volver a pasar por el flujo de aprobaciones
+- [36:54] Y esa es mi duda
+- [36:55] ¿se va a ocupar el mismo flujo
+- [36:58] de aprobaciones?
+- [37:00] Porque
+- [37:00] Yo creo que el flujo
+- [37:03] en aprobaciones
+- [37:05] Vais a tener que definir
+- [37:06] Si son un tipo de aprobación
+- [37:09] Cuando sea por orden de compra
+- [37:11] O pro forma
+- [37:12] Exacto
+- [37:14] Que cada grupo tenga
+- [37:15] Como la opción de
+- [37:17] Estar en uno o en los dos
+- [37:20] No, no, deberíamos
+- [37:23] Dejarnos separados
+- [37:24] Uno al otro
+- [37:25] Por ejemplo, si es el grupo de aprobación
+- [37:28] Es para una pro forma, perfecto
+- [37:30] O es para una orden de compra
+- [37:33] Pero no puede ser
+- [37:34] Para ambos
+- [37:35] Vale, justo había
+- [37:37] Te acordás que en la reunión había fallado cuando
+- [37:39] El Mario solicitó que le mostraran las aprobaciones
+- [37:42] Ahí ya le hice un ajuste
+- [37:44] Quedó bastante fácil de asociarlo
+- [37:46] Y ya con esto
+- [37:47] Es agregarle el tipo nomás
+- [37:49] El tipo que se aplique, el orden de compra va a quedar igual
+- [37:52] Cuando sea
+- [37:53] Proforma se debería aplicar a este nomás
+- [37:56] Claro
+- [37:59] Ya, vamos
+- [38:01] Voy a construir eso entonces hoy día
+- [38:04] Si
+- [38:05] Igual les responde la María Jesús
+- [38:08] Que
+- [38:08] Que nos quedó bastante claro
+- [38:11] Apenas
+- [38:12] Pues a ver si nos
+- [38:13] Les vamos a enviar un
+- [38:14] Un flujo
+- [38:15] Como que si yo
+- [38:16] Pasarlo como un digital
+- [38:17] Y
+- [38:19] Y se los mandaría en el grupo
+- [38:21] Vale
+- [38:23] Va a responder al tipo
+- [38:24] ¿Qué?
+- [38:25] ¿Qué va a decir?
+- [38:29] Lo tengo
+- [38:30] Tengo un matador de unido
+- [38:31] Dale digital
+- [38:33] Dale más
+- [38:33] Vale
+- [38:35] Oye
+- [38:36] Ahora terminando esto
+- [38:38] Carlos, pasémoselo
+- [38:40] Tiro al Diego
+- [38:41] Para que llegue con esto para el jueves
+- [38:43] Vale, igual
+- [38:47] Alcancé a grabar toda la reunión, tengo las transcripciones
+- [38:50] El Diego ocupa las transcripciones con el cursor
+- [38:52] Cuando tiene dudas, así que yo creo que va a quedar
+- [38:54] Va a quedar listo
+- [38:56] Sí, pero igual
+- [38:58] Mándaselo y por último yo junto con el Diego
+- [39:01] Vale
+- [39:02] Vale, vale
+- [39:04] Ya Carlos, hablamos
+- [39:07] Hablamos, chucho
+- [39:08] Ah, Sergio, lo que te decía
+- [39:22] Yo ahora
+- [39:23] Para dejarle toda la info pasada lista al Diego
+- [39:26] Para que pueda trabajar, voy a generar el flujo
+- [39:28] De aprobaciones
+- [39:30] De
+- [39:31] Las pro formas
+- [39:33] Para que el Diego pueda tomarse de eso y trabajar
+- [39:35] Lo voy a hacer durante la tarde para que el compa pueda avanzar
+- [39:38] Harto en la pega
+- [39:39] Eso porque hablamos de la lluvia

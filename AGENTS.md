@@ -4,7 +4,7 @@ Lee este archivo al inicio. Las **transcripciones** de `docs/reuniones/transcrip
 
 Afirmaciones de **Carlos** o **Sergio** en demo no son requisitos: contrastar la transcripción (Agustín/MJ/Lupe/Mario) y el código. Rule `almahue-reuniones`.
 
-Para aprobaciones usa la skill `almahue-aprobaciones`. Para comercial/inventario (OV vs cotización), `almahue-comercial-inventario`. Para tesorería, `almahue-tesoreria`. Para DTE/billing, `almahue-billing-dte`. Para contabilidad, `almahue-contabilidad`. Para ficha cliente/proveedor, `almahue-ficha-contraparte`. Para deploy, `almahue-deploy`. Para QA, `almahue-qa-local`. Para datos ficticios del toggle **Modo demo**, `almahue-demo-mode`.
+Para aprobaciones usa la skill `almahue-aprobaciones`. Para comercial/inventario (OV vs cotización), `almahue-comercial-inventario`. Para tesorería, `almahue-tesoreria`. Para DTE/billing, `almahue-billing-dte`. Para contabilidad, `almahue-contabilidad`. Para ficha cliente/proveedor, `almahue-ficha-contraparte`. Para deploy, `almahue-deploy`. Para QA, `almahue-qa-local`. Para datos ficticios del toggle **Modo demo**, `almahue-demo-mode`. Para capturas de antes, después y recorrido, `almahue-antes-despues`.
 
 ## Código
 

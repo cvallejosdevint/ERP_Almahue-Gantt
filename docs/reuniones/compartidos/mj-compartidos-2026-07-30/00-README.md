@@ -14,7 +14,7 @@
 | `Conta_Libro_MayorDolarExcel_….xlsx` | Libro mayor | Referencia mayor multi-moneda (USD) |
 | `Balance8Columnas_Excel_….xlsx` | Balance | Validar UI Balance 8 columnas (R4-15) |
 | `06-CARTOLA_JUNIO_2026.xls` | Excel cartolas | Tesorería: calce / parsers (hojas ALM CLP, Scotiabank, USD, Yuan…) |
-| `ReportePorTipomovExcel_(7).xlsx` | Extra (no listado explícito) | Tipo de movimiento CC / aging — útil tesorería |
+| `ReportePorTipomovExcel_(7).xlsx` | Informe por movimiento de bodega (Trello) | Insumos: artículo, bodega, cantidad y precio. No es aging. |
 
 ## Extractos (texto/buscable)
 

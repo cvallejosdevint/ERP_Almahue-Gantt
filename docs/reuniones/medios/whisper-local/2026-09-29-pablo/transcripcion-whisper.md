@@ -1,0 +1,91 @@
+# Reunion con Pablo 2026-09-29
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Screen Recording 2026-09-29 120758.mp4
+No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.
+
+- [01:03] ¿Qué tal, Carlos? ¿Cómo estás?
+- [01:05] Hola, Pablo. Bien, ¿y tú? Buenas tardes.
+- [01:07] Todo bien, todo bien.
+- [01:09] Qué bueno.
+- [01:11] ¿Hoy se nos suma María Jesús o no?
+- [01:16] Creo que todavía está de vacaciones porque hasta la semana pasada todavía no estaba participando en las reuniones.
+- [01:24] Está, de hecho, como desconocido. No tiene estado.
+- [01:28] Sí, parece que todavía está de vacaciones.
+- [01:42] De hecho, en el grupo de WhatsApp que tenemos tampoco ha visto los mensajes, así que me imagino que debe estar ahí todavía libre.
+- [01:54] Bueno, igual de todas formas Pablo, ahí recibimos la documentación, ahora venía de una reunión donde le estaba dando las directrices al chico que está viendo el tema de los rechazos que todavía hemos solicitado, así que teniendo información de él, ahí cualquier cosita te estaría hablando, pero de momento todavía lo estamos implementando.
+- [02:17] y ahí, claro, efectivamente está en la documentación
+- [02:20] lo que tú nos comentabas, están los testigos de rechazo
+- [02:22] así que con eso podríamos avanzar
+- [02:23] Sí, hay una
+- [02:25] hay un cuadro que de hecho
+- [02:27] por eso me demoré en pasarle la documentación
+- [02:30] que yo lo hice yo, que son las consideraciones
+- [02:32] está en la hoja
+- [02:33] creo que en la tercera hoja
+- [02:35] sí, en la tercera hoja, donde salen las
+- [02:37] manitos para arriba y para abajo
+- [02:38] que esa es, en este caso
+- [02:41] cómo ustedes tienen que
+- [02:43] generar los acuses, ¿bien? porque
+- [02:45] por ejemplo, tú no puedes generar
+- [02:47] una cosa de rechazo inmediatamente tiene que haber una cosa primero a una cosa comercial
+- [02:53] para luego pasar a la cosa de rechazo o sea esto va por pasos perfecto bien entonces por
+- [02:59] ejemplo también si generas una acuse de recibo del dt una rr tú después no puedes colocar un
+- [03:06] rechazo entonces tienen que seguir ese proceso yo solo dejé bien estipulado ahí con él con las
+- [03:13] manitos para que lo puedan ahí para que lo puedan seguir bien pero
+- [03:18] suben en cuenta eso si no van a tener rechazos también del servicio
+- [03:24] lo más probable es que el servicio sigue enviando un estado que no corresponde a
+- [03:29] un estado que se superpone a otro el servicio les va a decir que el acuse no
+- [03:34] es válido y le va a rechazar el acuse perfecto bien para que lo tengan en
+- [03:41] cuenta igual de todas formas cualquier cosa igual me avisa bien si perfecto de hecho ahí como ya
+- [03:48] bueno intenté crearme la cuenta de microsoft pero con el correo del trabajo pero nos tienen más que
+- [03:53] bloqueado la creación así que ese que me cree el que te está hablando es mi personal así que
+- [03:57] cualquier cosita de molesto por eso si de hecho estaba viendo por qué te iba a mandar el correo
+- [04:04] y estaba el otro correo entonces dije a unos gmail no va a acordar que tiene el correo email pero
+- [04:10] igual eso y súper súper ojo el acd que es la aceptación del contenido del documento bien
+- [04:19] como dice en abajito que también les puse es se debe entender sólo como un acto de fe ya no es
+- [04:27] como la aceptación como tal perfecto ya es como ok recibido documento lo voy a revisar y te respondo
+- [04:34] con el siguiente acuse es como una cosa así ya que perfecto entonces para que no lo tomen porque
+- [04:42] muchas veces nos ha pasado de que cuando estamos en la implementación es el acd lo toman como la
+- [04:48] aceptación y no es así la aceptación final es el arr el recibo del dt de hecho pasa primero por el
+- [04:55] el ERM y después por el ARM
+- [04:57] perfecto
+- [05:00] claro, y va como encascada
+- [05:01] por lo que tú decías, primero ACD
+- [05:03] después ERM y después ARR
+- [05:05] claro, ahí tienes
+- [05:07] dos caminos, cuando es una aceptación del
+- [05:09] documento es el ACD
+- [05:10] después pasa el ERM, que es la
+- [05:13] recepción de mercadería
+- [05:15] y después el ARR
+- [05:17] en este caso
+- [05:18] de rechazo sería
+- [05:21] ACD o RCD
+- [05:23] O en el caso de que falte parcialmente algo
+- [05:28] Va el RFP o el RFT
+- [05:31] Perfecto
+- [05:33] Ah, y me queda mucho más claro
+- [05:34] Que igual le voy a pasar esta información de manera verbal al chico
+- [05:37] Para que no tengamos esta confusión
+- [05:39] Sí, igual donde dice basado en esto
+- [05:42] Y según lo que establece el ESI
+- [05:44] Ahí yo les dejo como unos ejemplos
+- [05:45] Para que puedan ver qué es lo que pueden hacer
+- [05:47] Y qué es lo que no pueden hacer
+- [05:48] Bien
+- [05:49] Perfecto
+- [05:51] Por ejemplo, si ya generan un ACD, que es un acuse comercial de que aceptan el contenido del documento, ustedes no pueden informar un RCD, porque los dos están como al mismo, están horizontalmente, son, tienen el mismo valor.
+- [06:07] Entonces, si lo aceptan, tienen que seguir con el RM o el acuse del recibo del ARR.
+- [06:14] Perfecto, perfecto.
+- [06:16] ¿Vale?
+- [06:19] Listo, Pablo. Me queda súper claro.
+- [06:21] Así que bueno, ahí voy a estar atento, Carlos
+- [06:24] Cualquier cosita me avisan
+- [06:26] Ya, cualquier cosita te mando un mensaje
+- [06:28] Vale, compadre
+- [06:30] Vale, Pablo, te pasaste, que tengamos buena tarde
+- [06:32] Igual, que estés bien
+- [06:34] Chau, chau

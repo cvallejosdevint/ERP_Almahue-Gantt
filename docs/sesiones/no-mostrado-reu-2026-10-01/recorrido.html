@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lo que no se mostró el 1 de octubre.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "1. Integrantes",
+        img: "../reu-2026-10-01-tres-ajustes/despues-integrantes.png",
+        alt: "Grupo de compras con los integrantes marcados a la vista, sin guardar",
+        pins: [
+          { x: 50, y: 45.8, t: "Integrantes", d: "Administración, grupos de aprobación. Elena, Felipe y Natalia quedan a la vista aunque la búsqueda diga Andres. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "2. Cadena de compras",
+        img: "../sinergia-permisos-cadena-2026-10-02/despues-reglas.png",
+        alt: "Reglas de aprobación sin selector de módulo y sin guardar",
+        pins: [
+          { x: 39, y: 27.4, t: "Sin selector de concepto", d: "Parametrización, reglas de aprobación. Antes el combo solo ofrecía Compras (OC). Hoy la cadena es de compras y el combo salió. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "3. El usuario hereda el rol",
+        img: "../sinergia-permisos-cadena-2026-10-02/despues-usuario.png",
+        alt: "Usuario Andres Pino abierto, sin recuadros y sin guardar",
+        pins: [
+          { x: 49.2, y: 50.8, t: "Aviso bajo el rol", d: "Administración, usuarios, Andres Pino. Tiene el rol Ventas. Ese rol no abre Compras, así que no aparece en la cadena. No se apretó Guardar usuario." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "4. El grupo filtra por Compras",
+        img: "../sinergia-permisos-cadena-2026-10-02/despues-cadena.png",
+        alt: "Grupo Compras packing export abierto, sin recuadros y sin guardar",
+        pins: [
+          { x: 62.1, y: 51.3, t: "Aviso del grupo", d: "El grupo de la cadena. Elena, Felipe y Natalia siguen porque su rol entra a Compras. Andres Pino queda deshabilitado. No se apretó Guardar grupo." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "5. Lista única",
+        img: "../aprobaciones-proforma-2026-10-06/despues-grupos-unificados.png",
+        alt: "Una tabla de grupos con tipo y contadores, sin recuadros",
+        pins: [
+          { x: 92.3, y: 23.7, t: "Filtro Tipo", d: "Configurar, Grupos. Un combo: Todos, Órdenes de compra o Proformas." },
+          { x: 66.0, y: 70.1, t: "Sin grupo de OC", d: "Contador ámbar. Abre Usuarios con sinGrupo=Compras. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "6. Filtro de tipo",
+        img: "../aprobaciones-proforma-2026-10-06/despues-filtro-tipo.png",
+        alt: "Combo Tipo abierto con Todos, Órdenes de compra y Proformas",
+        pins: [
+          { x: 92.3, y: 33.6, t: "Órdenes de compra o Proformas", d: "El combo está abierto. No se cambió. No se apretó Aplicar filtros." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "7. Piso de 500.000",
+        img: "../aprobaciones-proforma-2026-10-06/despues-reglas-piso.png",
+        alt: "Mapa de OC con Felipe Castro a partir de 500.000",
+        pins: [
+          { x: 40.7, y: 38.2, t: "Piso de Felipe", d: "Entra si el monto es mayor o igual a 500.000. Una OC de 100.000 no le pide este escalón. No se envió una OC." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "8. Simulador bajo el piso",
+        img: "../aprobaciones-proforma-2026-10-06/despues-simulador.png",
+        alt: "Simulador con 100.000 y bajo_umbral",
+        pins: [
+          { x: 79.1, y: 44.0, t: "bajo_umbral", d: "Grupo Compras - packing export, 100.000. No pide aprobación. No se envió una OC. No se guardó." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "9. Alta de grupo",
+        img: "../aprobaciones-proforma-2026-10-06/despues-grupo-nuevo.png",
+        alt: "Nuevo grupo con tipo abierto e integrantes primero, sin guardar",
+        pins: [
+          { x: 49.7, y: 24.9, t: "Tipo", d: "Un solo alta. El tipo se elige acá. Está abierto." },
+          { x: 49.7, y: 56.0, t: "Integrantes primero", d: "Elena Rojas y Felipe Castro están marcados. Se apretó Cancelar. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Aprobaciones", cls: "param",
+        title: "10. Suplencia por tipo",
+        img: "../aprobaciones-proforma-2026-10-06/despues-suplencia.png",
+        alt: "Nueva suplencia con tipo, grupos, rol y suplente, sin guardar",
+        pins: [
+          { x: 50.0, y: 28.4, t: "Tipo", d: "Primero el tipo. De ahí salen los grupos." },
+          { x: 50.0, y: 36.6, t: "Grupos donde está activo", d: "Con Órdenes de compra aparece Compras - packing export. Se apretó Cancelar. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "11. Ficha por RUT",
+        img: "../reu-2026-10-01-tres-ajustes/despues-ficha.png",
+        alt: "Nuevo proveedor con la marca de cliente, sin guardar",
+        pins: [
+          { x: 32.9, y: 30.8, t: "También es cliente", d: "Parametrización, proveedores, nuevo. El RUT 77.032.639-7 ya es el cliente ALM SERVICES SPA. No se apretó Guardar ficha." }
+        ]
+      },
+      {
+        mod: "Indicadores", cls: "param",
+        title: "12. Euro y yuan",
+        img: "../felipe-indicadores-bc-2026-10-05/despues-indicadores.png",
+        alt: "Tarjeta de tipo de cambio con euro y yuan, sin sincronizar",
+        pins: [
+          { x: 36, y: 27, t: "Otras paridades", d: "Parametrización, Indicadores BC. Euro 1.098,15 y yuan 143,79, del histórico ya cargado. No se apretó Sincronizar ni Importar." }
+        ]
+      },
+      {
+        mod: "Indicadores", cls: "param",
+        title: "13. UF en la tarjeta",
+        img: "../felipe-indicadores-bc-2026-10-05/despues-indicadores-uf.png",
+        alt: "Indicadores BC con UF, euro y yuan, sin sincronizar",
+        pins: [
+          { x: 37.8, y: 31.0, t: "UF, euro y yuan", d: "Otras paridades ya no son solo euro y yuan: UF 41.098,15. No se apretó Sincronizar Hoy." },
+          { x: 54.0, y: 94.7, t: "Fila UF", d: "La tabla histórica lista UF Unidad de Fomento el 2026-10-06. No se apretó Consultar ahora." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "14. Comprobante",
+        img: "../reu-2026-10-01-tres-ajustes/despues-comprobante.png",
+        alt: "Asiento 20260034 con IVA débito, dólar y yuan, sin contabilizar",
+        pins: [
+          { x: 14.6, y: 71.2, t: "IVA débito", d: "Contabilidad, el asiento. La línea sigue guardada en CAJA. La pantalla muestra la cuenta 2-1-09-02-001 IVA débito fiscal. No se contabilizó." },
+          { x: 80, y: 62.6, t: "Dólar y yuan", d: "Pesos divididos por el tipo de cambio del Banco Central. No se imprimió." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "15. Dónde se abre la revaluación",
+        img: "antes-revaluacion.png",
+        alt: "Períodos contables con el botón Revaluar TC, sin abrir el cierre",
+        pins: [
+          { x: 78, y: 44.1, t: "Revaluar TC", d: "Contabilidad, Períodos contables. El botón está en cada período abierto. El dólar y el euro de cierre salen de los indicadores. En esta foto no se contabilizó." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "16. Cierre en dólar y euro",
+        img: "despues-revaluacion.png",
+        alt: "Modal de revaluación de cierre, sin contabilizar",
+        pins: [
+          { x: 49.6, y: 24.9, t: "TC cierre dólar", d: "Sale del Banco Central para la fecha de corte del período. En 2026-10 es 984,82. El modal simula al abrirse. No se apretó Contabilizar Revaluación." },
+          { x: 71.2, y: 24.9, t: "TC cierre euro", d: "La otra paridad de cierre, 1.108,4074. El botón verde de abajo contabiliza: no se apretó. Se cerró con Cancelar." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "17. Engranaje y Match OC",
+        img: "../jose-libro-compras-2026-10-05/despues-libro.png",
+        alt: "Libro de compras con el engranaje y la columna Match OC, sin recuadros",
+        pins: [
+          { x: 94.9, y: 14.1, t: "Engranaje", d: "Compras, Libro de compras. Esta pantalla es de José, del 5 de octubre, y no está en la rama local. El engranaje abre la programación. No se apretó Sincronizar." },
+          { x: 58.9, y: 75.1, t: "Columna Match OC", d: "Compara la factura con la OC. Si queda en alerta, la aceptación no se habilita. No se contabilizó." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "18. Programar el sync",
+        img: "../jose-libro-compras-2026-10-05/despues-sync.png",
+        alt: "Modal de sync programado con el combo Modo abierto, sin guardar",
+        pins: [
+          { x: 50, y: 65.8, t: "Modo, abierto", d: "Manual deja el sync en la mano. Automático lo corre en el horario y la frecuencia. No se eligió Automático." },
+          { x: 50, y: 71.2, t: "Alcance", d: "Mes en curso, o el periodo abierto. No se cambió." },
+          { x: 62.8, y: 80.2, t: "Guardar, no apretar", d: "Guardar persiste la programación. En la demo se cierra con Cancelar." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "19. Dónde se abre la aceptación",
+        img: "../jose-libro-compras-2026-10-05/despues-pendiente.png",
+        alt: "Pestaña Pendientes, botón de aceptar apagado, sin asociar OC",
+        pins: [
+          { x: 60, y: 45.4, t: "Aviso de Pendientes", d: "La pestaña Pendientes. La factura 61 tiene proveedor y no tiene OC, por eso el botón sigue apagado." },
+          { x: 92.1, y: 80.9, t: "Check de aceptar", d: "En Acciones, el check verde abre el modal solo si la fila ya tiene proveedor y OC. Hay que desplazar la grilla a la derecha. No se apretó Asociar orden de compra." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "20. Un evento por vez",
+        img: "../jose-libro-compras-2026-10-05/despues-aceptacion.png",
+        alt: "Modal de aceptación con el combo Modo abierto, sin enviar el evento",
+        pins: [
+          { x: 49.6, y: 50.7, t: "Eventos informados", d: "Acá se listan ACD, ERM y ARR. En la 61 no hay ninguno. No se envió un evento." },
+          { x: 49.6, y: 77.5, t: "Modo, abierto", d: "El camino es ACD (30), luego ERM (32), luego ARR (33). El reclamo de mercadería queda apagado hasta el acuse. No se eligió." },
+          { x: 60.2, y: 91.7, t: "Informar ACD, no apretar", d: "Ese botón manda el evento a GoSocket. En la demo se cierra con Cancelar." }
+        ]
+      }
+    ];
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>
