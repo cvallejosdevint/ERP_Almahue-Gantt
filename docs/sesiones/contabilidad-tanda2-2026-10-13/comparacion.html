@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Contabilidad tanda 2 - antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contabilidad tanda 2 - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-10, ERP local, 13/10/2026. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra.</p>
+    <p>Recorrido con el origen de cada dato: <a href="recorrido.html">recorrido.html</a>. Tanda anterior: <a href="../tesoreria-tanda1-2026-10-13/comparacion.html">tesorería tanda 1</a>.</p>
+  </header>
+
+  <section>
+    <h2>Contabilidad › Reportes contables</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-resumen-contable.png" alt="Resumen con 2 asientos del mes y dos tarjetas sin destino" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-resumen-contable-marcado.png" alt="Resumen con 6 asientos del mes y tres reportes con Ver" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Asientos del mes decía 2 y la base tiene 6 contabilizados en 2026-10. Ahora cuenta los asientos contabilizados del periodo de la sesión.</li>
+      <li>Las tarjetas son los reportes que existen: Balance de 8 columnas, Libro diario y Mayor por cuenta. Ver abre cada uno. Si debe y haber no cuadran en el periodo, la pantalla lo avisa.</li>
+      <li>No se apretó Exportar Excel ni Ver.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contabilidad › Balance de 8 columnas</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-balance-8-columnas.png" alt="Balance con sumas del mes e inventario sin cuadrar" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-balance-8-columnas-marcado.png" alt="Balance con sumas acumuladas y recuadro Utilidad del ejercicio" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Antes las sumas eran solo del mes y los saldos acumulados, así que no calzaban: Banco Chile $ mostraba sumas $0 / $979.000 y saldo deudor $89.778.294. Ahora las sumas son acumuladas al cierre del periodo (las cuentas de resultado desde enero) y cada saldo sale de sus sumas.</li>
+      <li>Inventario no cuadraba ($92.679.914 contra $91.207.724). La diferencia era el resultado del ejercicio: $1.692.090 de ganancia menos $219.900 de pérdida = $1.472.190. Ahora aparece como recuadro Utilidad del ejercicio y como fila al final, y el inventario cuadra.</li>
+      <li>Los asientos anulados entran junto con su reversa, así que suman cero (MJ, Reu2: la reversa es «la contrapartida para que la contabilidad me dé 0»).</li>
+      <li>No se apretó Exportar Excel/CSV.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Balance de 8 columnas, página 3: fila del resultado</h2>
+    <div class="pair">
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-balance-8-columnas-resultado-marcado.png" alt="Última página del balance con la fila Utilidad del ejercicio" />
+      </figure>
+    </div>
+    <p class="nota">Sin antes: la fila no existía. «Utilidad del ejercicio» lleva $1.472.190 a Inventario pasivo y a Resultado pérdida, y así las dos parejas de columnas cuadran. También va en el Excel. Solo se usó Siguiente para cambiar de página.</p>
+  </section>
+
+  <section>
+    <h2>Contabilidad › Libro mayor</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-libro-mayor.png" alt="Mayor sin saldo inicial e ingresos en la columna Pasivo" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-libro-mayor-marcado.png" alt="Mayor con columna Saldo inicial y columnas Pérdida y Ganancia" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Antes Caja mostraba debe $979.000 y saldo deudor $889.718, sin explicar la diferencia. La columna nueva Saldo inicial ($89.282 A) la explica: es lo arrastrado desde antes del mes. Las cuentas de resultado arrancan en enero.</li>
+      <li>Las cuentas de ingreso quedaban en la columna Pasivo. Ahora Activo y Pasivo son de las cuentas de balance, y Pérdida y Ganancia de las de resultado, igual que en el balance (MJ, Reu4: «saldo deudor, acreedor, sea activo, pasivo, gasto, ingreso»).</li>
+      <li>No se apretó Exportar Excel/CSV ni se cambió de cuenta.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contabilidad › Asientos / comprobantes</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-asientos.png" alt="Lista con Anular / reversar también en los asientos de venta" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-asientos-marcado.png" alt="Los asientos de venta ya no muestran Anular / reversar" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Los dos asientos de venta (origen <code>DOC:</code>) ya no ofrecen Anular / reversar. Anularlos desde Contabilidad dejaba la factura viva en el libro de ventas, en el estado de cuenta y en el aging. En su detalle sale el motivo: se corrige con nota de crédito en Emitir DTE (MJ, Reu4: en el libro de ventas nada queda anulado, se corrige con NC). Lo mismo vale para el cierre de contratistas (<code>TRASPASO-CTR:</code>), que se reabre en Contratistas. La API también lo rechaza.</li>
+      <li>Al anular un asiento de compra, la factura vuelve a Ingresada y se descuentan su cuenta corriente y su aging. Si ya tiene pagos, no deja anular. La reversa lleva la fecha del original.</li>
+      <li>No se anuló nada para la foto. El detalle de la venta se abrió con Ver y se cerró: <a href="despues-asientos-venta-detalle.png">detalle del asiento 20260041</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Compras › Libro de compras › Contabilizar</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes (lista)</figcaption>
+        <img src="antes-libro-compras.png" alt="Libro de compras antes de la tanda" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después (vista previa del asiento)</figcaption>
+        <img src="despues-libro-compras-contabilizar-marcado.png" alt="Vista previa del asiento de la factura 54 con IVA crédito fiscal" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>El asiento de compra iba gasto contra Proveedores por el neto, sin IVA: el crédito fiscal no se registraba y Proveedores quedaba $1.900 corto. Ahora lleva IVA crédito fiscal (1-1-09-01-001) al debe y Proveedores por el total (R1: «pongo ya el neto que son 1000 y el IVA que son 190»). Una factura exenta no lleva IVA y Proveedores va por el neto. Lo mismo aplica a la centralización de compras.</li>
+      <li>El asiento toma la fecha del documento, no la del día en que se contabiliza.</li>
+      <li>No se apretó «Aceptar y contabilizar». Para que se abriera el modal, la factura 54 se asoció un momento a la OC-2026-0014 y después se dejó como estaba, Ingresada y sin OC.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pantallas sin cambio visible</h2>
+    <ul class="nota">
+      <li>Libro diario (<a href="antes-libro-diario.png">antes</a>, <a href="despues-libro-diario.png">después</a>): se ve igual. Ahora incluye los anulados junto con su reversa, que suman cero. En 2026-10 no hay anulados, por eso no cambia.</li>
+      <li>Traspaso contratistas (<a href="antes-traspaso-contratistas.png">antes</a>, <a href="despues-traspaso-contratistas.png">después</a>): se ve igual. Un traspaso anulado ya no bloquea volver a traspasar, y la vista previa también toma las proformas enviadas y facturadas, no solo las definitivas.</li>
+      <li>Periodos contables (<a href="antes-periodos.png">antes</a>, <a href="despues-periodos.png">después</a>): sin cambios en esta tanda.</li>
+      <li>Libro de compras, lista (<a href="antes-libro-compras.png">antes</a>, <a href="despues-libro-compras.png">después</a>): se ve igual. El cambio está en el asiento que genera, mostrado arriba.</li>
+      <li>Libro de ventas (<a href="antes-libro-ventas.png">antes</a>, <a href="despues-libro-ventas.png">después</a>): sin cambios. Una venta contabilizada se sigue corrigiendo con nota de crédito desde Emitir DTE, y por eso Contabilidad ya no la anula.</li>
+    </ul>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if ((event.key === "ArrowRight" || event.key === "ArrowLeft") && pares[par].length > 1) { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>

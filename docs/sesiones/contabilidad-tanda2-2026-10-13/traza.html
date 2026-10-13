@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Traza hasta los libros</title>
+  <style>
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.5rem; margin: 0 0 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    p { margin: 0 0 12px; color: #57534e; }
+    section { margin: 28px auto; }
+    img { display: block; width: 100%; height: auto; border: 1px solid #e7e5e4; border-radius: 10px; margin: 0 0 12px; background: #fff; }
+    a { color: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Traza hasta el diario y el mayor</h1>
+    <p>ALMAHUE EXPORT SPA. Octubre 2026, salvo la cartola, que está en septiembre. El periodo de trabajo quedó de vuelta en octubre.</p>
+    <p>Recorrido por pestañas: <a href="recorrido-muestra.html">recorrido-muestra.html</a>.</p>
+  </header>
+
+  <section>
+    <h2>Venta. Orden, libro, diario</h2>
+    <p>Las órdenes 101606909139 y 101606909138, a ALM SERVICES SPA, están facturadas. En el diario de octubre salen como clientes, ingreso e IVA débito. Asientos 20260040 y 20260041.</p>
+    <img src="traza-ventas-ov.png" alt="Ordenes de venta facturadas" />
+    <img src="traza-ventas-libro.png" alt="Libro de ventas contabilizado" />
+    <img src="traza-ventas-diario.png" alt="Diario filtrado por la factura de octubre" />
+  </section>
+
+  <section>
+    <h2>Compra. Libro y diario</h2>
+    <p>Las facturas 51, 59, 60 y 61 están en el diario. El asiento es tipo COMPRAS, pero las líneas siguen en Caja y Banco Chile, no en Proveedores ni en IVA crédito.</p>
+    <img src="traza-compras-libro.png" alt="Libro de compras" />
+    <img src="traza-compras-diario.png" alt="Diario filtrado por registro de compra" />
+  </section>
+
+  <section>
+    <h2>Comprobante manual y su reversa</h2>
+    <p>Se creó el 20260042: Mutuos $1.000 contra Provisiones varias $1.000. Después se anuló. El 20260043 es la reversa, origen REVERSA:20260042, misma fecha. En el mayor el efecto neto es cero.</p>
+    <img src="traza-manual-diario.png" alt="Diario del comprobante manual antes de anular" />
+    <img src="traza-reversa-asientos.png" alt="Lista con el manual anulado y la reversa" />
+    <img src="traza-reversa-diario.png" alt="Diario de la reversa" />
+  </section>
+
+  <section>
+    <h2>Mayor y balance de octubre</h2>
+    <p>En el mayor se ven juntos la compra (Caja), la venta (Clientes) y el manual (Mutuos $1.000, antes de la reversa). El balance es el de después de la reversa.</p>
+    <img src="traza-mayor-octubre.png" alt="Libro mayor de octubre" />
+    <img src="traza-balance.png" alt="Balance de 8 columnas de octubre" />
+  </section>
+
+  <section>
+    <h2>Cartola. Septiembre</h2>
+    <p>Hay tres asientos CARTOLA en septiembre. El diario filtrado muestra banco contra la contrapartida. No se contabilizó una línea nueva. El periodo volvió a octubre después de estas fotos.</p>
+    <img src="traza-cartola.png" alt="Cartolas" />
+    <img src="traza-cartola-asientos.png" alt="Asientos de septiembre" />
+    <img src="traza-cartola-diario.png" alt="Diario de septiembre filtrado por cartola" />
+    <img src="traza-cartola-mayor.png" alt="Mayor de septiembre" />
+  </section>
+
+  <section>
+    <h2>Cierre de contratistas. No hay asiento</h2>
+    <p>La vista previa de octubre omite el traspaso: no hay proformas en estado definitiva o facturada. No se apretó Traspasar. Por eso no existe TRASPASO-CTR ni CENTRALIZA en esta empresa. Ventas y compras ya no se centralizan por esta pantalla: van al libro de ventas y al de compras.</p>
+    <img src="traza-centralizacion.png" alt="Vista previa del traspaso sin pendientes" />
+    <img src="traza-contratistas.png" alt="Cierre de contratistas sin proformas elegibles" />
+  </section>
+
+  <section>
+    <h2>Revaluación. Calculada, no contabilizada</h2>
+    <p>La simulación de octubre propone una ganancia de $25.987.659.941 sobre 29 partidas. No se apretó Contabilizar revaluación. No hay asiento REVALUACION_TC.</p>
+    <img src="traza-revaluacion.png" alt="Simulación de revaluación sin contabilizar" />
+  </section>
+</body>
+</html>
