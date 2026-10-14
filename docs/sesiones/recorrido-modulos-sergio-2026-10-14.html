@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido para Sergio - 14/10/2026</title>
+  <style>
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    main { max-width: 980px; margin: 0 auto; padding: 28px 32px 64px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+    h3 { font-size: 1rem; margin: 18px 0 6px; }
+    p, li { color: #44403c; }
+    a { color: #1d4ed8; }
+    ol.pasos > li { margin: 6px 0; }
+    table { width: 100%; border-collapse: collapse; background: #fff; margin: 8px 0 4px; }
+    th, td { border: 1px solid #e7e5e4; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #e7e5e4; }
+    .alto { background: #fef3c7; }
+    .ruta { font-family: Consolas, monospace; font-size: 0.92rem; }
+    .nota { background: #fff; border: 1px solid #e7e5e4; border-radius: 8px; padding: 10px 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Recorrido para Sergio, 14 de octubre</h1>
+  <p>Empresa <strong>ALMAHUE EXPORT SPA</strong>, periodo del menú <strong>2026-10</strong>, modo real. Entra en <span class="ruta">http://localhost:5174</span> con <span class="ruta">admin@almahue.local</span> / <span class="ruta">Admin123!</span> solo si la sesión no está abierta.</p>
+  <p>El orden sigue lo que Sergio pidió ver el 13/10: compra y venta con su asiento, contratistas (Diego), asignación de orden y de proforma, y el correo. Cada alta usa maestros que ya existen. La fila en amarillo es el botón que escribe el registro. El resto se mira y no se confirma.</p>
+
+  <h2>Orden del relato</h2>
+  <ol class="pasos">
+    <li>Compras: alta de una orden nueva y, al lado, la cadena que ya está contabilizada.</li>
+    <li>Ventas: alta de una orden nueva y, al lado, la 101606909139 con su asiento.</li>
+    <li>Contabilidad: comprobantes de octubre, sin crear uno a mano.</li>
+    <li>Contratistas: ingreso nuevo, proforma nueva, y la 00001 que ya está notificada.</li>
+    <li>Insumos: la madre OC-2026-0016 y el cierre de bodega, sin cerrar el mes.</li>
+  </ol>
+
+  <h2>1. Orden de compra nueva</h2>
+  <p>Menú <strong>Compras</strong> &gt; <strong>Órdenes de compra</strong>. Arriba a la derecha, botón <strong>Nueva</strong>. Abre <span class="ruta">/compras/ordenes/nueva</span>.</p>
+  <h3>Paso 1. Datos generales y proveedor</h3>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Proveedor</td><td>Insumos Packing Sur SpA</td><td>RUT 76.210.100-9. No uses Agrícola Los Naranjos: esa es la madre OC-2026-0016.</td></tr>
+      <tr><td>Giro, dirección, comuna, ciudad</td><td>Los deja la ficha</td><td>No se escriben.</td></tr>
+      <tr><td>Condición de pago</td><td>30 días</td><td>Si la ficha trae otro plazo, déjalo.</td></tr>
+      <tr><td>Fecha</td><td>2026-10-14</td><td>Dentro del periodo abierto.</td></tr>
+      <tr><td>Moneda</td><td>CLP</td><td></td></tr>
+      <tr><td>Afecto / Exento</td><td>Afecto</td><td></td></tr>
+      <tr><td>Departamento</td><td>Lo resuelve el grupo Compras</td><td>No se elige.</td></tr>
+    </tbody>
+  </table>
+  <h3>Paso 2. Ítems</h3>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Descripción</td><td>Cajas packing cereza</td><td>Texto libre. El maestro de artículos tiene un solo producto, la cereza, y esta línea es de embalaje.</td></tr>
+      <tr><td>Centro de costo</td><td>1002 · VENTA EXPORTACIÓN CEREZAS</td><td>El mismo de la hija OC-2026-0017.</td></tr>
+      <tr><td>Cuenta contable</td><td>6-1-01-02-004 · COSTO MATERIALES DE EMBALAJE</td><td>Pide centro de costo. No uses 1-1-01-02-001 BANCO CHILE: esa cuenta quedó en la hija vieja y no es un gasto.</td></tr>
+      <tr><td>Cantidad</td><td>10</td><td></td></tr>
+      <tr><td>Precio unitario</td><td>4800</td><td>Neto $48.000, el mismo monto de la hija 0017, con otro proveedor.</td></tr>
+    </tbody>
+  </table>
+  <h3>Paso 3. Referencia</h3>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Tipo, folio y fecha de referencia</td><td>Vacíos</td><td>La cotización es opcional. No hay un folio real para esta orden.</td></tr>
+    </tbody>
+  </table>
+  <p class="nota">Para dejar el registro: <strong>Guardar borrador</strong>. No aprietes <strong>Enviar a aprobación</strong>. El borrador no entra a la bandeja.</p>
+
+  <h2>2. La compra que ya está contabilizada</h2>
+  <p>No se crea nada. Sirve para mostrar el origen real, porque la orden nueva todavía no tiene factura.</p>
+  <ol>
+    <li>Compras &gt; Libro de compras. Fila <strong>61</strong>, ALM SERVICES, neto $9.500, contabilizada. El XML dice sin OC.</li>
+    <li>Contabilidad &gt; Comprobantes / asientos. Asiento <strong>20260039</strong>, glosa Registro compra 61, $11.305.</li>
+  </ol>
+  <p>OC-2026-0017 está en borrador y no es esa factura. No aprietes Contabilizar ni Asociar.</p>
+
+  <h2>3. Orden de venta nueva</h2>
+  <p>Menú <strong>Ventas</strong> &gt; <strong>Órdenes de venta</strong>. Botón <strong>Nueva orden</strong>. Abre el asistente de venta en modo orden, no en emitir DTE.</p>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Cliente</td><td>Frutas del Sur SpA</td><td>RUT 76.888.901-5. ALM SERVICES y Pacific Fruit ya tienen órdenes en octubre.</td></tr>
+      <tr><td>Razón social, giro, dirección, comuna, ciudad</td><td>Los deja la ficha</td><td>No se escriben.</td></tr>
+      <tr><td>Forma de pago</td><td>Crédito</td><td></td></tr>
+      <tr><td>Fecha de emisión</td><td>2026-10-14</td><td></td></tr>
+      <tr><td>Fecha vencimiento</td><td>La que calcule el plazo del cliente</td><td>Si queda vacía y el formulario la exige, 2026-11-13.</td></tr>
+      <tr><td>Indicador de venta</td><td>Venta</td><td>No elijas Exportación: eso abre puertos, bultos y cláusula, y este cliente no es el de la orden de exportación.</td></tr>
+      <tr><td>Artículo</td><td>EX-CEREZA-CAJ · Cereza export caja 5 kg</td><td>Es el único artículo del maestro.</td></tr>
+      <tr><td>Bodega</td><td>Frigorifico export (FRIG)</td><td>Ahí está el stock de la cereza. La otra bodega es bodega principal (BDGCER).</td></tr>
+      <tr><td>Cantidad</td><td>1</td><td>El stock del artículo es 8.760 cajas.</td></tr>
+      <tr><td>Precio unitario</td><td>1850</td><td>El maestro no tiene precio de compra. El piso de venta es el costo promedio, $1.850. Un precio menor lo rechaza.</td></tr>
+    </tbody>
+  </table>
+  <p class="nota">Para dejar el registro: <strong>Guardar</strong>. La orden queda confirmada y descuenta 1 caja en Frigorifico export. No abras Emitir DTE y no contabilices.</p>
+
+  <h2>4. La venta que ya está contabilizada</h2>
+  <ol>
+    <li>Ventas &gt; Órdenes de venta. Fila <strong>101606909139</strong>, ALM SERVICES, 09-10-2026, $2.202, Facturada.</li>
+    <li>Ventas &gt; Libro de ventas. Folio <strong>92</strong>, neto $1.850. El total del asiento es neto más IVA, $2.202. La 101606909138 es el folio 91, $24.217.</li>
+    <li>Contabilidad &gt; Comprobantes / asientos. <strong>20260041</strong>, tipo VENTAS, glosa FACTURA 10, TC 979.85, $2.202. El 20260040 es el de la 138.</li>
+  </ol>
+
+  <h2>5. Contabilidad, sin alta</h2>
+  <p>No hay botón de comprobante nuevo en este relato. Sergio dijo que la contabilización de compra y de venta ya está: se muestra con los dos asientos de arriba.</p>
+  <table>
+    <thead><tr><th>Pantalla</th><th>Qué abrir</th><th>Qué no apretar</th></tr></thead>
+    <tbody>
+      <tr><td>Comprobantes / asientos</td><td>20260041 y 20260039</td><td>No crear, no anular, no imprimir si no hace falta.</td></tr>
+      <tr><td>Estado de resultados</td><td>Octubre. Utilidad $1.472.190</td><td>No cambies el periodo.</td></tr>
+      <tr><td>Situación financiera</td><td>Activo y pasivo $92.679.914</td><td>No cambies el periodo.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6. Ingreso de contratista nuevo</h2>
+  <p>Menú <strong>Contratistas</strong> &gt; <strong>Ingreso diario</strong>. Botón <strong>Nuevo ingreso</strong>.</p>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Fecha</td><td>2026-10-14</td><td>El ingreso que ya existe es del 06-10, 8 jornadas, $9.600, pendiente.</td></tr>
+      <tr><td>Contratista / empresa</td><td>Cuadrillas Packing Export Ltda</td><td>Código CTR-00001. Es el único contratista activo.</td></tr>
+      <tr><td>Cuartel / centro de costo</td><td>1002 · VENTA EXPORTACIÓN CEREZAS</td><td>El mismo del ingreso del 06-10.</td></tr>
+      <tr><td>Labor</td><td>PACK-CER · Packing cereza export</td><td>Única labor.</td></tr>
+      <tr><td>Actividad</td><td>SEL-CER · Seleccion y embalaje cereza</td><td>Única actividad. Aparece después de elegir la labor.</td></tr>
+      <tr><td>Tipo</td><td>Jornada</td><td></td></tr>
+      <tr><td>Cantidad</td><td>8</td><td>Igual que el ingreso del 06-10.</td></tr>
+      <tr><td>Precio unitario</td><td>Déjalo como lo traiga el formulario</td><td>El ingreso del 06-10 usó $1.200. Si el campo queda vacío, escribe 1200. No cambies el precio: el motivo de override solo hace falta si difiere de la tarifa.</td></tr>
+      <tr><td>Predio, temporada, sector, faena</td><td>Vacíos</td><td>Son opcionales. Sectores y faenas no tienen filas.</td></tr>
+      <tr><td>Supervisor</td><td>Vacío</td><td>La aprobación es al cerrar la proforma.</td></tr>
+      <tr><td>Motivo de override</td><td>Vacío</td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="nota">El botón del modal que confirma es <strong>Crear</strong>. Con eso el ingreso queda pendiente y se puede tomar en la proforma de octubre.</p>
+
+  <h2>7. Proforma nueva</h2>
+  <p>Contratistas &gt; <strong>Proformas y facturas</strong>. Botón <strong>Nueva proforma</strong>.</p>
+  <table>
+    <thead><tr><th>Campo</th><th>Elegir</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Contratista</td><td>Cuadrillas Packing Export Ltda</td><td></td></tr>
+      <tr><td>Período contable</td><td>2026-10</td><td>Viene del menú. No lo cambies a 2026-09: ahí está la 00001.</td></tr>
+      <tr><td>Moneda</td><td>CLP</td><td></td></tr>
+      <tr><td>Ingresos</td><td>2026-10-14 · Packing cereza export / Seleccion y embalaje cereza · 8 · $9.600</td><td>Es el ingreso del paso 6, si lo creaste. Si no, el pendiente del 06-10 es el mismo texto con fecha 2026-10-06.</td></tr>
+    </tbody>
+  </table>
+  <p class="nota">Confirma el alta y detente. No pases la proforma a definitiva, no aprietes Notificar contratista, PDF, E-mail ni Facturar. La 00001 ya está notificada al contratista, periodo 2026-09, $175.000: esa se muestra, no se vuelve a notificar.</p>
+
+  <h2>8. Lo que se muestra y no se crea</h2>
+  <table>
+    <thead><tr><th>Tema</th><th>Dónde hacer clic</th><th>Qué decir</th></tr></thead>
+    <tbody>
+      <tr><td>Orden madre</td><td>Compras &gt; Órdenes de compra</td><td>OC-2026-0016, Agrícola Los Naranjos, $32.000, está en el mismo listado. Al abrirla, el panel dice Madre / hijas. La hija OC-2026-0017 dice Hija de #OC-2026-0016 y sigue en borrador. No hay pantalla aparte en Insumos.</td></tr>
+      <tr><td>Cierre de bodega</td><td>Insumos / Bodega &gt; Cierre de bodega</td><td>Octubre, salida venta $22.200. Las cuentas van vacías a propósito. No cierres el mes.</td></tr>
+      <tr><td>Correo</td><td>Administración &gt; Configuración de correos</td><td>Se muestra la pantalla. No envíes un correo.</td></tr>
+      <tr><td>Guías de insumos</td><td>No abras el menú</td><td>Esta empresa no recibe insumos con guía. La pantalla dice eso y el ítem puede estar oculto.</td></tr>
+    </tbody>
+  </table>
+
+  <p>Índice de las comparaciones: <a href="indice-recorridos-2026-10-13.html">indice-recorridos-2026-10-13.html</a>. Fotos de la cadena ya contabilizada: <a href="recorrido-contabilizacion-2026-10-13.html">recorrido de contabilización</a>.</p>
+</main>
+</body>
+</html>

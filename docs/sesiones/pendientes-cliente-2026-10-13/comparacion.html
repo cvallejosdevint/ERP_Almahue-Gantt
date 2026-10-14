@@ -35,7 +35,8 @@
 <body>
   <header>
     <h1>Pendientes del cliente - antes y después</h1>
-    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-10. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. No se descargó el Excel, no se eligió un archivo, no se aprobó ni se cerró ninguna orden. La guía toma el precio de la orden aprobada del mismo proveedor y, si no hay orden, el del maestro: esta sociedad no tiene la pantalla de guías prendida, así que ese cambio no tiene foto. Al reversar una venta, si el aging no trae el id del documento, se busca por folio. Tampoco se reversó un documento para la foto.</p>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-10. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. No se descargó el Excel del flujo ni se aprobó una orden. La guía toma el precio de la orden aprobada del mismo proveedor y, si no hay orden, el del maestro. Esta sociedad no tiene la pantalla de guías prendida, así que ese cambio no tiene foto. Al reversar una venta, si el aging no trae el id del documento, se busca por folio. No se reversó un documento para la foto.</p>
+    <p>Dos pantallas que se habían armado en esta pasada no quedan. El Excel de cajas se nombró para la devolución de IVA (con qué factura se compró y qué cantidad) y el archivo no llegó, así que no hay pantalla. El anticipo productor es un tipo de pago en Pagos, no una lista aparte. El índice de los recorridos está en <a href="../indice-recorridos-2026-10-13.html">indice-recorridos-2026-10-13.html</a>.</p>
   </header>
 
   <section>
@@ -50,22 +51,7 @@
         <img src="despues-flujo-marcado.png" alt="Flujo de caja con Descargar Excel marcado" />
       </figure>
     </div>
-    <p class="nota">Descargar Excel baja la misma vista. Si está marcada la opción de pesos, el archivo sale en pesos con el tipo del Banco Central. Si falta el tipo, la moneda queda como está. Los saldos por banco siguen en su moneda. No se apretó el botón.</p>
-  </section>
-
-  <section>
-    <h2>Anticipos</h2>
-    <div class="pair">
-      <figure class="antes">
-        <figcaption>Antes</figcaption>
-        <img src="antes-anticipos.png" alt="La ruta de anticipos caía en Pagos" />
-      </figure>
-      <figure class="despues">
-        <figcaption>Después</figcaption>
-        <img src="despues-anticipos-marcado.png" alt="Lista de anticipos leída desde Pagos" />
-      </figure>
-    </div>
-    <p class="nota">La lista lee Pagos de tipo Anticipo y Anticipo productor. El alta sigue en Pagos. Esta pantalla no crea otro anticipo. En octubre no hay filas de ese tipo. No se registró un pago.</p>
+    <p class="nota">Octubre no tiene movimientos de cartola, por eso la grilla sale vacía. El botón baja esa misma vista. Con la marca de pesos usa el tipo del Banco Central. Los saldos por banco siguen en su moneda. No se apretó el botón. Los asientos reales del mes están en el recorrido de contabilización.</p>
   </section>
 
   <section>
@@ -96,21 +82,6 @@
       </figure>
     </div>
     <p class="nota">Insumos, Órdenes madre, muestra OC-2026-0016 y su hija OC-2026-0017. La pantalla no aprueba ni cierra saldo. No se apretó ninguna acción sobre la orden.</p>
-  </section>
-
-  <section>
-    <h2>Excel de cajas</h2>
-    <div class="pair">
-      <figure class="antes">
-        <figcaption>Antes</figcaption>
-        <img src="antes-guias.png" alt="Insumos no tenía pantalla de Excel de cajas" />
-      </figure>
-      <figure class="despues">
-        <figcaption>Después</figcaption>
-        <img src="despues-cajas-marcado.png" alt="Pantalla nueva para cargar el Excel de cajas" />
-      </figure>
-    </div>
-    <p class="nota">La pantalla es nueva. Guarda la primera hoja del periodo y no contabiliza ni mueve stock. En octubre no hay archivo. No se eligió ninguno.</p>
   </section>
 
   <div class="visor" id="visor" hidden>
