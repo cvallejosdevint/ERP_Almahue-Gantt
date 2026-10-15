@@ -1,0 +1,31 @@
+{
+  "version": "2026-10-13",
+  "nota": "Solo grafias que el ASR parte o deforma. No sustituye chilenismos correctos (pega, po, luca). Las reglas se aplican en orden: la mas especifica va primero. forceCase=literal deja el reemplazo tal cual; preserve copia la mayuscula inicial.",
+  "rules": [
+    {"id": "cacha-y", "pattern": "\\bcacha\\s+y\\b", "replacement": "cachái", "flags": "i", "forceCase": "preserve"},
+    {"id": "cachay", "pattern": "\\bcachay\\b", "replacement": "cachái", "flags": "i", "forceCase": "preserve"},
+    {"id": "cachai", "pattern": "\\bcachai\\b", "replacement": "cachái", "flags": "i", "forceCase": "preserve"},
+    {"id": "altiro", "pattern": "\\baltiro\\b", "replacement": "al tiro", "flags": "i", "forceCase": "preserve"},
+    {"id": "weones", "pattern": "\\bweones\\b", "replacement": "huevones", "flags": "i", "forceCase": "preserve"},
+    {"id": "weon", "pattern": "\\bwe[oó]n\\b", "replacement": "huevón", "flags": "i", "forceCase": "preserve"},
+    {"id": "huevon", "pattern": "\\bhuevon\\b", "replacement": "huevón", "flags": "i", "forceCase": "preserve"},
+    {"id": "wn", "pattern": "\\bwn\\b", "replacement": "huevón", "flags": "", "forceCase": "literal"},
+    {"id": "qlao", "pattern": "\\bqlao\\b", "replacement": "culiao", "flags": "i", "forceCase": "preserve"},
+    {"id": "qliao", "pattern": "\\bqliao\\b", "replacement": "culiao", "flags": "i", "forceCase": "preserve"},
+    {"id": "pa-apostrofe", "pattern": "\\bpa'(?=\\s|$|[,.;:])", "replacement": "para", "flags": "i", "forceCase": "preserve"},
+    {"id": "pa", "pattern": "\\bpa\\b(?!')", "replacement": "para", "flags": "i", "forceCase": "preserve"},
+    {"id": "pal", "pattern": "\\bpal\\b", "replacement": "para el", "flags": "i", "forceCase": "preserve"},
+    {"id": "toy", "pattern": "\\btoy\\b", "replacement": "estoy", "flags": "i", "forceCase": "preserve"},
+    {"id": "ta-bueno", "pattern": "\\bta\\s+bueno\\b", "replacement": "está bueno", "flags": "i", "forceCase": "preserve"},
+    {"id": "participio-ao", "pattern": "\\b(pes|cans|compr|entreg|pas|lleg|cont|cerr|pag|cobr|factur|aprob|rechaz|guard|envi)ao\\b", "replacement": "\\1ado", "flags": "i", "forceCase": "preserve"},
+    {"id": "bacan", "pattern": "\\bbacan\\b", "replacement": "bacán", "flags": "i", "forceCase": "preserve"},
+    {"id": "gosocket", "pattern": "\\bgo\\s*socket\\b", "replacement": "GoSocket", "flags": "i", "forceCase": "literal"},
+    {"id": "agrosoft", "pattern": "\\bagro\\s*soft\\b", "replacement": "Agrosoft", "flags": "i", "forceCase": "literal"},
+    {"id": "agrisoft", "pattern": "\\bagri\\s*soft\\b", "replacement": "Agrosoft", "flags": "i", "forceCase": "literal"},
+    {"id": "almaweb", "pattern": "\\balma\\s*web\\b", "replacement": "AlmaWeb", "flags": "i", "forceCase": "literal"},
+    {"id": "almahue", "pattern": "\\balma\\s*hue\\b", "replacement": "Almahue", "flags": "i", "forceCase": "literal"},
+    {"id": "nota-credito", "pattern": "\\bnota de credito\\b", "replacement": "nota de crédito", "flags": "i", "forceCase": "preserve"},
+    {"id": "nota-debito", "pattern": "\\bnota de debito\\b", "replacement": "nota de débito", "flags": "i", "forceCase": "preserve"},
+    {"id": "guias", "pattern": "\\bguias de despacho\\b", "replacement": "guías de despacho", "flags": "i", "forceCase": "preserve"}
+  ]
+}

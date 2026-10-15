@@ -1,0 +1,74 @@
+# GoSocket y Almahue 2026-10-13 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-10-13 121345.mp4
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:31] Carlos, ¿qué tal? ¿Cómo estás?
+- [00:33] Hola, buenas tardes.
+- [00:35] Hola, buenas tardes.
+- [00:37] ¿Qué tal el fin de semana?
+- [00:39] Bien, bien, muy bien por acá. ¿Y ustedes cómo están?
+- [00:41] Todo bien, todo bien.
+- [00:43] Por acá estamos en auditoría, así que ha sido intenso.
+- [00:47] Oh, me imagino.
+- [00:49] Bueno, estimados, más que nada es para ver si es que en este caso tienen dudas, consultas respecto al proceso, ¿bien?
+- [01:04] Y ver un poquito cómo vamos con el tema de avance del desarrollo del proyecto. Bien, así que Carlos, ahí tú nos puedes comentar.
+- [01:15] Sí, mira, con respecto a nuestra parte, estábamos viendo lo que vendría a ser el tema de las proformas que se tienen que asociar a documentos, así que de momento no tendríamos ninguna duda y todavía tenemos pendiente el tema de enviarte los casos de uso que nos habías solicitado.
+- [01:31] Todavía no los tengo disponibles para poder enviártelos, pero una vez teniéndolos, te lo envío de inmediato.
+- [01:37] Ya, ¿tú crees que podamos tener eso esta semana como el plan de pruebas?
+- [01:43] Sí, sí, sí, yo creo que sí. Yo creo que, mira, hoy es martes, yo creo que más tardar jueves, viernes, siendo bien pesimista, ya lo tendría listo.
+- [01:52] Ya, buenísima. Y bueno, una duda, Carlos, tú que estás en el tema del desarrollo, ustedes están considerando la resolución 154 para la guía de despacho, ¿cierto?
+- [02:07] Sí, sí, la estamos considerando. De hecho, es parte de lo que también se tiene como desarrollo pendiente.
+- [02:13] Ok. Ya, perfecto. Ya, perfecto. Una vez que me entreguen el plan de pruebas, ya con todo configurado, ¿cierto? Yo voy a poder avanzar, en este caso, con las representaciones gráficas. No sé si han probado ahora el método del GetDocumentPDF para obtener PDFs. Yo lo habilité, pero lo habilité con un estándar, para que más que nada probaran que está descargando la información. ¿Eso lo han podido realizar?
+- [02:41] Sí, sí, estamos obteniendo tanto los PDF como los XML.
+- [02:47] Ya, perfecto.
+- [02:49] Perfecto, entonces estamos avanzando bastante bien, la verdad.
+- [02:53] Estamos avanzando bastante bien.
+- [02:57] Ya, bien, por tema de desarrollo, entonces, espero hasta esta semana, ya, para yo comenzar con mi parte, y ahí yo creo que con María Jesús nos vamos a juntar mucho más seguido para poder ir viendo el tema de lo que es la representación gráfica.
+- [03:11] Perfecto, ningún problema.
+- [03:13] Bien, bueno, María, ¿usted tiene alguna duda por ahora? ¿Alguna duda, consulta?
+- [03:24] No, al menos Cristian ya me respondió el correo y quedamos de juntarnos en el área legal para ver los detalles del contrato.
+- [03:32] Ya, buenísimo. Sí, sí, algo por ahí estuve leyendo de que ya le respondió, yo internamente también hice algunos movimientos para que esto se agilizara un poco.
+- [03:43] Bien, así que bueno, quedamos entonces a la espera de la firma del contrato ya para poder avanzar. Tenemos pendiente dos puntos importantes, María Jesús, la capacitación del portal, ¿cierto? Para que lo puedan utilizar y también una, bueno, en realidad más que capacitación es una inducción, ¿bien?
+- [04:04] Y también una inducción para el uso de Iofacturo.
+- [04:10] Bien, una vez que tengamos el contrato, hacemos la inducción, la habilitación y ya van a poder operar inmediatamente en Iofacturo.
+- [04:19] Ya, perfecto.
+- [04:22] Ya, así que, bueno, por el momento esos serían los puntos.
+- [04:25] Quedo atento, Carlos, a las pruebas y ya con eso vamos a poder avanzar en lo que son los PDF y las representaciones de grafía.
+- [04:34] Perfecto.
+- [04:35] Bien, así que eso sería por el momento, estimado.
+- [05:07] Bueno, el sistema de contratistas nos surgió la duda porque tenemos entendido que las proformas también van a ir asociados directamente a un DTE como lo vendrían a ser las órdenes de compra, ¿verdad?
+- [05:22] Sí.
+- [05:22] Mi duda es, las proformas, la asociación, ¿se debería hacer directamente con el DTE en el libro de compras? Porque nosotros habíamos estipulado que cuando las proformas ya estuvieran listas, se hiciera la asociación en el libro de compras, como ahí va a ser la recepción de documentos, hacerla directamente desde ahí.
+- [05:44] ¿Eso estaría correcto o tendría que tener un submódulo de contratistas que también pueda hacer esta asociación?
+- [05:50] O sea, la idea es que en el módulo de contratistas uno igual pueda visualizar las proformas que están pendientes y las que están aprobadas.
+- [05:59] Claro, claro, eso las tenemos, pero mi duda va más allá en dónde hacer la asociación del DTE.
+- [06:05] No, la asociación del DTE hay que hacerla en el módulo de compra.
+- [06:08] Perfecto. Y la otra duda también que teníamos, porque en el libro de compras se van a recibir todos los documentos que vayan facturándoles y ahí uno va a hacer la asociación ya sea a órdenes de compra o a proformas.
+- [06:21] Vamos a tener como la opción de seleccionar uno de esos dos. Pero lo que nos queda pendiente es dónde realizar la asignación de las cuentas contables.
+- [06:30] Lo que pasa es que en ambos módulos se tiene que hacer la asignación de cuentas contables porque en cada módulo independiente, sea contratistas, ventas, compras, va a ir al gasto o costo contra facturas por recibir.
+- [06:49] Perfecto, entonces mira, como pensándolo bien, la asociación debería hacerse directamente en contratistas al momento de tener la proforma aprobada, ¿verdad?
+- [07:00] Sí, la asociación de contratista en el, es que, si quiero asociar la proforma a la factura en el módulo de compras.
+- [07:11] Exacto.
+- [07:11] Pero si yo quiero imputar el costo en el módulo de contratista.
+- [07:16] Perfecto. En ese caso, por ejemplo, se podría hacer independiente si se haya asociado todavía al documento, ¿verdad? Cosa de que...
+- [07:23] Exacto.
+- [07:24] Perfecto. Entonces, por ejemplo, en el libro...
+- [07:26] Soy independiente.
+- [07:26] En el libro de compras, ¿te podría decir el dato si es que ya tiene o no tiene las cuentas contables y también poder editar ese dato o eso solamente desde el módulo de contratistas para que la información pase ya con las cuentas al módulo de compras?
+- [07:40] No, sí, solo en el módulo de contratistas, porque en el módulo de contratistas, a final de mes, cuando yo cierre mes, se va a hacer una centralización y en esa centralización se reconoce el costo de contratistas contra las facturas por recibir.
+- [07:55] Contratista. Y en el módulo de compras, cuando yo asocie la proforma a la factura, se va a hacer el calce de facturas por recibir contra el nombre del contratista que yo estoy calzando.
+- [08:11] Perfecto, ahí me queda más clara la película. Entonces se tendría que pasar directamente esos datos desde contratista y en el módulo de compras solamente hacer la asociación del DTE.
+- [08:21] Exacto.
+- [08:21] Perfecto. Y también, como te dije, en el módulo de compras, en el libro de compras, ¿se tendría que ver si es que esa información ya está asociada?
+- [08:30] O, por ejemplo, ¿solamente pueden pasar para asociar los DTE los que ya tienen las cuentas asociadas?
+- [08:40] Claro. Lo que pasa es que una vez que la proforma esté aprobada en el módulo de contratista, se va a reconocer el costo en el mes.
+- [08:49] Entonces, esas sí o sí deberían estar pendientes de asociación en el módulo de compra.
+- [08:54] En el módulo de compra tienen que aparecer las que estén aprobadas versus las facturas que lleguen.
+- [09:03] Perfecto, perfecto. Pues Mari, vamos entonces a tomar esto en consideración y a construirlo para ver si es que lo alcanzamos a tener listo para la muestra de mañana.
+- [09:14] Ya, buenísimo.
+- [09:17] Perfecto. Ya Mari, te dejo para no quitarte más tiempo y hay cualquier cosita, por último, si es que tengo más dudas, te la mando por interno o por WhatsApp.
+- [09:24] Sí, ningún problema.
+- [09:25] Ya, pues Mari, que les vaya bien con la auditoría. Gracias. Buenas tardes, chao, chao. Igual, chao.

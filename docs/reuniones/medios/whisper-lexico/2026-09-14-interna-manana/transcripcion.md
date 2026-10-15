@@ -1,0 +1,377 @@
+# 2026-09-14-interna-manana (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-14-interna-manana\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:01] No separes modismos.
+- [00:33] No, así me desregulo en la mañana, empieza el otro Carlos a hablar y se pone pesada la wea.
+- [00:39] El otro Carlos, jejeje.
+- [00:41] Carlos Zapodera.
+- [00:42] Yo era, yo era, Patricio.
+- [00:43] El Spider más malo.
+- [00:45] Estás como fragmentado, eh.
+- [00:47] ¿Eh, sí?
+- [00:48] Sí, sí.
+- [00:48] Como fragmentado.
+- [00:50] Sábado tuve que ir al urológo y otra cosa, entonces uno va entendiendo más por dónde va la cosilla.
+- [00:57] Bueno, lo bueno es que vais teniendo una guía también de cómo tenerla en margen. Mientras vais conociendo más, más estáis conociendo también.
+- [01:05] Y trabajando, por ejemplo, ahora en la mañana me costó. Tuve que tomar ejercicio, hacer ejercicio de respiración, hacer como una estaguar de meditación.
+- [01:15] Y ahí como que me revoló un poco y lo estaba haciendo todo bien temprano porque estoy esta semana con mi hija, entonces tengo que estar bien.
+- [01:25] Ah, ¿estás de vacaciones igual o no?
+- [01:27] Sí, y me toca con ella hasta el jueves.
+- [01:31] Buenísimo. Ahí tenés que regargar esta energía.
+- [01:33] Yes, ahí hay que aprovechar.
+- [01:35] Y el fin de semana igual me distendí, me distraje, me voy a distraer un poco.
+- [01:39] Así que igual viene ahí, viene ahí.
+- [01:43] Buena, buena.
+- [01:45] Oye, Carlos, yo te decía que el Mario mandó la agenda a las 4 o 4.30.
+- [01:51] No, no. Si estaba esperando a que me confirmaran y mandaba la reunión, pues por qué no.
+- [01:55] Ah, este huevón puso, ok, agendado, huevón.
+- [01:58] Ah, no, pero agendado para ellos, po.
+- [02:02] Ah, ya, ya, vale.
+- [02:03] Bueno, ahí cuando la manden me tenéis que agregar, po.
+- [02:08] Yes, yes.
+- [02:09] Ya, ya muchachos, oye.
+- [02:11] Pasen la cortina porque el José tiene que salir y el Diego está con más pega que mala carga.
+- [02:18] El Carlos, bueno, la idea es que el Carlos va a presentar hoy día.
+- [02:24] Tenemos reunión de cuatro y media, cinco y media con la gente de AlmaWeb. Entonces, queríamos ver si ustedes tienen algunas dudas de los puntos que tomaron para poder levantarlos en la reunión. Mi idea es que ustedes le hagan la entrega al Carlos y el Carlos la entrega al cliente. Una, para que estemos al cien por ciento al tanto de lo que vamos, o lo que estamos entregando, el avance, porque nosotros vamos a viajar en la primera semana de octubre para ir a AlmaWeb.
+- [02:51] Entonces, esta semana ustedes saben que es una semana cortita, ya después que harían dos semanas para cerrar, y la tercera o cuarta semana estaríamos ya en Almagua.
+- [03:05] Entonces, no sé si tienen algunas dudas de lo que lograron ver, avance.
+- [03:09] Mira, yo por lo menos ayer me puse a clonar los repositorios, levanté el local, me puse a leer la documentación de GoSocket, que es una documentación gigantesca, son como un PDF de 90 páginas.
+- [03:29] Ah, pero tienes que irte a los puntos de los documentos.
+- [03:32] No, sí, sí. No, sí, pero es que también necesito, por ejemplo, APIs de aceptación de documentos y cosas así.
+- [03:38] Sí.
+- [03:39] Entonces, igual me puse, estuve buscando harto. Y tampoco es que esté muy ordenado como por categoría en el documento.
+- [03:49] ¿Te diste cuenta que, por ejemplo, GoSocket es una empresa que se dedica solamente al rubro de la facturación histórica y está casi todo en Latinoamérica?
+- [03:56] Sí, caché que tenía en varios países. De hecho, ahí tienen como las banderitas en la documentación.
+- [04:00] ¿Qué hacemos? Colombia, Costa Rica, Huelca, Paraguay, están casi todos lados. Y solamente facturación electrónica.
+- [04:10] Entonces, ahí me estuve entreteniendo harto, leyendo y viendo harto.
+- [04:14] Y igual, por lo menos, el front del libro de compra lo voy a tener que cambiar, sí.
+- [04:19] Ahora, pensando en que lo quieres hacer así como algo, como de temite, que sea como sencillo de navegar entre los pendientes aceptados o rechazados.
+- [04:28] Sí.
+- [04:30] Y lo otro que tenía dudas, era, igual había anotado un par de cosas, no sé, vos querís mostrar el XML, porque caché que la documentación de, según la documentación de GoSocket, las APIs te devuelven el XML del documento.
+- [04:46] Sí.
+- [04:48] Ya.
+- [04:48] Todo, todo lo posible que se pueda obtener desde allá, hay que mostrarlo en el RPA AlmaWeb.
+- [04:55] Ya, consulta. ¿Quieres que gatille el llamado GoSocket cada vez que entra al libro de compra?
+- [05:03] O sea, el Carlos lo que tiene, tiene por cada registro en ventas, para actualizar estado, cada registro tiene un actualizar, cachái, que ahí gatille la llamada.
+- [05:17] Entonces podríamos hacer como...
+- [05:19] Cada registro te refiere a un documento.
+- [05:22] Sí, cada documento.
+- [05:52] Sincronización de compra. Aceptado, pendiente, rechazado.
+- [05:58] Ya, ya, tengo que ver. No, GoSocket nos pone dramas por tanto llamado, la cantidad de llamados a la API, ¿cierto?
+- [06:07] No.
+- [06:11] Ya, ok. Entonces asumo que esa sincronización tiene que ser para los tres tipos de documentos.
+- [06:18] Sí.
+- [06:21] Para los tres estados.
+- [06:23] Claro.
+- [06:25] Oye, me interesa, Carlos, ¿tú cacháis más o menos de lo que estamos hablando de los estados de los documentos recibidos?
+- [06:32] Me imagino que es el estado como... no es el del servicio de impuestos internos si es que lo recibió o no, ¿verdad?
+- [06:41] No, no, no, no, no. Los estados, por ejemplo, todos los documentos que a ti te emiten, ¿ya? Que tú recibes como empresa, pasan primeramente a un estado, sí a un estado que es pendiente, ¿ya?
+- [06:55] Ese estado pendiente es para que tú dentro de ocho días tú puedas aceptar o reclamar ese documento, ¿ya?
+- [07:04] Eso es lo que se habló en un momento de que se pudiera configurar para que se aceptaran automáticamente esos documentos, ¿no?
+- [07:11] Sí, sí, eso es, eso es, ya.
+- [07:14] Pero como de momento vamos a dejarnos con los tres estados que trabaja el servicio puesto interno,
+- [07:20] Bueno, que son los pendientes, primero pasan los pendientes, después si tú aceptas el documento, ahí recién lo puedes como contabilizar y ahí pasan los documentos aceptados, que es como tu libro de compras, ¿ya? Y si tú lo rechazas, pasan los documentos rechazados.
+- [07:43] Oye, y en base a lo que dice el Carlos, eso automático, aceptación automática, ¿hay que poner una regla igual de aceptación?
+- [07:50] Aún no, aún no, no nos metamos ahí todavía.
+- [07:53] Ya.
+- [07:53] Pero sería un poquito como lo que se hizo en el Demiter de la automatización.
+- [08:00] Ya, sí, sí, eso mismo estaba acordando.
+- [08:05] Ya, entonces, la otra duda que tenía era la aceptación y el rechazo, pero si ya me dijiste que sí.
+- [08:11] Ahora caché que en el sistema manejan aprobaciones, tanto para compras como para ventas.
+- [08:15] No.
+- [08:16] ¿No?
+- [08:16] No.
+- [08:17] Solo para compras.
+- [08:18] ¿Solo para compras?
+- [08:19] Sí.
+- [08:19] Ya, entonces para compras, por ejemplo, si voy a aceptar o rechazar un documento, ¿tiene que pasar por la aprobación?
+- [08:27] De momento, como estaba, estaba la aprobación al momento de, antes de enviar el documento electrónico, pasaba por los aprobadores.
+- [08:38] No, no, pero esto es las compras, las compras tú...
+- [08:42] Ah, buen punto.
+- [08:44] Porque primero, antes de emitir el documento, te tienen que aprobar localmente.
+- [08:47] No, no, sí, sí, sí, pero viene la orden de compra, ¿cierto? La orden de compra, y si esa está aprobada, hay reciente facturada a tu proveedor, ¿no?
+- [09:03] Sí. Entonces, José, si la orden de compra está en proceso de, de cómo se llama, de aceptación, y te recibes una factura, la, la, recibes una factura, y con referenciando a una orden de compra que está en pendiente de aprobación, esa no podría aceptarse, no sé si lo explico.
+- [09:29] 7, 8, 7, 8.
+- [10:03] Ese flujo, esa regla.
+- [10:33] Lo que va a emitir hacia tu proveedor es una orden de compra, cachái. Entonces, tu proveedor teniendo esa orden de compra, él cuando te emita la factura hacia ti, va a referenciar esa orden de compra, cachái. ¿Se entiende?
+- [10:52] ¿Vale? Es como lo que vimos en las notas de crédito, ¿te acordás de la referencia? Sí, sí, sí. Ya, pero aquí tu proveedor te va a facturar referenciando esta orden de compra. Tú le dices, ya, oye, Juanito, factúrame tal cosa, pero tienes que referenciar la orden de compra número 40, ¿ya?
+- [11:17] Y después, cuando tú recibes esta orden de compra, por eso es importante, José, el EGML, porque necesitamos tener la referencia. Entonces, tú cuando recibes esta factura, lo que se va a hacer, se va a ir a los nodos del EGML, de obtener los datos de referencia, y va a decir, ah, ya, viene una orden de compra, sí.
+- [11:36] Y, ¿qué número es la orden de compra? La 40, ya. Voy a ver, ¿esta orden de compra existe? Sí, sí existe. Check. Entonces, ya, pero ¿está aprobada? ¿Pasó el flujo de aprobación? No, está pendiente. Ah, ok. Entonces la tengo que marcar como pendiente de aprobación. Pero no sé, si está aprobada, perfecto. Esta factura no tiene ningún problema pasar al documento aceptado. ¿Se entiende?
+- [12:00] Entonces, ¿sería primero tengo que tener el documento que me emitió el proveedor? Pues primero, de ahí parte...
+- [12:09] Sí, el José se va a encargar de eso. José se va a encargar de meter el documento al RP AlmaWeb. Lo va a traer desde GoSocket y lo va a meter acá.
+- [12:20] En ese caso, no sé si es que por ejemplo, cómo se debería ver con GoSocket, cómo se generaría ese documento externo en el sandbox, ahí no cacho.
+- [12:38] El Soundbox caché que te devuelve documentos de prueba.
+- [12:45] Ahora yo quería hacerlo en producción, pero por lo que caché tenéis que pedir credenciales de producción.
+- [12:50] No, no, no hay producción aquí, José.
+- [12:53] ¿No?
+- [12:54] No, no hay producción. Aquí todo lo que es el Soundbox de ellos, no.
+- [12:58] Y si queréis que carguen información, ellos lo van a hacer.
+- [13:03] Entonces, el José va a tener como, va a ser como un listado, se tiene que ingresar manual, se trae de GoSocket eso, ¿cierto? Esa información del documento.
+- [13:15] Sí, sí.
+- [13:16] Entonces, vamos a tener esta información que va a traer GoSocket, me imagino que eso debería listarse, ¿cierto? Aparecer en una lista visualmente.
+- [13:24] Sí, pues lo del libro de compra.
+- [13:26] Perfecto.
+- [13:27] Va a ser como el libro de venta, Carlos, con lo que hiciste tú, pero va a ser con los datos, la información que se obtiene desde GoSocket, y con los diferentes estados, pendiente, aceptado, rechazado.
+- [13:38] Vale, entonces ellos emiten el documento, a nosotros nos llega por GoSocket, nos va a aparecer en el libro de compras, y ahí debería acatillarse el sistema de las aprobaciones, cuando llegue.
+- [13:50] No, no, no, no, no, no, o sea, en sí, la orden de compra es un flujo previo, ese es un flujo, ahí sí el usuario, el usuario de AlmaWeb, de ERP, ellos van a tener que emitir esa orden de compra, la van a tener que registrar en el sistema, cachái.
+- [14:10] Vale, entonces, ahí por eso tiene que ser como la referencia del número, del indicador.
+- [14:18] De la orden de compra, claro. Tu proveedor te va a tener que referenciar esa orden de compra.
+- [14:22] Y después viene la vuelta, cachái. La vuelta es cuando tu proveedor te evita a ti la compra.
+- [14:27] Entonces, por ejemplo, como va a ordenar un poquito la casa, porque aquí voy a estar anotando,
+- [14:31] se origina desde el proveedor, eso lo obtenemos por GoSocket, desde la parte de AlmaWeb,
+- [14:37] ellos van a ir al libro de compras y ahí van a generar la orden de compra referenciando ese número.
+- [14:43] No, la orden de compra se emite antes, antes que te emitan la factura a tu proveedor. Por ejemplo, si tú me quieres vender, yo te quiero comprar algo a ti, ¿cierto? Y yo voy y tú me dices, es que este computador te lo vendo en un millón de pesos, Sergio. Ya, ok. Yo digo, espérame, porque yo para poder hacer ese gasto en la empresa, tengo que hacer una orden de compra. Y mi orden de compra va a pasar por el flujo de aprobación del José y el Diego, por nuestro ejemplo.
+- [15:13] Ya, yo en el sistema NRP emito la orden de compra, el José la aprueba, el Diego la aprueba, y ahí recién yo te mando la orden de compra a ti, Carlos, y tú recibes esa orden de compra como proveedor mío, y tú ahí recién me facturas referenciando esa orden de compra, cachái.
+- [15:31] Entonces, el proveedor viene, me quiere comprar, yo le digo ya, te voy a generar la orden de compra, se gatilla el sistema de aprobación y cuando ya está ahí, recién viene la parte de que se acepta del proveedor el documento.
+- [15:46] Sí, pues ahí recién debería pasar ya el flujo de que recibas esa factura.
+- [15:50] Entonces, ¿hasta ahí todavía no emitimos documento?
+- [15:53] Es que en compra no emites tu documento de compra electrónico, solo recibes.
+- [15:58] El único documento que vas a emitir es la orden de compra.
+- [16:01] ¿Y ese documento que yo recibo, lo apruebo, lo rechazo?
+- [16:06] Claro.
+- [16:08] Vale, entonces, sorry, necesito...
+- [16:11] No, no, está bien, está bien.
+- [16:12] Sería entonces...
+- [16:13] Hombre, yo creo que ya viendo, viendo, cuando José tenga listo compras, ahí te das cuenta cuál...
+- [16:19] Voy a entender mucho mejor cómo es el flujo.
+- [16:21] Sí, nada más.
+- [16:23] Vale, vale. Entonces, en resumidas cuentas, como tú me querís comprar, yo te hago la orden de compra,
+- [16:28] ¿Cómo me quieres vender? O sea, si yo te quiero comprar a ti, yo te hago una orden de compra a ti. Y tú me haces una factura de venta, que para mí es una factura recibida, ¿cachái?
+- [16:42] Sí, sí, perdón, perdón. Entonces, tú me quieres comprar, yo hago la orden de venta, ¿cierto? Pasa por el sistema de aprobación y una vez esté aprobado, tú me vas por GoSocket, me vas a emitir el documento, a mí me llega, lo asocio a esto que hicimos interno y ahí se acepta o se rechaza.
+- [17:05] Claro. Pero mira, yo creo que, hermano, para que no te parís tanto, esperemos que José tenga avanzado lo que es la recepción. Vale. Los recibidos. Vale, vale, vale. Entonces, José, bueno, José, las dudas que tenías tú, entonces, ¿no hay ninguna que levantar con AlmaWeb? O sea, la de Sandbox, lo de... ¿Quieren ver un PDF igual? ¿Asumo yo? Sí. Pero eso también está donde... GoSocket. Sí, sí, caché que tenían una API que devuelve el PDF.
+- [17:35] Sí.
+- [17:38] ¿Qué más? No, creo que no tengo más dudas.
+- [17:42] Ya, ok. Gracias, José.
+- [17:47] Diego, va con Diego.
+- [17:49] Ok.
+- [17:49] No sé si pudiste avanzar algo.
+- [17:51] También lo mismo, José, yo me quedé yendo, averiguando estas cosas y la verdad me salieron hartas dudas.
+- [17:56] Pero vamos a ir con las principales.
+- [17:58] Escucho súper bajo el Diego.
+- [18:01] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Se grita y grita!
+- [18:02] ¡Ah!
+- [18:04] ¿Estás bajo el agua?
+- [18:06] Estoy acostadito.
+- [18:07] Ya, me voy a subir.
+- [18:09] Lupe, Juan.
+- [18:11] ¿Me escuchan bien?
+- [18:13] Sí, mejor.
+- [18:13] Ahí sí.
+- [18:14] Ah, ya.
+- [18:15] Entonces, ¿cómo me va volando?
+- [18:17] Eh, eh.
+- [18:18] ¿Cómo estás, Mayer, Juan?
+- [18:20] Bien, a ver, hasta el 9.
+- [18:24] Consulta, dentro de tesorería, bueno, sabemos que tesorería es un mundo bastante amplio.
+- [18:29] Que también está en compra.
+- [18:30] Claro, por ejemplo, porque si me preguntan, o a mí me dicen tesorería, yo pienso hasta en multimoneda, no sé.
+- [18:40] ¿Cómo?
+- [18:41] O no, no sé qué necesitan realmente.
+- [18:44] Mira, de momento enfoquémonos en las cosas por pagar, ¿ya?
+- [18:52] Vale, solo con el pago.
+- [18:54] Sí, mira, no, pero pensemos en por pagar, que está relacionado con las compras.
+- [18:59] Y bueno, Carlos ya tenía harto avance ahí, que también va a estar enlazado con lo que sincroniza el José, porque ahí la fecha de vencimiento, José, es muy importante.
+- [19:11] La fecha de vencimiento de?
+- [19:14] Del documento recibido.
+- [19:17] Ya.
+- [19:18] Entonces, si el documento no viene con fecha de vencimiento, tenemos que ver la forma de asignarlo a una fecha de vencimiento.
+- [19:24] ¿Ya? ¿Por qué? Porque ellos, AlmaWeb, ¿cómo trabaja el tema de los pagos? Ellos, por ejemplo, programan los pagos por semana. ¿Cachái?
+- [19:35] ¿Ya?
+- [19:37] Entonces, dicen, no sé, la factura X la voy a pagar la primera, la semana 1 de septiembre. ¿Ya?
+- [19:45] Porque también esa factura venía con fecha de vencimiento. Venía con fecha de vencimiento de los primeros días de septiembre. ¿Ya?
+- [19:51] Pero ellos en tesorería, en lo que es por pagar, ellos tienen la opción, y eso ya lo implementó Carlos, que puedan mover de semana ese documento.
+- [20:06] Ya, sí.
+- [20:07] ¿Cómo modificar periodos?
+- [20:09] Claro, algo así, pero es por semana.
+- [20:14] Entonces, ¿ese Carlos ya estaba listo o faltaban algunos ajustes?
+- [20:19] ¿Ese ya estaba implementado? ¿Podía ir y retrasarlo a la semana que quisiera y de cualquier periodo de cualquier año?
+- [20:30] Ah, entonces, ¿qué va a tener que ver el Diego ahí en tesorería?
+- [20:37] Oye, pero ahí eso, tú puedes mover el documento.
+- [20:40] No.
+- [20:40] Sí, pero no cambian la fecha de vencimiento, ojo.
+- [20:44] No, claro.
+- [20:45] Modifica eso a nivel, es como compromiso de pago, por así decirlo.
+- [20:49] Eso es.
+- [20:50] Como que tú tienes la misma fecha del documento, pero ellos lo pagan desfasado y ahí lo atrasan, y por ejemplo, en esa parte de tesorería, tienen como una columna que les dice cuántos días está atrasado el documento, en caso de que lo hayan desplazado.
+- [21:05] Claro.
+- [21:10] Desplazado.
+- [21:12] Oye, y así como lo decís por semana,
+- [21:14] entonces el módulo tiene que mandar la cobranza por...
+- [21:17] así...
+- [21:18] ¿toda la semana? ¿Automático?
+- [21:21] ¿O carga manual?
+- [21:25] ¿Cómo el... te refieres como al...
+- [21:27] ¿la venta?
+- [21:28] No, o sea, claro,
+- [21:31] venta, porque compra...
+- [21:33] ahí lo tenés que pagar tú.
+- [21:36] Claro.
+- [21:38] Ah, se cayó el Sergio.
+- [21:40] Por lo que entiendo, compra, o sea, vienen con las fechas que son y se atrasan, pues no se modifica la fecha de crecimiento, por así decirlo.
+- [21:50] No, la fecha de crecimiento no se edita, no se edita porque ellos lo contabilizan, cachái, en ese periodo.
+- [21:56] Sí, no, que te caíste y no escuchaste.
+- [22:00] ¿De qué, qué dijiste?
+- [22:01] ¿Qué? ¿Qué dijeron eso de como automatizado? Lo que yo entendí fue como una cobranza semanal que se manda automática.
+- [22:14] Es que ellos no sé si hacen cobranza o no.
+- [22:21] Esa era mi otra pregunta. Si hay que meter todo ese tema de cobranza y el...
+- [22:28] Porque ellos más que nada, porque no sé si hacen cobranza porque en cierto modo la plata viene desde China, ¿cachái?
+- [22:36] Por eso yo me refería con multimoneda. Ellos nos hacen una transformación dentro del mismo sistema, por ejemplo, de, no sé, CENI creo que hubo por allá, no me acuerdo.
+- [22:46] ¿Yen? ¿Yen? ¿Yen? ¿Yen a pesos chilenos? Por eso yo al principio dije multimoneda, por ejemplo, se me viene a la cabeza.
+- [22:55] Es que eso, es que va, no, no lo hacen así, la cobranza de esa manera. En realidad la factura ya viene con el monto, la factura exportación, todo eso.
+- [23:05] Ya está con el tipo cambio asignado, po.
+- [23:11] ¿Y cuentas bancarias dentro de la misma tesorería? ¿O no hay nada de eso?
+- [23:15] Yo creo que eso es lo que falta, Carlos. El tema de las cuentas de la conciliación. De poder cargar la cartola, cachái, conciliar.
+- [23:24] ¿Eso también estaba hecho? ¿Y cuentas tienen?
+- [23:29] Tienen, son cuatro bancos, de los cuales cada uno tiene tres cuentas, si no me equivoco, que son en pesos, dólares y yen.
+- [23:41] Entonces, ¿puedes conseguir en otra moneda?
+- [23:43] ¿Qué vas a tener que hacer, Diego?
+- [23:45] No sé, tú dijiste que, yo te dije que estaba avanzado eso, yo, yo dije que revisaba todo el video, porque lo más probable es que habían detalles que se me habían escapado de lo que hablamos en la reunión con Lupe, que no dio toda esa info, y también faltaba hacer el QA.
+- [23:58] No sé si levantaron, si vieron, porque eso se instala, me imagino que copiaron los repos los chiquillos y no sé si lo levantaron, si quieren les muestro ahora.
+- [24:09] No, yo sí lo levanté el local y sí lo revisé.
+- [24:13] Por eso, lo del José, ¿cómo? Porque tomó la compra, era porque no había nada avanzado.
+- [24:18] Sí, el de compra no tiene nada.
+- [24:20] Por eso, pero tú dijiste que le pasáramos tesorería al Diego.
+- [24:25] A lo mejor es más para hacer cuba, no sé.
+- [24:28] Es que el orden lo decidiste tú, Sergio.
+- [24:32] Yo te hice caso, lo bajo.
+- [24:35] No, a buscarle.
+- [24:37] Ya, entonces, bueno, pero pasémosle algo que tú sepas que no hay avance.
+- [24:42] Los reportes. ¿Cómo van con los reportes? No sé.
+- [24:44] Es que los reportes dijeron que era la última pata que íbamos a ver.
+- [24:47] Porque teníamos que tener todo lo demás listo para poder...
+- [24:49] Y lo teníamos que ver allá, presencial, con ellos, güey.
+- [24:55] Esa semana querían matar el tema reporte.
+- [24:57] Último día de conciliación, cobros parciales, ¿qué más se puede hacer?
+- [25:27] Esta es la carga de una cartola, les voy a mostrar la cartola también, un poquitito, porque sin ver la cartola esto no se entiende nada.
+- [25:51] Igual tienen banque, cuentan diferentes monedas.
+- [25:54] Esta es la cartola, vamos a ocultar esto, aquí si se dan cuenta va por nombre de empresa, tienen ALM y tienen AlmaWeb, son las dos empresas que tienen diferentes routes, por ende la cartola discrimina que título dice acá, pero pensando que esto se hace manual, igual tú aquí puedes seleccionar, estas son las tabs que vienen en el Excel, y si se dan cuenta son 1, 2, 3, 4, 5, 6, son 6 acá.
+- [26:24] 1, 2, 3, 4, 5, 6. Esto hay que mejorarlo pensando que en algún punto podrían tener más empresas, o más cartolas, o más tipos de bancos.
+- [26:35] Los tipos de bancos se agregaron manualmente. De hecho, aquí nos está dejando cambiarlo.
+- [26:41] Ahí se apareció. Estaba como pegado mi PC.
+- [26:45] El primero no. Ah, sí, solamente los que tenía chequeado.
+- [26:48] Entonces, aquí se da cuenta que están los bancos ya cargados, y aquí está el selector de monedas que corresponde a cada uno de los TAP.
+- [26:54] En este caso, como estamos en la empresa AlmaWebExport, que no es ALM, serían estos tres, que son los de acá. En este caso, por ejemplo, son del Banco de Chile los tres, y cada uno tiene sus diferentes monedas, se discrimina fácil en esta parte.
+- [27:11] Entonces, ahí sería la carga, aquí te hace un preview, y aquí de lo que seleccionaste igual te hace como la vista por moneda. Esto fue la última implementación, José, que esto yo no los pidieron, pero ya habiendo visto videos y habiendo tenido como tantos terrores nocturnos como es que me despertaban por esta guaya y hasta conclusión, y lo dejé así porque es la forma más cómoda que yo encontré para ellos, cachái.
+- [27:34] Lo que sí tengo que, unas dudas que, como no hemos visto y no hemos ido al caso, la tengo anotado ahí, que, por ejemplo, hay periodos que son anteriores que vienen en la cartola, cachái, este por ejemplo es del 5, cachái, pero en sí ya te reconoce todo, solamente ese detalle que te trae igual, como viene en la cartola, este, esta carga por así decirlo, igual lo considera, pero no sé si es que hay que discriminarlo, se deja cargado igual, pero en el periodo que corresponde, pero esta parte ya está hecha de la carga, cachái.
+- [28:06] Yo creo que es el que va a lidarlo con ellos, ¿sabes por qué? Porque puede ser que ese periodo esté contablemente cerrado.
+- [28:13] Claro, o a lo mejor puede que sea uno de esos que se desfasaron para este, pero tiene la fecha del anterior.
+- [28:20] Entonces este sería como la carga de la cartola.
+- [28:23] Esta parte ya está hecha y queda... bueno, no nos va a importar acá porque este es de otro periodo contable, pero así quedaría visible.
+- [28:30] Este está en el 8 del 1 y ese es del 7.
+- [28:50] Vamos a eliminar esto.
+- [28:53] Así que Lery, este video es reo y me anda arrancando.
+- [29:30] Te lo deja en tres listas, cachái, por moneda y te hace referencia igual a qué archivo se cargó.
+- [29:35] Los tipos de movimiento.
+- [29:39] El Diego no te está pescando.
+- [29:43] ¿Cómo que no?
+- [29:44] ¿Cómo que no?
+- [29:45] Está tecleando, está tecleando, está cachando.
+- [29:47] Pero si tengo dos pantallas, estoy viendo.
+- [29:49] Esto también dividido por las monedas.
+- [29:53] Y aquí está la vista donde se puede realizar la contabilización.
+- [29:56] Si, por ejemplo, vamos al primer movimiento, le damos contabilizar.
+- [29:59] Te preguntan la cuenta de la contrapartida, el código financiero que corresponde y el destino.
+- [30:29] El centro de costo, si aquí hay que asociar el centro de costo también.
+- [30:42] Y a qué lo asocian, porque puede ser por área de la empresa.
+- [30:48] Por eso, pero es que el centro de costo ya te dice a qué, cuál es el área, todo.
+- [31:01] Vale, entonces habría que consultar si tenemos que realizar esa carga.
+- [31:07] O sea, el tema del centro de costo acá.
+- [31:11] Entonces aquí son, por ejemplo, las cuentas contables, el código financiero, que no tengo códigos porque no tengo un Excel de ellos que tenga todos los códigos, yo lo saqué, el que tenía en el sitio, o sea, perdón, local, era con base a las capturas de pantalla que saqué de las primeras reuniones que tuve con la María José.
+- [31:30] Entonces, ahí, para hacer este me tuve que haber calentado los primeros videos porque esta parte en sí está en los primeros videos de que se mostró cómo funciona en Agrosoft, que es el sistema que tienen actualmente.
+- [31:54] Me parece extraño que aquí no haya dejado código financiero.
+- [31:59] Entonces, el flujo principal sería importar cartola, calzar movimiento, contabilizar, recircar pago.
+- [32:07] Los match.
+- [32:09] Prácticamente.
+- [32:09] Es el cartólogo, pero también había flujo de caja, también, yo me acuerdo.
+- [32:15] Y la, bueno, la nómina semanal es lo que estábamos hablando de los pagos, ¿no, Carlos?
+- [32:21] Vamos a revisarlo de inmediato.
+- [32:24] ¿Qué es la contabilización? No existe periodo contable. Ah, Natalashet.
+- [32:28] Está bien, pues. Está bien, está bien, porque el periodo está cerrado.
+- [32:32] Sí, es el del 5. O sea, ese no existe, ese periodo realmente.
+- [32:35] Oye, eso igual lo tenemos que contemplar, porque yo caché que contabilidad lo tenían conectado en casi todo.
+- [32:42] Sí, estaba con todo conectado.
+- [32:45] Y yo al sincronizar los documentos debería contemplarlo.
+- [32:49] Pero eso, como te digo, vamos por patita, no nos adelantemos tanto.
+- [32:54] Ya.
+- [32:55] La idea es que...
+- [32:58] Primero y todo, tener los documentos y guardarlos en el sistema.
+- [33:01] Eso, eso es lo primero. Y a poder aceptar, reclamar. Eso es lo mínimo. Oye, pero Carlos, pero esa, esa, esa, esa, que, que nos revisa, que el, que el Diego, bueno, avancemos con un, por ejemplo, andate a nómina semanal. Nómina semanal. Este es el tema de los pagos, ¿cierto?
+- [33:25] Si mal no me equivoco, sí, no tiene el modo demo cargado, maldición.
+- [33:29] Y el flujo de caja ese yo no me acuerdo bien qué vimos, huevón.
+- [33:37] El modo demo tiene datos duros, ¿cierto? Como acá.
+- [33:45] Yes.
+- [33:46] Sí.
+- [33:47] A ver si luego tengo más data...
+- [33:56] Oye, esto es algo que me acordé de Betemite, eh. O sea, va relacionado con esto.
+- [34:10] Por ejemplo, ¿aquí trabajan con cheque?
+- [34:13] No, no sé, huevón. Buena pregunta. No nos han dicho nada. Cheque, Carlos, huevón.
+- [34:24] ¿Puedes ver las cuentas, huevón?
+- [34:26] Por ejemplo, ¿y qué pasa con los depósitos de transferencia? Porque yo me acuerdo que, no sé, por una transferencia podría pagar dos facturas, por ejemplo.
+- [34:36] Che, huevón.
+- [34:37] Che, huevón.
+- [34:44] Bueno, en realidad depende de cómo lo quieras.
+- [34:45] Voy a... Mira, Diego, hagamos lo siguiente. Para avanzar, por otra vez, voy a buscar a mi hija.
+- [34:50] Chiquillos, consulta, ¿de casualidad descargaron los videos y las transcripciones?
+- [34:55] Yo no.
+- [34:57] Porque si la descargan y la dejan en una carpeta dentro del proyecto, pueden hacer lo que yo voy a hacer.
+- [35:05] Escucha, no sé si me fiaría tanto así como del cursor. Yo por eso pedía más reunión.
+- [35:12] Es que el cursor te dice el minuto y el video, donde se habló de eso.
+- [35:17] Entonces puede llegar a la reunión con una duda que nosotros no hayamos preguntado antes, para no ser tan redundante.
+- [35:24] Oye, muchacho, Diego. Diego. Dígame, estoy acá. Mira, dale una revisada al módulo de tesorería, trata de jugar con él, y bueno, con lo que tú dices, con el tema de lo que se vio sobre tesorería, y podríamos coordinar una reunión con la Lupe, que es la niña que se encarga de tesorería,
+- [35:50] Eh, pero una reunión exclusiva de eso, ¿cachái?
+- [35:55] Claro, va a ir preguntando todo lo necesario.
+- [35:57] Sí. ¿Te parece?
+- [36:00] Ok, ok, ok, ok.
+- [36:02] Esto, esta reunión, ¿por cuándo sería más o menos?
+- [36:06] Es que depende de cuando tú tengas ya las dudas todas como alineadas.
+- [36:11] Y ahí yo, bueno, Carlos va a tener que coordinar con Lupe.
+- [36:16] Vale, vale, vale, vale.
+- [36:17] Si esta semana mejor aún.
+- [36:19] Vale, a ver si para mañana podemos hacer eso.
+- [36:23] Lo que sí, si es mañana, bueno, hoy día yo voy a estar disponible, o sea, el otro día voy a estar de celular, pero así meterme a reuniones no lo voy a hacer.
+- [36:38] Ok, voy a juntar preguntas, voy a buscar jugar un rato.
+- [36:42] Dale, ya. Oye muchachos, me tengo que ir a buscar a mi hija y tengo que pasar al baño antes de irme.
+- [36:47] Ok.
+- [36:48] Y de hecho, el Diego necesita mi pega para avanzar también.
+- [36:59] No, no es necesario, trabajemos con el modo demo.
+- [37:03] Le damos el modo demo que cargue data, ¿cachái?
+- [37:06] Y simulamos como un movimiento.
+- [37:09] Ah, bueno.
+- [37:10] Sí.
+- [37:13] Ya, ya muchachos.
+- [37:15] Oye, último resultado, ¿esto para cuándo es?
+- [37:20] Lo antes posible.
+- [37:21] O sea, sí, lo antes posible.
+- [37:51] Sí, Sergio. Sí, pues en la misma cuenta, en la misma cuenta de débito, ¿no? Sí, pues para no estar molestando a José, porque José no va a estar y necesito sacar esa boda y pedir diez. De verdad que ya tengo esa boda muy urgente. Igual yo vuelvo a las doce y media. Sí, pero no voy a estar una hora parado. No, pero tenía hartos tickets. No, porque esta boda va a estar a las once y media, tengo reunión. Oye, ya, ya, yo los dejo, güey. Chao. Chao, chao, chao. Era el permiso. ¿Has tenido reunión a las once y media? El Leire me está pidiendo para que veamos esa boda, güey. Y esa boda es la que estoy haciendo en este momento.
+- [38:21] Entonces, bueno, necesito tenerlo de aquí a las once y media, ¿listo? Y, a lo mejor, no once y media, pero a lo mejor vaya a salir y voy a estar con el ERI y voy a seguir arreglándolo.
+- [38:33] Entonces, ¿comparto la pantalla?
+- [38:36] No.
+- [38:40] Permitir compartir ventana para permitir pantalla.
+- [38:46] Sí, así veo esa hueá y no te pido de no...
+- [38:49] Ahora, termos.
+- [38:52] Uh, se te ve más borroso que la concha, la lora.
+- [38:55] Aquí un nuevo host, me imagino.
+- [38:57] Sí.
+- [38:58] Aquí le voy a ponerle... Ahí se arregló. Ahí 10.0.66.66.
+- [39:08] Carlos, tápate el oído.
+- [39:12] Chímulo.
+- [39:13] SS... Sí, chímulo, sí.
+- [39:17] El SSH port, el 22, las credenciales del usuario tienen que ser de T-MIT y la clave tú la tenés.
+- [39:25] De ser esta.
+- [39:35] Esa misma.
+- [39:35] Y con eso ya te deberías poder conectar.
+- [40:17] Entonces, ¿qué tienes que hacer acá? Yo siempre saco la ruta con un PM2 Info 5.

@@ -1,0 +1,220 @@
+# Jose y Sergio 2026-10-14 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-10-14 135626.mp4
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] Yo digo, ya, todo eso te lo voy a pagar. Y tú me tienes que emitir una factura, esta es la proforma, y tú tienes que emitirme una factura sobre esa proforma, cachái.
+- [00:08] Y en esa proforma se le envía al contratista, bueno, el dibujo de San Diego, se le envía al contratista, ya, y el contratista, si está todo ok, se aprueba, y entonces el guardante va a emitir una factura a ti, cachái, y eso se convierte en una factura recibida, que lo veía en el libro de compras.
+- [00:29] Esa factura de contratistas no viene referenciando una orden de compra, sino que la proforma, cachái.
+- [00:36] Ah, vienen con la referencia de la proforma.
+- [00:39] No sé si viene como nodo dentro del IML, pero viene con un...
+- [00:46] O sea, internamente o en el sistema, esas facturas de contratistas las tienen que poder asociar a las proformas del contratista, cachái.
+- [00:56] Ya, no, si te cacho lo de la asociación, pero ¿cómo haría la asociación? Ah, por el root, porque esa proforma no creo que venga en el, en las referencias del DTE, en el XML tampoco, entonces tendría que ser una asociación manual, no podría ser un match como la OC.
+- [01:16] ¿Qué? No, claro. Igual tendríamos que validarlo yo creo que ya para ahora después de esta reunión, pero en sí es contra el contra el contra el rum, ¿cachái? O sea, ya toda esta esta factura de proveedor tiene todo, puedo asociarla a N proformas, ¿cachái? Igual podríamos dejar alguna sugerida según el monto, porque se supone que la proforma, o sea, la factura recibida tiene que ser idéntica a lo que es la proforma.
+- [01:46] Ya, vale, entiendo. Y la proforma, última duda. Creo que dijiste que pasa por aprobación.
+- [02:01] Sí, pues la proforma sí.
+- [02:03] Pero es que ahí es donde el Diego no implementó esto.
+- [02:06] Entonces solo la proforma aprobada es la que yo puedo tomar.
+- [02:10] Sí.
+- [02:11] Al igual que lo hace.
+- [02:13] Incluso hay un punto, puta que yo no sé, donde mandé la foto a Carlos, huevón.
+- [02:17] ¿Tenía una proforma mija?
+- [02:20] No, no, no se crea en mija.
+- [02:23] Ah, ya siento, ya siento.
+- [02:53] La aprobación.
+- [03:28] Notificar a contratistas y cambiar el estado de notificar a contratistas, pero este hace exactamente lo mismo y tampoco tengo el tracker de que le habíamos pedido al Diego, de los envíos.
+- [03:38] Ya, pero sácale ese email, o sea, sácale ese... Ah, pero entonces agrégale el tracking, y el de aprobaciones dile que está pendiente de llegar a la otra semana, podríamos implementar los desplujos de aprobaciones, cachái.
+- [03:52] ¿Avanza con eso ahora, vos?
+- [03:54] Muestran lo mío mientras, y muestran una pincelada del otro. No sé, digo yo.
+- [04:06] No, pero es que ya mandamos el checklist de lo que se va a ver en la reunión de hoy día, y está el contratista, órdenes de compra, notificaciones.
+- [04:14] Ah, verga.
+- [04:17] O sea, Carlos, yo creo que puta...
+- [04:19] Las notificaciones funcionan, sí, pero no sé si cachaste.
+- [04:22] Sí, sí, lo caché, sí, eso estaba mirando.
+- [04:23] Pero lo que sí, por ejemplo, de las proformas, no te manda la proforma, te manda como el correo nomás, no te manda ese documento que está asociado, por ejemplo, con las compras, te manda el XML y te manda el PDF, cachái, cachái, cachái.
+- [04:55] Por eso yo creo que aprovechemos el tiempo, Juan, y haces ajuste, o déjase ir bien y tal cual nomás, agrégale el tracking nomás, Carlos.
+- [05:06] Vale.
+- [05:11] Y el tema de aprobaciones, dile que se está implementando y que vaya a ser la aprobación interna, o sea, previa a la envía de notificación del consultorio.
+- [05:24] Sí, por lo que veo, en sí hay como un sistema de aprobaciones, pero creo que no se aplicó como despejo al otro, como que se inventó.
+- [05:32] Yo creo que ahí te tenés que, puto, saliendo de esta reunión, Carlos, júntate de una con el Diego y presenta, yo me acuerdo que lo vimos en la reunión como era, pero a lo mejor faltó enviarle pantallazos, explicarle con mayor detalle.
+- [05:48] Tampoco mandó notificación interna a la aprobación.
+- [05:52] Puta, trata de avanzar en esas cositas, pues bueno.
+- [05:56] Vale, vale.
+- [05:58] Ya, vamos a lo tuyo Diego, pues adiós.
+- [06:31] Eh, la otra vez igual la había hecho entre Carlos de unos puntos, pero ahora el tema fijo de la asociación de las hijas es así. Mira, por ejemplo, tengo, estos no son documentos que estén como emitidos en GoSocket por si acaso, son los, ingresé directo en duro en la base A2MIA local para hacer las pruebas, porque GoSocket se demora demasiado en responder.
+- [06:55] Pero aquí está. Si se fijan, OC parcial, 50 lucas. Aprobada. ¿Ya? Después me vengo para el libro de compra.
+- [07:05] ¿Pero cómo generaste esa OC parcial?
+- [07:09] No, no, eso... ¿Cuánto se llama? Dice CUA parcial, pero no es que la... Podía decir hacer una OC cualquiera, ¿me cachái?
+- [07:20] Por ejemplo esta, de 20 lucas, y después te llegan dos facturas de 10 lucas, y ahí las podías hacer, pero no es como una OC en especial.
+- [07:31] Ah, entonces es una OC cualquiera.
+- [07:34] Sí, una OC cualquiera.
+- [07:37] Después para acá, y te llegan estas dos, para el mismo cliente, por esa misma razón social.
+- [07:45] Entonces 25 lucas, 25 lucas, la OC es de 50.
+- [07:48] Acá dice también, agregó una columna que dice el tipo de DTE, si se fijan acá está la guía de despacho, y acá, si se fijan no está disponible la aprobación porque tengo que asociar la OC y aquí me lista, aquí igual podría mejorar esta pantalla, pero por ahora, aquí si se fijan, pum, de 50 lucas, y como es de 25 te va a generar la OC hija, pero aquí te avisa, ¿ya?
+- [08:19] Mmm, vale.
+- [08:51] Bueno, el tema de las aprobaciones nuevamente.
+- [08:56] Ahí no sé si va a pasar la hija en aprobación, sino que debería...
+- [09:00] No, dijeron que debería pasar la madre.
+- [09:05] Pero sí, la hija que cree en José tiene que quedarse como aprobada, pero si supera el monto de la madre, la madre se tiene que mandar de nuevo al flujo de aprobación.
+- [09:14] Pero eso no lo veamos ahora.
+- [09:17] Vale.
+- [09:18] Ok.
+- [09:19] Entonces yo le pongo vincular.
+- [09:21] Y si se fijan, ya tiene la UCE asociada.
+- [09:25] Ya.
+- [09:27] Vengo para acá.
+- [09:33] O esto no sé por qué me está saliendo ahora.
+- [09:35] Pero si se fijan, aquí te genera la UCE hija.
+- [09:43] Acá está la madre.
+- [09:44] Acá te dice, hija de...
+- [09:47] ¿Y qué es la SAO?
+- [09:48] ¿Puedo abrir yo la madre directo de ella, no?
+- [09:53] No, por ejemplo, si tengo N o C hacia abajo y no sé dónde está la madre.
+- [09:58] ¿Puedo filtrarla?
+- [09:59] Ahí faltaría una columna como el que está en venta. Mirándote al libro de venta. Pone modo demo. Ese que dice origen cadena, ¿esa columna te falta? Porque ahí, por ejemplo...
+- [10:19] Ah, ya te cacho.
+- [10:21] Que de hecho creo que eso te lo había dicho, José.
+- [10:23] Puta, José, no te lo estés diciendo.
+- [10:25] Porque mira, si le das click a una de esas, que está como con un link, te sale ese historial de asociación.
+- [10:33] Ah, ya, mira. Está bueno. Ya te lo voy a copiar.
+- [10:37] Yo creo que faltaría eso, y que cuando se genere una hija, se genere con el mismo número, guión 1.
+- [10:47] Sí.
+- [10:49] Así que la nomenclatura de la orden es 010203.
+- [10:55] O guión 1, o guión 6.
+- [10:57] Sí, yo diría que con guión 1, no creo que vayan a tener más de 10 o más de 99 hijas.
+- [11:03] Pero hay un número incrementable nomás, guión 1, guión lo que sea, guión infinito.
+- [11:09] Ahí, por ejemplo, José, ya, eh, si asocian las dos, ¿cómo queda el estado de la madre?
+- [11:19] Asociámoslo.
+- [11:22] Está acá, está acá, uh.
+- [11:29] Desapareció.
+- [11:30] Oh, ah, porque no está aprobado.
+- [11:32] Y se creó como borrador igual.
+- [11:39] Sí, eso mismo estaba cachando.
+- [11:41] Sería el que ahora como aprobado.
+- [11:43] Es el cambio que hice ahora recién.
+- [11:45] Ah, a ver, lo voy a probar.
+- [11:53] Oh, no se encontró.
+- [11:54] No, porque lo metí directo a la base de datos.
+- [12:37] No te pasa, no te sirve, porque si van a hacer un flujo real tienen que ir a GoSocket y emitir a GoSocket, y si emiten a GoSocket allí se demora más. Por eso, no sé, yo te diría que lo hagan con script.
+- [12:53] Ya, vamos a esconderlo nomás, po. Hay que hacer, si no se puede.
+- [12:58] O sea, se puede, pero se les va a alargar.
+- [13:00] A la que no está la penalista.
+- [13:04] El Sergio que es de cartón.
+- [13:06] De la boltoña, ¿qué pasa?
+- [13:08] Claro, bueno, eso.
+- [13:46] Eso sí me funciona al tiro, pero obviamente este lo creé yo directo en la base de datos, entonces me va a tirar que no exista en GoSocket, por si acaso.
+- [14:04] ¿Qué más dice? A ver, el match, factura y despacho, la asociación de los C, la notificación, el modo demo, eso no, no lo toqué.
+- [14:36] Ah, y el tema del cron que teníamos, ah, eso tenéis que mencionarle, Carlos, que tenemos que ver el tema del cron después.
+- [14:41] ¿Para en el servidor poder hacerlo?
+- [14:46] ¿De que sincronice automático los DTE recibido?
+- [14:49] Sí.
+- [14:51] ¡Pum!
+- [14:53] Vale.
+- [14:54] Que aquí lo pueden programar, pero ya cuando está en el servidor se puede... debería funcionar.
+- [15:00] Bueno, si queréis nos quedamos probando este.
+- [15:05] Ahora que vaya a consolidar y vaya a subir.
+- [15:08] Sí, porque habría que hacer la prueba con documentos parcializados reales, igual José.
+- [15:13] Sí, también habría que hacer la prueba con documentos reales.
+- [15:23] ¿Y GoSocket no les tiene como una forma de cargar documentos masivos?
+- [15:28] No nes.
+- [15:33] Si era un tiro con DTE, mítelo.
+- [15:39] No, si tiene que funcionar, te lo pones.
+- [15:47] Ya.
+- [15:49] ¿Estamos, Carlos, no? ¿Estamos claritos con el orden de compra?
+- [15:54] ¿Compran, mítelo?
+- [15:54] ¿O te queda otra duda respecto a esto?
+- [16:30] La orden de compra madre es como ya contabilizado, porque la contabilización es un botón que está ahí en el libro, o sea, perdón, viene por cada ítem, la contabilización al momento es generar una orden de compra.
+- [16:44] Claro, pero ¿quiénes se van a contabilizar? Van a ser los hijos, la madre debería poder contabilizarse. Eso tienes que validarlo tú, Carlos, cuando seas una madre, o José, si lo podías hacer tú, más rápido, que la madre, si ya tiene hijos, no pueda tener el botón de contabilizar, ¿cachái? No me cacharon.
+- [17:10] O sea, al fin y al cabo, la orden de compra madre es como solamente una guía interna nomás, pues se trata igual como documento independiente en contabilización.
+- [17:20] O sea, es que la madre nunca se va a contabilizar.
+- [17:24] Ya, entonces es que el botón para contabilizar queda inactivo cuando la madre tenga hijos.
+- [17:29] Ya, exacto.
+- [17:31] Y se contabilizan solamente los documentos.
+- [17:34] Los hijos.
+- [17:36] Vale.
+- [17:43] Vale, ya estoy haciendo el cambio, voy a revisar.
+- [17:46] Vale, entonces lo que vendría a ser contratista igual hago los ajustes, ¿no es cierto?
+- [17:57] Sí, contratista igual haces los ajustes vos.
+- [18:00] Por ejemplo, agregale el tracking del envío y dale una vuelta a aprobaciones.
+- [18:05] Si me decís, ¿sabés qué es esto? No, aprobación está complejo, va a llegar a las 4, no lo tomamos.
+- [18:09] Agregale el tracking nomás y listo.
+- [18:13] ¿Ya?
+- [18:14] Vale, vale.
+- [18:16] Vale, vale.
+- [18:18] Ah, ¿y los libros? No te he puesto los libros.
+- [18:22] Es que, o sea, si eso está funcionando, prefiero que le ganéis tiempo a los contraristas, porque ese está medio cojo.
+- [18:32] Ah, pero es breve, si paso la información nomás a contabilidad.
+- [18:38] ¿Ya?
+- [18:40] Cachái, aquí los trae por cuenta, te trae el número de asiento, la fecha, la glosa ingresada.
+- [18:49] ¿Qué es lo que es el libro diario?
+- [18:50] Sí, el libro diario y el libro mayor va directamente por cuenta.
+- [18:55] Ya, ok. Esto hay que exportarlo a PDF, ambos. Bueno, todo, el libro diario, el libro mayor, el balance de ocho columnas, se tienen que poder exportar a PDF.
+- [19:06] Y en esa exportación tiene que ir información, por ejemplo, el periodo, los datos de la empresa, cachái.
+- [19:14] Lo otro, por ejemplo, igual sería bueno, poder agrupar por tipos de cuentas.
+- [19:28] Bueno, pero eso no lo consideré para ahora.
+- [19:31] Aquí, por ejemplo, ya está por cuentas, se ve como el loli, sí.
+- [19:36] Sí, eso es mejorarlo, para la presentación.
+- [19:39] Pero ya se hace, cachái.
+- [19:44] Sí, pero yo, por ejemplo, si yo quiero solamente listar las de activo, ¿entendés?
+- [19:53] No, ¿cómo?
+- [19:54] ¿Viste que tú, mira, si te vas a tu plan de cuentas, por ejemplo, ahí tenés los activos, cachái, y después tenés los pasivos.
+- [20:06] Ah, vale.
+- [20:08] Entonces, si yo quisiera ver de esta manera, así como esto, hacer esa misma funcionalidad, pero preguntémoslo, preguntémoslo solamente.
+- [20:16] Si necesitan que los balances o el de ocho columnas o el libro mayor tenga esta funcionalidad de poder colapsar o expandir.
+- [20:27] El registro para poder aplicarlo.
+- [20:33] Pero es un chiste, ¿eh? Es un chiste como te digo.
+- [20:46] Ok. Ok, ok.
+- [21:09] O sea, hay un cual tenía... Baja para la contabilidad.
+- [21:14] Tiene el balance, estado de resultado que te muestra.
+- [21:24] Igual, está como de más, está...
+- [21:25] Esto es porque es como la información que te muestra el otro lado del cuerpo.
+- [21:29] No, no, sí, pero igual lo ocupan los contadores.
+- [21:32] Vale.
+- [21:33] ¿Situación financiera ese te lo pidieron?
+- [21:34] No, ese no lo pidieron, es invento de la IA.
+- [22:08] Un resumen contable, ahí lo hacemos.
+- [22:11] ¿Ya?
+- [22:25] O sea,
+- [22:28] hay los correos,
+- [22:29] trata de mejorar el correo de notificación
+- [22:31] del contratista, si podías
+- [22:33] juntar la proforma o un filete.
+- [22:36] Sí, de hecho aquí, por ejemplo,
+- [22:38] lo que te decía,
+- [22:39] esto lo integré yo.
+- [22:41] Entonces, acá, bueno, desconozco por qué no se envió
+- [22:43] el correo, pero acá, por ejemplo,
+- [22:45] en cada uno, compra, vente, proforma,
+- [22:47] podís personalizarlo.
+- [22:49] ¿Cachái? Entonces lo que te decía,
+- [22:50] Te crea etiquetas, ahí puedes colocar folio de factura, cuántas veces tuvieras, el nombre del proveedor, el monto, la fecha, orden de compra, cachái, pura etiqueta.
+- [22:58] Oye, José, está pinteado para este video esto.
+- [23:05] A ver.
+- [23:07] Si no estaba prestando atención, me decimos, joder, que callamos.
+- [23:09] Pero si te estoy diciendo las modificaciones que pediste.
+- [23:13] Ya, ya lo te lo dije, ya lo te lo dije.
+- [23:14] Yo tengo implementado lo del libro de venta para la, ¿cuánto se llama para la OCE?
+- [23:19] Mira, pon el servidor ahí primero, Carlos. Podés configurar tu cuenta de correo, ¿ya? Entonces todos los correos van a salir por tu cuenta. Anda a comprar.
+- [23:33] Mira que hermoso. Mira que hermoso, mira. El asunto, mensaje...
+- [23:41] Mira, mira los variables globales. Agregale una variable.
+- [23:46] ¿Y voy a encontrar yo también?
+- [23:47] No, esos son los logos.
+- [23:52] No, esos sí, son el logo de arriba y el de abajo.
+- [23:57] Ah, ya. ¿Y estas como, para qué son estos correos?
+- [24:01] Compra, vente y proforma.
+- [24:03] Notificación interna, vos.
+- [24:05] Ah, entonces tú estás diseñando la notificación que se va a mandar de mí, de lo que hice yo.
+- [24:10] Sí, vos.
+- [24:10] Del botoncito que hice yo.
+- [24:12] De hecho ya se manda, parece.
+- [24:14] Ah, entonces ya tienen todo configurado del SMTP y eso.
+- [24:17] Por ejemplo, aquí está, y funciona con el tracking, pues, cachái, te dice a qué día, fecha, hora se envió, de quién a quién, por ejemplo, el usuario logueado, a quién se le envió, el tipo de notificación, y lo archiva junto.
+- [24:34] Entonces, ¿ya podría probar eso yo, o no?
+- [24:39] No le ha pasado, creo, José.
+- [24:42] Pásaselo, pásaselo, pásaselo todo.
+- [24:44] Cachái, aquí puedes también colocar así como enviar también por correo electrónico, porque esa es la notificación interna, y ahí, esta es la notificación que llega por arriba, y aquí es cuando envía por correo electrónico, aquí puedes copiar a ti mismo, que es el usuario logueado, aquí puedes agregar más usuarios a la copia, que se separan por coma, y aquí también te permite editar el asunto antes de enviarlo en caso de que quieras agregar una información adicional, y aquí te pregunta si es que quieres juntar el PDF o el XML.
+- [25:11] ¡Gracias por ver este video! ¡Suscríbete al canal para no perderte los próximos videos!
+- [25:46] Estas son las mantiguas.
+- [26:30] Chao, quería compartir pantalla, no desconectarme.

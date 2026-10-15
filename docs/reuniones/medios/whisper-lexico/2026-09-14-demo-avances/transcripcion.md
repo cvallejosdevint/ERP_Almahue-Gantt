@@ -1,0 +1,653 @@
+# 2026-09-14-demo-avances (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-14-demo-avances\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [06:12] Carlos, buenas. ¿Cómo estamos? Bien, ¿y tú? Bien también. ¿No están pendientes de autorización la gente? Nadie, nadie.
+- [06:25] Oye, entonces, la REU, ellos transmiten, ellos usan y adoptamos el tráiler nomás.
+- [06:31] Sí, mira, la idea es, o sea, yo ya hablé algo con Mario, pero la idea es que lo formalicemos ahí en la misma.
+- [06:40] Vale, ahí el Mario está pidiendo permiso para acceder.
+- [06:43] Ya, ahí lo va a ver mi DIR.
+- [06:53] Hola, Mario.
+- [06:54] Hola, Mario.
+- [06:58] ¿Cómo estás?
+- [06:58] ¿Cómo estás, Mario?
+- [07:00] Estamos todos conectados a mi computador por si acaso.
+- [07:03] Ah, ya, genial.
+- [07:04] Por temas de internet vamos a dejar sin la cámara.
+- [07:10] No hay problema.
+- [07:12] A ver, aceptar ahí mi micrófono.
+- [07:17] ¿La noticia ahí?
+- [07:18] ¿Sí?
+- [07:19] Dijo que quería venir para eso.
+- [07:42] Sí, no, ¿qué te dijo?
+- [07:43] Sí, dijo que quería venir.
+- [07:49] Ya, Sergio, estaba esperando a Agustín, que se nos va a sumar esta oportunidad.
+- [07:53] Ya. Bueno, Mario, como habíamos conversado, la idea de darle foco a esta reunión, en día, es poder distribuir bien las tarjetas del tablero, ¿ya?
+- [08:07] La verdad es que nosotros tenemos harto avance, pero, bueno, más de lo que hemos revisado en reunión directo,
+- [08:14] Pero nos gustaría que si nos pueden hacer las revisiones de las tarjetas que hoy día tenemos para la revisión de CUA, ¿ya? Por parte de ustedes.
+- [08:25] Entonces, mira, Carlos, ¿puedes compartir el tablero?
+- [08:30] De inmediato. Y me confirman si se ve.
+- [08:52] Sí, se ve.
+- [08:53] Sí, yo veo.
+- [08:55] Mira, y por ejemplo, Mario, tenemos separado, por ejemplo, no sé, ventas.
+- [08:59] Todas las tarjetas asociadas a la emisión en ventas.
+- [09:03] Contratos maestros de clientes, libros de venta, emitir DTE, órdenes de venta. Más abajo también la administración. También lo de compras. Eso, Carlos, lo de compras yo creo que aún no lo pasemos porque recuerda que se van a hacer los ajustes de la aprobación y el reclamo.
+- [09:22] Entonces tenemos bien separado como por módulo o menú, llamémoslo así, lo que necesitamos es la revisión de ustedes.
+- [09:45] Entonces, me gustaría ver si podemos asignar algún ejecutivo, alguna persona de usted, que se encargue de revisarnos estas tarjetas por módulo.
+- [09:57] Porque yo lo que recuerdo, por ejemplo, lo que era tesorería, Lupe me iba a ayudar con eso.
+- [10:03] Lo que es contabilidad, María Jesús. Ya, entonces, tenemos muchas tarjetas aquí que están, se comía, paradas, para poder nosotros ir dándole cierre a cada módulo.
+- [10:21] Sí, no sé si te entiendo. No sé cómo te has pensado, María Jesús.
+- [10:25] Sí, porque cada uno se va a cargar con su tarjeta.
+- [10:27] Entonces, ¿podríamos hacer la asignación? ¿Les parece como lo decía yo? Por ejemplo, tesorería, os vamos viendo aquí en línea y ustedes me dicen, ya, esta tarjeta se la tiene que revisar Juanito y se la asignamos de una acá.
+- [10:44] Sí.
+- [10:46] Dale.
+- [10:46] Ya, vamos, te volve.
+- [10:50] Todo lo que relaciona a ventas.
+- [10:52] ¿Qué es lo que relaciona a ventas?
+- [10:57] ¿Qué me lo tiene que decir?
+- [11:00] ¿Vamos los dos? ¿Los voy a dejar para el final? ¿Puedo dejar venta por el final?
+- [11:08] Ya, ok.
+- [11:11] ¿Todo lo que es administración? Por ejemplo, validar los usuarios, robles y permisos.
+- [11:18] Yo.
+- [11:20] Yo.
+- [11:21] Mario.
+- [11:22] Mario. Vamos.
+- [11:23] Perfecto. Voy asignándole la primera tarjeta como por cada segmento y después la replico fuera de la reunión para que no tome tanto tiempo.
+- [11:33] Perfecto.
+- [11:35] Yo, Carlos, los dejaría todos de una. Así dejamos bien retomado.
+- [11:55] Eso dejemos retomado.
+- [11:58] Bueno, el inicio de sesión realmente está configurado por el Microsoft.
+- [12:02] Habría que hacer la configuración interna, así que igual la voy a dejar asignada a Mario para que tengamos este tema de la conexión.
+- [12:13] Operativo también. No sé si es que lo dejo también asignado a Mario.
+- [12:16] Bueno, que esto yo creo que se va a nutrir al final de cuando ya tengamos los reportes.
+- [12:20] Así que esto igual lo podríamos dejar para lo último.
+- [12:22] Sí, ese lo dejaría para ver cómo al final lo devolvería a Cuadrino.
+- [12:30] Vamos a tirarlo de inmediato.
+- [12:39] De la planilla de documentos, también es parte de la que vendría a ser como la configuración y parametrización.
+- [12:46] También a Mario, ¿verdad?
+- [12:50] Sí.
+- [12:50] ¿Mario?
+- [12:51] Bueno.
+- [12:51] ¿Quién tendría que hacer la parametrización como de los ajustes de las monedas, de los centros de costo?
+- [13:08] Sí, la primera vez ya.
+- [13:10] Mira, yo voy a avanzar a lo que más puede, lo que quede pendiente.
+- [13:13] No, no, pero como es el último centro de costo, lo que quede pendiente.
+- [13:15] Sí, aquí, ojo, la idea es que ustedes puedan hacer las pruebas, bueno, como lo hicimos en el proyecto anterior, Mario,
+- [13:24] Ustedes pueden ir ajustando toda la evidencia o correcciones que necesiten.
+- [13:30] Sí, tal cual.
+- [13:31] Perfecto, entonces parametrización también la dejamos con Mario, ¿verdad?
+- [13:35] No, tal vez no.
+- [13:42] ¿El plan de cuenta igual, Mario? ¿O no?
+- [14:02] Esto serían como las páginas que tenemos creadas, igual de todas formas serían monedas, unidades de medida, centro de costo, elemento de costos, áreas de negocio, códigos financieros, tipos de documentos, plan de cuentas, indicadores del banco central y proveedores.
+- [14:17] Igual compende de varias áreas, entonces no sé si a lo mejor podríamos dejar a Mario como en esta instancia, pero como igual se nutren de las demás áreas, ir asignando un segundo también encargado podríamos hacerlo.
+- [14:29] Sí, no, pero déjame a mí, hay cualquier cosa que no lo comprese contigo.
+- [14:32] Sí, es que no me he encargado de revisar la tarjetita.
+- [14:35] La que me ha llamado a la edición es solo.
+- [14:37] Genial.
+- [14:40] Y aquí empezamos ya con el módulo de contratistas.
+- [14:47] ¿Quién sería el responsable?
+- [14:49] No, no, no, no, no, no, no, no.
+- [15:26] Perfecto. Lo que vendría a ser compras.
+- [15:50] No compras, recuerdo que es que hay que moverlo a la delincuada.
+- [16:01] Vamos con bodegas e insumos.
+- [16:09] ¿Tenés que buscarse más cosas?
+- [16:10] Sí.
+- [16:11] Pero hay que abrirlo, ¿verdad?
+- [16:13] Hay que abrirlo.
+- [16:18] ¿Ya te comió la vez?
+- [16:19] Yo lo...
+- [16:19] Yo lo digo.
+- [16:20] Yo lo digo.
+- [16:21] Ya, dale. Ponme los dos ahí.
+- [16:23] Mario, ¿verdad?
+- [16:56] ¿Todo lo van a seguir pendiente?
+- [17:26] Equipo, ¿ya? Entonces, no sé si tiene sentido ahora que revisemos el RP completo para asignar lo que falta por cada uno, porque igual hay harta revisión que tienen que hacerle a ustedes directo.
+- [17:49] O sea, si no se está, en un punto de vista, no tenemos nada estancado.
+- [17:56] Sí, pero al final, por ejemplo, si se puede realizar el módulo de uso por insumo, de contratista, igual van a ver que se lo responde.
+- [18:03] ¿Cómo no lo conozcas? He escuchado un día que se sabe.
+- [18:10] Lo que pasa es que si los ganadores no vean internamente cómo van quedando los módulos,
+- [18:13] igual aunque Mario esté encargado no va a tener la rata de alimentación para la persona.
+- [18:22] Hay que ir más que nada al líder, si al final es...
+- [18:25] O sea, voy a estar con estas tarjetas, tengo que salir a hablar contigo, con la Lu, con la Fran, con el Quinto, con la Mamá.
+- [18:33] Y vamos a ver lo que se van a pasar, ¿no?
+- [18:36] Es que es el tema, si la tarjeta no te da, nadie sabe que te va a dar, ¿verdad?
+- [18:39] Es que eso es lo que está pasando, porque, bueno, nosotros podemos entregar muchos avances del módulo, pero en sí necesitamos el feedback, o algún responsable.
+- [18:50] ¿De qué es ese? ¿De qué es ese?
+- [19:01] Aquí está el módulo de contabilidad, ¿no, Carlos?
+- [19:03] Sí, aquí estamos en el módulo de contabilidad.
+- [19:12] Nos quedaría asignar el módulo de contabilidad, por lo que veo que es como el más grande y los demás no deberían comprender tantas páginas, pero este sí es un poquito más denso.
+- [19:24] María Jesús.
+- [19:25] ¿María Jesús?
+- [19:26] Sí, María Jesús.
+- [19:28] María Jesús, entonces.
+- [19:34] ¿Sí?
+- [19:34] ¿Quién nos trae?
+- [19:40] ¿Quién es tu usuario?
+- [19:41] ¿Quién es tu usuario?
+- [19:43] ¿Quién es tu usuario?
+- [19:45] ¿Quién es tu usuario?
+- [19:49] ¿Tenemos?
+- [19:50] ¿Tenemos?
+- [19:52] ¿Tenemos?
+- [19:53] No, no, no.
+- [19:54] No, no, no.
+- [19:55] ¿Pueden dejarla, Fran?
+- [20:01] Estas dos semanas tienen que ver algunas cosas.
+- [20:02] No, chaval, lo tienen que ver como si...
+- [20:05] Es decir, en los perfiles.
+- [20:06] Cuando llegue creen que está todo listo.
+- [20:07] ¡Gracias!
+- [20:39] Este igual tiene los avances que habíamos visto en Lupe con Mario, no sé si se acuerdan de esa reunión que estuvimos los cuatro.
+- [20:50] Está bastante avanzado y de hecho lo más probable es que aquí en las capturas de pantalla te vas a dar cuenta de que ya se aplicaron varios de los ajustes que habíamos hablado ese día.
+- [20:59] Entonces la idea es que si se nos escapa algún detallito que no escriban o si es que está todo correcto también que lo escriban ahí como para que lo vayamos categorizando como que ya está listo y despejando lo visual más que nada.
+- [21:09] Y ahí terminamos ya con la asignación completa.
+- [21:47] ¿No nos queda ninguna tarjeta por asignar? Bueno, compras, compras lo vamos, bueno, ya se está avanzando compras,
+- [21:54] y ahí, Mario, estamos haciendo lo que es la integración con GoSocket para los documentos recibidos, ¿ya?
+- [22:04] Estamos pensando en trabajar con los tres estados que actualmente trabaja el servicio puesto interno,
+- [22:10] Que son los pendientes, los aceptados y los reclamados, ¿ya?
+- [22:16] Entonces, no sé si ustedes, bueno, nosotros vamos a generar esta propuesta,
+- [22:20] pero no sé si les parece que trabajemos con esa estructura,
+- [22:23] que es lo mismo que está en el RCB del SII.
+- [22:26] Yo creo que es perfecto, que así no puede rechazar documentos.
+- [22:28] Y sobre todo hay que estar a ojo hoy día con el documento.
+- [22:31] Sí, sí, claro.
+- [22:32] Por lo menos lo vamos a poder hacer de la misma manera que se hizo.
+- [22:36] Sí, yo creo que está perfecto, porque hoy día es una acción que estamos tomando el rechazar documentos.
+- [22:41] Claro.
+- [22:42] ¿Y así se ahorran? ¿Y los rechazos de dónde lo están haciendo? ¿Desde el directo al SII?
+- [22:47] Sí.
+- [22:50] Claro, si lo integramos en el ARP, no va a ser necesario que N usuarios se estén conectando al servicio de puestos internos para que puedan reclamar o aceptar.
+- [23:03] Pero dentro del flujo de los documentos recibidos, tengo una duda.
+- [23:08] Cuando se emita o cuando reciban una factura, ¿cierto? Esta factura va a ir referenciando una orden de venta, ¿cierto María Jesús?
+- [23:19] ¿Orden de compra?
+- [23:20] De compra.
+- [23:21] Una orden de compra, ¿ya? Pero la orden de compra puede que esté en el proceso de aprobación.
+- [23:30] Carlos, si puedes, para que se entienda, proyectar el RP.
+- [23:43] No, pero las configuraciones, la administración de aprobaciones, esa.
+- [23:56] Por ejemplo, puede ser que una orden de compra, o más que nada les pregunto,
+- [24:00] ¿puede ser que una orden de compra está pendiente de aprobación
+- [24:04] y que le emitan una factura referenciando esa orden de compra?
+- [24:09] En teoría no, en la práctica sí.
+- [24:13] Y ahí en ese caso, ¿qué tendría que hacer con esas facturas?
+- [24:15] ¿Puedo automáticamente rechazarla o destacarla que aún no está? O sea, ¿bloquear la aceptación?
+- [24:28] ¿A lo que usted refiere? O sea, no rechazarla, porque si no la rechazan los productores, la sacan las cosas.
+- [24:32] Es que eso es lo que pasa, es que la cultura de la plata todavía no está implementada,
+- [24:36] que se pica primero el orden de compra y luego la factura.
+- [24:39] Entonces, actualmente no podemos dejar como algo tan rígido, porque va siendo progresivo el cambio que hagamos.
+- [24:46] ¿Ya? Entonces, le dejamos las opciones, pero igual destacar que ese documento está con una...
+- [25:28] Pero quedan pendientes, ¿no?
+- [25:30] Sí, o sea, igual es que emitir la orden de compra y hacer el conducto, porque la orden de compra no reconoce el costo.
+- [25:37] Ahí se filtrarían las que no tienen para poder hacerlo.
+- [25:40] Claro.
+- [25:41] Yo si tú querías, pues, que la usuaria lo haga y te mande la orden de compra, ¿no?
+- [25:44] Mira, más que la haga, entiendan la cultura de primero emitir, o sea, solicitud de la orden de compra y después que la facturen.
+- [25:51] Se supone que después tiene que hacer como con una aprobación de jefatura cuando uno hace el resultado de servicio.
+- [25:56] Sí.
+- [26:00] Pero hay que, para lo poquito aquí, es importante que no la rechacen o no, en el sistema.
+- [26:03] O sea, claro, que no se rechace, que queda ahí en algún estado...
+- [26:07] No, va a quedar en pendiente hasta los ocho días.
+- [26:10] Ya después, si no se rechaza, va a pasar automático como aprobado.
+- [26:15] Ah, claro.
+- [26:17] Ya, pero que sí se destaquen los documentos recibidos que estén referenciando una orden de compra
+- [26:23] que no esté aceptada, o que esté dentro del flujo de pendiente de aprobación,
+- [26:28] Y que también los documentos que no están referenciando orden de compra también que se detallan, ¿cierto?
+- [26:34] Sergio, consulta.
+- [26:36] Sí.
+- [26:37] ¿Existe la opción de que nosotros tengamos como una alerta si nosotros ingresamos a algún route que necesitemos saber que han emitido factura?
+- [26:48] ¿Una alerta?
+- [26:50] Claro.
+- [26:50] Por ejemplo, tú cuando inicies sesión te diga, oye, tienes... Ah, pero de un route específico.
+- [26:55] Claro, un route específico.
+- [26:57] ¿Qué está pasando?
+- [26:58] ¿Quiénes invitan alguna factura como la próxima y me pidieron la factura?
+- [27:05] ¿Qué factura? ¿La de la ficha?
+- [27:06] No, con la que te dije que te quedaba la ficha, porque en cualquier momento puede caer.
+- [27:10] Sí, sí, claro.
+- [27:12] ¿Pero para qué necesitaría esa alerta? ¿Para poder aceptar o reclamar?
+- [27:16] Para reclamar.
+- [27:20] Mira, nosotros en su momento implementamos en un RPE que, por ejemplo, si...
+- [27:25] Entonces, reglas de automatización, llamémoslo así, que cuando recibían una factura, pero esto era para el otro lado, de las aprobaciones, cuando recibían una factura de tal proveedor, N, podían registrar N root, de forma automática se aprobaban esas facturas.
+- [27:41] ¿Por qué? Porque, por ejemplo, eran facturas de servicios, por ejemplo, no sé, de la luz, el agua, el proveedor de internet, que siempre eran los mismos montos y los mismos routes. Entonces, lo dejaron de forma automática.
+- [27:56] ¿Se podría implementar esta regla de automatización para ambos lados? Para que ustedes puedan registrar los proveedores o los routes de quienes se van automáticamente a rechazar.
+- [28:08] Lo que pasa es que no necesitamos que automáticamente se rechacen, sino que se emite una alerta de que se emitió un documento nomás.
+- [28:17] ¿Cómo se emitió? ¿Se recepcionó?
+- [28:20] Claro, como que en XRoot se emitió un documento.
+- [28:30] Ya, ok. ¿Podríamos agregar ahí algo para registrar?
+- [28:33] Es que no hubo incidencia.
+- [28:34] Sí, porque puede ser que sea un video con el fondo.
+- [28:38] Una alerta.
+- [28:41] Sergio, un poco lo que habla María Jesús, que usted no lo ve,
+- [28:43] Entonces, de repente, nosotros trabajábamos mucho en libre consignación ya, y trabajábamos mucho con el tema anticipo de todo el tema. Entonces, hoy día la industria está súper como maleada, por así decirlo, y por eso a Agustín yo le mando la reforma al productor, que se llevó por 10, y de repente fue y te mandó una nota de débito de 10 más, y después hubo un bailo de mandato, y todo, y te dice, oye, que si yo te hice una factura y me la recibiste, p***, cachái.
+- [29:08] Entonces, está bien maleado, hartas cosas. Entonces, como que realmente hay que estar súper atento con ciertos productores, sobre todo cuando estáis como en disidencia y cuestiones así, pueden ir, te pueden generar una nota de crédito, pasó y después van, te demandan que no les paguen la factura.
+- [29:23] Eso es lo que está la cuestión.
+- [29:53] Por ejemplo, ¿ustedes registran algún correo? Bueno, aparte que te aparezca la alerta acá en la plataforma, podríamos agregarla en la campanita de arriba, que también te notifique por correo de que recibiste un documento de tal proveedor.
+- [30:09] Sí, sí, sí, como un tipo de alerta especial, ¿no es así?
+- [30:16] Claro.
+- [30:17] Eso es especial, alguna cosa que sea como parametrizable en el minuto, porque obviamente es el tiempo que dure y después lo elimináis y es por un tiempo.
+- [30:25] Claro. Sí, mira, nosotros, la Universidad Católica de Silva Enrique, que es cliente nuestro, también le pasó algo similar, pero el proveedor emitía la factura, esperaba los ocho días y iba a un factoring.
+- [30:40] Sí, porque esa es la típica, porque lo están factorizando y después el factoring se va contra ti y todo eso.
+- [30:44] Claro.
+- [30:45] No, no, está bien tener ese tipo de alerta.
+- [31:24] El tema de los ocho días, no sé si es muy bueno.
+- [31:31] Sí, porque hay que hacer rechazarlas, pero si te pasan los ocho días es cuando perdiste.
+- [31:36] ¿Pero qué pasa si te la invita al contado?
+- [31:39] Lo que pasa es que la invita al contado...
+- [31:41] Ya te la voy a cobrar porque está malada.
+- [31:43] Sí, sí.
+- [31:44] No, por eso, pero lo que pasa es que si él...
+- [31:48] Claro, si se pone...
+- [31:50] ¿Te la invita al contado?
+- [31:52] Claro, te la invita... ¡Ah, ya!
+- [31:55] Te entiendo. Legalmente no podría ser nada.
+- [31:58] No, se le vio al contado.
+- [32:02] Sí, porque las que están al contado pasan directo al libro.
+- [32:06] Sí, porque pasan directo, pero están pagados al contado.
+- [32:10] Ya, claro.
+- [32:11] No va a tener disputas cuando haya crédito.
+- [32:18] Ya, pero ahí hay que implementar esas alertas, no hay problema.
+- [32:23] Pero yo creo que es como un tipo de notificaciones especiales,
+- [32:27] es una cuestión así, o sea, no...
+- [32:30] ¿Podría aparecer aquí en el menú así como un alerta que sea como si fuera algo de acá? Porque me imagino que igual es crítico, que sea diferenciado de las alertas normales que van a llegar en el flujo de los demás que...
+- [32:42] Claro, porque ya son media crítica, porque son especiales, son cosas puntuales que estáis esperando, lo estáis esperando, digamos.
+- [32:48] Claro, quizás yo creo que sería bueno aquí donde aparezca el menú dejar como una alerta y que le llegue al rol que tiene que ver esa emisión que llega.
+- [33:03] Pero esa notificación puede ser a N usuarios, por ejemplo, puede ser a María Jesús, a Mario y a otro más.
+- [33:10] Por eso podría ser al rol, me imagino, a los usuarios que están dentro del rol.
+- [33:14] Cachái, por ejemplo, hoy día, por ejemplo, hay mucho proveedor también, o sea, casos que se puede usar la alerta, hay mucho proveedor que está objetado por impuestos internos, cachái, y para nosotros es súper malo tener un productor objetado por impuestos internos, cachái, o un proveedor, perdón. Entonces, cuando hay uno, por notificar, cuando hay una factura de persona, avísame, entonces uno puede rechazarla, aceptarla, llamar al proveedor y empezar a hacer varias cosas.
+- [33:36] Oye, ¿y ahí cómo se enteran ustedes que está objetado?
+- [33:39] Porque te objetan el formulario 29. Y es más, hoy día el impuesto interno saca una pestaña que te dice específicamente quién es el que ha tenido que dar.
+- [33:56] Así que te has fijado que sale al lado de los pendientes, ahora sale como observado, ¿no? Una cosa así.
+- [34:02] Ah, ya, ya, sí. Ah, es sobre eso.
+- [34:04] Eso, entonces te lo pincháis y te dicen qué proveedores que han tenido que observar en otro formulario.
+- [34:09] Es más, el otro día, en uno de los formularios, el costo interno lo hizo reintegrar el IVA de ese proveedor. Y yo le dije, pero vos, ¿por qué? Si yo se lo pagué. Le mostré los comprobantes de pago pagado y nos hicieron sacarlo igual del formulario.
+- [34:27] Ah, porque a lo mejor no recuperaron el IVA por parte del proveedor, pues. No lo pagó.
+- [34:32] Justamente, porque él no pagó el formulario. O tuvo algún problema, pero yo sí se lo pagué. Entonces, fue la disputa. Y yo decía, ¿por qué voy a perder yo la plata por alguien que no concluye tributariamente?
+- [34:40] Y al final, para no seguir peleando, tendríamos que ir sacando la pata de afuera.
+- [34:47] Oye, ¿y no saben si esa información la entrega GoSocket?
+- [34:52] No creo. Yo creo que es información de impuesto interno.
+- [34:57] Porque más encima el proveedor puede ir a ver su situación y lo arregla en el tiro.
+- [35:08] Claro, aquí se maneja una lista negra de proveedores.
+- [35:11] No, aquí se maneja una lista negra de proveedores.
+- [35:12] Imagínate, te voy a pasar de la venta de seis que estoy inventando,
+- [35:15] Pero a lo mejor, anda, sabes, por ese motivo, te pasó algo, o tu contador se le olvidó pagarte 3 días, y de repente yo te llamo y digo, Sergio, ¿sabes qué me estáis pareciendo? Como, como perdí el teléfono, de repente te fuiste, te diste el puente, no habías pagado 3 meses de guía, lo pagaste, lo pusiste al día y listo. Y fue porque tu contador, o justo te cambiaste de contador, y tú no sabías que tenías que pagar el guía. No fue con mala intención, por así decirlo, ¿cachái?
+- [35:37] Ya entiendo. Ok. Entonces, nos va la lista negra.
+- [35:53] Ya. Carlos, bueno, nosotros habíamos, bueno, anotado algunas dudas sobre el, sobre tesorería, ¿era o no?
+- [36:03] Sí, con respecto a si se debía también incluir la asociación el centro de costo al momento de contabilizar la cartola que se carga.
+- [36:17] Anotamos lo que te servía, para que lo eches.
+- [36:20] Lo que pasa es que una de las cosas que se le iba a pedir era que nosotros pudiéramos cargar la cartola y en base al mismo movimiento ir contabilizando ahí.
+- [36:32] Para que se vaya contabilizando el movimiento.
+- [36:34] Pero el asiento no es el asiento, no es el asiento de costo.
+- [36:37] ¿El asiento de la cartola?
+- [36:38] Sí.
+- [36:39] Porque usted le va a hacer banco contra cuenta por pagar.
+- [36:41] No, lo que lleva es código financiero.
+- [36:44] Eso es.
+- [36:45] ¿Solo código financiero?
+- [36:46] Sí.
+- [36:46] Para el flujo caja, nada más.
+- [36:47] Ah, perfecto.
+- [36:48] Así está actualmente.
+- [36:49] ¿Teníamos la duda si es que había que asociarlo también al...?
+- [36:52] No, porque al final el banco contrapuenta por pagar, no sé si lo veía incontablemente.
+- [36:56] Carlos, lo que pasa es que el movimiento del banco va con el código financiero,
+- [37:00] pero la contrapuenta donde nosotros contabilicemos el movimiento sí va con detalle,
+- [37:05] ya sea proveedor, cliente o cuenta de gasto.
+- [37:25] Esa era la única duda que teníamos, Sergio, con respecto a lo que vendría a ser con tesorería.
+- [37:30] Si mal no me equivoco, sí, parece que sí.
+- [37:32] Ok. Carlos, mira, ¿le podría mostrar lo del tema de la nómina de semana de pago a Talumbe, cierto?
+- [37:41] Sí.
+- [37:43] Estoy en reunión. Estoy en reunión, no puedo.
+- [38:08] Apagado, apagado.
+- [38:10] Un pequeño problemita.
+- [38:15] Ahora sí, creo que en el cededor sí no tengo cargado cartolas ni trabajos.
+- [38:25] Pero, si me da un momento.
+- [38:27] Levanto el local de inmediato y le hago una muestra.
+- [38:31] Ok.
+- [38:40] Es una magia.
+- [38:42] Aquí las bambalinas.
+- [40:43] No, no tengo dados cargados, Sergio.
+- [40:45] Tendría que realizar una carga para que lo muestren.
+- [40:49] Ya, ok.
+- [40:50] Bueno, cuando tengan la carga podríamos enviársela a Lupe en el grupo.
+- [40:55] Sí, sí.
+- [40:56] Para que entienda de que no tienen la carga.
+- [41:08] ¿Será la empresa? ¿O no tiene la carga? ¿Cuál estás?
+- [41:13] AlmaWeb Sports.
+- [41:14] AlmaWeb Sports.
+- [41:17] Si estaba al menos la carga local que tenía, estaba en AlmaWeb.
+- [41:20] Tendría que revisar ahí, si es que a lo mejor también hay algún problema visual.
+- [41:26] Ok.
+- [41:32] ¿Pero estamos en el mismo lote de servidor?
+- [41:36] ¿Podríamos aprovechar igual lo que nos queda de reunión para revisar el mismo lote de servidor?
+- [41:42] ¿Sí?
+- [41:43] Bueno, vamos a partir con lo que vendría a ser la carga de la cartola.
+- [41:51] Aquí tenemos la cartola de junio, por ejemplo.
+- [41:55] Y bueno, así sería la vista.
+- [41:57] Esto que se ve acá vendrían a ser los taps.
+- [41:59] Mire, me voy a permitir aquí abrir la misma cartola.
+- [42:04] La que le piden es tu, ¿cierto?
+- [42:15] Es que al principio le mandaban con la cartola.
+- [42:18] Aquí está, nos mandaron la de junio.
+- [42:21] Por lo que observamos, cada uno de los tabs del Excel corresponde a una de las empresas que también va en los montos y también con los bancos, por lo que al momento de cargarlo, esta vista de acá vendrían a ser los tabs.
+- [42:36] Como se darán cuenta, como vienen tanto de AlmaWeb y de ALM, aquí da la opción, y también discrimina por sí solo, pero en caso de que alguna vez cambie algún nombre o algo, da la opción de incluir, en este caso sería AlmaWeb Export, los tabs que existen dentro de este Excel, la opción de seleccionar el banco y la moneda correspondiente,
+- [42:57] Que por lo general debería hacerse de manera automática, pero comprendiendo que es un Excel que igual se podría modificar a mano, da la opción de realizar esta asignación de forma manual.
+- [43:08] Y aquí, por ejemplo, podemos ver el total de los movimientos que trae la cartola y estos pequeños filtros que vendrían a ser por moneda para ir viendo cada uno de los montos en particular que trae cada moneda, por así decirlo.
+- [43:23] De hecho, aquí también nos surgían las dudas.
+- [43:25] Sí, dígame.
+- [43:26] Sorry, sorry. Oye, Carlos, por ejemplo, si se habilita algún, el de ALM USB, el check, el uno de los primeros, ¿también se habilita el field? Ah, ya, ok.
+- [43:38] Exacto. Se va grabando por lo que se va seleccionando acá.
+- [43:42] ¿Y cómo se va? ¿Por un instante va a estar todo junto?
+- [43:44] Sí, sí, por el instante que se le envía.
+- [43:49] A ver, pero por empresa o se va a tropecar en cualquier parte.
+- [43:53] Pero ahí usted escoge la empresa.
+- [43:54] No, también, pero no tiene que cambiarse como de empresa para poder descargarlo.
+- [43:57] Sí, hay que hacer el cambio, por ejemplo, aquí si estamos en AlmaWeb, se va a cargar lo que vendría a ser AlmaWeb, por eso...
+- [44:02] Claro, después de todas las empresas metidas.
+- [44:07] Exacto, entonces siempre, lo que siempre predomina es la empresa en la que estamos actualmente, de hecho aquí si gustan, como pueden ver, se ve la empresa actual que estamos.
+- [44:16] Y ahora parece que tenemos, parecen todas, digamos.
+- [44:19] Exacto, viene porque carga el Excel y entendiendo de que en algún momento este nombre podría cambiar, como por ejemplo aquí en el banco Scotiabank.
+- [44:26] Sí. Oye, pero por ejemplo, imagínate, yo a un usuario le pincho el ALM, estando en AlmaWeb, igual me deja este usuario? Sí, lo va a dejar. Lo va a dejar porque esto está pensado más que nada como podrían venir nombres como este, que es Banco Escocho, pero realmente el nombre no discrimina si es que ALM o AlmaWeb, que vendría a ser este de acá.
+- [44:50] ¡Gracias!
+- [45:20] O sea, la idea de no llegar y hacerlo es algo.
+- [45:26] Oye, ¿no tienen aquí el loco?
+- [45:34] Mira, sí, por temas de seguridad no tienen nadie expuesto a los bancos.
+- [45:42] Hay empresas que, por ejemplo, siempre están en servicio de conexión al banco.
+- [45:48] Ya tú registras tu cuenta, por ejemplo, Fintox, Chipax, que ellos, tú como registras tu cuenta bancaria en la plataforma de ellos.
+- [45:59] En Fintox lo he visto.
+- [46:01] ¿Cómo?
+- [46:02] En Fintox lo he visto.
+- [46:03] Claro, pero en Fintox, ojo que en Fintox tiene dos modalidades, uno que es sincronización cada una hora y cada cuatro horas, ¿ya?
+- [46:11] No tienen totalmente en línea, ¿ya?
+- [46:17] En cambio, Chipax, por ejemplo, que yo he visto, sí, ellos están totalmente en línea con el banco.
+- [46:23] Y prestan el mismo servicio.
+- [46:27] Pero obviamente depende, por ejemplo, Finto tiene eso, que cada una hora, como lo más recurrente,
+- [46:32] tiene un plan, un valor X.
+- [46:34] Y el de cuatro horas es más barato.
+- [46:40] Pero en sí, los bancos directos o ellos como que te expongan una API para consultar, no lo tienen.
+- [46:47] Y aprovechando la instancia, nos había surgido una duda porque detectamos que, por ejemplo, en esta cartola venía un movimiento que era del mes anterior.
+- [47:00] Sí, lo que pasa es que yo dejo ese movimiento porque ahí, con ese saldo, comienza el mes.
+- [47:08] Ah, perfecto.
+- [47:09] Que es el saldo del mes anterior.
+- [47:12] Perfecto. Entonces, se debería cargar también, incluir acá, ¿verdad?
+- [47:16] No.
+- [47:17] Perfecto, entonces lo que venga con el mes anterior debería excluirse.
+- [47:47] Y que nosotros ya la hemos hecho, ¿ya? Entonces, pero igual eso depende mucho del costo mensual que este lleva hacia la empresa. Porque igual, por lo visto, son varias cuentas las que van a registrar.
+- [48:04] Sergio, consulta con el tema anterior de la discriminación por fecha.
+- [48:12] Como es un control interno, lo vamos a eliminar y que sí se pueda leer la fecha anterior, que sí lo cargue.
+- [48:21] Que sí lo cargue.
+- [48:21] Ah, ya, roll back, roll back.
+- [48:24] Se borra, entonces.
+- [48:26] Ponemos ese monto para saber con qué va a terminar, pero no es que venga en la cartola.
+- [48:32] ¿Cómo?
+- [48:32] No entiendo.
+- [48:33] Por ejemplo, ese es el 8 del 5.
+- [48:35] ¿No viene la cartola ya en blanco?
+- [48:37] Es lo que viene en la cartola en el pasado.
+- [48:38] Pero por eso, por eso, si tú la ingresas ahí, ya vas a tener el sistema.
+- [48:41] Entonces, si en la cartola siguiente ya va a tener el sample inicial de ese pasado, entonces no debería leerlo de modo.
+- [48:47] No, no debería leerlo.
+- [48:48] Claro, pero hay movimientos que sí te vienen, por ejemplo, el 31 de diciembre y por ser feriado al día siguiente te caen con fecha reciente.
+- [48:55] Pero en la cartola te queda...
+- [48:57] ¿Por el 31 de diciembre?
+- [48:58] No, no, te queda con el 31 de diciembre.
+- [49:00] ¿Te queda con la fecha del mes siguiente?
+- [49:01] Me pasa mucho, supongo, de los días viernes que yo pago después de las dos y ya ese pago pasa para el día lunes.
+- [49:09] ¿Esto se lo va a la cartola del mes de julio?
+- [49:12] En este caso, no sé si, por ejemplo, por eso que comentan, sería bueno aquí también en el periodo tener la opción de seleccionar el día desde hasta para poder incluir eso en caso de que sea necesario.
+- [49:26] Sí, podría, para poder subirla semanal.
+- [49:30] Igual de todas formas, como se dan cuenta acá en el menú, aquí se cargan por moneda y por banco,
+- [49:42] pero aquí siempre se hace el anexo del archivo desde donde se cargó.
+- [49:48] Porque aquí esto es una carga, estos tres representan una carga en sus diferentes monedas, por así decirlo.
+- [49:54] Como estábamos en AlmaWeb y estaban todas con Banco de Chile, solamente aparecen tres,
+- [49:58] Bueno, Mario y Agustín, no sé si me escucharon la pregunta
+- [50:29] ¿Tienes alguna pregunta sobre el tema de la conciliación automática con Star?
+- [50:34] Sí, no sé si te caché, pero yo prefiero que sigamos así en primera instancia, por último, en el Acris lo sincronizamos, porque si no, muchos factores ahí de repente capaz que, prefiero que lo echemos a andar y de repente en el Acris del próximo año vamos y lo automatizamos.
+- [50:52] Perfecto.
+- [50:57] Sigamos en el módulo.
+- [51:02] Dale, Carlos.
+- [51:03] Perfecto.
+- [51:06] Esto vendría a ser la vista de la conciliación bancaria, donde aquí se verían los movimientos, y por lo que tengo entendido y lo que habíamos acordado, esta era solamente vista de información, ¿verdad?
+- [51:28] Sí, los movimientos contados con lo que te ingresa la cartola.
+- [51:35] Perfecto, y aquí como también se había solicitado, está el filtro para dejar solamente los pendientes o todos. En este caso corresponden todos los que están pendientes.
+- [51:42] A ver, ahí, ¿cómo sería la conciliación?
+- [52:26] Por cada movimiento nos podríamos poder, por movimiento, contabilizar, ¿no es cierto?
+- [52:31] Exacto.
+- [52:32] Ya, entonces una vez que nosotros ahí ingresamos la cuenta a la que va, se confirma la contabilización y automáticamente se concilia.
+- [52:39] Y aparece acá, exactamente.
+- [52:40] Ah, pero ¿y no se va a conciliar con algún documento tributario?
+- [52:47] Sí, se pueden conciliar con documentos tributarios, pero ahí iría la cuenta proveedor y se indica el tipo de documento y el número de factura.
+- [52:54] Y eso, ahí por ejemplo, casi, ¿a dónde estaban? ¿Contabilizar, Carlos? Ahí, contabilizar, por ejemplo, si ya tienen la cuenta de proveedor, ¿sería bueno que puedan seleccionar la factura?
+- [53:13] Sería perfecto que puedan seleccionar la factura.
+- [53:16] Porque yo, bueno, nosotros hemos implementado el que le llamamos el match perfecto, que quiere decir que coincide el root del proveedor y el monto de la factura, que sería como un match perfecto de los documentos recibidos.
+- [53:33] Y el matching perfecto que sería solamente con el root. Y puede ser que la factura tenga una diferencia de 1, 2, 3 pesos, o esté inaugurando el 50% del proyecto.
+- [53:47] Sergio, ¿te hago una pregunta?
+- [54:20] Una nómina de pago que ya...
+- [54:50] Claro, que la nómina rebaje cliente contra una cuenta que se llame conciliación de cartola.
+- [54:58] ¿Y la cartola después se concilia contra la nómina?
+- [55:03] O muy difícil, ¿no es bien?
+- [55:06] Porque hacen más fácil por monto.
+- [55:10] Sí.
+- [55:10] O sea, puede llamar a los...
+- [55:13] Pero hay que estar en una discusión contable un poquito, si es que no es...
+- [55:16] Sí, sí.
+- [55:18] Y usar una cuenta puente.
+- [55:20] Lo que pasa es que si la nómina la vas a respetar con los pagos, se puede contabilizar el tiro.
+- [55:24] Sí, pues.
+- [55:24] Ya, entonces, no necesitaría que tú le hicieras 20 monedas y los 20 monedas efectivamente los vas a pagar.
+- [55:31] Sí, pues, y si hay que modificar la nómina y sacar la nómina de qué pagamos.
+- [55:33] Claro, pues, la nómina definitiva sería contra el egreso del tío.
+- [55:37] Sí, pues.
+- [55:38] Y se lo bajaría en el tiro todo lo que son egresos de los tíos.
+- [55:43] Y la cuestión es que haga un asiento que haga...
+- [55:44] Pero en quién está bien un chavo, porque él se iba a calzar.
+- [55:47] Sí.
+- [55:47] Y eso se iba a hacer.
+- [55:48] Sí, pues, y ahí se hace el cárcel.
+- [55:49] Se va a hacer con la cartola, se van a hacer todos esos movimientos automáticos en la cartola, las contabilizaciones, y tú puedes irse con una nómina de pago y te va a respetar la fecha de vencimiento.
+- [56:04] Claro, y ahí usted descarta.
+- [56:06] Usted la va a descartar.
+- [56:07] Exacto, te la va a armar sola, entonces te va a dar una propuesta de todo lo que está vencido, y tú piqueas todo lo que efectivamente está de pago, y eso se va a pagar, y eso se genera un ingreso.
+- [56:15] Y ese ingreso después hay que tenerlo acá en la conciliación.
+- [56:22] Ya, bueno, por eso, usted no haría el pago, ¿qué es lo que le decía?
+- [56:26] La conciliación no se le da directamente contra el cliente, sino, por ejemplo, ya usted sacó la nómina, ¿verdad?
+- [56:30] Estoy mirando, de los 20 sacó 10, todo lo mismo, ¿ya?
+- [56:32] Y que eso que usted le haga un asiento entre el cliente, no se le haga contra el banco, que se le haga al cliente contra una nómina.
+- [56:39] ¿Por qué tiene el asiento de apuente?
+- [56:41] Porque tiene el número de documento referenciado al tiro.
+- [56:43] Por eso, entonces, si tú aprietas ahí, confirmar nómina, ahí se va a contabilizar al tiro, no necesitaría el cuento, porque hay que tener la factura, tener el cliente, tener el monto.
+- [56:52] Necesitaría, en general, el ingreso automático.
+- [56:54] Entonces, va a ser contabilizado.
+- [56:56] Ah, ahí te dice contabilizarlo ahí, y no acá.
+- [56:58] Yo lo contabilizaría ahí.
+- [57:00] Ahí.
+- [57:01] Sí.
+- [57:01] Sí, porque ahí no se mueve, y en general, ahí está yendo yendo el ingreso.
+- [57:05] Y los cobros chicos van a tener que hacerlo manual, ¿no? Como un pago manual.
+- [57:08] Ah, ya te entendí.
+- [57:41] ¿Cachái, Sergio?
+- [57:45] Sí.
+- [57:46] ¿Contabilizas con la nómina, no con la cartola?
+- [57:48] Sí, porque la nómina ya tiene todos los documentos que pagaste.
+- [57:51] Sí, ya referenciaste todo, no tienes que hacer nada.
+- [57:54] Ambas, ambas, sí. Porque la nómina son egresos y nosotros también contabilizamos en ingresos.
+- [57:59] Ah, de egresos.
+- [58:05] Ah, estoy pensando.
+- [58:14] Mirá, la idea es como que, porque la noca se va a meter al móvil y va a ver todo lo pendiente.
+- [58:19] Sí.
+- [58:19] Entonces ella va a poder segregar qué paga y qué no.
+- [58:21] Exacto, es lo mismo que hacemos hoy día.
+- [58:51] Porque una vez que nosotros subamos la cartola, esos movimientos van a estar cruzados.
+- [58:57] Pues si tenemos, hay que ese pago del DSEI, por envía al monto.
+- [59:02] Por envía al monto.
+- [59:04] Es que el monto se deshaga más de, no sé, terminando varios días y luego después de irle a mí.
+- [59:09] Pues me están a tu bien.
+- [59:15] Estoy seguro que el sistema se ha ganado, ¿verdad?
+- [59:17] Usted no se va a hacer con RUT, el banco.
+- [59:20] Bueno, si se cuenta la comisaría, ¿verdad?
+- [59:22] Es que por RUTE había que bajar la de transferencia, las transferencias que hice en ese momento.
+- [59:29] Y ahí me las baja con RUTE.
+- [59:36] En consulta de transferencia, Agustín.
+- [59:38] Ahí se baja con RUTE, ¿no?
+- [59:40] Ahí se baja con RUTE, porque ahí la bajo yo cuando tengo gusto en algo.
+- [59:44] ¿Pero no está en los ingresos?
+- [59:46] No.
+- [59:47] ¿Es solamente transferencia?
+- [59:48] Es solo transferencia.
+- [59:49] ¿Cómo te lo pago?
+- [01:00:21] Es que entonces aquí debería quedar como está Agrosoft, pues, que se salen los contabilizados, las de los nóminas de pago y los movimientos bancarios, lo va a ir consiguiendo por fecha de pago, ¿no?
+- [01:00:35] Sí, yo creo que la fecha de pago es la mejor.
+- [01:00:42] Si me perdón, es que no nos queda muy descarido, ¿no? O sea, que si hay uno por uno, por ejemplo, hay que usar el contabilizador y que hay que ir a ciento por ciento.
+- [01:00:49] No es que sea en diciembre, en noviembre, hace una locura.
+- [01:00:52] O sea, actualmente lo hacemos, ¿sí?
+- [01:00:53] No sé si sea, pero me está mostrando que no se llama así.
+- [01:00:57] Entonces, ¿cuánto tiempo dedicas solamente a hacer el asiento de uno por uno?
+- [01:01:05] Entonces, hoy estamos cambiando al digital, al mouse, pero igual es alto.
+- [01:01:11] Es que sí, pues ahí, para que la gente avance, es que eso es fenómeno.
+- [01:01:15] Entonces, ahí después hay que poner un filtro, poner contabilizar, ¿no?
+- [01:01:18] O conciliar, apretar el botón de conciliar.
+- [01:01:22] Salir con todo.
+- [01:01:59] Hay un problema ahí, ese yo creo que va a tener que ser uno a uno.
+- [01:02:03] Es que los ingresos igual son muy pocos, no son tan pocos.
+- [01:02:08] No, es más, es más, a ver que...
+- [01:02:10] Sí, Agustín, ¿por qué somos de las empresas que lo único que hacen es pagar?
+- [01:02:15] Sí, todo lo que hacemos sería por el dinero.
+- [01:02:25] Y ahí, por ejemplo, ¿cómo a usted se le ocurre aquí, por ejemplo, no sé,
+- [01:02:30] estos son los movimientos de X cartola?
+- [01:02:33] ¿Y qué son egresos? ¿Seleccionar todos esos egresos y asociarlos a una nómina?
+- [01:02:41] Claro.
+- [01:02:43] ¿Y esa selección tiene que calzar?
+- [01:02:47] Sí, a la perfección.
+- [01:02:49] Ya. Entonces eso habría que validarlo igual.
+- [01:02:57] Claro, nos faltó revisar la nómina, porque ahí, claro, para ver cómo se va a contabilizar la nómina y...
+- [01:03:03] Lo que pasa es que...
+- [01:03:07] Entonces, por nómina de pago, tú vas a hacer un movimiento, por ejemplo, de 20 facturas, y cada factura va a ser un movimiento del banco, en una fecha específica. Entonces, al final, cuando tú subas la cartola, eso ya va a estar contabilizado. Entonces, eso ya debería parecer conciliado, porque tenía el monto y la fecha exacta.
+- [01:03:26] Es que por eso, al final, no va a haber un problema de elegir cuál es cuál, porque las nóminas de pago son específicas en el día y el monto.
+- [01:03:35] El tema es los ingresos.
+- [01:04:05] Es que lo mismo que la salida va directamente a la cartola y te arregla un paso.
+- [01:04:09] O sea, yo creo que no, pero para que estén las dos de todas maneras, pues sí que hay que desarrollar algo completo.
+- [01:04:14] ¿Te tinca, Sergio, no?
+- [01:04:17] No, escuché muy bien.
+- [01:04:19] En la tercera línea igual como tenemos una nómina de pago, hablando de ingresos, cachái, que hay una pestaña también donde vamos a hacer el ingreso de algo, independiente aparte de la carga de cartolas, pero por un tema de que quede más completo, ¿no?
+- [01:04:33] ¿Tú dices para los ingresos?
+- [01:04:35] Sí.
+- [01:04:35] ¿Tú dices como una nómina de ingresos y eso después acá en...
+- [01:05:13] Y ya tenemos que hacer ese movimiento.
+- [01:05:47] Bueno, acá en cartolas.
+- [01:06:34] Eso es real cartola, ¿cierto?
+- [01:06:46] Esto deberían ser datos demo.
+- [01:06:52] No, no, no, pero para ver aquí, o sea, van a respetar, ¿no es que está la conversión del CLP y dólar?
+- [01:06:57] No, no está la conversión.
+- [01:06:59] ¿Por moneda?
+- [01:07:00] Sí.
+- [01:07:05] Por banco, por ejemplo.
+- [01:07:10] Y eso sería lo real que está en el banco.
+- [01:07:12] Porque, claro, no puede que tú pagas la suma de los bancos, porque lo que te corta es el voto pagado.
+- [01:07:18] Eso es, ¿eh?
+- [01:07:22] Eso entendí.
+- [01:07:24] Así entendí.
+- [01:07:26] Porque el tiro voy a saber cuánto disponía en cada...
+- [01:07:32] Carlos, sácanos de esa duda, por favor.
+- [01:07:48] De si es que está por moneda o por banco.
+- [01:07:51] Sí, claro, si es por banco o es lo que hay en el banco independiente de la moneda.
+- [01:07:56] Por lo que tengo entendido es lo que está en el banco, pero tendría que confirmárselos bien cómo se realizó la implementación de esto.
+- [01:08:03] Sí.
+- [01:08:03] ¿Pero cuál sería el ideal de ustedes? ¿Sería que fuera por banco y por moneda o solo por uno de los dos?
+- [01:08:10] Por banco, lo que pasa es que cada, tenemos banco en peso, ¿cómo está ahí? Y necesito saber cuánto es lo que hay en cada banco.
+- [01:08:22] Ser como, entonces sería como tener banco y tener las monedas dentro de ese banco, ¿verdad?
+- [01:08:27] Lo que pasa es que en el flujo de caja nos interesa saber cuánto se gastó independiente del banco, pero igual necesitamos en otra pestaña que aparezca cuánto tengo en cada banco.
+- [01:08:44] Claro, pero en el flujo de caja solamente nos interesa saber cuánto fue lo que se gastó, o cuánto llevamos consumido en tal fecha.
+- [01:08:51] Pero que, por ejemplo, donde esté cartolas, tengamos un dashboard que diga cuánto hay por banco.
+- [01:08:57] Según lo ingresado al sistema.
+- [01:09:02] Y abajito debería ver, por ejemplo, el concepto Banco Moneda.
+- [01:09:10] Y aquí en el detalle, ¿qué tendrían que visualizar ahí, María Jesús?
+- [01:09:18] ¿A dónde?
+- [01:09:19] Abajito, en la tabla donde está el listado.
+- [01:09:23] O sea, ahí lo ideal sería visualizar los movimientos que he hecho.
+- [01:09:26] Por ejemplo, no sé, que esto se alimenta del código financiero de los movimientos del banco.
+- [01:09:32] Entonces abajo sería, por ejemplo, visualizar ingresos, no sé, si estaba en AlmaWeb, venta cereza, costo de materia prima, los códigos financieros que le pongamos al movimiento.
+- [01:09:48] Ah, ya, ok.
+- [01:09:52] Si quiere usted puede compartir un poco la carta.
+- [01:09:56] Está mandando el formato que sacamos nosotros, por formato, o sea, para que se entienda qué es lo que es.
+- [01:10:02] Perfecto.
+- [01:10:04] Todo así, por cierto, las ventas, bien.
+- [01:10:07] Todo, ahí va, va como yo me gasté en el mes, pues, y en este, principalmente.
+- [01:10:12] Sí, por cierto, sí, sí.
+- [01:10:16] Sí, sí, sí, yo me acuerdo que este, pero, mira.
+- [01:10:20] Y desde aquí no deberían llegar a, por ejemplo, a todas esas facturas de proveedores, ¿o sí?
+- [01:10:24] Lo que pasa es que ahí se agrupa, porque aquí lo que uno ve es lo que gastó en el concepto, servicios básicos, servicios de packing, pero no si por ejemplo en servicios de packing tengo 50 facturas. Eso ya lo veo en el detalle del reporte del código financiero.
+- [01:10:45] Entiendo. Eso pasa para reportería.
+- [01:10:57] ¿Se sabe por empresa cuánto sale todo esto?
+- [01:11:01] ¿Se sabe por empresa cuánto sale todo esto?
+- [01:11:06] No sé.
+- [01:11:08] No, si todo eso es que es de recarga, seguro que eso me interesa en algún lado por teoría, porque...
+- [01:11:13] Entonces, arriba de todos los indicadores sería por banco o por tipo moneda, ¿cierto?
+- [01:11:18] O sea, arriba los indicadores serían, por ejemplo, los 100.000 pesos, que son, no sé, 98 dólares y 700 yuanes.
+- [01:11:33] Así como está ahí, está bien.
+- [01:11:36] Ah, pero, ahí me perdí. Por ejemplo, esos 100.000 pesos o 100 dólares van a corresponder a una sola cuenta de un banco.
+- [01:11:49] Claro.
+- [01:11:51] ¿O tendría que ser el totalizado de todos los bancos?
+- [01:11:54] Es que es el totalizado, en el flujo de caja es el totalizado.
+- [01:11:58] Por eso te decía que al final si gastaste 100.000 pesos, claro, en dólares son 98 dólares y en yuanes son, no sé, 800 yuanes.
+- [01:12:07] Claro, pero abajito aparecen los bancos.
+- [01:12:10] Si se dan cuenta, Cuba Banco, Banco Chile, y eso sería solamente por un desglose por esa moneda por banco
+- [01:12:20] ¿No es necesario mencionar el banco?
+- [01:12:24] No, acá hay el código financiero.
+- [01:12:26] Sí, manda el código financiero.
+- [01:12:27] Porque, por ejemplo, acá cuando hacemos el flujo de caja, sacamos el totalizado nomás de los bancos.
+- [01:12:33] Y aunque sea en dólar o en peso, yo después mando el informe en peso o no.
+- [01:12:37] En peso.
+- [01:12:38] Ok.
+- [01:12:40] Totalizado.
+- [01:12:43] ¿Te va a mandar el informe de flujo de caja que hacemos?
+- [01:12:47] Ahí te va a quedar mucho más claro al final, con lo que necesitas ver aquí.
+- [01:12:51] Ya, perfecto. No sé si lo van a enviar al grupo WhatsApp o al correo.
+- [01:12:56] Sí, lo vamos a ir obteniendo en la reunión.
+- [01:12:58] Claro, vos estás ahí presentando.
+- [01:13:01] Ok. Y la María Jesús mencionó algo que en otra pestaña, la verdad que no lo recuerdo bien,
+- [01:13:17] ¿en otra pestaña ves el detalle o por banco?
+- [01:13:21] Oiga, en cartolas, por ejemplo, Riga, ¿podrían haber unos indicadores que digan cuánto los saldos por los bancos?
+- [01:13:29] Claro, ahí sí.
+- [01:13:30] Ah, ya.
+- [01:13:30] ¿Cartola entonces saldo por cada banco?
+- [01:13:39] Sí.
+- [01:13:41] Sí, porque vamos a ver, al tiro sí tenemos dos cuadros.
+- [01:13:47] ¿Y por moneda, cierto?
+- [01:13:49] Sí, ahí manda el banco y la moneda cae en el banco.
+- [01:13:54] Ok.
+- [01:14:07] Ya, ya, ya.
+- [01:14:08] Pucha, yo creo que con eso ya tenemos harta peguita por nuestro lado.
+- [01:14:15] Ah, mira, el otro que quería conversar con ustedes, quería ver la forma de dividir la reunión semanal.
+- [01:14:25] Por ejemplo, si podemos coordinar, no sé, por lunes reunión para ver puntos de contabilidad, el martes reunión para ver puntos de tesorería.
+- [01:14:38] ¿Puesto específico? No sé si por módulo.
+- [01:14:42] ¿Cómo están de tiempo?
+- [01:14:46] Siempre falta tiempo. Pero no vamos a ir al final, vamos a ir por módulo al final.
+- [01:14:51] Sí, para poder ir ordenándonos, por ejemplo, lo que es venta, la verdad que nos funcionó bastante bien la semana pasada,
+- [01:14:58] que nos enfocamos solo a venta. Venta, integración con GoSocket, nota de crédito.
+- [01:15:04] Sí, me acuerdo que se va a ordenar, por lo tanto, el teléfono.
+- [01:15:06] Sí, vamos a ver.
+- [01:15:07] ¿Ya? Entonces, bueno, ahí, dado que ya tenemos como responsable por módulo,
+- [01:15:15] los vamos a ir coordinando en el grupo de WhatsApp, ¿les parece?
+- [01:15:19] Perfecto.
+- [01:15:23] Yo creo que ya, la verdad, yo desde mañana me voy a desconectar un ratito, hasta el próximo lunes.
+- [01:15:31] Ah, no.
+- [01:15:32] Así que, así que, me tardó descansar.
+- [01:15:36] Voy a dejar trabajando y voy a descansar.
+- [01:16:06] Ok, las voy a sacar entonces de AlmaWeb, las voy a mover al CUA de nosotros para que hagamos estas correcciones que ya tenemos anotadas.
+- [01:16:18] Pero por ejemplo la nómina semanal que yo me acuerdo haberla visto la semana pasada, esa yo creo que está bastante avanzada, entonces yo haría esa tarjeta para que la revise Lupe y pueda mover la factura de semana y ver que se visualice bien en la semana que la asigna.
+- [01:16:51] Ya bueno, muchas gracias por su tiempo. Que tengan un feliz 18.
+- [01:16:59] Igualmente.
+- [01:17:00] Igualmente.
+- [01:17:01] Buen fin de semana.
+- [01:17:03] Buen fin de semana.
+- [01:17:05] Buen fin de semana.
+- [01:17:06] Para ti.
+- [01:17:08] Ah, ya.
+- [01:17:10] O bueno, si quieres mañana te hablo, no hay problema.
+- [01:17:13] Sí, no hay problema.
+- [01:17:16] Ya bueno, muchas gracias.
+- [01:17:17] Que estén muy bien.
+- [01:17:18] Adiós.
+- [01:17:19] Adiós.
+- [01:17:19] Adiós.

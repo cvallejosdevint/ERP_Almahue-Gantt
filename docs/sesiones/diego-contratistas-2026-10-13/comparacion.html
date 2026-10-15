@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contratistas de Diego - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-10. Los commits de Diego Madrid del 22 y 24 de septiembre ya están en el front local. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. Para mostrarlo, sigue <a href="recorrido.html">el recorrido</a>. La demo del 23/09 está en <a href="../avances-2026-09-23/avances-2026-09-23.md">avances del 23/09</a>.</p>
+  </header>
+
+  <section>
+    <h2>Menú</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-menu.png" alt="Menú Contratistas con Asociación labores y Tarifas / labores" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-menu-marcado.png" alt="Menú con Contratista en Parametrización, marcado en verde" />
+      </figure>
+    </div>
+    <p class="nota">Parametrización gana el ítem Contratista. En Contratistas, Asociación labores sale del menú (esa ruta abre Proformas) y Tarifas / labores pasa a llamarse Tarifas. Auditoría queda debajo de Traspaso y cierre, solo con el permiso contratistas:audit; en esta ventana queda junto al usuario del pie. En el listado, el alta ya no pide una especialidad fija (cosecha, poda, embalaje): el catálogo pasó a Parametrización. No se abrió Auditoría ni se guardó nada.</p>
+  </section>
+
+  <section>
+    <h2>Parametrización · Contratista</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-parametrizacion.png" alt="Parametrización en Monedas, sin ítem Contratista" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-parametrizacion-marcado.png" alt="Pantalla Contratista con pestañas de catálogo, marcadas en verde" />
+      </figure>
+    </div>
+    <p class="nota">La pantalla no existía. La izquierda es Parametrización como estaba, abierta en Monedas, sin el ítem. La derecha es el catálogo nuevo: Labores, Actividades, Asociaciones, Unidades de control y Tipos de contrato. PACK-CER ya estaba cargado. No se apretó Nueva labor.</p>
+  </section>
+
+  <section>
+    <h2>Contratistas · Tarifas</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-tarifas.png" alt="Alta de tarifa con unidad hora, hectárea o caja" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-tarifas-marcado.png" alt="Alta de tarifa con tipo de contrato y unidad jornada o trato, marcados en verde" />
+      </figure>
+    </div>
+    <p class="nota">El alta pide tipo de contrato. La unidad deja de ser hora, hectárea o caja y pasa a jornada o trato; el combo está abierto. No se apretó Crear. En esta empresa la grilla del después está vacía: no se creó una tarifa para la foto.</p>
+  </section>
+
+  <section>
+    <h2>Contratistas · Ingreso diario</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-ingreso.png" alt="Ingreso diario sin tarjetas de resumen" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-ingreso-marcado.png" alt="Ingreso diario con cuatro tarjetas de resumen, marcadas en verde" />
+      </figure>
+    </div>
+    <p class="nota">Aparecen cuatro tarjetas: pendientes de proforma, monto del mes, en proforma o facturado, y overrides de tarifa. El ingreso del 06-10 de Cuadrillas Packing Export Ltda sigue en 8 jornada, $1.200 y $9.600. La columna Tarifa aplicada muestra la tarifa de esa combinación. No se apretó Nuevo ingreso.</p>
+  </section>
+
+  <section>
+    <h2>Contratistas · Proformas</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-proformas.png" alt="Nueva proforma con número libre y monto neto digitado" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-proformas-marcado.png" alt="Nueva proforma con correlativo, ingresos marcados y cálculo, en verde" />
+      </figure>
+    </div>
+    <p class="nota">El número queda PF-00001 y se asigna al guardar. Se eligió Cuadrillas Packing Export Ltda: el ingreso pendiente del 06-10 viene marcado y el neto ($9.600) sale de esa suma. Antes el monto se digitaba y el periodo se escribía a mano. El aviso naranja pide tipo de contrato antes de guardar; no se completó. No se apretó Crear. Facturar, que puede asociar un registro o generar una OC, no se abrió.</p>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>

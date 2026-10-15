@@ -1,0 +1,16 @@
+[
+  {
+    "id": "2026-10-13-1027",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-13-1027\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-13-1027\\transcripcion.md",
+    "title": "Reunion 2026-10-13 10:13 (Whisper large-v3 + lexico)",
+    "source": "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-10-13 102742.mp4"
+  },
+  {
+    "id": "2026-10-13-1213",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-13-1213\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-13-1213\\transcripcion.md",
+    "title": "Reunion 2026-10-13 12:04 (Whisper large-v3 + lexico)",
+    "source": "C:\\Users\\c\\Videos\\Screen Recordings\\Screen Recording 2026-10-13 121345.mp4"
+  }
+]

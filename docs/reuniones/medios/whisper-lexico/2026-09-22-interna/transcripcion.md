@@ -1,0 +1,659 @@
+# 2026-09-22-interna (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-22-interna\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] Lo muestro yo, hace merxel, probamos juntos.
+- [00:03] Vale.
+- [00:05] No sé si te parece, Carlos, o...
+- [00:07] Sí, sí, sí.
+- [00:09] Ok.
+- [00:11] Parametrización.
+- [00:13] ¿Qué es lo que tenemos?
+- [00:15] Dejé aquí contratistas, Carlos, como habíamos hablado.
+- [00:18] Donde van a tener, por ejemplo, las labores, las actividades, las asociaciones correspondientes.
+- [00:23] Unidad de control y el tipo de contrato.
+- [00:27] Eso ya quedó ahí en parametrización, ahí quedó más bonito, quedó mejor.
+- [00:35] Eso es uno.
+- [00:37] Dentro de aquí vamos a empezar a hacer un poquito el viaje.
+- [00:41] Por ejemplo, creamos una labor, creamos una actividad, las asociamos y aquí tipo de contrato.
+- [00:49] Ah, pero después es con eso, son con las cuentas.
+- [00:55] Eso no ha cambiado nada.
+- [00:57] Listado.
+- [00:59] ¿Un nuevo contratista? ¿Una nueva labor? ¿Una nueva asociación para ir viendo?
+- [01:06] Así es, eso sería lo ideal. Lo que quiero ver, es que justo iba a entrar a eso,
+- [01:11] que no me acuerdo si empezaba aquí del listado del contratista, porque primero creo que es especialidad.
+- [01:16] Una labor, vamos a hacer una labor.
+- [01:21] El código va a ser Carlos, digo, ¿no? Y código José. No, no va más.
+- [01:37] Sí, pone Juan nomás.
+- [01:40] Y esto va a ser CodCort.
+- [01:51] Tenemos el CodCortar, aparece aquí, nos vamos a actividades, vamos a poner el CodCort.
+- [02:12] Core. Tenemos. Ahora vamos a las asociaciones. Por ejemplo, si nosotros buscamos code core, y podemos aquí, viste que no sale nada. Aquí ya podemos asociarla. Entonces buscamos lo que es. Ahí falta un buscar. Porque no sale infinito la web. Actividad corta. La asociamos y ya quedaría ahí.
+- [02:49] ¿Qué más? Unidad de control. Vamos a crear una, que no creo que la ocupemos, pero solamente crear una, que por ejemplo podría ser ECT, que podría ser hectáreas, que era lo que te mencionaba eso, de hectáreas.
+- [03:07] Y tipo de contrato, nuevo contrato, código, code, cortar, nombre, cortar, que se nos cuenta. Estos son más guascontables en realidad.
+- [03:25] ¿Y ese código es probablemente tal del contrato?
+- [03:30] Sí, así como el identificador único de ese contrato en sí, así como a vista del cliente.
+- [03:37] Vale.
+- [03:39] Y ahí podría ser cualquier cosa que le estime conveniente seguir.
+- [03:45] Ahí tenemos todo lo que tenga que ver con los parametrización de contratistas.
+- [03:49] Vamos al listado.
+- [03:51] Dentro del listado, por ejemplo, vamos a poner uno más.
+- [03:55] Aquí ya puse las validaciones, CTOs que faltaban.
+- [04:01] Por ejemplo, 19, 9, 14, 16, 7, 2, 6.
+- [04:05] Estos cuándo van a escribir mal, pero si pasan para el otro, se van a tirar solos.
+- [04:10] Si te decís, ah, pero si tú pones, ponen 19, 9, 14, guión 6, también. Ah, pero si ponen, para, para, para, para, ni le ponen un punto, un punto entre medio, cualquier cosa también los va a seriar.
+- [04:28] La razón social, vamos a poner paréntesis 2, porque tengo uno. Vamos a poner aquí que es poda.
+- [04:38] ¿Y eso de especialidad, labor, de dónde se hereda?
+- [04:40] Especialidad y labor es de contralista labores.
+- [04:52] Aquí está, por ejemplo, la poda, yo diría que uno quiere transporte.
+- [05:01] Transporte, actividades, ¿y a dónde hay que hacer transporte?
+- [05:12] Porque debería haber sido de aquí.
+- [05:24] Especialidad, parece que es el ingreso diario.
+- [05:25] No, pues, bueno, tiene que, porque aquí ya estoy llamando. Transporte, sanidad, embalaje, paréntesis, especialidad, labor, claro, ahí, lo más probable es que está, bueno, me parece que está tirando en duro, bueno, pero debería estar tirándolo de acá, las labores del otro lado, de acá, porque estoy seguro de que agregue ese transporte, ese transporte que es una superficie.
+- [05:57] Esa lista es gigante, porque te salen como 5 opciones de ahí nomás.
+- [06:01] Sí, por eso me pareció raro, borrón.
+- [06:08] Yo pensé que tenía un límite o algo así, pero no.
+- [06:13] Voy a ver eso, voy a ver eso antes de subirlo.
+- [06:16] Vale.
+- [06:17] No, para dejártelo bien.
+- [06:18] Pero esa voy a debería llamar a la labor del otro lado.
+- [06:21] Vamos a poner entonces 19, 9, 14, 15...
+- [06:23] En ese caso podría ser el hombre labor nomás, una especialidad.
+- [06:27] Claro.
+- [06:30] Ahí yo tenía transporte, cachái, yo creía que transporte.
+- [06:39] Yo no me acuerdo como lo haría yo igual.
+- [06:41] Porque igual me parece extraño porque tengo entendido que igual, porque aquí están diciendo los contratistas, ¿no es cierto?
+- [06:50] Claro.
+- [06:51] Me parece extraño igual porque me parece que igual pueden hacer más de una labor los contratistas, como para asociarlo uno a uno.
+- [07:00] No sé si aquí sería bueno como agregarlo. ¿Eso ya estaba antes?
+- [07:03] No, no, en el video mencionaban de que se pudiera enlazar los contratistas a una especialidad.
+- [07:13] Pero, claro, ahí hay dos formas de verlo, porque podría tener una especialidad, pero podría hacer hartas cosas.
+- [07:20] Pero, o puede ser especializado en varias cosas.
+- [07:24] Y esa era una de las dudas que me salió, porque, claro, se puede trabajar de ambas formas, como tú dices.
+- [07:30] Entonces, hay que poner muchas especialidades dentro de un contratista, o que ese contratista, como tú bien dices, pueda hacer muchas cosas, pero tenga una especialidad dentro de él.
+- [07:42] Porque esto, al fin y al cabo, se va a ir viendo, parece que aquí en ingreso diario, por ejemplo, aquí tengo el contratista, que son las labores del campo del sur, que tú te diste cuenta que son, por ejemplo, de poda, pero aquí yo puedo seleccionar otro tipo de labor.
+- [07:58] Sí, por eso no le veo el sentido de que tenga una especialidad, la verdad.
+- [08:34] Sí, yo creo que si no tiene incidencia más allá.
+- [08:39] Claro, cachái, por ejemplo acá, estos tienen, lo había hecho yo en Campos, Campos Pasteles, aquí tenían, estos eran, aquí salen las labores, cachái, cortar, poda, esas cosas, poda, la actividad, poda de invierno, y ahí te trae automáticamente el precio unitario, que está así, luego el precio unitario está 22.000 y es por hora.
+- [09:05] Aquí te vamos a tirar también si es que es por esta área o qué sé yo. Aquí tenés jornada, trato y horas.
+- [09:14] 6.40, en este caso. Ya voy a crear sin problema. Eso, ingreso de grado.
+- [09:25] Aquí vamos a pendiente, porque este ingreso estamos diciendo ya, mira, estamos diciendo que vamos a gastar 22 lucas con 40 horas.
+- [09:36] Entonces, ahora hay que asociarle, por lo que tengo entendido, una proforma.
+- [09:46] En este caso puede ser acá, el número, campos, el número, número, número, puede ser cualquier basura,
+- [09:53] si está con el identificador o no.
+- [09:57] Contratista del sur, activo de contrato, el contrato que estábamos viendo en el número anterior,
+- [10:06] periodo contable, que sea de este mes, la moneda y esta. Estos fueron los ingresos pendientes que
+- [10:14] hicimos en el otro lado, el ingreso diario. Estamos diciendo que eso lo debemos. Estas
+- [10:18] tareas tienen. Entonces yo a esta nueva proforma, yo le voy a agregar ese ingreso.
+- [10:25] Y ahí lo creo yo. ¿Dónde quedó el hijo de perra? Creo que era. Le puse puro el número.
+- [10:44] Y ahí quedó como borrador.
+- [10:55] En ese caso, ya estamos, si yo voy aquí al ingreso diario, debería quedar asociado.
+- [11:01] Porque yo ya le asocié una proforma a este nuevo ingreso.
+- [11:10] Ya teniendo acá, vamos a pasar a lo que es la definitiva.
+- [11:21] Se enmascara como definitiva la proforma.
+- [11:25] Eso.
+- [11:26] Entonces estoy diciendo que eso sí ya se cuenta porque antes estaba como borrador.
+- [11:30] Y ahora como está definitiva, debería estar pasando considerándose en el asiento contable.
+- [11:34] Y aquí aunque diga factura, formas compatibles, en realidad es como un registro de compra, no se genera una factura.
+- [11:49] Esto es para asociar la factura que ya existe a este nuevo registro de compra, a esta nueva proforma que habíamos hecho.
+- [12:01] ¿Y por qué pudiste seleccionar, básicamente, como proformas compatibles si le diste de facturar a una?
+- [12:05] Sí, esa weá no estaba ayer, weá. Este weá me lo hizo recién. Y es una muy buena pregunta. Sí, esta weá se tuvo que ver con el truco de por qué esta weá yo no la tenía.
+- [12:18] Por formas compatibles, ni siquiera cuando la acepto me deja de recordar.
+- [12:22] Número de factura, que aquí ya vendría siendo como la factura que nosotros ya habíamos creado en el otro lado y que ya estamos asociando a este registro.
+- [12:29] Por ejemplo, aquí ya sería, no sé, la factura 5.000.
+- [12:32] Allá entonces le ponemos registrar, le dará esa, y de esa manera queda solamente aquí como visualización de que esta ya está facturada con el folio 5000, que por ejemplo deberíamos tener acá.
+- [12:52] ¿Estos güeyes tienen folio, no? ¿O estos güeyes no tienen folio? No, con la factura. Claro, y los robos en orden de compra.
+- [13:10] A ver acá. ¿O yo no puedo ir a ver los folios, güey? Acá. No. Acá. No.
+- [13:22] ¿Veis lo que hacen los botones primero, güey?
+- [13:26] Soy un usuario cualquiera, güey. ¿Y qué dice, ve?
+- [13:31] Espera un poco, chicos. ¿Cómo?
+- [13:33] ¿Cómo?
+- [13:34] Debo cobrar pago.
+- [13:35] ¡Ya!
+- [13:37] Ya volví.
+- [14:16] Por ejemplo, si yo aquí como supervisor, contratista, cualquier cosa, yo cierro, por ejemplo, traspasar y cerrar,
+- [14:24] quiero decir que este periodo ya lo voy a cerrar, que no voy a aceptar que ni nadie más digite nuevos ingresos diarios.
+- [14:34] Si es que está cerrado aquí. Si uno de estos dos está cerrado.
+- [14:36] Si es que el cierre contratista está cerrado, no se puede ingresar y el periodo de contabilidad tampoco.
+- [14:41] Tienen que estar si los dos abiertos.
+- [14:42] Y eso para asegurar de que no puedan ingresar datos extras dentro del periodo contable o fuera del periodo contable.
+- [14:54] Entonces, por ejemplo, bueno, y aquí todo esto queda en auditoría, todo lo que se hace aquí.
+- [14:58] Por ejemplo, voy a poner aquí el gloss opcional.
+- [15:02] Si no lo cierro, ¿cierto? Va a quedar cerrado y va a quedar con el asiento contable asignado.
+- [15:08] Y acá abajo, por ejemplo, si yo fuera ingreso diario y quiero hacer un nuevo ingreso diario, no me debería dejar.
+- [15:19] Porque está cerrado.
+- [15:20] El periodo de contratista de este mes ya está cerrado.
+- [15:35] Tal vez el periodo va a seguir abierto para las demás funcionalidades,
+- [15:37] pero a lo mejor los de contratista no van a querer que nadie más meta datos,
+- [15:40] entonces ahí se hace como un cortafuegos.
+- [15:45] Desde aquí.
+- [15:48] En caso de cualquier cosa hay que ponerle un motivo.
+- [15:55] De ahí podía abrir y...
+- [15:57] ¿De quién abrió?
+- [16:00] Sí.
+- [16:06] Todo se ve aquí en la auditoría de esta manera.
+- [16:09] Y aquí te dice cuál fue la última.
+- [16:11] Debo al madero.
+- [16:12] Sí, pero entre comillas eso es lo que sí voy a arreglar eso, porque igual aquí tenía algunas dudas, pero ya, lo primero que tengo que cambiar, en vez de libro de compra, que pase a órdenes de compra, eso es uno, y lo otro que tú me habías dicho era sobre acá, esta, especialidad labor, quiero decir que lo veía innecesario, ¿cierto?
+- [16:45] Entonces, ¿esto lo quito? ¿Lo dejo? ¿Qué decís tú?
+- [16:52] No, quítalo de la especialidad.
+- [16:54] ¿Sí? ¿Para no meterle más hueá? Ok.
+- [16:57] Mira, Dígito, igual ayer me había hecho una vista de las reuniones, más que nada las transcripciones,
+- [17:05] y le pedí al cursor igual que en base a eso me hiciera un checklist.
+- [17:09] Entonces, podríamos aprovechar ahora de que le pases al cursor este checklist y te diga que está pendiente.
+- [17:17] Ok.
+- [17:18] Pero estos son netamente pedidos del cliente en la reunión que viste tú y la otra donde participó el otro loco quizás no lo hayas visto.
+- [17:25] Entonces lo más probable es que no hayan diferencias, ¿cachái?
+- [17:28] Ok, excelente. Pero si es así, que lo arregle el tiro, claro.
+- [17:33] Puedo entrar y decirle, proforma, factura.
+- [17:51] Voy a buscar a Wee, te vuelvo, ¿no?
+- [17:52] De nomás.
+- [18:04] No puedo ir.
+- [18:05] Me lo paso en texto plano, no puedo ni cuando lo paso por WhatsApp, queda todo junto.
+- [18:18] Estoy pidiendo que lo separe por último, por guión, cada punto.
+- [18:22] ¡Esa!
+- [18:22] Y también...
+- [19:11] Así que ya, ahora que se llegue la...
+- [19:17] O sea, le dije que mañana.
+- [19:22] Dito, déjale corriendo eso, y también te voy a preguntar qué dudas en específico tienes,
+- [19:26] porque mañana va a participar la Lupe en la reunión que vamos a hacer,
+- [19:30] que es la que está encargada de este módulo.
+- [19:31] Lo más probable es que no haya visto nada, entonces la idea es que le dejemos las dudas
+- [19:35] y que se comprometa a responderlas después, ¿por cachái?
+- [19:37] Y yo también las voy a dejar en la tarjeta de Trello.
+- [19:42] Ok, ok, ok.
+- [19:44] Ok, yo creo que sería más que podrían ser los KPI, qué tipo de KPI necesitarían, si es que necesitarían a lo mejor exportar información, por ejemplo, no sé, quieren salir a saber todas las tarifas de tal hueón, o de cachái de tal contratista.
+- [20:07] Aquí tengo un, yo he probado con estos nomás, pero obviamente aquí van a salir un chillón.
+- [20:15] Entonces no sé si van a exportar o van a necesitar eso para algo, y en qué formato, si lo necesitan en Excel, en PDF.
+- [20:22] Entonces, así como a nivel general, ¿qué cabellos necesitan por página? ¿Qué información, si es que necesitan exportar, si es que necesitan agregar filtros?
+- [20:33] Claro, con un filtro específico, no sé, vos sabés que de repente esto se le ocurre...
+- [20:38] O totalizados específicos también en la parte de arriba que vendrían a ser los KPIs.
+- [20:42] Claro, claro, claro.
+- [20:44] Ah, entonces tienen que ser en cubano a los jugadores.
+- [20:47] Claro, es que más que nada esas cositas que son como los detalles, pero los detalles son los más guayabos, al fin y al cabo.
+- [20:54] Así es.
+- [20:57] Y periodo.
+- [21:00] Ajá, ahí están los periodos, mira.
+- [21:03] Acá abajito te salen.
+- [21:04] Bueno, y falta la corrección de que pase directamente a...
+- [21:10] Al tiro de compra, así, eso ya lo está haciendo incluso.
+- [21:15] Ahí lo está relajando el rey, la bendita peche.
+- [21:20] Hay un plugin que podéis conectar cursos con Google Drive, bueno.
+- [21:47] Sí, sí, sí, sí, sí, sí.
+- [21:52] Ese deberían usarlo para que el buen igual le da las transcripciones.
+- [21:55] La transcripción hace poco le hice una modificación para que fueran más legibles para la inteligencia artificial.
+- [22:04] Había una que era bacán porque te mostraba como el minuto, el segundo, y lo que dijeron en ese minuto o segundo.
+- [22:11] Sí, sí, esa fue la última modificación.
+- [22:14] Sí, yo me fijé en esa y no pesqué el otro porque siento que eso es como lo más fideligno y mientras iba viendo el video iba leyendo en realidad porque primero quise comprobar si es que realmente estaba bien,
+- [22:25] Pero los errores que tenía eran como muy pequeños, por ejemplo, era como, por ejemplo, eran de estas palabras que, no sé, separadas suenan igual que juntas.
+- [22:44] Sí, son correcciones súper tontas. Y de hecho antes pagaba un software, pero ahora lo hago con una IA, con el Ollama, y queda mucho mejor, bueno.
+- [22:51] Listo, se acabó, fíjense la mano, bueno, si lo que no, inventarlo, la huevón.
+- [22:57] Sí, no, y la cuestión del plugin, por ejemplo, este checklist está hecho en base a todas las reuniones,
+- [23:02] entonces, como igual estáis viendo reuniones que son de hace dos meses, dentro de las demás,
+- [23:09] se van pisando algunas cosas que pidieron de una a otra, vos cachái.
+- [23:13] Entonces igual hay como sugerencia, pues si pueden conectarse al drive y dejarle un skill que diga, en la carpeta tanto del drive están las transcripciones,
+- [23:28] el guión igual le puede decir así como ya, ahora de lo que yo apliqué, valida en qué parte de la transcripción se pidió y si es que faltó agregar algo.
+- [23:38] Y me indícame dónde lo dijeron.
+- [24:08] Anoto las cosas y después, como tengo tanto en la cabeza, hay guas que obviamente no las leo y siento que o que le falta algo o que quedó mal anotado.
+- [24:27] ¿Cachái?
+- [24:32] Claro.
+- [24:33] Sí, bueno.
+- [24:36] Aparte te succiona cualquier vitalidad
+- [24:37] a esas que me dan de reunión.
+- [24:40] Así es. Y por ejemplo, no sé,
+- [24:41] yo terminaba una reunión, me iba a aplicar
+- [24:43] al tiro todo lo que estaba recién
+- [24:45] cocinado en la reunión para que no se me perdiera
+- [24:47] y después hacía las validaciones
+- [24:49] con las transcripciones y ahí esa guá me salvó
+- [24:51] caleta de no tener tantas
+- [24:53] recesiones o en tanto de volver atrás.
+- [24:57] Excelente.
+- [24:58] Ya, terminó de hacer un checklist.
+- [25:00] Te presento lo mío, porque a las 4 de la noche, Rubrión.
+- [25:03] De nomás.
+- [25:06] Diego, pícalo.
+- [25:09] Ya, guau, ya, ya, ya.
+- [25:10] Mira, me falta esto nomás, seguro esto.
+- [25:12] Precio dentro del proceso, sin tarifario.
+- [25:15] Avance y asistencia del día sin precio.
+- [25:18] Tarifario editable en la misma grilla.
+- [25:20] Filtro de plataforma facturado pendiente.
+- [25:23] Aprobación de un supervisor al creador de editar proforma o trabajo diario.
+- [25:26] La factura del proveedor no cancela facturas por recibir.
+- [25:56] Se ve? Se ve? Voy para allá, voy para allá. Ya, vale, ya. Voy a poner la consola en caso de cualquier cosa. Ya, primero, libro de compras. Se eliminaron los botones. Libro de compras, bueno. Sí, está acá. Te lo voy a copiar.
+- [26:13] Ya, entonces, aquí si te fijas, bueno, esto se lo agregué porque es bonito, un filtro por defecto, va a seleccionar el tab que querís al iniciar.
+- [26:25] Si yo refresco, me aparece acá siempre en pendiente.
+- [26:30] Hermoso.
+- [26:30] Y seleccionaron cuando queráis.
+- [26:33] Después, tenemos los aceptados, que estos siempre tienen que pasar desde los pendientes.
+- [26:38] Ahora, puede ser que pase un aceptado directamente desde GoSocket, pero para ese caso tendrían que, estos locos, no sincronizar los aceptados por, ponte tú, 8 días.
+- [26:52] ¿Me cachái? Porque después de los 8 días un documento pasa a aceptar automáticamente.
+- [26:58] Entonces, puede ser que alguna vez vengan los aceptados si es que estos locos no usan este botoncito.
+- [27:03] Pero consulta porque, por ejemplo, no sé si te acordás lo que decía el Sergio, de que cuando dices aceptados son los que se aceptan solos en el servicio de impuesto interno.
+- [27:15] Es que pueden ser de las dos formas. Pueden ser aceptados en el servicio de impuesto interno automáticamente o lo pueden aceptar manualmente.
+- [27:25] Ah, vale. No sé si te acordás de que había dicho que había proveedores que le hacían órdenes de compra sin avisar.
+- [27:35] Entonces, tenía como una discusión ahí de que habían unos proveedores de que igual le emitían documentos y después tenían la pelea de que tenían que cancelarlo, de que no se aplicaban, por así decirlo.
+- [27:50] Es que ahí, después de los ocho días, si tú no rechazas tu documento, se acepta automáticamente por ley.
+- [27:58] Entonces, ahí estos locos tendrían que rechazarlo sí o sí.
+- [28:03] Ahora, nosotros, es que yo le había dicho al Sergio, nosotros podemos hacer una regla de rechazo, no sé, pues si es que en las facturas no viene ninguna referencia a orden de compra.
+- [28:15] Nosotros podemos hacerlo, pero eso tienen que decidirlo ellos.
+- [28:18] Sí, sí, sí, sí, eso lo tomo acuerdo.
+- [28:20] Ya, entonces esos serían los aceptados.
+- [28:23] Después tenemos los pendientes, que son, como te digo, estos documentos que me llegan, que están entre los 0 y 7,99 días de la aceptación.
+- [28:40] Entonces no están aceptados todavía y estos pueden ser rechazados o aceptados.
+- [28:45] Ahora voy a ahondar más en esta funcionalidad de pendiente cuando lo sincronice.
+- [28:50] Y bueno, los rechazados aquí pueden ser por dos motivos. Pueden ser que estén rechazados por SII, que no sé, porque tengan un error de esquema o que yo mismo puedo rechazar un documento por falta de mercadería. También puede ser. Vale. Y estos son todos los documentos ya que son los de estos tres. Ya no se incluyen los documentos manuales. Se eliminó todo eso. Vale, vale.
+- [29:15] Entonces, dicho eso, voy a sincronizar pendientes. Aquí si te fijas, Root Receptor es el mío, el de mi empresa. Y aquí selecciono el periodo que quiero y está por defecto precargado desde el primero de este mes hasta el día de hoy.
+- [29:32] Podríamos igual así como agregarle el nombre de la empresa, que estos locos son quisquillosos en ese aspecto, José.
+- [29:38] ¿El nombre Root? Sí.
+- [29:40] Sí, que salga el nombre ahí.
+- [29:41] Entonces yo le pongo un cho sincronizar y esto me lo voy a ir a buscar a GoSocket, está en modo real.
+- [29:49] Mira, GoSocket tengo uno pendiente.
+- [29:52] Ya, entonces, ahora igual le puse a esta basura que cuando le pegué a un sincronizar que le pegué a todos.
+- [30:00] Si te fijas, ahora todos tienen valores.
+- [30:04] Ya, entonces, acá tenemos la primera factura de compra pendiente.
+- [30:10] Si te fijas, dice si no sé en el XML.
+- [30:13] XML. Está validando que en cada XML tenga una referencia a orden de compra. Ahora, si yo me voy acá, primera funcionalidad. Vamos con Socket. Copiar. Si te fijas, ahí está copiado. Y el descargar, que descargue el archivo XML. Nada más que eso. Luego tenemos el del PDF.
+- [30:56] Son como lentas las llamadas a GoSocket, por lo menos local.
+- [31:05] Sí, el ambiente de Sandbox tiene menos recursos que la Shibucha.
+- [31:11] En la reunión delante, el Pablo me decía que la recepción se hace directamente en producción,
+- [31:15] pero como aquí teníamos los dos routes, le dio paja.
+- [31:20] No me lo dijo así, pero se sintió así.
+- [31:26] Oh, recursos, esto es mala mía, si lo estaba mostrando.
+- [31:31] Ya, pero paico, lo voy a revisar.
+- [31:32] Entonces, por ejemplo, si yo me voy a GoSocket, debería tener entonces ese folio 87, ¿no es cierto?
+- [31:38] Sí, vos.
+- [31:41] Ahí si querís validarlo.
+- [31:43] Dale, lo volví a traer al trapo en balinas, dale nomás.
+- [31:47] Después tenemos también... ¿qué es eso, no?
+- [31:50] Este es ALM Service, sí.
+- [31:54] Ya.
+- [31:55] Entonces después tenemos este botoncito, que es de aceptación comercial o rechazo.
+- [32:00] Aquí, si te fijas, este documento no tenía AOC, entonces no tiene ni una.
+- [32:08] Y aquí tengo que poner el motivo del rechazo o aceptación del documento.
+- [32:15] Aquí no voy a tocar ninguno de estos por mientras, hasta que veamos los otros dos pestañas.
+- [32:21] Entonces, primero, aceptados.
+- [32:22] Aquí si te fijas en aceptación no tiene, solamente te dice aceptado porque fue directamente sincronizado de GoSocket, entonces yo no puedo saber quién hizo esa aceptación, pero en el caso de que se haga una aceptación manual, es decir desde acá, ahí nosotros sí vamos a tener al responsable, el usuario que lo hizo y cuándo lo hizo y ahí sí se va a mostrar acá, que eso lo vamos a hacer en el ejemplo cuando lo acepte.
+- [32:50] Vale. Y también tenemos los otros dos botones que son el XML y PDF. Genial. A ver si es que funciona ahora esta basura. Ahí funciona. No sé por qué en el otro no funcionó. Pero aquí está la visual, puedes descargar el PDF. Eso.
+- [33:08] Después tenemos...
+- [33:12] Rechazados.
+- [33:15] Ya, ahora estos documentos rechazados deberían estar en GoSocket también, como rechazados.
+- [33:20] ¿Por qué la razón social es proveedor GoSocket?
+- [33:28] Eso se supone que es lo que viene en el XML, ¿eh?
+- [33:30] Porque yo, por ejemplo, me meto a ver en GoSocket y sale que el emisor sale AlmaWebExportSPA.
+- [33:38] Oh, tenés toda la razón.
+- [33:39] No estoy mostrando esto.
+- [34:10] Tenemos acá. Bueno, estas funcionalidades también son las mismas. No tiene mucha ciencia esto.
+- [34:22] Y ya, hagamos la aceptación de un documento. Esto sí se me demoró en un punto como seis minutos.
+- [34:33] Ahora lo traté de reducir con menos proceso y creo que demora un poquito menos de uno.
+- [34:39] A ver, mercadería recibida conforme.
+- [34:55] Igual hay algunos fix que me quedaron pendientes que me dijo el Sergio, pero esta es como la vista principal, las funcionalidades que va a incluir con todo.
+- [35:04] Y de hecho igual mientras no tengamos el feedback de verdad, estamos puro trabajando en la nada, al menos yo lo veo así.
+- [35:11] Mira, documento 87 aceptado, si te fijas en pendiente ya no hay nada, y en aceptado ahora hay dos, y ahora si te dice aceptado por Admin AlmaWeb, y una fecha.
+- [35:29] ¿Se te refleja ya un gusto?
+- [35:30] Sí, sí.
+- [35:32] Ya bueno.
+- [35:33] ¿Por qué me escucho?
+- [35:35] Cállate huevón.
+- [35:36] Ahí se cayó.
+- [35:37] No, tú cállate.
+- [35:40] Finalmente la esquizofrenia.
+- [35:41] Y eso. Eso sería más que nada. Ahora estoy implementando otras cosas como la validación contra la OC, que para eso igual necesito emitir un documento que tenga una OC aprobada, una OC que no esté aprobada, y tengo que hacer varias pruebas con eso.
+- [36:05] Mira, lo único que quizás podría decir que le faltaría a esto sería la fecha de recepción de GoSocket, pero no sé si es que vendrá en el XML esa info, no creo.
+- [36:18] ¿Tú le decís para la aceptación?
+- [36:20] Porque aquí en GoSocket viendo, vamos a dar captura a pantalla para que se entienda, viene con la fecha de recepción de GoSocket.
+- [36:27] Dame un segundo, un segundo que me están llamando.
+- [36:30] De lo más.
+- [36:37] De hecho, ahí sale esa 87 que está haciendo cosas aceptadas, po.
+- [36:42] Y no te lo aparecía con el botón verde.
+- [36:45] Botón verde, hate definition.
+- [36:46] Juegos son crack.
+- [36:50] Chuches son maravillosos.
+- [36:52] Con Chuchumare tengo miedo.
+- [36:54] No sé qué está pasando, guau.
+- [36:56] ¿Por qué, mi chan?
+- [36:59] Me estoy metiendo a...
+- [37:01] A Detemite y...
+- [37:04] No saben todos los sistemas, guau.
+- [37:07] No, qué rico.
+- [37:08] Chuchumare.
+- [37:22] Permiso, voy a comerme un heladito que me trajeron, bueno, antes de que se derrita.
+- [37:32] Antes de que se me derrita el helado.
+- [37:38] Así que, ¿qué más? ¿Qué más me faltó?
+- [37:41] Me di la imagen que mandé, José, no sé si la viste.
+- [37:48] GoSocket tiene fecha de recepción GoSocket.
+- [37:56] Ok, ya. Y fecha de recepción GoSocket, ¿será la misma fecha de recepción SII? No creo.
+- [38:07] Pero tú, ¿para qué querías esa fecha?
+- [38:10] Solo para tenerla como registro ahí, pues para que tengan un filtro rápido de ver las que llegaron en tal fecha, cachái.
+- [38:17] Porque aquí, si me pongo a pensar la fecha importante, sería la fecha de recepción SII.
+- [38:26] Sí, porque a partir de esa fecha, tengo yo que contar los ocho días para la aceptación automática.
+- [38:32] Exacto.
+- [38:33] Pero esa fecha de aceptación SI creo que no la tengo.
+- [38:46] Acá ganaron más lejos de la parada.
+- [38:49] Cago en la palabra, me quedo al tiro, José.
+- [38:51] Eso.
+- [38:52] Eso sí, lo apoyo.
+- [38:55] No sé qué, pero apoyo.
+- [39:42] Estoy viendo el ámbito local, está medio hueveado, pero ya tengo un script.sh para poder intercambiar entre el servidor de Detemite y el servidor Senku.
+- [39:59] Porque los settings tienen que ser distintos, no pueden convivir en el mismo espacio-tiempo.
+- [40:05] Entonces, en una rama tenemos un tipo de settings, en la otra rama tenemos otro tipo de settings, y estoy creando el SH para que cuando no pelee, porque el localhost, el bhost, también pelean.
+- [40:19] El GitHub como que reconoce que hay otro bhost y weá.
+- [40:23] Ya.
+- [40:24] Así que estoy ahí con esa mierda de...
+- [40:29] Ya, ya puedo cambiar entre un servidor y otro.
+- [40:33] Ya tengo eso.
+- [40:33] Pues ahí tengo ahí también en el mismo script para configurarles, bueno ahí te muestro la web, pero hay que verlo igual.
+- [40:47] No, pero por esto, si no lo tenéis listo, entonces mejor veámoslo mañana.
+- [40:53] ¿Por qué sí?
+- [40:55] Es que sí, porque si no nos vamos a tener que juntar a verlo o no.
+- [41:00] Es que también hay que empezar a atacar por donde ya se podría a lo mejor ver, que sería la base de datos.
+- [41:05] Es que por eso, ahí no vamos a poder levantarlo en local.
+- [41:14] Porque el local es lo que no tenemos listo.
+- [41:19] Tendríamos que estar subiendo local.
+- [41:20] Verlo en local, claro.
+- [41:22] Me faltaría poder verlo en el DataGrid y levantarlo local con el Champ,
+- [41:28] que en realidad eso ya lo estoy teniendo,
+- [41:30] pero me encontré con los problemas de los settings y de los vHost.
+- [41:35] Entonces eso ya me lo tengo solucionado, pero me falta, claro, levantar el modo local.
+- [41:38] Pero, si saco esta versión luego, podrían ustedes ya empezar a ver el tema de la base de datos, si al fin y al cabo hay que empezar por eso.
+- [41:49] ¿Y al final clonaste la base de T-MIT?
+- [41:51] Sí, están todas las bases de datos, con los últimos cambios y traje los de máster también.
+- [41:58] Ok.
+- [41:59] Pero ya, si no lo vemos mañana.
+- [42:03] Pero es que mañana tenemos que estar reunidos.
+- [42:06] ¿Tenéis reunión esto?
+- [42:08] Con todo hueco. Ah, esa, verdad. Y tengo que... ¿Ah? ¿Qué hora es esa? Ah, nueve parece. Verga. Sí, uy.
+- [42:25] ¿Cómo no es que me han sido atajada la noche para completar esa hueva mañana? A ver, sí, yo hoy día de la noche me quedo su buen rato, por si acaso.
+- [42:33] No estoy viendo, dime dónde te emite.
+- [42:36] Sí.
+- [42:39] No puede ser.
+- [42:41] O sea, eso y aparte, hoy día en la noche me voy a meter a BND.
+- [42:48] Muchas gracias.
+- [42:49] Al final su YouTube cambia.
+- [42:52] Ah, por fin me avisaste, huevón.
+- [42:54] Muchas gracias.
+- [42:56] Por fin, huevón.
+- [42:58] Es que el efecto antes lo que es, porque es feo, po.
+- [43:02] Oh, huevón, sí.
+- [43:02] Sí, todo lo que ha ocurrido.
+- [43:06] Pero baneado.
+- [43:07] No me deis permiso de descargar la cagá, se lo digo al culiao.
+- [43:16] Ya, un gel de luz.
+- [43:18] Entro igual, entro igual a la hueá y le hago cagar la mente.
+- [43:21] Carlos, descarga el gel de luz.
+- [43:24] El gel de luz.
+- [43:26] ¿Ya un gel de luz?
+- [43:27] ¿Qué va a cambiar otro juego?
+- [43:31] No, el gel de luz lo hemos tenido más rato.
+- [43:33] Juegamos Fortnite, o sea, perdón, un LOL, boludo.
+- [43:38] No lo tengo.
+- [43:38] No tengo ni cuenta para el LOL, con eso digo todo.
+- [44:08] Ya, entonces, eso, loco. Oye, Carlos, ¿no te quedó ninguna duda respecto a esto?
+- [44:18] Eh, no, no, no.
+- [44:20] Esculento.
+- [44:22] Con lo que se echa en la sincronización es el que trae los cambios, así que tengo que preocuparme de mañana la muestra no usarlo hasta que tenga que hacer la muestra, y si lo uso borra la base de datos nomás.
+- [44:35] Claro, y si querís que te salgan nuevos documentos pendientes, tenís que ir a la otra empresa y emitirle a este root.
+- [44:43] Vale, vale.
+- [44:49] Así que, habiendo dicho eso, voy a hacer push de todos mis cambios.
+- [44:54] Tienes que hacer la corrección.
+- [44:56] ¿Qué corrección?
+- [44:58] Razón social.
+- [45:00] Ah, claro, eso no.
+- [45:05] Eso era en el...
+- [45:06] No funciona el curso, Juan.
+- [45:08] No, no, no, quizá el improbador GoSocket.
+- [46:21] ¿Tengo miedo?
+- [46:23] Ah, no, ya me di cuenta que era.
+- [46:25] No tenés miedo.
+- [46:27] A la verga, maricón.
+- [46:29] Oye, José, con su attention, solamente has visto lo que vendría a ser el libro de compra, ¿cierto?
+- [46:34] Solamente esto, nada más.
+- [46:36] Vale.
+- [46:44] Aquí está.
+- [46:50] Imbécil.
+- [46:51] Imbécil.
+- [46:52] ¿Sabés cómo me dicen?
+- [46:53] Imbécil.
+- [46:54] Ahí está.
+- [46:57] Cliente de eBay.
+- [46:58] False.
+- [46:59] Puta tu hueá, hermano.
+- [47:00] Este es.
+- [47:11] Sele, Casterisco, Prompt, TBL, MD, este.
+- [47:40] Oye, en TBL Sistema se ve si pone el DPI o no, DPI o no?
+- [47:45] Debería ser sí.
+- [47:48] En esa o en módulo sistema.
+- [47:52] Ah, no, aquí está.
+- [47:54] True, true, listo.
+- [48:02] Ahora sí, nuestro.
+- [48:05] Vos, por favor.
+- [48:05] No me pesco, curso, ayuda.
+- [48:37] Le salió un cedible de una factura en dos hojas.
+- [48:43] Y eso es ilegal, porque es de multa.
+- [48:47] Entonces, Sergio dijo, la solución para eso es el dividir detalles.
+- [48:56] De ahí esa guapa la tiene que ver el Sergio, tan guapo.
+- [49:00] Pero ahora está diciendo, pásaselo el Diego.
+- [49:05] A ver, déjale que quede esa basura.
+- [49:12] Dile que se mueve un bicho, todavía se va esperando el cubano.
+- [49:14] Si esa guapa está lista.
+- [49:15] ¿Qué quieren que haga, huevón? ¿Está lista como de enero, huevón?
+- [49:20] Pero eso no tenía algo pendiente.
+- [49:25] ¿Probarlo, huevón?
+- [49:26] Sí, falta probarlo, huevón.
+- [49:31] ¿Qué falta, huevón?
+- [49:37] Por lo que veo acá, faltó feedback del Sergio.
+- [49:49] Yo no me acuerdo si lo puse en bloqueo. ¿Dónde lo dejé, huevón?
+- [49:52] En bloqueo. El Sergio en autobloqueo.
+- [49:58] ¿Y eso quedó en...?
+- [50:05] Incluso parece que ya me salí.
+- [50:07] ¿De esa tarjeta se lo va a hacer Sergio Sol?
+- [50:16] Le mando un pantalla a Sol de Gracia.
+- [50:25] Carlos, ¿cómo nos juega?
+- [50:29] Ahí está. Razón social, por si acaso, informativo.
+- [50:34] A prueba de...
+- [50:36] ¡Es el 25 de mayo!
+- [50:39] Y acá en esta zona...
+- [50:42] La weá.
+- [50:45] Ah, tengo que sincronizar de nuevo, pero...
+- [50:47] Deja de silencio.
+- [51:44] ¡Gracias por ver este video!
+- [52:28] Hola, conchola, no, no. Es que hoy día medio DT Emite me ha hablado.
+- [52:33] No te quería ni molestar. Incluso me ando arrancando de ti para que no me digas más pegas.
+- [52:39] Eres muy lento.
+- [52:40] Eh, pero me apaga, no corro.
+- [52:43] A ver, estimados, quisiera saber si dentro de los dos administradores que tengan el DT Emite, puede cada uno tener su diseño.
+- [52:53] ¿Qué?
+- [52:55] Yeah.
+- [52:56] O sea, que cada uno, qué, huevón.
+- [52:58] O sea, eso es un color rollipo, ¿no?
+- [53:01] Me refiero a que el doctor Felipe Castillo, otorrinolaringólogo,
+- [53:05] sus boletas de factura están con su logo y la doctora Katherine Bogdanic,
+- [53:11] mismas boletas, con la misma información, pero con el logo de ella de oftalmología.
+- [53:16] Ya, los datos serían los mismos, solo cambiaría el logo.
+- [53:20] El caso es que se pueda atender un costo. ¿Cuál es el valor?
+- [53:23] Ya.
+- [53:25] Está bueno, sí, está bueno.
+- [53:26] No, pero...
+- [53:29] ¿Pero el SI te deja hacer eso a huevo?
+- [53:33] Es que...
+- [53:35] Claro, es que es una empresa, no deberían tener más de un diseño de PDF para el mismo documento, pero la verdad no sé si el SI tendrá como multa por eso.
+- [53:51] Es que claro, sería como una empresa que se divide en dos, estaría diciendo dos tipos de facturas con distintos nombres, no sé, mismo root, pero con distintos nombres.
+- [54:05] Al menos con GoSocket no se puede.
+- [54:08] Claro, lo que he aprendido de esta hueá es que no se puede.
+- [54:12] Está igual, está complejo, no creo que sea.
+- [54:14] Está complejo, pero sería bueno, sería bueno algo así, pero no creo que sirva para, yo creo que tendría que ser un multi-empresa nomás para esa hueá, ¿o no?
+- [54:20] Sí.
+- [54:23] No, si tengo multa empresa.
+- [54:25] ¿Existe multa empresa por eso? Por eso te digo que sería eso.
+- [54:29] Sí.
+- [54:29] ¿La solución?
+- [54:30] ¿Veis, Carlos?
+- [54:31] Sí, mira.
+- [54:32] Mira, ya limpié los registros. Si te fijas, ahí está todo en cero.
+- [54:37] Puedes sincronizar.
+- [54:39] Bueno, ya no tengo pendiente, fue rechazado.
+- [54:42] Sincronizar.
+- [54:47] ¿Te sincronizó el tab donde está ahí?
+- [54:50] No, lo sincronizó a todos.
+- [54:53] Vamos, Consuelo, que tú puedes.
+- [54:54] AlmaWebExport.
+- [54:59] Excelente.
+- [55:00] Y en aceptados, AlmaWebExport.
+- [55:03] Tú puedes, RP, que no le han dado feedback.
+- [55:06] Ahora sí, talito.
+- [55:11] Yo estoy...
+- [55:11] Sube todo, joder.
+- [55:15] Lo tengo, Ria.
+- [55:16] Yo debo remolet, así que debo más tiempo.
+- [55:22] Ay, ya, eh.
+- [55:27] Primero voy a hacer pull de la rama.
+- [55:30] ¿Cuál me dijiste que había subido el cambio?
+- [55:31] Main.
+- [55:34] Ah, sí, eso mismo te voy a hacer yo.
+- [56:24] No tengo fechas ni nada. Entonces, por ejemplo, ahora tenía que sacar la nota al viejo Google. Y como no exigió YunaWa, nadie tenía subido YunaWa al Git, nadie tenía YunaWa subido a la AVA. Entonces, ayer empezó cuando, cabrón, tienen que subir la WA, tienen que hacer la documentación, tanto, tanto, tanto, tanto.
+- [56:45] Bueno, lo taparon en preguntas, lo taparon en preguntas porque no ha hecho la tarea de tenernos las fechas de cuándo subir la web así de forma escrita, pues toda la web se las preguntamos y dice voy a averiguar, voy a averiguar, voy a averiguar.
+- [56:59] Bueno, aunque penca, y yo creo que es de puro paja, porque el Fabián ya tenía toda la información.
+- [57:05] Yo cacho que a este web le calzaron portafolio, porque si te das cuenta, somos como 6 o 7 secciones, yo creo que estos webs pensaron que íbamos a ser 2 o 3.
+- [57:15] Son como 6, 7 secciones en una, en todo caso.
+- [57:19] No, son 6 secciones diferentes, güey. Todas llenas.
+- [57:25] Tanto la mañana como la tarde de esta malla curricular que el último semestre que hiciste, güey.
+- [57:30] Entonces yo cacho que los profesores no dieron abasto y empezaron a calzar a los demás profes, güey.
+- [57:36] Sí, pero... puta que pasa, güey.
+- [57:40] Yo por lo menos por una parte igual me alegro que sea el frío, ¿no?
+- [57:42] Porque, claro, desde ese margen de trabajo, bueno.
+- [57:48] Nosotros, bueno, así como tan dispersos, igual, qué paja, bueno.
+- [57:53] Pues, me imagino igual que la comisión va a ser el profesor guía, la Vanessa y un profesor invitado, así que...
+- [58:01] No le tengo ni un miedo a la Vanessa, bueno.
+- [58:05] Todas las veces que me escuchan, el profesor invitado es el que se pone guan como el otro guan que nos tocó en el techo.
+- [58:11] Tiene menos peso que un huevón, te vas a huear ahí, pero dentro de la nota, tiene menos peso que un huevón, paquete de cabrito, huevón.
+- [58:20] Una leña seca.
+- [58:21] Cristian no nos va ni cagando a poner una nota mala, huevón, ni cagando.
+- [58:26] No, no, no hay para nada, huevón, para nada, para nada, para nada, para nada.
+- [58:30] Hay un huevón que está en nuestra sección, el venezolano, huevón, que estaba en riesgo también, huevón.
+- [58:36] Ya.
+- [58:37] Que, hermano, hoy día, todo el rato, Juan, el profe empezó a jugar de que teníamos que hacer tal hueá, teníamos que hacer tal hueá, teníamos que subir tal hueá, que faltaba corregirlo.
+- [58:49] No sé, por eso nos hizo como dos correcciones, que teníamos los documentos en vez de apellido-nombre, los teníamos nombre-apellido.
+- [58:55] Ah, y teníamos un HTML en vez de un appt.
+- [58:57] Y, Juan, con ese huevón, el profe le dio, pero Juan, instrucción por instrucción, que ya le había mandado como treinta veces al grupo, Juan, se lo tuvo que decir paso a paso al huevón para que hiciera la huevón, aparte el huevón está solo.
+- [59:12] Mike, ese huevón es como al revés, porque ese huevón es como que siento que no sabe nada, pero habla como si supiera todo, como que tiene mucha seguridad a cuando tú veías hablar ese huevón, pero como no sé, no sé, pues yo con el Carlos Borjosa sabemos, sabemos que se está cuenteando como el pico, así como que va hasta adelante.
+- [59:41] Ahora, por ejemplo, ¿no es que está en la carpeta de evidencia individual y evidencia grupal?
+- [59:49] ¿De la fase 1?
+- [59:51] ¿El huevón quería mandar solamente las individuales porque está haciendo el trabajo solo?
+- [59:56] Ah, pero piden huevón distinto.
+- [59:58] Por eso, huevón.
+- [01:00:01] Es que mira.
+- [01:00:03] No revisó nada, huevón.
+- [01:00:05] Desde el tiempo de la IA, huevón.
+- [01:00:07] En tiempo de día que ni siquiera tenías que pensar porque tenías un huevón que piense por ti.
+- [01:00:12] No pueden hacer una weá útil, huevón, en su cagá de vida, huevón.
+- [01:00:16] No pensó nada, el huevón no revisó nada, no hizo ni una mierda, huevón.
+- [01:00:20] Por eso, Carlos, es ahí cuando nosotros llegamos, somos los big bucks, huevón.
+- [01:00:25] Tus culadas deberían arrobiarse a chupar.
+- [01:00:27] A la presentación el profe dijo que le hizo falta el cohete.
+- [01:00:34] Se acordó.
+- [01:00:35] ¿Dónde está el cohete?
+- [01:00:36] Y me dijo, ah, su compañero lo llevó, y yo dije, ¿el Diego? El Diego no hacía ni una hueá, profe.
+- [01:00:43] Así es.
+- [01:00:45] Juan, yo soy flojo, pero vivo, palo. Eso dice.
+- [01:00:48] Profe, ese Juan no hacía nada, citó la otra sección.
+- [01:00:51] Estaba con la otra sección donde tiene que hacer más hueá que la chocha.
+- [01:00:54] Ya que el coño Chisman y el profe nos tienen cogotado, hermano, te juro, te juro, hermano, te lo prometo, que fue un gustazo.
+- [01:01:01] Fue lo más rico que pude haber dado, de que el profe destruyó a ese trío de saco hueá de la loca que quería pasar primero, y la hueá del orden de llegar a ese grupito esculiado.
+- [01:01:21] Tonto, güey.
+- [01:01:22] Son buenos, son pecos.
+- [01:01:24] Sí, y el profe los destruyó.
+- [01:01:26] Los destruyó.
+- [01:01:28] Y yo con el Pablo.
+- [01:01:29] Los destruyó.
+- [01:01:31] ¡Ahhh!
+- [01:02:12] ¡Cállate los reflejos!
+- [01:02:14] A ver...
+- [01:02:16] ¡Ah! ¡Qué humildad!
+- [01:02:19] Yo no jugaba ni una... ¡Oh! ¡Me pasó una buena entera! ¡Fome, Diego!
+- [01:02:23] ¡Stranded Guys! Lo jugué en PC, culiado. ¿Y qué te pasó, Carlos?
+- [01:02:28] Estaba... Quedé antes de matar al... ¿Cómo que se llama? Al Tient.
+- [01:02:36] Tient.
+- [01:02:38] Al viejo culiado sniper.
+- [01:02:40] ¡Ah! ¡Ya! ¡Ok, ok, ok! Volviste ahí, esa parte de la selva, culiado. ¡Ya!
+- [01:02:43] ¿Estaba ahí?
+- [01:02:44] Estaba ahí, po, huevón.
+- [01:02:46] Y pasaron tres, más de tres semanas, po, huevón.
+- [01:02:49] Ah, ya sé qué pasó, ya sé qué pasó.
+- [01:02:51] El viejo culiao estaba muerto, po, huevón.
+- [01:02:52] Se murió, se murió, sí, conches.
+- [01:02:54] Y yo el wea, y yo el wea, me puse a avanzar en el mapa y se guardó solo, huevón.
+- [01:02:59] Tengo que jugar todo de nuevo para matarlo.
+- [01:03:02] Ah, para sacar la arma, huevón.
+- [01:03:05] No, si la arma te lo da lo que se cae el camuflaje, huevón.
+- [01:03:07] El camuflaje, eso, huevón, lo extraño de esa mierda, huevón.
+- [01:03:11] Conche tu madre, huevón.
+- [01:03:12] Ay, huevón, no.
+- [01:03:13] Bueno, y me acuerdo que una de las razones fundamentales por qué empezaste fue porque la primera vez tampoco lo conseguiste.
+- [01:03:24] Sí, pues bueno.
+- [01:03:26] Porque dijiste, ya ahora lo voy a empezar de nuevo con la nueva gráfica y a full y voy a conseguir esa mierda.
+- [01:03:32] Y se me olvidó ese detalle culiado.
+- [01:03:40] Qué bonita es, ¿no?
+- [01:03:42] Puta, huevón, son cosas del oficio. Pero qué paja esa, huevón, de auto guardar, me pasa lo mismo. Yo por eso intento acostumbrarme a guardar igual como la partida con los pokémones, huevón.
+- [01:04:05] Guay, la de mierda, osura. Qué huevón, dijo el Sergio.
+- [01:04:18] Cha.
+- [01:04:33] José me compromete. José, qué huevón, te crees mi secretaria, culiao, que me comprometí.
+- [01:04:40] Pero si tú me dijiste que sí, huevón.
+- [01:04:44] Nunca dije nada, noche.
+- [01:04:46] Sí, sí, ¿qué dijiste?
+- [01:04:49] Tú dijiste que tenías que quedarte tarde, pero yo eso me resumo aquí y te voy a quedarte largo.
+- [01:04:54] Y tú me dijiste, José, yo te voy a ver, nos vemos hasta tarde.
+- [01:05:02] Ay, Shopify falta esa hueá, ¿verdad, José?
+- [01:05:05] Sí.
+- [01:05:06] Grabemos los videos.
+- [01:05:08] Sí, ya, para eso grabemos los nuevos.
+- [01:05:12] Grabemos los videos, pues, aplaudimos los videos.
+- [01:05:15] Y mira, estoy abriendo el programa para grabar.
+- [01:05:18] Bueno, aparte, mi porola tiene un programa, donde hacía los videos, donde salía el Juan hablando.
+- [01:05:28] Ah, tú tirabas ahí el texto y ahí hablaba.
+- [01:05:31] Sí, y el Juan habla. Entonces, yo sé editar y hacer toda esa mierda, entonces lo que vamos a hacer, vamos a grabar el proceso, vamos a crear un guión, lo vamos a superponer, y de ahí vamos a ajustar y editar lo que corresponda.
+- [01:05:45] Vale.
+- [01:05:48] Y eso en inglés y en español.
+- [01:05:49] Excelente.
+- [01:05:51] Oye, mira, en mi programa para los videos parece que me tienen un DLC.
+- [01:05:57] ¿Un programa para los videos? ¿Cómo, huevón? ¿Un DLC?
+- [01:06:02] ¿Es un programa para los videos? Bueno.
+- [01:06:04] Mira, bonito, ¿no?
+- [01:06:07] ¡Oh! Están esos culeados de...
+- [01:06:09] ¿De qué son? Me suenan.
+- [01:06:11] Kindle Hearts, Kindle Hearts.
+- [01:06:14] Es el Sora, huevón. Es el Sora, es de Square Enix.
+- [01:06:18] Yo diría los de Final Fantasy.
+- [01:06:20] Son los primos de Final Fantasy.
+- [01:06:25] Kind of Heroes mezcla su mundo fantástico con lo de Disney.
+- [01:06:29] Y creo que son re buenos.
+- [01:06:30] No he jugado a ninguno.
+- [01:06:32] Tampoco los voy a jugar.
+- [01:06:33] Pero creo que son muy buenos.
+- [01:06:37] Ya, Oscar, ¿alguno se motiva o no?
+- [01:06:40] Yo me voy a jugar una, pero una buena.
+- [01:06:44] Yo paño sin tiempo.
+- [01:06:50] Con un segundo lugar me quedo contento.
+- [01:06:57] Vamos a decirle que estoy en reputa.
+- [01:06:58] Espera, me están citando reputa, así que estoy en reputa.
+- [01:07:00] ¿Me voy a meter? Sí, me voy a meter.
+- [01:07:02] Vamos, vamos, vamos.
+- [01:07:03] ¿Quieres venir? Vamos, vamos.
+- [01:07:04] Vamos, vamos, vamos a recordar tiempo, por favor.
+- [01:07:09] Hay que relajarse en un momento del día.
+- [01:07:11] Sí, de esa hueá, hueá.
+- [01:07:13] A mi jefe.
+- [01:07:13] ¡Ah, voy a ir a mi jefe!
+- [01:07:20] Oye, lo bonito, hueá.
+- [01:07:22] Chao.
+- [01:07:24] Kingdom Hearts.
+- [01:07:25] Ya está aquí.
+- [01:07:26] Oh.
+- [01:07:26] No hay artilugio disponible. Abre los ajustes del modo para ver tu artilugio.
+- [01:07:40] Artilugio. Se expira en 39 días.
+- [01:07:45] Tengo un taco. Tacos picantes.
+- [01:07:50] El escuadrón está completo. Ahora vamos a dar unos tacos.
+- [01:07:54] ¡Suscríbete al canal!
+- [01:08:27] Ya, solamente me falta Don.

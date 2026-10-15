@@ -1,0 +1,490 @@
+# 2026-10-01-reunion (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-10-01-reunion\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:03] Aló. Carlos. Ahora sí. ¿Cómo está ahí? Con sueño, lobo, muerto de sueño. Puta, somos dos.
+- [00:22] A la pastilla me tienen... somnoliento. Se cae ahí, ¿cierto? Hasta luego. Veo.
+- [00:40] Entonces... Bueno, aquí ya estaba deployando. Aquí tengo el súper torpeo interactivo. Y bueno, estos serían como los módulos con cambios que tenemos.
+- [00:57] Bueno, dentro de lo que vendría a ser, por ejemplo, la parametrización, tenemos los cambios a los centros de costo, que vendría a ser parte también de la asociación que se tiene que hacer a cada uno de ellos, con lo que pidieron también en lo que vendría a ser el trelo.
+- [01:16] Los elementos de costo también tienen parte de esos cambios, código financiero también, y también cada uno de estos tiene la opción de importar y exportar.
+- [01:26] Transportar. También dentro de lo que vendría a ser la configuración de proveedores vienen los cambios de las condiciones de pago tanto del NETO como del IVA y la moneda de pago.
+- [01:40] Lo hacemos de forma bien rápida. Después tenemos, bueno, eso también lo tengo acá aplicado, de hecho lo estaba revisando, está en el servidor. Aquí me guío un poco más rápido como para hacerlo ordenado.
+- [01:55] Después tendríamos lo que vendría a ser las, por así decirlo, la venta, que es donde se revisa directamente hasta lo que vendría a ser la emisión del asiento, que vendría a ser hasta el punto 10.
+- [02:14] Así que lo vamos a pasar hasta acá, que una vez se contabiliza, se agregaron también los campos de centro de costo y área de negocio.
+- [02:25] Ahí se realiza la contabilización y se genera el asiento contable y te permite revisarlo directamente dentro de lo que vendría a ser contabilidad, comprobantes,
+- [02:37] y te da el detalle junto con cada uno de sus ítems que lo habíamos revisado y la posibilidad de imprimir el comprobante del asiento.
+- [02:46] Ya, Vanessa.
+- [03:22] De hecho, acá si lo vemos directamente, trae info, el libro de compra, aparece la notificación que va a sonar. Ah, está, se actualiza esa página.
+- [03:53] Entonces, acá te dice que en la orden de compra no viene vinculado, o sea, perdón, en el documento no viene vinculado la orden de compra.
+- [04:06] Y acá te permite hacer con este botón la asociación.
+- [04:16] Ya, bueno. Por ejemplo, y esa asociación va seleccionado solamente la orden de compra a ese ruto, ¿no?
+- [04:24] Por lo que estoy viendo, no, no, lo hace directamente a todas las que están disponibles, que me imagino que estos son los fixes que José dijo que iba a cambiar, pero, déjame revisar acá, por lo que yo me recordaba, si estaba, Dios, no los trae de, debería traerlos directamente, no sé por qué no se pasó ese cambio al servidor.
+- [05:05] Debería ser solamente los asociados al root.
+- [05:52] 9.500, pero me sale el total neto, factor 61, proveedor LMService, pendiente de aprobación, aprobado, inicio, orden de compra vinculadas y horas del proveedor.
+- [06:11] Está como raro si este ajuste.
+- [06:13] Sí, está raro, bueno.
+- [06:15] Bueno, igual esta parte es la que está trabajando el José, porque igual es parte de lo que entregaron esta semana, así que se entiende que se está avanzando.
+- [06:22] Ya, ok.
+- [06:22] Sí, porque ahí, por ejemplo, también debería decir el pendiente que queda, si es que tiene.
+- [06:29] Sí, sí. Y acá este botón que es contabilizar. Y aparece contabilizar, si le damos clic queda como contabilizado directo.
+- [06:42] Modo de motinema de información. Sí, igual el modo de motinema de info para mostrar los diferentes estados.
+- [06:58] Y finalmente tenemos lo que vendría a ser los cambios de la nómina semanal que habían quedado pendientes, que aquí está por ejemplo el tema de la semana actual, esos son los periodos actuales, que aquí también los podemos ver directamente.
+- [07:22] Entonces el periodo actual, vamos a mostrarle el modo, vemos si es porque en el servidor no tiene mucha información.
+- [07:33] Aquí te muestra lo que está actual, y en el atrasado histórico te muestra la información que automáticamente te trae todas las semanas hasta la semana de hoy.
+- [07:48] Te trae más info, y aquí puedes filtrarlo directamente también para mostrar solamente los pendientes.
+- [07:56] Y también la configuración de estos avisos que se pueden customizar, por así decirlo, y siempre va a perdurar el que tenga más diapos, por ejemplo, siempre te va a mostrar los que tengan, no sé, hasta 89, te va a mostrar este, y después del 90 te va a mostrar solamente este.
+- [08:22] Bueno.
+- [08:22] Por ejemplo, de 30 días sería atrasado, después crítico, después ese, tal cual ahí se va mostrando los días.
+- [08:29] También, que no se mostró ahí tampoco, es la configuración de monedas nuevas, que es lo que te había mostrado que hizo el Felipe, que esto se va asociando al banco central, se pueden agregar más monedas sin esa asociación, y con la posibilidad también de traer históricos de las monedas que ya están configuradas, así que aquí sería solamente para dar información.
+- [08:56] De hecho, eso serían como los cambios que tenemos para presentar el día de hoy.
+- [09:20] Han solicitado unirse...
+- [09:23] No, todavía no han solicitado unirse.
+- [09:27] ¡Ja! Justo.
+- [09:29] Voy a dejar eso abierto, esto lo vamos a poner al lado.
+- [09:58] Voy a unir a la María Jesús que está solicitando unirse.
+- [10:02] Hola María. Hola María Jesús, ¿cómo estás?
+- [10:19] No, no, está mutia parece. Sí, está mutia.
+- [10:30] Hola. Hola, ¿cómo estás?
+- [10:33] ¿Bien y ustedes? Bien también.
+- [10:36] Bien. ¿Cómo estuvieron las vacaciones?
+- [10:39] Muy movidas. ¿Con gusto a poco o...?
+- [10:44] Con gusto a poco siempre.
+- [10:51] Acá estoy con Fran y con Lupe, por si acaso.
+- [10:53] Hola, hola, hola, hola, bien, ¿y ustedes? Bien, también. Como día jueves. Día jueves, o viernes.
+- [11:05] Ay, queda poquito para el cierre de semana. Para mí, mentalmente, es martes, así que estamos bien.
+- [11:11] Chicos, igual Mario me comentó que habían cambiado un poquito la forma de trabajar y que ahora, y que te había mandado un archivo donde estaban como los procesos.
+- [11:23] Exacto.
+- [11:56] No entiendo. Bueno, como te comentó Mario, María Jesús, hicimos unos ajustes en donde se están definiendo unos diagramas de flujo por cada módulo, ¿ya?
+- [12:10] Porque en realidad nosotros ya hemos avanzado en gran parte los módulos, pero falta como un victo bueno, revisión por parte de ustedes,
+- [12:20] Y están haciendo ese trabajo internamente para alinear antes de ya seguir avanzando por nuestro lado, ¿ya? El flujo que se definió la semana pasada, que nos compartió Mario, fue el de compras, ¿ya? En realidad eso ya lo tenemos muy avanzado.
+- [12:40] Hoy tenemos la sincronización con GoSocket, se están haciendo las aceptaciones y reclamos desde el ARP, pero nos falta una patita de lo que es la asociación de órdenes de compra.
+- [12:57] Carlos, no sé si quieres compartir tú para mostrar los avances de esta semana.
+- [13:02] Por supuesto.
+- [13:02] Entonces ahí, bueno, María Jesús y Lupe, nosotros les queríamos pedir si nos podrían apoyar con algún flujo para lo que es el módulo contratista, porque por nuestro lado ya tenemos gran parte de compras, gran parte de tesorería, y ahora ya estamos en las ventas integrando con contabilidad, generando los asientos contables.
+- [13:30] Y luego vamos, una vez que cerremos el flujo de compras con órdenes de compra, vamos a avanzar con la contabilización de las compras. Después nos iríamos a tesorería y nos quedaría el módulo contratista. Entonces nos gustaría que nos pudiesen ayudar con ese flujo que nos entregaron para compra, pero para el módulo de contratista.
+- [13:54] Sí, no hay ningún problema, Sergio. Trabajamos en él.
+- [13:59] Perfecto, muchas gracias.
+- [14:06] Ya, le doy nomás, ¿cierto?
+- [14:08] Dale más, Carlos.
+- [14:09] Se ve bien la pantalla, ¿verdad?
+- [14:12] Sí.
+- [14:13] No sé si gustan que le haga un poquito de zoom, quizás ahí.
+- [14:20] Porque ahí hay una de esas más grandes.
+- [14:23] Bien, lo primero que vamos a revisar como para ir en orden va a ser las modificaciones que se solicitaron en Trello
+- [14:28] y que se aplicaron también en parametrización de las reuniones que hemos tenido.
+- [14:33] Parte de lo que se pidió en Trello, que vendría a ser cambios en los centros de costo, elementos de costo, código financiero, vendría a ser la integración de tener contacto, tener vigencia, y lo que vendría a ser la posibilidad de exportar e importar y tener historial de modificaciones.
+- [14:56] Acá por ejemplo para que podamos hacer un poquitito más ágil la tarea, Mario nos dejó una planilla Excel donde necesitaba que probáramos esos datos dentro de la aplicación, pero lo implementamos para que cada una de estas pestañas tenga la posibilidad de descargar una planilla, la cual en cada una de estas podemos ver un pequeño ejemplo y se pueden ir rellenando hacia abajo para después utilizar el botón de importar, poder agregarlos directamente a acá.
+- [15:26] De hecho, me voy a tomar de acá, de lo que está directamente publicado, y como pueden ver acá, en centro de costos, tenemos solamente estos centros de costos que son de...
+- [15:38] No, están en el modo demo.
+- [15:40] Bueno, aquí ya lo tenía poblado, pero, si no me equivoco, acá, en los elementos de costos tenemos solamente esto, ya tenía un Excel preparado, y así se ve la visualización directamente.
+- [15:54] Ah, también lo tenía poblado. Acá me dice que son una página de cinco, pero aquí estoy visualizándolos todos.
+- [16:01] Pero eso sería como el funcionamiento. Poder también exportar para respaldar la información de cada uno de estos módulos y se aplicó directamente a lo que vendrían a ser también los demás que se solicitaron.
+- [16:13] Eso sí, por ejemplo, acá en el área de negocio no se solicitó directamente que existiera el importar y el exportar. No sé si es que también desean que lo apliquemos directamente acá.
+- [16:24] ¿Sabes que actualmente el área de negocio no la usamos mucho? De hecho, no la utilizamos como parámetro, ni siquiera para hacer gestión.
+- [16:38] Perfecto.
+- [16:41] No sé si quizás Mario la quisiera implementar ahora, porque como él es el encargado de control de gestión, pero actualmente no usamos el área de negocio.
+- [16:55] Perfecto. Bueno, también acá implementamos lo que vendría a ser los conceptos que es donde se pueden asociar directamente.
+- [17:04] ¿Consulta, Carlos?
+- [17:05] Sí.
+- [17:06] ¿Tú podrías poner, por ejemplo, en acciones de algún elemento de costo?
+- [17:10] ¿Como en la edición? ¿Y ahí se cambia a vigente?
+- [17:21] No vigente.
+- [17:24] Claro, exactamente.
+- [17:27] Anulado.
+- [17:27] Serían como los dos estados que tenemos disponibles. De todas formas, igual, si es que se necesitan más estados, nos podrían dejar, dependiendo de la utilidad.
+- [17:37] Pero, por ejemplo, el anulado es solamente que no se puede utilizar, pero no se borra la historia.
+- [17:42] Claro, queda como no disponible, pero queda aquí visible.
+- [17:47] Ya. Y si ahí pones guardar cambio, te queda como... te cambia la vigencia, ¿cierto?
+- [17:54] Exacto.
+- [17:55] O sea, la vigencia no se modifica directamente, es como que se asigna automáticamente como un historial más que nada.
+- [18:04] Ya.
+- [18:07] Y queda anulado directamente.
+- [18:10] También dentro de las modificaciones que nos solicitaron, vendría a ser la parte de los proveedores,
+- [18:17] donde podemos asociar directamente lo que vendría a ser las condiciones de pago para el neto y para el IVA,
+- [18:24] De forma independiente de donde se pueden configurar. Vienen preconfigurados días, pero también se puede ingresar de forma manual.
+- [18:32] Ah, perfecto. O sea, yo puedo poner 45 días, por ejemplo.
+- [18:36] Exacto, exacto. Y la idea de esto es que después en los demás módulos lo tome como una sugerencia, pero en los demás módulos también se va a poder editar.
+- [18:44] Lo que estábamos viendo con Mario en esta misma ficha era ver si podíamos hacer como una ficha general y ahí nosotros pudiéramos pinchar al tiro si era proveedor y cliente, porque en realidad si es proveedor y cliente vamos a usar los mismos datos.
+- [19:03] Ah, perfecto.
+- [19:04] Porque no sería necesario que fueras como solo proveedor.
+- [19:08] En ese caso podríamos incluir acá un check, que cuando lo marquemos se pase directamente la información de este módulo al siguiente, de cliente.
+- [19:18] Claro, entonces ahí en vez de ser como de proveedores sería como ficha de creación.
+- [19:25] Y ahí vemos si es proveedor, productor o cliente.
+- [19:28] Ahí tengo una duda, María Jesús. O sea, entiendo y lo encuentro bastante bueno de agregar como esas propiedades, pero, por ejemplo, ¿no van a tener perfiles de usuarios que solamente se dediquen a crear solo proveedores?
+- [19:47] Lo que pasa es que actualmente la creación de proveedores y clientes la tengo yo como jefatura.
+- [19:53] Ya.
+- [19:54] Por un tema de seguridad.
+- [19:55] Ah, pero por ejemplo, si esto quisiera después escalar o crecer un poco a otro usuario, por ejemplo, y decir ya, este Juanito, solamente tú vas a poder crear proveedores, y Pedrito que va a hacerse cargo de la parte de los clientes.
+- [20:12] Porque si lo dejamos todo centralizado, los dos, Juanito y Pedrito, van a ver tanto los clientes como los proveedores. ¿Me explico?
+- [20:21] Sí, pero igual, de todas maneras, la creación de, ya sea proveedor o cliente, siempre va a estar a cargo de una jefatura.
+- [20:56] ¿Qué pasa que después puede pasar si crecemos mucho? ¿Va a pasar eso? ¿Por qué se puede poner en el tiempo de recrear?
+- [21:03] Entonces va a pasar como en Garceta, ¿te acuerdas? En Garceta nosotros creábamos, pero al revés, no nos chocábamos.
+- [21:12] ¿En algún momento? Piénsalo así.
+- [21:17] Estaba hablando muy bajito.
+- [21:19] Estaba así como...
+- [21:20] No tengo cuenta.
+- [21:59] ¿Puedo exponer si era proveedor o cliente? ¿Si era la misma fecha o no la misma fecha?
+- [22:03] Si al final se le está pasando la responsabilidad a alguien para que cree, para que confíe en la persona.
+- [22:07] Sí.
+- [22:10] ¿Es que no confío en la persona?
+- [22:11] No, lo que pasa es que como tú la ingresas ahí, tiene que haber como...
+- [22:18] Yo creo que según nosotros.
+- [22:20] ¿La escuchamos por ser eso?
+- [22:22] ¿La escuchamos María Jesús?
+- [22:25] ¿Aló?
+- [22:26] ¿Tú me escuchás ahí, Carlos?
+- [22:28] Sí, te escucho bien, Sergio.
+- [22:31] María Jesús no me ha escuchado.
+- [22:32] El parlante.
+- [23:48] ¿Nos escuchan? Sí. ¿Nos escuchan nosotros?
+- [23:52] Siempre nosotros seguimos sin escuchar.
+- [23:57] ¿Aló, aló? ¿Nos escuchan?
+- [24:06] Sí, se escuchan.
+- [24:07] Sí, ya. Ahora sí. Nos desconectamos de la tele porque parece que hay un problema de la tele.
+- [24:12] Ya, ok.
+- [24:14] Ya.
+- [24:17] Bueno, no sé si lograron escuchar el tema del proveedor cliente.
+- [24:23] Sí, lo que pasa es que estábamos viendo que actualmente igual, bueno, lo que pasa es que nosotros los clientes también los agrupamos por broker. Entonces la creación de clientes en temporada no es abismante como en otras empresas. Y por el lado de los proveedores pasa un poco lo mismo que también tenemos como harta fidelización con los proveedores. Entonces yo no creo necesario tener como una separación de formulario de creación.
+- [24:53] En ese caso, por ejemplo, ¿siempre se da de que los proveedores son clientes o se da más de que los clientes son proveedores o casi siempre son los dos casos?
+- [25:14] No, se ha dado más que un proveedor como que pasa a ser cliente, no un cliente a un proveedor.
+- [25:22] ¿Y casos de que tengan alguno que sea solamente cliente?
+- [25:25] Sí, tenemos, o sea, la mayoría es o solo proveedor o solo cliente, la mayoría, estoy hablando del 98% de nuestra base, pero nos han pasado casos de que tenemos un root que pasa de ser proveedor a ser proveedor y cliente.
+- [25:48] En ese caso, yo creo que sería más conveniente dejarlos igual de todas formas separados, pero que tengamos como esa posibilidad de que conversen entre sí los dos módulos.
+- [26:00] Pero, por ejemplo, ¿se podrá, no sé, pues si está creado como proveedor, al momento de yo crear como cliente el mismo root, me llame la información?
+- [26:12] Podríamos hacer de que al momento de escribir el root, que es como el identificador, se pase la información directamente.
+- [26:19] Claro.
+- [26:21] Así también evitamos de que existan diferencias de nombre, de información.
+- [26:26] ¿Para qué? ¿Por qué hasta el punto cambia en un nombre?
+- [26:39] Sí, yo creo que deberíamos entonces, al momento también de agregar clientes, hacer ese match.
+- [26:45] Que de hecho, actualmente, si mal no me equivoco, se realiza, pero no tengo ningún ejemplo.
+- [26:51] Porque estos tres ya existen.
+- [26:54] Sí, ya existen los tres.
+- [26:57] Actualmente ya el sistema hace eso de que cuando uno coloca el root y existe como proveedor, se pasa la info desde ese al otro.
+- [27:03] Pero no queda como un identificador acá que diga de que existe también como cliente, eso tendríamos que agregar.
+- [27:10] Pero por ejemplo, si yo saco, cuando lo llamo reportabilidad, yo quiero hacer una consulta del root, me van a salir todos los movimientos que tenga el root, ya sea como proveedor o como cliente.
+- [27:21] Exacto.
+- [27:21] Ya, buenísimo.
+- [27:22] Bueno, volviendo a lo que vendría a ser la parametrización, también se hizo una modificación a lo que vendría a ser la parte de monedas y de los indicadores del Banco Central para que estos se vayan automáticamente trayendo la información, conversar entre las dos páginas y podemos verlo directamente que al momento de agregar una moneda, aquí pregunta si es que quiero completarla con alguna de la información del Banco Central y trae las monedas disponibles.
+- [27:56] Se pueden de todas formas agregar monedas sin que quede asociado al Banco Central, pero eso no va a ser la sincronización con este, y aquí directamente en los indicadores del Banco Central podemos traer un histórico de las monedas.
+- [28:12] Entonces con este menú nosotros podríamos traer información desde años anteriores directamente hasta la actualidad o por periodos de las monedas que tengamos registrados en el módulo de monedas, valga la redundancia.
+- [28:26] Y así podríamos tener el histórico y aquí tenemos también el filtro de las monedas para ir viendo las fechas. Por ejemplo, acá podemos filtrar si queremos de meses anteriores para ir viendo este histórico nuevo que se aplicó.
+- [28:43] ¿Consulta, Carlos? Por ejemplo, en este módulo que se puede traer el histórico una vez que nosotros carguemos la base de datos de AlmaWeb, ¿podríamos hacer un ejemplo, por ejemplo, el informe en yuanes?
+- [28:53] Sí, sí, podríamos traer directamente la info. De hecho, esto está hecho para que no sea necesario cargar como la base de datos y así traer directamente la información del Banco Central de manera fidedigna.
+- [29:07] Buenísimo.
+- [29:08] Entonces se carga directamente. Eso sí, hay que tener en consideración que a medida que se traiga un rango más amplio de fecha, va a demorar en cargar este histórico que se va a traer del Banco Central.
+- [29:18] Pero, por ejemplo, ¿toda la información que se traiga de los días del cálculo, o sea, del cambio, si yo tengo información en el sistema cargada, ¿me la va a transformar en la moneda que estoy cargando?
+- [29:35] De los demás módulos no, de los demás módulos no, esto lo va a tener solamente como histórico y no está pensado como para que esto pise la información de los demás módulos, solamente como la consulta.
+- [29:49] Ya, entiendo.
+- [29:55] Y eso sería lo que vendría a ser parte de la parametrización. Ahora vamos a pasar directamente a lo que vendría a ser ventas.
+- [30:08] En el momento que estoy aquí revisando el supertorpedo, acá inventó prácticamente lo que se hizo de los ajustes en lo que vendría a ser la contabilización de los datos.
+- [30:50] Tenemos la opción de ahora agregar la información que teníamos pendiente de lo que vendría a ser el área de negocio.
+- [30:58] Ahora se puede agregar la cuenta contable, el centro de costo y ese dato que nos faltaba que es el área del negocio para poder asociarlo.
+- [31:08] También lo que vendría a ser, que ese es como el ajuste que se realizó al momento de contabilizar, vamos a ver que este es de 1850, vamos a hacer una asociación rápida, este es de 1850, ahí quedó contabilizado.
+- [31:56] Vamos a ver un poquitito el detalle. Perfecto. 1202. Ahora se pasaría directamente a lo que vendría a ser contabilidad en los comprobantes, que es este movimiento de acá.
+- [32:17] Y aquí podemos ver directamente el detalle del asiento, junto con toda la información, y podemos también imprimir directamente el documento, dejándonos este PDF que nos basamos directamente en el que nos habían enviado anteriormente para generarlo.
+- [32:37] Está muy bueno el comprobante, pero tengo un alcance.
+- [32:41] Diga.
+- [32:41] Lo que pasa es que independiente de que trabajemos con otras monedas, siempre nuestra contabilidad es peso y dólar, siempre.
+- [32:50] Perfecto, entonces debería ser la conversión igual.
+- [32:52] Sí, sí, y cuando uno no pone el tipo de cambio, por eso es la idea de llamar el dato del Banco Central, porque para nosotros cuando tenemos un movimiento diario, siempre hay un tipo de cambio, que es el del día, y el que modificamos cuando ingresamos factura o casa específico, pero siempre nuestra contabilidad es peso y dólar.
+- [33:16] Perfecto, entonces faltaría hacer de que traiga el tipo de cambio del día junto con los valores en ese cambio, ¿verdad?
+- [33:22] Exacto, y si se puede adicionar el yuan en paralelo, también.
+- [33:27] Como una tercera columna acá, ¿verdad?
+- [33:29] Exacto.
+- [33:30] Perfecto. Esto es para todos los casos, ¿verdad?
+- [33:38] Sí, para todos los casos.
+- [33:40] Aquí también tenía una duda que no pude identificar qué era este valor de AUX, que lo dejamos acá igual disponible.
+- [33:48] El AUX es el auxiliar, que sería el root del cliente.
+- [33:53] Ah, perfecto, solamente dejando el root del cliente.
+- [33:56] Sí. Generalmente el auxiliar es el RUT sin el dígito verificador.
+- [34:15] Otra consulta que tenía que es referente a la glosa.
+- [34:19] Si se dan cuenta, la glosa solamente trae este detalle, pero en el documento que nos enviaste venía más información en la glosa que se genera.
+- [34:27] Voy a revisar.
+- [34:34] De hecho, acá tengo un comprobante que fue el que nos enviaste. No, este es el de nosotros.
+- [34:45] Acá lo tengo.
+- [34:46] Ok, por ejemplo, este dato viene con el tipo, que lo encontré redundante porque ya venía estipulado acá, el número del documento que también ya venía estipulado acá, viene con esta información del tipo de cambio, que es el que nos faltaría dejar acá, este que es F1905, que me imagino que es el número de la factura quizás.
+- [35:16] Sí, el número de la factura.
+- [35:17] Entonces sería como la información que viene acá mismo.
+- [35:20] Mira, mira, por ejemplo, en la cuenta de ingresos, la glosa que sale ahí, la F1905, es la que nosotros ingresamos de forma manual cuando ingresamos el documento.
+- [35:33] Perfecto.
+- [35:33] Y la de arriba se hace de manera automática.
+- [35:39] Con la de arriba te refieres a esta de acá, ¿cierto?
+- [35:41] No, con la que dice CONTAT111, número de documento.
+- [35:47] Esa información es automática, ¿verdad?
+- [35:49] ¿Verdad? Sí. Y esto es lo que ustedes ingresan. Exacto. Ah, perfecto. Entonces, esto, por ejemplo, como ya aparece en la otra información, igual lo podríamos obviar. Sí, ahí me parece algo raro que, ¿eso es algo de nosotros que te enviamos? Sí, es el que ustedes nos enviaron a nosotros. Hay que revisar algo ahí. Sí, porque yo al menos por lo que veía, como te digo, este 111 es el tipo de documento, ese es el folio, el tipo de cambio, es como que la Gloss automáticamente trae igual esa información que viene aquí a los lados.
+- [36:17] El comprobante 4969. Si es que de ser así, el número de factura que aparece en la glosa debería ser el mismo que aparece en cliente. Es de agosto. El 4969. Es de AlmaWeb.
+- [36:59] Venta, 13, la 49, la 24, o sea, la 14, la 24.
+- [37:09] Ya, eso es un error nuestro, pero debería ser la glosa de abajo, que es la factura, el número de factura y un poco de la descripción de la factura.
+- [37:34] Perfecto. Entonces sería como el comentario que se ingresó, ¿verdad?
+- [37:39] Claro. Que nos ayude igual a reconocer a qué corresponde el asiento.
+- [37:44] Una vez que nosotros bajamos la reportabilidad, la glosa nos ayuda a ver el movimiento sin tener que meternos en el comprobante.
+- [37:53] Perfecto. Y aquí si se dan cuenta, como nosotros lo habíamos hecho, es que traiga el ítem, por así decirlo, entonces deberíamos reemplazar esa información o añadirle solamente el comentario.
+- [38:06] Claro, sí, ahí nos quedaría como una glosa muy larga, ¿no?
+- [38:11] Sí, sí. Sería entonces dejar el comentario, por así decirlo, solamente.
+- [38:18] Exactamente. Sí. Perfecto. Y también lo que me acabo de percatar es que aquí aparece el nombre de una persona, que nosotros no lo teníamos acá estipulado. También tenemos que dejar ese dato acá, ¿verdad?
+- [38:39] No, no es necesario. Ese es el nombre de nuestro dueño.
+- [38:44] Ah, ok. Perfecto.
+- [38:50] Tengo una duda ahí, Carlos. Cuéntame.
+- [38:52] Por ejemplo, en la glosa, por cuentas, por ejemplo, la cuenta que dice caja, esa debería ser IVA débito.
+- [39:03] Esta de acá.
+- [39:04] Sí.
+- [39:06] Vamos a hacer entonces la corrección.
+- [39:16] Creo que lo más probable es que esto lo armamos cuando no teníamos cargado todavía las cuentas, quizás.
+- [39:27] Sí, entonces ahí nos quedaría el comprobante de venta.
+- [39:32] Perfecto.
+- [39:32] Y si se dieron cuenta, esta es la que yo ingresé manualmente al momento de realizar la contabilización.
+- [39:36] Exacto. ¿Pero ahí podemos, por ejemplo, la glosa repetirla en los tres, o sea, en la cantidad de líneas de cuenta que tenga el comprobante?
+- [39:46] Ahí no te entendí.
+- [39:48] Por ejemplo, que la glosa que está en ingresos de venta, que es el comentario que nosotros ponemos, también quede en la cuenta de cliente y quede en la cuenta de IVA.
+- [40:00] Ah, perfecto, que se replica acá.
+- [40:02] Sí.
+- [40:03] Sí, perfecto, ningún problema.
+- [40:04] Digo que si nosotros sacamos, por ejemplo, el mayor de la cuenta cliente, nos van a salir todos los movimientos y la idea es que nos aparezca aquí corresponde el movimiento.
+- [40:14] Claro, como de manera rápida.
+- [40:16] Claro.
+- [40:53] Se me cayó un poco la conexión local, pero vamos a revisar lo que nos falta acá directamente en el servidor, que también ya está con la versión actualizada.
+- [41:16] Ahora, lo que vamos a mostrar vendría a ser directamente lo que corresponde al libro de compras.
+- [41:30] Donde, acá por ejemplo, podemos ver todos los movimientos y vamos a hacer una pequeña sincronización.
+- [41:39] Tenemos documentos nuevos.
+- [41:50] Un segundo, que creo que tengo problemas con la red.
+- [41:52] Espérenme un momentito.
+- [42:01] Gracias por ver el video.
+- [43:22] Sí, yo como cuatro cafés, diez cafés.
+- [43:29] ¿Ya hay café o no hay café?
+- [43:31] No está ahí.
+- [43:32] ¿No hay café?
+- [43:33] No es posible, está suceso.
+- [43:35] Gracias a Pedro por la casa.
+- [43:37] Yo le iba a traer café, pero normal es mejor que venía a trazar.
+- [43:41] Oh, y mándenme un café por acá, por favor.
+- [43:45] Hay que celebrar el día del café.
+- [43:46] Y para el computador también.
+- [43:51] Un momento, que tuve una pequeña dificultad técnica.
+- [43:54] ¡Suscríbete al canal!
+- [44:44] Así sabemos que no es una grabación.
+- [44:48] No somos guías.
+- [44:50] No estamos maqueteados, claro.
+- [44:54] Estamos en vivo y en directo, en uno de los momentos.
+- [44:58] Mientras levanta y vamos a revisarlo acá del modo demo del servidor,
+- [45:03] que dentro de lo que vendría a ser la implementación,
+- [45:06] que esto todavía está en construcción en base a lo que nos enviaron en el diagrama que nos compartió Mario,
+- [45:12] que vendría a ser las asociaciones.
+- [45:15] Como pueden ver, ahora los pendientes, si es que no viene vinculada una orden de compra, da el aviso acá, en los DTE que se traen, por ejemplo acá, da la opción de seleccionar, bueno acá como estamos en el modo demo solamente nos va a mostrar de este cliente embalajes, Troya, y nos debería mostrar acá todo lo que vendría a ser la orden de compra que tiene este...
+- [45:45] Y razón social.
+- [45:48] Y en caso de que no exista ninguna, con esta de acá tenemos la opción de seleccionar parte del usuario del destino para enviarle una notificación.
+- [45:57] Aquí podríamos dejarle, oye, ¿sabes qué? Por ejemplo, el proveedor no está creado, o no está la orden de compra, o la orden de compra tiene una diferencia.
+- [46:06] Entonces ahí se va a notificar al responsable, en este caso que de momento es seleccionable.
+- [46:10] Ah, ya, perfecto. Nosotros tendríamos que notificar a la persona que debería crear el adón de compra.
+- [46:41] Y bueno, aquí también tendríamos la visualización de los rechazados y un totalizado de todo lo que vendría a ser los movimientos para tenerlo ahí disponibles.
+- [47:06] Carlos, me comentaron que en el módulo de insumos iban a crear la opción de orden de compra madre y orden de compra hijas.
+- [47:15] Exacto, que eso es parte de lo que todavía se está maqueteando, está trabajo en progreso aún.
+- [47:20] Ah, perfecto, porque la idea es que la orden de compra madre en realidad sea solamente un dato informativo, pero que no se vea reflejado en ningún módulo que no sea de insumos.
+- [47:30] Claro, ahí lo que vamos a hacer, en realidad, quién se va a contabilizar y todo eso, van a ser los hijos.
+- [47:39] Solamente la madre va a ser, como dices, tu informativo.
+- [47:44] Exacto.
+- [47:46] También por lo que tenemos pendiente, por ejemplo, al momento de que se deba hacer alguna modificación o algo,
+- [47:53] si por ejemplo hay una modificación en la orden de compra de lo que vendría a ser el monto y el monto aumenta,
+- [47:58] Va a tener que pasar de nuevo también por la línea de aprobación en caso de que exista dicha modificación.
+- [48:05] Sí.
+- [48:06] Perfecto.
+- [48:07] Por cual.
+- [48:10] Y bueno, también dentro de lo que teníamos pendiente, que fue el módulo acá de tesorería, lo que vendría a ser la nómina semanal.
+- [48:21] Que esto lo habíamos hablado en una reunión con Lupe y Mario, hacer unas pequeñas modificaciones acá, donde ahora para seleccionar el periodo actual y el histórico tenemos estos botones de acá, donde muestra solamente lo que vendría a ser el periodo actual, dividiéndolo en semanas, y aquí de forma rápida informa cuántos son los que están como pendientes y cuántos son los que están como atrasados.
+- [48:43] Y ahí uno puede ir cambiando entre semanas. Y también permite realizar la visualización de un histórico, donde acá podemos seleccionar las fechas desde ASTAP y nos muestra toda la información hacia acá.
+- [48:58] Sí, así lo habíamos visto.
+- [49:01] Y también se dejó la opción de lo que habíamos hablado de dejar como estas banderas configurables.
+- [49:07] Entonces, por ejemplo, se puede personalizar, por ejemplo, de que avise, bueno, en este caso está exagerado de que esté un día atrasado, lo podríamos dejar configurado en 7 días para que recién se agregue esta bandera, o en caso de que pasen los 7 días y pasen los 30, va a cambiar su estado de atrasado a crítico, y lo mismo para los 90, en este caso, se va a pasar a esta bandera de 90 días, con la posibilidad de agregar una nueva con su respectivo color y nombre.
+- [49:31] Bien, y así es como una forma de verlo ya más rápido y también aquí podríamos realizar solamente la visualización de los pendientes o todos los movimientos que comprenda este histórico.
+- [49:47] Está bueno, sí.
+- [49:49] Ahí quedó como un poco más fácil de utilizar esta vista que estaba bien complejo con el sistema anterior.
+- [49:55] Sí.
+- [49:58] Aprobado por Lupe, ¿cierto?
+- [49:59] Sí, está aprobado.
+- [50:00] Y bueno, no sé si es que se me está escapando. No, creo que esos son como los ajustes que tenemos de momento.
+- [50:17] Carlos, no sé si...
+- [50:49] ¿Cómo se configura? De forma fácil de entender, aquí ingresamos a lo que vendrían a ser las reglas de aprobación, aquí tenemos como la visualización de los grupos que existen con sus cadenas de aprobación, donde aquí podemos ver los integrantes, y acá en configurar es donde se pueden crear nuevos grupos.
+- [51:08] Ah, perfecto.
+- [51:09] Lo que sí hay un pequeño defecto en esta parte de cuando se agregan los integrantes que tenemos que corregir.
+- [51:15] Ya.
+- [51:15] Pero esa sería como la forma y bueno, aquí está como de todas formas la visualización más técnica de este módulo.
+- [51:24] Por ejemplo aquí podemos ver todos los integrantes con sus grupos, acá podemos ver las escalas que existen en cada uno de estos grupos y aquí tenemos como un simulador, que por ejemplo acá podemos seleccionar algún usuario, colocar por ejemplo acá una simulación.
+- [51:43] Y aquí este usuario nos va a mostrar la cadena de aprobación en ese monto, por así decirlo.
+- [51:48] Ah, perfecto.
+- [51:50] Y también lo que vendría a ser en las órdenes de compra, al momento de realizar una nueva, aquí abajo, voy a sacar este menú de acá, va a salir la cadena de aprobación como tal al momento de agregar los ítems.
+- [52:06] Por ejemplo, acá, teo grande, ahí sale la cadena de aprobación que va a tener que pasar, en este caso, el usuario que está logueado.
+- [52:22] Buenísimo.
+- [52:25] Y lo que vendría a ser acá, en aprobaciones, acá también se va a visualizar el estado de la aprobación como tal.
+- [52:43] Por ejemplo, acá tenemos una pendiente, que está pendiente de aprobar por mí, queda como en este color mientras no se apruebe.
+- [52:50] Ya.
+- [52:50] Y esos serían los avances que tenemos hasta el momento.
+- [53:01] Ahí, Carlos, ¿podrías compartir el trelo, por favor?
+- [53:06] Por supuesto.
+- [53:07] María Jesús, en Cualbaue hicimos una división y dejamos responsables por cada módulo, llamémoslo así.
+- [53:23] Ya ahí, por ejemplo, hay varios temas de parametrización que quedó asignado Mario y otros módulos, si pueden bajar, Carlos, que por ejemplo, contratista quedó Lupe, con todo lo que es de contratista.
+- [53:41] Y sumo, Mario y contabilidad, creo que es María Jesús.
+- [53:47] Yo creo que el de contabilidad deberíamos retrocederlo, Carlos, porque aún no...
+- [53:55] No tenemos la base.
+- [53:57] Sí, nos faltan algunos ajustes. Entonces, todo contabilidad, de vuelta a Devin.
+- [54:03] Y quedaría el de contratista, yo creo que más que nada nos faltaría como el flujo.
+- [54:09] El flujo que se debe aplicar.
+- [54:10] Porque ahí tenemos algunas dudas con la proforma, si la proforma se ha convertido en orden de compra o no. Entonces, eso quedaron en confirmarnos sobre el modo de contratista.
+- [54:25] Y nos falta también, que me di cuenta, el responsable de las compras y de ventas.
+- [54:32] No sé si alguien se quiere casar con eso ahora, para asignarlo.
+- [54:37] Yo me caso con eso.
+- [54:38] Perfecto, ahí lo voy a agregar.
+- [55:10] De hecho, aquí lo voy a abrir, que si mal no me equivoco.
+- [55:15] Eso es justo lo que editamos.
+- [55:17] Ah, perfecto.
+- [55:20] Ah, ¿no aplica guía?
+- [55:22] No, lo que pasa es que todo lo que es insumo se ingresa sí o sí con guía.
+- [55:30] Pero es lo único que aplica guía.
+- [55:33] Lo demás aplica todo factura directa.
+- [55:35] Que eso sería ALM, ¿cierto?
+- [55:38] ALM.
+- [55:39] Pero ahí son guías emitidas, ¿cierto?
+- [55:41] ¿Listo? Sí, son guías emitidas. Ah, se emiten guías, pero para la recepción de guías no se hace ningún flujo. Lo que pasa es que a nosotros los materiales nos llega con guía. Siempre nos llega, por ejemplo, ya la OCE madre dice 100 cajas, pero semanalmente nos entregan 10. Entonces, en el mes nos entregan 4 guías de 10 y al final de mes nos emiten las facturas por las 40 existencias.
+- [56:13] ¿Me entiendo?
+- [56:19] Sí, sí, te entiendo. Pero ahí, en sí, la guía de despacho, ustedes la van a recibir, pero no van a asociar órdenes de compra y nada de ese tipo de estilo.
+- [56:28] Solamente la asociación va a pasar sobre la factura que van a emitir al final del mes, ¿no?
+- [56:33] Exacto. Entonces, lo que pasa es que la guía no sirve solamente para ingresar el material a bodega, porque la bodega tiene que estar actualizada.
+- [56:40] Pero la que se va a asociar con la orden de compra es la factura que llega a fin de mes.
+- [56:46] Ah, y entonces en bodega, en insumos, deberíamos listar las guías recibidas, ¿o no?
+- [56:57] Sí, solamente en insumos nosotros hacemos la recepción del material con guía, 100%.
+- [57:03] ¿Y esas tienen que ser guías de física o son las que vienen desde GoSocket?
+- [57:10] Acá las piden física, es como un control que hace el jefe de abastecimiento.
+- [57:16] Sí, porque tendríamos que validar.
+- [57:20] ¿Y Carlos, podemos validar con Pablo si las guías están en los documentos recibidos?
+- [57:28] Ok.
+- [57:29] ¿Las guías deberían estar en los documentos recibidos?
+- [57:33] Deberían, pero es que, por ejemplo, en el RCB del SI no aparecen las guías.
+- [57:39] No, las guías no aparecen.
+- [57:41] Entonces, no sé si GoSocket también lo va a considerar igual que el SI,
+- [57:46] En GoSocket deberían aparecer con el código 52. Esas son guías de despacho.
+- [57:56] Claro, pero que pueden ser emitidas y no recibidas. Entonces esa es la que hay que validar.
+- [58:01] Ah, perfecto. Pero acá es con la guía física.
+- [58:11] Hablando de ese tema también, por lo que recuerdo, en el tema de las devoluciones, eso solamente aplicaría, por ejemplo, a lo que vendría a ser ALM,
+- [58:20] Porque es el que tiene insumos. AlmaWeb, como es la exportación de las frutas, no tiene como ese concepto.
+- [58:27] Exacto.
+- [58:29] Perfecto. Y en ese caso, en el sistema, para hacer la diferenciación de si es que hay un ingreso o salida de bodega,
+- [58:41] no sé cómo podríamos aplicarlo para que haga la diferenciación entre la LM y AlmaWeb.
+- [58:46] No sé si es que lo hacemos directamente con el root, Sergio, para que tenga como esa diferenciación en el sistema y poder hacer como el reintegro de insumos, por así decirlo, en bodega.
+- [58:59] Sí, podríamos hacerlo con asociado al root, pero igual me gustaría verlo como con la integración con GoSocket primero.
+- [59:13] Ya.
+- [59:15] Perfecto.
+- [59:15] ¿Hay que ajustarle un poquito con el tema de ALM y AlmaWeb?
+- [59:19] ¿De la guía? ¿O sea, la devolución?
+- [59:26] ¿Cómo perdón? No, justo se me cayó el internet. No, mentira, no escuché bien.
+- [59:31] No, lo que hablaron recién. ¿A qué se referían?
+- [59:35] Por ejemplo, cuando hay, por ejemplo, un ingreso a bodega y, por ejemplo, no sé, se rechaza la factura y tengan que devolver material, por así decirlo. ¿Eso pasa o no?
+- [59:48] Sí, pasa.
+- [59:49] Y eso solamente contaría con lo que es ALM, ¿verdad?
+- [59:52] Sí.
+- [59:53] Claro, en ese caso lo que se me ocurre sería como que aquí en empresa, por cada una de las dos, tener como la opción de configurar eso, para que el sistema se gatille solamente cuando esté esa configuración.
+- [01:00:09] Porque por lo que tengo entendido, en AlmaWeb no hay reintegro porque es fruta.
+- [01:00:14] Sí, en AlmaWeb no.
+- [01:00:15] Compramos lo justo que vendemos, mágicamente.
+- [01:00:45] Eso, vuelvo, repito, me interesa que me ayuden con los flujos, con poder.
+- [01:00:53] Sí, con contratistas, sobre todo.
+- [01:00:56] Sí.
+- [01:00:57] Bien.
+- [01:00:59] Teniendo ese módulo, podemos mostrar un poquito más de avance.
+- [01:01:03] Ya estamos trabajando en lo que es la contabilidad, venta, después nos iríamos a compra.
+- [01:01:08] Esperamos tener para la próxima semana el tema de las notificaciones en compra
+- [01:01:12] y la asociación de órdenes de compra.
+- [01:01:15] Y la orden de compra, hija, todo ese flujo.
+- [01:01:20] Pero ya la semana subsiguiente ya quedaríamos un poquito estancados.
+- [01:01:27] Mira, me comprometo, porque con Carlos tenemos una reunión los martes a las 12 para ver el tema de la conexión con Pablo.
+- [01:01:35] Yes.
+- [01:01:36] Me comprometo el martes a tener un adelanto, si es que no todo el proceso de contratista.
+- [01:01:41] Genial.
+- [01:01:42] Ah, genial, genial. Todos lo escuchamos, está grabado.
+- [01:01:46] Sí, está grabado, filmado, todo.
+- [01:01:57] Aprobado por Lupe.
+- [01:02:01] Ya cacharon que es la mano dura acá.
+- [01:02:05] No, no, no he dicho nada.
+- [01:02:09] Al menos con nosotros no, con nosotros no.
+- [01:02:13] Ah, el otro María Jesús, lo que hablamos la semana pasada en la reunión,
+- [01:02:23] Sobre el módulo, justamente contratista, que Carlos nos comentó que en su momento, en una de las reuniones participó un tal Rodrigo, ¿no, Carlos?
+- [01:02:33] Sí.
+- [01:02:34] Sí.
+- [01:02:34] Sí, creemos que si él no iba también a apoyar sobre ese flujo, ese módulo. No sé si lo van a considerar o van a definir ustedes el flujo y nos hacen la entrega.
+- [01:02:47] Sí, lo que pasa es que en la actualidad tenemos una disyuntiva, porque lo que es el EM y el MAWEB funciona muy similar entre ellas, pero el módulo de contratista se ocupa harto también por el área agrícola.
+- [01:03:06] Y ahí puede necesitar un poco más de detalle. Entonces, yo creo que igual nos vamos a apoyar con Rodrigo para ver si él necesita algún requerimiento especial.
+- [01:03:14] En caso de que también quieran usar la plataforma el día de mañana.
+- [01:03:17] Ajá. Ok. Porque recuerdo que él no estaba en el trelo tampoco, como para que vaya viendo los avances. No, lo que pasa es que él es de otra empresa. Ah, ok. Sí. Ya. Ok.
+- [01:03:34] Sí, ya pues, yo estoy bien por mi lado, yo creo que ya la otra semanita vamos a tener más avances, lo que mencionó Carlos, y si tienen por el lado usted agrícola, de perdón, de contratista, es genial.
+- [01:03:49] Ya, buenísimo.
+- [01:03:56] Cerramos entonces, justo una horita.
+- [01:03:59] Como nunca.
+- [01:04:01] Como nunca, sí.
+- [01:04:03] Ya pues.
+- [01:04:04] Ah, lo otro, María Jesús, nosotros ya alineamos y estaríamos por allá la semana del veintiséis. Ya. De octubre. ¿Verdad? Tenga café.
+- [01:04:21] Van a conocer este pueblo.
+- [01:04:26] ¿Por qué? ¿Joder?
+- [01:04:28] Sí, Razar es como una calle.
+- [01:04:31] ¿Cómo se llama?
+- [01:04:32] Razar.
+- [01:04:33] Si me pueden compartir la dirección del grupo, sería ideal.
+- [01:04:40] Te voy a mandar la ubicación, para que más o menos sepas dónde estamos.
+- [01:04:45] Vale, perfecto.
+- [01:04:48] ¿Qué pues?
+- [01:04:50] Hay una pastelería rica, sí.
+- [01:04:54] Carlos, bueno, más dulce, ¿no?
+- [01:04:59] Ah, ¿Uy, Don Juan y Medio? ¿El restaurante que está en carretera?
+- [01:05:03] No.
+- [01:05:04] No, no.
+- [01:05:06] Así era lo más conocido.
+- [01:05:10] No nos hemos visto el manual turístico de Rosario.
+- [01:05:20] Ahí nos tienen que dar las recomendaciones.
+- [01:05:27] ¿Hasta dónde conocen Pared del Sur?
+- [01:05:31] ¿Hasta dónde conocen Pared del Sur? Porque Juan y Medio es súper conocido.
+- [01:05:35] No, yo hasta Valdivia, pero...
+- [01:05:37] Pero soy...
+- [01:05:39] No, en realidad no, hasta Castro.
+- [01:05:43] ¿Y Agra Super, la faenadora, tampoco?
+- [01:05:47] No, tampoco.
+- [01:05:49] Yo salteo con Litoral Central.
+- [01:05:52] Justo cuando pasan por ahí, miran el teléfono o los letreros.
+- [01:06:00] Ya, pero aquí estamos.
+- [01:06:03] Ahí donde no se van a decir nada.
+- [01:06:06] Vamos a la cara, se va a recorrer.
+- [01:06:09] Ahora obligado, vamos a ver.
+- [01:06:12] Juan y medio. ¿Juan un cuarto? ¿Cuánto era?
+- [01:06:15] Juan y medio.
+- [01:06:15] Es súper conocido.
+- [01:06:20] Ahí les mandé la ubicación.
+- [01:06:24] Ok, perfecto.
+- [01:06:35] Rosario.
+- [01:06:36] Es real el punto en la nada que aparece ahí.
+- [01:06:45] ¿A cuánto están de Rascaba ustedes?
+- [01:06:47] Media hora.
+- [01:06:49] Ah, media hora.
+- [01:06:50] La Lupe pregunta si conoce a Rascaba.
+- [01:07:00] La verdad que no, pero de nombre sí.
+- [01:07:06] Estamos mal.
+- [01:07:10] Yo pasé, bueno, yo pasé hace poco, pero, o sea, hace un año que pasé por ahí, pero fui a Molina.
+- [01:07:18] Ah, ya.
+- [01:07:18] A las siete tazas, por ahí.
+- [01:07:21] Así que ya fui.
+- [01:07:22] Pero entonces, ¿ubicado dónde está Rengo, Requinoa?
+- [01:07:25] Sí, sí.
+- [01:07:27] No, no he ido directo allá, pero, o sea, pero he pasado.
+- [01:07:30] Ya, ya sí.
+- [01:07:32] Estamos cerca. Estamos a 10 minutos de Rengo.
+- [01:07:36] Ya, ok.
+- [01:07:39] Hasta que San Vicente, Tahuatagua.
+- [01:07:45] ¿Ya?
+- [01:07:46] Buena.
+- [01:07:48] Vamos a conocer Rengo y...
+- [01:07:50] Rosario.
+- [01:07:51] Juan y Medio.
+- [01:07:52] Juan y Medio.
+- [01:07:53] Juan y Medio.
+- [01:07:57] Y Dulce Tabú.
+- [01:08:03] Oye, ¿verdad que eso es como una calle, Rosario?
+- [01:08:06] Sí, es real.
+- [01:08:08] Ahí está Juan y Medio.
+- [01:08:10] Ya. Entonces la semanita del 26 tenemos por allá. Ya. Ya, chicas. Muchas gracias. Gracias, Carlos. Gracias. Que estén muy bien. Muy bien. Buena semana. Buen fin de. Chao. Chao.

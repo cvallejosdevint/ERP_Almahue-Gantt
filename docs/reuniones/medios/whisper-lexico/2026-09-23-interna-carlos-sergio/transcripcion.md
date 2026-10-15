@@ -1,0 +1,418 @@
+# 2026-09-23-interna-carlos-sergio (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-23-interna-carlos-sergio\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:08] ¿Aló?
+- [00:15] ¿Lo escuchas?
+- [00:16] Ahora sí.
+- [00:18] Vale, ¿cómo estáis?
+- [00:20] Bien, ¿y tú?
+- [00:21] Bien también.
+- [00:27] Oye, veamos lo que vamos a presentar en la ronda de hoy.
+- [00:30] Vale.
+- [00:33] Por lo que caché, ya tenéis todo contabilizado.
+- [00:36] Sí, pero me vi hay unas pifes que le está tirando la corrección a los chiquillos.
+- [00:42] ¿Ya?
+- [00:44] Hay algunas que las pude arreglar yo.
+- [00:50] Lo hubieran de estar viendo el José, ¿no?
+- [00:52] Sí, una que estaba viendo José y también había ahí algunas que le tiré al Diego, igual.
+- [01:01] Ya, del libro de compras, ¿qué fue lo que implementó José?
+- [01:06] Bueno, aquí ya hice la sincronización y ya está trayendo los datos directamente de GoSocket.
+- [01:16] Bueno, eso.
+- [01:17] ¿Cachái? Por ejemplo aquí, si nos vamos directamente a la pestaña de GoSocket,
+- [01:21] Estamos en AlmaWebExport, sí.
+- [01:25] No, pero tranqui, yo sé que se conecta.
+- [01:30] Pero, ¿qué más agregó el José de lo que hemos presentado él?
+- [01:37] De acá se pueden sacar, por ejemplo, los totales no están funcionando.
+- [01:42] Este está hecho con, está guardado mi base de datos, que es como los que antes de que se pudiera ingresar manualmente.
+- [01:49] Este no corresponde, pero por eso tiene monto.
+- [01:53] Pero no está trayendo los montos de GoSocket, de hecho no estaba tampoco trayendo la razón social, ahí la arreglo el poste.
+- [02:00] Y, por ejemplo acá, bueno va a ser PDF, aquí en el XML, si trae los montos, pues cachái, montoneto, monto base, el IVA, y aquí nos están reflejando.
+- [02:14] Pero el, ¿por qué el jose le dijiste el zapato o la 1.5 le dijiste?
+- [02:21] Ah, ¿y va a tener que consolidar de nuevo la rama de él?
+- [02:29] Sí.
+- [02:32] ¿Y no lo puedes ajustar tú, no cachái, cómo?
+- [02:36] Pues ya, abrí el cursor que lo haga.
+- [02:39] Sí, pues, José va a tener que crear otra rama, después consolidar.
+- [02:44] Así es.
+- [02:48] Pero en sí, ya está...
+- [02:52] Y eso es lo otro, porque...
+- [02:55] Dice que la orden de compra no está vinculada.
+- [02:59] Cachái, pero no encuentro dónde vincularlas tampoco.
+- [03:06] ¿Cómo no encuentro dónde?
+- [03:09] Porque aquí, estas son las que se traen las de recepción.
+- [03:13] Sí, entonces ahí debería poder, es que igual, yo creo que es una pregunta válida para ellos.
+- [03:25] ¿De qué manera? Porque eso deberíamos listar solamente las órdenes de compra asociadas a ese root, cachái, a ese proveedor.
+- [03:32] Vale, entonces eso tenemos que preguntarlo directamente con ellos.
+- [04:03] 802. No, no viene, no viene este caso. Entonces, bueno, ahí hay que ver las cosas que no validen eso. Y hay que preguntarnos de qué manera van a enlazar la orden de compra al documento recibido.
+- [04:19] También, por lo que recuerdo, aquí debió haber también quedado la opción de poder marcar la fecha de aceptación o de vencimiento, creo que era.
+- [04:33] La de vencimiento.
+- [04:35] La de vencimiento, sí.
+- [04:37] Pero es solamente para los aceptados o pendientes.
+- [04:40] Exacto.
+- [04:41] Mira, arriba.
+- [04:44] Por ejemplo, los pendientes aquí, yo puedo aceptarlos.
+- [04:46] Si le doy ahí a aceptar, esto los tengo ahí de muestra.
+- [04:49] Lo acepto y se aceptan y también se aceptan en GoSocket.
+- [04:52] Eso quedó funcionando.
+- [04:58] José.
+- [05:00] Déjame, voy a llamar a José, bueno.
+- [05:04] Espérame, espérame, voy a llamar a José.
+- [05:05] Vale.
+- [05:21] José.
+- [05:23] ¿Te podés conectar a una de mis con el Carlos, porfa?
+- [05:33] ¿Qué están viendo?
+- [05:40] ¿Cómo están?
+- [05:40] ¿Y los puntos de AlmaWeb no los viste al final?
+- [05:46] ¿Podéis subirlos para que me consolide el Carlos?
+- [05:52] Ya.
+- [05:54] Vale.
+- [05:56] Avisa, avisa porfa al grupo para que nos baje.
+- [06:03] Ya, vale, yo.
+- [06:07] Carlos.
+- [06:08] Ya.
+- [06:08] Estaba en reunión, pero no se puede conectar, pero ya tiene los puntos listos, así que los va a subir y los va a salir a esto.
+- [06:15] Vale.
+- [06:16] Ya.
+- [06:18] Ok, dale.
+- [06:21] Entonces, acá también, me acuerdo de que se dijo también el tema de la contabilización.
+- [06:32] No, eso no lo vamos a ver todavía.
+- [06:34] Ya, todavía no, vale.
+- [06:35] No sé, eso cuando matemos contabilización ventas, ahí recién nos vamos a meter a compras.
+- [06:42] Y aquí, por ejemplo, la aceptación debería venir para marcar la fecha de vencimiento. Eso también falta.
+- [06:51] Claro, si no viene.
+- [06:52] Te deberíamos preguntarlo si es que lo dejamos acá o si es que prefieren que se vea en otro lado.
+- [06:57] O sea, así como para aprovechar de que ellos nos den ese feedback.
+- [07:00] Dale a rechazar, a ver, ponle a rechazar.
+- [07:03] Nada.
+- [07:03] A ver, comentario.
+- [07:05] No, pero no, eso está mal, eso. Mira, dice todo arriba, dice el José. A ver, bajemos, a lo mejor le agregó las cosas que faltaban, pero no creo que le haya agregado esas, porque la verdad es que tenía, por ejemplo, cuando tú reclamas un documento, le tienes que poner por contenido, por contenido, por parcial de mercadería, cachái.
+- [07:28] Entonces, parece que no lo hizo. A ver, consolida.
+- [07:33] El José dijo que ya subió.
+- [07:35] ¿Ya subió?
+- [07:36] Sí, eso ya puso todo arriba.
+- [07:41] Voy a pedirle al cursor que por mientras haga la consolidación.
+- [08:19] Y creo que eso es lo que hizo José.
+- [08:23] No me mostró más cambios como tal.
+- [08:26] Parte de la visualización y que se descargue el PDF y el...
+- [08:29] y el XML.
+- [08:31] O sea, claro, ahora la sincronización, pues, sincroniza, está separado por...
+- [08:39] por los documentos aceptados, los pendientes, los revisados.
+- [08:43] Encontré raro de que, por ejemplo, aquí en todos no tengamos el botón de sincronizar, pero sí están rechazados, pendientes y inaceptados, y se va cambiando el título.
+- [08:52] Y realmente sincroniza todo.
+- [08:55] Ah, ¿y lo sincroniza todo igual?
+- [08:59] Sí, si por ejemplo en aceptados tengo cero y lo doy acá, sincroniza pendientes y rechazados también.
+- [09:04] O sea, sincronizar trae datos realmente de GoSocket, no hay como una sincronización de ida y vuelta, por así decirlo.
+- [09:10] Trae datos de GoSocket nomás.
+- [09:12] Pero eso...
+- [09:22] Y ya la otra vuelta es la de contratistas, que ahí igual estaba cabeceando acá para entender bien lo que hizo el diguito.
+- [09:30] No, pero te falta la tesorería, lo tuyo.
+- [09:34] Eh, tesorería, eso sí, no alcancé a hacer para que se cargue en el flujo de cajas lo que trajo el José, sí.
+- [09:45] No, no, no importa. No importa, pero que guardes, que igual ahí teníamos una duda, po.
+- [09:50] Y aquí está, bueno, esto lo mostré por imágenes nomás, cachái, acá tengo un par de operaciones que hice, dentro está esa que estaba, hice a mano, que ya no se pueden hacer a mano en lo que vendría a ser compras, que sería, esta de acá.
+- [10:14] ¿Qué? No lo entendí.
+- [10:15] Que, no sé si te acuerdas que te había dicho que como estábamos esperando la sincronización del costo, ocupé el sistema antiguo que te dejaba hacerlo como de un local, que tú podías ir a agregar acá una orden de compra manual, no trayéndola desde GoSocket.
+- [10:36] ¿Orden de compra? ¿Cómo decirle la orden de compra? ¿No viene desde GoSocket, po?
+- [10:49] O sea, la recepción de DTE, po.
+- [10:51] Ah, los documentos recibidos. Sí. Ya, ok. Ya. Que no cabe. No, extraño, sí, porque cuando paso del módulo de compra no se recarga, tengo que recargar manual, sí.
+- [11:18] Sí, no pasa en las otras páginas. Hay algo ahí con la implementación del José, entonces no la había cachado que tenía ese error. Hay que recargar manual.
+- [11:29] Y no lo podemos corregir rápido porque es prisión.
+- [11:34] ¿Pero hoy consolidaste?
+- [11:37] Sí, po.
+- [11:39] ¿Pero sí consolidaste?
+- [11:40] O sea, lo que tenía el José todavía no, po.
+- [11:43] Por eso consolidemos eso, a lo mejor eso ya está resuelto.
+- [11:47] Pero ahí está trabajando el cursor mientras, po.
+- [11:57] Ya, dale con tu solía.
+- [12:01] Ya, acá en el flujo de caja, así se ve mejor.
+- [12:08] Ahí está por periodo, concepto y código financiero. Acá en la apertura tiene este botón de corregir pensando en que se podrían equivocar o necesitar modificar los montos. La apertura se hace desde acá.
+- [12:24] No entendí. No entendí. Dijiste acá en la apertura.
+- [12:28] Acá. La apertura.
+- [12:33] Ya. ¿Qué es lo que es la apertura?
+- [12:36] Es donde cargan los montos que tienen como disponible, eso en una reunión la Lupe lo había dicho que necesitaban tener como una apertura de los montos, por así decirlo.
+- [12:47] ¿Una comuna inicial?
+- [12:49] Sí.
+- [12:52] Ya, dale registro la apertura.
+- [12:54] Cachái, ya tengo dos, una en CLP y una en USD, vamos a registrar una en YAMP.
+- [13:01] Y pude elegir también el banco.
+- [13:02] Ah, pero ese ingreso es por banco, ah, que ahí.
+- [13:05] Cachái.
+- [13:06] Entonces aquí, tú le das la apertura.
+- [13:09] No, ¿por qué falló ahora?
+- [13:15] Bueno, no ha alcanzado a ser como era el CUA de todo, porque igual eran estos cambios los de los chiquillos.
+- [13:20] Ah, no, puede ser porque está bajando los servicios el cursor también, Sergio.
+- [13:27] Como está haciendo la consolidación de los cambios que hizo el José, puede ser eso.
+- [13:32] Pero, al momento de registrar una apertura, se registra así, con el nombre del banco, la moneda, y aquí te registran los montos.
+- [13:41] ¿Qué más se agregó? Por ejemplo, como te había comentado en el grupo de WhatsApp, y la imagen que mandó Mario,
+- [13:46] De hecho, lo tengo acá. Aquí, por cada concepto, tiene un totalizado abajo. Entonces, si tú le pones a este check de acá, te deja los totales de ese concepto.
+- [14:13] Y también lo que habían pedido en algún momento era poder ver cuánto sería, porque acá en esta misma imagen, esto es puro pesos chilenos.
+- [14:21] Entonces aquí con esto, si le das clic, lo que son monedas extranjeras, te lo convierte a pesos chilenos y si le das el monto así como encima, si no haces clic, te muestra el monto que era en la moneda original, por así decirlo.
+- [14:35] Y este filtro que vendría a ser solamente por monedas.
+- [14:44] Ya, perfecto. Exportación a Excel no tenemos nada, ¿cierto?
+- [14:48] No, no le puse exportación a Excel, eso faltaría también agregar.
+- [14:52] Pero preguntémoslo, preguntémoslo si este detalle que acabas de mostrar así con el totalizado lo necesitas en el portal de Excel.
+- [15:00] Vale.
+- [15:02] Lo otro era nómina semanal. En la nómina semanal, esto es el que, por ejemplo, te decía que se ingresó a mano, 237.000 acá en compras.
+- [15:13] Ah, ya, el registro ese que tenía monto, ok, sí lo entiendo.
+- [15:17] Aquí está sin el IVA, cachái. Este está sin el IVA. Perfecto. Y acá se refleja como corresponde con el IVA y queda como pendiente. Con este puedes seleccionar y puedes aplazarlo o volver a la emisión. De hecho, también arreglé el modo demo para que también te muestre datos.
+- [15:42] De hecho, aquí ya están en agosto. Y ahí están los diferentes estados que pueden tener.
+- [16:00] Ya, ok. Y la... ya, apagado, ya, perfecto.
+- [16:07] ¿Y ese ver, mover? ¿Qué es lo que es ver, mover?
+- [16:10] Ese mover es para aplazarlo a otra fecha.
+- [16:13] Sí, es de la semana. ¿Pero y el ver? ¿Qué es lo que es?
+- [16:16] Te muestra como el detalle nomás.
+- [16:18] Ah, ok. Ya.
+- [16:22] Y esto debería nutrirse de lo que sale del...
+- [17:07] ¡Puta, qué rico!
+- [17:09] No puede pasar eso en tu cliente.
+- [17:14] Esto es más re feo que la mierda.
+- [17:18] Así mismo te escucho.
+- [17:24] Mi duda es, ¿estos locos habrán podido revisar algo del tren o por qué?
+- [17:30] No, se supone que ayer tenían una revisión, pero puta...
+- [17:33] Lo bueno que hoy día el avance que vamos a presentar es súper muy bueno.
+- [17:38] Tenemos compras, tesorería y parte de contratistas.
+- [17:43] Sé que faltan muchas cosas por definir, pero gran parte de la pelota está al lado de ellos.
+- [17:52] Sí, sí. Por ejemplo, con lo que hizo el Diego en el módulo de contratista, ese lo dejó bien, bien pulido el Diego.
+- [18:05] No hay contra lo que hizo el José, igual está, bueno, está listo, ¿sabes?
+- [18:09] Ah, eso es también lo que te decía vos, por ejemplo, el módulo de compra, este es el que falta arreglar, el que genera las órdenes de compra, que fue donde me traspapelé.
+- [18:25] Ah, pero eso no lo presentamos.
+- [18:30] Que hay que embellecerlo más que nada, si está listo y genera emisión, pero falta arreglarlo visualmente nomás.
+- [18:44] Ya, ok.
+- [18:48] Compila luego, y eso que está local.
+- [18:49] Que es este de acá, es el que hay que embellecerlo, porque por ejemplo acá las aprobaciones te aparecen en esta página y tú aquí realmente colocas el proveedor, y cuando agregas ítems, sale naivo, entonces de ahí nada que ver, debería aparecerte acá o acá abajito como información.
+- [19:44] Esta es la cadena de aprobación por si acaso.
+- [19:54] Ya, y después, ¿dónde pasa esa cadena? ¿Dónde la valías? ¿En aprobaciones?
+- [20:01] Sí, pues cuando yo, por ejemplo, bueno, aquí soy admin, me va a aparecer, pero si yo fuera un usuario normal, me saldría, dependiendo del monto, quiénes son los que tienen que aprobar, y a ellos les va a salir en aprobaciones también, pues cachái, me va a salir acá que está pendiente o aprobada, y aquí a ellos les va a salir con la opción de aprobar en las acciones, aprobar o rechazar.
+- [20:21] Pero por el usuario, según el usuario, ¿cierto?
+- [20:51] Si tiene como... porque tú lo vas a validar por monto, ¿cierto?
+- [20:55] Sí.
+- [20:57] Entonces, si el monto entra dentro de una cadena de aprobación, que muestre la cadena bajito, ¿cachái?
+- [21:02] Vale.
+- [21:04] ¿Entendí? Por ejemplo, si son... pero que ocupe todo el espacio, donde dice anterior hasta siguiente, pero a bajito, a bajito, a bajito.
+- [21:11] Claro.
+- [21:11] Entonces, si tú, por ejemplo, ya le pusiste 100 millones de pesos, ya pasa por cuatro personas, ocupa ahí todo el espacio, todo el ancho, y le ponen, no sé, por las cuatro personas. Y si, no sé, si le ponís dos millones y es para una pura persona, que se muestre la persona, ¿me entendís? Pero en el espacio completo.
+- [21:30] Vaya, no sé, los montos... Ah, pero esto es porque se guardan en la base de datos, tengo que borrar la base de datos, espera un poquito.
+- [21:40] Dale.
+- [22:25] Anda, para que te peguen una inyección, por último, te pongan suero al médico.
+- [22:31] No, si yo fui al médico, tengo un arreglo faringite agudo.
+- [22:34] No, lo baja.
+- [22:36] Y me dieron medicamento, toda la hueá, pero dio dos días, tres días, por ejemplo.
+- [22:45] Tiempo al tiempo, no va a entonces.
+- [22:46] Yo el lunes fui al psiquiatra y me dio unas pastillas, por eso ando más tranquilo, y me recetó cualquier examen y cualquier test.
+- [23:03] Voy a ver si es que tengo algún cuadro depresivo, alguna cosa así.
+- [23:10] Así es.
+- [23:14] Y también van unas indicaciones para ti.
+- [23:19] ¿Para mí? ¿O qué?
+- [23:21] Sí.
+- [23:22] Sí.
+- [23:23] Ahí después te va a salir el documento.
+- [23:25] Pero ya lo estamos haciendo, ya.
+- [23:27] Ya lo estamos haciendo.
+- [23:29] Que es dejar así como objetivos claros, diariamente, por así decirlo, ¿por cachái?
+- [23:33] Como lo estábamos aplicando desde la semana pasada.
+- [23:36] Ya.
+- [23:38] Ah.
+- [23:45] ¿Pudiste borrar o no?
+- [23:46] ¿O estás borrando todavía?
+- [23:49] ¿Qué estás borrando?
+- [24:30] Ah, sí, he comentado.
+- [24:39] Tenemos correcciones.
+- [24:40] Están del 17.
+- [24:42] ¡Gracias!
+- [25:23] Estas son las que nosotros habíamos dejado así, aquí empiezan las de ellos.
+- [25:30] Puro Mario el trabajo.
+- [25:41] Oye, José, ¿me gusta todo bien? Ah, me estoy borrando base, ¿verdad?
+- [25:44] Sí.
+- [25:49] ¿Y tanto se demora en borrar, huevón?
+- [25:51] Yes.
+- [25:53] ¿Por qué?
+- [25:56] Para sincronizar, no hay nada.
+- [25:58] Espera, espera, espera, no, no, no, espérate, ando de todos.
+- [26:01] Esa es la manual.
+- [26:05] Ya, ok.
+- [26:06] Que si no quedo sin...
+- [26:08] Sin registro para abrirla, te entiendo.
+- [26:09] Ah, mira, y no sé...
+- [26:14] Eh, en ese módulo sí, porque cuando estoy en estos de acá afuera, me permite cambiar.
+- [26:20] Ah, ¿por qué no le pides cursos que te lo corrijas de una? Porque si no, va a ser...
+- [26:25] O sea, esa pifia, huevón.
+- [26:27] Sí.
+- [26:29] ¿Cuánto irá a demorarse? ¿Cinco minutos?
+- [26:35] Tres horas, huevón.
+- [26:38] Qué proyecto grande, entonces cada vez se demora más la respuesta a este, huevón.
+- [26:54] Y debería ser puro front, no más, esta huevón, a diferencia de las otras modificaciones.
+- [26:57] Ah, y eso, te decía que si movimos ese, me quedo sin datos para mostrar acá la nómina semanal real, po.
+- [27:06] Sí, sí, te cacho.
+- [27:08] Entonces, ya, hagamos la sincronización nomás, mientras el fix.
+- [27:14] Ah, mira, y eso, ojo, mira, vamos a estar en aceptados, vale, sincronizar, sincronizar, y ahí.
+- [27:27] Ja, ja, lo hizo todo, po, guay.
+- [27:30] Pero en todo no hay, po.
+- [27:31] No, no, no, no, claro, pero...
+- [27:36] Ahí trajo los montos.
+- [27:37] No entiendo.
+- [27:39] Y este que fue creado manual se asocia a una orden de compra, pero no tiene XML porque fue creado acá, pues no lo trajo de GoSocket.
+- [27:46] Ya, ok.
+- [27:48] Pues ahí está, está trayendo los montos, pero...
+- [27:54] 10, 20, 30, 40, 50, son 50, más 199, sí, está bien.
+- [27:59] Sí, estaba viendo el totalizado, que el delante del totalizado mostraba lo que es a la cáncer o no más, pero ahora está bien.
+- [28:06] Ok, ahora está bueno, ya, perfecto.
+- [28:12] Ya, ya dejaste el curso corrigiendo el agua del menú, ¿cierto?
+- [28:15] Sí, sí.
+- [28:16] Ya.
+- [28:17] Y contratistas.
+- [28:19] Contratistas acá, ¿qué pasaba?
+- [28:23] Que había mucha parametrización acá en contratistas, por lo que ya habían pedido el módulo de parametrización.
+- [28:30] Que quedara ahí la parametrización de los datos.
+- [28:33] Entonces, la conversación que tuve ayer con el Diego fue que dejó la parametrización de los datos aquí.
+- [28:42] Lo dejó como pestañas, güey.
+- [28:44] Exacto, lo dejó como pestañas, pero lo encontré bueno, ¿por qué?
+- [28:48] Porque al módulo de parametrización te tienen que dar permiso.
+- [28:51] ¿Por qué? Porque si son datos sensibles, entonces la idea no es que cualquiera pueda cambiar los datos.
+- [28:56] Y me imagino que de contratistas va a haber un encargado, ¿cachái?
+- [28:59] De hacer la parametrización, entonces igual está bueno que esté por tab.
+- [29:02] ¿Por qué? Porque yo puedo tener a alguien que vea solamente contratistas y que no me cambie la parametrización. Ahora.
+- [29:10] Ya, pero, o sea, ¿y qué pasa? Pensemos que los gobernantes tienen un gobernante que se dedica a parametrizar o va a parametrizar contratistas labores, pero no tiene que ver actividades, asociaciones, ni a control tipo de control.
+- [29:26] Es que por lo que tengo entendido, al menos estos dos conversan entre sí, ¿no?
+- [29:32] O sea, tú decís que el mismo usuario tiene que parametrizar todo contratista, ¿es lo que estás diciendo?
+- [29:37] Sí, sí. De hecho, por lo que me acuerdo, era una persona que veía a los contratistas nomás en la empresa.
+- [29:46] Ya, ok.
+- [29:48] Cachái, entonces, aquí tengo mi super trofeo.
+- [29:55] Todo aparte de lo que vendría a ser las labores.
+- [30:00] Aquí es donde nosotros generamos las labores que se van realizando, o sea, las labores que se podrían realizar.
+- [30:04] Después, acá en el módulo de actividades, es donde nosotros hacemos también, por así decirlo, el desglose de las actividades que van asociadas a las labores.
+- [30:18] Y aquí es donde se asocia. Por ejemplo, acá si te das cuenta, se va a la labor y te dice las actividades que tiene asociadas a esa labor.
+- [30:31] ¿Cachái?
+- [30:32] Sí.
+- [30:35] ¿Qué pasó?
+- [30:38] ¿Qué te quedó?
+- [30:38] Sí, aquí tengo los topos acá escritos en un punto de veda.
+- [30:47] Entonces ahí se asocian las labores con la actividad, después se parametrizan los que vendrían a ser las unidades de control, y finalmente el tipo de contrato.
+- [31:03] Y si te das cuenta, acá va la cuenta, la cuenta administración, la cuenta ver, y el nombre, junto con un código.
+- [31:17] Este sería el contrato.
+- [31:18] Exacto.
+- [31:19] Y después vendría a ser lo que es directamente los contratistas.
+- [31:35] Acá, por ejemplo, yo le preguntaba al Diego que al momento de generar un contratista,
+- [31:40] hacía el match de que también fuera un proveedor para el tema de la orden de compra.
+- [31:47] Porque con el proveedor se hacían directamente las órdenes de compra.
+- [31:53] Claro.
+- [31:54] Entonces, por lo que me dijo, si por ejemplo yo cargo los datos de un proveedor,
+- [31:59] Por ejemplo, este, acá, deberían cargarse los datos de la razón social del proveedor, y ahí se haría como la asociación, cachái.
+- [32:19] Sí, entiendo.
+- [32:21] Entonces, después pasaríamos directamente con lo que vendría a ser las tarifas.
+- [32:28] Esto, aquí, por ejemplo, no entiendo muy bien porque por lo que sé, cuando yo quiero agregar una nueva tarifa, selecciono, por ejemplo, contratista, el tipo de contrato, la labor, pero aquí la actividad y la labor ya deberían venir asociadas.
+- [32:48] Ah, pero no, me está trayendo solamente las que son de esa labor. Sí, está bien.
+- [32:54] Las que asociaste antes.
+- [32:56] Sí. Aquí el centro de costo asociado, que esto se carga directamente también de la parametrización.
+- [33:03] Las unidades que también dejamos en parametrización de contratistas.
+- [33:08] Sí.
+- [33:09] La tarifa y desde hasta.
+- [33:11] Y la tarifa debería venir en base a la unidad, ¿o no?
+- [33:15] ¿Al seleccionar una tarifa?
+- [33:17] No, hay que ingresar la manual.
+- [33:18] Unidad, unidad, unidad, perdón.
+- [33:58] Exactamente lo que vendría a ser el ingreso diario. Y esta es como la forma de ver cuánta tarifa, por qué actividad, por qué labor y a qué centro de costo está asociado, por así decirlo.
+- [34:10] Y el ingreso diario es que lo que va a ver una persona, por ejemplo, ya el contratista tanto, se consumía tanta plata y ya.
+- [34:16] Exacto.
+- [34:17] Ya ve.
+- [34:18] Exacto.
+- [34:19] ¿Ya? Y la proforma y factura, esas eran las dudas que teníamos, ¿no?
+- [34:26] Exacto.
+- [34:26] Otras palabras.
+- [34:27] Por ejemplo, aquí, aquí igual tengo una confusión porque quedan en pendientes y para que queden realizadas tenemos que irnos aquí a proformas y debería cargarme esos datos.
+- [34:42] Tarifas, ¿cuánto tenemos acá en ingresos diarios? Uno, dos, tres. Ah, ya, salen desde acá.
+- [34:48] Claro. Sí, pero ahí te hay que seleccionar como el detalle, cachái, ese es el detalle de tu factura, hermano, de tu, sí, de tu factura, orden de compra.
+- [34:57] Claro, entonces aquí están los ingresos diarios, pero si me lo preguntas a mí, yo creo que sería más cómodo tener un selector de contratistas.
+- [35:09] Sí, pero ojo, que tú puedes tener de un contratista, le puedes tener N, ¿cómo se llama? N ingresos diarios, ¿cierto?
+- [35:19] Sí, güey, aquí ya están asociados por contratistas, entonces yo creo que, por ejemplo, antes de mostrar estos de acá abajo, debería seleccionar el contratista y que te muestre los que están asociados a ese, porque este creo que te muestra a todos.
+- [35:30] Ah, ya, sí, sí, te entiendo, sí, perfecto. Eso debería ser así, es cierto.
+- [35:36] ¿Y el número debería quedarse automáticamente, güey?
+- [35:39] Claro, el número de la proforma debe ser secuencial.
+- [35:43] Sí, güey.
+- [35:44] Y esto si te das cuenta es el periodo contable, pero sale, ah, sale este calendario. Yo lo dejaría como en la otra, seleccionar mes, año y mes. Y la moneda.
+- [36:03] Vamos a bajarla acá. Ah, me falta un ingreso. Vamos a bajar esos dos. La media previsualización.
+- [36:23] No, yo creo que esa previsualización debería ser un totalizado nomás, po.
+- [36:28] Y que se vaya actualizando cuando marque cheque.
+- [36:31] Claro, es que lo que yo te decía, que esa previsualización es el total nomás, po.
+- [36:37] Es como una factura, po.
+- [36:39] Y debería ser automático, que yo haga clic y se vaya actualizando.
+- [36:44] Claro, así es.
+- [36:46] Ya, pero ahí tenemos los ajustes.
+- [36:49] Entonces vamos a crearla.
+- [36:50] Y acá, también le deje ese mensaje al Diego, que las proformas, que me imagino que él se basó en el video que estaba la María Jesús, las proformas no pasan por aprobación.
+- [37:06] No, después la proforma se convierte en la orden de compra, y la orden de compra es la que va a pasar por aprobación.
+- [37:11] Exacto.
+- [37:13] Cachái, que te pide colocar supervisor, esto está de más.
+- [37:22] Cachái, va a dejarme a mí.
+- [37:23] Y a mí me sale acá en la lista como para aprobar.
+- [37:30] Bueno, a lo mejor igual ellos lo quieren mantener, dejémoslo como propuesta nomás.
+- [37:37] Y ahí yo una vez lo apruebo, debería pasarse a traspasos y cierres, si mal no me equivoco.
+- [37:47] Ah, queda en estado definitiva.
+- [37:50] Y aquí tengo estas opciones que son facturar, regresar y repetir.
+- [37:55] Y en traspasos y cierres está la proforma 001.
+- [37:58] Por lo que entiendo, esta parte es solamente como para ver información.
+- [38:07] Es que eso no lo entiendo, ¿para qué la traspase y cierre?
+- [38:10] Me imagino, por lo que entendí, es que ellos puedan cerrar lo que vendría a ser solamente contratistas, como el cierre del mes, pero de contratistas, cachái.
+- [38:23] Para que después nadie a este periodo le pueda ingresar más por formas, cachái.
+- [38:32] Entonces, cuando ya se hicieron todas las labores del mes, se registraron, que pueden hacerlo, por ejemplo, al próximo mes, por así decirlo, aquí tengan este filtro, y cuando ya vean que esté todo correcto, darle a traspasar y cerrar, y toda esta información se va a pasar a lo que vendría a ser la parte de contabilidad.
+- [38:49] Pero, ¿y eso no sería...? Ah, entonces van a manejar como dos cierres, uno que es el cierre contable y el otro cierre como contratista.
+- [38:58] Ah, sí, lo entendí yo.
+- [38:59] Igual validémoslo, validémoslo porque, porque puede ser que nos digan, no, solamente vamos a validar, vamos a controlar el cierre contable, cachái. Vale. Y todas las proformas que están del mes anterior y el cierre contable ya se hizo, cagaron, tienen que pasar para este mes, cachái. Pero igual validémoslo. Vale.
+- [39:24] Y este de acá de auditoría, no entendí muy bien lo que hacía.
+- [39:36] Según lo que dijo el Diego, era como que qué es lo que hacen, los ajustes que hacen, la proforma, todo eso.
+- [39:44] Ah, como un resumen entonces.
+- [39:46] Un log, un log de contratista.
+- [39:48] Ah, ya sí, porque aquí si te das cuenta está la que hicimos ahora.
+- [39:51] Ajá. Entonces, pero igual hay que validar con ellos qué es lo que buscan sobre ese auditorio. Vale. Y entre salería, aparte de la nómina semanal y la, con tu flujo de caja, las cartolas, ¿se vio algo?
+- [40:10] de los ajustes de cartola.
+- [40:41] Saldo por cada banco. Ahí está, por banco. Y por moneda. Por banco de Chile, CLP, banco de Chile, USD, banco China, Yon, y banco Estado, CLP.
+- [40:56] Ah, ya. ¿Hay tanto? Sí. ¿Por qué? Ah, pero espérate, en la cartola nos faltaba, parece, el concepto, ¿lo agregaste igual? En la cartola.
+- [41:13] ¿Para asociar conceptos? No, ese no lo tengo agregado.
+- [41:18] Ah, no, pero el código financiero.
+- [41:20] Sí.
+- [41:20] Porque el código financiero... Ah, eso tenías que también mencionar, que en Administradores creaste el...
+- [41:28] Ah, verdad, sí, del plan de cuentas, que hay que ver si es que se mantiene esta parametrización de acá.
+- [41:34] No, no, no, no, me refería yo a la administración, tú creaste una pantalla de conceptos.
+- [41:40] Ah, verdad, sí, sí, sí.
+- [41:43] ¿Qué está aquí? Conceptos, perdón.
+- [41:48] Cierto, y eso tú los creas y en códigos financieros tú lo asocias al concepto.
+- [41:52] Exacto.
+- [41:55] Entonces después en cartola, al asociar el código financiero, te va a construir tu flujo de caja según el concepto y el código financiero, ¿cierto?
+- [42:05] Exacto. De hecho aquí si te cuesta el modemo tenemos con un declase bien grande como para que puedas mostrárselo directamente.
+- [42:14] ¡Uy, ya terminó el curso en la web, menú, ¿no?
+- [42:22] A ver, a ver, a ver, esto era compras, ordenes de compra, sí, sí.
+- [42:30] ¿Ahora funcionó?
+- [42:31] Sí.
+- [42:32] Bueno, ya, entonces, puto, yo veo que tomamos un cierto modo sobrado, cariño.
+- [42:40] Hay que estar atentos nomás, Carlos, para poder después traspasarles los puntos que mencionan ellos a los muchachos.
+- [42:47] Vale.
+- [42:48] ¿Ya?
+- [42:50] Sí, sí, voy a tener un Word
+- [42:51] ahí al lado anotando todo.
+- [42:54] Sí, o si no entendí
+- [42:55] algo, voy a ver, puta, de nuevo,
+- [42:57] por último que decís, Sergio, entendiste esta parte,
+- [43:00] cachái, al chat,
+- [43:03] o la misma a mí, nomás, porque
+- [43:04] decía, ah, Sergio, por ejemplo,
+- [43:07] lo...
+- [43:08] yo digo sí o no, cachái,
+- [43:11] para que, mientras
+- [43:12] nosotros estemos claros, se cierra el
+- [43:14] tema. Si no, seguimos preguntando.
+- [43:17] Vale, vale. Voy a preguntar
+- [43:18] a tu entonces.
+- [43:20] Sí, pregunta, o sea, porque no se nota así como, oye, ¿qué es lo que es una cuenta contable?
+- [43:27] Esa te la mando por WhatsApp por interno.
+- [43:30] Claro, temas de concepto, tratemos de seguirle la línea, pero sí entender bien cuál es el flujo, cachái, qué datos, de dónde se van a obtener, y cómo se, no sé, si alguna fórmula o algo que nos digan, oye, esto se tiene que calcular de esta manera, ya, perfecto, pásame la fórmula, cómoda, se calcula.
+- [43:50] Sí, igual yo creo que, por ejemplo, ¿dónde yo cacho que vamos a tener harto feedback si es que realmente la Lupe tiene que ver con los contratistas? Porque yo, como te digo, me acuerdo que era otro loco el que veía a los contratistas. Ahí yo creo que vamos a tener harto feedback, y de lo que vendría a ser tesorería, me imagino que igual también ahí, si es que se nos escapó algo, que recuerdo que no, ahí vamos a revisar.
+- [44:14] Y del feedback que tenemos en el trelo, lo empiezo a matar ya de mañana.
+- [44:21] Puedes dejar sus tarjetas listas.
+- [44:25] Fino.
+- [44:28] Fino, te dejo para alcanzar a ir al baño.
+- [44:30] Sí, al menos eso mismo te voy a decir.
+- [44:32] Ya, hablamos un ratito.
+- [44:33] Nos vemos un ratito.
+- [44:35] Chao.

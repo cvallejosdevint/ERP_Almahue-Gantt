@@ -1,0 +1,371 @@
+
+Especificacion para desarrollo - Presentacion cliente 14/10/2026 (16:00)
+ 
+Destinatario: equipo de desarrollo (Diego, Jose y quien tome los modulos). Fuente primaria: docs/reuniones/transcripciones/transcripcion-2026-10-14-presentacion.md. Los timestamps entre corchetes son de ese archivo salvo que se indique otra reunion. Apoyo: docs/requerimientos/presentacion-2026-10-14/casos-de-uso.md (CU-01 a CU-20), mas transcripciones de cliente anteriores (01/10, 06/10, 23/09, 24/09, 28/08, Reu1 a Reu4, Reu6) solo cuando no chocan con esta sala.
+ 
+Como leer este documento
+ 
+Este documento no valida si algo ya esta implementado. Describe lo que el cliente pidio y el borde de cada pedido. El contraste con el codigo se hace aparte.
+Cliente en la sala: Maria Jesus, Mario, Rodrigo y Fran (Lafran) [02:21]. Carlos y Sergio son del equipo: lo que ellos proponen no es requisito hasta que el cliente lo confirma. Donde Whisper no rotula la voz, el caso de uso deja la pista; aqui se asume el cierre del cliente que consta en la transcripcion.
+Prioridad entre reuniones: gana esta sala del 14/10 tarde. Donde choca con el 01/10 se deja marcado explicitamente.
+Cada requerimiento trae: que se pide, el limite (lo que no incluye) y como se da por aceptado. Lo que no esta escrito aqui no esta pedido: ante una duda de alcance, se pregunta, no se amplia.
+ 
+Resumen por modulo
+ 
+Modulo
+Requerimientos
+Tamaño del cambio
+Contratistas
+REQ-C1 a REQ-C7
+Pantalla nueva de cierre, reglas de contabilización y de edición
+Compras y aprobaciones
+REQ-A1 a REQ-A4
+Cadena sin tramo exento, tipo de flujo, rol que crea la madre
+Insumos y bodega
+REQ-I1 a REQ-I6
+Flujo madre, guia e hija completo. Es el bloque mas grande
+Libro de compras
+REQ-L1 a REQ-L3
+Asociacion factura contra varias hijas
+Contabilidad y reportes
+REQ-K1 a REQ-K2
+Exportes PDF y Excel
+ 
+ 
+
+ 
+1. Modulo Contratistas
+ 
+Contexto de la sala: se mostro parametrizacion (sectores, faenas, asociaciones, unidades de control), ingreso diario, proforma con cadena de aprobacion y envio de correo. El cliente no corrigio esas pantallas. Lo que sigue es lo que si pidio.
+ 
+REQ-C1. La cuenta contable del contratista es unica y el detalle vive en el ingreso diario
+ 
+Origen: CU-01, [10:41] a [11:11] y [13:55] a [14:16].
+ 
+Carlos pregunto si la cuenta de gasto y el centro de costo se eligen en la proforma o en el ingreso diario. El cliente respondio que la cuenta contable de contratista siempre va a mano de obra contratista, y que el detalle se analiza por centro de costo, labor y actividad.
+ 
+Centro de costo, labor, actividad y monto se capturan en el ingreso diario.
+La proforma muestra el detalle del periodo agrupado por labor, centro de costo y monto, y todo eso imputa a la misma cuenta de mano de obra contratista.
+El gasto se reconoce una vez que la proforma esta aprobada [10:57] a [11:11].
+ 
+Limite: la proforma no es el lugar donde el usuario elige la cuenta de gasto. No se pide un selector de cuenta por linea de proforma. No se pide multiples cuentas de gasto por contratista.
+ 
+Aceptacion: un ingreso diario exige centro de costo, labor y actividad. La proforma aprobada imputa a mano de obra contratista sin que el usuario elija cuenta.
+ 
+REQ-C2. Menu "Traspaso contable y cierre de mes" bajo Auditoria
+ 
+Origen: CU-03, [15:04] a [15:30].
+ 
+El equipo propuso un boton en la cabecera del listado de proformas. El cliente corrigio el lugar: pidio un menu al costado, debajo de Auditoria, dentro de contratistas.
+ 
+Nombre exacto dictado por el cliente: Traspaso contable y cierre de mes [15:30]. Se respeta tal cual.
+Es un solo menu, no dos opciones separadas.
+En esa pantalla el usuario informa que mes va a cerrar y con eso se dispara el traspaso a contabilidad.
+ 
+Limite: no es un boton en el listado de proformas. No se pide aqui el tipo de cambio (Reu3 lo habia nombrado, esta sala no lo retomo: no se implementa por iniciativa propia).
+ 
+Aceptacion: existe el menu con ese nombre, bajo Auditoria, en contratistas, y pide el mes a cerrar.
+ 
+REQ-C3. El cierre genera un asiento centralizado del mes con las proformas aprobadas
+ 
+Origen: CU-02 y CU-04, [11:19] a [12:23], [13:20] a [13:40], [14:27] a [14:42], [20:10] a [20:28].
+ 
+El traspaso toma todas las proformas aprobadas del mes, de todos los contratistas. No se centraliza por contratista [20:19].
+Se contabiliza centralizado y totalizado, no una proforma a la vez [13:40].
+Asiento del cierre: mano de obra contratista contra facturas por recibir contratista [14:27].
+Al asociar despues la factura: facturas por recibir contra proveedor, y al imputar cuentas queda el gasto contra el proveedor [14:42].
+Regla de corte por fecha: la proforma puede ser de octubre y la factura llegar con fecha noviembre. El gasto de octubre se reconoce en octubre [12:06] a [12:23]. El criterio de seleccion es la proforma aprobada del mes, no la factura asociada.
+Las proformas pendientes de aprobacion se pueden ver como dato informativo, pero no entran al registro de gasto [20:28].
+ 
+Limite: el cierre no espera a la factura. No se contabiliza proforma por proforma.
+ 
+Aceptacion: cerrado un mes, existe un unico comprobante centralizado por el total de las proformas aprobadas de ese mes, con esas dos cuentas, independiente de si llego o no la factura.
+ 
+REQ-C4. Reapertura de mes cuando queda una proforma pendiente
+ 
+Origen: CU-20, [01:01:15] a [01:02:53].
+ 
+Caso que planteo Rodrigo: 29 dias del mes con proforma y un dia trabajado sin proforma asociada.
+ 
+Ese dia no se arrastra solo al mes siguiente ni queda informativo para siempre. Se emite una proforma para ese dia [01:02:00] a [01:02:22]. Razon dada por el cliente: si no, queda un mes con 29 dias y otro con 31, y se pierde la gestion.
+Si el mes ya se cerro y aparece una proforma pendiente, hay que poder abrir el mes para tomarla [01:02:10] a [01:02:19]. En la sala quedo dicho que hay que evitar que eso pase, pero la reapertura tiene que existir.
+Se pueden emitir tantas proformas como haga falta (incluso 20) y juntarlas despues en la factura [01:02:38].
+Debe existir un historial de las aperturas/cierres con registro de que usuario la genero
+ 
+Limite: no se pide arrastre automatico de ingresos al mes siguiente.
+ 
+Aceptacion: se puede reabrir un mes cerrado; al volver a cerrarlo, la proforma rezagada queda en el asiento del mes que corresponde.
+ 
+REQ-C5. Ingreso diario a trato: cantidad primero, precio despues
+ 
+Origen: CU-18, [59:15] a [01:00:17].
+ 
+Rodrigo explico que en trabajos a trato el precio se fija a futuro, cuando sale la fruta o al cierre de mes, y que no quiere recargar todo de nuevo.
+ 
+Se tiene que poder registrar la cantidad de labores con un precio estimativo y editar ese precio despues. Rodrigo acepto esa salida con "Claro" [01:00:17].
+ 
+Punto abierto, no implementar sin confirmar: guardar el ingreso con precio cero. Carlos dijo que hoy tira error; la idea es que se permita registrar precio 0 o tener la opciond e ingresarlo sin precio y que quede identificado
+ 
+Aceptacion: un ingreso diario guardado con precio estimativo se puede editar en el precio mientras la proforma lo permita (ver REQ-C6).
+ 
+REQ-C6. Candados de edicion de la proforma
+ 
+Origen: CU-19, [01:00:17] a [01:00:57].
+ 
+Tres estados, tres reglas:
+ 
+Estado de la proforma
+Edicion
+Borrador
+Libre
+Aprobada, sin factura asociada
+Solo con solicitud de modificacion, y vuelve a la cadena
+Asociada a factura recibida
+No se edita
+ 
+ 
+La razon que dio el cliente: "la factura es lo ultimo que nosotros tenemos para poder evitar cualquier diferencia con el contratista" [01:00:57]. Si aparece una diferencia despues de facturada, el camino es una nota de credito [01:01:09], no editar la proforma.
+ 
+Limite: la frase cerrada del cliente es sobre la proforma. No dijo, aparte, que el ingreso diario ya facturado tampoco se toca; el candado se ata a la factura asociada. No se amplia mas alla de eso sin preguntar.
+ 
+Aceptacion: con factura asociada, la UI y la API rechazan la edicion de la proforma y de los ingresos que la componen.
+ 
+REQ-C7. Cadena de aprobacion de proformas
+ 
+Origen: demo [07:59], [08:21], [17:10] a [18:13]; regla de monto en REQ-A1.
+ 
+La proforma pasa por cadena de aprobacion configurable, igual que la orden de compra, y el selector de reglas distingue orden de compra y proforma. Esto se mostro y el cliente lo acepto sin correcciones. Aplica a la proforma la regla de REQ-A1: no hay tramo exento.
+ 
+No entra como requisito (visto en demo, sin confirmacion del cliente):
+ 
+Unir los dos botones de notificar en uno solo. Lo propuso Carlos [18:24]; el cliente no lo confirmo.
+Que el administrador no pudiera aprobar una OC [24:52] a [25:04]. Carlos lo llamo desperfecto; nadie en la sala pidio corregirlo. Si se arregla, va como deuda tecnica, no como pedido del cliente.
+ 
+
+ 
+2. Modulo Compras y reglas de aprobacion
+ 
+REQ-A1. Se elimina el tramo exento: todo monto pasa por aprobacion
+ 
+Origen: CU-09, [32:29] a [33:51]. Es una reversion explicita de una decision anterior.
+ 
+Maria Jesus: "cuando tomaron esa decision de la aprobacion automatica, yo estaba de vacaciones y no estoy de acuerdo" [32:29]. "El amigo que sea de 5 pesos tiene que pasar por aprobacion" [32:39]. Cierra con "Si, yo lo haria asi, yo dejaria todo con aprobacion" [33:38].
+ 
+No existe monto que se apruebe solo. Se quita cualquier salto de cadena por monto bajo.
+La forma acordada en la sala: el primer eslabon parte en 0. Ejemplo dicho por el equipo y aceptado: Felipe aprueba desde 0 hasta 500.000 [33:23].
+Contraargumento que quedo registrado y no prevalecio: en AlmaWeb entran del orden de 300 facturas chicas al mes (10.000 o 15.000 pesos) [32:52]. El propio cliente respondio que un tramo exento dejaria pasar almuerzo o libreria, que no deberian aprobarse solos.
+ 
+Limite: esto cambia la configuracion de escalas, no la cantidad de eslabones. No se pide un modo masivo de aprobacion en esta sala.
+ 
+Aceptacion: no se puede configurar ni ejecutar una aprobacion automatica por monto. Un documento de monto minimo aparece en la bandeja del primer aprobador.
+ 
+Procedencia: la "aprobacion automatica" venia del 24/09 [04:24] y [06:11], dicha por el equipo y sin un si de Maria Jesus, que estaba de vacaciones. Esta sala la cierra en contra.
+ 
+REQ-A2. Tipo de flujo de aprobacion: servicios o insumos
+ 
+Origen: CU-15, [51:42] a [52:40].
+ 
+El cliente maneja dos tipos de orden de compra:
+ 
+Tipo
+Comportamiento
+Servicios
+Aprobacion y recepcion siempre uno a uno. No se parcializa [52:21]
+Insumos
+Llega por partes. Es la que genera diferencias [52:27]. Sigue el flujo de la seccion 3
+ 
+ 
+Las reglas de aprobacion necesitan un selector de tipo de flujo para configurar cadenas distintas por tipo [52:35] a [52:40].
+ 
+Limite: no se piden mas tipos que esos dos.
+ 
+REQ-A3. En el grupo de aprobacion se marca quien crea la orden madre
+ 
+Origen: CU-16, [52:42] a [53:15].
+ 
+Dentro de los integrantes del grupo se identifica quien es el jefe, y solo esa persona puede crear la orden madre en el modulo de insumos [52:51] a [53:15]. "La madre es el jefe."
+La orden hija la genera el administrativo al recepcionar, en insumos [53:15]. La hija no es una madre que arme el jefe.
+ 
+Aceptacion: un usuario que no esta marcado como jefe del grupo no ve ni ejecuta la creacion de la madre; si ve la recepcion que crea hijas si tiene acceso a insumos.
+ 
+REQ-A4. Toda edicion de la orden madre pasa por aprobacion
+ 
+Origen: CU-06, [30:44] a [31:36] y [32:03] a [32:08]. Ver tambien REQ-I5 para el momento.
+ 
+La madre se puede editar una sola vez, y esa unica vez es al cerrarla [30:44] a [30:50]. No se edita cada vez que aparece un error.
+Si hace falta un segundo cambio, se solicita a contabilidad [31:00].
+La edicion pide aprobacion tanto si el monto sube como si baja: "yo dejaria edicion, sea para abajo o para arriba, con aprobacion" [32:03]. El equipo tenia entendido que bajar no pasaba por cadena; queda descartado.
+Esa unica chance de cambio igual requiere la solicitud de edicion [31:31].
+ 
+Limite: la edicion no genera una OC nueva. Es la misma madre.
+ 
+
+ 
+3. Modulo Insumos y bodega (bloque principal)
+ 
+Este es el cambio de flujo mas grande de la sala y redefine donde nace la orden hija. Lo que se mostro en la demo (la hija nacia al asociar una factura de monto menor en el libro de compras, [26:35] a [29:50]) no es lo que el cliente pidio.
+ 
+Flujo acordado, en orden:
+ 
+1. El jefe crea la orden madre en insumos. Es la negociacion con el proveedor. Es informativa.
+2. Llega el despacho con guia de despacho. El administrativo recepciona en insumos, contra la madre.
+3. Esa recepcion hace nacer la orden hija por el parcial recibido.
+4. Las guias del mes se acumulan. Cada una dejo su hija.
+5. Llega la factura. En el libro de compras se asocian las hijas de ese proveedor a esa factura.
+6. Solo las hijas se contabilizan.
+ 
+REQ-I1. La orden madre es informativa y no se contabiliza
+ 
+Origen: CU-05, [29:09] a [29:15], [34:30] a [34:43], [45:49].
+ 
+La madre se usa para negociar con los proveedores, sobre una estimacion de fruta [44:48] a [44:55].
+"La madre solamente informativa" [34:43]. "La madre en realidad no mueve nada" [45:49].
+Solo la hija se contabiliza.
+ 
+REQ-I2. La orden hija nace al recepcionar la guia contra la madre, en insumos
+ 
+Origen: CU-10, [35:06] a [35:15], [36:47] a [37:21], [37:50] a [38:05], [39:35] a [40:05], [41:07].
+ 
+"Las ordenes de compra hija siempre se van a hacer con recepcion de guias de despacho... Si, siempre" [35:06] a [35:15].
+Tiene que existir primero la madre para poder asociar guias [39:56].
+"La idea es que en el modulo de insumo, cuando yo ingrese el material a bodega, sea en base a una guia y esa misma guia te haga la orden de compra hija" [39:35].
+"La orden de compra hija se apruebe con la guia de despacho... como que ahi nazca en realidad, cuando a mi en realidad me llega el documento con el despacho" [37:50] a [37:56].
+La hija queda por el parcial del saldo de la madre [37:21].
+La guia de despacho es solo bodega: "eso, lo de la guia, es solamente bodega" [38:05].
+ 
+Choque resuelto: el 01/10 [55:22] a [56:45] el cliente habia dicho que la guia entra a bodega sin asociarse a la OC y que la asociacion con la OC la hacia la factura de fin de mes. Gana esta sala del 14/10: la guia hace nacer la hija.
+ 
+Limite: la hija no nace al asociar una factura de monto menor en el libro de compras. Ese camino de la demo queda fuera.
+ 
+REQ-I3. La guia que no cabe en el saldo de la madre no se recepciona
+ 
+Origen: CU-14, [49:20] a [49:56].
+ 
+El control es antes de recepcionar: "una vez que la persona de abastecimiento vea que no puede recepcionar la guia con la orden de compra porque le falta, ahi va a tener que hacer la solicitud de que le modifiquen la orden de compra" [49:39].
+Esa guia no se recepciona y no nace la hija. Primero se pide la modificacion de la madre (REQ-A4), despues se recepciona.
+"El usuario va a tener el problema cuando quiera recepcionar y no tiene espacio de orden de compra. Ahi va a tener que levantar la mano" [41:29] a [41:35].
+ 
+Aceptacion: al intentar recepcionar una guia cuyo monto excede el saldo disponible de la madre, el sistema bloquea y orienta a solicitar la modificacion.
+ 
+REQ-I4. Libro de guias en insumos bodega
+ 
+Origen: CU-12, [36:00], [37:35] a [38:05], [50:28] a [51:21], [56:02].
+ 
+Existe un libro de guias, ubicado solo en insumos bodega: "Si, solo insumos bodega" [37:43], "Seria el libro de guia, si" [51:21].
+Insumos tiene visualizacion de las guias de despacho recibidas [50:28] a [50:42].
+El libro de compras no muestra guias de despacho [51:17] a [51:19] y [56:02].
+ 
+Limite: Sergio nombro que ahi se verian "la emitida y recibida" [36:00]. El cliente confirmo el libro en insumos y las recibidas; no repitio las emitidas por su cuenta. Las guias emitidas no entran en este alcance.
+ 
+REQ-I5. Cierre de la orden madre, desde insumos, por quien la pidio
+ 
+Origen: CU-07 y CU-08, [43:32] a [45:09], [45:10], [45:56] a [46:14].
+ 
+Una recepcion parcial menor deja la madre abierta y no dispara la edicion ni la aprobacion [43:53] a [44:06]. Mientras todavia falta por recibir, no se cierra.
+La baja aplica cuando abastecimiento decide que el resto no va a llegar: "nosotros estimamos una cantidad X de fruta y al final recibimos la mitad y nosotros en un momento le decimos al proveedor... negociamos 100 cajas y en realidad necesitamos solo 50. Entonces, en ese caso, ahi damos la orden de compra cerrada" [44:30] a [44:43].
+En ese caso pueden cerrarla en cualquier momento [45:01] a [45:09].
+El cierre se pide desde insumos, no desde ordenes de compra ni desde el libro: "Si, pero en la parte de insumos" [46:02].
+Lo puede pedir el usuario que pidio la madre [45:10].
+ 
+REQ-I6. Visibilidad separada entre Insumos y Compras
+ 
+Origen: CU-13, [46:58] a [47:18], [47:48] a [48:34], [49:56] a [50:05], [54:23] a [56:02].
+ 
+Modulo
+Que se ve
+Insumos bodega
+La madre y la hija, mas el saldo pendiente de la madre [55:58], [48:03]
+Compras
+Solo las hijas, y solo las recepcionadas, listas para contabilizar. No estan ni las pendientes ni las aprobadas sin recepcion [55:16] a [55:21], [55:53]
+ 
+ 
+"El de insumo es un mundo aparte, que serian solamente las ordenes de compra madre que no se van directamente al modulo de compra para asociarlas. Ahi solamente se van las hijas, que estan con guia de despacho" [46:58].
+"Para que entiendan, en compras para poder asociarlo van solamente las que estan recepcionadas. Si hay mil ordenes de compra que no estan aprobadas o recepcionadas, no se ven en ese modulo. Es como que no existe" [49:56] a [50:05].
+Las ordenes de compras y las de insumos no se muestran entre si [54:23] a [54:46].
+Quien tiene acceso solo a insumos (el administrativo de abastecimiento) tiene que poder ver sus ordenes [54:52] a [55:02].
+El saldo pendiente de la madre se ve en insumos, no en compras: quien calza factura con orden solo necesita que calcen, no si falta material por llegar [48:13].
+Sergio planteo un modulo de orden de compra madre aparte, propio de insumos [46:35] a [46:44]; el cliente acepto la separacion.
+ 
+
+ 
+4. Libro de compras
+ 
+REQ-L1. Una factura puede tomar varias ordenes hija
+ 
+Origen: CU-11, [35:15] a [35:43], [38:14] a [39:27], [40:12] a [41:07].
+ 
+"Yo puedo recibir, supongamos, 10 guias en el mes, y esas 10 guias corresponden a una facturacion" [38:21].
+Al llegar la factura, en el libro de compras se asocian las hijas que nacieron de esas guias [39:13] a [39:27].
+Correccion expresa del cliente cuando el equipo dijo "guias de despacho": "Hijas. No la guia de despacho, la orden de compra" [41:01].
+Varias hijas contra una factura, y la madre puede quedar con saldo [42:03] a [43:05].
+ 
+Limite: termina la regla de hoy de "cada recepcion es una factura" [41:57] para el flujo de insumos.
+ 
+REQ-L2. El listado para asociar es por proveedor, no por monto
+ 
+Origen: CU-11, [40:16] a [40:22], [28:17] a [28:26].
+ 
+"No asociarlas como por monto, sino que efectivamente me salga el listado de todo lo que me llego del proveedor" [40:16].
+"La idea es que en el libro de compra, cuando uno quiere asociar la factura, te aparezca como todo lo que esta asociado a ese proveedor... si me pongo cartocor, la factura 20, yo puedo ver todas las ordenes de compra que estan a ese proveedor" [36:23] a [36:33].
+ 
+Aceptacion: al asociar una factura, el libro lista las hijas recepcionadas de ese proveedor, no un filtro por coincidencia de monto.
+ 
+REQ-L3. La contabilizacion ocurre sobre la hija
+ 
+Origen: CU-05, [34:30] a [34:43].
+ 
+Solo las hijas pasan a contabilizarse. La madre no genera asiento. Carlos avisa en [34:50] que esa implementacion faltaba y que esta considerada: ese aviso no es un requisito nuevo, es el mismo REQ-I1 y REQ-L3.
+ 
+
+ 
+5. Contabilidad y reportes
+ 
+REQ-K1. Formato PDF para todos los reportes contables
+ 
+Origen: CU-17, [57:42] a [59:07]. En pantalla estaban libro diario, libro mayor, balance de ocho columnas y estado de resultados.
+ 
+El cliente pidio un formato PDF para todos los reportes: "Todo, formato de todo" / "Si, de todo" [58:12] a [58:15].
+El PDF lleva arriba: datos de la empresa, nombre del reporte y periodo [58:27], aceptado con "Ya, perfecto" [58:37].
+El Excel exporta las columnas de la grilla [58:16].
+ 
+Nota de gestion: el equipo pidio un diseno de base o referencia [57:53]. La transcripcion no registra que el cliente se comprometa a enviarlo. Si el formato importa, hay que pedirlo expresamente antes de modelar el PDF.
+ 
+REQ-K2. El estado de resultados se exporta a Excel y a PDF
+ 
+Origen: CU-17, [58:54] a [59:07].
+ 
+Rodrigo pidio ver la descarga del estado de resultados; en la demo no estaba. Queda pedido Excel y PDF de ese reporte.
+ 
+
+ 
+6. Fuera de alcance de esta sala
+ 
+Lo siguiente se vio en la demo o lo nombro el equipo, y no entra como pedido del cliente del 14/10. No se trabaja sin un pedido nuevo.
+ 
+Tema
+Por que no entra
+Unir los dos botones de notificar proforma
+Lo propuso Carlos [18:24]. El "buenisimo" [19:22] responde a la explicacion del correo, no a la union
+Que el administrador no pueda aprobar una OC
+Carlos lo llamo desperfecto [24:52]. Nadie pidio corregirlo. Va como deuda tecnica si se decide
+Numeracion de la hija con guion 1, guion 2
+Formato dicho por Carlos al mostrar [28:50]. El cliente no lo dicta
+Comprobante: tipo de documento, vencimiento, monedas peso, dolar y yuan
+Lo dice Carlos en [56:39] y [56:51] como pendiente del equipo. El cliente no habla en ese tramo. Lo que si pidio antes, y no se reabre aqui: 01/10 [32:37] a [34:00], comprobante en peso y dolar con yuan en paralelo, y auxiliar con RUT sin digito verificador
+Sectores, faenas, etiqueta de proveedor por RUT, actividad derivada de la labor, motivo del ingreso, configuracion de correos
+Mostrado y no corregido. El "Exacto" de [16:24] confirma la labor que trae la actividad, que ya venia de Reu2. No es pedido nuevo
+Tipo de cambio en el cierre de contratistas
+Aparece en Reu3, esta sala no lo retoma
+Guias de despacho emitidas en el libro de guias
+Solo lo nombro Sergio [36:00]. El cliente confirmo las recibidas
+Guardar ingreso diario con precio cero
+Pregunta abierta [59:15] a [59:36]. Sin si del cliente. Ver REQ-C5
+ 
+ 
+7. Compromisos de calendario dichos en la sala
+ 
+Habra reunion la proxima semana (jueves) porque salieron muchos ajustes [01:04:06] a [01:04:18].
+Visita presencial la semana del 26, lunes, martes y miercoles [04:02] a [05:21].
+El martes hay reunion de GoSocket, util para dudas [01:04:26].
+Pendiente administrativo: reenviar el acceso a Trello a Maria Jesus [01:03:54].
+

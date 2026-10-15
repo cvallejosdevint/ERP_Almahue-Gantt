@@ -1,0 +1,368 @@
+# reu5 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\reu5\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:02] Ya, los ajustes no se desbloñaron al server, igual habían algunos que estaban con error, entonces tiraba error al subirse, así que no se terminaron desbloñando, los tengo local, y de lo que solicitaron, vamos a ver primero lo que vendría a ser las aprobaciones con PIN, que es lo que tengo aquí anotadito para que no vaya perdiendo, y bueno, aquí como se solicitó, en los roles se dejó la opción de aprobar con PIN,
+- [00:31] Ya que dijeron que era por rol el tema de las aprobaciones.
+- [00:35] ¿Ya sí?
+- [00:36] Sí que dentro de la opción, en los que estén aquí, van a tener habilitada la opción para el PIN.
+- [00:40] A ver, espera, espera, espera.
+- [00:43] A ver, no, por ejemplo, tiene que ser como un usuario...
+- [00:46] ¿Cómo, Ander? ¿Sabes cuál es el... quién va a tener el PIN?
+- [00:50] Ya, bueno, en este caso es para los roles.
+- [00:52] Entonces uno crea los roles, y aquí le agrega a los usuarios ese rol, y estos usuarios son los que tendrían el PIN.
+- [01:00] Ah, pero es el mismo PIN para todos.
+- [01:02] No, no, no, se activa, se habilita la opción de aprobar por PIN, no es un PIN para todos, es un PIN por cada usuario, cada usuario puede restablecer su PIN, cambiarlo.
+- [01:13] Ah, no te entiendo, bueno, no te caché. A ver, ¿podrías crear un ejemplo?
+- [01:17] Sí, por supuesto, mira, vamos entonces a crear un rol de ejemplo, va a tener acceso a todo.
+- [01:28] Ah, ya, ya, un rol, perfecto, ya te entiendo.
+- [01:31] Cachái, yo como todavía no he creado un rol, todavía ni le asigno usuario, solamente le estoy dando los permisos y acá le doy la opción de que ese rol va a poder aprobar con PIN.
+- [01:40] Ya, perfecto.
+- [01:41] Entonces, por ejemplo, yo acá lo creo y después me voy a crear los usuarios.
+- [01:45] Cuando le asignes ese rol, te va a pedir el PIN.
+- [01:49] Exacto.
+- [01:50] Ya, bueno.
+- [01:52] Y ese le habíamos puesto el rol ejemplo.
+- [01:57] Aquí uno selecciona la empresa a la que va a tener acceso esta persona.
+- [01:59] Bueno, ya, buenísimo.
+- [02:02] La contraseña que es obligatoria, vamos a dejarlo como demo, 1, 2, 3, sin vigencia y va a ser un usuario activo.
+- [02:10] Entonces, este tipo cuando se los quede, va a poder aprobar con PIN.
+- [02:16] ¿Y cómo se vería cuando se inicie la sesión?
+- [02:19] ¿Y cómo se inicia el PIN?
+- [02:22] Ah, buena, bueno.
+- [02:24] ¿Cachái? Y aquí también para la contraseña.
+- [02:26] Lo que sí, y ahí ya siento que hay que darle igual una pasada porque ahora yo hago el cambio acá, por ejemplo, pongo el pin nuevo y confirmo y lo cambio. Quizás la idea sería que esto tenga una confirmación por correo porque igual la aprobación es algo sensible.
+- [02:43] Claro.
+- [02:44] Caché, entonces es como que te mande un correo y que en el correo venga el link para acceder al cambio de pin, como lo hacen casi todos los servicios.
+- [02:51] Es que en realidad, por ejemplo, si dejáis la trazabilidad y el usuario que lo dice, sabemos que ese usuario sí lo editó al PIN y lo editó en línea prácticamente su PIN, porque no se acordó, ¿cachái? Con la vía configurada eso da igual porque no afecta a los demás, ¿no?
+- [03:07] Yo más que nada lo decía porque, por ejemplo, en el caso de que, no sé, hay usuarios que tienen los PIN anotados como aquí en el escritorio, darte un ejemplo, cachái, sería fácil tenerlo, o cambiárselo igual, por ejemplo, si yo no me sé el PIN de, por ejemplo, este es tu usuario, y yo no me sé tu PIN, y quiero aprobar algo, yo me voy a tu perfil, le cambio el PIN, y ya tengo tu nuevo PIN, y puedo aprobar, no hay como algo de seguridad que por último te llegue un correo que diga, oh, estás intentando cambiar tu PIN.
+- [03:34] O sea, pero si estáis trabajando con el usuario, ya es vulnerable la cuenta, ya está vulnerada.
+- [03:54] ¿Sabés lo que podría hacer ahí? Al poner cambiar PIN, que te ingrese la clave de la cuenta.
+- [04:00] Ah, toda la razón. Que te confirme con la clave de la cuenta.
+- [04:04] Sí, hay que tener el servicio de envío de correo y toda la hueá.
+- [04:12] Perfecto.
+- [04:27] Ya, entonces, lo que vendría a ser ahora las aprobaciones.
+- [04:30] Por ejemplo, en este caso, lo que vendría a ser las proformas.
+- [04:39] Debería tener aquí alguna parte.
+- [04:40] Sí, por ejemplo, aquí al momento de aprobar, te dice.
+- [04:45] Primero, porque aquí te va a listar las que están realizadas, así como a nivel general.
+- [04:49] Pero, como estamos en el admin, aquí me va a decir que está solicitado a. Y si yo como admin quiero aprobarlo, aquí me va a decir, esta aprobación no se solicitó a ti.
+- [05:01] O sea, el solicitado a, ¿a dónde yo le asigno a quién se lo ha solicitado?
+- [05:07] De los que están con el permiso para aprobar, se te despliega una lista de todas esas personas.
+- [05:14] ¿Podemos hacer un registro?
+- [05:16] Sí, por supuesto.
+- [05:17] Acuérdate que la proforma es como una factura en realidad, o esos campos eran lo que yo había dicho?
+- [05:56] Y aquí, esta proforma se la va a ir a esa persona para que me la apruebe.
+- [06:04] Y esas proformas se ven así al momento de recibirlas.
+- [06:12] Ok, te capto.
+- [06:14] Cachái, y en este caso como estamos en el perfil de Adwin, me figuran igual todas las solicitudes, pero me muestra esa advertencia de que si la quiero aprobar la estoy aprobando a nombre de otra persona.
+- [06:26] ¿Y estará bien eso?
+- [06:27] Hay que consultarlo, pero es súper fácil dejarlo de que solamente lo vea la persona que lo aprobó y no el administrador. O sea, la persona que se le solicitó, perdón.
+- [06:36] Ya, solicitaba.
+- [06:38] Sí, más que nada porque la agilidad que me da el perfil de admin, Sergio, que estás y van a tener que cambiar de perfil a cada rato.
+- [06:46] Ya, claro, también. Sí, también.
+- [06:50] Cachái, pero si se necesita cambiar ese ajuste, lo sacamos rapidito, no hay problema.
+- [06:54] Ya, no, pero si te falta bien, porque así voy a ser como un buen super jefe, y Juan va a decir, ya yo puedo estar viendo.
+- [07:24] Bien, también lo que vendría a ser la visualización, de hecho acá si no me equivoco lo tengo en las proformas que fue donde se solicitó, entonces eran las aprobaciones, está bien, las aprobaciones de compra que uno puede ver el detalle de la orden de compra.
+- [08:02] Aquí viene la que se había solicitado que apareciera el centro de costo. Aquí tenía una duda, sí, Sergio. Al momento de realizar órdenes de compra, el centro de costo va asociado por ítem?
+- [08:19] No sé si lograste ver el tema de expandir la pantalla de emisión de la OCE, ¿te acuerdas que habéis dicho?
+- [08:40] Expandir la pantalla de la emisión, de que cara más ancha, ¿verdad?
+- [08:43] Claro, de verdad, como lo decía Estopones de... Ah, bueno, ¿cómo se llama Estopones?
+- [08:53] Estopones, los que... No, como los de...
+- [08:58] ¿Verdad? Los que vivimos con...
+- [09:02] Bettersoft, ahí está, güey, no sé si me costó.
+- [09:06] No, estoy perdido, Sergio, ¿a qué haces? ¿Referencia para notarlo acá y revisarlo?
+- [09:10] ¿Te acuerdas que tú habías dicho que la opción de expandir?
+- [09:13] Ah, las ventanas, sí, la parte de usar no la había visto, viejito.
+- [09:17] Lo voy a tener aquí anotado para dejar la posibilidad de tenerlo con ventanas.
+- [09:23] Sí, porque en esa pestaña que estábamos viendo tenías razón, estaba muy comprimida.
+- [09:28] Claro.
+- [09:29] Sí.
+- [09:30] No, pero está bien así porque hay buenos que les gusta ver bien agotado.
+- [09:34] Pero por último, no sé, un expandir que tome un tamaño más...
+- [09:41] Bueno, al menos por ejemplo esta vista está justa, pero igual este monitor es grande, no sé cómo se verá en un monitor más pequeño, así que igual estaría bueno dejarlo re-dimensionable.
+- [09:56] Sí, porque no... no cacho cómo se verá en un monitor más cuadrado, por así decirlo, porque este igual es como más panorámico la vista.
+- [10:05] Perfecto, entonces con las compras, entonces las órdenes de compra ya las vimos, sí, eso tiene que ir anotado, por ítem, perfecto, el libro de compras, aquí me falta el totalizado porque aquí, sé que en el libro de venta habían pedido totalizado, pero aquí creo que igual habíamos dicho que quedaran...
+- [10:34] Sí, la idea es que todos los libros estén contotalizados. De igual forma, me gustaría que los totales sean como, puta, que esa visualización sea como configurable, no sé si lo explico. Por ejemplo, no sé, pues sí, claro, algo así, pero por ejemplo, si tú lo quieres ocultar, ah, pero sabes lo que ahí sería bueno, Carlos, que en realidad, no sé cómo lo podemos hacer.
+- [11:11] A ver, te voy a compartir pantalla para que veas cómo lo hace hoy en día desde mí, ¿vale? Que en realidad igual es útil.
+- [11:25] Está en el auto, hija. Dígale a mi hermana que te vaya a buscar. Dígale a mi hermana que te vaya a buscar.
+- [11:35] Ya después, déjame subirlo, termino la reunión y voy.
+- [11:38] Ya mirá, por ejemplo, aquí, en mis libros, igual, todos los revés tienen esta misma obra.
+- [11:44] Que tienes un resumen, cachái, pero el resumen, si te das cuenta, es como una tablita por tipo de documento, cachái.
+- [11:56] Sí, está súper buena esa vista.
+- [12:02] Me gustaría, por ejemplo, que esto se pueda ocultar, cachái.
+- [12:09] Como minimizar, pues, de que quede el resumen arribita, pues.
+- [12:14] Claro, una flechita, pues, y esto se oculta, no sé.
+- [12:17] Como el panel lateral, ¿cierto? Ese que se oculta así como de la derecha para la izquierda, ¿verdad?
+- [12:23] Claro.
+- [12:24] Sí, sí.
+- [12:27] Algo así. ¿Por qué? Porque, por ejemplo, el que estás compartiendo tú, ese es... Ah, no, estoy compartiendo...
+- [12:34] Ahora sí.
+- [12:42] Por ejemplo, ahí, claro, está bien el total, porque ese es el IVA completo, pero quiero saber cuántas notas de crédito tengo.
+- [12:49] Claro.
+- [12:49] Porque ese es otro tema. Para los totales, si pudiera notar en alguna parte, por ejemplo, las boletas, las facturas, las boletas afectas, las boletas exentas, las facturas afectas, las facturas exentas y las notas de débito se suman.
+- [13:14] Extensas y notas de crédito, ¿cierto?
+- [13:16] Exentas, exentas.
+- [13:18] Exentas notas de crédito.
+- [14:15] Entonces, ese PDF que tú tienes, el otro del botón de acciones, no es necesario, porque lo tenía acá, ¿cachái?
+- [14:23] Vale.
+- [14:25] ¿Ya?
+- [14:31] Mira, yo, la idea es que la visualización del...
+- [14:49] Pero, ¿te vas a compartir pantalla también? Un tema que yo vi en Dipsy.
+- [14:53] Sí.
+- [15:00] Sí, claro.
+- [15:01] Ya, eso te preocupa.
+- [15:02] Ya.
+- [15:04] Por ejemplo, acá.
+- [15:06] Comercial, libro comercial, libro comercial, libro comercial, por ejemplo, aquí yo visualizo, ¿cierto? Así el formato, ¿cachái?
+- [15:46] datos de receptor, con los totales y los totales abajo, esto es una orden de compra, ¿ya?
+- [15:53] vas a darle captura a pantalla
+- [15:54] te la mando, te la mando
+- [15:56] vale, vale, si es que me hace falta un documento tipo para no fantasmear
+- [16:03] Carlos
+- [16:05] de hecho esta me gusta porque como lo tengo actual, si te das cuenta, habilita el tiro del panel de impresión del navegador
+- [16:23] Claro, esta va por ejemplo ahí donde podés imprimir o descargar como PDF o cerrar.
+- [16:31] Sí, está buena esa.
+- [16:32] Igual la idea es mantener eso.
+- [16:34] Sí, sí.
+- [16:35] Por ejemplo también envío correo, la idea es que puedas enviar correo, ya, a los diferentes destinatarios.
+- [16:42] En ese caso como todavía no tenemos servidor, lo podría dejar como opción pero todavía no conectado.
+- [16:47] Claro.
+- [16:49] Bacana.
+- [16:49] Que no mande aún.
+- [16:51] Vale.
+- [16:51] ¿Ya? ¿Qué más? Por ejemplo, bueno, acá, este no va a ser como opción para ellos, pero acá yo puedo apuntar archivos, cachái, asociando al documento.
+- [17:14] No sé si pasarse lo debo.
+- [17:17] ¿Sí?
+- [17:18] Y, por ejemplo, aquí puedes como anular, ¿te acuerdas de lo que habíamos hablado?
+- [17:22] Sí.
+- [17:23] Lo que sí, acá, era el tema de las acciones.
+- [17:27] Por ejemplo, este es para registrar el pago.
+- [17:30] Vale.
+- [17:30] Para facturar el documento, perdón.
+- [17:32] Este es para facturarlo.
+- [17:34] Convertirlo en un DTE.
+- [17:36] Este es para imprimir, que te levanta el PDF.
+- [17:39] ¿Ya?
+- [17:39] Vale.
+- [17:40] Este es para enviar correo, este es para juntar y este es anular.
+- [17:43] Entonces la idea es que, puta, reutilicemos un poquito estas acciones, que las voy a pausar ya, para que las consideres y las implementes, ¿ya? Eso. Bueno, los filtros, la idea es que los libros tengan filtros, no sé si le aplicaste filtros tú.
+- [18:31] Sí, tengo filtros, de hecho, hay que reformularme los filtros, y eso lo hizo igual la IA, porque hay algunos que siento que están de más, y que la forma de cómo están hechos está medio feita, así que igual habría que darle una repasada, porque aquí es más bonito estéticamente. Tienen, funcionan, pero siento que se ven feos.
+- [18:48] Ya, ok. Bueno, igual te dejé pasar ahí como lo que tengo ahora en Dipsy, ¿ya?
+- [18:53] Vale, bacán.
+- [18:57] ¿Qué más?
+- [19:00] Un segundo, un momento. Dale.
+- [19:04] Va, a cerrar este que es el deploy. Entonces ahora, bueno, con lo que vendría a ser el libro de ventas, se quitaron los accesos directos que tenían entre ellos, ¿te acordás que tenían un hostado acá arriba? Se lo eliminé a los dos.
+- [19:26] Los dejaste separados, perfecto.
+- [19:56] Entonces, los pendientes me estaban quedando y me aguachito los borradores, así que lo implementé acá en este menú como para poder ir viendo.
+- [20:05] Quedan, en este caso, como historial. Uno puede ver el documento como predefinido de ese, está parece con la leyenda borrador igual, para verlo como rápido.
+- [20:16] Y aquí puedes cargarlo para que se te cargue la opción acá.
+- [20:18] Y por ejemplo, si tú ya tenías uno en el borrador, modificaste algo y necesitas guardarlo, pero confirmar, ya sea, no sé, algún ítem de estos de acá, si lo pones guardar como borrador, se guarda toda la información que actualizaste del borrador.
+- [20:33] Entonces siempre va a ir actualizándose en caso de que necesitas guardarlo y no finalizarlo, te lo permite el sistema.
+- [20:41] Ya, perfecto.
+- [20:43] Entonces, por ejemplo, acá vamos a ver este de carga.
+- [20:45] Aquí los ítems van con su centro de costo también, ¿verdad?
+- [20:53] Los ítems también. Ese es, pero, ah, es venta. No, este no va. Pero ese va con la cuenta.
+- [21:01] Vale.
+- [21:02] Ah, pero centro de costo igual, ella dijo que iba, ¿no?
+- [21:04] Voy a preguntarle por interno porque tengo la duda. Y creo que ahí en esa parte de la reunión se me cayó un poquitito la internet.
+- [21:12] Sí, no sé si en la venta, no sé si en la venta en sí, cuando tú estás vendiendo un producto, tienes que asociarlo a un centro de costo.
+- [21:24] Porque la cuenta mayor sí sé, pero por ejemplo centro no lo sé.
+- [21:29] Vale, sí, porque quedé con esa confusión, porque justo como no estábamos hablando de esta parte de la emisión de documentos de la venta, se me estaba cayendo un poquitito la net.
+- [21:38] Así que ahí va a quedar como pendiente.
+- [21:44] Y está con su cuenta contable.
+- [21:48] Y aquí al darle siguiente, permite agregar referencia, observaciones, y acá también tenemos una previsualización del documento.
+- [22:00] Ya, perfecto.
+- [22:02] Y bueno, en caso de guardar como borrador, y se va actualizando la lista.
+- [22:06] Esta lista de borradores sí está asociada solamente a los usuarios.
+- [22:09] Yo no puedo ver los borradores de otras personas.
+- [22:12] ¿Y a dónde puedo ver una, aparte de la emisión? ¿No tengo por dónde otro lado verla? ¿Como un libro de borradores?
+- [22:21] Eh, no, lo dejé solamente acá. Como, como menú rápido más que nada. Igual podría ser un, un menú acá que sea borradores.
+- [22:31] O sea, igual, ¿sabes qué? Estaba pensando en el libro de ventas. En el libro de ventas. Mándatelo.
+- [22:36] Acá lo tengo aquí, mira. Porque aquí como habían pedido que solamente apareciera lo contable, no lo dejé así como visible, como borrador, como tal. Pero igual, en la reunión estaba puesto como borrador. Se podían ver los borradores desde acá, pero como pidieron solamente ver lo contable, lo dejé ahí.
+- [22:55] Y, por ejemplo, el tema de los periodos. Me pasó, bueno, esto igual es por lo que te digo, de no tener que andar cambiando tantas opciones, de que en algún momento quería ver lo que pasaba en los demás periodos y la habilité esta opción.
+- [23:10] Porque si no te carga de este cliente lo que está en este periodo, y ponte tú necesitas revisar algo con agilidad de periodos anteriores, sacar alguna información, alguna captura de pantalla o ver un documento, le di esta opción que te permita ver los periodos anteriores.
+- [23:25] En este caso, justo hace como media horita limpié la base de datos, así que no tengo otros periodos. Tengo solamente el de agosto.
+- [23:33] Ah, ya. Yo lo dejaría. O sea, está bueno, pero...
+- [23:38] Pero es peligroso.
+- [23:40] No, no, no, no. Es por el tema de la cantidad de registros.
+- [23:44] Vale.
+- [23:44] Eso se te va, se te puta, bueno, nosotros tenemos que emitir 22.000 documentos mensuales, y si le ponía así todos los periodos, puta, bueno, eso se te va a pegar el navegador.
+- [23:59] Podría ser compaginación entonces, de que te muestre, da 15, para que no se te pegue el navegador.
+- [24:04] Cosa que la consulta traiga los primeros 15, y si le dais siguiente, recién buscas los siguientes 15.
+- [24:08] ¿O yo lo dejaría, por ejemplo, todos los periodos del año? ¿Desde el año actual? ¿O cómo sería ahí?
+- [24:17] Es literal todo. De este cliente, cachái.
+- [24:22] Ahí yo lo dejaría como anual nomás, por favor.
+- [24:26] Vale.
+- [24:26] ¿Cachái?
+- [24:27] Vale, ya. Bueno, en el caso de que igual necesiten ver, si no sé, vos dices, no, es que yo necesito de repente ver cosas de hace tres años,
+- [24:41] Entonces, podríamos dejar de que esta opción sea solamente máximo un año, pero que cuando se apliquen filtros de búsqueda avanzada, ahí ya haga otra discriminación.
+- [24:55] Claro, por eso yo lo dejaría, por ejemplo, no sé, por los rangos de fecha, pero él va a sacar información de un año completo.
+- [25:01] Claro.
+- [25:01] ¿Entendí?
+- [25:03] Ya, bacán.
+- [25:09] Un momentito.
+- [25:15] Ya, ahora sí.
+- [25:16] Entonces, bueno, las cotizaciones realmente no le di mucha vuelta porque había quedado con el sistema de aprobación, como lo dijo la María José, que ellos actualmente no trabajaban con el sistema de aprobación y la implementé igual que el otro módulo, la aprobación.
+- [25:42] Las cotizaciones son muy similares a la orden de compra.
+- [25:45] Sí, ahí lo tengo con detalle, el estado, este lo voy a eliminar, porque aquí no debería haber mantención de cliente.
+- [25:53] Sí, podría ser, podría ser.
+- [25:58] ¿Es igual?
+- [25:59] Sí, sí, es bastante útil.
+- [26:02] Vale, o quizás cuando aquí uno, o no, así nomás.
+- [26:07] No, está bien así.
+- [26:08] Lo que sí, en vez de la palabra completa crear cliente, le dejaría, por ejemplo, un más, cachái.
+- [26:14] Claro.
+- [26:15] Y que ese más te levante a otro modal con el formulario completo del material de cliente.
+- [26:20] Vale, sí, también me tinka.
+- [26:21] Sí, porque está como, ocupa mucho, se nota mucho.
+- [26:24] Claro, o si lo podís tirar, si hay que afilete cuando lo aparece como en el lado derecho de la pantalla como un mini formulario, cachái.
+- [26:34] Vale, vale, vale.
+- [26:38] Para que no se levante un modal sobre otro modal, ¿me explico?
+- [26:41] Sí, sí, sí, sí. Y ahí también la otra información, si guarda esto es como Ruth y Razón Social, pero tiene más campos.
+- [26:49] Sí, por ejemplo, la dirección, comuna, ciudad, teléfono, correo.
+- [26:52] Exacto. Bueno, aquí te deja agregar más líneas.
+- [27:29] globales, descuento de recarga de línea, cachái. Igual aquí los dejo anotaditos con la
+- [27:38] transcripción también de la ropa que estamos haciendo ahora. Lo aprovecho igual de
+- [27:42] implementar al tiro, cosa que después sea lo mínimo que falta.
+- [27:46] Claro, yo ahí, yo trabajaría así sobre la emisión de factura.
+- [27:50] Vale. Y después replicamos para la cotización y las órdenes de compra.
+- [27:53] Vale. Al fin y al cabo, todo como se relaciona van a tener los mismos campos.
+- [28:05] En gran parte sí, por ejemplo, las ventas no van con centro de costo, las órdenes de compra, las facturas recibidas, sí deben ir con centro de costo, cachái.
+- [28:28] Mira, aquí tengo como el menú de acciones más parecido al de allá.
+- [28:36] Ya, eso está bueno.
+- [28:38] Pero sí, las acciones tienen que ir toda alineadas hacia la derecha.
+- [28:41] Sí, pues tiene que estar acá.
+- [28:43] Esos botoncitos están perfectos.
+- [28:45] Ya, los voy a replicar estos, sí, también están bonitos.
+- [28:47] Bueno, aquí en este caso, como estoy desde el perfil de admin, me permite emitir la cotización y todo. Por eso tengo todas las opciones. O anularlas también. Entonces ahí cambia el estado emitido. Y ahí se puede convertir la nota o convertir la factura.
+- [29:11] Y una cotización imprimible.
+- [29:15] De aquí también voy a copiarme...
+- [29:18] De casualidad no tenía algún documento de cotización que me pueda copiar, porque igual este está básico.
+- [29:24] No, pues es que te mandé yo.
+- [29:26] Si ese es en realidad lo que se va a cambiar arriba, el que te envíe dice orden de compra, cachái.
+- [29:32] Cambia el título nomás.
+- [29:34] El título.
+- [29:35] Vale, viejito. Genial.
+- [29:43] Bueno, y acá en el libro de estas hay que modificar esa parte de ahí.
+- [29:45] Y ahí está la cotización. La que recién acabamos de aprobar. Este hay que eliminarlo, sí, hay que eliminarlo.
+- [29:58] Eso se elimina, pero la idea es que el folio, donde dice folio, aparezca como que se entiende que es un botón, cachái.
+- [30:05] Va a colocarle quizá una lupita ahí.
+- [30:09] O, por ejemplo, si la bonita que es el PDF tiene un borde.
+- [30:14] Un borde, vale.
+- [30:14] El botón que dice PDF.
+- [30:16] Vale.
+- [30:16] Y que sea lo mismo así como aparezca dentro el folio, para entender que va a ser un botón.
+- [30:28] Lo de los borradores, ¿cómo lo podríamos dejar? Estaba pensando, por ejemplo, si pinchas borradores, que no sé si te los listes así,
+- [30:38] ah, que en realidad no hay nunca tantos borradores, pero si yo soy súper usuario o administrador, si quisiera ver todos los borradores, ah, no.
+- [30:47] Por eso te decía, acá, como lo dejé configurado, el admin no puede ver los demás borradores, ¿cachái? Podríamos hacerle que acá igual, en la búsqueda avanzada, te filtre que no sea igual a borrador. Cosa de siempre verlo contabilizado y emitido, y en caso de que uno quiera ver los borradores, aquí verlo.
+- [31:09] Claro, no, pero en realidad, como te decís tú, en realidad, puta, ¿para qué quería estar viendo borradores de otras personas?
+- [31:39] Entonces, ese borrador que viva dentro del usuario y que nunca se...
+- [31:45] O sea, quizás quedaría como formación basura, pero cada usuario cuando se meta va a ver ahí que tiene un numerito y a la gente, créeme que le da a ver esas cosas.
+- [31:56] Igual, podríamos listar todos los borradores acá como para el admin por último.
+- [32:00] Claro.
+- [32:12] Por filtro, sí, eso, eso, pero en realidad, como decís tú, realmente, bueno, ¿quién va a trabajar con tantos borradores, huevón?
+- [32:25] Un buen disperso.
+- [32:26] Claro. Pero sí le agregaría un filtro. Ese sí le agregaría ahí en eso para poder que vos filtre y en realidad si le dais ver. Ponele ver.
+- [32:38] Ese te muestra el documento, cachái.
+- [32:41] Ya, ok.
+- [32:43] Y cuando uno le da a cargar, se te abre la interfaz de la emisión de documentos con los datos cargados.
+- [32:49] Ah, perfecto.
+- [32:51] Cachái, entonces aquí yo finalizaría y si es que yo lo finalizo, se me borra el borrador.
+- [32:56] Ya, entiendo.
+- [33:30] ¿Me dejan subir o me están llamando?
+- [33:33] No, espérame.
+- [33:34] Tenlo más.
+- [33:35] Están cobrando.
+- [33:52] Están cobrando.
+- [33:53] Están cobrando.
+- [33:54] Están cobrando.
+- [33:57] Ya.
+- [33:57] Ya.
+- [33:58] Vamos entonces ahora con contabilidad.
+- [34:02] Oh, ¿qué no me parecía este periodo si yo lo había borrado?
+- [34:07] Chan.
+- [34:17] A ver si me cambio el periodo.
+- [34:19] Eso no me funcionaba, el cambio de periodo desde acá.
+- [34:24] Ahí podís tener más de un periodo activo, po.
+- [34:27] O sea, activo lo que hace referencia es en el que tú estás acá, cachái, y el estado es abierto, cachái.
+- [34:39] A ver, cámbiate, a ver, cámbiate.
+- [34:42] ¿Cuál es la ventaja de hacer eso?
+- [34:47] Más que nada para que uno vea aquí que está en ese mes, cachái.
+- [34:51] O sea, perdón, sí, en ese mes.
+- [34:53] Pero este de acá no tiene ni una ciencia, si uno lo tiene que manejar de acá.
+- [34:57] Claro, porque en realidad después tú vayas a trabajar sobre, en realidad si lo cambias así, vayas a trabajar con información de lo que sale de un periodo que no es el actual, o sea, yo ese no lo ocuparía.
+- [35:12] No, porque ese tiene el control desde acá, y por ejemplo acá, si es que yo lo cambio, ese también me... Ah, pero mira, eso no se está haciendo, ahí debería actualizarse el activo, cachái.
+- [35:23] No, pues no, no, no, ah, claro. No, pero eso yo lo sacaría, bueno, dejaría estado, ¿no?
+- [35:30] Vale, vale.
+- [35:31] Pero sí tienes que tener
+- [35:34] trazabilidad de quién te cierra
+- [35:36] el periodo, eso sí.
+- [35:40] Y quién lo abre, ¿me lo entiendes?
+- [35:44] Y cuando dé apertura de periodo
+- [35:46] o lo reabre
+- [35:48] debe dejar algún
+- [35:49] comentario. Entonces,
+- [35:51] en este caso, lo que me haría falta es
+- [35:53] que yo pueda aquí tener un ver
+- [35:55] para ver el historial del periodo,
+- [35:58] ¿cierto?
+- [35:59] ¿Pero qué historial
+- [36:01] de quién lo abrió,
+- [36:03] ¿Quién lo cerró vos?
+- [36:05] Ah, ya.
+- [36:06] Porque no tengo historial.
+- [36:08] Claro.
+- [36:09] Solamente lo puedo cerrar, abrir, pero no puedo consultar quién lo hizo. Eso me falta.
+- [36:14] Sí, claro.
+- [36:16] Por ejemplo, este, si lo abro, me pregunto.
+- [36:25] Debe también preguntar el motivo para abrir un periodo, ¿cierto?
+- [36:29] O los periodos no se deberían poder abrir.
+- [36:33] Exacto.
+- [36:34] Sí, allá, perfecto.
+- [36:38] Y ahí eso iría con la trazabilidad del historial.
+- [36:40] Perfecto.
+- [37:34] Ay, es puro fantasmeo del... de la IA.
+- [37:38] No, pero eso no es necesario, ¿no?
+- [37:40] Vale. Usted es el experto. Yo le hago caso a usted.
+- [38:07] Y aquí ya estaba esta parte en la que me faltaba revisar ahora, que es la parte de los comprobantes de asientos contables.
+- [38:14] Y lo que vendría a ser del módulo de tesorería, que es el estado de cuentas, donde están los detalles.
+- [38:26] Entonces, aquí se pueden ver las facturas que, no sé por qué no me está mostrando esas facturas y aquí me la está mostrando, ahí tengo un problema, que esa factura no me la está reflejando, y es la 88001, y si yo le doy click acá puedo verla, tampoco, pero sí me la realiza para buscar, cachái, algo está pasando ahí, debe ser por el borrado que hice delante de la base de datos.
+- [38:57] Pero aquí irían asociados los documentos del estado de cuenta.
+- [39:12] Y aquí, bueno, los filtros que habían pedido. De todos son solamente los pendientes.
+- [39:25] Ya, ok. Ese es el estado de cuenta de los clientes, ¿cierto?
+- [39:30] Ah, sí.
+- [39:34] Exacto.
+- [39:36] Tiene que ser por igual, por ejemplo, debería poner el tipo, o sea, el tipo movimiento, si es una venta o una compra, ¿ok?
+- [39:46] Vale, aquí con el tema de la conciliación también se dejó los pendientes solamente, con la posibilidad de ver un resumen,
+- [40:14] el cual no me está cargando tampoco, dicen los datos que se borraron, cartolas bancarias, no, esto todavía no lo he tocado.
+- [40:53] Esto está pendiente.
+- [41:12] Y eso es lo que ha avanzado Sergio.
+- [41:21] Ya.
+- [41:25] Pago, contratista,
+- [41:28] anticipo,
+- [41:34] conciliación. Bueno, conciliación no ha tocado nada.
+- [41:37] No, todavía no.
+- [41:42] Ok.
+- [41:51] Justo yo creo que ya, bueno, ahora
+- [41:53] en esta reunión sacamos hartos ajustes.
+- [41:56] A ver si podemos
+- [41:57] estarnos para mañana a la misma hora, ¿qué te parece?
+- [42:00] Sí, no hay problema.
+- [42:02] ¿Ya? O sea, si los tenía antes
+- [42:03] Me avisáis, nos juntamos y vamos observando lo siguiente.
+- [42:08] Vale.
+- [42:09] ¿Ya?
+- [42:10] Vacancito.
+- [42:12] Ya, Carlos, me voy a otro arreo, por la chucha.
+- [42:14] Por la chucha.
+- [42:17] Mañana no te voy a dejar hablar, te voy a dejar una nota así, para que digáis sí o no.
+- [42:23] Ya, vale.
+- [42:25] Ya, viejito.
+- [42:26] Ya, vale, hablamos.
+- [42:28] Cuídense, que estoy bien.
+- [42:29] Igual, chau, chau.
+- [42:30] Chau, chau.

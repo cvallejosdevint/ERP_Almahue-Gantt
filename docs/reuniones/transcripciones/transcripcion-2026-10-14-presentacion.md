@@ -1,0 +1,548 @@
+# Presentacion 2026-10-14 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Recording 2026-10-14 173332.mp4
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:27] O sea, corrimos la reunión para mejor, para el Diego, ¿no? Pensando que íbamos a estar bien.
+- [00:34] Cájete el oficio.
+- [00:38] No lo pongáis más nervioso, no lo pongáis más nervioso, Sergio.
+- [00:41] Pero tenés que tú meterle presión a los cabros, po, para que lleguís tranquilo a la presentación, po.
+- [00:47] Que si no, esto te va a afectar a ti.
+- [00:50] Debo admitir que no tengo ese como poder, tengo que bloquearlo todavía.
+- [00:54] Bueno, por ejemplo, salgamos a la reunión, los puntos que tiene que tomar el Diego, se los...
+- [01:03] Y el José se dedica ahí a eso nomás.
+- [01:05] Muchachos, estos puntos necesito para lo antes posible.
+- [01:11] Obvio, si lo del Diego quedó casi finiquitado, puro probarlo después.
+- [01:16] Por eso, pero por ejemplo, tenéis que que te lo entregue antes, ¿cachái?
+- [01:24] Sí, que igual ahora, por ejemplo, pasó de que lo entregó el...
+- [01:29] y la semana empezó el martes, pues.
+- [01:32] No, por eso, te lo entregó muy encima, por ejemplo, ahí tendrías que haberse lo pedido ya para el viernes de la semana pasada.
+- [01:38] ¿Cachái?
+- [01:39] ¿Vale? Siempre los ajustes que te vayan a entregar para presentar tienen que ser dos días antes de la presentación. ¿Por qué? Porque hay un día para que tu revisión, tú hagas el CUA de ello, y el otro día, por si hay correcciones, pasárselo para que corrija un poco.
+- [02:00] Ya, lo voy a meter a la reunión nomás por último... mostremos... proformas primero.
+- [02:05] Sí, dale, dale.
+- [02:08] Ya, ahí vienen.
+- [02:15] Buenas tardes.
+- [02:16] Hola, buenas.
+- [02:19] María Jesús, estás muy mudiada.
+- [02:21] Hola. Hola. ¿Cómo estás? Bien, gracias. Bien, bien. Acá está Mario, Rodrigo, Lafran y yo, por si acaso. Ah, hola a todos, ¿cómo están? Bien, ¿y ustedes? Bien también. ¿Cómo están? ¿Hay lluvia? ¿Hay lluvia o calor allá? Ayer fue terrible y hoy día hay un sol que no se aguanta.
+- [02:48] ¡Gracias!
+- [03:25] ¿Bien? ¿O no se escuchó? Sí, sí respondí.
+- [03:28] No, parece que no respondiste.
+- [03:29] No, no se escuchó.
+- [03:32] No, ahí dice que es lo del volumen.
+- [03:35] ¿En serio?
+- [03:36] Bien. ¿Ustedes qué tal?
+- [03:39] Bien, bien.
+- [03:40] ¿Cómo va con la última?
+- [03:42] ¿Con qué?
+- [03:43] ¿Señor, con datos de lo que te manda ayer o no?
+- [03:46] Uh, no, no. O sea, estoy ahí buscando a nadie bien vivo.
+- [03:49] Estoy viendo ahí que tengo igual otro, otro, estoy planificando otra visita a otros clientes.
+- [03:55] Pero en Santiago. O sea, ahí me estoy organizando con la semanita.
+- [04:02] Pero ahí, la semana 26 vamos a estar sí o sí allá.
+- [04:11] Esperamos para destapar champaña nomás, para celebrar.
+- [04:19] Todo depende de Carlos.
+- [04:23] Eso.
+- [04:27] Prepara la champaña nomás.
+- [04:28] Si se gana la salida al mar.
+- [04:29] Ah, eso, eso.
+- [04:36] Carlos, no sé si va a proyectar.
+- [04:39] Voy.
+- [04:44] Oye, Mario, hablando sobre el tema de la visita que vamos a tener la semana del 26,
+- [04:49] no sé si va a ser necesario que la próxima semana nos reunamos igual para el día jueves o dejamos todo para el lunes 26.
+- [05:02] A misterio.
+- [05:03] Claro.
+- [05:08] Yo creo que va dependiendo de cómo veamos hoy día el módulo, ¿no?
+- [05:11] Vamos a ver qué ajustes salen hoy día y vamos a ver si es necesario, si no al final destinamos todo el tiempo para la semana del 26.
+- [05:20] Claro.
+- [05:21] Lunes, martes y miércoles, ¿cierto?
+- [05:24] Así es.
+- [05:25] Me confirman si se ve.
+- [05:33] Yo sí.
+- [05:34] Sí se ve.
+- [06:00] Vamos a ver primero lo que sería el módulo de contratistas.
+- [06:03] Aquí se hicieron varios ajustes de lo que nos mandó María Jesús y dentro de lo que también nos mostró en el Word que nos entregó, se hicieron varios ajustes a este módulo, partiendo por lo que vendría a ser dentro de parametrización contratistas, se agregaron también lo que vendría a ser los sectores y las faenas, junto con lo que ya habíamos visto, que se dejaron como datos opcionales.
+- [06:27] Aquí podemos ver las asociaciones, estas son las que teníamos acá de prueba, y también las unidades de control.
+- [06:40] Pasando directamente a lo que vendría a ser el módulo de contratistas, aquí podemos ver lo que vendría a ser cada uno de los contratistas que se tienen aquí registrados,
+- [06:49] donde como podemos ver aparece la etiqueta cuando también son proveedor, que eso es cuando coincide exactamente justo el root con algún proveedor que ya haya existido y se hace directamente la asociación.
+- [07:00] Bien, y aquí partimos con lo que vendría a ser los ingresos diarios.
+- [07:07] Como podemos ver tenemos unos totalizados.
+- [07:11] Aquí como podemos ver no tenemos pendientes de proforma, así que vamos a generar uno nuevo, ya que todos estos están actualmente asociados a una proforma.
+- [07:29] Bueno, aquí como pueden ver, dependiendo de la labor aparece la actividad asociada.
+- [07:33] Esta tiene dos asociadas, así que podemos seleccionar solamente esos.
+- [07:37] Aquí es donde se controla las cantidades en horas o unidades.
+- [07:41] Vamos a dejarle como que se trabajaron 8 horas y el precio unitario, que vamos a dejarle, para este ejemplo vamos a dejarle uno de 1000.
+- [07:51] Y como podemos ver, bueno aquí actualmente no tenemos ingresados estos campos, ya que son como opcionales, pero como lo vieron también aparecen directamente en el mantenedor.
+- [07:59] Y aquí se puede agregar un motivo. Dentro de la implementación nueva, también aquí abajo aparece la cadena de aprobaciones de proforma, que ahora también se pueden configurar aprobaciones y cadenas para lo que vendría a ser este sistema.
+- [08:21] De hecho, de forma bien rápida, que se me había olvidado, en las reglas de aprobación, ahora tenemos aquí el selector para órdenes de compra y generar las cadenas o las proformas.
+- [08:32] Aquí como podemos ver existe solamente uno con este integrante y pasa primero por Bruno cuando es un monto sobre 5.000 y finalmente Carlos cuando es un monto mayor a 10.000.
+- [08:43] Esta es la última que generamos, nos salen los totalizados, no perdón, esta de acá que aparece como pendiente, nos aparecen los totalizados.
+- [08:55] Aquí podemos ver y editar la información, como tenemos un total de 8.000 pasa por Bruno Lago solamente y después queda directamente aprobada.
+- [09:03] Si yo, por ejemplo, ahora le editara el monto, lo dejara, por ejemplo, en 2000, ahí aparecería el segundo aprobador, que sería Carlos, desde un monto mayor a 10.000.
+- [09:16] Perfecto.
+- [09:24] Ahora viene lo que vendría a ser la generación de las proformas, donde aquí podemos ver que hay algunas que están pendientes de aprobación, ya que se implementó el sistema de aprobación.
+- [09:33] Algunas que ya aparecen con otro estado que es notificada contratista.
+- [09:38] Y ahora vamos a generar la que nos faltaría que la genere para el cliente ALM.
+- [09:43] Y aquí nos figuran todos los que hicimos de ingresos que tengan que ver con este root.
+- [09:48] Por ende podríamos seleccionar más de uno para este contratista.
+- [09:52] Y aquí nos aparece el detalle y el totalizado de lo que vayamos seleccionando.
+- [09:57] Y aquí también podemos incluir la cuenta de gastos.
+- [10:01] Acá tenía una duda, porque si se dieron cuenta en el ingreso diario, que no lo quisimos eliminar de los dos selectores, aquí también se puede seleccionar el centro de costos.
+- [10:13] Entonces teníamos la duda de saber en dónde se debería asignar directamente el centro de costos.
+- [10:25] Ah, perdón, aquí en la cuenta de gastos, estoy puro mintiendo.
+- [10:27] Igual, no sé si es que por ejemplo en este caso las cuentas también irían asociadas a cada uno de los ingresos diarios para pasar este módulo al anterior, donde se hace el ingreso diario.
+- [10:41] Lo que pasa es que actualmente la cuenta contable de contratista se va a mano de obra contratista.
+- [10:47] Y el detalle se va analizando en base al centro de costo, la labor, la actividad.
+- [10:55] Tendría que ir entonces en ingreso diario ambos.
+- [10:57] Una vez que se apruebe, que se emita la proforma y se apruebe, se lleva al gasto de la cuenta de mano de obra contratista.
+- [11:09] Una vez aprobado, entonces.
+- [11:11] Sí.
+- [11:13] Perfecto. En ese caso, porque actualmente como tenemos el sistema, voy a saltarme un poquitito estos pasos, vamos a agregar cualquier cuenta.
+- [11:19] Acuérdate, Carlos, que hablamos que nosotros mensualmente hacemos la centralización del módulo y que en base a todo lo que se haya ingresado en el mes y esté aprobado, se hace como un asiento contable gigante mensualmente que se pasa a contabilidad.
+- [11:43] Y ese a fin de mes se hace, ¿verdad?
+- [11:45] Sí, una vez que yo cierro el mes, se hace ese traspaso a contabilidad.
+- [11:50] Y ese traspaso ahí, María Jesús, sería de todas las proformas que fueron aprobadas, ¿cierto?
+- [11:58] Sí.
+- [11:59] Pero, ¿son las que fueron aprobadas o las que están también asignadas o asociadas a factura recibida?
+- [12:06] Lo que pasa es que lo que puede pasar es que la proforma quede, por ejemplo, en octubre y la factura llegue con fecha noviembre, no que siempre llegue con fecha octubre.
+- [12:16] Entonces, la idea es que el gasto en sí, que fue de octubre, quede reconocido en el mes que corresponde.
+- [12:23] Ya, lo entiendo. Ok. O sea, entonces, se va...
+- [12:36] Ay, me mareé. Porque tú mencionaste que cuando se cree la proforma y está aprobada,
+- [12:44] ahí recién se va a poder asociar por línea de talla la cuenta, ¿no?
+- [12:49] Sí.
+- [12:50] Es que por lo que estoy viendo en el módulo va a quedar que, por ejemplo, si uno ingresa todos los días un… hace un ingreso diario de las labores o la actividad, después yo puedo agrupar esos cinco ingresos y crear una proforma, por lo que estoy viendo, ¿cierto?
+- [13:07] Exacto.
+- [13:08] Ya, entonces una vez que esa proforma esté aprobada, se asume, porque la va a aprobar el jefe de campo, entonces se asume que efectivamente las labores sí se realizaron en la semana que corresponde.
+- [13:20] Ya, en el mes supongamos que van a haber cuatro órdenes de compra, o sea, cuatro proformas aprobadas. Esas cuatro proformas deberían llevarse a la centralización del módulo.
+- [13:33] Ah, y recién se van a contabilizar.
+- [13:35] Sí, ahí recién.
+- [13:38] Pero ahí se contabilizan una a una, ¿o no?
+- [13:40] No, ahí se contabilizan centralizadas. Se totalizan.
+- [13:46] Y claro, pero por ejemplo, tú mencionaste que por línea de detalle, o por ingreso diario, llamémoslo así, asocias una cuenta.
+- [13:55] No, por ingreso diario se asocia la labor del trabajo.
+- [14:00] Ya, y en la proforma, ¿qué asocias?
+- [14:04] En la proforma te va a quedar el detalle de todo lo que se hizo en el mes, pero por labor, centro de costo y monto.
+- [14:12] Y todo eso se va a ir a la cuenta contable, mano de obra contratista.
+- [14:16] Ah, ya, ok. Entonces, ya te entiendo. Entonces, esa configuración de mano de obra contratista se tiene, ya, te entendí.
+- [14:27] Exacto. Entonces, una vez que se haga el asiento de las proformas, te va a quedar el mano de obra contratista contra facturas por recibir contratista. Y una vez que yo le asocio la factura, se va a ir el facturas por recibir.
+- [14:42] Porque cuando yo lo asocio, la factura va a quedar facturas por recibir contra proveedor. Y ahí después, metiendo las cuentas, me queda el gasto contra el proveedor.
+- [14:53] Entiendo. Entonces aquí, por ejemplo, en el listado de proforma, tú deberías agregar un botoncito a nivel de cabecera para centralizar o contabilizar todas las que ya fueron aprobadas.
+- [15:04] Sí, lo ideal es que en el costado haya algún filtro que uno pueda poner traspaso contable y cierra de mes.
+- [15:12] Entonces yo en el cierre de mes informo qué mes voy a cerrar y ahí se hace el traspaso a contabilidad.
+- [15:17] Ah, ya, pero sería un menú nuevo en el contratista, ¿o no?
+- [15:21] Claro, sería como abajo de auditoría.
+- [15:23] Ya, ok. ¿Cómo fue lo que mencionaste en el menú para dejarlo tal cual?
+- [15:30] Traspaso contable y cierre de mes.
+- [15:38] Y ese sería un solo menú, ¿cierto?
+- [16:24] Sí, es que ahí es un prueba, ¿no? Pero sí, sí está. Y quedó parametrizado para que uno elija la labor y te salga la actividad automática. No es que antes teníamos el problema que teníamos que buscar qué labor correspondía. Exacto. Entonces, ahora, como va a estar parametrizado, nosotros lo hemos automatizado.
+- [16:46] ¿Tienen alguna duda, Rodrigo?
+- [16:52] Escuché un tabueno.
+- [16:53] Sí, lo que pasa es que actualmente el área agrícola es la que lleva más el módulo de contratista.
+- [17:02] Entonces la idea es que a ellos también les quede cómodo para ingresar la información.
+- [17:09] Perfecto.
+- [17:10] Como estamos pendientes de su ajuste, voy a igual de todas formas mostrarles cómo funcionaría el proceso de la aprobación directamente.
+- [17:18] Aquí vamos a generar esta proforma.
+- [17:20] Vamos a seleccionar aquí rápido.
+- [17:22] Vamos a crear, es por 16.000. Aquí aparece como borrador y una vez nosotros le damos a solicitar aprobación, a la persona que tiene que aprobar le va a llegar una notificación interna y le va a aparecer directamente acá en aprobaciones.
+- [17:41] Como podemos ver, aquí está. Aquí podemos ver el detalle. Bueno, en este caso, como yo estoy como administrador, me permite directamente aprobar.
+- [17:52] ¡Filtro cero!
+- [17:55] Tengo el poder.
+- [17:57] Y aquí directamente como se dieron cuenta pasó la primera aprobación.
+- [18:02] Podemos ver directamente aquí en la proforma que todavía aparece con el estado pendiente.
+- [18:09] Vamos a probar la segunda.
+- [18:11] Y ahí ya aparece con el estado definitivo.
+- [18:13] Y por ejemplo vamos a ver un detalle, aquí también se había considerado para hacer la asignación de acá del centro de costo.
+- [18:22] Ver el PDF de la proforma.
+- [18:24] Y aquí tenemos dos botones de notificar que deberíamos dejarlo directamente unidos, que vendría a ser notificar a contratista, lo cual ya gatilla el envío de correo electrónico.
+- [18:38] Y aquí podemos ver lo que vendría a ser un envío más custom, por así decirlo.
+- [18:43] Donde aquí podemos seleccionar el usuario, podemos hacer un seguimiento de los correos que enviemos.
+- [18:48] Esto es más que nada en caso de que se haya modificado algo o haya alguna proforma que tenga algún tipo de problema.
+- [18:53] Podemos aquí hacer directamente la selección de algunos de los usuarios que estén en el sistema.
+- [18:57] Aquí podemos hacer de que le llegue tanto como por notificación interna como por correo, y aquí podemos ver un poco de lo que vendría a ser el mensaje del correo que llega, y llega directamente en este formato, donde aparece el mensaje y dependiendo de lo que seleccione, adjunta los documentos.
+- [19:22] Buenísimo, sí.
+- [19:29] Y Mario, ya tenemos la configuración, bueno, no sé si lo vamos a descargarlo para que puedan configurar el correo.
+- [19:40] ¿Ya está traspaso y cierre en contratista?
+- [20:10] Por ejemplo, ¿aquí listas todas las proformas? ¿Está bien? ¿O debería solamente mostrar proformas por contratista?
+- [20:19] Ahí deberían estar todas las proformas aprobadas de contratista.
+- [20:25] Perfecto, porque esta pendiente aprobación aquí no pinta nada.
+- [20:28] Mientras esté pendiente, solamente un dato informativo. No se va a nuestro registro de gasto.
+- [20:33] Perfecto. Pasando a lo que dijo Sergio, vamos a ver lo que vendría a ser la configuración de correos.
+- [20:41] Este, en el primer menú, como podemos ver, aparece prácticamente la configuración, que aquí, si ya tienen un correo, nosotros lo podríamos dejar ya estipulado, con lo que necesitamos del usuario, la contraseña, que dependiendo del correo, se tiene que generar una contraseña tipo API, o se ocupa directamente la contraseña del correo, los puertos y el host.
+- [21:02] Ya el nombre del remitente se puede dejar custom y pasando a lo que vendría a ser configuración por módulo, por cada uno de ellos como pueden ver acá tenemos un tab donde podemos previsualizar el cómo se va a hacer el envío y tenemos campos customizables.
+- [21:18] En este caso, por ejemplo, si se dan cuenta, este es un nombre custom, por así decirlo, aparece directamente el número de folio, el nombre del proveedor en el asunto, y aquí aparecen más datos custom de lo que se vendría configurando directamente en lo que vendría a ser el estado de contratistas.
+- [21:39] Por ejemplo aquí el destinatario va a aparecer el nombre de la persona responsable, y también aparece un dato custom, y esto es totalmente personalizable con los campos que están aquí arriba.
+- [21:49] Entonces si ustedes necesitan modificar este, por así decirlo, mensaje tipo, pueden utilizar estos de acá para que se traigan cada una de las etiquetas que aparecen en el envío,
+- [21:59] Por ejemplo, la orden de compra, el folio, el proveedor, monto, fecha, etc. Aquí también se puede hacer con la firma y dejamos estos dos logos para la parte principal y la firma, más o menos estipulados como para que puedan hacerlo.
+- [22:13] Esto también se puede configurar tanto para ventas y para proformas. La configuración es prácticamente igual. De hecho, aquí no lo teníamos imagen guardada a gusto.
+- [22:22] Pero, por ejemplo, el de compra es como una información interna. Nosotros nos mandemos entre el departamento.
+- [22:27] ¿La etiqueta es lo que dices tú?
+- [22:30] Sí.
+- [22:30] Esto es como una configuración automática. Por ejemplo, en lo que vendría a ser compras, el destinatario va a ser el que tú selecciones, que ahí lo vamos a ver, como destinatario valga la redundancia, va a aparecer el nombre de usuario que está registrado en el sistema. Esto es como para la notificación de correo, pero a nivel interno.
+- [22:50] Ya.
+- [22:50] Entonces, por ejemplo, puedes enviar el correo a una persona que sea fuera, que no exista en la plataforma, pero tienes que tú manualmente en el módulo agregar el correo y obviamente no va a tomar el nombre del destinatario.
+- [23:03] Pero existe la posibilidad de agregar con copia o agregar gente externa al sistema, pero está orientado para usuarios del sistema.
+- [23:10] De hecho, ahora vamos al módulo de compras, donde vamos a hacer una simulación de una compra, que aquí ya tenía unas listas de acá.
+- [23:41] Como podemos ver, al momento de realizar una nueva orden de compra, vamos a hacerla para ALM, abajo también aparece la cadena de aprobación, enviar la aprobación,
+- [24:13] ¿Qué vendría a ser esta de acá por un millón?
+- [24:19] Aquí podríamos ver el detalle.
+- [24:29] Vamos a aprobarla.
+- [24:43] ¿Sabes? No puedes negar que la aprobaste.
+- [24:45] Claro.
+- [24:46] No existe el sin querer.
+- [24:51] Exactamente.
+- [24:52] Todavía no aparece pendiente de aprobación.
+- [24:59] Bueno, aquí nos encontramos con un pequeño desperfecto porque me dice que si yo soy Natalia tiene que aprobarlo.
+- [25:03] Como administrador no me deja.
+- [25:04] Pero nos vamos a tomar una de las que ya están aprobadas para mostrar la implementación aquí en el libro de compras del envío de correos.
+- [25:13] Como podemos ver, aquí ya podemos hacer el envío.
+- [25:19] Esto es netamente notificación interna y al momento de darle clic a este mensaje de acá, se notifica por correo electrónico al usuario que seleccionamos del sistema acá.
+- [25:31] En este caso me tengo creado a mí mismo.
+- [25:33] Y aquí es lo que les mencionaba.
+- [25:34] Se puede hacer una copia, por ejemplo, al usuario que está logueado, en este caso, por ejemplo, si yo quisiera que en el correo me llegue también a mí con copia, marco esta opción de acá, en caso de que la persona cuando responda tenga algún tipo de notificación o algo que reportarme, podemos darle ahí, con este podemos agregar usuarios externos, que se puede agregar más de uno, dividido con coma como aparece acá en el ejemplo, y también es editable el asunto, y como se dan cuenta, según el correo tipo, aquí carga automáticamente el nombre del usuario.
+- [26:03] Buenísimo.
+- [26:04] Y trae toda la información, y aquí podemos hacer de que se adjunten los tipos de documentos.
+- [26:23] Y ahí envió directamente la notificación.
+- [26:30] Debería llegar de esta forma con el archivo adjunto.
+- [26:35] Ahora, por ejemplo, pasando directamente a lo que vendría a ser las órdenes de compra a madre e hijas,
+- [26:57] la sucesión se hace directamente desde acá, y por ejemplo, se fija netamente en lo que vendría a ser montos.
+- [27:03] Por ejemplo, si yo tengo esta factura con un monto de 20.000 y lo llegas a asociar, lo digo bien como ejemplo porque la plataforma de GoSocket, como se dieron cuenta, está súper lenta en el día de hoy, por lo que hacer una emisión desde ALM al MAUE el día de hoy no ha funcionado bien como para tener la muestra lista.
+- [27:23] Pero al momento de realizar la asociación, si por ejemplo la orden que yo elijo es mayor al monto del documento, me aparece este mensaje, lo cual genera de que a la orden de compra le quede el mensaje de que corresponde, de hecho vamos a copiarlo acá, es la que termina, 2026-0021.
+- [27:50] Bueno, la vamos a vincular y aquí en el origen aparece de que es una hija de la orden de compra número tanto y cuando nos vamos aquí a las órdenes de compra se genera el mismo número con el guión 1 para identificar lo que es la hija y queda asociada directamente a lo que vendría a ser la madre cuando el monto es inferior.
+- [28:17] Para que quede de forma parcializada en espera de la siguiente que va a completar el monto.
+- [28:23] Ah, por eso salió el total de los 20.000, el bajo, ¿no?
+- [28:26] Exactamente.
+- [28:28] Exactamente.
+- [28:34] Así aparecen directamente.
+- [28:36] Y bueno, dentro de lo que vendría a ser la aprobación, esta es como la forma de hacerle el tracking de cuáles son las que están asociadas entre sí.
+- [28:45] Siempre van a tener este campo de origen, las que tengan relación con otra.
+- [28:50] Y acá aparece hija de número tanto. Y si se dan cuenta, como les dije, el número es el mismo, solamente que se le agrega el guión uno, guión dos, y ahí va progresivamente, dependiendo de cuántas parcializadas aparezcan, para esa orden de compra madre.
+- [29:06] ¿Qué hay con una duda ahí, Carlos?
+- [29:08] Cuéntame.
+- [29:09] Que se supone que la orden de compra madre nosotros la vamos a usar de manera informativa para poder hacer las negociaciones con los proveedores.
+- [29:15] Sí.
+- [29:15] Y una vez que nos va llegando el material, ¿nosotros vamos a ir haciendo orden de compra chica o dentro de la misma orden de compra madre nosotros vamos a ir como haciendo una suborden de compra hija?
+- [29:27] Eso es así directamente desde acá. Por ejemplo, de toda recepción que tú tengas, tienes que hacer acá la asociación. Por ejemplo, esta ya me dice que tiene una diferencia de 20.000, que no es un match perfecto.
+- [29:38] Y, por ejemplo, si llegase la segunda, aquí tendrías que hacer la asociación y te va a permitir seleccionar esa ya que no está completada, por así decirlo.
+- [29:45] Se hace directamente de aquí, de los documentos recepcionados.
+- [29:50] En realidad, María Jesús, ustedes no van a estar creando las hijas, sino que solamente cuando asocien a una factura recibida que es un monto inferior o parcializado, de forma automática el sistema te va a crear una orden de compra de hijas, la que después tú vas a contabilizar.
+- [30:07] Ya.
+- [30:37] Estamos planificando para que al momento de editar se haga la asociación acá de las órdenes que están asociadas, por así decirlo.
+- [30:44] Y de hecho la idea es que, por ejemplo, la orden de compra madre se puede editar una sola vez.
+- [30:50] Que sea cuando uno cierra la orden de compra. No cada vez que se dé cuenta que hubo un error.
+- [30:58] Sí, claramente una opción de cambio.
+- [31:00] Claro, y ya si necesita otra opción de cambio, ya solicitar a contabilidad.
+- [31:05] Sí, hay que verlo bien porque al final al hacer la orden de compra
+- [31:11] les va a tener todos los documentos que están asociados mal.
+- [31:17] Obvio, eso es como para decir, ya, no me van a llegar más materiales,
+- [31:21] necesito cerrar la orden de compra, pero no como para que la vayan modificando a cada rato.
+- [31:27] Como que tengan solamente una chance de cambio.
+- [31:30] Claro.
+- [31:31] Pero esa chance de cambio igual tiene que pedir el solicito de adición, como ella le dice.
+- [31:36] Sí.
+- [31:36] Nosotros habíamos, por lo que teníamos entendido, habíamos dejado de que, por ejemplo, si el monto es menor, se modifica y no pasa por las aprobaciones, y cuando el monto sí es mayor y se tiene que hacer ese ajuste, y ese ajuste coincide con las aprobaciones, si entra en cualquier tipo de cadena, tiene que pasar directamente por toda la cadena para tener la aprobación, valga la redundancia, de esa edición.
+- [32:03] Mira, yo dejaría edición, sea para abajo o para arriba, con aprobación.
+- [32:08] Perfecto.
+- [32:09] ¿Y si por ejemplo los montos nos dan para el flujo de aprobación? Puede que sean inferiores.
+- [32:29] Es que ahí vamos a tener un tema porque cuando tomaron esa decisión de la aprobación automática, yo estaba de vacaciones y no estoy de acuerdo con eso.
+- [32:39] El amigo que sea de 5 pesos tiene que pasar por aprobación.
+- [32:45] Entonces, lo que podríamos hacer, porque en su momento estaba, pero se modificó, de que las aprobaciones sean desde.
+- [32:52] Sí, lo que pasa es que por el lado de AlmaWeb nosotros recibimos muchas facturas que son de 10.000, 15.000 pesos, que son prácticamente, tú te mueves y te facturan.
+- [33:00] Entonces, en el mes uno recibe fácil 300 de esas facturas. La idea era tenerla automática, pero con el monto solamente automático, ¿qué pasa? Que nos quedan otras facturas que no deberían aprobarse automática, cachái, por ejemplo, almuerzo, no sé, librería, que pueden quedar dentro del rango que dejemos exento.
+- [33:23] En ese caso, lo que podríamos hacer sería de que no exista no pasar por la cadena y que se respete sí o sí, por ejemplo, el primer eslabón, por así decirlo. Por ejemplo, que Felipe apruebe desde cero hasta 500.000.
+- [33:38] Sí, yo lo haría así, yo dejaría todo con aprobación.
+- [33:42] Perfecto. Así también evitamos de que se vayan a hacer correcciones.
+- [33:48] Exacto.
+- [33:49] Que le tengan miedo a las correcciones, que lo hagan perfecto de una.
+- [33:51] Es parte de miderla, así que sí.
+- [34:30] Estamos aplicando el tema de las órdenes de compra madre. Eso, como consulta, solamente lo que vendrían a ser las hijas pasarían directamente a contabilizarse, ¿verdad?
+- [34:43] Sí, la madre solamente informativa.
+- [34:49] Perfecto.
+- [34:50] Nos faltaba hacer esa implementación de que se puedan hacer la contabilización de las hijas, pero ya está pendiente, lo tenemos considerado.
+- [34:58] Y lo último que quería mostrarles era lo que vendría a ser la configuración en contabilidad.
+- [35:04] Carla, hoy tengo una duda.
+- [35:05] Cuénteme.
+- [35:06] Lo que pasa es que las órdenes de compra hija siempre se van a hacer con recepción de guías de despacho.
+- [35:13] Ah, perfecto.
+- [35:15] Sí, siempre. Entonces, mi duda es, ¿yo voy a poder asociar varias guías de despacho a una factura?
+- [35:22] No lo teníamos contemplado de momento. Sí, por ejemplo, el sistema está recibiendo actualmente las guías de despacho.
+- [35:28] Ya.
+- [35:29] Tendríamos que poder hacer esa asociación entonces.
+- [35:32] Sí, porque, por ejemplo, en abastecimiento funcionan así.
+- [35:37] La factura llega, pero dentro del mes te llegan muchos despachos con la guía.
+- [35:43] Entonces ellos al ingresar la orden de compra la ingresan con guía.
+- [35:50] Perfecto, perfecto.
+- [35:52] Entonces acá lo que tendríamos que hacer sería como un discriminador que diga el tipo de documento
+- [35:56] para que las guías de despacho solamente tengan la opción de tener hijas, ¿verdad?
+- [36:00] Yo no sé si es bueno que les parece, yo el libro de compra no le estaría a la guía de despacho, lo dejaría como libro de guía, y ahí es donde podrían ver la emitida y recibida.
+- [36:23] O sea, la idea es que en el libro de compra, cuando uno quiere asociar la factura, te aparezca como todo lo que está asociado a ese proveedor.
+- [36:33] ¿O no? Por ejemplo, si me pongo cartocor, la factura 20, yo puedo ver todas las guías, o sea, todas las órdenes de compra que están a ese proveedor.
+- [36:46] Exacto.
+- [36:47] Pero la orden de compra debería emitirse asociándole una guía para que sea hija, porque ahí nosotros hacemos la recepción del material. No sé si se entiende.
+- [37:03] Porque voy a tener la orden de compra madre, ya supongamos que son 100 mil pesos.
+- [37:09] Y me llega un despacho por 10.000 pesos, yo, para que se haga esa orden de compra, o sea, esa orden de compra hija, tiene que estar asociada a la guía X.
+- [37:21] Exacto, que va a ser parcial el saldo total de la orden de compra.
+- [37:25] Claro, pero eso es solamente para el módulo de bodega, porque una vez que yo la asocien al módulo de contabilidad, me van a aparecer todas las órdenes de compra que yo ya tengo disponibles para ese proveedor.
+- [37:35] En ese caso, no sé si es que sería conveniente de que, como dice Sergio, tengamos un libro de guías, pero que esté en insumos bodega.
+- [37:43] Sí, solo insumos bodega.
+- [37:46] Y ahí hacemos la opción de asociar hijas.
+- [37:50] Claro, o sea, la idea es que la orden de compra hijas se apruebe con la guía de despacho.
+- [37:55] Perfecto.
+- [37:56] Como que ahí nazca en realidad, cuando a mí en realidad me llega el documento con el despacho.
+- [38:02] Y ahí interactuaría lo que vendría a ser adquisiciones con bodega.
+- [38:05] Ahí tendría que ser... Eso, lo de la guía, es solamente bodega. Y una vez que yo la asocio a la factura, pasa al libro de compra.
+- [38:14] Oye, y ahí, María Jesús, ¿cuando tú recibes la guía, viene con la factura o después te factura?
+- [38:21] No, yo puedo recibir, supongamos, 10 guías en el mes, y esas 10 guías corresponden a una facturación.
+- [38:31] Oye, y tú quieres que, por ejemplo, o sea, estoy pensando, tenemos el libro de guía, ¿ya?
+- [38:36] ¿Cierto? O tienes tu mercadería recibida con 10 guías de despacho. ¿Cierto?
+- [38:42] Sí.
+- [38:43] Tú me dices que esas 10 guías de despacho tienen que quedar asociadas a la orden de compra, que vas a hacer la orden de compra madre.
+- [38:50] Claro.
+- [38:51] ¿Ya? Y que al momento de asociar haga el mismo ejercicio que hicimos acá en el libro de compra, que se pueda crear la orden de compra hija. ¿Cierto?
+- [38:59] Claro.
+- [39:00] O sea, lo que yo...
+- [39:01] ¿Dime?
+- [39:02] ¿Ah?
+- [39:02] No, dale nomás.
+- [39:03] Entonces, después cuando te facturen, en realidad, cuando reciben la factura,
+- [39:08] esas órdenes de compra hija ya fueron creadas con la guía.
+- [39:12] Exacto.
+- [39:13] Entonces, desde acá, el libro de compras,
+- [39:17] tú deberías poder seleccionar todas esas guías hija
+- [39:21] que se crearon en base a una guía de despacho,
+- [39:24] poder asociarlas a la factura.
+- [39:27] Sí.
+- [39:29] Ya, ok.
+- [39:30] Ok. Ya, entonces ahí, claro, eso igual cambia un poquito el flujo.
+- [39:35] O sea, la idea es que en el módulo de insumo, cuando yo ingrese el material a bodega, sea en base a una guía y esa misma guía te haga la orden de compra, hija.
+- [39:44] Entiendo, sí, te entiendo perfecto. Entonces todo nace de insumo, ¿cierto? Guía de despacho, guía de despacho, y esto, la guía de despacho se convierte a OC hija.
+- [39:56] O sea, tiene que existir primero una orden de compra para que se puedan asociar las guías.
+- [40:01] Claro, la orden de compra va a ser la madre que es solamente informativa.
+- [40:05] Y una vez que se vayan llegando los documentos del insumo con su guía, se empiezan a emitir las órdenes de compra hija.
+- [40:12] Entonces, cuando me llegue la factura, yo puedo asociar todas las órdenes de compra hija,
+- [40:16] pero no asociarlas como por monco, sino que efectivamente me salga el listado de todo lo que me llegó del proveedor.
+- [40:22] Claro.
+- [40:22] Ok, o sea, claro, entonces ahí sería en orden local el libro de compra, tendríamos que listar todas las órdenes hijas de ese proveedor que están asociadas, bueno, que en realidad ya están asociadas a una guía de despacho porque se crearon con guía.
+- [40:40] Sí, esa misma.
+- [40:41] Entonces sería, por lo que entiendo, a ver si es que quede claro, sería entonces se genera la orden de compra, se asocian las guías de despacho a esa orden de compra a la cual van a generar las hijas, y una vez ya esté cuadrado, por así decirlo, va a llegar una factura que debería, en el libro de compras, poder asociarse a las guías de despacho.
+- [41:01] Hijas. No la guía de despacho, la orden de compra.
+- [41:05] Ah, la orden de compra, perdón, sí, sí.
+- [41:07] Exacto, entonces, por eso nosotros decimos que la orden de compra madre solamente debería necesitar una vez aprobación, porque yo con las hijas voy a tener el real.
+- [41:18] Entonces, cuando yo vea que o me faltan insumos o me paseito que adicionarle, es una vez.
+- [41:27] Ya, se entiende.
+- [41:29] Claro, el usuario va a tener el problema cuando quiera recepcionar y no tiene espacio de orden de compra.
+- [41:35] Ahí va a tener que levantar la mano.
+- [41:38] Pero, por ejemplo, la otra vez habíamos conversado que la orden de compra, ¿cierto?, puede tener N facturas recibidas, ¿cierto?
+- [41:48] Sí.
+- [41:49] Que van a ser las facturas parcializadas.
+- [41:52] Pero en este caso no va a ser así, va a ser con la orden de compra hija.
+- [41:57] Es que actualmente tenemos ese problema, que una orden de compra, cada recepción es una factura.
+- [42:03] Por ejemplo, lo que tú dices es, ya vamos a tener la orden de compra madre, se crearon la orden de hija asociada a la guía de despacho, luego son cinco guías de, cinco órdenes de compra hija, contra una factura recibida, ¿cierto?
+- [42:33] ¿Cierto? Se van a registrar. Pero puede ser que la orden de compra madre no sea por el totalizado de esas cinco guías de despacho, sino que puede ser 20 o 10.
+- [42:47] Exacto, ¿sí?
+- [42:48] Entonces, ahí, por ejemplo, tu orden de compra madre, cuando tú recibas estos cinco facturas, asocias a la factura de esta orden de compra hija, las cinco, te queda un pendiente de cinco más, ¿cierto?
+- [43:04] Sí.
+- [43:05] Entonces, ahí, en ese momento, tú no vas a poder, o sea, cerrar la orden de compra a la madre, hasta recibir la otra cinco.
+- [43:15] Y ahí tú dices, por ejemplo, si existe alguna diferencia, se pasan o es menor, ¿se debería ahí en ese entonces poder irse a la corrección del, o sea, la edición de la orden de compra madre?
+- [43:32] Sí.
+- [43:32] Sí, pero ahí debería ser solamente cuando sea mayor, porque si consideramos 100 menor, porque 100 menor, pensemos en el caso que nos llegaron las primeras, los primeros cinco guías, ¿cierto? Ahí ya la orden de compra es mayor a la factura recibida, ¿cierto?
+- [43:53] Sí.
+- [43:55] Entonces ahí en ese caso no debería ir a aprobación.
+- [43:59] Lo que pasa es que la idea de que se vea aprobación es poder dar la orden de compra madre cerrada.
+- [44:06] No, claro. Te entiendo, te entiendo. Por eso te digo yo. Pero ahí, por ejemplo, esa factura o esa orden de compra aún está abierta porque solamente recibí la mitad de los pedidos.
+- [44:16] Por lo tanto, ¿en qué momento aplicaría la solicitud de edición o de corrección de la orden de compra madre para el caso de que el monto sea menor?
+- [44:30] Mira, por ejemplo, ahí es cuando nosotros estimamos una cantidad X de fruta y al final recibimos la mitad y nosotros en un momento le decimos al proveedor,
+- [44:38] Sabéis que nosotros negociamos 100 cajas y en realidad necesitamos solo 50.
+- [44:43] Entonces, en ese caso, ahí damos la orden de compra cerrada.
+- [44:48] Porque todo esto nace de porque el abastecimiento hace una negociación con los proveedores de materiales.
+- [44:55] Pero en base a una estimación de fruta.
+- [44:59] Ok, entiendo, entiendo.
+- [45:01] Entonces ahí, si el monto es menor,
+- [45:06] ustedes en cualquier momento pueden cerrar esa orden de compra, entonces.
+- [45:09] Exacto.
+- [45:10] El usuario que la pidió puede pedir el municipal.
+- [45:49] Claro, la madre en realidad no mueve nada. Exacto, la madre solamente va a la negociación.
+- [45:56] Ahí tengo una duda. En ese caso, ¿dónde se tendría que hacer ese cierre? ¿Sería acá directamente en
+- [46:02] las órdenes de compra o en la acción, es verdad? Sí, pero en la parte de insumos. La idea es que
+- [46:08] la orden de compra de madres o de insumos quede solamente en insumos y lo que se vaya asociando
+- [46:14] Con guía o factura que se vaya el libro de compra.
+- [46:25] José Tomás va a tener...
+- [46:27] O que tenga que hacer la orden de compra arriba.
+- [46:29] Sí, igual va a tener la orden de compra arriba.
+- [46:31] Entonces tendría que tener este también la opción de leer las órdenes de compra.
+- [46:35] Yo ahí le pondría el módulo de orden de compra madre.
+- [46:40] Aparte.
+- [46:40] Que sea algo del... solo del...
+- [46:42] Solo del de compra.
+- [46:43] Sí.
+- [46:44] ¿Sí se puede separar?
+- [46:46] Y por ejemplo, ¿va a tener su propio módulo de órdenes de compra? Ese también tendría que verse reflejado acá en órdenes de compra, ¿verdad? ¿O tendrían que ser dos mundos aparte?
+- [46:58] El de insumo es un mundo aparte, que serían solamente las órdenes de compra madre que no se van directamente al módulo de compra para asociarlas. Ahí solamente se van las hijas, que están con guía de despacho.
+- [47:12] Ya, ok. O sea, todo el fujo que hablamos era sobre insumo.
+- [47:17] Sí.
+- [47:18] Sí, solo insumo.
+- [47:48] No sé quién lo administra. Diga, oye, ¿sabes qué? No sé, te falta tanto material para cerrar esta orden de compra a madre, porque igual deberíamos decir cuánto es el pendiente de esa madre, ¿o no?
+- [48:03] Sí, eso sería en el módulo de insumo.
+- [48:06] Ah, solo en el de insumo, no el de acá en compra. Porque, ¿quién asocia la factura acá en compra?
+- [48:13] Sí, pero solo en insumos no solo vamos a ver el saldo de la orden de compra madre, como eso es lo informativo, porque al final la persona que está haciendo el calce entre la factura y la orden de compra solamente le importa que calce la factura con la orden de compra, no se mete más allá si llegó o no material o si le falta por llegar.
+- [48:34] Sí.
+- [48:38] Ya, ok, ok, ya, si me queda claro.
+- [49:20] Carlos, una que se liste. Para poder vincular, por ejemplo, vincula la de abajito. Ya, por ejemplo, ahí, en ese momento, se va a tener que validar igual si excede o no el monto de la orden de compra madre, ¿no? O ahí no se va a hacer nada.
+- [49:39] Es que una vez que la persona de abastecimiento vea que no puede recepcionar la guía con la orden de compra porque le falta, ahí va a tener que hacer la solicitud de que le modifiquen la orden de compra.
+- [49:54] Ah, ya lo voy a controlar adelante, claro.
+- [49:56] Exacto. Mira, para que entiendan, en compras para poder asociarlo van solamente las que están recepcionadas.
+- [50:05] Si hay mil órdenes de compra que no están aprobadas o recepcionadas, no se ven en ese módulo. Es como que no existe.
+- [50:14] Ok, te entiendo. Dame un momentito. Carlos, tú.
+- [50:28] Sí, ahí tenía una duda, porque entonces la recepción, entonces acá también, por ejemplo, en Insumo Bodega va a tener que tener también una visualización de las guías de despacho recibidas, ¿verdad?
+- [50:42] Sí, claro, claro.
+- [51:12] ¿Órdenes de compra y libro de compras para insumos bodega?
+- [51:17] No, libro de compra no.
+- [51:19] Sería el libro de guía, perdón.
+- [51:21] Sería el libro de guía, sí.
+- [51:24] Perfecto. Sí, ahí ya me queda más claro.
+- [51:26] O sea, en insumos se podría crear órdenes de compra madre,
+- [51:30] asociar guías de despacho a la orden de compra madre,
+- [51:34] que se van a crear las hijas,
+- [51:36] y esas hijas se podrán asociar en el libro de compra a las facturas recibidas.
+- [51:41] Sí.
+- [51:42] En ese caso, por ejemplo, acá, las reglas de aprobación para lo que vendría a ser órdenes de compra, también tendríamos que separarlo para insumos, ¿verdad?
+- [51:59] ¿Por qué pregunto esto? Porque ahí también podríamos marcar algunos de estos labones como escala para que sea el que pueda generar las órdenes de compra en el módulo de insumos.
+- [52:10] Ahí entonces ustedes manejan dos tipos de órdenes de compra, órdenes de compra para insumos y la otra, ¿cómo le llaman?
+- [52:18] Servicios.
+- [52:20] Servicios.
+- [52:21] Sí. La orden de compra de servicio, o sea, es aprobación y recepción, pero esa siempre es una a una.
+- [52:27] La que nos genera diferencia es la de insumos porque llegan por parte los insumos.
+- [52:35] Entonces aquí tendríamos que agregar un tipo de flujo de aprobación.
+- [52:40] Sí.
+- [52:40] De servicio o de insumos.
+- [52:42] Y también con esto podríamos identificar quién en insumos, porque me dijeron que sería el jefe el que genera la orden de compra, ¿verdad?
+- [52:50] Sí.
+- [52:51] Aquí podríamos identificar quién es el jefe dentro de los integrantes del grupo, para que él tenga la opción de ingresar a ese menú.
+- [52:59] Ya, pero por ejemplo, la orden de compra hija la genera el administrativo.
+- [53:05] En compras.
+- [53:06] En recepcionar.
+- [53:07] En insumos.
+- [53:09] Ah, claro, claro. Pero es para que una persona no más tenga la potestad de crear el padre, por así decirlo.
+- [53:15] Ya, sí. La madre es el jefe. Y la hija la va a generar el administrativo.
+- [53:22] Perfecto. Entonces yo creo que acá en la lista de integrantes vamos a generar como el...
+- [53:29] ¿Quién va a ser el que genere la madre?
+- [53:32] Ya.
+- [53:34] Oye, ¿podríamos incluir al padre también en esto? Que se haga cargo.
+- [53:39] Paga la pensión.
+- [53:40] No está el padre.
+- [54:15] Vamos a tener que hacer entonces la modificación tanto de las reglas de aprobación como los submódulos de lo que vendría a ser insumos bodega.
+- [54:23] Hay eso también, lo que vendría a ser por ejemplo entonces en órdenes de compra, tanto de lo que vendría a ser como compras, insumos bodega, no se tienen que mostrar entre sí, ¿verdad?
+- [54:35] Porque como van a estar aparte tanto en órdenes de compra y los libros, no tendrían que interactuar entre sí.
+- [54:42] Sí, las órdenes de compra, de compra y de insumo.
+- [54:46] Sí, así como visualizar la información del uno al otro.
+- [54:52] Lo que, sí, igual podría ser porque hay personas que van a tener solamente acceso al módulo de insumos, no al de compras.
+- [55:02] Entonces, por ejemplo, el administrativo de abastecimiento igual debería poder visualizar sus órdenes de compra.
+- [55:13] Perfecto.
+- [55:16] Pero en el de compras solamente van las que ya están listas para contabilizar.
+- [55:21] No están ni las pendientes ni las aprobadas.
+- [55:24] Tienen que esperarme. Perfecto. En ese caso, entonces, si mal no entendí, desde órdenes de compras, si pueden ver lo que están haciendo en insumos.
+- [55:47] ¿Cómo?
+- [55:48] Desde compras tienen que ver lo que están haciendo en insumos, o lo entendí al revés.
+- [55:53] Sí, en compras se van a visualizar las órdenes de compra, hija.
+- [55:57] Perfecto.
+- [55:58] Pero en insumos se tienen que visualizar la madre y la hija.
+- [56:02] Perfecto. El padre no. No, el padre es ausente. Y en ese caso, por ejemplo, en el libro de compras, ¿no tendríamos que tener visualización de las guías de despacho? En el libro, en el módulo de consumo. Perfecto. Sí. Ok. No, con eso ya no tengo más dudas.
+- [56:26] Vamos entonces a ver lo que vendría a ser contabilidad, que aquí realmente tenemos más que nada lo que vendría a ser los comprobantes, que se pueden visualizar.
+- [56:39] Aquí tenemos ya más o menos el detalle con las correcciones que nos habían dado, donde en el aux también dejamos lo que vendría a ser el root, bueno acá el tipo, no sé por qué no está apareciendo, debería aparecer el tipo de documento.
+- [56:51] Justo lo que vendría a ser los vencimientos, que aquí como son unas antiguas que no estaban configurados el vencimiento dentro de lo que vendría a ser la parametrización de los clientes, no aparecen pero aquí deberían aparecer junto con las monedas que nos habían pedido que serían tanto el peso, dólar y yuan.
+- [57:07] Bien, también tenemos la visualización de lo que vendría a ser el libro diario, donde viene el detalle por cada una de las cuentas, con las glosas que las diferencian una de otra, el libro mayor, que también viene con su detalle en las cuentas, el balance de ocho columnas, cada uno tiene la opción de exportar en PDF, y estado de resultados.
+- [57:42] Y antes que continúes, Carlos, nos preguntaría si nos pueden ayudar con algún formato en PDF para los diferentes reportes.
+- [57:53] Ya.
+- [57:55] Si tienen algún diseño, obviamente una base y si qué es lo que quieren mejorar para poder ajustar el formato.
+- [58:10] Y eso es lo que tengo en nuestras.
+- [58:12] Todo, formato de todo.
+- [58:14] ¿Cómo?
+- [58:15] Sí, de todo.
+- [58:16] El formato PDF, porque todo esto también se va a poder exportar a Excel, pero el Excel va a exportar las columnas que están en la grilla, ¿entiendes?
+- [58:27] Pero siempre he visto que en el formato PDF necesitan arriba los datos de la empresa, el nombre del reporte, el periodo...
+- [58:37] Ya, perfecto.
+- [58:45] Bueno, y de la muestra eso es lo que teníamos para mostrar el día de hoy.
+- [58:49] No sé si es que habrán quedado con alguna duda de algo que hayamos pasado muy rápido.
+- [58:54] Yo quería ver el estado de resultados, si es que estaba la opción para descargar algún Excel o algo.
+- [59:00] No, aquí no lo teníamos implementado.
+- [59:03] Vamos a implementar tanto para el Excel con lo que vendría a ser el PDF también.
+- [59:07] Ah, ya.
+- [59:10] Yo quiero una duda en la parte de contratistas.
+- [59:12] Cuénteme.
+- [59:13] Son dos cosas.
+- [59:15] Una es si se puede guardar un ingreso diario sin precio, o sea, ponerle precio cero.
+- [59:24] Si es que tira error o algo así.
+- [59:26] Sí, tira error al momento de poner precio cero.
+- [59:32] ¿Y eso está bien? ¿Que se puede ingresar con precio cero?
+- [59:36] Hay que validar.
+- [59:37] Es que hay ocasiones en las que cuando se trabaja, se fija un precio a futuro.
+- [59:42] Entonces, por ejemplo, hay temas que son a trato, que se fija el precio, no sé, cuando ya la fruta sale o algo así. Entonces, no se define el precio en el mismo momento en el que se hace la labor, sino que a futuro, cuando está como, o sea, a lo mejor el cierre de mes, distan cuál es el precio real de la labor. Entonces, para no tener que ingresar todo desde cero, tener ya ingresada la cantidad de labores que se realizaron y después poner solo el precio.
+- [01:00:06] Pero ahí tenías la solución porque se lo ponía a trato y podías ponerlo en un precio estimativo, tú después podías editarla, la podías editar, sí, no hay problema con eso.
+- [01:00:17] Claro, hay una consulta, si la proforma ya está, llamémoslo así, cerrada o aprobada, ¿se va a poder después editar los ingresos diarios?
+- [01:00:27] Sí, sí, habíamos quedado en que si la proforma estaba aprobada, se iba a tener que hacer con solicitud la modificación de la orden de compra.
+- [01:00:39] Ya, ok. Pero, por ejemplo, ya, y un paso más adelante, incluso la proforma está asociada a una factura recibida. ¿Se puede editar la proforma?
+- [01:00:49] No debería porque va a estar facturado.
+- [01:00:53] Sí, es que eso, no debería porque va a estar facturado.
+- [01:00:57] Ya, la factura es lo último que nosotros tenemos para poder evitar cualquier diferencia con el contratista.
+- [01:01:05] Pero esa es la idea de comprar la orden de compra previa.
+- [01:01:09] Sí, más justo tendría que ser una orden de crédito, si es que tiene una diferencia previa.
+- [01:01:14] Claro.
+- [01:01:15] Lo otro que tenía duda es el tema del cierre de mes. ¿Qué pasa con los ingresos que están pendientes? Por dar un caso, tengo 29 días del mes, tengo los ingresos con una proforma asociada y tengo un día trabajado, pero lo tengo sin una proforma asociada.
+- [01:01:39] Si yo lo hago, la proforma, no sé si estamos en septiembre o octubre con la proforma, tomando el día anterior, ¿me lo tira para septiembre, me lo tira para octubre o no se puede tomar? ¿Queda ahí como eternamente informativo ese día?
+- [01:01:58] Debería ser una proforma para ese día.
+- [01:02:00] Debería ser una proforma para ese día.
+- [01:02:01] Sí, solo para ese día.
+- [01:02:02] Claro, porque en cierto modo el cierre no se va a conseguir.
+- [01:02:07] Algo interesante es que solamente se va a trabajar contra proforma.
+- [01:02:10] Si tienen que abrir el mes, en caso de que cierre el mes,
+- [01:02:14] si tengan proforma pendiente, tendrían que abrir el mes.
+- [01:02:16] Tienen que evitar que eso pase.
+- [01:02:18] Por eso.
+- [01:02:19] Si tienen que abrir el mes, tendrían que abrir el mes.
+- [01:02:22] O sea, si tú me preguntas por un tema de control, yo haría una proforma para ese día.
+- [01:02:27] Porque si no te va a quedar desfasado el día y después se quiere hacer gestión,
+- [01:02:32] Vais a tener un mes con 29 y un mes con 31.
+- [01:02:35] Ahora sí pudí mejorar más de una con la factura.
+- [01:02:38] Exacto. Entonces tú acá vas a poder hacer 20 proformas si tú quieres y esa es la sociedad de las facturas.
+- [01:02:43] Pero tiene que ser...
+- [01:02:44] Ya dije, claro, como ahora es un tema de aquí, como tengo...
+- [01:02:48] Si tengo que tomar ese, tengo que tomar, no sé, hasta todo el otro mes, pero puedo hacer una, una, una y después preguntarla.
+- [01:02:53] Exacto, exacto.
+- [01:02:53] Entonces ahora no, pues ya.
+- [01:02:54] Sí.
+- [01:02:54] Ahora voy a llevar aquí, sube.
+- [01:02:57] Eso mismo.
+- [01:03:01] Lo que dijo María Jesús.
+- [01:03:02] Sí, pero efectivamente, como lo dijo, se estaba pensando en ese sistema.
+- [01:03:18] Sumamos los puntitos ahí con ese bueno.
+- [01:03:23] Van sumando puntos.
+- [01:03:25] Eso.
+- [01:03:27] Comex, punto.
+- [01:03:28] Agrícolas, punto.
+- [01:03:31] ¿Ah? ¿Qué dice?
+- [01:03:33] Hemos sumado puntos con Lupe, con la Mari, ahora con Rodrigo.
+- [01:03:39] Los tenemos anotados.
+- [01:03:40] Con Mario también.
+- [01:03:42] Con Mario también hemos sumado puntos, lo tengo todo anotado ahí.
+- [01:03:45] Todo sí.
+- [01:03:50] Mientras quede bueno, todo sí.
+- [01:03:54] Chicos, ¿los podemos molestar con que me envíen de nuevo el acceso a Trello?
+- [01:03:57] Que tuve una caída del correo y se me cerraron todas las cuentas.
+- [01:04:01] Sí, no hay problema, yo te envío de inmediato la invitación.
+- [01:04:05] Ya, muchas gracias.
+- [01:04:06] Yo no sé si hay algo más, yo creo que va a ser necesario que nos reunamos la próxima semana.
+- [01:04:15] Sí, yo también creo que sí.
+- [01:04:16] Que haya tanto ajuste.
+- [01:04:18] Ya. Así también el lunes ya llegamos con más amance en realidad, lo que saquemos de la semana que viene.
+- [01:04:26] Ya. Y ahí el martes si es que llegamos a tener alguna duda aprovechamos la reunión de GoSocket.
+- [01:04:31] Ya, perfecto.
+- [01:04:37] Ok. Muchísimas gracias a todos.
+- [01:04:42] Gracias a ustedes.
+- [01:04:43] Gracias.
+- [01:04:43] Que estén muy bien.
+- [01:04:44] Que tengan buena tarde.
+- [01:04:46] Igual.
+- [01:04:47] Hasta la semana. Chao, chao.
+- [01:04:48] Chao.

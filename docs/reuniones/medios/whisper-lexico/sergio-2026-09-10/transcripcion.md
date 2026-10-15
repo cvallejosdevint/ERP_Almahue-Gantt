@@ -1,0 +1,189 @@
+# sergio-2026-09-10 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\sergio-2026-09-10\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:38] ¡Don Carlos!
+- [00:39] Bueno, Sergio, ¿cómo estás ahí?
+- [00:40] Bien, ¿y tú?
+- [00:42] Bien, bien. Con sueñito, pero bien.
+- [00:44] ¿Sí? Uy, lo hacemos todo.
+- [00:47] Sí, que ayer me...
+- [00:48] me tuve que quedar más tarde viendo Portafolio porque...
+- [00:51] cachái que nos faltaba documentación que no habíamos visto.
+- [00:54] Chucha.
+- [00:56] Estás con Felipe Ciego, ¿no?
+- [00:58] Sí, sí.
+- [01:00] Bueno.
+- [01:03] Ya, Berrín. ¡Vamos a ver portación!
+- [01:05] Ah, pero todavía no lo terminamos.
+- [01:06] Tú te estabas diciendo que no estabas terminando los errores.
+- [01:09] No, no, pero claro, sigo eso, eso, eso quiero ver, sigo tranqui, sigo.
+- [01:14] Vamos a pillar.
+- [01:30] ¿Se ve cierto?
+- [01:31] Sí, se ve, ¿no?
+- [01:33] Vamos a revisar.
+- [01:41] Bueno, me va a hacer la boleta que mandó la María Jesús para los datos que ellos mandan, po.
+- [01:47] ¿Y el precio?
+- [02:03] No, el precio, el precio, el precio unitario le falta, el precio unitario.
+- [02:07] Que eso se supone va a ser en dólares, ¿cierto?
+- [02:09] Sí.
+- [02:09] 1.850 dólares.
+- [02:12] Sí.
+- [02:15] Y aquí están los selectores.
+- [02:19] ¿Qué me estaba fallando?
+- [02:20] Este aquí igual tiene la selección.
+- [02:23] Acá como tenemos cargado actualmente solamente USB en la moneda de la parametrización, aparece ese nomás.
+- [02:32] ¿Y cuál es el valor del tipo cambio?
+- [02:36] Ah, ese tipo cambio es factura, ahí tenéis que poner el valor del tipo cambio, ¿no?
+- [02:40] ¿Cómo? ¿Qué hay que poner ahí?
+- [02:42] Sí.
+- [02:43] Que serían los pesos.
+- [02:45] Sí, exacto.
+- [02:46] Me imagino que igual porque no se ha ejecutado el tema del banco central automático, porque aquí en el local no lo tengo para que sea automático.
+- [02:54] Ya, ok.
+- [02:58] Por ejemplo, 8.50, y ahí te diría tirarte el monto en pesos.
+- [03:04] Perfecto. Está bien, poco.
+- [03:07] Y aquí me fijé de que ellos mandaban el bulto como número.
+- [03:12] Sí, el bulto como número.
+- [03:14] Yes. Y aquí está el selector de los países.
+- [03:17] Entonces, esto lo saqué directamente de la documentación del SII para tener los códigos y la glosa de cada uno de ellos como guía.
+- [03:25] Eso lo sacaste de la aduana, ¿no?
+- [03:27] Sí, sí.
+- [03:28] Ya. Sí, porque lo mismo los puertos de embarque. Puertos de embarque y desembarque también deberían estar con código.
+- [03:35] Sí, sí.
+- [03:37] Ya, ok.
+- [03:38] De hecho, en el documento del SII hay una parte cuando te vayas desde exportación que te tira el link de la aduana.
+- [03:45] De hecho, el Pablo lo mostró en la reunión, po, como para obtener estos datos.
+- [03:48] ¿Y hay cachái de dónde se sacaban?
+- [03:50] Por una página de aduana.cl o una cuestión así.
+- [03:52] ¿Sí?
+- [03:58] No sé si se guarda.
+- [04:01] Perdón que estoy tomando desayuno.
+- [04:03] Dale, dale, yo aún no tomo, bueno.
+- [04:09] Falta el código para ir al receptor, pero si lo seleccioné, amigo.
+- [04:16] No, no lo seleccioné.
+- [04:18] Pero es el de destino.
+- [04:20] Ah, sí, el del receptor, está bien.
+- [04:22] Por ejemplo, puertos de embarque.
+- [04:25] No sé, si esos son obligatorios, bueno.
+- [04:26] La vía, si eso, hay harto de información que ahí tenéis que validarlo contra lo que, ¿cómo se llama? Contra lo que es obligatorio y embarcarlo ahí con el asterisco rojito.
+- [04:38] Sí, sí, se me guardó el tipo de cambio en el borrador.
+- [04:45] Un botón guardar acá, cuanque.
+- [05:03] Sería bueno ahí, ahí los cálculos totales, poner la moneda ahí, borrar.
+- [05:08] Vale.
+- [05:08] Los totales para la exportación.
+- [05:10] Sí.
+- [05:10] Agregar la moneda.
+- [05:11] Se me había olvidado, ayer me di cuenta que aquí no tenía como esos cálculos en la exportación, tengo que agregárselos, verdad. Gracias por recordarme.
+- [05:18] Vamos a hacerla de nuevo nomás porque no tengo el botón de guardar.
+- [05:42] Guía marítima, vamos a darle a China, DTE, sería ese de ahí, facturar, mmm, el código del pedo receptor.
+- [06:09] Ya, hay alguna pifa que me imagino que igual como el curso lo tengo trabajando viendo el error que tenía,
+- [06:13] Ahora, que hoy me esté fallando, pero sí, se estaban mandando, y por ejemplo, el último error que tenía también era otro tipo de moneda, que se mandan dos.
+- [06:24] ¿Ya? ¿Cuál? ¿Por qué dos? O sea, tú mandaste, por ejemplo, en dólares y en pesos.
+- [06:34] Eso, sí. Y ahora estaba mandando la que es como la de origen, y me faltaba la de conversión, por así decirlo.
+- [06:40] Exacto. Esa es la que da en pesos.
+- [06:43] Exacto, sí, sí, sí.
+- [06:45] Entonces, me queda revisar esta revisión, afinar ese pequeño detalle y, bueno, aquí, de hecho, las anteriores sí la habían realizado, de hecho, y se actualizaron, estaban con los rechazos de esos mensajes.
+- [07:01] Ya, buenísimo.
+- [07:02] Ah, y eso también es lo otro que me di cuenta, que acá no tengo cómo discriminar cuando son facturas de exportación.
+- [07:12] Solamente con facturas, así que ahí lo voy a discriminar igual, para tener un fin.
+- [07:15] Claro, mira, por ejemplo, ahí no sé si podía anotar en algún lado, para explicarte cuáles son los tipos de documentos, cachái.
+- [07:23] Mira, por ejemplo, está la boleta, pero esto dejémoslo como global, ¿ya?
+- [07:28] La boleta, boleta afecta, que es la 39, ¿ya?
+- [07:33] Esa es la que ocupan como los negocios, con la gente que no...
+- [07:36] Sí, sí. La boleta exenta es la 41, que también puede ser, pero boleta es como desde un servicio, ¿ya? Es la 41.
+- [07:45] El tipo 33 es una factura afecta, ¿ya? Y después la 34 es una factura exenta, ¿ya? El 56 es una nota de débito, el 61 es una nota de crédito, ¿ya?
+- [08:07] El 52 es una guía de despacho. La 110 es una factura de exportación. La 111, no sé si es una nota de débito de exportación o nota de crédito.
+- [08:26] ¿Qué nota de crédito?
+- [09:15] Treinta y tres, factura afecta. Treinta y cuatro, factura exenta. Exportación, factura, exportación, cachái.
+- [09:23] Lo muestra ahí mismo en el tipo de documento, ¿cierto?
+- [09:26] Sí, sí, sí, sí, sí. Hay que cambiar.
+- [09:29] También con el código.
+- [09:32] Puta, podríais dejar código guión tanto, cachái.
+- [09:35] Sí, me tinca.
+- [09:37] Bacán, bacán, bacán.
+- [09:39] Pero no sé si eso te va a afectar en la búsqueda, ¿no? ¿No debería?
+- [09:43] ¿Debería? No, no debería, no debería. Aquí igual, por ejemplo, lo puedo hacer de que haga en este buscador, que es como más simple, que ignore como ese numerito, y aquí en los filtros avanzados tienen igual para filtrar por tipo de documento. Ah, ya, perfecto. Cachái, pero me falta agregar los de la DTE, de exportación.
+- [10:00] Ahí tenés que poner, agregar, no sé, las boletas, las facturas rectas, facturas exentas, todo eso. Todo lo que te pase, pásalo en el filtro.
+- [10:10] Vale, vale, vale. Y eso es, eso, igual ayer cuando estaba hablando de portafolio le estaba chantando y el curso es que por mientras adelantara pega, me puse también a decirle que vea todos los videos porque como tengo los videos de hace cualquier rato, mientras veía esta cuestión de la documentación y, por ejemplo, las tres primeras reuniones sacó harta info en loco, entonces, no sé si te acordás que habíamos hablado del tema de la carga masiva.
+- [10:37] Sí, de la CSC.
+- [11:07] ¿Ya? Las sesenta lucas.
+- [11:09] Bacancito.
+- [11:09] ¿Ya? ¿Ya?
+- [11:10] El otro, eh...
+- [11:13] Hay que mañana,
+- [11:15] mañana durante el día, hacer un
+- [11:17] catástrofe de todos los otros módulos, por ejemplo
+- [11:19] insumo, bodega, contabilidad, tesorería,
+- [11:22] de los puntos
+- [11:23] que faltan, ¿ya?
+- [11:25] Para pasárselo a los muchachos.
+- [11:27] Vale. Al José y al Diego.
+- [11:29] Vale.
+- [11:31] Así que, y el día, bueno,
+- [11:33] el día preparamos hasta la reunión, yo creo que
+- [11:35] tenéis que matar esto de exportación.
+- [11:37] Matando eso estamos tiquitaca porque la idea es que presente sería emisión, ¿cierto? Nota de crédito, la circulación con el GoSocket, la nota de crédito también, lo mismo, cuando se anule, y la factura de exportación, ¿ya? Hasta ahí nomás. Con eso, cerramos.
+- [11:55] ¡Oh! Perfecto, ahí lo dejé anotado para no salirme de ese margen de trabajo.
+- [12:00] Y lo que te iba a consultar aprovechando del tema del Banco Central, perrito.
+- [12:04] Tengo acá, por ejemplo, la administración.
+- [12:07] No, mentira, parametrización.
+- [12:10] Indicadores del Banco Central.
+- [12:12] Por ejemplo, yo estaba trayendo automáticamente, si vos miras, no los trajo ni del 9 ni de hoy día.
+- [12:21] Aquí, por ejemplo, había dejado estos que ellos habían solicitado,
+- [12:24] Pero por lo que decían que en un futuro igual podrían necesitar más, voy a... más adelante si voy día no. Hay que refactorizar esto para que uno, puedan tener el historial histórico, dos, puedan seleccionar monedas, y ahí como que ya nos podríamos despreocupar de eso, pero mi duda es que se me había olvidado que el Banco Central, la API que te da, porque la API la cree con la cuenta de Debinto, para obtener, cree el usuario con la cuenta de Debinto, pero tiene caducidad, caduca, cada un año te da la API.
+- [12:53] Entonces, mi consulta es, ¿dejo la opción de que ellos también puedan ingresar la API por su parte, así como la API Key, porque el registro no tiene ni una esencia, cualquiera lo puede hacer dentro del banco central?
+- [13:05] Ah, ya, tú decís como, sí, o sea, podríamos dejarlo, pero igual es delicado, porque si ponen una API Key mala, la quieren actualizar ellos, puede que afecte la sincronización.
+- [13:18] Sí, por eso, más que nada, como para saber si es que lo dejamos para que ellos lo puedan hacer, o sería ya parte del soporte que ellos necesitarían anualmente con eso.
+- [13:25] No, yo lo dejaría como soporte, bueno.
+- [13:28] Ya, sí, porque así no les complicamos la vida, por lo que tú decís, pues si dejan la Vigay mal configurada, cacho.
+- [13:34] Sí, cacho.
+- [13:36] Ya, sí, bacán, bacán. Entonces, bueno, como te digo, hay que hacer esa reformulación, pero ya se sale de lo que vendría a ser hoy, por eso ya vendría a ser para más adelante.
+- [13:43] Sí, sí, para más adelante.
+- [13:45] Bacancito.
+- [13:45] Ah, y eso también, Sergio, voy a incluir al Felipe en la reo, para que saque las capturas de pantalla que están reo, y tengo que tirarlo también a hacer cómics, así que también le voy a derivar hasta esto del Banco Central, se lo podría pasar al Pipe mientras.
+- [14:01] Bueno, si puedo, bacán, huevón.
+- [14:03] Sí, es lo que le interesa, porque como te digo, nos tienen que, de todas formas, nos piden, por ejemplo, cuando son proyectos de empresas externas, no podemos pasar el GIT, pero tenemos que tener un comprobante, por ejemplo, yo abrir la cuenta frente a los profs y que se vea que hay interacción de los dos.
+- [14:21] Ya, perfecto.
+- [14:23] Así que eso, hijito.
+- [14:26] Ya, démosle, démosle nomás, si puede aportar Felipe, genial, bueno.
+- [14:30] Y a buscarlo, a ver si llegamos a la tarde con exportación listo, a las 4 de 4 o 5 la revo. Ayer hablé con Mario, van a estar María Jesús, Mario y la Lupe, y ahí le pregunté si a la Guadalupe le conectaba Guadalupe, así que me dijo que sí.
+- [14:55] Sí, sí, yo caché ese día, porque te lo dijo como tres veces, pero como que tenían el audio malo, no la escuchaba, y más encima no escuchábamos duplicado.
+- [15:03] Sí, bueno, de ahí me dijera, así que, pero, y le comenté que estaba, me preocupaba un poco de que la María Jesús se iba, te había dicho a ti la quincena de octubre, ¿o no?
+- [15:14] Sí, algo así me dijo.
+- [15:17] Ya, pues, entonces yo le dije que estaba preocupado por eso, porque me dijo, no, si vuelve la primera semana de octubre iba a estar acá. Ah, ya va.
+- [15:25] Ah, bueno, bueno.
+- [15:26] Ah, entonces me dijo que tenía el tiempo para la... esa cuestión de la... que le están revisando, que le faltaban los DTE...
+- [15:37] La auditoría.
+- [15:38] La auditoría creo que era hasta el 15, ahí yo me confundí, parece.
+- [15:41] Ah, ya, ok. Así que yo creo que vamos a llegar bien si ahí tenemos el apoyo del José y el Diego, que pongan la camiseta, ¿no?
+- [15:50] Sí o no, si nos hemos ayudado tanto en... ¿cómo se llama? En BND.
+- [15:56] Sí, yo creo que los cabros van a ver lo que está, van a cachar que no es tanto y lo van a finiquitar luego.
+- [16:05] Sí, yo creo que una semana, dos semanas, con suerte, van a ver, entre los tres, matan esto.
+- [16:10] Yes.
+- [16:12] No, pero como te digo, yo creo que hay mucho, mucho avance.
+- [16:16] Solamente que hay como pequeños detalles o cosas, flujos que faltan por definir,
+- [16:21] pero ya, yo creo que ya estamos casi un 70%.
+- [16:26] Sí, hoy día en la reunión tiramosle la pelota que ocupe en esta cuestión, en el módulo de datos que lo ocupe.
+- [16:31] Yo ya lo hablé con Mario, le dije, Mario, si es que igual me preocupa el tema de que estamos entregando las cositas y no tenemos feedback, no tenemos revisiones, entonces la idea es que puedan revisar por...
+- [16:47] No, sí, María Jesús también me mencionó lo mismo, que estamos al debe con eso, así que no te preocupes.
+- [16:52] Igual, por ejemplo, mi idea es como dejar el DTE listo y todo subido hoy día, por cosa de terminar la reunión diciéndoles que esto ya está implementado y que lo usen.
+- [17:01] Claro, lo que después nos quedaría, comprometernos para la próxima reunión, que es para el martes y puta, no sé si lleguemos con algo más martes, pero sería contabilizar las ventas, generar asiento contable.
+- [17:13] Y si llegamos, bueno, después de esa, tenéis que avanzar con las compras, ¿ya?
+- [17:20] Que las compras igual va a ser un poco más complicado. ¿Por qué? Porque tenéis que sincronizar las compras que tienen ellos, pero hay estados en el SII, cachái. Entonces, por ejemplo, hay documentos que fueron aceptados las compras y hay que ver en qué fecha de aceptación se dio, cachái, y los que están pendientes también si van a...
+- [17:42] Si van a...
+- [17:44] Ahí hay otra patita.
+- [17:45] No, me sé que no te voy a marear.
+- [17:47] Por favor.
+- [17:49] Dale, dale, dale, con exportación, ahí nos vemos cuando ya llegue a compras.
+- [17:53] Ahí nos sentamos y yo te explico todo lo que hay que hacer.
+- [17:55] Vale.
+- [17:56] ¿Ya?
+- [17:57] Bacán.
+- [17:58] Ya, Carlos, póngale nomás.
+- [17:59] Ya, viejito, hablamos.
+- [18:01] Hablamos, cuidaos, que estén bien, chau.
+- [18:02] Chau, chau.

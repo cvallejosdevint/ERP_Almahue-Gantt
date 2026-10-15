@@ -1,0 +1,389 @@
+# reu3 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\reu3\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] Que vi aquí estas tres habían comentarios y por ejemplo en el caso de que tengan comentarios por ejemplo vi acá que pidieron solicitar agregar algo la idea es que por ejemplo
+- [00:11] nosotros todas las pantallas que tengamos listas se las vamos a dejar en esta columna que se llama en
+- [00:16] cua Almahue entonces las que ustedes vean acá y digan a estos chicos las dejaron listas las revisan
+- [00:23] No agregan el comentario y las mueven hacia acá, al rechazo.
+- [00:27] Ah, entiendo, ya.
+- [00:29] Y cuando este se vea todo correcto, ahí ya pasaría directamente a aprobado y ahí nosotros nos enteramos de que esa pantalla, por lo que ustedes están viendo visualmente, estaría correcta.
+- [00:39] Ya, buenísimo.
+- [00:40] Ese es como el método de funcionamiento de este tablero. Bueno, aquí, como te diste cuenta, se pueden adjuntar cualquier tipo de archivo, así que también en caso de que haya un archivo, en particular una pantalla, como lo hicieron anteriormente, lo pueden adjuntar.
+- [00:55] O también se puede crear una, por ejemplo, una nueva de estas cartas, que sea, por ejemplo, entrega de documentos, por ejemplo.
+- [01:06] Entonces ahí podríamos también ir viendo los documentos. La idea es que sea cómodo para ambos lados.
+- [01:09] Ya, porque yo en un comentario te puse como siete pantallas porque no me dejaba bajar el Excel del sistema.
+- [01:15] Sí, de hecho, creo que era este de acá.
+- [01:18] Era el tipo de documento.
+- [01:20] Sí, este era.
+- [01:22] Ese mismo.
+- [01:23] Oye, sí, es espectacular porque con esto ya nosotros no podemos asumir nada.
+- [01:30] Teniendo ya la captura de pantalla, lo aplicamos tal cual como lo necesitan.
+- [01:34] Sí, ahí obviamente igual como que hay la opción de modificar o agregar.
+- [01:38] Pero, porque igual quizás ese mismo ícono te lo pueda abrir para ver cómo se crea un documento.
+- [01:46] Sí, también sería ideal como tener la vista de la pantallita cómo se crea el documento, también sería ideal.
+- [01:53] Ya.
+- [01:53] Y lo otro también, que tenemos este sitio, que de hecho te lo voy a mandar de inmediato, en el cual ya pueden iniciar sesión y ir revisando lo que vendría a ser todo el sistema, lo visual, por así decirlo.
+- [02:13] Consulta en la página, ¿cuál sería nuestro usuario y clave?
+- [02:18] De hecho, aquí les tengo uno generado, es dinámico, la idea es que sea algún correo real el administrador, pero de momento está como con un correo falso que se llama así como admin arroba AlmaWeb.cl y la idea es que desde ese se creen todos los demás usuarios.
+- [02:34] ¿Qué he hecho ahora? Vamos a hacer una simulación. Voy a dejarte aquí una tarjetita con las credenciales.
+- [02:45] Quina demo y credenciales.
+- [02:51] Y esta es la página web. De momento es una IP, como es un servidor de vuestra solamente.
+- [03:01] Más adelante se va a cambiar la dirección.
+- [03:04] Este sería el correo de iniciar sesión y el usuario.
+- [03:07] Aquí aparece como punto local. Más adelante la idea es que este sea un correo que realmente exista.
+- [03:12] Y ya está.
+- [03:53] Bueno, dos reuniones. Hay otras varias que todavía están en el laboratorio, por ende están en el desarrollo que tenemos de manera local, más no en este que está publicado, así que quizás este siempre lo vayan a ver quizás con un desfase de unos días en cuanto a lo que se va pidiendo, por eso lo ideal es que todo lo que se pida se rechace y se apruebe, lo veamos desde acá, porque aquí es donde cuando lo dejamos en esta columna es porque ya lo tenemos aplicado en esta página.
+- [04:18] Ya, ya.
+- [04:48] Acá en este botoncito es donde uno puede diferenciar si está viendo información real que está en la aplicación, en la base de datos,
+- [04:54] porque ya estamos conectados con una base de datos, se pueden guardar, crear y editar datos,
+- [05:00] pero a nivel de que hay algunas páginas que todavía no tienen lo que vendría a ser lo lógico de la información,
+- [05:07] les dejamos este botón para que por mientras tengan como información de relleno en los diferentes módulos que todavía no están implementados.
+- [05:14] Por ejemplo, lo que vendría a ser, sé que estos tres son los primeros que se están terminando, el de administración está completo, pero el de catálogo y contratista hay algunas cositas que sí y otras que no.
+- [05:26] Por ejemplo, en el listado, el listado de los contratistas, este está listo, de hecho ahora yo debería poder crear en el modo demo, modo real, y aquí si te das cuenta,
+- [05:37] Algunos de los que aparecen en el modo real se parecen a los que están en el modo demo, pero modo demo es solamente visual, nada está como conectado.
+- [05:47] Entonces, en el modo real, si aparece información, está funcionando el módulo y se puede probar.
+- [05:55] Por ejemplo, aquí en una de las tarjetitas, que si mal no me equivoco, era el de roles.
+- [06:01] Aquí nos dejaron un comentario que la idea es que aparezca el nombre de usuario y no solo el rol.
+- [06:05] Sí, lo que pasa es que, por ejemplo, nosotros sabemos que hay roles administrativos y digitadores, pero en realidad nosotros preferimos que aparezca en nombre de la persona que está haciendo el trabajo porque así después cuando revisamos sabemos quién hizo el movimiento y no como el cargo.
+- [06:25] En ese caso, ahí quizás, de hecho lo voy a anotar acá. Acá, por ejemplo, los usuarios se deberían ver acá, pero entiendo lo que ustedes dicen de que también necesitan saber qué usuarios están en cada rol. Entonces, lo que yo me imagino es que aquí en esta parte debería aparecer aquí abajito los usuarios que tienen ese rol.
+- [06:50] Claro, o sea, en realidad que la gente se meta con su rol y no con su, o sea, con su usuario y el rol venga como predeterminado.
+- [06:57] Exacto, de hecho ahí viene la diferenciación porque cuando uno crea al usuario, aquí me voy a crear uno yo, que de hecho aquí estaba haciendo unas pruebas, y la ruta sería por ejemplo esta, si el rol del usuario ya existe, ¿qué vamos a crear?
+- [07:11] Yo aquí lo creo, por ejemplo sería, y aquí uno selecciona el rol que le vamos a asignar a esa cuenta.
+- [07:23] Claro.
+- [07:23] Entonces por ejemplo, y aquí le voy a dar digitador, vamos a abrir la contraseña, demo, 1, 3, exclamación.
+- [07:31] Vamos a dejar como activo, porque si no lo dejamos activo no me deja iniciar la sesión.
+- [07:35] Le damos crear, y aquí es donde uno ve el rol que tiene la persona.
+- [07:40] Ah, perfecto.
+- [07:41] Pero igual podemos hacer de que acá se entiende de que necesitan a veces administrar qué personas están en cada rol, porque hay traspasos de rol.
+- [07:47] Igual les vamos a implementar acá por último una vista, que les muestre un listado de las personas que tengan ese rol, para que los puedan ver en las dos pestañas.
+- [07:55] Y aquí también les da la opción de ir a cambiar el rol de la persona a la otra pantalla.
+- [07:59] Ya, pero por ejemplo, si yo hago un registro, aparece mi usuario, no sale mi rol.
+- [08:29] Y finalmente le puedo dar acceso, por ejemplo, a lo que vendría a ser el catálogo, a ver las monedas.
+- [08:35] Entonces yo aquí le doy crear, y ahora ya tengo el rol vendedor, yo aquí vengo y empiezo a administrar lo que vendrían a ser los vendedores.
+- [08:44] Por ejemplo, yo. Yo en este caso, Carlos Vallejos, ya no voy a ser un digitador, aquí se puede cambiar directamente el rol.
+- [08:53] Este es el que cree, vendedor, le pongo guardar cambios, y este rol va a quedar siempre asignado a esta persona.
+- [09:01] Lo que hay que tener en cuenta es que el sistema actualmente está hecho para que no te deje tener dos roles, sino que en caso de que sea necesario, se crea un rol con los permisos que puedan tener otros dos roles.
+- [09:12] Bien, esa es como vendría a ser la administración. Así como a grandes rasgos sería crear el rol que tendrían los permisos de acceso a estas pestañitas y después crear los usuarios que van a estar dentro de ese rol y también en caso de que haya alguna persona de que, por ejemplo, pase de vendedor, área administrativa, todo, la parte del cambio de rol se haga directamente en el usuario.
+- [09:38] Y aquí le cambiamos el rol y esto también reflejaría los permisos que va a tener dentro del panel de la izquierda.
+- [09:43] Ya.
+- [10:14] En esta parte de acá aparece el cambio de contraseña, pero estábamos esperando que nos confirmen si es que querían de que el administrador viera todas las contraseñas o también de que cada usuario pueda realizar el cambio.
+- [10:30] Ya.
+- [10:30] Ahí puede, a lo que nos vayan a decir ustedes nos pueden confirmar, dependiendo de qué tanto control le quieren dar directamente a los usuarios.
+- [10:41] También podríamos dejar de que algún perfil en específico, por ejemplo el administrador, y en este caso podría ser por ejemplo algún rol que diga cambio de clave que le permita realizar el cambio de clave a los demás usuarios.
+- [10:54] Y así mismo, también podemos dejar un permiso específico en eso, pensando en que puede haber más de un encargado de esta revisión.
+- [11:01] O sea, mira, actualmente cada uno cambia su clave, pero sí el administrador tiene permiso para visualizar la clave de otro usuario.
+- [11:10] Perfecto. Mira, en este caso, como igual la contraseña es un dato sensible, ver la contraseña como tal no damos la opción, pero sugerimos siempre que exista la opción de cambiarla sin ver.
+- [11:19] Más que nada pensando en que hay un usuario de que se le vaya a olvidar la contraseña y justo esa sea la misma contraseña que tenga para el Facebook, para las redes sociales, todo.
+- [11:27] De que el administrador no tenga como la picardía de poder meterse a revisar ese dato sensible, sino de que la persona si tiene algún problema la avisa el administrador y el administrador le pasa una contraseña temporal, por así decirlo.
+- [11:39] Ya, entiendo.
+- [11:41] Perfecto.
+- [11:41] Y bueno, lo que vendría a ser, aquí lo vamos a ver del modo demo, ya que estos puede que no tengan datos insertados, las demás pestañas.
+- [11:49] Que aquí la idea también de que tengan el acceso al sistema es que en caso de que necesiten alguna interacción, igual de todas formas el modo demo tiene habilitado así como la vista de las ventanas para agregar información, vi que también nos agregaron acá en el trello unos campos que nos faltaban, si no me equivoco era acá en monedas, ¿verdad?
+- [12:09] Y bueno, ya lo demás sería la revisión unitaria.
+- [12:41] Si vos te igual, ¿podemos ir revisándolo uno a uno ahora y revisando las correcciones de inmediato?
+- [12:49] Bueno, lo que te acomode más.
+- [12:51] Perfecto. Vamos entonces revisando la grande rasgo y si detecta algo la anoto y lo modifico de inmediato, ¿te parece?
+- [12:56] Ya, me parece.
+- [12:57] Por ejemplo, aquí en las unidades de medida realmente no hay mucho que decir, son los caracteres básicos que encontramos junto con el estado activo e inactivo que la mayoría de esta parte del catálogo lo contiene de esta forma.
+- [13:07] Claro, y cualquier cosa se agrega a la unidad, ¿no?
+- [13:10] Exacto.
+- [13:11] Ya.
+- [13:11] Por ejemplo, en caso de que se nos haya escapado algún campo, en el tren lo captura de pantalla, falta este campo, y listo.
+- [13:17] Creo que, si mal no me equivoco, todos los que vendrían a hacer las listas, esto es como una lista, lo que tendría varias columnas y un título,
+- [13:28] tienen esta modalidad, Mari, que dejamos que cada usuario va a poder mostrar u ocultar columnas.
+- [13:34] Ya.
+- [13:35] Entonces, por ejemplo, si yo quisiera solamente ver el nombre y el código, esto no te va a afectar a la vista de otro usuario ni en otra sesión, por así decirlo. Cada usuario va a poder configurarlo y va a quedar guardado en la sesión. Por ejemplo, si tiene un orden específico que te acomoda de columnas e inicias la sesión en otro computador, se te va a respetar ese orden que dejaste configurado.
+- [13:58] Ya, pero por ejemplo, acá el centro de costo va a ser transversal dentro de la empresa.
+- [14:01] Perfecto. Es más que nada esto en caso del usuario en particular. Por ejemplo, ponte tú, tú tengas una columna que sí necesites ver y otra que no. Solamente haciendo así, por ejemplo, esa columna te va a dejar de aparecer acá, pero no le va a impedir a los demás usuarios verla, ni tampoco va a afectar a las empresas o a los usuarios que estén dentro de la lista. Es solamente la persona que está viendo.
+- [14:25] Consulta, Carlos, porque actualmente estamos viendo como si fuera AlmaWeb, pero ¿qué pasa si yo quisiera ver al tiro como un cambio a LM, para empezar a ver el cambio de empresa?
+- [14:34] Por ejemplo, acá sería el cambio de empresa.
+- [14:37] Ya.
+- [14:39] Y, ah, cuando uno hace el cambio de empresa, también te pregunta directamente desde qué periodo quieres verlo.
+- [14:49] Ya.
+- [14:51] Entonces aquí uno hace el cambio, y este es el menú, el que siempre te va a mostrar en qué empresa estás actualmente, y también el periodo.
+- [14:58] Ya.
+- [14:58] Otra duda que me surge acá. Por ejemplo, tengo entendido de que los usuarios en sí son los que acceden al sistema, no es que sean usuarios por empresa, ¿verdad?
+- [15:12] Tenemos usuarios por empresa.
+- [15:14] Perfecto, ya lo voy a anotar, porque en la creación de usuarios, si te diste cuenta, no tenemos de qué indique.
+- [15:20] Yo creo que en la creación de usuarios igual vamos a tener que seleccionar a qué empresa pueden entrar.
+- [15:25] Perfecto. Me imagino que tienen usuarios que pueden acceder a una o varias, ¿verdad?
+- [15:43] Sí. Perfecto. Entonces aquí podríamos dejar también un visor como el de los roles que te muestran las empresas con un check que uno vaya marcando las empresas que va a tener acceso a sus usuarios.
+- [15:54] Sí, tal cual. Perfecto, perfecto, perfecto.
+- [15:58] Entonces, volviendo a lo que vendría a ser acá, lo que vendría a ser el catálogo, tenemos los centros de costos también.
+- [16:07] Bien, acá también, bueno, si aquí tengo todas las columnas visibles, entonces la mayoría de estas columnas son los campos que aparecen en el formulario de creación. Así que si ves algún campo que se nos escape, también lo vamos viendo de inmediato, lo anoto y lo implementamos. Por lo que vi, lo que vendría a ser centro de costos, con esta información debería estar, ¿verdad?
+- [16:32] Lo que es centro de costo, ¿te mandé un listado de centros de costo?
+- [16:38] Perfecto.
+- [16:39] Sí, sí, se podrán cargar.
+- [16:40] Sí, sí, de hecho, todo lo que sea, por ejemplo, información precargada, la podemos dejar cargada directamente en la base de datos para que desde el día 1 aparezca, no hay problema.
+- [16:50] Ya mira, por ejemplo, en catálogo y te puse que fuera parametrización, cosa que sepamos que ahí se hace todo lo que es la parametrización del sistema.
+- [16:58] Perfecto.
+- [16:58] Y ahí deberían estar el centro de costo, el plan de cuentas, los elementos de costo, los tipos de documentos, los tipos de referencias, los códigos financieros.
+- [17:14] Perfecto. ¿Qué más?
+- [17:17] Tendría que revisar si se me escapa algo, pero eso sería como lo principal de la parametrización.
+- [17:21] Perfecto. Igual con esto que me indican lo puedo ir a dedicar.
+- [17:24] Ya.
+- [17:25] Perfecto. Y aquí tenemos lo que vendría a ser los tipos de documento con sus respectivos códigos. Estoy pensando que el día de mañana se podrían agregar más tipos de código en el sistema.
+- [17:39] De hecho, yo lo que está en catálogo, yo dejaría todo lo que es creación y modificación ahí. Cosa de que los usuarios cuando tengan acceso al catálogo sean los únicos que puedan modificar, agregar, eliminar y al resto independiente le activemos un módulo o no, no le aparezca el módulo de parametrización.
+- [17:57] Perfecto, vamos a ir entonces al módulo de contratistas, aquí también serían datos y el estado, y vigencia le agregamos también.
+- [18:21] Aquí tenemos lo que vendría a ser los ingresos diarios, con respecto a los ingresos diarios, creo que era lo que vendría a ser la parte de las proformas que lo habíamos visto, ahí tenemos una interacción un puntito más grande.
+- [18:35] Entonces, aquí tenemos, si le damos clic, debería mostrarnos esta información y el estado, si es que está asociado, facturado o si es que está pendiente.
+- [18:47] Perfecto. Eso sería como el modelo que sacamos de Agrosmart.
+- [18:51] Exactamente. Esto nos basamos en lo que sacamos las copias de pantalla de Agrosmart en la segunda reunión para poder ejecutarlo.
+- [18:57] Bueno, teníamos otra vista, pero realmente como ya tenían ese sistema y les parecía cómodo, nos reconstruimos y nos basamos en ese directamente.
+- [19:06] Ya.
+- [19:08] Aquí tenemos lo que vendría a ser las asociaciones laborales, donde aquí aparece el contratista, la labor y la actividad, junto con el monto y el estado.
+- [19:18] Aquí también como el otro sistema da la opción de marcar y deberían aquí habilitarse las opciones que...
+- [19:22] Lo voy a dejar en el botón que nos está mostrando.
+- [19:25] Bueno, tarifas de las labores, que aquí vendría la parte que te había dicho de las proformas, que aquí te las muestra y dependiendo del estado en el que esté, aquí te aparece un cierto tipo de acción a menos que ya esté facturada.
+- [20:02] Pero, por ejemplo, aquí va a estar parametrizado con GoSocket, que nosotros podemos seleccionar si no llegaron facturas de ese proveedor.
+- [20:11] La idea exacta de que GoSocket sea una parte intermediaria acá. De hecho, aquí aparece como un panel, pero de manera interna ya esta parte de acá. GoSocket en sí es un proceso que realiza el tema de las facturas, así que esto efectivamente cuando ya se tenga la implementación directa se va a aplicar acá.
+- [20:29] Entonces, por ejemplo, esta que ya está definitiva, cuando uno le da clic, te debería consultar el número de la factura, la fecha y si es que quiere incluir otras proformas.
+- [20:49] En el caso de que esté como borrador, te va a consultar si es que quieres dejarla como forma definitiva.
+- [20:57] Entonces aquí quedarían los que vendrían a ser esos como borradores que no quedaban ejecutados y que se borraban.
+- [21:04] Aquí deberían aparecer y la opción de borrar sería directamente acá en caso de que sea una que no vaya a ser efectuada.
+- [21:12] Y bueno, también aquí está la opción de editar en caso de que sea necesario.
+- [21:18] Y este de asociar facturas, este ya lo habíamos visto.
+- [21:20] Bueno, como estamos en el modo demo, la verdad que me va a dejar pasar y me va a decir que sí, va a decir factura social, pero al momento de recargar esta página van a volver a aparecer estos ejemplos, por así decirlo, en caso de que necesiten como que haya otro paso de más, los pueden ejecutar sin miedo después de recargar la página y deberían restaurarse estas visualizaciones, no hay problema.
+- [21:40] Yo aquí en el modo de editar una proforma o un trabajo diario pediría aprobación de algún supervisor o algo así, porque si no va a quedar muy abierta y que modifiquemos demasiado el día a día.
+- [21:57] Mira, en ese caso, lo que podríamos hacer sería crear un nuevo rol, que no va a ser una habilitación de estas pestañas, sino de que sería, de que te habilite, por ejemplo, quieres crear un rol que sea aprobación de proformas, y tú a los usuarios que quieras que aprueben, le asignas ese rol.
+- [22:28] Y ahí entonces acá, te debería aparecer un menú con quien quieres que te autorice la proforma.
+- [22:33] Ya, pero por ejemplo, ingresa una proforma diaria y alguien la autoriza, y después de la forma hay que editarla. Al editarla, igual pedirá una autorización de la persona que autoriza.
+- [22:46] Eso, por ejemplo, es lo que hay que definir. Entonces, al editar también debería pedir autorización.
+- [22:50] Sí.
+- [23:01] Perfecto. Y me imagino que también sería bueno tener el nombre, en caso de que se haya aprobado, el nombre de la persona que aprobó, ¿verdad?
+- [23:09] Sí.
+- [23:09] Ok, perfecto. Bueno, eso lo vamos a dejar ahí, no lo vamos a notar porque va a quedar directamente la transcripción de la grabación. Ahí ya tenemos el hito. Y vamos entonces con lo que, de esta, ¿habrá alguna solicitud extra, Mari, que necesitemos de esta pestaña?
+- [23:28] Ahí lo que quedaría como extra sería que uno pudiera pinchar varias proformas y poder facturarla. Por ejemplo, que tres o cuatro proformas pertenezcan a una factura.
+- [23:38] Perfecto. Entonces acá la primera columna sería un check. Y aquí se deberían desplegar como...
+- [24:16] Lo que ustedes quieran. Por ejemplo, estado, a lo mejor poder arrastrarla y dejarla acá para que le sea más cómodo.
+- [24:22] Sí. Así igual está bien, encuentro.
+- [24:28] Perfecto.
+- [24:29] Está clarita.
+- [24:31] Como igual nos basamos en la otra, se basó prácticamente uno a uno.
+- [24:37] No, sí, pero igual así encuentro que es mejor.
+- [24:40] Perfecto.
+- [24:40] Entonces sería selección múltiple, junto con eso me imagino que también esta acción es de asociar y definir que apliquen a las que se hayan seleccionado, ¿verdad?
+- [24:49] Claro, y por ejemplo, quizá en estado también poder seleccionar si queremos ver solo las facturadas, solo las pendientes.
+- [24:55] Mira, acá de hecho, todas las pestañas que tienen también, lo olvidé mencionar, pero junto con este, tú puedes ordenar así, puedes ordenar, por ejemplo, acá si tú le das clic te las va a ordenar de forma ascendente o descendente, ¿no?
+- [25:05] Y acá tenemos, por ejemplo, en el caso del estado, si mal no me equivoco, aquí el estado, también tiene nuestros filtros de facturada, por ejemplo.
+- [25:17] Ah, ya, eso mismo.
+- [25:19] Los dejamos aquí en este botoncito para que no vaya a impedir la lista, de la lista más grande, y bueno, aquí en caso de que sea mucho resultado,
+- [25:28] los dejamos como 5, 15 y todo, pero igual se puede dejar una imaginación un poquitito más amplia en caso de que quieran de 5 a 5.
+- [25:34] Y lo otro quizás que nos faltó, que también te voy a pedir tu ayuda, es en caso de que haya alguna pantalla de que por ejemplo aquí te sirva hacer filtros y poder esta información exportarla, agregarle el botoncito ahí de exportar en diferentes formatos, sería bueno que por pantalla nos digan cuáles son las que le sirven exportar la info y los formatos.
+- [25:55] Sabemos de quién manejan, lo que vendría a ser Excel y PDF, pero no sabemos si es que a lo mejor en algunas no le hace sentido tener PDF y solamente quieren Excel o viceversa.
+- [26:05] Ya.
+- [26:06] Y ahí te pediría como ese feedback de las pantallitas que tenemos.
+- [26:11] Vamos con lo que vendría a ser el traspaso y cierre, que es, si mal no me equivoco, sí, este no está tan interactivo, solamente es una visualización.
+- [26:20] Entonces, aquí la idea también es de que me des todo el feedback posible de lo que se necesita que sea de interacción en esta página, si hay algo de más o si hay algo que falta.
+- [26:32] Ahí sería el traspaso contable y cierre de mes.
+- [26:35] Exacto. De hecho, si te das cuenta, todavía tampoco tiene habilitado como la interacción. Si le doy clic a esto, ya.
+- [26:40] Aquí creo que va a quedar una modificación porque aquí solamente se centraliza la información, no se hace por contratista.
+- [26:48] Perfecto.
+- [26:50] Entonces acá solamente nosotros en el sistema nos aparece como qué es lo que queremos cerrar, tipo de cambio y centralizamos.
+- [27:02] Y ahí internamente el sistema hace todo lo que es reconocimiento del costo versus facturas por recibir contratistas.
+- [27:17] Perfecto.
+- [27:18] Entonces esta pantallita, esta sí como que es una modificación un poquito más amplia cuando esté lista.
+- [27:26] Bueno, te voy a informar por privado a ver si es que nos falta alguna cosita porque esta es como una de las que tendríamos que tener más cuidado.
+- [27:34] Ya.
+- [27:36] Perfecto.
+- [27:38] Vamos entonces con el módulo de ventas.
+- [27:41] Aquí tendríamos lo que vendría a ser el libro comercial.
+- [27:45] Aquí también si te das cuenta tenemos la integración de los estados y acciones.
+- [27:50] Entonces, por ejemplo, este que aparece aprobado, si le damos reversar, queda como borrador, aparece el dato del origen, y aquí te aparece también la opción de grabar y contabilizar nuevamente.
+- [28:06] Y aquí te dice la advertencia que habíamos dicho, que este documento viene una reversa, si confirmas grabar y contabilizar.
+- [28:11] Esto, por ejemplo, cuando yo quiera hacer una reversa, también tendría que pasar por aprobación de un administrador, ¿verdad?
+- [28:17] ¿Dónde se queda un poco más abierto? ¿Por qué se queda ahí al rol del digitador?
+- [28:25] Perfecto.
+- [28:25] Pero yo tengo una duda, porque si yo pongo grabar y contabilizar, ¿cómo se me contabiliza?
+- [28:30] Si das cuenta, queda como el estado contabilizado, todavía no te hace como la inserción de los datos que necesitamos.
+- [28:36] Entonces ahí faltaría que aparezca nuevamente el menú para el tema de la contabilización.
+- [28:41] Claro, porque si este es el libro de compra, lo ideal sería que yo, por ejemplo, en acción, pueda asociarle una orden de compra del sistema.
+- [28:49] Perfecto. Me imagino que los chicos los dejaron así, en el modo demo, pensando que como son datos que están solamente como de muestra, no hay como una forma de darle interacción y que te aparezca en la otra pantalla, por así decirlo.
+- [29:04] Lo vamos a dejar así, porque la idea de nosotros es dejar funcional esto para, estamos a 28, nuestra idea es que antes de agosto, ojalá ya para el viernes, tengamos esto funcional.
+- [29:22] Comercial. Entonces ya la próxima reunión la idea sería de que hagamos una ejecución de todos los módulos, por así decirlo, y ahí ya en detalle vayamos viendo esas pestañas y si es que hay algo malo, hay algo correcto, hay algo que falta.
+- [29:37] Ya.
+- [29:38] Entonces, vendría a ser libro comercial. De lo que vendría a ser al menos la información de esto del libro comercial. ¿Hay alguna información que falte en caso de que necesiten filtrar o buscar?
+- [30:04] O sea, aquí nos faltaría poder, o sea, hacer la acción real de contabilizar, porque el contabilizar nosotros seleccionamos cuenta contable, centro de costo, le agregamos una glosa, seleccionamos el cliente, entonces es solamente como cargar el libro y contabilizar.
+- [30:23] Claro que eso vendría a ser como las acciones que deberían aparecer cuando le demos clic aquí a los botones, ¿verdad?
+- [30:28] Exacto.
+- [30:29] Perfecto. Pero, por ejemplo, al momento de revisar aquí el libro comercial, ¿de estos títulos hay alguna columna que se nos haya escapado? ¿Alguna información que no?
+- [30:41] No, porque al final en la venta debería estar solamente el libro de compra, o sea, perdón, el libro de venta, ya sea con nota de crédito, débito o factura.
+- [30:49] Y eso debería cargarse directamente del servicio impuesto interno de GoSocket.
+- [30:52] Vamos entonces a ver lo que vendría a ser ahora la parte de los clientes, que si te das cuenta este panel ya es uno que hemos visto muchas veces, donde aparecen estos datos, y aquí también sería bueno porque aparece el vendedor asignado, pero no hay un responsable directo de la empresa por lo que estoy viendo, sería bueno también agregarlo como ítem, ¿verdad?
+- [31:13] ¿Estas son las compras?
+- [31:48] Ellos creen, pueden crear, falsificar documentos.
+- [31:51] Entonces está bien que aparezca solamente el dato del vendedor para que ustedes lo creen, ¿verdad?
+- [31:55] De hecho, debería aparecer como el que crea nomás.
+- [31:59] Perfecto.
+- [32:14] ¿Dato de contacto? Entonces no es necesario en este panel.
+- [32:19] No, lo que necesitamos para crear un vendedor es el giro, la razón social, el root, dirección y eso.
+- [32:29] Entonces falta también que tengamos un módulo de registro de los vendedores. Eso no lo tenemos.
+- [32:34] Claro, o sea que no tenemos vendedores, sería como...
+- [32:41] Va a ser el usuario entonces que prácticamente está aquí en el sistema el que lo cree y es el que debería aparecer en el registro.
+- [32:48] Sí.
+- [32:49] Ya, perfecto. Más simple entonces.
+- [32:52] Si uno como programador se da tantas vueltas, de repente la respuesta es tan simple.
+- [32:56] Y bueno, este del GoSocket, debo explicarles chicos que GoSocket es un paso intermedio que vendría a ser entre la entidad externa y nosotros,
+- [33:06] Estas pestañas, si es que se conserva, va a ser como consulta de lo que ha tenido intervención GoSocket. Por ende, esta información de acá realmente no aplica a lo que vendría a ser la versión final.
+- [33:20] Hubo un malentendido por parte del equipo de desarrollo que lo entendieron como que iba a ser un panel administrable.
+- [33:27] Vamos a ver entonces lo que vendría a ser el módulo de compras.
+- [33:36] Aquí, por ejemplo, tenemos los diferentes estados que serían aprobado, omitido, excepcionado, contabilizado y borrador.
+- [33:43] Nos preocupa muy bien que aquí en este módulo de demo aparezcan la mayoría de los estados.
+- [33:48] Y este, si mal no me equivoco, sí tiene la ventana de configuración de cada uno para editarlo o también para crear una nueva.
+- [33:56] Ya.
+- [33:56] Aquí, por ejemplo, no sé si es que habrá algo que se nos haya escapado, Mario.
+- [34:06] Proveedor, departamento...
+- [34:08] Bueno, ahí falta la cuenta contable y el centro de costo, que al final es la orden de compra que ha imputado el costo.
+- [34:23] Adicionar el elemento de costo también, que también es la orden de compra.
+- [34:26] Centro de costo y elemento de costo.
+- [34:35] Y, por ejemplo, de estas que están acá, esto, la suma que aquí aparece en este que está como mockup.
+- [34:41] Está bien que aparezca el mensaje acá, necesitan más información, creo que aparecía la suma y el neto por lo que me acordaba.
+- [34:50] Sí, en la orden de compra aparece el neto y si tiene impuesto, el impuesto.
+- [34:56] El tema del impuesto no estaba bien aplicado, pero ahí tendría que consultarlo directamente con los chicos.
+- [35:13] Entonces, aquí la aprobación es, bueno, esto como te digo, igual está maquiteado por encima, pero aquí la idea es que la advertencia, pensando que aquí podrían aparecer muchos, al darle yo clic aquí a la advertencia, automáticamente me filtra por los que no están aprobados y solamente me muestra los pendientes.
+- [35:34] Ya, quedó una duda con el tema de las compras y de las ventas, porque aparece el tema de contabilizar, pero ¿de dónde se nutre la información?
+- [35:48] ¿Esta información que está acá?
+- [35:49] Sí, o no, la información de los libros de compra y venta.
+- [35:53] Lo que pasa es que, como te había comentado, como esta información no está en la base de datos, no está ligada a nada.
+- [36:00] Entonces, no es como que venga de un cliente que esté creado, por así decirlo.
+- [36:05] Pero, por ejemplo, ahí en el libro comercial, que sería el libro de ventas, ¿yo puedo cargar, por ejemplo, el archivo Excel del servicio impuesto interno?
+- [36:12] Sí, de hecho, acá no sé por qué no aparece, porque la idea sería que se ingrese desde acá, ¿verdad? Desde el libro comercial.
+- [36:18] O sea, la idea es que, claro, si tenemos la opción de cargar un Excel del servicio de impuestos internos, sería ideal poder cargarlo y ahí empezar a pinchar, a contabilizar, porque si no nos faltaría el cuadro de ingresos de información.
+- [36:44] Que es igual, yo creo que lo van a necesitar en caso de que la información no la vayan a ingresar con Excel, ¿verdad?
+- [36:48] Claro, pero igual actualmente nosotros podemos subir un Excel al sistema y contabilizarlo.
+- [36:57] Perfecto, entonces en caso de que venga con Excel, acá debería aparecer una carga masiva, un botoncito carga masiva, ¿verdad?
+- [37:05] Claro, y lo ideal es que eso también pueda ser un filtro en caso de que, no sé, subamos, por ejemplo, la primera semana de agosto, lo que llegó del 1 al 7, y si subimos el 14 del 1 al 14, nos haga la distinción de lo que ya está duplicado.
+- [37:20] Perfecto, perfecto. Mira, en ese caso, yo me imagino que el botón carga masiva te debería desplegar una ventanita, cargar Excel, y en esa misma ventanita, antes de pasar a esta parte de acá, que te muestre lo que se cargó, si es que hay algún duplicado para eliminarlo o tenerlo en consideración, y ahí recién realizar la carga, ¿verdad?
+- [38:02] Claro.
+- [38:03] Perfecto, perfecto. Este modus operandi de carga masiva, ¿no faltó en algún otro módulo?
+- [38:09] ¿Tendría que ser en el libro de compra o en el libro de venta?
+- [38:58] Ah, ¿tienes alguna duda o algo más que quieras revisar, quizás aquí dentro, que no haya faltado?
+- [39:11] No hay faltado solamente el tema de la cuenta contable, que ya lo anotamos.
+- [39:19] Entonces, las aprobaciones, lo que estábamos viendo aquí, bueno, eso te va a activar automáticamente el filtro, el botoncito de acá.
+- [39:30] Aquí están las recepciones, que acá debería mostrarte el botón de realizar el cambio de estado.
+- [39:41] Ah, y yo puedo editar el tipo de cambio, ¿cierto?
+- [39:44] Sí, aquí por ejemplo te lo permite directamente.
+- [39:48] Ya.
+- [39:49] Y ese se debería reflejar en todos los módulos al momento de realizar el cambio.
+- [39:53] Pero no me permite confirmar el estado.
+- [39:58] Y aquí vamos con lo que vendría a ser el registro de las facturas.
+- [40:15] Entonces, esto por lo que me explicaron los chicos, también tiene falta el módulo al momento de hacerle clic aquí a la factura, es lo que vendría a ser la previsualización, que eso deberíamos tenerlo ya como propuesta una vez se lo entregamos con la parte lógica a funcionar.
+- [40:37] No sé si es que habrá alguna sugerencia aprovechando la instancia.
+- [40:42] ¿En el registro de compra?
+- [40:43] Sí.
+- [40:45] No, sería lo mismo de la carga masiva y ver cómo se podríamos contabilizar desde ahí mismo.
+- [40:55] De hecho, acá en la carga masiva del registro de compra, lo ideal sería que nosotros pudiéramos seleccionar la factura
+- [40:59] y ver qué órdenes de compra están asociadas al root del proveedor.
+- [41:17] Eso, por ejemplo, me imagino que al momento de poder seleccionar algunas, sería bueno de que acá apareciera un botón con el nombre del proveedor
+- [41:25] y al hacerle clic poder ver la otra factura.
+- [41:30] ¿Cómo?
+- [41:30] ¿Cómo? Porque me decías que lo ideal sería poder ver por proveedor si es que existen otras órdenes, ¿verdad?
+- [41:39] Claro, o sea, por ejemplo, si íbamos a hacer la carga del libro de compra y nos va a salir toda la información del proveedor, ver si ese proveedor tiene órdenes de compra asociadas y con eso ir seleccionando la orden de compra y que se vaya contabilizando.
+- [41:52] Bueno, aquí igual, como te decía, tenemos en todos los módulos que aparezca esta vista el tema de los filtros. Quizás solamente faltaría hacerle el check acá, tener el icono del check, ¿verdad?
+- [42:05] O sea, quizás aquí que vaya, por ejemplo, si esa factura es la 77, que diga orden de compra 4.
+- [42:11] Perfecto. Vamos entonces con el módulo de insumos y bodega. Y este es el módulo máster, por así decirlo, de los artículos.
+- [42:39] Prácticamente el registro de cada uno con su familia, su familia como me lo habían mostrado anteriormente.
+- [42:47] No sé si es que acá faltará alguna parametrización que se nos haya ido.
+- [42:56] El stock no es necesario porque el maestro de artículos es la creación, ni el costo promedio.
+- [43:29] Aquí en las bodegas es donde se debería poder ver, ¿verdad?
+- [43:31] Sí, y en el maestro de artículos también deberíamos poder seleccionar a qué se va a contabilizar cuando se centralice.
+- [43:39] ¿Cómo es eso, Mario? No entendí muy bien esa...
+- [43:42] Porque si yo creo un artículo, por ejemplo, no sé, bolsas, yo voy a pedir que se vaya a la cuenta contable que es costo materiales de embalaje.
+- [44:03] Entonces, una vez que la bodega centralice, ahí por indicación se sabe a qué cuenta contable se debe ir cada consumo.
+- [44:12] Perfecto.
+- [44:15] Aquí tendríamos el registro de cada una de las bodegas, que realmente es como el código y el nombre de cada una de ellas para tenerlo identificado.
+- [44:27] Y aquí vendría el módulo de los movimientos.
+- [44:34] Acá igual tenemos los filtros avanzados, que por lo que me explicaron los chicos del equipo de desarrollo,
+- [44:41] para ellos tener como un filtro o alguna búsqueda más avanzada no tenía mucho sentido,
+- [44:47] Ya que con cada uno de estos ítems podrían encontrar toda la información referente a cada una de las bodegas.
+- [44:53] Lo que yo creo que no, porque uno igual debería poder tener una vista rápida de las bodegas.
+- [44:58] Mi idea era que aquí apareciera como un selector de las bodegas y poder mostrar los movimientos de ellos,
+- [45:02] pero me dijeron que con el filtro avanzado por la bodega debería poder ser visible.
+- [45:07] Ahí igual, si lo consideras...
+- [45:09] O sea, igual me toca más la idea de poder seleccionar la bodega, porque a veces uno quiere buscar por bodega y no por movimiento.
+- [45:15] ¿Te parece entonces que les sugiero a los chicos que aquí nos agreguen como de estos botoncitos que tienen como este deslizable con todas las bodegas?
+- [45:24] Así como aquí al ladito o aquí antes de este, porque aquí en sí este buscador te deja por ejemplo, si yo pongo backing, debería, no, no está filtrando, estoy quedando de mentiroso.
+- [45:36] Pero aquí con este filtro también debería, pero yo encuentro mucho más útil tener como un botoncito deslizable con las bodegas, darle click y ver los movimientos.
+- [45:43] Sí, sería más práctico. Y aquí una duda en el movimiento de bodega, porque ¿qué pasa cuando ya tengamos una devolución a proveedor y que tenga que salir con un tipo de cambio específico? ¿Se va a poder hacer para que no acepte el precio promedio?
+- [46:05] Debería editarse directamente desde acá, pero aquí debería haber un botón que diga realizar devolución, que eso no está contemplado por lo que estoy viendo.
+- [46:22] No hay como un control del estado, ni hay un botón que te diga si es que se entregó o se devolvió. Voy a decirle a los chicos que implementen los botones y que estos vayan asociados a este estado y lo que habíamos conversado.
+- [46:37] En este caso, por ejemplo, si hay una devolución, ¿se generan dos movimientos como con la reserva?
+- [46:44] Sí, lo que pasa es que, por ejemplo, la devolución nosotros la identificamos por el tipo de movimiento porque es salida proveedor.
+- [46:53] Perfecto. Ahí vamos entonces que tenemos que hacer una modificación de los tipos.
+- [47:02] Ya.
+- [47:02] Al momento de, por ejemplo, de crear los movimientos, existe, por ejemplo, algún estado aparte de estos que tenemos acá que sea como el inicial de los movimientos.
+- [47:34] Sí, ahí te voy a mandar un listado de movimientos de bodega.
+- [47:36] Genial. Vamos entonces ahora al módulo de contabilidad.
+- [47:46] Acá vendría a ser lo que es el plan de las cuentas.
+- [47:49] Se deberían ver así, con cada uno de sus cheques, dependiendo de cada una de las cuentas, y sus respectivos estados, con su módulo de creación.
+- [48:13] Acá no sé si es que habrá algo que acotar.
+- [48:17] O sea, ahí igual te mando el plan de cuenta actual porque como que no tiene mucho que ver con lo que está ahí escrito.
+- [48:30] Perfecto. Ese quedó acá, ¿verdad?
+- [48:33] Sí.
+- [48:34] Este es contabilidad, plan de cuentas.
+- [48:51] Ahí está el plan de cuentas, los centros de costo y elementos de costo.
+- [48:54] Entonces ocupamos estos documentos para basarnos ahí en lo que debería aparecer en esta página.
+- [49:08] Claro, y ahí te va a aparecer porque el plan de cuenta igual tiene niveles. Algunos son de clasificación y los otros son de agrupación.
+- [49:17] Entonces igual cuando tú abras el Excel te va a salir el nivel y te va a salir todo lo que pide cada cuenta contable dependiendo de lo que nosotros parametricemos.
+- [49:26] Entonces, la idea es que se mantenga esa opción de poder, si nosotros queremos una cuenta contable, agregarle centro de costo, que vaya. Si la queremos quitar, quitársela.
+- [49:37] Perfecto.
+- [49:41] Esos son los elementos de costo.
+- [49:43] Voy a hacer el otro documento, entonces, ¿verdad?
+- [49:46] Dice plan de cuentas, que creo que fue el primero que cargué. Abajo. Más abajo, ahí. Ahí está.
+- [49:57] Perfecto. Entonces este va a quedar como de los que tenemos que hacer también, ojalá, antes de la próxima semana, una muestra nueva con esta definición para que nos la aprueben y ahí continuar con lo que vendría a ser la parte lógica.
+- [50:31] Ya.
+- [50:32] Entonces con los elementos de costo que también estaba ahí en el Excel, ¿verdad?
+- [50:40] Sí.
+- [50:42] Perfecto.
+- [50:43] Factores honorarios, igual de todas formas como te comenté, ya tienen acceso a esta página, entonces por ejemplo si hay algo que se nos haya escapado de esta reunión, su captura de pantalla, en Paint lo marcan en rojo, un círculo bien grande como los videos de TikTok de sus paranormal, y ahí nos dicen en el comentario que es lo que necesitan modificar.
+- [51:09] Ya.
+- [51:09] Bien, entonces, mira, aquí el tema del indicador del banco central no se está pasando directamente a lo que vendría a ser el catálogo de monedas, pero acá dejamos estos botoncitos que en caso de que, por ejemplo, siempre pensando en que al ser un sistema externo, este puede estar no disponible en algún momento y justo puede que pase de que al momento de que se hace la sincronización,
+- [51:39] A las 9 de la mañana el sistema caiga. Siempre van a tener la opción de hacerlo manualmente el cambio. Y acá debería dejarles un historial de cuándo fue la última vez que se trajo el cambio.
+- [51:53] Entonces aquí quizás, esto lo van a ver solamente como visualización de lo que se recopiló a las 9 de la mañana, pero en caso de que necesiten traer los sistemas o actualizarlo, desde el módulo de moneda.
+- [52:03] Igual podemos hacer lo de que quede acá, o también podemos hacer de que se fusionen los dos módulos en caso de que lo necesiten, pero por un tema de administración, si igual se los quisimos dejar para que ustedes puedan manualmente hacer alguna modificación acá, más que nada pensando, como te digo, que al ser un sistema externo, este puede que quede disponible, mantención, o el día de mañana cambie, igual tengan la opción de hacerlo manual.
+- [52:25] Claro, pero por ejemplo, el contabilidad, el plan de cuenta, elementos de costo, los factores y todo eso quedaría en la parametrización.
+- [52:34] Todo lo que sea modificación y mantención que quede en la parametrización y que en los módulos que solamente la aplicación de la información.
+- [52:43] Perfecto, perfecto. Entonces, acá debería estar bien entonces porque acá se hace la parametrización en el catálogo.
+- [52:53] Sí, y ahí también que tengamos el plan de cuenta, elementos de costo, centro de costo, los códigos financieros.
+- [53:01] Perfecto, entonces vamos a hacer ese traslado de los paneles para dejarlo como ahí administrable.
+- [53:06] Ya.
+- [53:07] Genial.
+- [53:08] Entonces, con los asientos de cargas masivas, que aquí habíamos dejado el tema de subir el documento,
+- [53:17] de momento como todavía no está conectado a la base de datos, solamente de manera visual.
+- [53:23] Ya. Entonces, acá, por ejemplo, al momento de cargar, debería aparecer la ventana de carga, subir el documento, darle cómo analizar, y debería mostrarte todo lo que se extrajo del documento para ver si es que quieres pasarlo, o si es que hay algún dato que está duplicado, o hay algún dato que no quieras pasar.
+- [53:39] Ya. Lo que sí, no veo el botón de hacerlo unitario. Eso también debería estar. Te permite editar solamente.
+- [53:52] Claro, hay que agregar.
+- [53:53] Y bueno, la parte de reportería, como te dije, lo vamos a dejar en el stand-by hasta que dejemos bien la lógica para poder distribuirlo, porque lo que no habían dicho, la idea es que cada uno de los módulos tenga su reportería, así que ya teniendo terminado cada módulo, le vamos a ir agregando su correspondiente pestañita de reportería, y ahí lo que vayan solicitando, lo vamos a ir agregando.
+- [54:30] Ya. Entonces, Mari, lo que nos faltaría, si es que puedes acceder a la... a esta página con las credenciales que te dejé. Eso sería lo último que te pediría, que las dejé directamente acá en el trelo, en cual mago es la primera que dejé.
+- [54:53] De hecho, aquí te la puedo dejar asociada. Ahí está guardada la tarjetita.
+- [55:15] Lo que hay que tener en consideración es que si te das cuenta, la dirección de la página al principio tiene como un número que se llama dirección IP,
+- [55:24] que si dejamos solo ese numerito y le damos Enter, va a entrar al otro proyecto que estamos construyendo con AlmaWeb, que sería el de Freshly.
+- [55:33] ¿Ya?
+- [55:33] Eso es netamente porque ambos están en este servidor de prueba que no es el definitivo, que es como el servidor donde nosotros realizamos el desarrollo y después lo cargamos al servidor definitivo.
+- [55:42] Y acá me dejo acceder a la plataforma.
+- [55:47] Perfecto, te dejo también con iniciar sesión, ¿verdad?
+- [55:51] Sí, y ahí puse modo real y modo demo.
+- [55:53] Perfecto. Por ejemplo, aquí ya está habilitado, si es que quieres más cómodo dejarte creada a ti como usuario, en el módulo de administración, usuarios,
+- [56:04] podrías agregarte con el rol de administrador para que tengas tu usuario ya creado en esta plataforma y ahí vayas probando en caso de...
+- [56:14] Ya.
+- [56:15] Así que, y lo otro también que te iba a consultar, como igual nos vamos a llevar un poquitito de trabajo, ¿será posible que nos reunamos el día jueves o viernes?
+- [56:27] Sí.
+- [56:28] ¿Qué día te acomoda más?
+- [56:32] El jueves, porque el viernes no estoy disponible.
+- [56:36] Perfecto. ¿Te parece que sea jueves en horario PM y lo definimos el mismo jueves el horario?
+- [56:41] Sí, ningún problema.
+- [56:42] ¿Hasta qué horas más o menos tienes dispo, Mario?
+- [56:45] Hasta las seis.
+- [56:47] Perfecto, ya, entonces el mismo jueves durante la mañana te confirmo la hora, más que nada pensando que como tenemos que dejar todo esto disponible en el servidor publicado, poder desarrollarlo, hacerlo en las pruebas, y ahí publicarlo para el jueves, y por mientras la tareita que te dejaría sería como ir revisando estas pantallitas que vamos dejando en la columna de Cua Almahue,
+- [57:11] Y revisándola, si está aprobado, lo dejamos en el aprobado, AlmaWeb, y si está rechazado porque le faltó algún cambio, rechazado no es que esté malo completamente, sino que le faltaron algunos ajustes, sea cual sea mínimo, por ejemplo, algún nombre o algo, lo vayamos dejando acá.
+- [57:26] Ya.
+- [57:27] Ya, y lo mismo de siempre, si es que, por ejemplo, aparece algún caso particular, me puede avisar, vemos una reunión, o lo puedes grabar con capturas de pantalla como lo hicieron, espectacular.
+- [57:37] Ya.
+- [57:38] Si quieres quedamos en eso, María. No sé si tienes alguna duda.
+- [57:42] No.
+- [57:44] Harta tarea.
+- [57:46] Harta tarea.

@@ -1,0 +1,78 @@
+# 2026-09-15-gosocket-kickoff (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-15-gosocket-kickoff\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [01:03] Buenas tardes, ¿cómo están?
+- [01:05] Ay, se hizo la uña.
+- [01:07] Hola, buenas.
+- [01:09] ¿Qué tal? ¿Cómo les va?
+- [01:15] ¿Viene a ti, Pablo?
+- [01:17] Todo bien, todo bien.
+- [01:19] Qué bueno.
+- [01:29] ¿Nos escuchan ahí?
+- [01:33] Yo escucho bien.
+- [01:35] Eh, bueno, Pablo, no hemos tenido mayores impulsados.
+- [01:42] Así que está, ¿todas van a ir por ese lado?
+- [01:45] En serio, voy a tener que insistirles.
+- [01:49] ¿Puedo hablar con mi PM para que ya presione? Porque yo ya igual le explico mucho, entonces ahí ya se me escapa un poquito de como mis funciones también estar viéndonos con él.
+- [02:03] No, sí, entendible, de hecho cuando yo le mandé correo venía alguien copiado que no me acuerdo cómo se llama, lo voy a ver, pero esa persona tampoco me responde como en que era de vacaciones o algo así.
+- [02:14] Claro, sí. No sé si me dijo que lo iba a ver, pero si tú me comentas que no te ha contactado ni nada, imagino que quizás está en otro, en otra cosa. Voy a volver a insistir, le voy a sumar a mi teléfono para que le de un toque.
+- [02:30] Ya, muchas gracias.
+- [02:31] Bien, y respecto a las implementaciones, he seguido las pruebas que han hecho, estuvieron enviando hartos documentos entre el 5 y ayer, hoy día, y están bastante buenas las pruebas.
+- [02:49] Hola, buenas, por si acaso me voy a ir muteando porque tuve un problema con mis audífonos y los tengo en el parlante para que no se vayan a escuchar doble.
+- [02:57] Ah, ya, vale. No sé si vas a ir igual mi correo.
+- [03:05] Sí, sí.
+- [03:06] He comentado en este caso del nombre.
+- [03:08] Sí, de los duplicados.
+- [03:10] Sí, sí. Esa información es siempre mejor no duplicarla y darle el funcionamiento correspondiente al nodo, porque ¿qué es lo que ocurre?
+- [03:20] Voy a compartir pantalla.
+- [03:22] Entonces, nosotros las representaciones gráficas, y esto es por una normativa que hay vigente, una normativa del nombre de ítem, lo que hacemos es que se duplica.
+- [03:42] Acá en esta representación gráfica no alcanza a salir, pero aquí saldría lo mismo dos veces.
+- [03:47] Esto es una fórmula que lo que hace es concatenar ambos nodos en el caso que ustedes necesiten más información para mostrar en la descripción del producto.
+- [03:56] Entonces, al hacer esto, lo que vamos a hacer en la representación gráfica oficial es que esto se va a duplicar, ¿bien? Entonces, desde ya, yo les comento que esto eviten hacerlo y intenten, si no lo van a enviar, no lo van a utilizar, no lo envíen, pero déjenlo disponible en el caso de que el negocio lo necesite, porque en algún momento lo van a necesitar, en el caso de que tengan que informar detalles.
+- [04:21] Perfecto.
+- [04:22] Entonces, más que nada eso. Por lo demás, veo súper bien los documentos, veo que no están con reparo, están recibidos directamente y no hay información adicional. Creería que estamos bien por estar en ese lado.
+- [04:36] No, no hay problema con eso.
+- [05:08] Y enviaríamos con el e-mail.
+- [05:12] Sí. Bueno, y ahora lo que toca en este caso es realizar pruebas, bien, validar cuáles son las informaciones que necesitan.
+- [05:19] Yo les debo las representaciones gráficas, las tengo que crear.
+- [05:22] Ahora que ya tienen un set de pruebas válido, bien, voy a crear la información, ya, para que la puedan, en este caso, tomar desde el mismo documento.
+- [05:32] Entonces, eso, quedaría pendiente de mi parte crear las, en este caso, las representaciones gráficas que ya me mandó María Jesús, adecuarme un poco a lo que necesitan, ¿bien? Y ya con eso pasaríamos a la segunda fase de pruebas, que sería, en este caso, hacer la validación de la data que va en el documento.
+- [05:55] Perfecto.
+- [05:57] Perfecto.
+- [05:57] Bien, o sea, igual de nuestra forma estamos avanzando, independiente que esté o no el contrato, voy a seguir insistiendo María Jesús, que de verdad, y ahí lo único que puedo hacer es comentarle a Cristian de que vea el tema, bien, y lo único que puedo hacer es re-insistir.
+- [06:19] Sí, me imagino.
+- [06:49] Ya, mira, con eso mismo le voy a comentar que apuro un poco el tema.
+- [06:55] Con eso mismo le voy a comentar que, o por lo menos la próxima semana, pedirle que se sume, en este caso, a la reunión.
+- [07:02] De hecho, en esta reunión tuvo que haberse sumado también.
+- [07:07] Ya, así que eso.
+- [07:10] Les voy a comentar cuando estén listas las representaciones gráficas.
+- [07:13] Esto demora, ¿bien? Demora harto porque es harto diseño que hay que hacer.
+- [07:16] Entonces, yo creería que de aquí a la próxima semana ya debería estar listo, pero igual de todas formas yo les voy a comentar.
+- [07:24] Respecto al tema del funcionamiento, Carlos, de los métodos, en este caso para obtener los PDF, igual ya están funcionando porque toman una predeterminada, ¿bien?
+- [07:33] Así que igual ahí tú puedes probar y en este caso hacer las pruebas que necesitas respecto al tema del 10 documentos.
+- [07:39] También, que es súper importante.
+- [07:41] Perfecto, si actualmente de hecho teníamos la implementación y estaba trayendo este que está mostrando, ¿lo estábamos logrando traer al sistema?
+- [07:47] No sé si después del ajuste de la representación tendríamos que cambiar algo o con el mismo que ya tenemos va a traer la representación actualizada.
+- [07:56] No, no, de hecho al momento de realizar la emisión del nuevo documento ya va a salir la representación gráfica porque eso te lo manda el portal.
+- [08:04] Ah, genial.
+- [08:04] El portal es quien decide, ah, tengo esta representación, entonces voy a realizar el documento en base a esto nuevo.
+- [08:11] Ahora, hay ahí un hack. En el caso de que ustedes quieran probar las representaciones gráficas nuevas con documentos antiguos, que es la regeneración del PDF. Eso por la API no lo puedes hacer, pero sí lo puedes hacer acá por el portal. En la opción de descarga PDF, está esta opción, regenerar PDF.
+- [08:30] Lo que hace el portal ahí es desechar la representación gráfica antigua, ¿bien? Porque el documento sí o sí se queda con la representación en el momento que fue emitido.
+- [08:39] Desecha la antigua y toma una nueva en el caso de que yo cargue una.
+- [08:44] Ah, genial, perfecto.
+- [08:45] Entonces, ahí si quieren, por alguna casualidad, regenerar documentos antiguos con el PDF, se puede hacer, ¿ya? Para que nadie nos crean que es estático.
+- [08:55] Ah, genial, perfecto.
+- [08:56] Así que, bueno, yo veo bastante avanzado el proyecto, la verdad, María Jesús. ¿No tienen una fecha aproximada en que quieran salir a productivo con la solución?
+- [09:10] Lo que pasa es que nosotros hubiésemos salido productivo ahora en septiembre, pero como tenemos todo el stand-by con el tema de los contratos y de la plataforma de GoSocket, la que debería funcionar más rápido, como la oficial, no hemos podido avanzar.
+- [09:34] Mucha sí, sí ha sido un problema eso, si no ya estaríamos habilitados porque realmente nos demoramos en activarlo uno o dos días.
+- [09:45] Sí, sí, nosotros fuimos felices hasta ahora en septiembre con el día faltero.
+- [09:52] Mira, voy a sumar ahora mi PMO, ya para que ahí insista y vea qué es lo que está ocurriendo.
+- [09:58] Puede que, igual yo tampoco he tenido información de parte de Cristian, entonces capaz que quizás está haciendo alguna acción con el área legislativa, la verdad no lo sé, pero igual no he tenido información, entonces le voy a pedir ahí que me dé un feedback si es que está ocurriendo algo o no.
+- [10:17] ¿Bien? Así que intentaré hacer todo lo posible para que por lo menos a finales de septiembre, si está firmado el contrato, podamos hacer por lo menos la habilitación de Iofacturo. ¿Bien? Sería bastante bueno. Sería bastante bueno. ¿Bien? Así que eso queda pendiente de mi parte.
+- [10:37] Ya, Pablo. Igual te voy a mandar por Tim el correo de las personas que hay que agregar para la próxima reunión.
+- [10:45] Perfecto. Para hacer la actualización de la cita.
+- [10:48] ¡Gracias por ver este video! ¡Suscríbete al canal para no perderte los próximos videos!

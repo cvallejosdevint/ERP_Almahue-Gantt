@@ -1,0 +1,222 @@
+# 2026-08-04-gosocket (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-08-04-gosocket\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:07] Bien. ¿Falta alguien más o comenzamos?
+- [00:11] Yo por mi lado estoy con Francisca que es del área de contabilidad para ver el tema del proceso de facturación.
+- [00:18] Ya, perfecto.
+- [00:20] Así que no debería faltar nadie más en la reunión.
+- [00:25] Ya, perfecto. Ok.
+- [00:27] Bien, bueno, me presento. Bien, mi nombre es Pablo Rodríguez, voy a ser el consultor, bien, a cargo del proyecto de API, ¿cierto?
+- [00:35] Y en esta reunión vamos a ver, vamos a hacer un repaso súper rápido en este caso de lo que es la solución y qué es lo que necesitamos también para integrarnos, ¿bien?
+- [00:45] Sergio es el desarrollador, ¿cierto?
+- [00:49] Sí, aquí estamos con Carlos, nosotros somos parte del desarrollador.
+- [00:53] Ya, perfecto. Bien, bueno, les voy a compartir pantalla de un diagrama para que vayamos viéndolo
+- [01:01] Y explicando de qué se trata y qué es lo que debemos hacer, tanto por el área contable como el área de desarrollo, ¿bien?
+- [01:09] Principalmente, lo que se necesita para poder integrar es el consumo de un método, ¿bien?
+- [01:16] En este caso, un método de API REST para poder, en este caso, enviar los documentos que ustedes necesitan, ¿bien?
+- [01:24] Bueno, saliendo de la reunión, les voy a entregar un paquete con toda la información necesaria para poder hacer este consumo.
+- [01:33] Pero principalmente son tres métodos los que se utilizan.
+- [01:37] Se ocupa Send Document Authority, GetDocument PDF y el GetDocument.
+- [01:42] Cada uno tiene su función principal.
+- [01:45] Send Document sirve para poder enviar los documentos, el GetDocument PDF para traer los documentos ya en PDF.
+- [01:52] Esto codificado en base 64. Y finalmente el GetDocument, que nos sirve para poder hacer las consultas hacia el portal de los documentos que ustedes estimen conveniente.
+- [02:06] Entonces, el proceso es simple. Desde el ERP se hace el consumo del método con un spool de integración o un archivo de integración.
+- [02:15] Bien, este archivo de integración puede ser un RAW, bien, un RAW de un JSON o en World Encoder, bien, ahí ustedes deciden según el tipo de integración que tengan en ARP de consumirlo, bien, este archivo es, lo voy a mostrar en pantalla, este es un ejemplo que también les voy a hacer llegar, se envía en el File Content, en este caso todo un XML,
+- [02:43] LPL con todos los datos que son, en este caso, llenados por el ERP. Ahora, tener en consideración que, por ejemplo, número no existe como folio, o sea, como nodo en el servicio de impuestos internos, sino que esto va a pasar por un mapeo.
+- [03:00] Bien, entonces para eso ustedes requieren un GUF para construir este documento. Bien, yo les voy a pasar los ejemplos para que se puedan integrar. También un manual de la API para que puedan ver la forma en que se consume cada método. Bien, y de todas formas, obviamente, estoy yo. En caso que necesiten alguna ayuda, por ejemplo, con la integración, nos podemos reunir en una sesión. Bien, pero principalmente
+- [03:30] Bien, lo básico es tener este documento que yo les estoy mostrando hasta acá construido. Bien, les voy a mandar estos ejemplos, pero hay que tener en cuenta que cada negocio tiene sus propias obligaciones y sus propias necesidades, por lo que van a tener que revisar el GUF y ver si es que hay algún dato más que necesiten.
+- [03:54] Bien, entonces esto les va a servir para poder integrar los documentos, pero hay que ir revisando qué más se puede se puede integrar.
+- [04:05] Bien, bueno, el documento, una vez que se hace el consumo, se va hacia la plataforma de GoSocket y aquí se transforma el documento en un archivo XML de índole tributario.
+- [04:16] Bien, el esquema tributario contiene toda la información que va a ser leída por el servicio y aquí es lo importante. La plataforma hace un control de los documentos que ustedes están enviando y las datas. Por ejemplo, si ustedes envían un nodo que tenga más campos de lo que debería, van a recibir un rechazo, indicando en este caso cuál es el nodo con problemas.
+- [04:44] Bien. María Jesús, de casualidad, ¿tú conoces la plataforma de GoSocket?
+- [04:51] Yo hace años trabajé con GoSocket, porque actualmente nosotros estamos con Acepta.
+- [04:56] ¿Ya?
+- [04:57] Pero algo recuerdo de GoSocket y Cristian también nos hizo una pequeña visita por la página.
+- [05:05] Ya, como una introducción. Perfecto.
+- [05:07] Sí, bien, igual, de todas formas, nos tenemos que juntar, esta reunión lo más probable es que sea periódica, ¿cierto? Todas las semanas las vamos a tener para tener, ir viendo avance o necesidades en el proyecto, pero igual de todas formas vamos a trabajar en el portal para que ustedes se puedan loguear, puedan ingresar tanto a CUA como a Productivo, ¿cierto? Y puedan ir viendo cada funcionalidad del portal, ¿bien? Sobre todo, yo facturo, yo facturo súper bien.
+- [05:37] Es muy importante que tengamos una capacitación para que puedan, en este caso, ustedes tener una grabación, por lo menos, de cómo se utiliza.
+- [05:45] ¿Con suerte, Pablo?
+- [05:48] ¿Nosotros igual vamos a tener la facultad de poder facturar y poder ocupar GoSocket independiente que todavía no esté la integración con la página que estamos creando?
+- [06:02] ¿Ustedes quieren facturar con Iofacturo antes de salir con API?
+- [06:07] Sí.
+- [06:39] Pero ahí con Crisca lo puedo ver, ¿cierto? Ustedes lo necesitan urgente y yo facturo.
+- [06:46] O sea, lo que pasa es que nosotros queremos hacer el cambio de Acepta a GoSocket en agosto.
+- [06:51] Y ya septiembre de arde baja Acepta porque ya nos están mandando la orden de compra por dos años más.
+- [06:59] Ya, sí se puede hacer. Sí se puede hacer.
+- [07:01] Pero el único requisito es que tengamos el contrato firmado y yo los puedo sacar a productivo ni yo facturo.
+- [07:06] Y eso se hace en una semana, realmente.
+- [07:08] Ya, buenísimo.
+- [07:10] Entonces, necesitaríamos el contrato y que en este caso ustedes acepten que se les hizo la capacitación.
+- [07:15] Bien, con eso ya lo pueden hacer.
+- [07:17] Igual, de todas formas, Iofacturo es súper fácil de utilizar.
+- [07:21] Es súper, se intuye súper fácil.
+- [07:24] Es como, muy parecido al portal gratuito del servicio impuesto interno.
+- [07:29] Ya.
+- [07:30] Bien, ahí lo único que tienen que hacer es tener una gestión de folios,
+- [07:34] Porque, lamentablemente, para API los folios van a ser automáticos, por lo que tengo entendido. O sea, nosotros vamos a ir a buscar hacia el portal los folios y los vamos a traer. Ustedes no tienen que cargarlos, ¿bien? Pero para Iofacturo sí es necesario cargarlos manualmente. Ahí, lamentablemente, no tenemos una integración para poder hacerlo automático.
+- [07:53] ¿Y antes de hacer Iofacturo, usted las habilita de forma manual?
+- [07:57] O sea, con Iofacturo tiene que ser manual, sí o sí. Si yo le habilito Iofacturo, tienen que entrar al portal, sacar los CAF y cargarlos en Iofacturo. Sergio, cuéntame.
+- [08:09] Pablo, ahí tenía una duda. Por ejemplo, mencionaste que a nivel de API, la carga de CAF o de folios va a ser automático. Por ejemplo, no sé si, por lo que tengo entendido, que nosotros no vamos a foliar. Ustedes se encargan de foliar, ¿cierto?
+- [08:26] Exacto. Cuando ustedes van a foliar y si no hay folio disponible, van a ir a descargar un nuevo CAF de forma inmediata y nos van a entregar el documento ya foliado.
+- [08:36] Claro, exacto. Ustedes cuando hacen el consumo del, en este caso del método, vamos a volver al archivo de integración, acá con este nodo nosotros le indicamos al documento qué folio va a tener, en el caso que ustedes hagan la foliación, ¿cierto?
+- [08:54] En el caso que ustedes no lo realicen, este nodo no va, o va en este caso cerrado, pero va así. Entonces, ¿qué ocurre con esto? La lógica es que este documento entra al portal, hace el mapeo, y luego, acá abajito, en este JSON body, ustedes tienen que agregar uno que se llama BillerID, y yo les voy a entregar un código.
+- [09:21] Cada vez que usted envíe un documento sin folio y con el Biller ID, el portal va a ir a buscar al agente los folios que están configurados para que los pueda entregar.
+- [09:32] En el agente se configuran el umbral y la recarga. Entonces, cuando se supera el umbral de folios utilizados, se hace una recarga, en este caso, hacia el agente.
+- [09:44] Bien, y por parte en este caso de otra funcionalidad que más adelante las vamos a revisar igual, el portal tiene la opción de que cuando entrega ya una cantidad de folios que supera el umbral total, lo que va a ir a hacer es ir a buscar una recarga hacia el portal del servicio impuesto interno.
+- [10:03] Entonces se va siempre cada vez que ustedes emiten un documento y van consumiendo en este caso los folios, el portal se va preguntando si es que este umbral se excedió o no y va o no a buscar los folios.
+- [10:14] Mira, pero en la respuesta que tú me das de esa petición, ¿cierto? Porque esta es la llamada de emisión, ¿cierto? En la respuesta tú me vas a indicar qué folio es que se le asignó a esa llamada.
+- [10:25] Exactamente, exactamente. Cuando consumen el Send Documento Autority, ustedes reciben el documento IKML con toda su información, con el folio y además un PDF.
+- [10:40] Bien, ustedes lo tienen que hacer, en este caso, el consumir nuevamente el guía de documento PDF porque ya lo trae la emisión como tal. Pero en el caso que no se los traiga, ustedes pueden consumir el método guía de documento PDF para también traer la representación gráfica.
+- [10:58] ¿Ese es un archivo completo o un link?
+- [11:03] Es un base 64 que ustedes lo tienen que codificar en PDF y les va a mostrar la imagen.
+- [11:10] O sea, un binario, un binario en base a 64, entonces, archivo completo.
+- [11:14] Sí.
+- [11:15] Ok.
+- [11:16] Bien.
+- [11:17] Cuando reciben la respuesta está todo codificado en nodos JSON,
+- [11:24] por lo que ustedes pueden tomar el nodo e ir capturándolo.
+- [11:26] De hecho, hay uno que es el Global Document ID,
+- [11:30] que yo les recomiendo guiarse más por el Global Document ID de los documentos que por el folio,
+- [11:36] o si pueden con ambos, mejor.
+- [11:38] Porque con el Global Document ID ustedes pueden hacer prácticamente todo en el portal. Pueden identificar todos los documentos con mucha más rapidez que con el folio. Por ejemplo, si ustedes quieren saber el estado de un documento con el GetDocument, lo pueden hacer a través del GetDocument ID y la respuesta es mucho más rápida.
+- [11:57] Ya, perfecto. El identificador único desde su portal de GoSocket.
+- [12:01] Desde el portal de GoSocket, exactamente. Y bueno, el tercer nodo, que en este caso es el GetDocumento, a ustedes les sirve para obtener toda la información del reporte, ¿bien? Nosotros no tenemos, no es así, no es síncrono todo el proceso de la emisión, ya que nosotros dependemos de las respuestas del servicio impuesto interno, ¿bien? Entonces, no tenemos los estados inmediatamente, pero por lo general están después de 20, 30 segundos.
+- [12:29] Entonces, ¿qué es lo que se realiza? Ustedes emiten el documento, ¿cierto? Y después de este tiempo, pasado este tiempo, ustedes generan el GetDocument para ese documento con el Global Document ID y pueden llevarse al ERP el estado del documento.
+- [12:43] Hay un nodo que viene que se llama Autority Status y viene con un código. Esto está en el manual, así que también lo van a poder revisar. Y ese código le indica a ustedes si es que está aceptado, rechazado o si es que tiene algún reparo. Incluso tiene las notas del servicio impuesto interno.
+- [13:00] Ok.
+- [13:32] Nueva. Lo principal para nosotros como calidad es que salgan sin ningún tipo de reparos. Bien. En el caso de que ustedes quieran aceptar algún documento con alguna funcionalidad que tenga un reparo, lo tienen que indicar por correo estrictamente necesario. Bien. Una vez que ya está en la plataforma de GoSocket. Bien. Ustedes pueden hacer la consulta del estado del DTE con el ID entregado previamente, que es lo que comentábamos recién Sergio. Bien.
+- [13:59] Bien, y aparte, en el portal pueden trabajar con la distribución del DTE. Bien, hay dos distribuciones del documento, en este caso la obligatoria, que es, esto va directamente por medio del servicio de impuesto interno a las casillas de intercambio, y la personalizada, que si ustedes tienen un campo personalizado, pueden mandarle a sus clientes el documento ya construido.
+- [14:23] Bien. Entonces, lo primero, el componente que se encuentra en la plataforma no requiere un servidor. Eso es lo más importante de la API, que puede ser integrado directamente hacia la web. Bien. El spool que tiene que enviar tiene que ser un tipo de XML. Bien. Y la estructura es nuestra. El buff también se lo vamos a entregar para que lo puedan construir.
+- [14:48] Bien. Respecto a los folios, aquí hay una pequeña, aquí hago un stop, porque dice que los folios se cargan directamente en la plataforma, pero esto ya no es así. Ahora ya trabajamos con folios automáticos. Bien. En QA es un poco difícil trabajar con esta funcionalidad, porque en QA dan muy poquitos folios. Entonces, ahí lo más probable, María Jesús, es que, por lo menos para QA, tengamos que cargar folios.
+- [15:14] Ya.
+- [15:46] Bien, aquí vamos a parar un poquito porque es lo que yo les he mostrado.
+- [15:51] Bien, aquí si se fijan, esto es una llamada por JSON.
+- [15:55] Hasta acá.
+- [15:57] Es una llamada por JSON, pero en el File Content siempre va el XML.
+- [16:03] Bien, eso para, en este caso, no confundir de que la llamada sea XML al 100%.
+- [16:09] Bien, bueno, y con eso ya pueden, en este caso, emitir el documento a través de API.
+- [16:16] Bien, Sergio. Pablo, consulta, la representación gráfica del documento, por ejemplo, el logo, sello de agua, imágenes en el pie del documento, ¿eso se configura, se carga directo en el portal de ustedes?
+- [16:33] ¿O también tienen API para, por ejemplo, subir el logo, subir el sello de agua en caso de que quisiéramos administrar esos cambios desde el ARB?
+- [16:42] No. El logo lo tienen que solicitar, sí o sí, porque es una integración a través de un base 64 que se realiza en el reporte. Lo que sí podemos dejar para que ustedes puedan administrar son los datos de la empresa. Por ejemplo, el nombre de la empresa, el giro, las direcciones, en caso de que ustedes la necesiten configurar.
+- [17:06] ¿Eso iría dentro del XML que mencionaste?
+- [17:09] Sí, de hecho van a los nodos, por ejemplo, el emisor, acá. Yo dejo que este nodo en el reporte, que este nodo muestre en la representación gráfica el nombre de la empresa.
+- [17:28] Entonces, cada vez que ustedes hagan un cambio aquí, se ve reflejado directamente en el PDF. Acá lo mismo, primer nombre corresponde al giro. Entonces, cada vez que ustedes cambien esto, se va a mostrar en el reporte el nuevo giro. Entonces, si ustedes tienen más dinámica para poder hacerlo.
+- [17:43] Bueno, en Iofacturo se trabaja con esta información en el portal. En el portal ustedes pueden modificar la información de la empresa. Bien, ahí se lo comentaré María cuando llegue su momento. Bien, entonces aquí lo mismo, sucursal, la casa matriz, en este caso, todo puede ir dinamizado en el reporte.
+- [18:07] Bien, bueno, como les comentaba, esta reunión, lo ideal es que sea semanal, ¿bien? No sé si tienen algún problema con eso.
+- [18:22] Pablo, yo tengo unas dudas. Lo que pasa es que no, no solo en la propuesta nos llegó que el gestor de folio 3.0 iba a ser automático, ¿es una vez que ya esté la app integrada?
+- [18:36] Como les comentaba, en CUA es un poquito difícil probar los folios automáticos, porque el servicio de impuesto interno da muy poco, da súper poquitos folios, y ocasiona que no funcione correctamente la administración de folios por parte del portal.
+- [18:56] Pero en productivo van a tener 100% el gestor de folios con los folios automáticos.
+- [19:01] No entiendo la diferencia entre el QA y el otro. Acá estaba discutiendo con dos personas contables.
+- [19:33] Funciona exactamente igual que el productivo, pero aquí nosotros hacemos las pruebas como si fueran documentos reales y una vez que estamos seguros de que todo funciona bien, pasamos al productivo. Esto lo hacemos para que no se afecten los procesos diarios del negocio.
+- [19:49] Ah, perfecto. O sea, deberían ser como el primer mes de prueba que estemos con el QAP y después ya productivo.
+- [19:58] Sí, sí.
+- [19:59] Ah, ya. Y con cinta, Pablo, ¿cuánto daríamos como el traspaso de la información que tenemos en Acepta para cargarla en GoSocket, para no perder la información histórica?
+- [20:12] Cuando ustedes la tengan disponible. Cuando ustedes la tengan disponible, yo voy a hacer la carga.
+- [20:17] Ya, ¿y qué necesitas para tenerla disponible?
+- [20:21] Ya, para hacer la carga, yo lo que necesito es que soliciten los documentos. ¿Cuántos documentos son aproximadamente?
+- [20:30] Son, yo creo que por AlmaWeb tienen que ser unos 1.200 y por ALM unos 6.000.
+- [20:41] Ya. Cuando vayan a solicitar los históricos, lo que por lo general lo que hacen las empresas de facturación es que cargan, los cargan así, a ver, para darle un ejemplo.
+- [20:55] Por ejemplo, toman el documento, ¿cierto? Y le entregan a ustedes un zip con todos los años y todos los meses, o sea, generan muchas carpetas. Lo que tienen que solicitar es que generen una sola carpeta que diga, por ejemplo, DTE o lo que sea realmente, pero que sea una sola carpeta y dentro estén todos los documentos.
+- [21:16] ¿Por qué? Porque a mí con esto me facilita el hecho de hacer una consulta.
+- [21:21] A mí cada carpetita que ustedes mandan es una consulta.
+- [21:24] Entonces, teniéndola todo junto, les puedo tener los documentos cargados cuando ustedes quieran.
+- [21:30] Perfecto. ¿Pero es igual, lo tengo que pedir por empresa o necesitas que esté todo en un solo documento?
+- [21:36] Puede ser por empresa.
+- [21:37] Puede ser por empresa. Dos, tres, hasta cuatro carpetas sería como lo ideal para que ustedes también guarden ese repositorio.
+- [21:46] ¿Bien? Pero por ejemplo, es que como por darle un ejemplo, me mandaron a mí un histórico hace como una semana de una empresa que eran nueve años y me estaban dividiendo en doce carpetas cada año. Entonces eran muchísimas carpetas que tenía que ver.
+- [22:02] Oye, Pablo, ¿y ahí estarían consolidados de compra y ventas?
+- [22:08] Los consolidados, si tienen consolidado, eso se ve con comercial.
+- [22:11] ¿Cuáles son los documentos emitidos dentro de ese directorio? ¿Están las ventas y las compras?
+- [22:19] Los documentos emitidos.
+- [22:22] ¿Sólo las ventas, entonces?
+- [22:24] Sí, sí.
+- [22:27] ¿También tienen recibidos?
+- [22:30] Sí, el histórico de cada compra igual lo necesitamos.
+- [22:33] No, entonces sí, son todos. Son todos los documentos que ustedes necesiten cargar.
+- [22:41] Ya, vamos a pedir entonces el histórico por ambas empresas y que lo entreguen por carpeta.
+- [22:46] Bien, sí. El tema de Iofacturo, Iofacturo no tiene QA. Bien, esto va directo a Productivo, ya que es una herramienta del portal y nosotros garantizamos que cumpla su funcionamiento. Bien, por ende, ahí incluso es mucho más fácil para que ustedes puedan iniciar con Iofacturo, ya que van a ir directo al Productivo.
+- [23:07] Ya.
+- [23:07] Bien, entonces, aquí es importante que nos puedan comentar, Sergio, cuándo ustedes podrían tener este documento, este archivo ya construido que se llama Spool de Integración.
+- [23:23] Mira, la verdad, para serte bien sincero, Pablo, yo ya tengo casi 12 años de conocimiento en la facturación extranjera, entonces yo creo que nos faltan algunos datos que estamos implementando en el ARP, pero yo creo que una semana o máximo dos semanas ya tendríamos el spool completo.
+- [23:44] Perfecto, perfecto.
+- [24:14] Ya, la voy a dejar ahí con la repetición para que vayamos conversando.
+- [24:18] Ahí, Pablo, le diré que si puedes agendarme a Carlos y a mí, ¿ya? En la red.
+- [24:27] ¿A Carlos Vallejo?
+- [24:29] Sí.
+- [24:30] Ya, perfecto. Sí, ahí lo agrego una vez que haga la repetición.
+- [24:35] Entonces, bueno, próximos pasos.
+- [24:37] María, nosotros tenemos que trabajar primero. Tú tienes el certificado digital del representante legal, ¿cierto?
+- [24:45] Sí.
+- [24:46] Ya. Vamos a tener que agendar otra reunión, lo ideal que sea para esta semana. No sé si tú puedes el jueves.
+- [24:56] Sí.
+- [24:58] ¿El jueves a las 12, por ejemplo?
+- [25:01] El jueves, déjame revisar el titular.
+- [25:04] Sí, sí, puedo a las 12.
+- [25:13] Bien, ¿qué es lo que vamos a hacer? Vamos a hacer todas las configuraciones del servicio impuesto interno en CUA, ¿bien? En CUA, porque el servicio también tiene su CUA. ¿Qué contempla esto? Las reglas de distribución para que cuando realice, en este caso, la emisión de documentos en CUA, Sergio pueda leer, en este caso, si es que tiene algún rechazo, el estado del rechazo, ¿bien? Y saber qué es lo que tiene que modificar.
+- [25:40] Y también lo otro que vamos a modificar, y si es que podemos, sacar folios, ¿bien? Sacar folios para dejar cargado al tiro el portal, ahí también te va a hacer una pequeña introducción al portal de pruebas.
+- [25:53] ¿Consulta a Pablo eso no interferiría en el uso de Acepta?
+- [25:56] ¿Acepta? No, no. Acepta actualmente está trabajando con el productivo. Entonces, si nosotros modificamos pruebas, que en este caso es el CUA, no hay correlación entre uno y otro. Son ambientes idénticos, pero totalmente separados.
+- [26:13] ¿Y entonces esos folios igual no quedarían como nulos ni perdidos en la atmósfera?
+- [26:18] No, lo que pasa es que los folios de productivo se diferencian de los de QA, porque cuando uno carga el CAF, dentro del CAF hay un nodo que se llama IDK, y el IDK indica el área.
+- [26:36] El IDK 300 es para productivo y el IDK 100 es para QA, y esto el servicio lo sabe.
+- [26:41] Entonces nosotros cuando sacamos folios de QA, sacamos solamente del IDK 100.
+- [26:44] No interferimos con los folios de productivos, son folios completamente independientes unos de otros.
+- [26:51] Ya, entiendo.
+- [26:55] Entonces, eso, vamos a trabajar con eso para que yo pueda integrarte al portal de QA.
+- [27:02] Les voy a enviar ahora un correo con todo el paquete para la implementación
+- [27:07] y además un Excel con la información de la empresa y el logo, si es que ustedes tienen.
+- [27:13] Si tienen alguna muestra de cómo quieren el documento también, para ello pueden trabajar en las representaciones gráficas, sería lo ideal, ¿bien? Por ejemplo, el logo a la izquierda o a la derecha, o si gustan también, me pueden entregar la información y yo hago un predeterminado para ver si es que les parece o no.
+- [27:29] Pablo, del correo que vas a enviar, supongo que ahí va a ir toda la documentación técnica de cómo integrar el servicio de envío, también con la seguridad o las credenciales que se van a trabajar.
+- [27:48] No sé si trabajas con todo, que la pique ahí. ¿Estas credenciales también nos servirían para el servicio que vamos a consumir para los documentos recibidos?
+- [27:58] Eh, uy, ahí, ahí me pillaste, eh, tienen recibidos en el, en el proyecto. Sí, las vamos a integrar tanto a las ventas como a las compras. Ya, o sea que, sí, la API aquí sirven para recibidos y para emitidos.
+- [28:17] Y en ese correo que nos vas a enviar, ¿nos puedes incluir la documentación para los métodos de los documentos recibidos?
+- [28:25] Sí, ahí en el paquete de documentos va a ir el manual del API, donde están todos los métodos, ahí les voy a indicar cuáles vamos a utilizar. Va el extracto de cada documento, un ejemplo, y también el GUF, el GUF para que en el caso de que no haya un nodo que ustedes necesiten utilizar, lo puedan construir de ahí.
+- [28:47] El bufe es súper sencillo, es un diccionario de datos donde muestra el XPAT del mapeo y el XPAT resultante, ¿bien? Del XML tributario. Y más que nada eso, ¿bien? Ahí, bueno, de todas formas, Sergio, si tiene algún inconveniente, me pueden contactar por Teams o me mandan un correíto y armamos una reunión.
+- [29:10] Perfecto.
+- [29:10] Fidel, Pablo.
+- [29:11] Ya, bien. Bueno, en la línea de tiempo, nosotros trabajamos en este caso con, primero, yo espero que ustedes nos entreguen, en este caso, el archivo de integración, y una vez que lo realizan, definimos pruebas, que son 15 días hábiles por lo general, para la totalidad de los bots.
+- [29:34] Bien. Esto quiere decir que una vez que ya ustedes emitan un documento en CUA, nosotros trabajamos en la adecuación. Bien. Luego de eso, tenemos 10 días hábiles más para la readecuación. En caso de que, por ejemplo, ustedes necesiten hacer alguna modificación en la representación gráfica o agregar un personalizado o agregar cosas pequeñas en el documento que no requieren una modificación tan grande en el esquema completo. Bien.
+- [30:02] Y una vez que ya se define que las pruebas están listas y ustedes están de acuerdo con todo lo que tienen que salir, salimos en este caso con el GoLive o la salida productiva.
+- [30:15] Esto quiere decir que tiene en este caso un seguimiento de 10 días hábiles por parte mía como implementador en caso de que tienen algún incidente, lo vemos directamente.
+- [30:24] Bien, una vez finalizado estos 10 días de GoLive, se cierra el proyecto. Yo le envío el acta de cierre y si ustedes tienen algún incidente, se tienen que contactar a través de soporte para la resolución de estos mismos.
+- [30:38] Bien, entonces, una vez que salimos a GoLive, ya no se pueden hacer más modificaciones, por lo que es importante que en las pruebas de red, adecuaciones, ustedes revisen que todo esté correcto.
+- [30:54] ¿Bien? Porque una vez saliendo a Productivo, yo no puedo hacer más modificaciones. ¿Bien? Y si las requieren, va a tener que ser una nota de venta aparte.
+- [31:02] Entonces, eso es súper importante. Tener todo súper, súper presente antes de la salida a Productivo. ¿Bien?
+- [31:10] Y eso más que nada, eso es la integración por API respecto a lo que es Iofacturo. María Jesús, ahí el jueves también lo vamos a revisar un poquito para que coordinemos cómo habilitarlo también.
+- [31:23] Bien, como ustedes ya tienen toda la certificación, si tienen el contrato firmado, podemos salir mucho más rápido que en otras implementaciones.
+- [31:34] Sí, tenemos el contrato firmado, de hecho lo enviamos la semana pasada.
+- [31:39] Ya, ahí lo voy a revisar, ahí lo voy a revisar, porque según mi seguimiento no está aún el contrato.
+- [31:45] Lo otro es que para Iofacturo necesitamos las casillas de intercambio. Eso sí puede interferir lo que es Acepta. Eso sí puede interferir un poquito porque si cambiamos las reglas, en este caso los correos, ellos van a estar sin recibir los documentos recibidos y sin poder ver los estados de los documentos.
+- [32:15] Entonces ahí tenemos que ver. Igual voy a consultar si es que podemos salir con un nido facturo sin esas dos cosas, para ver si es que nos permite o no.
+- [32:24] Pero consulta, Pablo, por ejemplo, si cambiamos la casilla de recibidos, igual nos van a empezar a quedar el tiro en GoSocket, ¿cierto?
+- [32:33] Sí, de hecho, ¿qué harían en GoSocket?
+- [32:36] Ya.
+- [32:37] ¿Qué harían en GoSocket?
+- [32:38] Ahí, Sergio, hay un tema también con los recibidos, que me acaba de recordar María. Los recibidos, en CUA, es medio complejo trabajarlos, ya que los recibidos es una consulta que ustedes realizan a través de otro método.
+- [32:55] Es súper simple el proceso. Ustedes lo leen y después los confirman. Confirman todo el listado de documentos recibidos. Esto se hace por lo general en productivo porque es un ambiente que ya de por sí es para solamente lectura el método. No sé si me doy a entender. Entonces, no sé si ustedes están de acuerdo con eso.
+- [33:23] No te entendí bien, Pablo.
+- [33:24] Ya, el método de recepción es solamente lectura, no hay modificación de los documentos. O sea, tomamos un método, lo emitimos, bien, generamos en este caso el consumo del método y traemos toda una lista de documentos que han sido recibidos desde una fecha hasta otra. Esto es solamente lectura, no hay modificación de información.
+- [33:46] ¿Incluso se puede volver a la aceptación comercial?
+- [33:51] Sí, la aceptación o reclamo, porque en la reunión que tuvimos que sí se podía hacer, por ejemplo, nosotros vamos a descargar el listado de los documentos recibidos, cierto, de un rango de fecha.
+- [34:06] Luego de eso, la idea es que desde la plataforma el usuario pueda aceptar o reclamar ese documento.
+- [34:14] Ya, desde la plataforma tú te refieres al ERP.
+- [34:18] Claro.
+- [34:20] Ya, perfecto, sí, sí, eso es otro método, también se puede realizar.
+- [34:23] Sí, se hace un método. Ustedes obtienen el dato, después con el Global Document ID consumen otro método y le indican el código de aceptación. Estos son los códigos de la DIAN. Creo que es el 032, 033, hasta el 036. Igual, de todas formas, en el manual está. Bien, para que también lo puedan revisar.
+- [34:42] Bien, bueno, ¿qué más queda pendiente? Les debo entonces el paquete de documentos para que los puedan revisar, ¿cierto? Y, bueno, María José, nos vemos el jueves en esta reunión. Importantísimo tener el certificado digital del representante legal.
+- [35:06] Ya, ningún problema.
+- [35:08] Bien, así que, bueno, eso sería todo por el momento. No sé si hay alguna otra duda o consulta.
+- [35:16] No, por mi lado no.
+- [35:17] Por mi lado no.
+- [35:18] Igual de todas formas es súper fácil integrarlo, no hay mucha complejidad.
+- [35:28] Así que igual, de todas formas, cualquier duda o consulta me la pueden hacer llegar por correo,
+- [35:33] y como les comentaba, también estoy en Teams, por si ahí siéntanse libres de hablarme por Teams en caso de que lo ocupen.
+- [35:41] Muchas gracias, Pablo.
+- [35:43] Bien, estimados.
+- [35:45] Que tengan buenas tardes.
+- [35:47] Igualmente, buenas tardes.
+- [35:48] Chao, chao.

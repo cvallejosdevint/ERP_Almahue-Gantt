@@ -1,0 +1,107 @@
+# 2026-08-05-gosocket-interna (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-08-05-gosocket-interna\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:03] Ahí sí, ahí se... sí, ahora sí.
+- [00:06] Yo lo que digo, por ejemplo, esta es BAC-ERP y este sería API, estructuración electrónica, que esta, y acá, te diría, el gozo.
+- [00:30] Entonces, ¿cuál es mi idea? Por ejemplo, desde el front se va al BAC, ¿cierto?
+- [00:34] Claro.
+- [00:34] Y este, este, bueno, va a tener aquí BD.
+- [00:38] Claro.
+- [00:39] Va hacia abajo, ¿cierto?
+- [00:40] Ya, se va para allá. Lo primero que va a hacer es registrar la petición.
+- [00:45] Exacto.
+- [00:47] Y luego de esto, este one le va a devolver, y este back se va a encargar de llamar a la APFE, ¿cierto? Con el JSON.
+- [00:57] Y con el nombre del facturador, pues, para decirle cuál va a tirar, que en este caso sería GoSocket.
+- [01:04] JSON y palma. ¿Ya?
+- [01:08] Vale.
+- [01:08] Eso lo enviaría. Y acá a este huevón le voy a enviar el XML, ¿cierto? Exacto. Entonces, este huevón va a devolver y debería ser como la respuesta de esta petición, que también actualiza la base de datos, ¿cachái? Y aquí, después que actualiza la base de datos, tiene la última respuesta, ¿cierto? ¿Me entendí? Sí, sí, ahí te entendí mejor.
+- [01:34] Porque este igual, este sí, este tiene que manejar acá un lock, un lock del servicio, del API, un lock del API. Nada más que eso, un lock, para ver qué es lo que llegó, cachái, monitoreo.
+- [01:49] Pero en sí, este wonk no se conecta a base de datos, nada.
+- [01:53] Vale. En ese caso, Sergio, ¿esa API viviría igual dentro del Mac del ERP o tendríamos que dejarlo en un proyecto aparte?
+- [02:04] No, este es un proyecto aparte.
+- [02:05] Aparte. Vale.
+- [02:06] Todo como un servicio totalmente aparte.
+- [02:09] Vale, entonces
+- [02:10] sí serían
+- [02:11] a nivel de lo que vendría a ser
+- [02:15] AlmaWeb, sería
+- [02:16] desde el front pasa al back,
+- [02:19] ahí serían los dos proyectos propios
+- [02:21] de AlmaWeb, del back registra
+- [02:23] la ABD que también sería parte de AlmaWeb
+- [02:25] y ahí pasaría a este proyecto que me imagino
+- [02:27] que también va a servir para los demás RP
+- [02:28] conectarse a él como
+- [02:30] un proyecto intermedio entre GoSocket y los
+- [02:33] CRP, ¿verdad?
+- [02:35] Exacto.
+- [02:35] Vale.
+- [02:36] Este WAN tiene que tener APK y una SIGMA.
+- [02:39] Sí, pues sí, supongo que es un sistema de seguridad porque va a tener interacción con otros sistemas que van a consultarlo.
+- [02:46] Claro.
+- [02:47] Entonces, ¿cuál es mi idea? Que después esto se convierta así.
+- [02:50] No sé, en el futuro va a haber otro WAN.
+- [02:53] No, está entero bueno.
+- [02:56] Aquí va a ser, entonces, pues, DT-MIT.
+- [02:58] Sí.
+- [02:59] ¿Entendés?
+- [03:01] Esa es la idea.
+- [03:01] Ya, no, acá, hoy día, mira, como ya con el tema de lo que vendría a ser AlmaWeb, prácticamente al fin y al cabo, el feedback, bueno, apliqué el de la reunión pasada, faltaría ya después el de la marcha blanca que tendríamos que tener con ello, así que voy a hacer la conexión, voy a hacer este proyecto de la API, hacer la conexión con el bug de RP y empezar a hacer pruebas.
+- [03:24] Ya, aparte mañana tenemos la REU, pero no, voy a...
+- [03:28] Hay que ver porque mañana tenían también la reunión con GoSocket.
+- [03:33] ¿Ellos?
+- [03:33] Sí, no sé si te cachaste en la reunión que estaban coordinando para este jueves la reunión con María El Pablo.
+- [03:47] Ya, entonces, ahí lo que... Bueno, mañana yo tengo reunión de 9 y media a 10 con AlmaWeb, pero AlmaWeb Market.
+- [03:54] Sí.
+- [03:54] Con la PP.
+- [03:56] Y, Carlos, mañana te puse una reunión a las 10 de la mañana.
+- [03:59] Eso estaba viendo, sí.
+- [04:01] Necesitamos de tu ayuda, Juan.
+- [04:03] Cuénteme, ¿quién necesita?
+- [04:04] Lo que pasa es que llegó un cliente de BND, el primero.
+- [04:08] ¡Eso!
+- [04:09] Y hay que hacerle una capacitación.
+- [04:12] ¿De qué?
+- [04:14] Del portal de BND.
+- [04:16] Ya.
+- [04:17] Entonces, puto, el Diego se fue de vacaciones.
+- [04:20] Sí, pues sí.
+- [04:21] Entonces está hasta la recacha con Pegas, de Demite y AlmaWeb la presentación mañana.
+- [04:27] Entonces está re complicado para hacer la demo mañana.
+- [04:30] Entonces, a ver si me podía apoyar con eso.
+- [04:32] Porque yo después de esa reunión, a las 10 tengo otra, la de AlmaWeb.
+- [05:02] En la capacitación es lo más fácil del mundo, Sergio. Voy grabando, igual dejo todo grabado, y en caso de que se me olvide algo, lo agendamos para una segunda reunión, pues si no, no hay atado.
+- [05:13] Ya, bacán, genial. El cliente es medio re hueveado, es informático, es loco, y dice, ah, yo soy informático, yo sé todo lo que usted hace. Así que no le prestemos mucha oreja.
+- [05:24] Ya.
+- [05:44] Ya.
+- [05:44] Sí, no, no hay ningún problema.
+- [05:47] Ya, vale.
+- [05:48] Oye, Carlos, entonces, puta, trata de solucionar el tema de la base.
+- [05:50] Entonces, bueno, el tema del diseño, de las cotizaciones, la orden de compra, está bueno.
+- [05:56] Lo que ahora después hay que trabajar es el tema del balance.
+- [06:00] Vale.
+- [06:00] Parece que la María Jesús ya te mandó eso.
+- [06:03] Sí, creo que acá lo tengo en el trelo.
+- [06:06] Ya, entonces eso hay que también avanzarlo.
+- [06:10] ¿Ya?
+- [06:11] Mira, me borraste el historial de navegación.
+- [06:16] ¿Qué?
+- [06:16] Me borró el historial de navegación.
+- [06:18] No tengo trueno, como que nunca ha visto el trueno Sergio, nunca ha trabajado.
+- [06:26] Oye, a través te hablé con Mario ayer, que es Mario Villo, que es como el líder del proyecto, y él ayer volvió de vacaciones, así que se juntó con María Jesús para ver el avance del proyecto y la loca dijo, no, que vamos, súper, súper bien.
+- [06:43] Buena, bacán, bacán, bacán, bacán, bacán.
+- [06:45] Así que hay que seguir ese mismo ritmo. Yo le dije, ¿sabes qué, Mario? Aquí a la quincena de septiembre ya nosotros ya vamos a tener todo listo, todo terminado, todo listo. Y en octubre la idea es que vamos a estar ahí por allá para hacer el cierre del proyecto.
+- [07:04] Estos locos, ¿dónde están? ¿En Rancagua?
+- [07:08] Rancagua, Rengo, algo así se llama.
+- [07:10] Vale.
+- [07:11] Así que yo creo que voy a coordinar y, puta, ahí te paso a buscar y nos vamos ya a los clientes.
+- [07:18] Llevamos palet, llevamos palet, que den harta fruta nomás.
+- [07:21] Nada más, llevo billetera, guay, pensando en proyectos.
+- [07:27] Eso, eso.
+- [07:30] Ya, ya, Carlos, me voy a traer, guay.
+- [07:32] Ya, viejito.
+- [07:32] Bueno, avísame, por favor, cómo te va con el tema de la base de datos. Vale. Bueno, de mañana. Bueno, ah, habla con María Jesús, dile que si podés agendar para mañana, pero en la tarde, güey. Vale. Ya, por último, tíralo como a veces a ver mi calendario cómo está.

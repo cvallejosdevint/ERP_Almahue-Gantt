@@ -1,0 +1,96 @@
+# 2026-08-25-kickoff-gosocket (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-08-25-kickoff-gosocket\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:38] Acceso a GoSocket, que sabes que no, me deja entrar con las líneas anteriores.
+- [00:43] Ya.
+- [00:45] Es el... este.
+- [00:47] Hola.
+- [00:48] Buenas tardes, Carlos, ¿cómo estás?
+- [00:52] Todo bien, todo bien.
+- [00:56] Y ahí está oficina...
+- [00:59] Contamatos, ya está. Hay dos certificados cargados en Almahuexport.
+- [01:02] Sí.
+- [01:04] Y...
+- [01:06] Service.
+- [01:11] Y en ALM solo uno.
+- [01:16] Ya, creería que están correctos.
+- [01:18] Eh, tienen que validar igual que el owner de cada certificado, usted como firmante en el servicio.
+- [01:33] Sí, creería que está todo correcto.
+- [01:50] ¿Sí?
+- [01:50] Nicolás Andrés, Villela, La Reina.
+- [01:58] Sí, LDLM.
+- [02:00] Ya.
+- [02:03] Sí, sí, está todo correcto.
+- [02:05] Veo todo correcto.
+- [02:20] Consulta, Paula, ¿dónde puedo revisar si están como firmante en el servicio?
+- [02:23] ¿En qué sitio? En la pantalla de usuarios, pero de Cuba. Si gustas, me muestras pantalla y te guío para que vayamos a verlo.
+- [02:35] Ya. ¿Ahí se está viendo? Sí. Sí. Ya. Servicio. Sí. Servicio online, factura electrónica, sistema de facturación de mercado, menú postulantes, ambiente de certificación.
+- [03:14] Y vamos a bajar a la que dice actualización de datos de empresa autorizada.
+- [03:21] Ahí está la mantención de usuarios.
+- [03:44] Tiene que estar el firmante de ustedes en CUA, también tiene que estar Janet Lara, que es la segunda.
+- [03:52] Bien. El primero que es Leury, también es un usuario nuestro, él no actúa como firmante, pero en el caso que necesitemos hacer alguna certificación o algo por el estilo, enviando el servicio, él es nuestro certificador. Bien. Entonces, ideal que en ambas empresas esté Janet y Nicolás. Creo que lo habíamos dejado, eso sí...
+- [04:13] Sí, lo habían dejado, pero mi duda era con AlmaWeb, con el certificado de Don Pablo, porque yo quería que fuera Nico, pero por lo que vi, Don Pablo nomás está autorizado para solicitar folios.
+- [04:27] Ya, ahí tienen que tener ojo igual, porque Nicolás no tiene los permisos, está solamente con administrador, pero no tiene los permisos para solicitar ni anular nada. Tienen que darle los permisos.
+- [04:41] Acá lo pongo como...
+- [05:32] Lo importante es que esté o no bien el documento, eso ya ustedes lo van configurando más adelante, pero lo importante es que tengamos primero la confirmación de que el gestor está entregando el folio.
+- [06:06] Revisé la mantención de usuarios de AlmaWeb y no me aparecen los que habían configurado.
+- [06:16] ¿Cómo? ¿Cómo? Perdón.
+- [06:18] Estoy revisando la mantención de usuarios de AlmaWeb.
+- [06:24] ¿Pero AlmaWeb Export o Service?
+- [06:26] AlmaWebExport, en el servicio impuesto interno, y no más, pero esos son los que habíamos configurado.
+- [06:37] Muestra mi pantalla nuevamente.
+- [06:39] Voy.
+- [07:01] Déjame ver algo.
+- [07:02] Claro, nos falta Geneti.
+- [07:03] Aquí tengo una web.
+- [07:06] Porque nosotros lo habíamos hecho con el certificado de Nico.
+- [07:08] Vamos a ver los certificados.
+- [07:26] Igual, ahí María, igual no tiene importancia con qué certificado se realice, o sea, lo importante es tener el acceso simplemente.
+- [07:58] Mira, por ejemplo acá, ingresé con el certificado digital de Nicolás, y con el de Nicolás me aparece la mantención de usuario autorizado, que me aparece...
+- [08:11] Pero, estás viendo export.
+- [08:13] En AlmaWeb export.
+- [08:15] Sí, nos falta en Service, en Export ya hablábamos.
+- [08:19] No, en LMS Cava, fue el primero que vimos.
+- [08:25] ¿Estás 100% segura? Revisemos el otro route.
+- [08:30] En este, en AlmaWeb, yo no tengo Nicolás, ¿lo agrego?
+- [08:34] Sí, sí, tienes que agregarlo.
+- [08:36] Igual, es que por eso te comento, el certificado que esté cargado en el portal de GoSocket puede ser cualquier certificado, incluso el tuyo, por ejemplo.
+- [08:46] Ah, perfecto.
+- [09:16] Un solo usuario firmante.
+- [10:54] Hola, Sergio.
+- [13:29] ¿Exporto o service? Exporto.
+- [13:49] Consulta a Carlos, ustedes agregaron ya el Biller ID, ¿cierto?
+- [14:11] No, tengo un documento.
+- [14:15] ¿Puedes mostrarme el request? O sea, perdón, el response de la API, porfis, porque ahí llega el Global Document ID.
+- [14:23] Lo necesito para hacer esa búsqueda.
+- [14:42] Sí, sí.
+- [14:49] De hecho, no veo que se haya consumido un folio.
+- [14:54] Igual no te preocupes, mira, lo ideal primero es validar el request, o sea, perdón, el response. ¿Por qué? Porque se te entrega el Global Document ID positivo, o sea, cualquier Global Document ID que no sea el 0000-000 significa que tú tienes un documento válido, independiente de que esté rechazado o no.
+- [16:00] Bien, entonces, si tú envías, recibes un 200 con problema de esquema, no te va a asignar folios, pero si te entrega un Global Document ID 000, es porque tienes un problema de esquema.
+- [16:15] Bien, esto lo dejo claro porque la API, por lo general, no rechaza, no es común que la API rechace documentos, salvo unos pequeños casos que son de lectura del documento.
+- [16:26] Bien, porque no existe en este caso la estructura de que puedas leerlo a lápiz. En eso te lo puedes rechazar y cuando hay falta de folios. Entonces, si tú recibes Global Document ID, ya sabemos que el portal no está entregando folios.
+- [16:41] Entonces, claro, sí, sí, sí, sí, ahí lo ideal es que emitan el documento, independiente de que salga o no, bien, el response, lo ideal es que me lo manden por correo para yo poder validar qué es lo que pasó, si es que hay algún flujo que no se está generando.
+- [17:32] Habíamos quedado en que íbamos a hacer todo este proceso en Almago Export, pero finalmente con María habilitamos los dos ambientes, así que cualquiera de los dos está disponible para que lo pueda hacer.
+- [17:43] Yo les pasé la API key de AlmaWebService por correo también, se los pasé hoy en la mañana.
+- [17:50] Ya, ahí para que hagan el switch en el caso de que quieran probar también Service.
+- [17:57] Consulta, lo que pasa es que vimos el correo del archivo que se juntó en la primera carga de folio.
+- [18:06] Y es ALM Service o AlmaWebExport, para que no se confundan.
+- [18:11] Yo lo, o sea, yo pensé que los dos se llamaban AlmaWeb, yo lo diferenciaba con Export y Service.
+- [18:21] No, es ALM Service y AlmaWeb Export.
+- [18:25] Bueno, por eso, por eso, yo lo trataba así como Service y Export, pero, porque igual finalmente las dos son AlmaWeb, entonces yo la intento diferenciar de esa manera.
+- [18:35] Bien, así que bueno, quedaría solamente eso. Igual, Carlos, si necesitas algún apoyo o algo, también me puedes escribir por Teams. Ahí también nos podemos comunicar. Perfecto. Bien, entonces, bueno, quedo a la espera. Bien, y cualquier duda o consulta, ahí voy a estar atento a cualquier cosita.
+- [19:09] Pablo, consulta, una vez que nosotros firmemos el contrato, ¿te adjuntamos en la confirmación?
+- [19:15] ¿Y el contrato?
+- [19:45] Y bueno, respecto a Iofacturo, podríamos hacer la habilitación, yo creo que en una semana menos, bien, para que ustedes lo puedan probar. Así que ahí nos quedaría pendiente una red, María, para igual comentarle acerca de esto.
+- [20:04] Ya, buenísimo.
+- [20:05] No recuerdo, hicimos capacitación, ¿o no?
+- [20:08] No, no hemos hecho capacitación.
+- [20:09] No, ya perfecto. Igual, de todas formas, el aplicativo es súper amigable y es súper intuitivo. Es muy parecido al portal gratuito, al servicio impuesto interno. Entonces, tampoco, yo creo que más que una capacitación, va a ser como una inducción a que lo puedan ocupar.
+- [20:30] Buenísimo.
+- [20:31] Bien, así que eso. Eso por el momento, por mi parte.
+- [20:37] Por mi parte, igual.
+- [20:42] Ok.

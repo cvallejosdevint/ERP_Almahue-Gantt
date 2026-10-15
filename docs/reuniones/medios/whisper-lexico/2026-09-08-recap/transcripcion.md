@@ -1,0 +1,159 @@
+# 2026-09-08-recap (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-08-recap\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:22] Don Carlos. ¿Cómo estáis Sergio? Puta, aquí he vuelto loco, huevón. ¿Qué hora es? Va a ser la una de la tarde, huevón. Todavía no puedo pararme. Ya, maldito. ¿Cómo les fue?
+- [00:32] Ahí entregaron el maldito spool, supuestamente, ahora lo estaba revisando, y claro, ahí lo entregaron para la factura internacional, por lo que dijo el Pablo, el mismo tendríamos que utilizar para lo que vendrían a ser las notas de crédito y débito referentes, solamente que tenemos que validar bien con María Jesús.
+- [00:50] ¿Cuáles son los datos de aduana que ellos están enviando? Porque por cliente no se envían igual.
+- [00:55] Le pregunté a María Jesús y me dijo que lo revisara las facturas que ella había mandado, así que tengo que darle esa revisión, porque esas facturas que no son facturas reales.
+- [01:06] Y bueno, fue eso más que nada con GoSocket. Aproveché la reunión de mostrarle a María Jesús el módulo de ventas, como te había dicho.
+- [01:16] Y del módulo de ventas, solamente me hizo esos dos alcances que te mandé. Uno, que había dejado la asociación del centro de costos para la factura en general, y tiene que ser por ítem, que eso lo voy a corregir ahora.
+- [01:31] Y el tema de ALM, que ALM, como es una empresa que sí vende productos, porque me decía que la empresa AlmaWeb, como vende frutas, no se devuelve nada. Nada vuelve. Pero en la otra, si ahí tiene que hacerse reintegración de stock en bodega cuando se hace alguna modificación de alguna factura y los clientes lo devuelven, sí se tiene que reintegrarse stock. Pero fuera de eso, dijo que está todo bien.
+- [01:57] Buenísimo.
+- [01:57] También le, al tiro le pasé el cacho de Trello, le dije, porque justo en la mañana, ayer no lo hice, lo hice hoy día en la mañana, actualicé el Trello con todas las de ventas que habíamos hecho, que ya están listas, fuera de ese pequeño lance que me hizo en la reunión, le dije que necesitábamos de que nos hiciera los comentarios por ahí, y de que por último, si es que estaba todo bien, que la fuera pasando aprobado, para que nosotros nos vayamos despejando de despegabo.
+- [02:21] ¿Qué más? ¿Qué más? ¿Qué más? El 17 no va a estar esa semana, se va de vacaciones dos semanas la Mario.
+- [02:33] Chucha.
+- [02:34] Así que dijo que la reunión ahí la íbamos a tener que empezar a tomar con Mario y con Lupe lo más probable.
+- [02:39] Así que esta reunión del jueves lo que deberíamos aprovechar es de hacer una muestra de otras cosas.
+- [02:47] Nosotros podríamos hacer, por ejemplo, que habíamos dicho de contabilizar, podríamos aprovechar esa reunión para mostrar contabilizar, y dijo que el martes 15, que vendría a ser el próximo martes, el último día que ella podría estar, podríamos hacer una reunión intermedia con ella, yo le dije que la idea sería como aprovechar esa reunión de lo que hablemos este jueves y de lo que nos vayan a dar este jueves de feedback, junto con lo que nos van a dar del trelo, nosotros ese día taparla en pregunta y llegar a acuerdos.
+- [03:17] Entonces, esa reunión deberíamos hacerla para mañana.
+- [03:29] ¿Cómo para mañana?
+- [03:30] Yo adelantaría la reunión para mañana.
+- [03:33] La del jueves la adelanto para mañana.
+- [03:36] ¿Cachái?
+- [03:36] A ver si tienen disponibilidad ellos mañana.
+- [03:38] ¿Por qué? Porque así tienes miércoles, jueves completo.
+- [03:42] O sea, miércoles parte del miércoles, ¿cierto?
+- [03:45] Jueves completo, viernes completo y lunes.
+- [03:48] ¿Cierto?
+- [03:48] Tenís cuatro días para avanzar lo que se defina mañana.
+- [03:51] Vale, sí, pero ahí te pediría que hoy día tengamos que hacer una revisión entre los dos de ese módulo antes de mostrarlo mañana, po.
+- [04:00] ¿El cuál módulo?
+- [04:02] Del de contabilizar, po.
+- [04:09] Contabilizar, bien.
+- [04:10] Porque en sí lo que es un módulo de venta ya dio el visto bueno de que está bien aparte de esos dos alcances, po, cachái.
+- [04:18] Oh, claro.
+- [04:26] Cosa de llegar a la reunión, por ejemplo, llegar a la reunión ya con tus correcciones, po, cachái.
+- [04:30] ¿Ya? O sea, entonces, ¿y creéis que podamos, no, contabilizar? Y aparte tenéis que crear el mantenedor. ¿El mantenedor de centro de costo lo tienes?
+- [04:44] ¿Mantenedor de centro de costos? Creo que no. Creo que, o sea, tengo para crear los centros de costos solamente, pero como un mantenedor como tal, no.
+- [04:53] Es un mantenedor, pues. Crea el centro de costos y después podés dictarlo, ¿no?
+- [04:57] Sí, sí. De hecho, lo tengo... Mira, te lo muestro aquí rapidito para compartir pantalla. ¿Se ve cierto?
+- [05:07] Sí, espérame, déjame mandar una amiga a José que me está mandando una pregunta. José. Bueno, claro. Cortito, cortito, José, cortito. Sí, sí, cortito, gusta corto, como te gusta. Oye, tengo un tema. ¿Viste que estaba haciendo el caso de la descripción larga el otro día? Ya, sí. Ya lo hice, lo pasamos a producción. Funciona.
+- [06:15] Pero el tema es que el pato me comentó que hay varios clientes que tienen en el campo nombre y descripción del producto lo mismo, entonces a esos clientes se les va a empezar a duplicar en el PDF, les va a empezar a llegar mucho ese caso a soporte.
+- [06:30] Pero en teoría el cambio que hicimos está bueno, porque ahora en el XML sí se contemplan los dos campos.
+- [06:37] Lo dejamos así y que los cabros se tengan que mamar nomás si tienen que editar a un Jasper, o no.
+- [06:45] ¿Y no podías validar cuando cargué el producto que si es lo mismo el nombre con la descripción cargue solo el nombre?
+- [06:53] Sí, sí, se puede hacer.
+- [06:55] Eso, y la descripción la guardé después como en una nomás, o no la consideraría en la inserción.
+- [07:00] ¿Ahí no se va a mandar el XML, chico?
+- [07:03] No, mientras la llene, ahí sí, chico.
+- [07:07] Ya, ok.
+- [07:09] ¿Sí? ¿Se entiende?
+- [07:11] Sí.
+- [07:12] Ya, vale.
+- [07:13] Eso, ya.
+- [07:14] Vale, chau.
+- [07:15] Que les vaya bien.
+- [07:15] Vale, vale.
+- [07:16] Igual, chau.
+- [07:19] Ya, estos son los centros de costo, ¿cierto?
+- [07:22] Yes.
+- [07:23] Perfecto. Código ya encargado, estado ya, ok.
+- [07:27] Entonces, ahí cuando, ahora lo que te dice María Jesús, la contabilización, o sea, el flujo de la orden de venta, ¿cómo le pareció?
+- [07:34] Sí, dijo que estaba todo bien, súper bien.
+- [07:36] Ah, y eso se me fue a preguntarle a la María Jesús, pero igual no sé si es que le había preguntado a ella.
+- [07:41] Lo que también te había preguntado por WhatsApp, de qué pasa, por ejemplo, con la...
+- [07:46] ¿Qué? ¿Qué pasa con la anulación? ¿Sobre qué? ¿Sobre la contabilización?
+- [07:54] Sí, mira acá, te lo había mandado para que no mentiste.
+- [07:56] Que en este caso, por ejemplo, yo anulé esta factura a la 69.
+- [08:00] ¿Ya?
+- [08:01] Ya la anulé.
+- [08:03] ¿Ya? ¿Sí? ¿Perfecto?
+- [08:04] Cachái, aquí está la nota de crédito.
+- [08:05] ¿Tengo que hacer algo con este registro? ¿Tengo que ponerle que fue anulado?
+- [08:09] Sí, ese tenéis que dejarlo como anulado. Y, por ejemplo, la opción de anular de nuevo ya desaparece, porque está anulado. ¿Me explico? Y la nota de crédito tiene que estar como conectado.
+- [08:24] ¿Cómo conectado? ¿Aló? Pensaba que estabas escribiendo nada. Y hay que dejar la nota de crédito con que se pueda enlazar a la factura, ¿cachái? Como que está enlazada, en realidad, no que se pueda.
+- [08:45] En ese caso, ¿cómo sería visualmente ese enlace, Sergio? Porque aquí, por ejemplo, no le tengo nada. Si te das cuenta, ya hay un campo que es origen cadena.
+- [09:00] Y aquí debería ponerle anulado en tanto.
+- [09:06] Claro, sí. O, puta, es que en realidad para mí el anulado, por ejemplo, si está aceptado ese I, puta, ¿cómo lo puedo...? Sí, déjalo así, como decís tú.
+- [09:18] O genera una propuesta, como se te ocurre.
+- [09:21] Vale.
+- [09:22] Pero sí que diga anulado y que aparezca el folio con el link, cachái, que sea link del folio.
+- [09:28] Sí, y aquí el estado también anulado.
+- [09:31] No sé si el estado anulado, eso que estaba pensando, porque en realidad esa nota de crédito, esa factura fue aceptada por el SII, ¿cierto?
+- [09:38] Sí, sí.
+- [09:40] Yo le agregaría bajito un estado que diga...
+- [09:43] Por ejemplo, acá, este, por ejemplo, origen cadena, está perfecto para ponerle anulado en NC, número tanto, y listo, y le borramos las acciones nomás para que se entienda que ese ya no es válido, solamente, ah, y eso, porque ese está todavía por contabilizar y fue anulado, el por contabilizar entiendo que igual tiene que ir, porque se tiene que ir asociando a un lado, entonces dejarle acá contabilizado, y el de acá dejarle en la cadena, ese actualizaciones.
+- [10:09] Claro, y en realidad las funciones del anulado solamente no se podría el botón anular de nuevo, ¿no va?
+- [10:16] Claro, ese y este porque es el de contabilizar, ¿cachái? Solamente que ese y ese es lo mismo.
+- [10:23] Entonces hay que sacarlo, ese hay que sacarlo, ese.
+- [10:26] Ya, ya.
+- [10:28] ¿Sí?
+- [10:28] Y ahí queda.
+- [11:00] Pero ese texto por contabilidad, o sea, no sea un botón, sino que sea como dice aceptado CI, pero arribita dice por contabilizar, o contabilizado, cachái.
+- [11:09] Vale, sí, sí. Y ya con eso tendríamos la cadena. Oye, aparte de eso, porque igual quizás se me escape, hay alguna como de estas otras asociaciones, porque si te dais cuenta, cuando hago nota de crédito o nota de débito, se hace la cadena acá y ya queda claro más o menos lo que se hace.
+- [11:24] Entonces, las facturas, cuando se haga una modificación, también tendría que salir acá que está asociado a la nota de débito tanto, ¿cierto?
+- [11:33] Y, por ejemplo, si son más de una modificación, ¿podría colocar acá como un historial?
+- [11:39] Ah, claro, sí. Porque puede ser que, por ejemplo, tú puedas, una factura, no sé, de mil millones, y puedas corregir tres veces un monto, ¿cachái?
+- [11:48] Sí, posible. Y ahí se va a llenar el choclón ahí de texto.
+- [11:51] Sí, ahí sería bueno, por ejemplo, si son muchos, dejarle como, no sé, NC o más, no sé, en vez de acumular la presentación.
+- [12:03] Dejar la última modificación y un más que te muestre las que estaban antes.
+- [12:07] Claro, que te leaste como un modal, las tres referencias.
+- [12:10] Sí.
+- [12:11] ¿Ya? Sí, me parece bien.
+- [12:12] Ya eso me tinca, y así también dejamos limpio esto, porque por ejemplo, en sí igual, si es que no tenéis filtro, te va a salir aquí todo el choclón, pero por ejemplo aquí los filtros, si queréis ver la nota de crédito, nota de débito, ahora aquí hay harto registro, me ha funcionado caleta, caleta, caleta.
+- [12:28] Buenísimo. Oye, pero quedó contenta la María Jesús?
+- [12:31] No me dijo nada. Esperaba que me dijera algo más y solamente me hizo esos alcances. Por ejemplo, el libro de guías, que la guía de despacho no lo he metido a mente, no se lo mostré. Lo dejé solamente ahí en el trelo. Ah, y eso es lo otro, Sergio, porque mira, acá en la emisión de DTE tengo estos botoncitos igual para emitir este tipo de documentos.
+- [12:52] Y mi duda es, por ejemplo, acá, yo por lo que tenía hecho, de que acá te apareciera el documento de referencia, que esto creo que te lo había dicho. Y acá, si en caso de que no existiera, está la opción también del registro manual.
+- [13:08] Sí, está bien.
+- [13:09] Está bien que estos botoncitos entonces también estén acá, ¿cierto? Para ese fin. Porque aquí sería la emisión de los documentos como tal.
+- [13:18] A mí me gustaría que estuvieran más arriba, huevón.
+- [13:20] Acá, ¿cierto?
+- [13:22] No sé si ahí, pero por ejemplo, donde dice el buscador, a checar un poquito más el buscador, cachái, y a lo mejor el actualizar que sea otro color, o no sé, pero ¿qué es lo que pasa? Porque si esta grilla crece, los botones se van a ir al final.
+- [13:37] Sí, totalmente, sí, tienes razón, los voy a tirar para arriba entonces. Y eso también te va a consultar qué chucha es una guía de despacho.
+- [13:47] Es como una factura, pero en realidad esa no se va a tu libro de venta, no se lo quitan como venta al servicio de puestos internos, pero sí es un documento tributario con el cual tú puedes transportar mercadería, ¿cachái? Por ejemplo, yo estoy en Serena, ¿cierto?
+- [14:05] Sí, sí, sí.
+- [14:06] Y yo te mando, te cargo un camión de puros computadores.
+- [14:13] Ah, están vendiendo...
+- [14:14] Se escucha, puta la hueá, pensé que no se escuchaba.
+- [14:18] Entonces, yo te emito una guía de despacho, pero puede ser porque es traslado entre bodegas, puede ser que tú estés encargado de la bodega de Santiago, y yo estoy moviendo la mercadería desde acá hacia Santiago, ¿cierto?
+- [14:34] Pero yo tengo que emitirte una guía de despacho para que, en caso de fiscalización, el transportista presente esa guía de despacho y sepa que toda esa mercadería que lleva ahí no constituye venta y es un traslado de tres bodegas.
+- [14:53] Vale, entonces por eso está esta opción de tener solamente el libro de las guías, porque aquí es donde se van administrando ellas al ser como un documento como aparte, como para interno de la empresa.
+- [15:07] Claro, hay veces que la guía sí mueve stock, otras veces que no mueve stock, entonces...
+- [15:17] Y este igual tendría que entonces tener interacción con las bodegas por hacer traslado.
+- [15:23] Claro, así es. Pero eso hay que validarlo con la María Jesús. Pero esas dudas tenéis que anótalas y se las mandáis al grupo de WhatsApp o a Uncarepal.
+- [15:35] Vale.
+- [15:37] Ahora, volviendo al tema del centro de costo. El centro de costo se va a agregar al contabilizar, ¿cierto? ¿O en la emisión directa?
+- [15:48] Contabilizar.
+- [15:50] ¿Y en la emisión qué hay que hacer con la cuenta?
+- [15:53] Eh, no, no, me dijo que al momento de contabilizar había que hacerlo en esta parte de acá, se tiene que agregar aquí al ladito el centro de costo.
+- [16:00] O sea, entonces, ¿la emisión hay que sacar la cuenta contable?
+- [16:06] Es que no está en la emisión.
+- [16:08] Sí, po, si tú lo tenías ahí, pues, en la emisión.
+- [16:12] ¿O no? ¿Lo sacaste?
+- [16:14] Sí, po, si eso habíamos quedado, po.
+- [16:16] Ah, pero lo sacaste de órdenes de venta, acuérdate.
+- [16:18] Lo sacaste en órdenes de venta, pero en la emisión de DTE también lo sacaste?
+- [16:22] Sí.
+- [16:23] Ah, ya, ok.
+- [16:25] ¿Entonces sí que Alma ha ordenado al momento de ello realizarlo?
+- [16:30] Ok, sí, me parece bien.
+- [16:32] María Jesús me dijo que al momento, por ejemplo, me dijo, sí, mira, eso tú podías agregarlo en las órdenes de venta, el centro de costo y también la cuenta.
+- [16:41] La cuenta.
+- [16:42] Pero ella prefería de que se hiciera acá.
+- [16:48] Ya.
+- [16:54] ¿Ya? Ok.
+- [16:55] Entonces, ya, voy a formalizar ese pequeño ajuste, mandar para que en el correo vean el trelo y la duda que tengo de lo que vendría a ser la guía de despacho.
+- [17:08] Sí, y bueno, tenéis que ahora agregar entonces el centro de costo, hacer los ajustes del libro de venta, los enlaces, ¿cierto? Y el tema de la contabilización, no adelantar la cuenta mayor y también el centro de costo.
+- [17:20] Yes.
+- [17:21] Perfecto, buenísimo.
+- [17:23] Eso, perrito, no le quito más tiempo y cualquier cosita le pregunto.
+- [17:27] Ya, me voy avisando, por lento.
+- [17:29] Ya me reí.
+- [17:30] Ya me reí.
+- [17:31] Muchas gracias.
+- [17:32] A usted hablamos, chau chau.
+- [17:33] Hablamos, chau chau.

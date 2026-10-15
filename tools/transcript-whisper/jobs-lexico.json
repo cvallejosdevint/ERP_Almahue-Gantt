@@ -1,0 +1,261 @@
+[
+  {
+    "id": "2026-08-04-gosocket",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-04-gosocket\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-04-gosocket\\transcripcion.md",
+    "title": "2026-08-04-gosocket (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-04-gosocket\\audio.wav"
+  },
+  {
+    "id": "2026-08-05-gosocket-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-05-gosocket-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-05-gosocket-interna\\transcripcion.md",
+    "title": "2026-08-05-gosocket-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-05-gosocket-interna\\audio.wav"
+  },
+  {
+    "id": "2026-08-13-kickoff-gosocket",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-13-kickoff-gosocket\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-13-kickoff-gosocket\\transcripcion.md",
+    "title": "2026-08-13-kickoff-gosocket (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-13-kickoff-gosocket\\audio.wav"
+  },
+  {
+    "id": "2026-08-19-demo-interno",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-19-demo-interno\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-19-demo-interno\\transcripcion.md",
+    "title": "2026-08-19-demo-interno (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-19-demo-interno\\audio.wav"
+  },
+  {
+    "id": "2026-08-20-manana",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-20-manana\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-20-manana\\transcripcion.md",
+    "title": "2026-08-20-manana (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-20-manana\\audio.wav"
+  },
+  {
+    "id": "2026-08-20-tarde",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-20-tarde\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-20-tarde\\transcripcion.md",
+    "title": "2026-08-20-tarde (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-20-tarde\\audio.wav"
+  },
+  {
+    "id": "2026-08-25-erp-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-25-erp-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-25-erp-interna\\transcripcion.md",
+    "title": "2026-08-25-erp-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-25-erp-interna\\audio.wav"
+  },
+  {
+    "id": "2026-08-25-kickoff-gosocket",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-25-kickoff-gosocket\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-25-kickoff-gosocket\\transcripcion.md",
+    "title": "2026-08-25-kickoff-gosocket (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-25-kickoff-gosocket\\audio.wav"
+  },
+  {
+    "id": "2026-08-27-tesoreria-ui",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-27-tesoreria-ui\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-08-27-tesoreria-ui\\transcripcion.md",
+    "title": "2026-08-27-tesoreria-ui (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-08-27-tesoreria-ui\\audio.wav"
+  },
+  {
+    "id": "2026-09-03-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-03-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-03-interna\\transcripcion.md",
+    "title": "2026-09-03-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-03-interna\\audio.wav"
+  },
+  {
+    "id": "2026-09-07-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-07-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-07-interna\\transcripcion.md",
+    "title": "2026-09-07-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-07-interna\\audio.wav"
+  },
+  {
+    "id": "2026-09-08-recap",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-08-recap\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-08-recap\\transcripcion.md",
+    "title": "2026-09-08-recap (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-08-recap\\audio.wav"
+  },
+  {
+    "id": "2026-09-08-seguimiento-gosocket",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-08-seguimiento-gosocket\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-08-seguimiento-gosocket\\transcripcion.md",
+    "title": "2026-09-08-seguimiento-gosocket (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-08-seguimiento-gosocket\\audio.wav"
+  },
+  {
+    "id": "2026-09-14-demo-avances",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-demo-avances\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-14-demo-avances\\transcripcion.md",
+    "title": "2026-09-14-demo-avances (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-demo-avances\\audio.wav"
+  },
+  {
+    "id": "2026-09-14-interna-manana",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-manana\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-14-interna-manana\\transcripcion.md",
+    "title": "2026-09-14-interna-manana (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-manana\\audio.wav"
+  },
+  {
+    "id": "2026-09-14-interna-mediodia",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-mediodia\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-14-interna-mediodia\\transcripcion.md",
+    "title": "2026-09-14-interna-mediodia (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-mediodia\\audio.wav"
+  },
+  {
+    "id": "2026-09-14-interna-tesoreria",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-tesoreria\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-14-interna-tesoreria\\transcripcion.md",
+    "title": "2026-09-14-interna-tesoreria (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-14-interna-tesoreria\\audio.wav"
+  },
+  {
+    "id": "2026-09-15-gosocket-kickoff",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-15-gosocket-kickoff\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-15-gosocket-kickoff\\transcripcion.md",
+    "title": "2026-09-15-gosocket-kickoff (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-15-gosocket-kickoff\\audio.wav"
+  },
+  {
+    "id": "2026-09-21-interna-sergio-jose-diego",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-21-interna-sergio-jose-diego\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-21-interna-sergio-jose-diego\\transcripcion.md",
+    "title": "2026-09-21-interna-sergio-jose-diego (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-21-interna-sergio-jose-diego\\audio.wav"
+  },
+  {
+    "id": "2026-09-22-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-22-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-22-interna\\transcripcion.md",
+    "title": "2026-09-22-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-22-interna\\audio.wav"
+  },
+  {
+    "id": "2026-09-23-corta-1605",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-corta-1605\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-23-corta-1605\\transcripcion.md",
+    "title": "2026-09-23-corta-1605 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-corta-1605\\audio.wav"
+  },
+  {
+    "id": "2026-09-23-dudas-cliente",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-dudas-cliente\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-23-dudas-cliente\\transcripcion.md",
+    "title": "2026-09-23-dudas-cliente (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-dudas-cliente\\audio.wav"
+  },
+  {
+    "id": "2026-09-23-interna-carlos-sergio",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-interna-carlos-sergio\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-23-interna-carlos-sergio\\transcripcion.md",
+    "title": "2026-09-23-interna-carlos-sergio (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-23-interna-carlos-sergio\\audio.wav"
+  },
+  {
+    "id": "2026-09-24-reunion",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-24-reunion\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-24-reunion\\transcripcion.md",
+    "title": "2026-09-24-reunion (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-24-reunion\\audio.wav"
+  },
+  {
+    "id": "2026-09-29-pablo",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-29-pablo\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-29-pablo\\transcripcion.md",
+    "title": "2026-09-29-pablo (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-29-pablo\\audio.wav"
+  },
+  {
+    "id": "2026-09-30-interna",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-30-interna\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-09-30-interna\\transcripcion.md",
+    "title": "2026-09-30-interna (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-09-30-interna\\audio.wav"
+  },
+  {
+    "id": "2026-10-01-reunion",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-10-01-reunion\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-01-reunion\\transcripcion.md",
+    "title": "2026-10-01-reunion (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-10-01-reunion\\audio.wav"
+  },
+  {
+    "id": "2026-10-06-reunion",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-10-06-reunion\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\2026-10-06-reunion\\transcripcion.md",
+    "title": "2026-10-06-reunion (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\2026-10-06-reunion\\audio.wav"
+  },
+  {
+    "id": "demo-2026-09-10",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\demo-2026-09-10\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\demo-2026-09-10\\transcripcion.md",
+    "title": "demo-2026-09-10 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\demo-2026-09-10\\audio.wav"
+  },
+  {
+    "id": "reu1",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu1\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu1\\transcripcion.md",
+    "title": "reu1 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu1\\audio.wav"
+  },
+  {
+    "id": "reu2",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu2\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu2\\transcripcion.md",
+    "title": "reu2 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu2\\audio.wav"
+  },
+  {
+    "id": "reu3",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu3\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu3\\transcripcion.md",
+    "title": "reu3 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu3\\audio.wav"
+  },
+  {
+    "id": "reu4",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu4\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu4\\transcripcion.md",
+    "title": "reu4 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu4\\audio.wav"
+  },
+  {
+    "id": "reu5",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu5\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu5\\transcripcion.md",
+    "title": "reu5 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu5\\audio.wav"
+  },
+  {
+    "id": "reu6",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu6\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\reu6\\transcripcion.md",
+    "title": "reu6 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\reu6\\audio.wav"
+  },
+  {
+    "id": "sergio-2026-09-01",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\sergio-2026-09-01\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\sergio-2026-09-01\\transcripcion.md",
+    "title": "sergio-2026-09-01 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\sergio-2026-09-01\\audio.wav"
+  },
+  {
+    "id": "sergio-2026-09-10",
+    "audio": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\sergio-2026-09-10\\audio.wav",
+    "out": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-lexico\\sergio-2026-09-10\\transcripcion.md",
+    "title": "sergio-2026-09-10 (Whisper large-v3 + lexico)",
+    "source": "E:\\source\\repos\\Almahue\\docs\\reuniones\\medios\\whisper-local\\sergio-2026-09-10\\audio.wav"
+  }
+]

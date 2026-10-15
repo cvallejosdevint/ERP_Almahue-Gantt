@@ -1,0 +1,22 @@
+{
+  "version": "2026-10-13",
+  "uso": "Referencia para el prompt de Whisper y para quien lee una transcripcion. No es un mapa de reemplazo: varios terminos ya estan bien escritos y sustituirlos romperia el texto.",
+  "terminos": [
+    {"termino": "Almahue", "nota": "Fundo y nombre del ERP nuevo."},
+    {"termino": "AlmaWeb", "nota": "Sistema actual del cliente, junto con Agrosoft. El ASR lo parte como 'alma web'."},
+    {"termino": "Agrosoft", "nota": "Sistema actual que el cliente muestra en las primeras reuniones."},
+    {"termino": "GoSocket", "nota": "Intermediario de documentos tributarios. El ASR lo parte como 'go socket'."},
+    {"termino": "SII", "nota": "Servicio de Impuestos Internos."},
+    {"termino": "CAF", "nota": "Codigo de autorizacion de folios."},
+    {"termino": "DTE", "nota": "Documento tributario electronico: factura, nota de credito, nota de debito, guia."},
+    {"termino": "Buk", "nota": "Sistema de remuneraciones. En la demo del 21/07 el ASR dice 'Book'."},
+    {"termino": "cachái", "nota": "¿Entendiste? El ASR escribe 'cachai' o 'cacha y'."},
+    {"termino": "po", "nota": "Muletilla. No se borra: marca registro oral."},
+    {"termino": "al tiro", "nota": "De inmediato. Grafia preferida; el ASR a veces pega 'altiro'."},
+    {"termino": "pega", "nota": "Trabajo."},
+    {"termino": "luca", "nota": "Mil pesos."},
+    {"termino": "proforma", "nota": "Documento de contratistas, distinto de la orden de compra y de la orden de venta."},
+    {"termino": "cartola", "nota": "Movimientos del banco."},
+    {"termino": "centro de costo", "nota": "Dimension contable. En el habla tambien 'CC'."}
+  ]
+}

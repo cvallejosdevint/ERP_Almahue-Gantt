@@ -1,0 +1,142 @@
+# Interna Carlos y Sergio 2026-10-13 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-10-13 102742.mp4
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] ¿Cómo estás, Carlos?
+- [00:02] Bien, ¿y tú, Sergio?
+- [00:04] Bien también.
+- [00:06] Como día lunes.
+- [00:08] Como día martes.
+- [00:10] No, parece día lunes.
+- [00:12] Oye, Perrin, ¿cómo van los avances?
+- [00:14] Bien, bien, el fin de semana estuve haciendo ese ajuste que te dije de que había algunos temas de la tesorería que se pasaban con una cuenta que no correspondía, ya las corregí.
+- [00:26] Corregí y ahora estaba pasando los cambios del Diego que me avisó como el domingo que había pasado cambios de proformas.
+- [00:34] Ya, ok. ¿Los vas a subir ahora?
+- [00:36] Sí, sí, estaba haciendo el merch. Voy a hacerle el QA y ahí los deployo y ya sería probar ya en el servidor directo todo para ver si es que hay algún tipo de problema y que no nos pase nada en la reunión.
+- [00:48] Ya, ok, perfecto.
+- [00:49] Oye, eso sí tengo la duda de, porque por lo que sé, Diego iba a dejar disponibles las proformas en la emisión de documentos de compras para que ahí se asociara el DTE, ¿cierto?
+- [01:07] No el Diego, se supone que el José va a poder listar en la proforma, ¿cachái?
+- [01:13] Claro, el Diego le tiene que dejar hasta que liste nomás, ¿cierto?
+- [01:16] O sea, el Diego le tiene que decir, mira, esta es la API, o de aquí tú sacas las proformas, cachái.
+- [01:23] Para que se listen en el otro lado igual.
+- [01:25] Exacto.
+- [01:25] Ya, vale, vale, vale.
+- [01:28] Voy entonces a ver de que quede todo ahí, para decirle al José que ahí pueda ser la asociación.
+- [01:34] Claro, en el caso de las proformas, recuerda que no es necesario que se cree una proforma hijo, yo me vuelvo a decir.
+- [01:41] Claro, claro.
+- [01:42] A diferencia de la orden de compra.
+- [01:44] Oye, ¿y con cuentas todo bien?
+- [02:14] Pero, mi duda es, con las proformas, ¿a qué cuentas pasarán esas? ¿Dónde se debería hacer la contabilización?
+- [02:24] Yo creo que esa pregunta la hay que mandársela a la amiga María Jesús.
+- [02:30] Cachái, porque, por lo que tengo entendido, cuando se hacen las compras, ya vienen, al momento de ver el libro, ya vienen con la cuenta lista, po.
+- [02:40] Claro.
+- [02:41] Cachaitos, ahí, eso voy a aprovechar hoy día de ahí, formular bien la pregunta y la voy a mandar para que nos aclaren eso, porque es como la única duda que tengo.
+- [02:50] Ya.
+- [02:52] ¿Qué más nos quedaría?
+- [02:55] Eh, mira, terminando de hacer el merch, hoy día igual, si es que tenéis tiempo en la tarde, reunámonos para, porque ahora no me está levantando como tengo al cursor haciendo el merch.
+- [03:04] Eh, está trabajando ahí, no lo tengo listo, pero juntémonos a la tarde para que le demos una vista al visual, pues.
+- [03:10] Disparse que no falta algún detalle, de esos típicos que hay algún botón, algún submenú, o algunas cosas que no pueda faltar, porque ya lo otro que se me ocurre que faltaría es el tema de la bodega, Sergio.
+- [03:26] Ah, claro, el inventario.
+- [03:28] Eso, inventario, sí, sí. Actualmente, por ejemplo, cuando se hacen ventas ya se registran las salidas, y ya quedan registradas las partes de bodega, pero hay que hacer los ingresos, los reingresos, todas esas cuestiones.
+- [03:42] Eso sería yo creo como la patita que nos falta.
+- [03:44] Ah, y lo otro también, que ya quedó configurado el servidor de envío de correos, lo probé con mi cuenta personal, dejé también para que se pueda configurar con campos.
+- [03:55] Y por ejemplo, no sé, en la envío de documentos de venta o de compras, tenéis también un submenú que los podéis configurar el mensaje que te llega.
+- [04:04] Y ese configurar viene con etiquetas. Entonces, por ejemplo, tú podís poner, no sé, hay un botón que lo agrega automático, pero el código es como entre paréntesis, no, entre corchea, corchea, nombre, cierre corchea, cierre corchea, y ahí te pone el nombre del remitente que está registrado vos, cachái.
+- [04:23] Entonces, es la configuración bien dinámica, se puede personalizar dos imágenes. Ahí está bien, bien bacán cómo se manda el correo.
+- [04:32] Ya, ok.
+- [04:33] Y que va habilitado para compra y venta.
+- [04:35] Ahí deberíamos pedir de una lo... ¿cómo se llama? Lo de... al Mario, en el grupo, pedirle las credenciales, ¿por cachái?
+- [04:52] Si lo puedes configurar ellos, no sé, ¿cómo podría quedar?
+- [04:55] Eso sí, lo tengo local nomás, ¿por cachái? Y ya, como te digo, terminando el mes, estoy haciendo las pruebas.
+- [05:01] Ah, que me dio el cadastro de lugar, perdón.
+- [05:02] Eh, lo publico, pruebo con un correo mío que funcione bien en el servidor y ahí después dejo la configuración en blanco y que ellos o se metan a configurar o manden un correo.
+- [05:18] Pero quedó excelente.
+- [05:20] Ya, puta, entonces quiero nos juntamos la tardecita para ver como gráficamente lo del avance.
+- [05:26] Te digo que acabo a las 4.
+- [05:28] Eh, las 4, la puta.
+- [05:30] Acá no tenís dispón.
+- [05:31] A ver, espérate que, tía.
+- [05:33] Te confirmo, te confirmo yo, y mañana, ¿qué hora es la reú?
+- [05:38] La dejé a la misma hora, a las 4 igual.
+- [05:41] Ah, de 4 a 5.
+- [05:42] Sí, sí, la moví nomás, no pregunté hora.
+- [05:46] Ya, sí, está bien.
+- [05:53] Ok.
+- [05:54] Ya, pues, juntémonos las...
+- [05:56] Mira, déjame ir a andar un ratito y te confirmo.
+- [05:59] Igual tú avísame ya, Sergio, y ya puedo mostrarte, ¿cachái?
+- [06:03] Vale, dale.
+- [06:04] Igual depende de eso, porque puta yo tengo de fiesta con mi hija a la tarde, pero no sé a qué hora, no me acuerdo, tengo 2 horas, tengo 1 a las 5 y media, pero no sé si tengo gusta antes.
+- [06:15] Entonces ahí estoy medio complicado.
+- [06:18] María Jesús, AlmaWeb, hola a todos, hablamos, espérate, veamos qué dice María Jesús.
+- [06:27] Aprovecha el impulso ahí, Caldos, y pídele un...
+- [06:30] Igual podría pedirle una meet a la María Jesús para preguntarle cómo, con qué ha contabilizado una proforma, si contabiliza, cachái.
+- [06:40] Espérate, que me imagino que iba a hablar, porque acuérdate que los martes a las 12 hay reunión con GoSocket.
+- [06:46] Ajá.
+- [06:47] Entonces ahí en la misma reunión le podía preguntar, po.
+- [06:49] Ah, ya, sí, buena, buena, buena, sí.
+- [06:51] Ahí aprovecho de ver a qué cuentas contables van el tema de las proformas.
+- [06:56] ¿Y qué otra duda más teníamos? Yo no me acuerdo de ninguna otra más.
+- [06:59] Puta, si podríamos, podríais adelantar. Ah, no, es que la vemos mañana, yo creo ya, el tema de la... el tema de lo que es el inventario.
+- [07:13] Dale.
+- [07:14] Ya, pues. Esperemos que dice, yo creo que van a correr la red mañana, o no sé por qué me chingan, ahí está escribiendo.
+- [07:29] Puta, si así, no afecta tanto, si...
+- [07:32] O sea, si la corren para el jueves, para acá, güa.
+- [07:36] Así ganamos un día, pero y así le metí, como, puta, si llegamos con la contabilidad de proforma.
+- [07:45] ¿Te costó mucho lo de contabilidad con compra, no?
+- [07:47] No, no, porque como ya habíamos estimulado bien cómo llegan las cosas, y ya habíamos visto cómo ellos querían que se armara la closa, era prácticamente mostrar la información nomás, pues.
+- [08:01] Exacto.
+- [08:01] Entonces, igual, creo que fue más complejo al principio, que no entendía nada, pero ahora, como te digo, hasta eliminé esa página que hacía esa asociación, ya habiendo entendido cómo funciona todo, que no tenía sentido, porque cada movimiento viene con su cuenta.
+- [08:17] De hecho, ese fue el problema de por qué se me estaban contabilizando mal, porque esa página era como, no sé, las que estaban antes de que se hiciera esta asociación directamente en la compra o en la venta de la contracuenta y la cuenta contable.
+- [08:35] Seguía en esa página, y esa página estaba configurada por la guía nomás, y cuando caché que esa era la página que estaba haciendo la asociación mala, la eliminé, borré todos los rastros de ella y se empezaron a registrar, desde que hice la modificación en adelante, correctamente en las cuentas.
+- [08:52] Ya, perfecto. Y el balance, el diario, todo eso ya está afinado.
+- [08:59] Sí, pues están pasando la información. Ahí por eso igual quiero que le peguemos una revisada, a ver si es que se me escapó algo, o si es que hay algo que, no sé, por ejemplo, de Detemite que me falta incluir.
+- [09:09] El juez el otro día me hizo un alcance bueno de que, por ejemplo, en Detemite tenían los tipos de cambio siempre visibles en la parte superior, que igual la encontré buena.
+- [09:17] Ah, sí, sí, el indicador económico arriba.
+- [09:20] Sí, entonces como esas cositas de contabilidad que son útiles, ahí como pegarle esa revisada por tu parte para implementarlas, que no son tan complejas.
+- [09:27] Ya, perfecto.
+- [09:29] Ya Carlos, esperemos que dice la María Jesús.
+- [09:35] Igual ahí en la reunión de las 12 voy a aprovechar de preguntar esa cuestión de las cuentas contables de las proformas, cuando la voy a tirar todavía.
+- [09:46] Ya, ok.
+- [09:51] Ya, don Carlos, estoy atento ahí cuando ya esté ok para hacer la...
+- [09:58] No, usted va a ir a ver el avance visual.
+- [10:02] Ahí te aviso cuando lo tengas listo para que le veamos su revisa.
+- [10:05] Ahí me vais a mostrar lo de CAR, lo del Diego y lo del amigo José, ¿no?
+- [10:11] Sí, sí.
+- [10:12] Ya, y lo tuyo, y lo de Conta.
+- [10:14] Exacto, y el envío de correos también.
+- [10:16] Te hemos calado esta semana.
+- [10:18] Sí, buena, buenísimo, buenísimo.
+- [10:20] De los puntos que habíamos comprometido era módulo contratista, contabilización de compra-venta, que ya está.
+- [10:26] Módulo contratista también, que es lo de ya asignación de órdenes de compra, ese también está, ¿no es cierto?
+- [10:31] Exacto.
+- [10:31] Asignación de proforma y notificación interna que correspondería al correo.
+- [11:35] Ya, ah, pero igual, ah, te va a pasar el DL, el Diego.
+- [11:41] Sí, sí.
+- [11:41] Te tienes que ambientar todo, ¿no?
+- [11:44] Sí, pero el Diego ya tiene los repos, po.
+- [11:49] Ah, ya, ya, ya, ya.
+- [11:51] Ya tiene los repos.
+- [11:51] Lo que sí, por ejemplo, como está configurado el servidor, que ya lo habíamos hablado con los cabros, po,
+- [11:56] de que como el José lo implementó en seguridad por IP,
+- [12:00] lo más probable es que allá la IP nos vaya a cambiar a cada rato,
+- [12:03] Entonces vamos a tener que pedir ayuda a los chiquillos para que hagan el deploy, o buscar una forma de tener una IP fija de que puedan incluir al servidor.
+- [12:13] Ya, entiendo.
+- [12:15] Pero ahí, como digo, ya lo habíamos provisto con los chiquillos, ya estábamos en ese plan de acción de que mientras estábamos allá ellos podían deployar, porque ahí les mandamos el aviso.
+- [12:23] Perfecto.
+- [12:24] Todo cubierto, ya.
+- [12:26] Buenísimo.
+- [12:26] O sea, ya, tengo que ir.
+- [12:29] ¿Cuándo sería ya? ¿26?
+- [12:31] Oye, sería la otra semana, ¿o no?
+- [12:32] Esta semana que viene o la próxima?
+- [13:02] ¿Qué tesorería? Lo que nos vayan a decir esta semana. Y si es que queda algo del jueves y viernes. Y si es que atrasan la revo y quizás podría pasar por la próxima semana, pero ya estamos casi finiquitados ya.
+- [13:16] Buenísimo. Buenísimo.
+- [13:19] Si, no problema.
+- [13:20] Entonces, voy a ir, voy a ir coordinado en relación al 26 para pasar a buscarte y porque yo no sé si me voy a ir en avión y me voy a arrendar un auto allá o me voy a ir en mi auto, no sé, estoy cachando, estoy tirando números. Igual hay que arrendar, tengo que arrendar un allá, un, un débito, si es que hay allá, güey.
+- [13:43] Si es agua de una calle, güey.
+- [13:46] Ah, pero está arrancado ahí, pues, al leído.
+- [13:49] Súme de agua, no, güey, quiera.

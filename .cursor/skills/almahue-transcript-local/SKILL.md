@@ -21,4 +21,4 @@ No uses APIs de pago (tl;dv, OpenAI, etc.) para limpiar transcripciones.
 - **Prohibido** el concepto de mermas (no existe en el negocio).
 - Cotización Compras → OC. OV Ventas → stock → factura.
 
-v1 lee `.md` existentes; no transcribe `.mp4` (Whisper local = futuro).
+v1 de Ollama lee `.md` existentes. El audio lo transcribe `tools/transcript-whisper/` (faster-whisper). Antes de escribir el markdown, `tools/transcript-lexico/normalize.py` unifica grafias chilenas (`cachai` > `cachái`, `altiro` > `al tiro`) y nombres del ERP (`go socket` > `GoSocket`). El prompt corto esta en `initial-prompt.txt` (Whisper recorta cerca de 224 tokens). La lista de Wiktionary (`fetch_wiktionary.py`) es referencia, no reemplazo automatico. No reescribas las transcripciones historicas: `scan.py` solo informa coincidencias.

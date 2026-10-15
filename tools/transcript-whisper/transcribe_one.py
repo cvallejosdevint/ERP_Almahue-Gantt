@@ -8,6 +8,11 @@ from pathlib import Path
 
 from faster_whisper import WhisperModel
 
+_LEXICO = Path(__file__).resolve().parents[1] / "transcript-lexico"
+if str(_LEXICO) not in sys.path:
+    sys.path.insert(0, str(_LEXICO))
+from normalize import load_hotwords, load_initial_prompt, normalize_chilean_transcript  # noqa: E402
+
 
 def _prepend_nvidia_cuda_bins() -> None:
     """CTranslate2 needs cublas64_12.dll on PATH (pip nvidia-*-cu12 wheels)."""
@@ -45,13 +50,8 @@ def main() -> int:
     p.add_argument("--cpu-threads", type=int, default=0, dest="cpu_threads")
     p.add_argument(
         "--prompt",
-        default=(
-            "Reunión de ERP agrícola en Chile. Español chileno. "
-            "Vocabulario: Almahue, AlmaWeb, Agrosoft, cotización, orden de compra, "
-            "orden de venta, proforma, cartola, GoSocket, SII, CAF, folio, "
-            "nota de crédito, nota de débito, centro de costo, PIN, MJ, Agustín."
-        ),
-        help="initial_prompt para sesgar ASR a léxico chileno/ERP",
+        default=load_initial_prompt(),
+        help="initial_prompt (tools/transcript-lexico/initial-prompt.txt)",
     )
     args = p.parse_args()
 
@@ -70,7 +70,9 @@ def main() -> int:
         str(audio),
         language="es",
         vad_filter=True,
+        beam_size=5,
         initial_prompt=args.prompt,
+        hotwords=load_hotwords(),
         condition_on_previous_text=False,
     )
 
@@ -80,7 +82,7 @@ def main() -> int:
         f"Idioma: {info.language} (p={info.language_probability:.2f})",
         f"Modelo: faster-whisper `{args.model}` {args.device} {args.compute_type} + VAD",
         f"Fuente: {args.source or audio.name}",
-        "No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.",
+        "Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).",
         "",
     ]
     for seg in segments:
@@ -88,7 +90,7 @@ def main() -> int:
         hh, rem = divmod(t0, 3600)
         mm, ss = divmod(rem, 60)
         stamp = f"{hh:02d}:{mm:02d}:{ss:02d}" if hh else f"{mm:02d}:{ss:02d}"
-        text = (seg.text or "").strip()
+        text = normalize_chilean_transcript((seg.text or "").strip())
         if not text:
             continue
         lines.append(f"- [{stamp}] {text}")

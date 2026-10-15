@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Tesorería tanda 1 - recorrido</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De dónde sale el dato.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "1. Cartolas: egresos a la nómina",
+        img: "despues-cartolas.png",
+        alt: "Detalle de la cartola CLP con dos egresos marcados, sin asociar",
+        pins: [
+          { x: 3.7, y: 31.1, t: "Egreso marcado", d: "El egreso sale de la cartola importada del banco. Marcarlo no graba nada." },
+          { x: 26.4, y: 24.7, t: "Suma de lo seleccionado", d: "Suma los egresos marcados en pantalla. El servidor vuelve a sumar, agrega los egresos que ya estaban en esa semana y compara con el total de la nómina (aging por pagar de la semana)." },
+          { x: 92.5, y: 25.1, t: "Asociar nómina", d: "Si la suma no calza, responde error y no graba. En la prueba local, egresos por $26.739.521 contra una nómina de $237.881 se rechazaron. No se apretó para la foto." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "2. Conciliación: resumen del mes",
+        img: "despues-conciliacion.png",
+        alt: "Conciliación bancaria de octubre sin movimientos conciliados",
+        pins: [
+          { x: 38.4, y: 10.2, t: "Enlace a Cartolas", d: "La conciliación es un resumen. El trabajo se hace en Cartolas, contabilizando cada movimiento." },
+          { x: 48.2, y: 25.0, t: "Pendientes", d: "Cuenta los movimientos de cartola sin contabilizar. Sin cambios en esta tanda." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "3. Flujo de caja en pesos",
+        img: "despues-flujo-caja.png",
+        alt: "Flujo de caja de septiembre con la vista en pesos encendida",
+        pins: [
+          { x: 19.5, y: 26.1, t: "Ver en pesos", d: "Arranca encendido. Convierte con el tipo de cambio del Banco Central del periodo. Es solo visual." },
+          { x: 31.2, y: 39.8, t: "Total en pesos, todos los bancos", d: "Suma las líneas de todos los bancos y monedas convertidas a pesos. Si una línea no tiene tipo de cambio, el recuadro lo avisa." },
+          { x: 57.9, y: 39.8, t: "Saldo por banco y moneda", d: "Sigue en su moneda original. Sale de los movimientos de cartola y la apertura." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "4. Pagos: Pendiente o Pagado",
+        img: "despues-pagos.png",
+        alt: "Formulario Nuevo pago abierto, sin crear",
+        pins: [
+          { x: 60.4, y: 59.5, t: "Documentos a calzar", d: "El número se busca como por pagar si hay proveedor y como por cobrar si hay cliente, así un mismo folio de compra y de venta no se cruzan." },
+          { x: 39.4, y: 67.5, t: "Estado", d: "Pendiente no escribe en el estado de cuenta ni en el aging. Pagado rebaja el saldo. Volver a Pendiente lo devuelve, salvo que el pago esté calzado con la cartola." },
+          { x: 68.1, y: 78.6, t: "Crear", d: "No se apretó. En la prueba local por API, la factura 61 de ALM SERVICES ($11.305) quedó en 0 al pasar a Pagado y volvió a $11.305 al volver a Pendiente." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "5. Nómina semanal",
+        img: "despues-nomina.png",
+        alt: "Nómina semana 1 de octubre con dos facturas pendientes",
+        pins: [
+          { x: 63.7, y: 73.8, t: "Saldo", d: "Sale del aging por pagar. La factura de compra se toma con IVA (neto $9.500, total $11.305), igual que en el lookup de cartola." },
+          { x: 70.8, y: 69.0, t: "Días atraso", d: "Se calcula al leer, contra el vencimiento. El vencimiento parte de la fecha del documento más la condición de pago de la OC." },
+          { x: 81.6, y: 11.3, t: "Sincronizar", d: "Recalcula el aging desde compras y ventas contabilizadas. No se apretó para la foto." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "6. Estado de cuenta",
+        img: "despues-estado-cuenta.png",
+        alt: "Estado de cuenta de octubre por RUT",
+        pins: [
+          { x: 75.8, y: 52.8, t: "Saldo proveedor", d: "Sale de los movimientos de cuenta corriente: facturas contabilizadas, pagos en estado Pagado y movimientos de cartola. Los pagos pendientes ya no cuentan." },
+          { x: 94.4, y: 52.8, t: "Detalle", d: "Muestra cada documento como pendiente o calzado. Una NC aplicada a su factura sale calzada contra esa factura." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

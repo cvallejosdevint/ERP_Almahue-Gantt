@@ -1,0 +1,272 @@
+# reu6 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\reu6\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [01:06] Hola, Danilo, ¿cómo estás? ¿Danilo?
+- [01:20] Al menos yo te escucho, Sergio, parece que Danilo tiene problemas.
+- [01:24] No sé si les escucho ahora sí, Danilo.
+- [01:28] Ahí, sí.
+- [01:29] Hola, Danilo, ¿cómo estás?
+- [01:30] Bien, bien, tenía muteado el equipo.
+- [01:35] Pero ya estamos acá.
+- [01:37] Vale.
+- [01:38] Oye, Danilo, te presento a Carlos, él será la capacitación del producto.
+- [01:44] No te escucho, te escucho reportado.
+- [01:48] ¿Te escucho bien, Carlos? ¿Me escuchas bien? Sí, te escucho bien. ¿Danilo ahora sí? ¿Danilo? Te escucho entrecortado. Yo te escucho bien, Sergio. ¿A Carlos cómo lo escuchas, Danilo? Yo te escucho bien a mí, Danilo. No, a Carlos lo escucho bien, Sergio no lo escucho, lo escucho entrecortado.
+- [02:21] ¡Qué extraño! Bueno, Carlos, démosle con la presentación, la conversación, por favor, a Danilo.
+- [02:34] Perfecto, no hay problema. Vamos entonces a comenzar con la presentación.
+- [02:58] No le escucho a nadie, no sé si hay alguien que esté hablando.
+- [03:06] Sergio, no sé si tú me escuchas.
+- [03:09] Sí, yo te escucho bien, Carlos.
+- [03:10] No sé, hablen entre ustedes, porque el que necesita escuchar soy yo.
+- [03:14] Entonces, se preguntan ustedes. Yo no los escucho.
+- [03:17] Es que, Danilo, estamos presos para saber si el problema es nuestro o el problema es tuyo.
+- [03:24] Ya. ¿Qué hacemos?
+- [03:31] No sé si te puedes conectar a alguna otra red.
+- [05:09] No sé si se escucha.
+- [05:11] Sí, se escucha.
+- [05:13] Ahora parece que sí.
+- [05:25] Se escucha bien. ¿Tú me escuchas bien a mí?
+- [05:27] Sí, ahí sí.
+- [05:28] Perfecto, ya, resuelto, avance.
+- [05:34] Perfecto, vamos entonces a comenzar con la capacitación de lo que vendría a ser el sistema BND.
+- [05:39] Mi nombre es Carlos Vallejo y voy a ser la persona que va a hacer esta orientación.
+- [05:44] Primero vamos a partir entonces con lo que vendría a ser el inicio de sesión.
+- [05:50] Vamos a utilizar una cuenta demo que tenemos para este propósito.
+- [05:54] Ya. Dame un segundo, por favor, que voy a poner. Sí, no hay ningún problema. Voy a poner un segundo monitor para yo poder ir haciendo lo mismo con la cuenta. Vale, Sergio, muchas gracias.
+- [07:07] Ya, acá yo tengo también puesto el correo de la administración.
+- [07:41] Ya.
+- [07:43] Perfecto. Danilo, una consulta, por lo que me habían explicado, en este caso lo que necesitan ustedes es por el tema de los ingresos de los tokens, por así decirlo, de las conexiones de los diferentes sellers, es que lo puedan hacer ustedes ya que estos van cambiando, ¿verdad?
+- [08:00] Sí, se cambian. Bueno, Falabella, cada nueve carrillas tiene el cambio de las credenciales, Mercado Libre lo está implementando ahora y en general con el tema de las credenciales están como bien pesados.
+- [08:19] Exacto. Mira, de hecho, bueno, como se entenderá que cada uno de estos sellers es un desarrollo externo y que cada uno de ustedes se van actualizando, nuestro sistema igual de todas formas se va adaptando y construyendo a cada una de las necesidades de estos sellers, por ende igual dentro de todo la documentación que nosotros vamos manejando de ellos, la vamos también complementando con el feedback de los usuarios, puesto que estas conexiones a veces no pasan por un anuncio público a nosotros como partners,
+- [08:46] Sino que aparecen dentro de las condiciones al momento de realizar la conexión. Por ende, para la habilitación de que se haga de forma autónoma por ustedes, en este caso lo vamos a hacer y nos va a tirar un error en un principio, pero lo que necesitamos en esta primera instancia es que se haga igual de todas formas la conexión para que a nivel de nuestro sistema nos quede el registro e ir aplicando los fix que vayamos a necesitar de aquí en adelante.
+- [09:12] Ya. Entonces, lo primero que vamos a atacar va a ser la conexión de los sellers. Me voy a saltar un poquitito la estructura que tenemos normalmente de esta capacitación para que vayamos juntos viendo los sellers y a pesar de que salga el error, vayamos haciendo la conexión, ¿vale?
+- [09:30] Ya, dame un segundo, estoy entrando a Falabella.
+- [09:33] Hay ningún problema. Por lo que tengo entendido, tienes habilitado Falabella, Mercado Libre y JungSeller, ¿verdad?
+- [09:40] No.
+- [09:40] Shopify. Perfecto. Porque entiendo que todavía París y Ripley están ahí. Exacto, son las últimas implementaciones, de hecho esas son las que se han ido trabajando en el servidor de prueba también.
+- [09:56] Ya, entonces, ¿dónde está esto en mi cuenta de integración?
+- [10:17] Ya, porque Falabella finalmente se conecta por API.
+- [10:22] Exacto.
+- [10:23] Ya, entonces tengo la API aquí de Falabella, vuelvo, me voy, me imagino a configurar credenciales, ¿o no?
+- [10:32] Exactamente.
+- [10:32] Ya pongo el correo, ya pongo el API y los credenciales guardados correctamente.
+- [10:54] Ok, perfecto. Nota de que a las 11.12 se hizo el ingreso de Falabella, ¿verdad? Te pediré que de inmediato vayamos con el siguiente seller que tengas disponible. En este caso, el de Mercado Libre es una integración que al momento de realizar clic al botón se debería desplegar de inmediatamente la interfaz de Mercado Libre, lo que sí hay que tener la cuenta iniciada previamente en el navegador para que lo valides.
+- [11:28] Ya, dice la aplicación, no puedes conectarse a tu cuenta. ¿Voy al inicio, eso?
+- [11:36] Exacto.
+- [11:37] ¿Ya?
+- [11:37] Y la cuenta está iniciada con Mercado Libre, ¿verdad?
+- [11:40] ¿No?
+- [11:45] ¿Estás dentro de Mercado Libre o BND?
+- [11:49] Estoy dentro de, a ver, me fui un paso atrás. Estoy en Mercado Libre y ahora me aparece conectando y está pensando.
+- [12:01] Pero no está haciendo nada.
+- [12:08] Me te voy a pedir que volvamos directamente a la página de BND y me digas qué es lo que te aparece directamente en la conexión de MercadoLibre.
+- [12:15] Lo que te acabo de decir. Estoy en la página de BND, me aparece conectando, pero no está haciendo nada.
+- [12:22] Perfecto. Y ahora probemos con el siguiente seller, por favor.
+- [12:36] ¿El MercadoLibre lo dejamos pasar?
+- [12:38] Exacto. Lo que pasa es que este sistema, por lo general, está generado para que nosotros nos entreguen las APIs y hagamos esta integración.
+- [12:44] Pero lo vamos de todas formas a dejar habilitado para que esto lo hagas de manera autónoma, solamente que hay que hacer este fix para de manera interna nosotros dejar habilitado el seller.
+- [12:56] Entonces ahora hacemos la inicio de sesión, el primer inicio prioritario, yo le aviso a los chicos del equipo de desarrollo para que apliquen el fix por mientras de la conexión.
+- [13:07] Ya, y entonces nos queda Shopify.
+- [13:11] Exacto.
+- [13:11] Ya, ahí me pillas como en Shopify. ¿Cómo lo hago con Shopify?
+- [13:22] En Shopify debería, dentro de las opciones, aparecer en la configuración la conexión del dominio de la tienda, te debería aparecer.
+- [13:31] Ya, entonces, entro, ya. Entonces, pego la dirección completa, ¿cómo no? No, me dice que está prohibido. Me dice que está prohibido, ¿no? ¿Eso está bien?
+- [14:15] Debe ser porque me imagino que Shopify lo tienes conectado directamente con un dominio, ¿verdad?
+- [14:21] Es que es lo que te estoy preguntando, pero no me contestaste.
+- [14:27] O sea, de antes te digo, tengo un problema con Mercado Libre, y tú me dices que está bien.
+- [14:34] Entonces, no entiendo lo que, en realidad no sé lo que estamos haciendo.
+- [14:39] Ahora estamos haciendo la conexión para que quede registrado en el sistema interno.
+- [14:43] Sí, pero es que me parece que es un juego esta cuestión.
+- [14:46] Porque te digo, ¿cómo lo hago para entrar a Shopify?
+- [14:51] Y me dices, tienes que meter el dominio de la tienda. Ok, perfecto. ¿Desde dónde? ¿Desde admin.shopify.com? ¿Desde dónde? Porque acá, en el ejemplo que ustedes dan, no dice nada.
+- [15:05] Donde dice dominio de la tienda, no dice nada, entonces no tengo cómo adivinar. Te hago la pregunta, no me la contestas. Cuando te digo no funciona, me dices, perfecto. ¿Es normal que no funcione? ¿Eso es?
+- [15:18] No, no, no, no.
+- [15:48] No tengo respuesta. Entonces, ¿qué hacemos? ¿Lo dejamos hasta aquí, me devuelven la plata y se acabó? ¿O qué? ¿O me van a dar una solución o me van a contestar al menos lo que yo estoy preguntando? Si eso es muy difícil de hacer, dejémoslo hasta aquí.
+- [16:03] No, Danilo, perdón. No era mi intención generar esta confusión.
+- [16:07] O sea, tenemos que hacer tres cosas, tres. Tengo súper claro cómo se conecta una cuenta a otra porque he estado deambulando por una montonera de oferentes de estos mismos tipos de soluciones que no han funcionado. Eso lo dije desde el día uno que lo contraté con ustedes.
+- [16:32] Entonces, desde las primeras consultas dije, ¿sabes qué? Lo que yo necesito es esto. Sí, no, nosotros hacemos esto, perfecto, ok, démosle, probémoslo. Entonces, si en el paso 0,1 no está funcionando, no sé cómo, o sea, es que no, es que nosotros después lo vemos.
+- [16:57] Oye, viejo, yo soy ingeniero en informática, sé que después lo vemos, es que la hueá no funcionó. Entonces, no, no, no me jodáis. Entonces, ¿qué? De nuevo, Mercado Libre, necesito que quede conectado Mercado Libre. No necesito que lo vean ustedes después, que quede conectado ahora, porque entiendo que no compré un software que está en desarrollo y que lo vamos a ir tratando de arreglar en el camino, porque no es lo que me ofrecieron.
+- [17:21] Si me hubieran dicho, oye, sí, igual podemos tener alguna falla porque estamos, eres el cliente 2, ok, ya, listo. Me armo de esa paciencia porque soy el cliente 2. Pero no es lo que me vendieron. Entonces, de nuevo, mercado libre, conectar con mercado libre. ¿Qué hago?
+- [17:40] Don Daniel, lo que pasa es que esta implementación, como le estaba intentando explicar, nosotros realizamos la conexión de manera nosotros los dev y se está habilitando para usted para que pueda realizarlo de manera autónoma.
+- [17:50] ¿Y cuál es la diferencia?
+- [17:53] No, de que necesitamos de que haga esto para que nosotros hagamos la conexión por debajo y después quedaría habilitado.
+- [17:59] Pero dice, la aplicación no puede conectarse a tu cuenta.
+- [18:02] Claro, eso es lo que le aparece a usted a nivel visual, pero por debajo nosotros lo arreglamos.
+- [18:08] O sea, esto no está habilitado para que funcione todavía.
+- [18:13] Sí, sí, sí, está, pero tenemos que hacer este primer paso, estimado.
+- [18:17] Explícamelo en términos técnicos entonces, por favor, si creo que de repente lo puedo entender.
+- [18:21] Que teniendo registrado la conexión de la API, podemos hacer el fix hacia MercadoLibre.
+- [18:27] A nivel interno, ¿qué ha registrado este sistema para hacer la conexión?
+- [18:34] Un intento de conexión fallida. ¿Y tú corriges ese intento de conexión fallida?
+- [18:38] Exacto, sí.
+- [18:39] Listo. Ya, entonces, ahí me devuelvo y va a quedar intentando conectar MercadoLibre. O sea, MercadoLibre no va a quedar operativo en este minuto.
+- [18:50] Ya, de nuevo, Shopify, dominio de la tienda. ¿Cómo accedo yo? Accedo con admin.shopify.com slash store slash la-princesita-2202. ¿La dirección completa? ¿Desde dónde? ¿Hasta dónde?
+- [19:10] Ahí tiene que dejarla directamente en Shopify y verla conectar a Shopify.
+- [19:16] Ya, es un HTTPS esto.
+- [19:19] Entonces, ¿pongo desde el HTTPS o desde admin?
+- [19:27] Desde admin.
+- [19:29] Ya.
+- [19:36] Ok, conectar a Shopify, prohibido.
+- [19:40] Cloudflare me lo frena y me dice que está prohibido.
+- [19:44] No se preocupe, estimado.
+- [19:45] Bueno, ya teniendo el registro de lo que vendría a ser la conexión, se ha arreglado desde acá, desde Veneria.
+- [19:51] Ya, y eso es todo entonces, o sea, uno exitoso, dos pendientes.
+- [19:59] Ahora vamos a revisar lo que vendría a ser el sistema de la publicación de productos.
+- [20:05] Ya, entonces me imagino que me tengo que devolver, y vamos a funcionar con Falabella, que es lo único que está funcionando, ¿no?
+- [20:13] Como le indiqué estimado, va a quedar habilitado el seller una vez terminemos esta reunión, ya que se tiene que avisar al equipo de desarrollo que se hizo la conexión.
+- [20:22] Ok.
+- [20:23] Ya.
+- [20:24] Ya.
+- [20:24] Entonces, vamos a ver ahora lo que vendría a ser el sistema de la creación de los productos que van a quedar dentro del mantenedor.
+- [20:33] Ok.
+- [20:38] En este caso tengo esta prueba de demo para que podamos realizar la revisión de cada uno de estos.
+- [20:43] Estos se encuentran directamente en lo que vendría a ser el panel de administración.
+- [20:47] Todo esto va de la mano junto con lo que vendría a ser productos, también lo que vendría a ser las listas de precios.
+- [20:55] Valga la redundancia que lo que vendría a ser productos es el registro interno de lo que vendría a ser BND, que después se distribuye a cada uno de los seres que usted vaya a tener conectado para poder tener la administración directamente desde lo que vendría a ser BND.
+- [21:07] BND. Como podemos ver, la creación tiene la posibilidad de realizar una carga masiva de Excel, en el cual también va a tener la posibilidad de tener el archivo Excel base para poder realizar esta carga masiva, junto con la opción del botón y también la opción de agregar productos de manera unitaria.
+- [21:24] Como puede ver, aquí estos dependen también de lo que vendrían a ser los menús de marca y categoría, los cuales también van centralizados dentro de esta aplicación. Dentro de lo que vendría a ser el panel de aplicación, se pueden ir agregando diferentes marcas y también podríamos ir agregando diferentes categorías, los cuales van a nutrir este sistema central de lo que vendrían a ser los productos.
+- [21:44] Ya, todo eso, o sea, la publicación nueva yo la hago desde ahí, desde el panel de administración productos.
+- [21:54] De hecho, esto es antes de la publicación como tal dentro de los sellers. Lo que nosotros aquí hacemos es como un índice de todos los productos que usted tiene disponible y una vez ya teniéndolo creado, nosotros lo podemos publicar dentro de los sellers a lo que usted vaya seleccionando.
+- [22:08] En este caso, vamos a pasar directamente a la administración de los sellers. Como pudimos ver, esa fue la primera ventana de la conexión y lo que vendría a ser aquí dentro de las publicaciones es donde se realizan las publicaciones directamente de los productos ya publicados.
+- [22:25] O sea, tengo que crear el producto en el panel de administración y luego publicarlo en publicaciones. Ok, aquí yo solamente lo que hago es tomar el producto ya creado y hacer la publicación.
+- [22:45] Exactamente, como se da cuenta en la parte superior le van a ir apareciendo los sellers que tenga disponibles, lo más probable es que su interfaz como ahora le apareció solamente uno que logró la conexión, exacto, le apareció solamente Falabella, pero aquí en esta demo que yo tengo ahí aparecen otros sellers también con una publicación que son los que están conectados en esta cuenta demo que a diferencia de ustedes este tiene JumpSeller, Replay y Varis, pero los tres funcionarían de la misma forma mostrando los productos disponibles.
+- [23:09] En este caso sería publicar un nuevo producto y en esta ventana nos aparecerían los productos que tenemos disponibles dentro de BND.
+- [23:18] En este caso me voy a tomar de los que tenemos acá, por ejemplo audífonos, y ahí apareció el producto.
+- [23:39] Aparecen los selectores de categoría, precio, cantidad, los datos de la publicación, que aquí es donde hay que tener un doble check, ya que, como se entiende, cada uno de los sellers tiene su propio mundo de opciones.
+- [23:55] De hecho, lo más probable es que usted sepa, por lo que me contaron, usted tenía hartos productos ya publicados dentro de lo que vendrían a ser los sellers. Me mencionaron que eran más de 200 aproximadamente.
+- [24:07] Son más de 2.000.
+- [24:08] Más de 2000. Entonces, como sabrá, dentro de lo que vendría a ser el mundo de Mercado Libre tenemos diferentes opciones dentro de lo que vendrían a ser productos con familia, categorización, de la categorización depende mucho de los otros campos, entonces, por seller, este menú puede que se vea un poco diferente ya que va adaptado a las necesidades de cada uno de ellos.
+- [24:29] Perfecto.
+- [24:31] Entonces, aquí es donde realmente pasa de lo que vendría a ser la información básica que uno deja dentro de BND, a agregarse la información que vaya a necesitar cada uno de los sellers, de datos de la publicación.
+- [24:47] Ok. ¿Cómo, bueno, entiendo que el traerse los productos de mercado libre, o sea, la carga de productos de mercado libre a BND lo van a hacer ustedes?
+- [24:58] Exacto, por eso era importante que ahora tuviéramos hecho el tema de las conexiones para realizar ese ajuste durante lo que vendría a ser el tiempo. Tenemos 48 horas estipulado para que se realice la carga desde el seller hacia BND.
+- [25:13] Perfecto.
+- [25:14] Así que eso se va haciendo de manera interna por nosotros para que solamente después quede la publicación dentro de lo que vendría a ser BND.
+- [25:23] De todas formas, en caso de que a futuro se realice alguna carga de un producto dentro de los sellers,
+- [25:28] lo ideal sería de que se nos avise para poder incluirlo de manera por abajo,
+- [25:32] pensando en que en algún punto se podría adquirir alguna cuenta fuera de lo que vendría a ser su, por así decirlo, venta principal.
+- [25:42] Podría adquirirse otra de las cuentas, también podría mostrar esa información, pero siempre avisándonos de manera previa.
+- [25:48] Claro, porque lo que me va a tocar a mí es después cuando tengan replay y parís, es hacer las publicaciones ahí. O sea, bueno, de hecho a mí me basta con que ustedes hagan la carga de los productos si es que la publicación no es tan compleja. A lo mejor yo puedo hacer el resto, puedo hacer la publicación.
+- [26:05] Bueno, pero el tema es que esto yo lo necesito más que apurado, o sea, yo entiendo que ustedes tienen sus tiempos, pero lo necesito rápido, pero a ver, si, lo que pasa es que claro, como no lo puedo probar, porque no tengo, no tenemos el acceso a los otros markets,
+- [26:35] Porque yo podría haber dicho ya, ¿sabes qué? Carguemos un producto de Mercado Libre y publiquémoslo en Falabella y veamos cómo anda. Yo esto necesito que a más tardar a mediados de noviembre, estamos en agosto, tenemos todo septiembre, o sea, tenemos todo agosto, todo septiembre, todo octubre.
+- [27:01] Noviembre es temporada alta, me imagino, ¿verdad?
+- [27:05] Es que empieza como temporada alta por la Navidad.
+- [27:08] Claro.
+- [27:09] Mira, yo tengo en este minuto alrededor de entre 2.500 y 3.000 productos en Mercado Libre.
+- [27:18] En Falabella debo tener la mitad.
+- [27:22] En Ripley debo tener un 20%.
+- [27:25] En París debo tener un 10%.
+- [27:27] En Walmart debo tener prácticamente nada.
+- [27:30] Y en Shopify, como Shopify ha sido el conejillo de pruebas de todas las, mira, yo he probado esto con Astro Selling, con Multivende, con Yuhu, con una montonera de, y ninguno ha sido capaz de hacer lo que yo necesito hacer.
+- [27:48] Entonces, yo creo que Shopify va a tener que votar todos los productos y hacer todas las publicaciones de nuevo.
+- [28:03] Pero ¿qué es lo que pasa? Necesito, como te digo, estamos en agosto, estamos a 6 de agosto, o sea, tengo a septiembre, a octubre y a noviembre.
+- [28:12] Tengo tres meses para hacer esto. Yo no voy a pasar en un 100% producción esto hasta que no tengamos el catálogo completo, pero lo necesito. Creo que 90 días es un plazo razonable. No sé si tú estás de acuerdo con eso, que en 90 días esto ya puedan estar las publicaciones uniformadas.
+- [28:38] O sea, la misma cantidad que yo tengo en Mercado Libre, esté en Ripley, esté en París, esté en Falabella, y esté en Walmart.
+- [28:46] Mira, aproximadamente, pensando en que son siendo bien aproximado, un total de, y bien fatalista, de 4.000 productos aproximado, con lo que usted me comenta,
+- [29:00] mire, me comprometo hoy día, en horario PM, a decirle un tiempo estimado.
+- [29:05] Ya.
+- [29:06] Ya, hoy día de la tarde.
+- [29:07] Mira, a ver, si tú me dices, ¿sabes qué? No, vamos a necesitar seis meses, yo lo que voy a hacer es priorizar, ¿me entiendes? Porque hay productos que sí me interesa tenerlos para la Navidad y hay productos que sí me interesa tenerlos para la temporada escolar y otros productos, a ver, suponte tú, yo tengo productos que se pueden vender para el día de la madre, tengo productos que se pueden vender para el día del padre, tengo productos que se pueden vender para el día del niño, que se pueden vender para la Navidad y los productos de temporada escolar.
+- [29:38] Para Navidad no me interesa tener necesariamente los productos de temporada escolar, pero sí los de temporada escolar los necesito tener en enero.
+- [29:47] Perfecto.
+- [29:47] Entonces, yo puedo hacer un detalle de, mira, estos productos los necesito para diciembre, estos los necesito para enero, y los otros ya, ¿sabes qué? Démosles de a poco, no pasa nada.
+- [30:00] Pero necesito que las cuestiones se hablen, necesito que la comunicación exista y necesito tener claro desde antes, desde el día antes, qué es lo que vamos a hacer.
+- [30:14] Perfecto.
+- [30:15] Por lo mismo que lo que pasa, es por eso que me molesta lo que pasó hoy día, ¿entiendes?
+- [30:23] O sea, ayer yo hablo con Sergio y me dice, ok, ¿tienes tiempo? Dime tú cuándo tienes tiempo para que podamos ver esto. Ok, mañana, porque lo necesito apurado. Entonces, ¿qué es lo que entiendo yo? Mañana vamos a dejar los markets conectados. Yo podré de alguna u otra manera hurguetear o ver, si me lo dejaron claro, probar con un producto que, porque tengo además alrededor de 150 productos que no están publicados.
+- [30:49] Entonces, puedo tomar uno de esos productos y probar. Fantástico. Pero resulta que no es así. No es lo que vamos a hacer hoy día. Entonces, yo me tengo que imaginar porque la información no la tengo.
+- [31:04] Claro, estimado, mire, entonces, en vista de lo que usted me está comentando en este momento, me surge igual una duda, ¿de casualidad tiene alguna planilla Excel o que podamos tener como identificado un poco junto con lo que vendría a ser la carga masiva de los productos?
+- [31:22] No, no tengo.
+- [31:23] No se preocupen, el problema.
+- [31:53] Entonces podríamos ya tener la carga masiva. Pero me comprometo hoy día a la tarde a darle esa información. Y ya, por ejemplo, ¿dónde tiene el mayor catálogo publicado actualmente?
+- [32:05] Mercado Libre. Mercado Libre manda.
+- [32:08] Perfecto. Entonces vamos a darle prioridad primero a traer todo lo que es Mercado Libre y tenerlo cargado en el sistema.
+- [32:15] Vamos entonces, junto con eso, también tener disponible ya la conexión lista para que pueda realizar la publicación también de los productos.
+- [32:23] Esa va a ser entonces el orden de prioridades, ¿le parece?
+- [32:27] Mira, mi catálogo está Mercado Libre, Falabella, Ripley y París están casi iguales, Walmart que no tiene casi nada y Shopify que está el despelote,
+- [32:45] Pero la verdad que Shopify no me apura en lo absoluto porque lo que te digo, yo creo que una vez que ya tengamos el catálogo 100% y que ya estemos con los markets como corresponde funcionando, ahí vemos el tema de Shopify o simplemente lo voy depurando a mano.
+- [33:08] Lo que pasa es que, no sé, tengo productos publicados cinco veces porque Astro Selling lo publicó una vez para mostrarme cómo se hacía,
+- [33:19] Yuku lo publicó de nuevo para mostrarme cómo se hacía, Multivende lo publicó de nuevo,
+- [33:24] entonces la verdad es que está sucio ese portal.
+- [33:35] Entonces, tengo que votar, yo creo, o bien tengo que darme el tiempo de ir depurando, de tomar un producto, borrar las publicaciones que están duplicadas, triplicadas, cuadruplicadas, o n cantidades.
+- [33:49] Las demos, no hay problema, se entiende.
+- [33:51] Claro, literalmente es como una tienda demo, entonces ahí es como una sandbox, ahí es donde se hacen todas las pruebas, todas las hueás, ahí está.
+- [34:02] Don Daniel, mire, entonces, en ese caso, ese ya quedaría, como usted me dice, ya el último de la prioridad, obviamente ya se tiene el sistema de la conexión, pero no le vamos a dar tanta vuelta en ese, nos vamos a preocupar de tener cargados los demás sistemas, o sea, en BND primero, traerlo de mercado libre, posteriormente traer lo que vendría a ser también falável a Replay, le voy a decir a los chicos que comparemos, que comparemos y busquemos, porque eso como lo vamos a traer una base de datos, vamos a tener toda la data y podemos usar filtros de búsqueda, BigQuery, para poder limpiarlo,
+- [34:32] En caso de que encontremos algunos duplicados, obviamente esto se lo vamos a informar, no vamos a llegar. Y eliminar la información, la vamos a crear.
+- [34:38] Mira, si es necesario, yo prefiero que partamos de cero. O sea, si te es más fácil crear un catálogo nuevo y eliminar todo lo que hay, no hay problema.
+- [34:51] Si no se puede eliminar, porque hay algunas cosas que no se pueden eliminar directamente, entiendo que, por ejemplo, con París, no se puede eliminar directamente, sino que tienes que pedirle a tu CAM que te haga la eliminación de los productos.
+- [35:04] Si es así, tú me avisas, tú me dices, ¿sabes qué? Yo prefiero que lo hagamos así, ok, coordinamos un día, hoy el próximo jueves lo hacemos, listo, yo me comunico con mi CAM y le pido que para el jueves me tenga la tienda, el corner en cero, porque voy a hacer una carga nueva de producto, no va a haber ningún problema, pero necesito que lo conversemos, no que andemos jugando a las adivinanzas, no sé si es más fácil eso que andar buscando si el producto está o no está, me imagino que sí.
+- [35:34] Mire, por lo que tengo entendido, la carga masiva de los productos hacia nosotros no debería tardar tanto y el análisis tampoco. Por ende, yo creo que igual sería una buena forma de tener información precargada para que no tenga que generar todo directamente en BND de cero y en BND la eliminación de estos productos la va a poder hacer.
+- [35:54] Y una vez ya teniendo eso, evaluemos si vale la pena, porque ya teniendo los productos respaldados, podíamos no disponer tanto de lo que vendría a ser los sellers. Entonces hagamos primero el respaldo de la información, veamos cómo viene esta, si es que está muy sucia o no, y dependiendo de eso, ya con esta evaluación le podemos decirle si es recomendable partir de cero o podemos tomarnos de esta misma estructura.
+- [36:15] Ok. Lo otro que quería consultarle, don Danilo, porque el inicio de sesión de los otros sellers también podríamos hacerlo, pero no sé si usted podría, yo entiendo que es un tema delicado, el tema de las credenciales. No sé si existirá la posibilidad de en algún punto estas sean compartidas dependiendo del seller o si es que podríamos disponer de usted para poder hacer un inicio de sesión rápido.
+- [36:37] Sí, tú me avisas, avísame una hora antes, oye, necesito tal cosa, y listo. No te va a haber problema. Si es algo puntual, sí. Ahora, déjame chequear, tú te refieres a los otros markets, a las conexiones con...
+- [36:56] A ver, es que aquí a mí, ah, ya, París, París y replay es por API Key, y eso no se puede dejar, no, no, no lo tenéis, o podemos dejar hecha la...
+- [37:09] Porque actualmente el sistema que es lo que hace, toma la API Key y la guarda cifrada.
+- [37:14] Entonces nosotros podríamos, si la tiene y la ingresa, la puede dejar ahora ingresada a pesar de que le tire el mensaje error para que quede ya cifrada en nuestro sistema
+- [37:22] Y nosotros de ahí podamos hacer pruebas sin depender directamente de que usted haga el inicio de sesión.
+- [37:28] Déjame revisar.
+- [37:29] Porque nosotros, el sistema como funciona, usted ingresa con su root, y el root es del mismo de la misma empresa,
+- [37:35] y nosotros dentro también tenemos un administrador para cada uno de los roots, aparte de su usuario.
+- [37:41] Entonces la conexión usted la hace con el root, el nombre de usuario y contraseña,
+- [37:46] Y yo después me meto con la contraseña de administrador a su cuenta. No puedo ver los datos porque están cifrados, pero al tenerlos guardados ya me permite realizar pruebas sin depender directamente de que usted haga este inicio de sesión cada vez.
+- [38:00] Perfecto.
+- [38:01] Entonces así, en el caso remoto de que la API Key se haya caducado por no conexión, tendríamos que decirle, estimado, le vamos a pedir que a tal hora pueda hacer un inicio de sesión.
+- [38:10] Y ahí sería como ya lo mínimo que tendríamos que molestarlo con este tema, que es bastante tedioso con la API Key de Castle.
+- [38:19] Sí, no, es que no me acuerdo. Mira, las voy a buscar y te voy a dejar configurado eso. Lo que pasa es que Replay tiene dos portales, porque tú entras por el seller vendor y por mira aquí.
+- [38:34] De hecho, con, si mal no me equivoco, era París también teniendo dos portales en su momento y fue bastante tenso.
+- [38:43] Pero uno es Envíame, que es para...
+- [38:49] Ah, esperamos, está mandando un correo replay.
+- [38:54] Vamos a ver qué caso me... aquí está.
+- [39:18] Sí, sí.
+- [39:19] Porque no me acuerdo dónde están los API Key aquí.
+- [39:30] Y, ah, no, no, no, no, no, no, no.
+- [41:03] Ya, ok, no hay ningún problema.
+- [41:06] Ok, don Danilo, de todas formas, por lo que vi ya, dentro del nivel de usuario de comprensión, realmente no tengo mucho que decirle ya que somos colegas dentro de lo que vendría a ser TI.
+- [41:19] Viendo lo que vendría a ser una vista rápida del sitio, yo sé que usted lo va a revisar, tenemos varios módulos acá que vendría a ser, por ejemplo, preguntas, reclamos y mensajes estarían ligados directamente a lo que vendría a ser Mercado Libre.
+- [41:33] Eso se notaría directamente de lo que vendría a ser Mercado Libre.
+- [41:37] La página de envíos también depende del seller. Como puede ver, cada uno de sus sellers tiene también su propio mundo.
+- [41:44] Por eso, esta una de las páginas con la que vendría a ser la publicación es la que se ve diferente por seller.
+- [41:50] Mira, Carlos, yo lo que necesito en esta etapa con ustedes, y que yo creo que va a ser eventualmente todo el primer año de uso del...
+- [42:03] De la aplicación va a ser exclusivamente tener la administración de las publicaciones. Perfecto. Lo más probable es que ni el inventario, ni las ventas, ni nada pasen por ahí. Perfecto. ¿Por qué? Porque yo tengo, yo trabajo con BeSale como facturador y BeSale se encarga de mi inventario y BeSale se encarga de la notificación de mis ventas.
+- [42:32] B-Sales se encarga de subirme las, bueno, a través de otro partner que es Pivot, que me sube las boletas y todo el tema.
+- [42:47] Entonces, la verdad que las preguntas de Mercado Libre, afortunadamente hoy en día con esa, con la IA, que contesta puras hueás, pero al final contesta.
+- [42:59] Perfecto. Bueno, igual de todas formas, le va quedando acá el registro. Entonces, puede ir revisándolas desde acá, de todas formas, y con lo que usted me dice, que si hay módulos que no los va a utilizar, podríamos evaluar lo que vendría a ser quitarlos de la vista para que no le vayan a interrumpir.
+- [43:19] Yo creo que después, ya cuando yo tenga las publicaciones estandarizadas, lo que pasa que, mira, es absurdo que, mira, yo diariamente en esta temporada, que es la temporada, o en temporada alta, yo de Mercado Libre puedo recibir diariamente unas 300 órdenes.
+- [43:49] De Falabella puedo recibir unas 80 órdenes.
+- [43:53] De París puedo recibir, porque resulta que París tiene menos publicado,
+- [43:58] pero París vende más que Ripley para mí.
+- [44:01] De París puedo recibir unas 15 órdenes, de Ripley con suerte podré recibir dos,
+- [44:09] y de Walmart debo recibir en temporada alta ocho a la semana.
+- [44:14] Entonces, no puede ser. Tampoco se trata de que yo vaya a vender igual en todos los markets, porque no todos los markets venden igual, pero la diferencia, por ejemplo, entre Ripley y París no puede ser tan radical.
+- [44:30] Entonces, para eso, ¿qué es lo que pasa? Que se condice mi nivel de venta con mi nivel de publicaciones.
+- [44:39] Si yo no tengo todo publicado, obviamente que no voy a avanzar todo lo que yo quiero en mis ventas.
+- [44:47] Tengo un muy buen volumen de venta, pero como soy avaro, quiero tener más.
+- [44:54] Entonces, necesito primero eso.
+- [44:58] Publicación y visibilidad es lo que necesita.
+- [45:00] Exacto, yo los otros temas los tengo relativamente bien resueltos.
+- [45:30] Carga de las boletas, me notifica las ventas, me hace la... porque tengo, lo otro que tengo ahí, por ejemplo, es que los SKU están... tengo la cagá con los SKU en el resto, o sea, para mí el resto es París, Ripley, o sea, todo lo que sea distinto a Mercado Libre y Falabella es el resto.
+- [45:52] Perfecto, se entiende, se entiende. Me imagino que igual al momento de realizar las publicaciones se perdió el control de los SKU y todo.
+- [45:58] Claro, lo que pasa es que yo antes, como lo hacíamos todo manual, por el SKU sabía de dónde venía la venta. Entonces, ahora, como tengo todo el control de inventario con un SKU único, obviamente, que es como debe ser, pero Pivot me ofrece la posibilidad de traducir ese SKU.
+- [46:22] O sea, el SKU de Falabella es 1, 2, 3, 4, o sea, el SKU que está en Bisegles es 1, 2, 3, 4, y el de París dice, tacita de color verde, Pivot sabe que cuando llega una orden con tacita de color verde, tiene que rebajar una o N unidades de 1, 2, 3, 4.
+- [46:46] Claro, ahí va la relación.
+- [46:47] Entonces, es una tremenda ayuda. O sea, imagínate lo que era para mí tener que subir alrededor de 300 o 400 boletas diarias. Era una locura.
+- [47:02] En cambio, Pivot lo hace solo, es transparente, y como es un partner validado por los otros markets, una vez que tú te conectas con Pivot, con ellos, dejan de huevearte de que, ah, no has subido una boleta, porque saben que de repente lo hace todos los días o a veces cada dos días, dependiendo el número de boletas.
+- [47:26] Entonces, si tienes cinco boletas, no andas guayando todos los días, espera cada tres días y sube las boletas, pero no te jodes de que, ay, ayer no subiste tus boletas, ayer no subiste tus boletas, ¿cachái? Entonces, es súper práctico. Y ese tema lo tengo resuelto, y mientras no haya otro proveedor que me resuelva de mejor manera eso, aparte de que es re barato, si cobran una UEFE, por eso.
+- [47:52] No, no hay que arreglarlo que ya funciona.
+- [47:54] No, si funciona no lo toques. Exacto, exactamente. Déjalo ahí nomás, a lo más pásale un pañito por fuera, pero no lo toques.
+- [48:04] Entonces, bueno, ¿para qué le voy a fantasmear más lo que vendría a ser el sistema? Me llevo estas tareas para la casa, me comprometo hoy día en horario PM tenerle un estimado de cuándo tendríamos los productos ya cargados,
+- [48:18] Y le voy a compartir también mi número, si puede también me... me imagino que Sergio también tiene su número, le voy a hablar por interno para que lo tenga registrado.
+- [48:27] Sí, él lo tiene y ahí mándame un WhatsApp con tus datos.
+- [48:32] Perfecto. Mire, ahora vamos entonces a hacer esta validación. Voy a hablar con los chicos del equipo de desarrollo.
+- [48:38] Y, mire, en caso de, hoy es jueves, ¿cuándo sería un día estimado que podamos disponer de que se haga este inicio de sesión pensando que no debería tardar más de 15 minutos?
+- [48:53] ¿Para probar qué cosa?
+- [48:57] El inicio de sesión nuevamente. Esto pensando que tuvimos dos fallas de los sellers ahora hace poquito y uno quedó conectado.
+- [49:04] Dime tú.
+- [49:34] Entonces, nos comunicamos durante el día, yo te digo, oye, ya está cargado, y ahí vemos cuándo tenés tiempo tú, cuándo tengo tiempo yo, si quieres lo vemos mañana, si quieres lo vemos sábado, si quieres lo vemos lunes, no sé, no hay problema.
+- [49:46] Mire, mi idea es que este fin de semana podamos estar haciendo la carga masiva de los sellers importantes. Entonces, la idea es que vamos hablando durante el día de mañana, si es que es necesario, como le digo, y vamos haciendo la prueba en comunicación.
+- [50:02] comunicación. Ok. Eso, estimado. Vale. Listo, pues. Ya, pues, estamos hablando, entonces. Muchas gracias por su tiempo, que tenga muy buen día. Acuérdate de mandarme tu, un WhatsApp, tu número, o si quieres anotar mío al tiro. Démelo de inmediato. Nueve, es nueve, siete, dos, uno, tres, seis, uno, cero, cinco. Nueve, siete, dos, uno, tres, seis, uno, cero, cinco. Cero, cinco, sí. Ya, estimado. Ya.
+- [50:37] Listo, pues aquí tengo un buen día. Vale, hablamos, chau chau. Chau chau.

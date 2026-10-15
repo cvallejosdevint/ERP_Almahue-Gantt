@@ -9,12 +9,10 @@ from pathlib import Path
 
 from faster_whisper import WhisperModel
 
-PROMPT = (
-    "Reunión de ERP agrícola en Chile. Español chileno. "
-    "Vocabulario: Almahue, AlmaWeb, Agrosoft, cotización, orden de compra, "
-    "orden de venta, proforma, cartola, GoSocket, SII, CAF, folio, "
-    "nota de crédito, nota de débito, centro de costo, PIN, MJ, Agustín."
-)
+_LEXICO = Path(__file__).resolve().parents[1] / "transcript-lexico"
+if str(_LEXICO) not in sys.path:
+    sys.path.insert(0, str(_LEXICO))
+from normalize import load_hotwords, load_initial_prompt, normalize_chilean_transcript  # noqa: E402
 
 
 def _prepend_nvidia_cuda_bins() -> None:
@@ -42,7 +40,7 @@ def write_md(out: Path, title: str, source: str, model: str, device: str, comput
         f"Idioma: {info.language} (p={info.language_probability:.2f})",
         f"Modelo: faster-whisper `{model}` {device} {compute} + VAD",
         f"Fuente: {source}",
-        "No es fuente de requisitos. Contrastar con tl;dv y minutas MJ/Agustín.",
+        "Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).",
         "",
     ]
     n = 0
@@ -51,7 +49,7 @@ def write_md(out: Path, title: str, source: str, model: str, device: str, comput
         hh, rem = divmod(t0, 3600)
         mm, ss = divmod(rem, 60)
         stamp = f"{hh:02d}:{mm:02d}:{ss:02d}" if hh else f"{mm:02d}:{ss:02d}"
-        text = (seg.text or "").strip()
+        text = normalize_chilean_transcript((seg.text or "").strip())
         if not text:
             continue
         lines.append(f"- [{stamp}] {text}")
@@ -118,7 +116,9 @@ def main() -> int:
                 str(audio),
                 language="es",
                 vad_filter=True,
-                initial_prompt=PROMPT,
+                beam_size=5,
+                initial_prompt=load_initial_prompt(),
+                hotwords=load_hotwords(),
                 condition_on_previous_text=False,
             )
             write_md(out, title, source, args.model, args.device, args.compute_type, segments, info)

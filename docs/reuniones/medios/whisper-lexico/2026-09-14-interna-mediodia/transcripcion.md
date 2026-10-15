@@ -1,0 +1,227 @@
+# 2026-09-14-interna-mediodia (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: E:\source\repos\Almahue\docs\reuniones\medios\whisper-local\2026-09-14-interna-mediodia\audio.wav
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:10] Aló, aló.
+- [00:11] Puta, estaba muteado cuando estaba hablándote.
+- [00:21] Buena.
+- [00:22] Ya.
+- [00:23] Oye, Carlos, ¿preparamos la reunión de la tarde?
+- [00:26] Vale.
+- [00:27] Ya.
+- [00:28] ¿Cuál va a ser el foco de la reunión de la tarde?
+- [00:37] Yo creo que tendríamos que ver lo que tenemos de los módulos para que nos den feedback,
+- [00:43] y ver si es que, bueno, por lo que estuve viendo no hay actualizaciones de Trello tampoco
+- [00:47] todavía.
+- [00:48] Aún no, ¿eh?
+- [00:49] No.
+- [00:50] No. Entonces, igual, me imagino que ellos piensan que todavía vamos a revisar todos los módulos de nuevo en la reunión. Entonces, estaba pensando que igual como por adelantar algo, revisar lo que está hecho del módulo de tesorería, que está bien avanzado, a obtener ese feedback, ver si es que faltaron detalles.
+- [01:29] Ahí podríamos liberar igual al Diego de eso, por último lo termino viendo yo, y dejamos que el Diego vea otra cosa, pero igual estaba, me faltaron correcciones de la semana pasada que nos dieron del módulo de ventas, que eso estaba aplicando ahora.
+- [01:58] Puta la weá, entonces, no tiene ningún sentido la reunión desde la tarde weá.
+- [02:04] Así es, después de ver la reunión me puse a revisar el trelo para ver correcciones y llegar con eso ahí, pero no hay nada, nada, nada, nada, nada, pero si por último, si los chicos llegasen a ver algo, podríamos llegar también con las dudas de ellos, ahora que quiero igual tengo anotadas las que hablamos delante.
+- [02:30] Ya, yo creo que eso deberíamos resolver, pero, mira, revisemos el sistema, comparte pantalla.
+- [02:49] Quitamos.
+- [02:56] Bien. Bueno, los reportes nada por ahora, ¿cierto? Presupuestos. ¿Y eso lo tenemos?
+- [03:06] Esto es parte del módulo de contabilidad que se solicitó que se tenían que dejar presupuestos por el tema de los proveedores, si mal no me equivoco.
+- [03:17] O sea, no, perdón, de los contratistas.
+- [03:20] Contratistas.
+- [03:30] Comprobante, centralización masiva.
+- [03:32] ¿Y centralización masiva qué es lo que hace?
+- [03:34] Acá, centralización masiva. La verdad no recuerdo bien casi este módulo, Sergio, si te miento.
+- [03:41] Ya, ok.
+- [03:45] Tenemos contabilidad, insumo, bodegas.
+- [03:48] ¿Ese qué tenemos?
+- [03:50] Insumo, bodegas.
+- [03:54] ¿Sí?
+- [03:55] Esos serían los productos, ¿no?
+- [03:57] Exacto.
+- [03:58] ¿Pero y ese no tenía un mantenedor de productos para la administración? ¿Ahí no tiene una administración?
+- [04:03] No, aquí no hay.
+- [04:05] Ah, y ahí se crean los productos.
+- [04:07] Sí, sí, productos. Esto acá.
+- [04:08] Ah, perfecto. Ya tenemos mantenedor. Las bodegas también existen mantenedores.
+- [04:13] Y aquí, por ejemplo, tenemos un visor más cómodo.
+- [04:17] Desde aquí podéis ver los productos por bodega.
+- [04:21] O podéis ver los productos en qué bodega están.
+- [04:27] Ya, y no puedo ver, por ejemplo, un global.
+- [04:30] De todo no, nos tenemos como un global.
+- [04:33] Ah, ya, ok. ¿Y ese movimientos, NC?
+- [04:37] Esto es para hacer los movimientos entre bodegas. Las entradas también a las bodegas, registrar eso.
+- [04:42] ¿Y qué significa NC?
+- [04:45] Es mentira.
+- [04:48] ¿Y por qué lo pusimos así? ¿Ahí ya lo vieron?
+- [04:51] No, eso debe ser el cursor que se truqueó.
+- [04:53] Y a ese hay que borrarlo. Y a ese el ajuste que hay que... Ese déjalo para borrar ese título, ¿ya? Que sea como un movimiento. Y a este queda salida de venta, salida de venta, ¿ya? El ver, ¿el ver qué te hace?
+- [05:10] Espera un poquitito, así que estoy anotando el que si no se va a venir.
+- [05:14] Dale.
+- [05:26] ¿Cuál más, ahora?
+- [05:29] El ver, ¿qué hace?
+- [05:31] ¿El ver dónde?
+- [05:32] La columna, ahí al lado derecho.
+- [05:35] Ah, como el detalle.
+- [06:18] La salida de venta viene desde la factura, ¿cierto? Ese movimiento.
+- [06:23] La salida de venta viene de la factura.
+- [06:26] Sí, ¿o no?
+- [06:28] Y cuando hacen movimiento entre bodegas, ¿también se hace con factura?
+- [06:32] Con guía.
+- [06:35] Eso sería con una guía de despacho, cachái.
+- [06:38] Por eso digo yo que no sé si se puede editar, ¿por qué?
+- [06:40] Porque esto igual un poquito se alimenta como contabilidad, cachái,
+- [06:46] que se va a alimentar desde otro módulo.
+- [06:48] En este caso, ventas. ¿Ya? Entonces, si esa venta es un documento tributario electrónico, ese no se puede editar. ¿Cachái? Entonces, acá no debería tampoco poder editarse porque, en cierto modo, pueden maquillar todo el stock. ¿Me explico?
+- [07:05] Oye, ¿cómo podría probar el sistema yo? ¿Cómo el acceso que mandaste ayer lo podía ir al grupo?
+- [07:22] Sí, sí.
+- [07:25] ¿Y cuál era el usuario ese?
+- [07:28] Es admin arroba Almahue punto local y la clave es admin con A mayúscula, 1, 2, 3 y signo de exclamación.
+- [07:37] Aquí estoy.
+- [07:39] Buenísimo.
+- [07:45] Estamos faltos de feedback, Sergio, esa es la verdad.
+- [07:47] Todo esto, por ejemplo, debía haber sido un aviso de ellos, pues no de tu parte.
+- [07:50] Sí, es que eso, mira, ahora estoy guiando al José que me tiene que mandar un acceso para llamar al Mario, güey, que ya es mucho ya lo que estamos esperando, güey.
+- [08:02] Pero igual tenemos altas cositas que están muy buenas, güey. En estado de cuenta, ese güey me gustó caleta esto, que podéis ver el detalle, güey.
+- [08:11] ¿De la carga de la cartola?
+- [08:14] En estado de cuenta.
+- [08:16] ¿De acá?
+- [08:19] Cachái, eso estaba buenísimo, huevón.
+- [08:52] Bueno, es contable, cachái, y que no participe Lupe, o no sé si tiene que participar, pero hoy día, por ejemplo, hacer reunión, quiero hablarlo con el Mario. Ah, hoy día no está la, ah, sí está, la María Jesús, por favor.
+- [09:05] Sí, sí, o está, el último día que está es mañana.
+- [09:08] Ya, entonces, por ejemplo, hoy día juntarnos con Mario, que sea con ellos, ya sé cómo está planificado, pero mañana, o no sé qué día, con Lupe, enfocarnos tesorería, solo tesorería, cachái, y después, no sé, pues mañana, a lo mejor mañana mismo también, que tú te juntís con la María Jesús, solo a ver contabilidad.
+- [09:37] Vale.
+- [10:09] Muchos requerimientos y ahí, a mí en lo personal, eso igual me colapsa un poco.
+- [10:20] Aparte, no sé, tú cachés que de repente llega el Mario y el Mario dice, ah, pero ¿por qué no vemos este otro módulo?
+- [10:24] Al tiro empiezan como adelantar la pega que ellos deberían hacer en la reunión, po.
+- [10:31] Y no es como, por ejemplo, de que tengan ellos un problema al ingresar si está actualizado y publicado en el sistema.
+- [10:37] Ellos podrían hacer esa revisión de ver los módulos, tendrían que hacerlo fuera de la reunión,
+- [10:42] O no sé si es que, por ejemplo, cambiar el modus operandi de la reunión y que ellos compartan pantalla y prueben, porque si no, no lo van a hacer.
+- [10:56] Ese igual sería buena idea, que ellos, por ejemplo, ya revisen, pero en realidad no tiene ningún sentido que estemos nosotros aquí, bueno, mientras ellos hacen las pruebas.
+- [11:08] Claro, porque es cómodo que nosotros estemos compartiendo pantalla, ya, ajustame esto, ajustame acá.
+- [11:13] Y Sergio, yo anoto, pero después voy a ver mis notas, no me entiendo porque tengo que hacerlo rápido para no estar cinco minutos, porque yo tengo que, ahí soy un poco quisquilloso, me intento adaptar igual, pero si anoto con muy poco detalle después no me entiendo, entonces eso me obliga después a tener que ir a ver los videos que son de una hora y media y escaleta, ¿cachái?
+- [11:34] No, pero es que si te diste cuenta, por ejemplo, el trabajo que hicimos la semana pasada, enfocándonos solo en ventas, nos funcionó como bueno.
+- [11:46] Pero mira, ahora estoy viendo igual el mismo video, voy recién, mira, son las once y media, voy en el minuto treinta y uno para aplicar las correcciones de la semana pasada, vos cachái.
+- [11:57] Que esas correcciones serían útiles, que estén en una carta de Trello, como tienen que arreglar esto, cachái.
+- [12:02] ¿Cachái? Porque tengo que presentar, tengo que estar pendiente de entender lo que están diciendo, tengo que ir anotando y después tengo que ir cambiando la página yo mismo, entonces igual me obligo después a ver los videos, ¿cachái?
+- [12:19] Ok, me cuesta así como ir tomando una nota de la... y de hecho por eso me ha apoyado mucho en grabar las reuniones y hacer transcripciones para poder acelerar un poco, pero compartir, estar respondiendo preguntas y tomar notas de la reunión como minuta también se me va un poquitito en collera y eso ya me pasa a hacer, por ejemplo, esto es del viernes, o sea, esto el viernes también lo estaba haciendo.
+- [12:43] Mientras intentaba como pasarle el requerimiento al Felipe también, mostrándole el sistema, estaba viendo el video de la reunión del jueves y ahora de nuevo lo estoy viendo, pues cachái, entonces el modus operandi, puta yo, me sintió bastante con harta pega, con harta pega, con harta pega.
+- [13:02] Y se me pasa después del horario laboral también, cachái, tengo que estar, para poder estar al día tengo que estar viéndolo igual después de, no sé, tengo dos clases, vuelvo e intento por último ver el video y anotar, ya quizás no programar, pero ver el video y anotar los pendientes.
+- [13:19] Entonces, es harta la carga. Ahora, por ejemplo, con las conversaciones igual que tuvimos el viernes o jueves, creo que fue, con los chiquillos, pucha, no tengo documentos hechos porque imagínate si es que me pusiera a crear documentos, pues me atrasaría 10 veces más.
+- [13:39] Entonces, tengo que ahora, yo sé que los chiquillos no quieren ver los videos, y la idea tampoco es que los vean, pero en mi mente ya me estoy así como torturando de que puta, tengo que de una u otra forma, todo eso que está en la reunión anterior y que los cabros no quieren ver, dejárselo en un requerimiento, ¿por qué?
+- [13:57] Porque vamos a llegar a preguntar cosas que ya se preguntaron con anticipación, que no están en un documento, que están en transcripciones, que están en video, y que no tengo en mi cabeza, así como para decirle a los chiquillos, así con claridad.
+- [14:08] No, chiquillos, si miren, en una reunión se dijo esto, esto, no, no tengo la capacidad mental tampoco para decirlo.
+- [14:13] Ya, pero tranqui, tranqui con eso, Carlos, tranquilo.
+- [14:18] Si los muchachos vamos a tener una reunión, y los muchachos van a preguntar algo que ya a lo mejor te pueden decir, oye, si esto lo vimos con Carlos,
+- [14:24] Ah, sí, perfecto, pero ahora nosotros le estamos haciendo doble clic a este módulo, cachái. Entonces ahí no te preocupís. Y como te digo, yo creo que el modo que implementamos la semana pasada, solo enfocándonos en algo, solo enfocándonos en una sola cosa, ventas, ventas, ventas, pues, lo cerramos, ¿cierto?
+- [14:47] Claro, como te digo, las correcciones del juego no, pues un poquito.
+- [14:50] Mínima, po.
+- [23:06] Y hacer el ejercicio, mostrarles cómo tienen que hacerlo en el Trello, cachái, como con dos ejemplos, y pasar a otro tema, para que igual ellos empiecen a moverse ahí, y quizás dejarles también la tarde para que vean el Trello, cachái, hagan actualizaciones, vean el sistema y actualicen, po.
+- [23:23] Ya, cambiamos el foco entonces a la red, mira.
+- [23:25] ¿Cachái? Podríamos, por ejemplo, mostrar, ya miren, ¿saben qué? Vamos a ver lo que vendría a ser contabilidad, vamos a ver algunas de las pestañas, ¿cuáles ustedes creen que sean las más importantes? Perfecto, veamos esas pestañas, y hacer el ejercicio con el trelo aquí al lado, así como decirle, ya miren, la idea es que cuando ustedes hagan estas revisiones fuera de estas reuniones, tomen una captura de pantalla de lo que necesitamos corregir, y lo peguen acá en el trelo con un comentario.
+- [23:47] Y ahí, por ejemplo, hacer un ejemplo de por pestaña una corrección, pero no todas, ¿cachái? Dejarla amarrada a ellos de que, perfecto, necesitan esa corrección, no hay problema, necesito que la integren en el trelo. Para igual, como, soltar un poco el tema de tener que así como tener la reunión, que después tengo que verla de nuevo para planificar, ¿cachái?
+- [24:09] Entiendo.
+- [24:10] No sé si se tinka.
+- [24:11] ¿Ya? ¿Sí? Sí, me tinka. Si podemos ir ajustando eso.
+- [24:15] Bacán.
+- [24:18] Porque así igual podríamos dejarle libre la tarde a ellos para que lo hagan, po.
+- [24:24] Sí, bueno, sí, porque si no nos vamos a estar nosotros todo el rato encima de ellos, bueno.
+- [24:30] Cachái, llegar con esa actitud, decirle a la reunión, mira, chiquillos, ¿sabes qué vimos?
+- [24:34] No tenemos información en el trelo, la idea de nosotros era que el día de la mañana viéramos todo lo que ustedes nos dejaban en el trelo y llegar con dudas,
+- [24:41] Pero lamentablemente no tenemos esa información, así que vamos a hacer el ejercicio, unos 20 minutos nomás, y vamos a revisar las páginas, un comentario, perfecto, se puede capturar a pantalla el comentario, otra pantalla, perfecto, se puede capturar a pantalla el comentario, cachái, y ahí por ejemplo, como vamos a terminar viendo todas las pantallas, hay algunas que yo, aquí hay hartas que el cursor se truqueó, Sergio, no te voy a mentir, pero de que nos digan, esta sirve, esta no sirve, hay que eliminarla, esto se pasa ahí, ya, perfecto, yo voy a agregar un comentario, por favor complementenlo en el trelo.
+- [25:09] Ya.
+- [25:13] ¿Sí? ¿Me parece bien? Validemos lo que ellos, en la reunión ahora, que se conecten y que ellos puedan compartir pantalla, ¿cachái?
+- [25:24] Vale.
+- [25:25] Yo igual que ahora voy a llamar al alcalde, ¿cómo se llama?
+- [25:34] El Mario, el Mario.
+- [25:36] El Mario.
+- [25:37] Porque igual, así como ahora, como que te lo dije en la parte de los videos, que de verdad es pesado, así como te digo, el tema de anotar, como anoto igual rápido para poder llevar la reunión, después veo lo que anoto y digo, no tiene ni mente ni cabeza, más encima igual a veces hay términos que no entiendo, entonces tengo que ver el video, pausar el video, buscar en internet, preguntarte a ti si es que no entiendo algo, y es lento.
+- [26:00] Sí, es igual de lento.
+- [26:30] Ya, mira, todas estas son para ustedes, todas estas tarjetas tenemos. Por ejemplo, el modo de definir, ya, ¿quién se va a hacer cargo del módulo de contabilidad? Tal persona, perfecto. ¿Se las puedo asignar a ti? Ya, se las asignamos a todas ellas, cachái. Si las podríais agrupar, bacán, huevón.
+- [26:46] Por ejemplo, ahora están, eh, por, están por páginas, pero están con el nombre del módulo y la página que corresponde, cachái.
+- [26:54] ¿Cuál más? Voy a tener venta, ya están todas las de venta, administración, compras, las de compra esas yo las tiraría para atrás, inicio, parametrizaciones, contratista, contratista, contratista, insumo, bodega, contabilidad, ya, tesorería.
+- [27:21] Yo creo que eso es más el foco, güey. Dividir, güey.
+- [27:52] No, no, pero tranquilo, si o si tienen que hacer esta pega, cachái, pero yo creo que el día, el foco es ese, la reunión va a ser como salvo la bandera en realidad del día, no proyecten, o sea, lo único que tienes que proyectar tú, Carlos, es el trelo.
+- [28:10] Sí, sí, porque si no, vamos a estar dependiendo de las reuniones del jueves, de yo planificar el viernes,
+- [28:26] Y intentar transferir la información a los chiquillos, y se pierde harto ahí, de lo que yo no entiendo, que le voy a pasar a los chiquillos, que quizás tienen un poco más de entendimiento, a mí se me va harto, cachái.
+- [28:39] Entonces, si lo tuviera acá en el trelo, le digo a José, José, mira, ahí está en el trelo.
+- [28:44] Claro. Perfecto. ¿Ya? Voy a... José nos mandó la credencial de mierda, así que lo voy a llamar ahora al Mario.
+- [28:53] Vale.
+- [28:53] Ya, así que dejo al tiro un llamito. Vale, vale. Un segundito. ¿Qué más? Hoy día se me había olvidado el cumpleaños de mi papá, así que en la tarde no voy a estar. Igual, ¿para qué te va a mentir, Sergio? Por recomendación del psicólogo, me he estado delegando después de las seis y media, siete del trabajo.
+- [29:28] Sí, está bien, está bien, está bien, está bien, yo no tengo drama con eso.
+- [29:32] Y no me puedo desconectar, guay. Entonces, tengo que empezar a salir, tengo que empezar a salir, cachái.
+- [29:39] ¿Cuánto lleváis aquí? ¿Dos meses? ¿Tres meses? ¿Dos meses?
+- [29:42] Sí, tres meses.
+- [29:42] ¿Este es el tercer mes?
+- [29:43] Sí, este es el tercer mes.
+- [29:45] Ah, igual es poco, guay. Y obviamente, puta, el cambio brusco, guay.
+- [29:50] El brusco, yo creo que en comparación con la otra pega, guay.
+- [29:52] Entonces, igual, por ejemplo, me da como lata de reventa el José cuando pregunta en el grupo,
+- [29:56] Y después ya se van a juntar a las 10 y es como, puta, no debería porque tengo que salirme de la pega para no tener los problemas que tengo. Y bueno, es coático porque no quiero ni estar en el computador, por ser que el computador a mí me encanta, me encanta jugar videojuegos y toda la guá, pero como que este tiempo no he querido, entonces después me salgo e intento no estar, pero igual pienso en la jetpack.
+- [30:21] Entonces, lo que me dijo ahora las tareas de la psicóloga es que tengo que buscar un hobby, salir, porque trotar no está sirviendo, ¿cachái?
+- [30:29] Entonces...
+- [30:30] ¿Pero qué onda? ¿Qué sentís, güey?
+- [30:32] Siento insuficiencia, Sergio, no me siento capaz. Y es cuático porque yo sé que soy, pero no me siento.
+- [30:41] Y aunque, por ejemplo, tú, los chiquillos me digan que vamos bien, el cliente diga que vamos bien, es algo personal.
+- [30:49] Y...
+- [30:49] Por eso, es como un pensamiento invasivo, no es como que yo lo piense, que yo quiera pensar eso, y siendo transparente, no me gusta contarlo con ustedes porque no es algo que yo quiera pensar.
+- [31:10] Entonces igual como que el hecho de que me digan, no, pero no pensé así, o no, no debería pensar así, está ahí mal, me siento, en vez de sentirme aliviado, me siento culpable por sentirme así, y ahí como que tengo que, por eso la recomendación ahora fue como, Juan, tienes que transparentar tu situación tanto en tu familia y también en tu pega, porque aquí igual estaba como llegando, ¿cómo estáis, Carlos? No, bien, bien, bien, démosle.
+- [31:39] Y no, realmente estaba pensando en que no iba a poder, de que no iba a entender, de que no me iba a hundir, cachái, saliendo de la pega, seguía pensando en eso, así como puta la hueá, no entiendo, no entiendo, no entiendo, intentando conversar con gente, realmente no estoy ahí, estoy sumido en mis pensamientos, entonces, ha sido bien difícil, Sergio, ha sido bien difícil, no digo que es el trabajo como tal, no digo que es el trabajo, a lo mejor son situaciones que antes evitaba estando en una zona de confort.
+- [32:06] Yo creo que por ahí va.
+- [32:36] Evitar la situación. Y el evitar la situación de repente es arrancarse, ¿cachái? Y eso es para peor, porque quedo sin pega, quedo pendiente de pagar la pensión, y ahí empieza más.
+- [32:49] No, y aparte, un tema de crecimiento también, pues, o sea, yo sé que hay alta pega, y yo creo que es un problema, no un problema técnico, sino un tema de concepto, cachái, que hay mucha información que tienes que digerir, por ejemplo, no sé, entender el flujo, pero yo creo que a medida que vais resolviendo, yo creo que el problema es que construimos un mundo completo de una, cachái.
+- [33:15] Acabamos de llegar a todo.
+- [33:18] Y ahora, por ejemplo, no existe el tema
+- [33:19] de financiero, contable,
+- [33:22] gestión electrónica,
+- [33:23] modulo de flujo de aprobaciones.
+- [33:26] Si te das cuenta que a medida
+- [33:27] que tú has ido ordenado, por ejemplo, cuando te
+- [33:29] enfocaste en aprobaciones, lo cerraste,
+- [33:31] lo dejaste filete y lo entendiste.
+- [33:35] Venta, yo creo
+- [33:35] que ahora tú ya lo entiendes.
+- [33:37] Sí.
+- [33:39] Y claro, ahora está ahí en compras,
+- [33:42] pero compras es puro bla bla bla,
+- [33:43] hemos hablado, hablado, hablado, pero no
+- [33:45] No has visto nada, vos, no has entendido nada aún, así, no sé, físicamente, el cómo funciona el flujo, cachái.
+- [33:53] Pero yo creo que después cuando tú lo veas, ahí va a ir como, puta, enlazando todos los, como los módulos, cachái, los conceptos, va a ir a entender a qué corresponde.
+- [34:05] Pero yo creo que a paso a paso nomás, yo creo que igual te gana un poco la ansiedad, huevón.
+- [34:10] Es que es parte de la crianza igual de uno, por ejemplo, hablando con la psicóloga me decía de que el hecho de que a uno o es el 7 o te está yendo mal, eso repercute caleta a futuro, yo por ejemplo no siento que he logrado cosas, siento que he cumplido con lo que debo hacer, pero no siento como que yo diga, oh bacana, así como que entiendo ahora contabilidad, digo, puta entiendo contabilidad, ahora tengo que irme a tesorería, cachái, entonces no hay como, mi cerebro como que no tiene como ese descanso de,
+- [34:40] Juan, bájate un poco porque ya aprendiste esto
+- [34:42] y mañana te va a tocar lo otro, po.
+- [34:45] Es siempre la ansiedad, po.
+- [34:47] Esa es la ansiedad y
+- [34:48] igual tenés que
+- [34:50] tratártela, o sea, tratar
+- [34:52] de identificar
+- [34:54] o de calmarte un poco porque a mí igual me pasa
+- [34:56] yo también soy muy así
+- [34:58] pero
+- [34:59] yo igual he aprendido
+- [35:02] que en cierto modo, Juan, si no se da
+- [35:04] hoy día, se da mañana, o pasado
+- [35:06] mañana. Y si no se da
+- [35:09] Y no llegáis, puta, lo único más, lo único terrible que puede ser es que se atrasó una semana el proyecto. Y no es algo terrible. Nadie se va a morir.
+- [35:18] Mi cerebro no, o sea, mi forma de pensarlo es como quizá...
+- [35:23] Por eso, pero, por eso, que a lo mejor, tú sientes que a lo mejor no sé, oye, vamos a viajar para allá, puta, si ese viaje se atrasa dos semanas, una semana, no es problema, por eso también yo, puta, meto a los muchachos para que también te ayuden, cachái,
+- [35:38] ¡Gracias!
+- [36:10] De venta, nos fuimos después a contabilidad, de contabilidad a compra, a compra, nos fuimos, te salió bien, te salió bien.
+- [36:15] Si bien están todos lazados, pero terminemos una parte, cerramos esa y después que lo entendiste, mira,
+- [36:21] todo ahora se tiene que conectar para acá. ¿Y por qué? Porque esto y esto. Ah, ya, entiendo, entiendo, perfecto.
+- [36:27] ¿Sí? Porque ya sabes cómo funciona como la base de un módulo.
+- [36:31] Entonces, después si fue contabilidad, entendiste lo que es el plan de, bueno, hiciste el plan de cuenta y todo,
+- [36:36] Yo creo que hay que repasarlo más cuando ya conectes con 20 y compro contabilidad. Ahí vas a entender a qué es lo que es un comprobante electrónico, otra vez el tipo de cosas. Y después lo vamos a tener que, eso es, con el contabilidad conectarlo con compra. Y va a ser lo mismo, cachái. Diferentes tipos de movimiento nomás.
+- [36:54] Oh, Sergio, tengo que ir a mover el auto, viene la basura.
+- [36:57] Ya, dale, dale, ya va a reír. Eso.
+- [37:00] Ya va a reír. Ahí cualquier cosita me avisa.
+- [37:03] Tranquilo nomás, tranquilo. Oye, ahí alíneanos muchachos que te den una horita, si no voy a estar trabajando de noche, que te pasen las cosas nomás, para que tú puedas probar durante el día, nomás.
+- [37:13] Vale.
+- [37:14] Si en cierto modo vaya a ser el 4.
+- [37:16] Sí, hoy día tengo el cumpleaños del viejo, así que en la noche no va a pescar nada.
+- [37:22] No, pues písale, claro, hoy día no me voy a conectar porque tengo el cumpleaños de mi viejo, si me pueden dejar las cosas para mañana y listo.
+- [37:29] Vale, vale.
+- [37:30] ¿Ya?
+- [37:31] Vale, gracias.
+- [37:32] Vale.
+- [37:33] Hablamos. Nos vemos. Chau.
