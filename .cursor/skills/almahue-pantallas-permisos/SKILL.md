@@ -7,7 +7,7 @@ description: Catálogo de pantallas vs Sidebar y modulo:read/write; OC Compras v
 
 ## Catálogo vs Sidebar
 
-Catálogo `pantallas-permisos` **alineado** con `Sidebar.tsx` (2026-08-27): Ventas = Operación (OV, Emitir DTE) / Libros (ventas, guías) / Clientes. Alias `Emitir documento` → `Emitir DTE` y `Guías de despacho` → `Libro de guías`. Compras = OC, Aprobaciones, Recepciones, Libro. **Sin** Cotizaciones.
+Catálogo `pantallas-permisos` alineado con `Sidebar.tsx`: Ventas en un solo nivel (OV, Emitir DTE, Libro de ventas, Libro de guías, Clientes). Sin grupos Operación, Libros ni Maestros. Alias `Emitir documento` → `Emitir DTE` y `Guías de despacho` → `Libro de guías`. Compras = OC, Aprobaciones, Recepciones, Libro. **Sin** Cotizaciones.
 
 Al editar roles, menú o el catálogo:
 

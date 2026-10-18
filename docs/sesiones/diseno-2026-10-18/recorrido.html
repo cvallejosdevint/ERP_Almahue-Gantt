@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Diseño de pantallas. De dónde sale el dato.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "1. Proformas",
+        img: "despues-proformas.png",
+        alt: "Proformas sin recuadros",
+        pins: [
+          { x: 88.2, y: 31.0, t: "Filtro Todas", d: "El filtro de la lista vive en la barra de la tabla. No se aplicó otro estado." },
+          { x: 85.5, y: 41.7, t: "Acciones", d: "Una sola columna. Cada accion tiene un icono distinto y el nombre sale al entrar el mouse, aunque se mueva dentro del boton. No se notificó ni se asoció factura." },
+          { x: 54.8, y: 50.2, t: "Estado", d: "Pendiente de aprobacion ocupa dos lineas y queda centrado en la pastilla." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "2. Traspaso",
+        img: "despues-traspaso.png",
+        alt: "Traspaso con los atajos, sin recuadros",
+        pins: [
+          { x: 39.5, y: 73.8, t: "Atajos", d: "Cada boton abre su lista y cierra las otras. El asiento sigue solo con facturadas. No se apretó Traspasar y cerrar." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "3. Ingreso diario",
+        img: "despues-ingresos.png",
+        alt: "Ingreso diario con totales abiertos",
+        pins: [
+          { x: 58.3, y: 21.1, t: "Totales", d: "Suma del listado del periodo. Se pliega. No se creó un ingreso." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "4. Reporte de ingresos",
+        img: "despues-reporte.png",
+        alt: "Reporte con el total abierto",
+        pins: [
+          { x: 58.3, y: 38.2, t: "Totales", d: "Tarjetas del total, los contratistas y cada dia. Se ven al entrar, sin pulsar Buscar. No se exportó." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "5. Auditoria",
+        img: "despues-auditoria.png",
+        alt: "Auditoria con totales abiertos",
+        pins: [
+          { x: 58.3, y: 21.1, t: "Totales", d: "Cantidad de eventos del periodo. No se editó un evento." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "6. Libro diario",
+        img: "despues-libro-diario.png",
+        alt: "Libro diario con totales abiertos",
+        pins: [
+          { x: 58.3, y: 26.6, t: "Totales", d: "Asientos, debe, haber y cuadrado del periodo. No se contabilizó." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "7. Mayor",
+        img: "despues-mayor.png",
+        alt: "Mayor con totales abiertos",
+        pins: [
+          { x: 58.3, y: 26.6, t: "Totales", d: "Debe, haber, deudor y acreedor. No se publicó un asiento." }
+        ]
+      },
+      {
+        mod: "Tesoreria", cls: "teso",
+        title: "8. Conciliacion",
+        img: "despues-conciliacion.png",
+        alt: "Conciliacion con totales abiertos",
+        pins: [
+          { x: 58.3, y: 26.3, t: "Totales", d: "Van debajo del titulo. Conciliados y pendientes del periodo. No se calzó un movimiento." },
+          { x: 73.7, y: 40.4, t: "Filtro", d: "Todos y Pendientes quedaron en la barra, junto a la busqueda. No se cambió el filtro." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "9. Ordenes de venta",
+        img: "despues-ordenes-venta.png",
+        alt: "Ordenes de venta con menu plano y totales",
+        pins: [
+          { x: 9.2, y: 79.8, t: "Menu", d: "Ventas en un solo nivel: Ordenes de venta, Emitir DTE, Libro de ventas, Libro de guias y Clientes." },
+          { x: 58.3, y: 32.7, t: "Totales del periodo", d: "Tarjetas de ordenes, clientes distintos, monto y un recuadro por estado. Se pliegan." },
+          { x: 91.2, y: 64.7, t: "Historial", d: "Usuario, dia y hora de la orden. El clic en la fila abre el documento. No se imprimió." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "10. Emitir DTE",
+        img: "despues-emitir.png",
+        alt: "Selector de orden con total e historial",
+        pins: [
+          { x: 58.3, y: 50.0, t: "Totales", d: "Tarjetas de ordenes listas, clientes y monto. Es de solo lectura. El descuento del wizard sigue en su panel." },
+          { x: 86.5, y: 63.1, t: "Historial", d: "Abre el historial de esa orden. No se apretó Facturar." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "11. Orden de insumos",
+        img: "despues-oc-insumos.png",
+        alt: "Detalle de la orden madre sin recuadros",
+        pins: [
+          { x: 91.4, y: 13.4, t: "Notificar", d: "El boton queda a la derecha del aviso de monto. No se envió el aviso." },
+          { x: 73.1, y: 92.6, t: "Cerrar orden madre", d: "Verde, en el pie, junto a Editar. No se cerró la orden y no se contabilizó." }
+        ]
+      },
+      {
+        mod: "Parametrizacion", cls: "param",
+        title: "12. Monedas",
+        img: "despues-monedas.png",
+        alt: "Monedas con titulo, botones y totales",
+        pins: [
+          { x: 88.8, y: 11.3, t: "Botones", d: "Actualizar lleva borde y Nueva moneda queda en verde, al final, a la derecha del titulo. No se creó una moneda." },
+          { x: 58.3, y: 26.8, t: "Totales", d: "Monedas, activas y con indicador, debajo del titulo y antes de la tabla." }
+        ]
+      },
+      {
+        mod: "Parametrizacion", cls: "param",
+        title: "13. Indicadores BC",
+        img: "despues-indicadores.png",
+        alt: "Indicadores con paridades en tarjetas",
+        pins: [
+          { x: 80.2, y: 11.3, t: "Botones", d: "Plantilla en bordo, importar con borde y Sincronizar hoy en verde, al final. No se sincronizó ni se importó." },
+          { x: 58.0, y: 26.8, t: "Paridades", d: "USD, EUR, CNY y UF en tarjetas, debajo del titulo. El filtro de la lista está en la barra de la tabla." }
+        ]
+      },
+      {
+        mod: "Tesoreria", cls: "teso",
+        title: "14. Cartolas",
+        img: "despues-cartolas.png",
+        alt: "Cartolas con titulo, importar y saldos",
+        pins: [
+          { x: 92.1, y: 11.3, t: "Importar", d: "El archivo se carga desde el titulo, a la derecha. No se eligió un archivo." },
+          { x: 58.3, y: 25.8, t: "Saldos", d: "Quedaron debajo del titulo. Banco, moneda y formato filtran en la barra de la tabla." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>
