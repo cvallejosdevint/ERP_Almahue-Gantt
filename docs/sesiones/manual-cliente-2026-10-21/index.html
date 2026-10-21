@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Manual cliente Almahue ERP</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --side: #1c1917; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+    aside { background: var(--side); color: #f5f5f4; padding: 16px 12px; overflow: auto; }
+    aside h1 { font-size: 1rem; margin: 0 8px 12px; }
+    aside p { margin: 0 8px 16px; color: #a8a29e; font-size: 13px; }
+    .g { margin: 0 0 10px; }
+    .g strong { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #a8a29e; padding: 8px; }
+    .g a { display: block; color: #fafaf9; text-decoration: none; padding: 6px 8px; border-radius: 8px; }
+    .g a:hover { background: #292524; }
+    .g a.dest { background: #292524; color: #fde68a; }
+    main { padding: 24px 32px; }
+    main h2 { margin: 0 0 8px; }
+    .nota { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Almahue ERP</h1>
+    <p>Manual y speech 21/10/2026. Empresa Export. Datos nuevos. DTE ALM 61-65, cierre bodega 20260007.</p>
+    <div class="g"><strong>Presentacion</strong><a class="dest" href="recorrido.html">Gran recorrido (26 pasos)</a></div>
+    <div class="g"><strong>Inicio</strong><a href="recorrido-panel.html">Panel operativo</a></div><div class="g"><strong>Administración</strong><a href="recorrido-admin-empresas.html">Empresas</a><a href="recorrido-admin-plantilla.html">Plantilla documentos</a><a href="recorrido-admin-usuarios.html">Usuarios</a><a href="recorrido-admin-roles.html">Roles y permisos</a><a href="recorrido-admin-aprobaciones.html">Reglas de aprobación</a><a href="recorrido-admin-correos.html">Configuración de correos</a></div><div class="g"><strong>Parametrización</strong><a href="recorrido-param-monedas.html">Monedas</a><a href="recorrido-param-unidades.html">Unidades de medida</a><a href="recorrido-param-cc.html">Centros de costo</a><a href="recorrido-param-elementos.html">Elementos de costo</a><a href="recorrido-param-areas.html">Áreas de negocio</a><a href="recorrido-param-conceptos.html">Conceptos</a><a href="recorrido-param-codigos.html">Códigos financieros</a><a href="recorrido-param-tipos-doc.html">Tipos de documento</a><a href="recorrido-param-plan-cuentas.html">Plan de cuentas</a><a href="recorrido-param-indicadores.html">Indicadores BC</a><a href="recorrido-param-proveedores.html">Proveedores</a><a href="recorrido-param-contratista.html">Contratista</a><a href="recorrido-param-af.html">Activo fijo</a></div><div class="g"><strong>Contratistas</strong><a href="recorrido-ctr-listado.html">Listado</a><a href="recorrido-ctr-ingreso.html">Ingreso diario</a><a href="recorrido-ctr-proformas.html">Proformas y facturas</a><a href="recorrido-ctr-aprobaciones.html">Aprobaciones</a><a href="recorrido-ctr-auditoria.html">Auditoría</a><a href="recorrido-ctr-traspaso.html">Traspaso contable y cierre de mes</a><a href="recorrido-ctr-rep-ingresos.html">Reporte ingresos</a><a href="recorrido-ctr-rep-cc.html">Labores por centro de costo</a><a href="recorrido-ctr-rep-prod.html">Control de producción</a></div><div class="g"><strong>Ventas</strong><a href="recorrido-ventas-ov.html">Órdenes de venta</a><a href="recorrido-ventas-emitir.html">Emitir DTE</a><a href="recorrido-ventas-libro.html">Libro de ventas</a><a href="recorrido-ventas-clientes.html">Clientes</a><a href="recorrido-ventas-rep-sii.html">Libro de ventas SII</a><a href="recorrido-ventas-rep-cliente.html">Ventas por cliente y producto</a></div><div class="g"><strong>Compras</strong><a href="recorrido-compras-ordenes.html">Órdenes de compra</a><a href="recorrido-compras-aprobaciones.html">Aprobaciones</a><a href="recorrido-compras-libro.html">Libro de compras</a><a href="recorrido-compras-rep-pend.html">OC pendientes de recepción</a><a href="recorrido-compras-rep-depto.html">OC por depto y usuario</a></div><div class="g"><strong>Insumos / Bodega</strong><a href="recorrido-insumos-maestro.html">Maestro artículos</a><a href="recorrido-insumos-bodegas.html">Bodegas</a><a href="recorrido-insumos-stock.html">Stock por bodega / producto</a><a href="recorrido-insumos-movimientos.html">Movimientos / NC</a><a href="recorrido-insumos-cierre.html">Cierre de bodega</a><a href="recorrido-insumos-ordenes.html">Órdenes de insumos</a><a href="recorrido-insumos-aprobaciones.html">Aprobaciones</a><a href="recorrido-insumos-guias.html">Libro de guías</a></div><div class="g"><strong>Activo fijo</strong><a href="recorrido-af-maestro.html">Maestro</a><a href="recorrido-af-traspaso.html">Traspaso contable</a><a href="recorrido-af-reportes.html">Reportes</a></div><div class="g"><strong>Contabilidad</strong><a href="recorrido-conta-periodos.html">Períodos contables</a><a href="recorrido-conta-asientos.html">Comprobantes / asientos</a><a href="recorrido-conta-honorarios.html">Factores honorarios</a><a href="recorrido-conta-presupuestos.html">Presupuestos</a><a href="recorrido-conta-diario.html">Libro diario</a><a href="recorrido-conta-mayor.html">Libro mayor</a><a href="recorrido-conta-balance.html">Balance de 8 columnas</a><a href="recorrido-conta-er.html">Estado de resultados</a><a href="recorrido-conta-situacion.html">Situación financiera</a></div><div class="g"><strong>Tesorería</strong><a href="recorrido-teso-cartolas.html">Cartolas</a><a href="recorrido-teso-conciliacion.html">Conciliación</a><a href="recorrido-teso-flujo.html">Flujo de caja</a><a href="recorrido-teso-pagos.html">Pagos</a><a href="recorrido-teso-nominas.html">Nómina semanal</a><a href="recorrido-teso-cc.html">Estado de cuenta</a></div>
+  </aside>
+  <main>
+    <h2>Como usarlo en la presentacion</h2>
+    <div class="nota">
+      <p><a href="recorrido.html">Gran recorrido</a>: 26 pasos con Siguiente. Cadena ya guardada: OC-2026-0001 a 0005, DTE ALM 61-65, DTE Export 93, PF-00001, cierre CTR 20260005, cierre bodega 20260007, pago folio 64. Pins sobre PNG 1536x960.</p>
+      <p>Cada submodulo cuenta el proceso completo y termina con el comprobante en el listado mas el detalle de las lineas (cuentas, debe y haber). Menú vuelve al indice.</p>
+      <p>Las fotos no pulsan Guardar, Emitir, Contabilizar ni Pagar: el speech usa lo que ya quedo en la muestra, incluido el cierre de bodega 2026-10. Bitacora: <a href="gaps.md">gaps.md</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
