@@ -16,6 +16,8 @@ Mapa vigente desde el 2026-09-28. El código de la app sigue en `ERP/erp_back` y
 | Mapa de conexiones y checklist de faltantes (13/10, con pruebas) | `docs/requerimientos/mapa-conexiones-2026-10-13.md` |
 | Mapa de transcripciones contra el software (13/10) | `docs/requerimientos/mapa-transcripciones-2026-10-13.md` |
 | Auditoría de datos entre módulos: faltan, sobran, no cuadran (13/10) | `docs/requerimientos/auditoria-flujo-datos-2026-10-13.md` |
+| Cumplimiento vs cliente + GoSocket (21/10) | `docs/requerimientos/cumplimiento-cliente-2026-10-21.md` |
+| Reunion cliente 21/10 (MJ, Fran, Lupe) | `docs/reuniones/transcripciones/transcripcion-2026-10-21-reunion-cliente.md` + minuta `docs/reuniones/minutas/reunion-2026-10-21-cliente.md` |
 | Notas de una fecha, con sus capturas | `docs/sesiones/` |
 | Planes de prueba | `docs/qa/planes/` |
 | QA Reu4 archivado | `docs/qa/historico-reu4/` |
