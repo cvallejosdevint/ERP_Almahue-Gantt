@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Correcciones reunion 21/10 - antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Correcciones reunion 21/10 - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, periodo 2026-10, ERP local, 22/10/2026. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra.</p>
+    <p>Recorrido: <a href="recorrido.html">recorrido.html</a>. Manual 21/10: <a href="../manual-cliente-2026-10-21/comparacion.html">manual-cliente-2026-10-21</a>. Cierre de bodega 20/10: <a href="../cierres-modulos-2026-10-20/comparacion.html">cierres-modulos-2026-10-20</a>.</p>
+  </header>
+
+  <section>
+    <h2>Activo fijo › Maestro</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-maestro.png" alt="Maestro de activo fijo con cuatro KPI, sin tarjeta de IPC" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-maestro-marcado.png" alt="Maestro con KPI IPC a la derecha de Valor neto" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>El quinto KPI muestra el último IPC cargado en Parametrización. Sin carga queda el texto Sin carga. El monto de compra del activo no se edita aquí.</li>
+      <li>El origen sigue siendo una factura del libro de compras. No se apretó Nuevo activo ni se guardó un alta.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Parametrización › Activo fijo › IPC</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-parametrizacion.png" alt="Parametrización de activo fijo solo con Familias, Subfamilias, Ubicaciones y Tipos de documento" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-parametrizacion-marcado.png" alt="Pestaña IPC abierta con periodo, porcentaje y Guardar IPC" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>La pestaña IPC es nueva. El porcentaje mensual (ejemplo 0,8) entra aquí. La corrección se aplica en el traspaso; no se tocó Guardar IPC.</li>
+      <li>Tipos de documento queda de solo lectura (factura afecta, exenta, de compra y DIN). No hay carga inicial ni centro de costo en el alta.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Insumos / Bodega › Libro de guías</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-guias.png" alt="Libro de guías solo con Traer de GoSocket" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-guias-marcado.png" alt="Libro de guías con Excel Acepta e Ingreso manual junto a Traer de GoSocket" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Excel Acepta avisa que el import espera la muestra del cliente. Ingreso manual abre el formulario de folio, líneas y N adjuntos. No se pulsó Traer de GoSocket ni Guardar guía.</li>
+      <li>Contabilizar ya no está en las acciones de la fila: el asiento de la guía sigue en el libro de compras y en el cierre de bodega.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Insumos / Bodega › Órdenes de insumos</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-ordenes-insumos.png" alt="Órdenes de insumos del periodo 2026-10 sin filas" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-ordenes-insumos-marcado.png" alt="OC madre 0006 con barra 2 de 2 con factura, sin botón Contabilizar" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Se marcó Todos solo para ver las OC de otros cortes. La madre OC-2026-0006 muestra 2 de 2 con factura: las hijas cierran al 100% al asociar la factura. No se envió, no se pagó y no hay Contabilizar en esta pantalla.</li>
+      <li>El asiento de existencia entra por recepción y el de facturas por recibir se calza en el cierre de bodega. El mes de bodega sigue cerrado; no se reabrió.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Activo fijo › Reportes (Detalle y Gráfico)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-reportes-af.png" alt="Detalle de activo fijo anterior en modal simple con texto plano mes a mes y sin gráfico" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-reportes-af-marcado.png" alt="Modal normalizado con tarjeta de resumen de 3 columnas, gráfico de últimos meses y selectores Desde/Hasta" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Al hacer clic en el activo se abre el modal estructurado con tarjeta de 3 columnas (Factura, Vida útil y Valores) y tabla mes a mes con cuota y valor neto.</li>
+      <li>El gráfico interactivo muestra los últimos meses de depreciación, con opción de gráfico extendido y selectores de rango Desde / Hasta. Botón Cerrar en el pie. No se modificó el mayor contable.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Catálogos › Proveedores (Lista normalizada)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-proveedores-lista.png" alt="Lista de proveedores antes de normalizar con el estilo de contratistas" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-proveedores-lista-marcado.png" alt="Lista normalizada al estilo de Contratistas con buscador, filtros y formato RUT uniforme" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>La tabla incorpora el buscador reactivo, filtro de vigencia (Activo/Inactivo) y formateo de RUT uniforme.</li>
+      <li>Menú de acciones por fila homogéneo con el estándar de Contratistas. No se guardaron cambios en los proveedores.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Catálogos › Proveedores › Ficha (Modo Lectura con botón Editar)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-proveedores-ficha.png" alt="Ficha anterior que abría directamente inputs editables sin modo ficha" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-proveedores-ficha-marcado.png" alt="Ficha en modo lectura con datos limpios y botón Editar proveedor en el pie" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Al hacer clic en cualquier fila de la lista se abre la Ficha de proveedor en modo lectura con encabezados en mayúsculas y datos ordenados.</li>
+      <li>El pie incluye el botón Cerrar y el botón verde Editar proveedor, que al presionarse desbloquea los inputs para edición. En las acciones de la fila, Editar abre directamente la edición. No se apretó Guardar cambios.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Insumos / Bodega › Cierre de bodega (Predeterminada)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="despues-cierre-bodega.png" alt="Cierre de bodega con selección de cuentas Debe y Haber" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-cierre-bodega-marcado.png" alt="Cierre de bodega con botón Guardar como predeterminada a la derecha" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Se seleccionan las cuentas de Debe y Haber del cierre de insumos con opción de guardarlas como predeterminadas para los periodos siguientes.</li>
+      <li>El botón Guardar como predeterminada queda a la derecha. El mes sigue CERRADO; no se reabrió ni se pulsó Cerrar mes.</li>
+    </ul>
+  </section>
+
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>

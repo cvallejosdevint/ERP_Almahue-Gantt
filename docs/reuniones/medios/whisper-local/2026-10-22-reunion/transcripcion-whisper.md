@@ -1,0 +1,388 @@
+# Reunion cliente Almahue 2026-10-22 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: Recording 2026-10-22 193116.mp4 (01:21:14)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+Minuta: docs/reuniones/minutas/reunion-2026-10-22-cliente.md
+
+- [00:00] Ahí va.
+- [00:01] Hola María Jesús, ¿nos escucha?
+- [00:16] ¿Cómo están?
+- [00:17] Buenas tardes, ¿cómo están?
+- [00:20] Bien, ¿y ustedes?
+- [00:24] Bien, gracias.
+- [00:26] ¿Sí?
+- [00:34] Qué clima raro.
+- [00:37] Horrible.
+- [00:39] Nada que hacer.
+- [00:49] Hay que esperar a alguien más.
+- [00:53] ¿Mari?
+- [00:55] Espera, le voy a enviar la invitación a Fran.
+- [00:57] Me voy a salir y ella se va a solicitar unirse.
+- [01:03] Ya.
+- [01:05] Ya, ok.
+- [01:20] Esta permitía a Francisca la reunión.
+- [01:23] ¿Me va a escuchar?
+- [01:24] Sí, la escuchamos.
+- [01:27] Sí, escuchamos.
+- [01:35] Dale, Carlos, vamos a seguir.
+- [01:41] Un momento que me está dando problemas con compartir la pantalla.
+- [02:15] No, no me deja. Voy a salir y volver a notar de un momento.
+- [02:52] Ya, ahí se ve la pantalla.
+- [02:56] Sí, se ve súper.
+- [02:59] Perfecto.
+- [03:11] Entonces vamos a hacer la revisión de lo que vendría a ser los módulos de...
+- [03:15] Contabilidad y tesorería para que afinemos los últimos detalles y ver si es que nos falta algún tipo de integración, modificación, parámetro,
+- [03:25] para que dejemos ya por finalizado esos dos módulos que creo que la última revisión la hicimos igual ya hace tiempo.
+- [03:42] No sé si el día de ayer pudieron ingresar al sistema, darle alguna revisión, ¿sí?
+- [03:48] ¿Sí? No sé si es que quedaron con alguna duda, algo que no hayan entendido.
+- [04:01] No, nos quedó súper claro.
+- [04:02] Bueno, vamos a partir con lo que vendría a ser la contabilidad.
+- [04:14] Partiendo, bueno, por lo que vendría a ser directamente los comprobantes y asientos,
+- [04:19] que, bueno, al menos lo que está generado en la página no hay un detalle como tal,
+- [04:24] Pero vamos a agarrarnos del modo demo que ya tiene información como preestablecida para ir revisando este módulo.
+- [04:31] La idea igual de todas formas es que dentro de lo que restan estos días podamos generar asientos también de prueba en la página.
+- [04:39] Pero de momento nos vamos a tomar de estos de acá.
+- [04:46] Acá el tipo de cambio no se aplicó porque estos son modos demos que tenemos que actualizar.
+- [04:50] No están con los últimos datos donde si se está tomando como pueden ver acá las columnas del tipo de cambio de dólar y de yuan.
+- [04:57] Y también aquí teníamos contemplado para que junto con la cuenta, la glosa, también aquí aparezca el root del proveedor o cliente, el tipo de documento y el número de documento, junto con una pequeña información acá.
+- [05:13] No sé si dentro de los asientos habrá alguna información que sea diferente en algún tipo de asiento que tenga que venir en la glosa, ya sea en los de compras, ventas, insumos.
+- [05:42] Nosotros creemos que está completo.
+- [05:53] Dentro de lo que vendría a ser acá, por ejemplo, tenemos las acciones como ver ya la glosa y la de anular y reversar.
+- [06:00] No sé si es que haría falta alguna otra función o alguna, por ejemplo, esta de anular regresar está incompleta, le faltará algún tipo de información.
+- [06:22] No sé si es que será bueno también de que aparezca acá como la glosa editable para agregarle algún tipo de comentario.
+- [06:29] Yo creo que sí, que sea editable bajo la glosa.
+- [06:32] O sea, la idea es que la glosa ahí sea la misma glosa del comprobante.
+- [06:43] Ah, entonces así como aparece, debería decir glosa de comprobante y decir la glosa que venía en el comprobante, ¿verdad?
+- [06:54] ¿Qué es el comprobante?
+- [07:05] Esta página de comprobante y asiento, algún totalizado, por ejemplo aquí tenemos la opción de carga masiva y de exportar como Excel, pero no sé si es que también será necesario que tenga la opción de exportar como algún PDF o tipo de documento.
+- [07:19] Mira, ahí lo ideal es que cuando nosotros queramos descargar los asientos, nos dé la opción de solo activo o todos, porque al final nos viene la reversa y no la usamos para nada.
+- [07:36] Pero así comprueba que la reversa se haya hecho efectuado bien, tiene que dar cero al final de la línea.
+- [07:46] Que sí se saque en PDF.
+- [07:47] Ya. Entonces le voy a agregar acá un filtro rápido, que sea como todos los que están activos, para que se pueda exportar lo que vendría a ser lo que se está viendo.
+- [08:05] Sí. Ideal, no sé si se podrá, que si uno descarga, sea siempre solo activos. Y si uno quiere consultar los reversados, tenga la opción de pincharlo.
+- [08:17] Ah, que por defecto venga solamente los activos y el secundario sería como todos.
+- [08:21] Sí, porque no ha pasado que nos invitan al reverso y van a usar la información.
+- [08:29] Perfecto.
+- [08:44] De aquí de la vista de factores de honorarios, ¿esta vista es utilizable?
+- [08:52] Porque esa es toda la información que trae, no es mucho la verdad.
+- [09:07] No, yo creo que el factor de honorarios podría ir en parametrización.
+- [09:10] Lo dejamos en el menú de arriba entonces.
+- [09:16] Sí, porque al final es algo que se va a ir actualizando en base a un cambio en el... claro, es más informativo que de uso diario.
+- [09:30] Perfecto. Lo podríamos dejar como... y lo dejamos para los activos fijos, que de hecho aquí no tengo la actualización, la tendré en local.
+- [09:45] Aquí, esta es la versión que todavía no está publicada, que aquí ingresé lo que habíamos hablado del IPC.
+- [09:49] Lo dejamos como este valor para que vaya guardándose aquí como un nuevo ítem y tenga su historial, ¿verdad?
+- [09:58] Sí.
+- [10:00] Perfecto.
+- [10:05] Los presupuestos por centro de costos.
+- [10:15] Aquí como pueden ver tiene una pequeña visualización de lo que vendría a ser lo que ya se está consumiendo, por así decirlo.
+- [10:21] Y aquí se puede ir ejecutando así como la visualización anual del monto.
+- [10:27] Buenísimo.
+- [10:28] ¿Esta vista también es necesaria que tenga la opción de imprimirse como PDF?
+- [10:35] Sí.
+- [10:36] Aquí tendríamos lo que vendrían a ser ya los libros, que esto ya lo habíamos visualizado.
+- [10:56] Le hicimos el cambio de que los totalizados ahora se puedan ocultar para tener un poco más accesible la vista.
+- [11:02] Con esta información, que vendría a ser los asientos, las cuentas, nombre, glosa, debe y haber, junto con estos totalizados.
+- [11:11] Totalizados.
+- [11:12] De acá no sé si es que faltaría algo por lo que veo y lo que habíamos conversado la última vez me recuerdo que esto estaba listo así, ¿verdad?
+- [11:23] Sí.
+- [11:23] Aquí en el libro mayor también me acuerdo que habíamos dejado, lo único que hemos cambiado es como la distribución de los ítems que están nomás para que sea más visible y no tenga tanto ruido que tenía antes.
+- [11:41] Y ahí en los filtros no puedes filtrar por la cuenta para bajar el detalle de la cuenta.
+- [11:45] Exactamente, exactamente.
+- [11:47] Entonces ahí uno puede ir directamente a lo que son los detalles de cada una de las cuentas.
+- [11:51] ¿Y para el rango de fecha?
+- [11:54] Tendría que ser de acá desde los filtros.
+- [11:59] Mira, eso sí no lo tenemos con el calendario, está como texto.
+- [12:02] Lo voy a agregar e incluir para que sea con un calendario.
+- [12:06] Ya.
+- [12:08] No sé si es que ese sería mejor que esté dentro de los filtros, pero aquí afuera.
+- [12:13] Sí, porque ese es como que el...
+- [12:14] Ande, te metiste recién, como que no se entiende mucho.
+- [12:17] Sí, esto de hecho está como bien desactualizado, vamos a darle una revisión.
+- [12:22] Sería bueno que ahí pudiéramos escribir la cuenta y me pongo a despertar.
+- [12:31] Muy bien, ¿y tú?
+- [12:36] ¿Llamar?
+- [12:37] Una consulta. ¿Mario no está por ahí?
+- [12:40] No. ¿Necesita algo Sergio?
+- [12:48] Sí, quería pegar un llamadito por un tema de seguridad que hubo. No sé si lo puedo llamar o no, fue una oficina.
+- [12:56] De hecho, Sergio, el tema de la seguridad también en este proyecto está con estos descubrimientos que salieron ayer, está...
+- [13:13] No, pega acá, pega acá, porque el proyecto está con Node, así que eso igual tenemos que darle una revisada.
+- [13:44] Dale, Carlos.
+- [13:45] Sigue la reunión.
+- [13:47] Sigue la reunión, ya.
+- [13:48] Estaba esperando a la Mari, perfecto.
+- [13:50] Acá, por ejemplo, tendríamos el balance de 8 columnas con los totalizados, que este ya tiene sus totalizados más específicos.
+- [14:08] Acá también, no sé si es que sumaría tener el filtro por fechas.
+- [14:12] ¿Esto se está alimentando del libro diario?
+- [14:18] Sí, pero estaba en el modo demo, porque creo que los movimientos de acá en el mes actual no tenemos que se hayan contabilizado directamente.
+- [14:28] Ya.
+- [14:30] Sí, estábamos sin movimiento aquí en octubre.
+- [14:32] Ahí en septiembre ya, pero sí se están cargando directamente de ahí.
+- [14:47] ¿En este también tendríamos que agregar el filtro de fechas?
+- [14:50] Sí.
+- [15:04] Tendríamos lo que vendría a ser el estado de resultados, que también por lo que veo faltaría el filtro de fechas.
+- [15:17] Por ejemplo, en el libro mayor se va a poder consultar más de un año.
+- [15:23] ¿En el libro mayor?
+- [15:24] Sí.
+- [15:25] Sí lo dejaríamos con calendario.
+- [15:27] Ya.
+- [15:28] Entonces primero, siempre te va a salir en esos calendarios que aparecen como seleccionar el día del mes, pero sale la opción para seleccionar devolverse a los meses o devolverse al año.
+- [15:37] Y finalmente aquí tendríamos lo que es situación financiera. Si se dan cuenta, la mayoría de estos filtros tienen la misma construcción visual, así que las correcciones las vamos a aplicar a todos los que están acá de que hemos hablado del filtro de las fechas.
+- [16:00] No sé si es que tienen alguna duda con lo que vendría a ser contabilidad, nos faltó algo, algo que no vieron.
+- [16:08] Una observación sería que el balance no se puede sacar de un año a otro.
+- [16:23] Tiene que ser como de este año.
+- [16:25] Sí, o del año pasado, porque las cuentas de gasto se van a hacer el 1 de enero.
+- [16:33] Entonces que los límites sean como dentro del año, desde enero, y si es que es del año pasado, hasta el 31 de diciembre, ¿verdad?
+- [16:40] Sí, porque si no va a traer información errónea.
+- [16:44] Perfecto. Solo aplicaría en ese reporte, ¿verdad?
+- [16:47] Sí, en el balance de 8 columnas.
+- [16:49] La nota de desgracia financiera también la aplicaría.
+- [17:01] Vamos entonces a pasar a lo que vendría a ser la tesorería.
+- [17:15] Bueno, acá en el modo demo tenemos una carga de cartola. Yo me acuerdo que habían enviado una cartola de julio, que esa es la que podríamos revisar cómo se cargó, porque no tengo una creada como simulación o como a modo demo de una de este mes, y la carga la hace directamente por el periodo actual, aquí en septiembre tengo.
+- [17:51] Bueno, esto había quedado como se habló la última vez, que por ejemplo cuando se hace el filtro de los egresos, se permite seleccionar para realizar una asignación de la semana, para asignar todos estos movimientos a un movimiento semanal, por así decirlo, dentro de lo que vendría a ser el periodo, en este caso septiembre, a cada una de sus cinco semanas.
+- [18:20] Y eso funciona también a nivel individual. Por ejemplo, si es que nosotros queremos solamente asignar una al momento de contabilizar, también aquí nos pregunta en qué año, mes y semana corresponde esta contabilización, junto con la contracuenta, el código financiero y el destino.
+- [18:38] De esto, por ejemplo, es lo que se carga, que, de hecho aquí, déjenme un momento, tengo una de estas que teníamos de prueba, junio, sí, tengo la de junio, así que esa la podría cargar para mostrarles cómo se ve la vista y consultar si efectivamente este, este es el documento que va a ser la carga, ¿verdad?
+- [19:26] Sí.
+- [19:28] Perfecto, déjenme preguntar esto, que molesta.
+- [19:30] Y por lo que se entiende, dependiendo de la moneda y de la empresa, es cada uno de los tabs, ¿verdad?
+- [19:38] Sí, la única observación es que, no sé, la N y la O son algo que no es la Lupe, no es como parte en sí de la cartola.
+- [19:49] ¿Cómo perdón? Que eso no lo entendí.
+- [19:51] La fila N y la O, condición comprobante y detalle, no es en sí de la cartola.
+- [19:58] Esta de acá.
+- [20:48] Simplemente identificar el tipo de moneda y el tipo de banco, que dependiendo de cómo esté construido, puede no identificarlo de manera automática, por ende igual se podría hacer la asignación en caso de que no se tome solo, de a qué banco y a qué moneda va cada uno de esos tabs.
+- [21:04] ¿Consulta si yo creo que otro banco se actualiza directamente acá en la selección?
+- [21:09] No tenemos un mantenedor de banco, podríamos generarlo para parametrización.
+- [21:15] Sí.
+- [21:15] Perfecto. Sí, porque no tenemos un mantenedor como tal como banco, los tenemos con los bancos que nos habían dicho como datos fijos.
+- [21:33] Sí, es que podemos cambiar de banco.
+- [21:37] Perfecto.
+- [21:37] Como vamos, quizás, de rubro.
+- [21:46] Nosotros también.
+- [21:47] Así como vamos, sí.
+- [21:51] Bueno, y acá también, como pueden ver, dependiendo de los tabs y de lo que se haya seleccionado, aquí sale como un totalizado de todos los movimientos que se identificaron, como para poder contrastarlo con el Excel.
+- [22:01] Y también se puede ir viendo por tab, que son los que se seleccionaron acá.
+- [22:08] Y eso al momento de importarlo, genera acá, por cada una de las monedas y bancos, por así decirlo, la carga.
+- [22:25] Y aquí también se identifica el archivo, el periodo que se corresponde, cuándo se hizo la carga, independiente del periodo.
+- [22:31] Por eso hay dos fechas.
+- [22:32] Y acá, por ejemplo, vendría a ser el tema de la contabilización por cada uno, dependiendo si es ingreso o egreso.
+- [22:39] Acá de la vista de conciliación, por lo que recuerdo, se había solicitado también tener como esta especie de switch para poder ver solamente los pendientes y todo, que es el que vamos a aplicar que habían solicitado al delante.
+- [23:04] Y aquí es donde aparecen los movimientos del banco, por así decirlo.
+- [23:08] Cuando yo cargo la cartola, por ejemplo, ya en la quincena, y contabilizo todos los movimientos, y después la vuelvo a cargar al 30, ¿me separa los que yo ya subí? ¿Reconoces que están duplicados?
+- [23:32] No habíamos considerado que se pudieran subir dos cartolas, una a la quincena y otra a fin de mes. En ese caso me imagino que, claro, efectivamente, como es la cartola del mes, van a venir todos los movimientos cuando se saca a fin de mes con los que se incluyeron en la quincena, ¿verdad?
+- [23:45] Sí, lo que pasa es que, de hecho, uno debería ir contabilizando diariamente la cartola.
+- [24:10] Ya.
+- [24:12] Le pido a la Lupe que te lo mande.
+- [24:32] Y aquí tenemos lo que vendría a ser activado el filtro para ver en pesos cada uno de los montos, pero todavía se puede ver cuando uno coloca el mouse encima el precio de la moneda original.
+- [24:44] Tenemos también el filtro para poder ver directamente lo que vendría a ser en pesos chilenos, dólar o yuan.
+- [24:51] Y también para poder quitar o ver el concepto, que aquí tiene, perdón, el totalizado de conceptos, que como pueden ver, por cada uno de los conceptos aparecen estas tres columnas de total.
+- [25:03] Porque dependiendo de lo que se necesita, a veces conviene verlos y a veces no, entonces en ese caso con eso se pueden ocultar y hay como ver solamente los detalles, si no se totalizaba por concepto.
+- [25:42] ¿Puede apretar el ver total?
+- [25:45] Por supuesto. Entonces ahí aparecen estas como negritas que son así como el totalizado de este concepto de apertura en agosto.
+- [26:06] Pero por ejemplo si yo lo quisiera para exportar a Excel, ¿cómo me quedaría el formato?
+- [26:12] Dependiendo de cómo se esté visualizando.
+- [26:14] Y es con el total apretado, ¿no?
+- [26:46] ¿Los podríamos integrar? Porque acá también están con esta visualización antigua que tenemos que actualizar.
+- [26:55] Aquí sería bueno entonces dejarlos también aquí accesibles al ladito, ¿verdad?
+- [26:58] Sí, y aquí puede ser de un año a otro.
+- [27:02] Perfecto.
+- [27:07] La Lupe me pregunta si en PDF o Excel las cartolas.
+- [27:12] Este flujo lo tenemos como Excel, pero igual podríamos dejarlo para que aparezca como PDF.
+- [27:20] Así para que aparezca aquí la parte de arriba con los totalizados.
+- [27:42] La gran pregunta es si en todos los módulos está PDF y Excel.
+- [27:45] En algunos. ¿Sería bueno que estén en todos?
+- [27:48] En todos.
+- [27:50] Perfecto.
+- [27:53] Ahora somos fiel al Excel.
+- [27:57] No pasa de moda.
+- [27:59] No, jamás.
+- [28:00] San Excel.
+- [28:04] Perfecto.
+- [28:04] Y aquí es donde teníamos una duda bien importante, que creo que este módulo de pagos no lo habíamos visto como tal, el cómo se iban a registrar los pagos.
+- [28:11] Entonces, acá es donde necesito que me den todo el feedback posible. Aquí tenemos actualmente un formulario con esta información. Aquí también la duda base es que se adjunta algún comprobante de pago, como documento, adjuntar cualquier tipo de información en alguno de los pagos, tener estados, si tienen que pasar por aprobación.
+- [28:50] Yo creo que esto lo vamos a tener que ver cuando la lupa esté disponible la otra semana, chiquillo.
+- [28:55] Ya.
+- [28:55] Prefiero que ella modele como quiera con la información.
+- [29:33] Cada una de las semanas acá del periodo nos marca aquí en rojo con esta etiqueta los atrasados, en esta etiqueta que está como gris los pendientes, y aquí nos va mostrando la semana y el mes.
+- [29:44] Entonces si se dan cuenta acá tengo 7 atrasados, de los cuales yo podría filtrar directamente como pendientes, y también dependiendo de, va a aparecer acá si es que queremos un filtro de los críticos o de los 90 días que son las etiquetas custom.
+- [30:00] Tengo una duda. En estado abajo, ¿es necesario que aparezcan todas las etiquetas?
+- [30:30] Claro, o sea, en lo personal, si fuera mi módulo, en estado yo pondría, o sea, solo el estado, por ejemplo, si está crítico, yo sé que está pendiente.
+- [30:44] Perfecto.
+- [30:45] Si no, 90 días o está aplazada. Ahí yo pondría pagado o crítico, pendiente o el...
+- [30:55] Dependiendo así como es la categoría que vaya cayendo cada movimiento.
+- [30:57] Se supone que cada estado tiene su porqué.
+- [31:34] Por ejemplo, aquí también lo que podríamos tener es como la trazabilidad en caso de que
+- [32:08] Eh, ver quién lo, por ejemplo, puso más días de atraso, que eso también podríamos tenerlo como un icono de historial.
+- [32:14] ¿Está atrasado?
+- [32:21] Claro.
+- [32:22] Si, igual sería bueno, por ejemplo, alguien específico te pide que vea atraso y que te conteste que alguien te lo pide.
+- [32:27] Es que, es como respaldo para ti.
+- [32:31] Pero esa, ¿en qué parte iría, Carlos?
+- [32:33] Iría como un botoncito acá, que uno podría ver el historial, y al momento de mover, aquí pediría el motivo, solamente.
+- [32:41] Ah, ya, ya.
+- [32:42] Entonces, si uno podría ver aquí en el historial la fecha de cuándo se atrasó, hasta cuándo se atrasó, y el motivo, y el usuario que lo hizo.
+- [32:53] Y lo que decía María es que acá dejáramos solamente uno, el que predomine.
+- [32:57] Por ejemplo, si está como 90 días, ya se toma por hecho de que no está pagado porque está atrasado 90 días.
+- [33:05] Ya sé que eso no lo entiendo.
+- [33:08] Perfecto. Acá también teníamos dudas, Lupe, con lo que vendría a ser pagos, porque creo que pagos no lo habíamos visto como tal.
+- [33:18] No, no lo habíamos visto.
+- [33:22] Lo que teníamos aquí como maqueteado es, por ejemplo, esta vista donde muestra como estos pequeños detalles de los pagos ingresados, el botón para ingresar nuevos pagos que levanta este formulario,
+- [33:33] Y para ver cada uno de los pagos, aquí se ve como el estado, por así decirlo, donde acá uno marca si es que el pago está pendiente o ya realmente pagado.
+- [33:43] Entonces teníamos la duda si es que tendríamos que tener alguna otra trazabilidad, como por ejemplo quizás juntar documentos, tener un historial también para ver el estado, si es que se hicieron modificaciones.
+- [33:56] Ahí se podrían juntar las boletas morales, las rendiciones.
+- [34:03] Podríamos agregar de que se puedan agregar diferentes tipos de documentos y, por ejemplo, en cada documento que seleccione le ponga un nombre para que sea como el tipo de documento que se sube.
+- [34:16] Por ejemplo, si sube factura, que no tenga que decir el documento factura, sino que vea el nombre, factura, número, tanto que uno ahí hace el tipeo manual.
+- [34:29] Perfecto. ¿Algún otro campo aparte de estos que se ven?
+- [34:32] ¿Acá en pago se supone que van a salir, se alimenta la cartola o todo lo ingresa en manual?
+- [34:40] Acá sí, acá lo ingreso yo manual, ¿cierto?
+- [34:44] Aquí exacto, está ingresado manualmente, por eso, como este no lo habíamos visto, este se tiene que alimentar de la cartola, tenemos que tener información de la cartola.
+- [34:53] Lo que pasa es que, claro, porque la cartola, yo al subir la cartola voy a subir todos los pagos.
+- [35:00] Que vendría a ser esta cartola, ¿verdad?
+- [35:01] ¿Qué dato debería visualizarse ahí y cómo lo identificas?
+- [35:09] O sea, yo creo que lo ideal es que esa misma pestaña que aparece en pagos,
+- [35:14] aparezca al momento de uno subir la cartola y poder ir contabilizando en cada movimiento de la misma cartola.
+- [35:23] ¿Podríamos entonces dejar esta como información de lo que tiene pago?
+- [35:28] Claro, como lo que ya está aquí conciliado.
+- [35:30] Claro, y acá en cartolas tener como dentro de los movimientos,
+- [35:34] Si es que está ya pagado, tener como un botoncito que haga como el cárcel con la otra.
+- [35:40] Claro, o sea, lo ideal es como que del movimiento de la cartola se vaya haciendo el pago.
+- [35:45] Si es una transferencia, como de ahí mismo, tomarlo y poner que pagué.
+- [35:50] Entonces aquí en este caso solamente de los egresos, tendríamos que hacer como la posibilidad de asociarlo al registro de pago.
+- [35:58] Tienen que ser egresos y ingresos.
+- [36:06] Sí.
+- [36:08] De ahí mismo contabilizar todo.
+- [36:11] Como que el módulo de pagos que tienes ahí, como que está de más.
+- [36:16] O sea, ahí el de pago debería ser más que como la nómina semanal que un módulo aparte.
+- [36:28] Y tendría que hacerse acá con los datos de la cartola, sí o sí.
+- [36:31] Sí. La cartola manda.
+- [36:33] Claro, y como la cartola se puede ir ingresando más de una vez, dependiendo de lo nuevo que sea como egreso, ahí podríamos tener como un identificador de falta asociar a un pago.
+- [36:41] Y aquí solamente visualización sería de asociar como los pagos con ese formulario, con un documento o algo así.
+- [36:52] Contabilizado directamente la cartola, parezca pendiente acá o... bueno, sí, igual, tal cual el estado. Tendría que ser contabilizado o pendiente.
+- [37:05] Perfecto. Entonces acá al momento de revisar los movimientos de la cartola, solamente los egresos, tener esa contabilización de pago.
+- [37:20] Yo lo pondría en los dos, en los tres, todo en la cartola.
+- [37:27] Al final voy a contabilizar todo.
+- [37:29] Claro, perfecto. Vamos a maquillar entonces ese módulo para tener como ya una idea de cómo sería la visualización y cómo se enviaría la información desde acá de la cartola a ese módulo.
+- [37:48] No sé si es que de casualidad tendrán como ya un proceso ya establecido de cómo se hace eso, como para replicarlo.
+- [37:55] Sí. ¿Cómo se hace actualmente ese registro?
+- [38:08] Actualmente se toma la cartola y se va ingresando en el módulo de contabilidad, pago, literal.
+- [38:15] Se pone la cuenta banco y se pone si te pago o si ingreso.
+- [38:21] Todo en manual, sí.
+- [38:28] Entonces vamos a hacer una propuesta de cómo realizar esa asociación de acá.
+- [38:35] Vamos entonces con... bueno, la nómina semanal ya la habíamos conversado,
+- [38:38] Esto es lo que hay que hacer la modificación del estado. Y aquí ya tendríamos lo que vendría a ser el estado de cuenta por cliente, donde aquí podemos ver si es que tiene cada uno de los roles y los saldos con los movimientos, donde podemos ver aquí los detalles. Y nos tira la URL del nexo prácticamente para poder ir a ver ese folio. Y aquí dependiendo de si es que tenemos muchos movimientos podemos ir seleccionando acá para que abajo nos vaya siendo como un totalizado. No es como un exportar ni realizar acción como tal, es solamente informativo.
+- [39:08] Carlos, ahí por ejemplo en la grilla dice Movimiento 2.
+- [39:45] Aceptar a Excel y PDF, que eso también lo vamos a hacer con la reformulación de los debajados submódulos.
+- [39:55] Dentro de todo esto, no sé si es que habrá algo que se nos haya escapado, algún proceso que falte en el sistema.
+- [40:03] Los proveedores, los productores, tener como saber los anticipos. Bueno, que eso lo voy a ver en el módulo de ustedes.
+- [40:26] ¿Para ver cuántos documentos tiene el productor? ¿Cuántos anticipos se les han dado?
+- [40:37] ¿Es que los anticipos no son de la parte?
+- [40:39] Sí, pues, no es igual que los de la parte.
+- [40:42] ¿Todo lo empezó de día?
+- [40:45] De día, sí.
+- [40:46] El de contabilidad obviamente puede agrupar todo.
+- [40:52] Pero ahí te va a agrupar todas las facturas y todo lo que anticipo, ¿no va a estar eso ahí?
+- [41:01] ¿Como consulta a un productor?
+- [41:03] Sí.
+- [41:04] ¿Proveedor? Porque así he estado en estos momentos, ¿no?
+- [41:14] Es que ahora estamos... Ahora es consulta a proveedor, pero en realidad tú buscas ahí los productores.
+- [41:21] Igual busco proveedores a veces.
+- [41:25] ¿Pero qué tienes que ver?
+- [41:25] Yo necesito ver, supongo que si entro a un módulo, necesito ver cuántas facturas tiene y los anticipo.
+- [41:36] Eso debería estar en tesorería, en parte en tesorería.
+- [41:41] Como lo tenemos ahora en Agrosoft.
+- [41:43] Exacto.
+- [41:48] ¿Faltaría entonces un módulo para que pueda consultar eso?
+- [41:51] Sí, yo creo que sí, Carlos.
+- [41:55] ¿De productores y qué más necesita ver los documentos?
+- [41:59] Productores y proveedores.
+- [42:01] Entonces aquí podríamos generar un submódulo en tesorería que sean documentos por productor, proveedor.
+- [42:11] Yo tengo una duda, Carlos, porque se supone que el estado de cuenta es lo que te va a arrojar la información del RUT.
+- [42:18] Exacto, sí, de hecho.
+- [42:19] Ahí van a aparecer los anticipos, van a aparecer las facturas, los documentos asociados al RUT, ¿no?
+- [42:25] Sí, aquí salen al root y aquí podríamos hacer quizá un filtro rápido para que aparezcan los que son proveedores, los que son productores y los que son clientes.
+- [42:46] Si yo aprieto proveedor no aparece, ahí está, ahí está el detalle.
+- [42:50] Ahí sale el detalle, pero no sé si es que por ejemplo tendrían que tenerlo igual como dividido, si es que por ejemplo este es productor y proveedor, de que tenga como dos listas.
+- [42:59] O que aquí por ejemplo diga el tipo, si es productor o proveedor, el movimiento.
+- [43:07] Claro.
+- [43:08] Eso faltaría, ¿verdad?
+- [43:10] Sí, ahí faltaría porque lo queremos filtrar solamente como proveedor o como...
+- [43:17] Pero ahí entonces podría quedar arriba como filtro, ¿no?
+- [43:20] Sí, también tenerlo como filtro y aquí también tenerlo como filtro de que aparezca uno u otro.
+- [43:29] Claro.
+- [43:30] Si tiene tres, si tiene dos o si tiene solo uno.
+- [43:33] Pero es que ahí, por ejemplo, puede ser que sea de proveedor y pendiente, ¿cierto?
+- [43:38] Claro.
+- [43:39] O proveedor histórico, cachái, entonces, o cliente y todos. Entonces serían filtros compuestos.
+- [43:47] Serían como dos selectores.
+- [43:50] Claro.
+- [43:51] Sí, sí. Aquí podríamos, por ejemplo, dejar dividido el filtro donde aparezcan todos los roles que tienen y puedan seleccionar solo proveedor, solo productor, solo cliente, o dos, o los tres.
+- [44:04] Claro.
+- [44:05] Y esto también dejarlo como aparte para que esto sea así como el histórico o dos.
+- [44:10] Perfecto, aquí entonces tendríamos que tener la columna del tipo.
+- [44:16] Eso nos faltaría ahí.
+- [44:19] Pero por qué, si ahí está el rolpo, ¿no?
+- [44:22] Ah, verdad, toda la razón.
+- [44:26] Toda la razón.
+- [44:29] Y que sea un poco más ancho para que esto no quede apilado.
+- [44:32] Falta ocupar espacio ese módulo, pero va junto con el restablecimiento visual que tenemos que hacer las demás.
+- [44:37] Si, entonces con ese, esta columna role se podría identificar y aquí listaríamos los roles para que puedan tener como un filtro separado o ya se va a verlos todos juntos.
+- [44:50] Lupe, consulta, esta información que se va a filtrar, ¿la necesita a nivel de Excel o algo?
+- [44:58] Sí, de Excel.
+- [45:01] O sea, habría que agregar acá y exportar a Excel.
+- [45:03] Perfecto. Y ahí como cabecerra dejamos los datos del RUT, de la razón social, y ahí vamos listando los demás movimientos con lo que se esté filtrando en la lista.
+- [45:20] Genial. No sé si tendrán alguna otra duda o solicitud que no haya quedado ahí pendiente.
+- [45:31] ¿No escuchan?
+- [45:46] Sí, se escucha.
+- [45:48] Ah, es que no había movido por un segundo.
+- [45:50] Esta es la posibilidad, porque nosotros vamos a hacer una carga de información, de lo que son clientes, proveedores y productores.
+- [46:08] Perfecto.
+- [46:09] Y vamos a seguir creando proveedores y productores.
+- [46:11] Nosotros podemos sacar algún detalle de, por ejemplo, todos los productores creados como productor, independiente tengan o no movimiento.
+- [46:21] Como solamente los nombres y los routes, por así decirlo, como una lista.
+- [46:25] Claro.
+- [46:25] Tendríamos que aquí tener, por ejemplo, yo creo que en parametrización, un módulo especial que unifique los tres, porque ahora de momento no hay como una vista unificada de clientes, proveedores y productores.
+- [46:41] Están todos como separados. Lo que sí, por ejemplo, al momento de crear un contratista, o crear un proveedor, o crear un cliente, si el root ya existe, se heredan, por ejemplo, los datos del nombre, el giro, dentro de los módulos.
+- [46:59] Pero en sí, no hay como un módulo que tenga toda la info.
+- [47:09] Están, pero están separadas. ¿Necesitan que tenga una vista juntas?
+- [47:13] No, lo que pasa es que a veces, por ejemplo, queremos saber cuántos productores tenemos creados y no podemos sacar específicamente el listado de productores.
+- [47:25] Porque en la información de la base no aparece como la clasificación del root.
+- [47:29] Ok. Acá, por ejemplo, tendría que verse directamente, por ejemplo, si quieren proveedores, tendría que verse aquí en parametrización proveedores. Si son para contratistas, aquí en listado, contratistas tenemos como la data. No tenemos como exportarlas o sí, eso nos faltaría.
+- [47:44] ¿Ya?
+- [47:45] Y para clientes tendría que verse aquí en ventas, clientes.
+- [47:48] Pero, por ejemplo, en el de proveedores habrían proveedores y productores. ¿Podríamos hacer un otro que sea productores, cosa que nos metamos un módulo distinto para crear productores?
+- [48:03] ¿Sería en parametrización?
+- [48:06] Sí.
+- [48:07] Sí, podríamos dejarlo aquí abajito de proveedores y arriba de contratistas.
+- [48:13] Ya. Contablemente tiene el mismo tratamiento, pero es para regresar las separaciones porque también nos ha pasado que creamos productores y le ponemos proveedor y creamos proveedor y ponemos productor.
+- [48:25] Entonces cuando bajamos los informes nos aparece la información cruzada.
+- [48:32] Entonces, desde donde se alimentan los sistemas que ocupan proveedores, también deberían hacerlo con productores, ¿verdad?
+- [48:42] Sí.
+- [48:43] Perfecto. Solamente que serían dos listas aparte.
+- [48:46] Sí.
+- [48:47] Y en ese caso, por ejemplo, ¿hay proveedores que sean productores para que tengan como el anuncio de que existen los dos?
+- [48:53] Sí, sí hay.
+- [48:54] Ya, y en ese caso, por ejemplo, si hay modificaciones de los, por ejemplo, datos, ya sea correo electrónico o algo, ¿tienen que tener sinergia o puede existir de que, por ejemplo, un root como proveedor tenga datos de una persona como responsable y como proveedor tenga otro?
+- [49:13] ¿Cómo?
+- [49:13] Por ejemplo, acá tenemos en la ficha datos de usuarios, por así decirlo, por ejemplo, teléfono, email, entonces no sé si eso tendrían que vivir separados y solamente compartir el root y el nombre.
+- [49:26] No, ahí se puede compartir la información, es el mismo contacto.
+- [49:30] Ya, perfecto. Entonces, por ejemplo, si se modifica acá en proveedores, debería en productores, si es que es el mismo root, también modificarse.
+- [49:36] Claro.
+- [49:38] Perfecto. Igual vamos dejando también entonces un historial para que se muestre quién lo modificó y desde qué módulo.
+- [49:44] Por mi parte, uno tendría más dudas. No sé si Sergio tiene alguna consulta.
+- [49:55] No, no, por mi lado no.
+- [49:59] ¿Alguna duda de parte de ustedes, Mari, Francisca y Lupe?
+- [50:03] Genial.
+- [50:44] Yo creo que sería bueno si lo revisamos el lunes en conjunto y ahí podemos reestructurar o reprogramar.
+- [50:52] O sea, si me lo pueden mandar antes, mejor.
+- [50:57] Es que así también lo organizo porque la idea es, si vamos a ver, por ejemplo, el módulo de insumos, poder coordinar con abastecimiento a la persona para que ya empiece a interiorizarse en el módulo y ver si a ellos les falta algún detalle.
+- [51:09] Ya, ok. Ya, perfecto, para tener las piezas claves. Mira, yo creo que mañana antes de mediodía te lo enviaré yo.
+- [51:19] Ya, buenísimo.
+- [51:21] ¿Ya?
+- [51:21] Sí.
+- [51:23] Perfecto. Ya, pues, estamos entonces.
+- [51:27] Muchas gracias.
+- [51:28] Muchas gracias.
+- [51:29] Que tengan buena tarde.
+- [51:30] Nos vemos el lunes.
+- [51:32] Gracias.
+- [51:32] Nos vemos, chao, chao.

@@ -1,0 +1,426 @@
+# Reunion 2026-10-21 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-10-21 165353.mp4
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [07:02] Hola, hola, ¿se escucha?
+- [07:04] Hola, ¿sí?
+- [07:06] ¿Cómo estás, Mari? Bien, bien, aquí... con alergia, sabéis que ahora hace calor y ayer está nublado, había lluvia, parece como el trópico acá.
+- [07:18] Acá estamos igual, está lloviendo y hace calor y un sol tremendo.
+- [07:22] Oh, qué terrible, a mí con este clima me da mucha alergia, sabéis que ando con la nariz así partida de tanto andar estornudando.
+- [07:30] Oh, qué fome.
+- [07:32] Sí, mal, mal, pero nada que una buena pastilla, nada que nada.
+- [07:37] Acá estamos rodeados de árboles.
+- [07:39] No, si ya me compré unas clonfenamina, unas más fuertes, ya estaba precavido ya y dije, no, si tiene que ver fruta, debe estar ahí bien fuerte la polinización.
+- [07:48] Estamos en pleno...
+- [07:51] O me hago más inmune o me voy al hospital, una de dos.
+- [07:57] Así que han dado igual el clima así medio pesado por allá.
+- [08:00] Sí, de hecho, como te digo ahora, creo que recién paró de llover, pero está lloviendo y hace calor.
+- [08:08] Oh, qué terrible.
+- [08:10] Y un cielo despejado y no sé dónde será la lluvia.
+- [08:13] Aquí está muy bueno el arte, así está en pleno almuerzo, así como hace unas horas, y de repente se puso súper oscurísimo, así tuvimos que prender la luz.
+- [08:23] Sí, se está cayendo el cielo, estamos en el fin del mundo.
+- [08:27] Mientras no tiemble.
+- [08:29] No, ahí sería el colmo, ahí sí que sería el colmo.
+- [08:32] Toda la semana va a haber sol, toda la semana.
+- [08:50] Mario me dijo que tampoco y acá estoy con la Fran y la Lupe.
+- [09:09] Oigan, miren, vamos a hacerlo igual un poquitito rápido lo que vendría a ser la muestra.
+- [09:15] Estábamos con unos problemas con GoSocket, así que alcancé a preparar esta vez los documentos,
+- [09:21] pero no me estaba permitiéndole aceptar de lo que vendría a ser la recepción de la guía de despacho.
+- [09:26] Pero, para no ir enredándonos, lo primero que vamos a ver va a ser que se actualizaron varias cositas de lo que es estilo visual
+- [09:33] y se implementaron mejoras, por ejemplo, lo que vendría a ser notificaciones.
+- [09:37] Ahora uno puede ver todas las notificaciones que tiene asociada. Aquí, por ejemplo, la administración. Se limpiaron las vistas de muchos documentos que... perdón, alguien, parametrización.
+- [09:48] Y se realizaron las implementaciones de lo que vendría a ser las reglas de aprobaciones para insumos, que era lo que nos faltaba.
+- [09:55] Desde acá la configuración de los jefes por cada uno de los conceptos que vendrían a ser como administradores.
+- [10:00] Y la parametrización se adjuntó a lo que vendría a ser activos fijos, que eso ahí como es lo último que se asoció, tenemos hartas duditas que lo vamos a ver al final, ¿ya?
+- [10:13] Vamos entonces a lo que habíamos quedado pendiente.
+- [10:16] Aquí lo que vendría a ser la parte de insumos, generamos por ejemplo lo que vendría a ser las asociaciones de las familias y las subfamilias a la parametrización de activos,
+- [10:26] Así que eso está completamente ligado. También se asocian directamente cada uno de los documentos, o sea, perdón, cada uno de los envíos de los XML, lo que vendría a ser dentro de las guías de despacho que se emiten desde acá, estos detalles de acá, así que también se van asociando los documentos.
+- [10:44] Aquí tenemos lo que vendría a ser la vista de las bodegas, que es la creación prácticamente de estas, y acá es donde se ve el stock, que pueden verlo directamente lo que es por bodega o por producto.
+- [10:55] Ok, acá no me sale, ¿por qué no me sale empresa seleccionada? Ahí sí. ¿Qué debería tener acá en el modo demo? No, tampoco.
+- [11:08] Algo pasó con la construcción de acá, pero aquí tenemos como la selección, de hecho me imagino que...
+- [11:14] Ah, claro, efectivamente, se está ligando lo que vendría a ser acá para la vista por producto y por bodega se tiene que seleccionar acá para ver los detalles.
+- [11:21] Error mío.
+- [11:22] Entonces, también lo que vendría a ser la creación de cada uno de estos va a asociar directamente aquí al maestro de artículos para crear artículos.
+- [11:30] Y podemos ver lo que vendría a ser el formulario.
+- [11:32] Esto se asocia directamente a lo que vendría a ser la cuenta por ítem, el precio de compra, que es el que se pasa directamente cuando se hacen las ventas o las compras también, y como les dije acá, los formularios que vendrían a ser correspondientes a la implementación de activos fijos.
+- [11:48] Eso sí, esto la vamos a mejorar porque como pueden ver están como los ítems un poquitito redimensionados, que esto, como estábamos trabajando en esto, no alcanzamos a hacer la reformulación visual, pero es parte de lo que estamos trabajando actualmente.
+- [12:01] Ya.
+- [12:33] Tal cual como vendría a ser una orden de compra, que esta es la idea, que como habíamos dicho, lo haga el administrador.
+- [12:39] Pueda crear tanto dependiendo del proveedor, selecciona después los ítems, las cuentas contables, elementos de costo.
+- [12:47] Como podemos ver, se hizo lo de la implementación de que las aprobaciones sean desde cero en adelante.
+- [13:06] Entonces por aquí sí o sí pasa al primer eslabón de la cadena.
+- [13:23] Y aquí pasaría lo que vendría a ser al sistema de aprobaciones.
+- [13:26] Entonces, esto llevó a la aprobación directamente, pero aquí se debería gatillar lo que vendría a ser la misma aprobación que podemos ver en el sistema de compras.
+- [13:42] Se copió tal cual en la vista desde acá, junto con los detalles de lo que es la orden de insumo.
+- [13:53] Se visualiza la cadena y se aprueba por el administrador.
+- [13:56] Y una vez se tiene esa aprobación, acá en el libro de guías podemos hacer la recepción de las guías de despacho de GoSocket y es también más poder asociarlas a las órdenes de insumo.
+- [14:11] Y dependiendo de lo que suceda, si por ejemplo en este caso cubre directamente lo que vendría a ser el monto total de la guía de despacho con la orden de insumo, se genera directamente lo que vendría a ser la asociación como match perfecto.
+- [14:28] Y si ya viene parcializada, en lo que vendría a ser cantidad o monto, avisa al usuario de que no está el match perfecto en la relación para que se desencadene, lo que vendría a ser la creación de la orden de insumo hija, para que quede asociada a la madre, o que se notifique a la persona que generó la orden de insumo para que haya una modificación de esta.
+- [14:50] Carlos, te puedo pedir que repitas esa parte que se nos corta cada rato la voz.
+- [14:59] ¡Oh! ¿Estamos con pérdida de señal?
+- [15:02] Sí.
+- [15:03] No, justo hoy día no puede ser.
+- [15:05] Está como el tiempo en internet.
+- [15:09] Súper inestable.
+- [15:12] ¿Y en qué quedaron más o menos que se cortó?
+- [15:15] En el principio, en la ventana.
+- [15:18] En el buenas tardes.
+- [15:20] En esta parte, en el libro de guías.
+- [15:24] Perfecto. Aquí en el libro de guías, por ejemplo, con este botón traemos todo lo que vendrían a ser las guías,
+- [15:28] Que nos llegan acá, por ejemplo, están sin asociaciones, como podemos ver. Nos llegan con los detalles de la guía, quien la emitió. En este caso, como estamos ocupando directamente GoSocket, son pruebas reales, la estamos midiendo de una de las empresas a la otra. Por ejemplo, en este caso estamos en AlmaWebExport y nos llegó desde ALM Service. Entonces, esto es una emisión real desde una guía de despacho desde ALM hacia AlmaWebExport.
+- [15:53] Entonces, acá, dependiendo del caso, podemos hacer lo que vendría a ser el acuse del DTE, que esto es lo que no estaba fallando porque la plataforma GoSocket está teniendo mucha lentitud en la tarde.
+- [16:12] O sea, Pablo me había dicho el mismo alcance ayer, que GoSocket estaba muy lento estos días.
+- [16:17] Sí, de hecho nos hemos demorado harto por lo mismo porque no tenemos la certeza si es que eran problemas de nosotros, pero como nos estaban fallando también los que teníamos listos, los que ya habíamos probado, nos dimos cuenta que era GoSocket la lentitud y cuando intenté engrosar el portal, no, ni te cuento.
+- [16:37] Ojalá, puede solucionar luego ese tema con el YoFacturo.
+- [16:42] Sí, de hecho, por lo que tenemos entendido, cuando pasemos directamente a producción, que vendría a ser como el sistema real, ese día tienen la disponibilidad de recursos.
+- [16:53] Ahora, como por ejemplo está con mucha lentitud, la asociación directamente no la vamos a poder mostrar, pero como se hace, o como una simulación, por así decirlo,
+- [17:01] Por ejemplo, en el momento de realizar la recepción, nos va a listar las órdenes de insumo directamente, la bodega de destino, y aquí, por ejemplo, dependiendo de la cantidad de ítems, nos va a preguntar si son diferentes ítems, nos va a listar acá todos los que vengan en la guía de despacho, y acá la vamos a poder asociar con los artículos que vengan en la orden de insumo.
+- [17:36] Si, por ejemplo, no llega a ser a calzar, a coincidir, ya sea en el código o en el nombre, podemos solicitar la creación directamente a la persona que administra la parte de insumos.
+- [17:49] Así que ahí le podría llegar una notificación directamente a algún usuario.
+- [17:53] ¿Consulta Carlos?
+- [17:55] Sí.
+- [17:56] Por ejemplo, ¿qué pasa si yo quiero digitar la guía y no me llegue directamente a GoSocket? ¿Voy a poder?
+- [18:03] ¿Digitar la mano?
+- [18:04] Sí.
+- [18:05] No lo teníamos considerado como un menú, pero ya está como maqueteado el hecho de que puedan ingresar la mano.
+- [18:12] Sí, lo que pasa es que como actualmente todavía seguimos con Acepta, mientras estemos en prueba,
+- [18:18] la guía de despacho se van a recibir de Acepta y se van a emitir por Acepta.
+- [18:23] De hecho, lo teníamos así como pendiente junto con lo que vendría a ser la posibilidad de adjuntar archivos
+- [18:29] Los que nos mencionaron en su momento, que cada uno de los documentos se le puedan asociar N número de archivos, para que así puedan digitalizarlo también el documento y adjuntarlo en ese tipeado.
+- [18:43] Sí, o por último, puedes subir algún Excel, porque eso lo podemos descargar de Acepta.
+- [18:49] Ya, perfecto, perfecto.
+- [18:51] Pero a ver, ver la opción, porque mientras estemos con dualidad, van a seguir operando con Acepta los de abastecimiento.
+- [18:59] En ese caso será posible que nos envíe una de las guías que les llegan para tomar todos esos campos y tenerlos como tipo de lo que les van a llegar, de lo que tengan que ingresar.
+- [19:09] Así les dejamos un botoncito que sea el ingreso manual aquí en la guía de despacho.
+- [19:12] Ya, perfecto. Carlos, consulta.
+- [19:15] Dígame.
+- [19:15] Por ejemplo, ¿ustedes tienen planificado lo que vamos a ver los días que vengan o lo planificamos nosotros?
+- [19:20] No lo tenemos directamente planificado.
+- [19:23] Ya.
+- [19:24] ¿Pero tienen más o menos una idea de lo que quieren ver?
+- [19:26] Sí, sí, que vendría a ser como los pendientes que, por ejemplo, tenemos lo que vendría a ser el módulo de contabilidad, el tema de los pagos, tenemos pendiente revisarlo. El tema del activo fijo, si es que no llega a quedar como finiquitado ahora, también tenemos que verlo. Y, bueno, ahí estábamos viendo también en el uso que vayamos dándole a la plataforma cómo ir viéndolo sobre la marcha. Pero si tienen una planificación, nos la comparten y nos adecuamos a eso.
+- [19:52] Lo que pasa es que queríamos hacer una planificación, cosa de, por ejemplo, ponernos de acuerdo con la persona de abastecimiento y que pueda hacer un proceso completo.
+- [20:02] La idea es como ya ir probando los módulos y ver si falta algún detalle de cada módulo.
+- [20:07] Sí, sí, perfecto. Mira, déjame comentarle a Sergio para que por último lo hablamos en el mismo grupo de WhatsApp y ahí vamos viendo cómo lo podemos hacer.
+- [20:15] A ver si es que igual podemos hacer como un día de que tenga su planificación usted y después nosotros lleguemos como al segundo día con nuestras dudas y preguntas y sigamos con lo que tenían planificado.
+- [20:25] Ya, perfecto.
+- [20:27] Genial. ¿En qué me quedé? Ah, sí, por ejemplo acá está la posibilidad de crear uno mismo el producto o pedir directamente la creación en caso de que no calcen algunos de los que ya existan en el registro de productos en bodega.
+- [20:41] Ya.
+- [20:41] Y, marcando ya la recepción, se habilita directamente, dependiendo de quién esté logueado, la posibilidad también de asociar la factura.
+- [20:51] Que eso lo habíamos dejado para que lo que se configura como administrador pueda hacerlo y tener el botón acá de la visibilidad de factura.
+- [21:00] ¿Ya?
+- [21:02] Por ejemplo, que sea así.
+- [21:05] Esta columna está casi en todos los módulos que muestran los documentos asociados.
+- [21:10] Insumos, por ejemplo, en este que estamos viendo, el libro de guías, esta guía ya tendría asociado lo que vendría a ser una orden de insumos, y esa orden de insumos ya tiene también asociado lo que vendría a ser la factura.
+- [21:25] Entonces ahí como que se hace el match perfecto, y estos son navegables, esto por ejemplo debería llevarme directamente a ver lo que vendría a ser el detalle de la factura que se recepcionó en el libro de compras.
+- [21:37] Las chiquillas están alucinando aquí con eso.
+- [21:39] Intenté que fuera de la forma más fácil de buscar toda la información.
+- [21:47] Sí, está bien.
+- [21:48] Sí, por favor.
+- [21:50] De hecho acá si se dan cuenta también se repiten estas y salen también las asociadas.
+- [21:54] Por ejemplo en esa que podríamos haber visto, si era una hija, no iban a salir solamente los que tienen asociado a esa hija junto con la madre,
+- [22:00] pero por ejemplo aquí podríamos irnos a lo que vendría a ser la madre, que esta ya es una parcializada,
+- [22:04] que cada una de, por ejemplo, sus hijos tiene una factura y una recepción.
+- [22:08] En este caso, debe haber una, entonces, por ende, esta todavía no está completa, por así decirlo. Y aquí podemos ver los montos que tiene cada uno de los documentos.
+- [22:18] Aquí tengo una duda.
+- [22:20] Dígame.
+- [22:21] Porque se supone que las hijas no deberían tener saldo.
+- [22:24] ¿Con saldo te refieres a una factura asociada? Porque como yo lo había entendido, es que cuando, por ejemplo, hay una orden de compra y a esta le llega una guía de despacho que no alcanza a cubrirla por completo, se genera una orden hija.
+- [22:50] Sí.
+- [22:51] Y a esa orden hija se le tiene que asociar la factura.
+- [22:55] Sí.
+- [22:58] Pero como las hijas son las reales, no tienen que quedar con saldo.
+- [23:04] Ellas mueren cuando se les asocia una factura.
+- [23:08] Hay que quedarse cerradas, por así decirlo.
+- [23:10] Sí, hay que quedarse cerradas. Y la única que queda con saldo es la madre.
+- [23:15] Perfecto. Y con eso, por ejemplo, al momento de quedarse cerradas, ¿deberían automáticamente contabilizarse?
+- [23:22] ¿O deberían contabilizarse así como con un botón, una acción que ejecute esa...?
+- [23:27] Las hijas se contabilizan al momento de hacer la centralización de bodega.
+- [23:33] Perfecto.
+- [23:34] Una vez que recepcionamos, eso se va haciendo como una acumulación mensual.
+- [23:39] Y cuando yo hago el cierre de bodega, ahí se contabilizan, todas centralizadas.
+- [23:45] ¿Pasan también a un asiento, solo a un asiento único?
+- [23:49] Sí, hay dos asientos en los que se hacen.
+- [23:51] Cuando se recepciona, se hace un asiento para reconocer la existencia contra facturas por recibir.
+- [23:59] Perfecto.
+- [23:59] Y cuando se hace el ircalce, se elimina facturas por recibir, se reconoce el proveedor y se hace la centralización mensual.
+- [24:06] Entonces eso es lo que tenemos que hacer de que se haga la contabilidad directamente en el cierre porque la teníamos como, la habíamos dejado en las órdenes de compra.
+- [24:32] También se hizo cambios y ajustes en lo que vendría a ser, bueno acá hay insumos, lo que nos faltó, a ver si mal no me equivoco, no, el libro de guías lo vimos, sí, creo que alcanzamos a ver.
+- [24:46] Se hicieron cambios también en lo que vendría a ser las vistas de acá de compras.
+- [24:54] Dejamos la visibilidad de lo que vendría a ser las madres y las hijas, o sea, perdón, solamente las madres, pero más que nada como información.
+- [25:02] Entonces acá se pueden ver, en este caso como estamos en el modo demo no me lo permite, pero se puede ver con un totalizado de la cobertura.
+- [25:11] De hecho, quizás acá en el libro de compras aparezca, ninguna que venga con el totalizado.
+- [25:27] Pero la idea es que acá, en esta cobertura, vaya apareciendo un porcentaje en la madre de, como una barra de carga,
+- [25:34] de cuánto es lo que le falta para cubrir la cuota en pesos de lo que tiene la orden de compra.
+- [25:42] Para tener como de forma visual una barra de carga.
+- [25:44] Que de hecho ahora, la verdad es que no sé por qué nos está cargando.
+- [25:48] La idemorfis, si puede fallar, va a fallar.
+- [25:51] Pero debería aparecer. Aquí está, de hecho.
+- [26:21] Cuando haya llenado la barra, aquí va a aparecer un signo de exclamación en amarillo bien llamativo, indicando de que no calza, y va a aparecer acá un...
+- [26:27] No te escuchamos.
+- [26:29] Ah, no te escuchamos.
+- [26:30] Después de los ítems.
+- [26:32] Ahora sí.
+- [26:33] Cuando, por ejemplo, los ítems no calcen, va a aparecer un signo de exclamación, y va a ser bien llamativo, que van a notificar acá en esta lista de que no cuadran todos los ítems,
+- [26:44] Y al momento de ingresar a la madre, aquí va a aparecer una opción para notificar a la persona que hizo la orden de insumo de que ya se hizo la recepción, pero no cuadra ya sea el monto o la cantidad.
+- [26:57] Y ahí va a estar el descuadro con la madre y ahí hay que hacer el ajuste final.
+- [27:02] Exactamente, exactamente.
+- [27:05] Por ejemplo también, y esto se implementó en todos los módulos, está el botón de notificar y el de notificar.
+- [27:10] Ahora, levanta este que habíamos visto del envío de correo o solamente notificación interna, justo con su trazabilidad, y por cada modificación también va dejando acá en el historial la marca de quien lo hizo con el detalle.
+- [27:24] Por ejemplo, aquí se marca de que pasó dependiente a aprobación, ha aprobado la orden de insumo en este caso.
+- [27:32] Así que queda todo identificado, nadie puede decir que no lo hizo.
+- [27:38] Buenísimo.
+- [27:39] Entonces, ah, y ahí por ejemplo teníamos rastro de contabilizar, que esto lo vamos a quitar acá de lo que vendría a ser las órdenes para que se haga la centralización como me lo explicaste.
+- [27:48] Sí.
+- [27:52] No sé si tendrán alguna duda, algún comentario, algo que faltó, algo que podríamos mejorar.
+- [28:00] No, solamente el tema de las órdenes de compra de hijas, que esas tienen que quedar siempre 100% calzadas.
+- [28:06] Perfecto, perfecto.
+- [28:07] Porque esa se crea con la recepción y esa es la real.
+- [28:10] Ahí no debería haber diferencia con la facturación.
+- [28:13] Perfecto.
+- [28:17] Entonces, ahora vamos a pasar a lo que vendría a ser un poquitito el módulo de contratistas,
+- [28:20] que se hizo como una modificación a lo que vendría a ser la reportería,
+- [28:25] donde, bueno, aquí se dejaron la mayoría de totalizados,
+- [28:29] con la opción de ocultarlos para tener una mejor vista,
+- [28:32] y se dejaron así bien grandes con las ideas que se puedan ver.
+- [28:36] Y se dejaron, por ejemplo, en este caso, totalizados por semana
+- [28:39] Para lo que vendría a ser el reporte de ingresos, para tener por cada una de las semanas del mes la cantidad de saldo que corresponda a los ingresos de esa semana y también se implementó una vista tipo calendario para ir por día viendo como el detalle de cada uno de los ingresos diarios.
+- [28:56] Bienvenidos, también se juntaron los reportes que nos solicitaron, cada uno está en su subsección de reportería, junto con la opción de descargar a PDF, y hablando del PDF, aquí dejamos dentro de lo que vendría a ser la planilla de documentos, la opción de personalizar ese PDF.
+- [29:16] Bueno, la personalización, este es como el tipo de documentos que se van a emitir en cada uno de los reportes.
+- [29:23] Y la personalización va desde lo que vendría a ser la imagen, el logo, si es que se va a agregar algún pie, y los colores.
+- [29:30] Así que si en algún momento se necesitaría algún otro dato dentro de los documentos, ahí nos tendrían que decir para implementarlo acá.
+- [29:37] Ya.
+- [29:37] Y bueno, lo otro que estábamos acá implementando es que teníamos hartos dudas que se hicieron las páginas que logramos identificar en el documento que vendría a ser lo de activos fijos.
+- [29:53] Aquí por ejemplo dejamos un maestro para tener como todos los activos fijos asociados, un traspaso y cierre contable con una simulación, una vez tengamos más activos dentro del maestro, y la reportería.
+- [30:07] Aquí tiene como un totalizar, los valores, la acumulado y el neto.
+- [30:39] Lo que pasa es que los activos fijos ingresan directo, no se hacen con orden de compra.
+- [30:45] Ok, entonces tendríamos que hacerlo desde acá, de un módulo totalmente aparte.
+- [30:54] Sí, se podría ingresar la directa en el módulo.
+- [30:59] Perfecto. La asociación de los activos fijos está bien que vaya, por ejemplo, acá tenemos a los insumos, a los libros de compra.
+- [31:08] No, ahí el activo fijo va directamente a las cuentas de activos.
+- [31:12] Entonces aquí tendría que seleccionarse como las cuentas, por así decirlo.
+- [31:19] Sí.
+- [31:20] En el origen.
+- [31:22] Sí.
+- [31:24] Perfecto.
+- [31:29] Aquí entonces no aplicaría lo que vendría a ser el tipo de documento.
+- [31:32] Pero, por ejemplo, en origen, ¿tú te refieres a la factura?
+- [31:36] Sí. Esto es más que nada como el que haría el nexo hacia dónde se asigna el activo fijo.
+- [31:52] Y ahí está mi duda, porque aquí, como te decía, lo hicieron directamente a lo que vendría a ser los documentos del libro de compra.
+- [31:58] ¿Y de insumos bodega?
+- [32:02] Ya de insumos bodega no.
+- [32:04] Solamente de compras.
+- [32:06] Claro, y del libro de compras podría ser porque ahí podríamos sacar la factura directamente.
+- [32:10] Siempre llega la factura del libro de compras.
+- [32:14] Por ejemplo, acá el buscador es por el número de la factura o el nombre o el saldo.
+- [32:21] Ya, perfecto.
+- [32:23] Entonces lo que tú escribas, si por ejemplo escribes el número de la factura, va a salir el número de la factura.
+- [32:27] Si escribes el número del cliente, te van a salir solamente las de ese cliente.
+- [32:29] Ya.
+- [32:32] Perfecto.
+- [32:35] Nombre, familia, descripción.
+- [32:36] Bueno, las familias y las subfamilias van asociadas a lo que se hace directamente en la parametrización,
+- [32:40] que es donde se hace este ingreso de datos.
+- [32:42] Lo dejamos directamente en el panel aparte.
+- [32:47] Y de nosotros, por ejemplo, acá, el tipo de documento se debería llenar directamente de lo que se selecciona acá, ¿verdad?
+- [32:53] Sí.
+- [32:53] Entonces no tendría como cabida, sería como un campo informativo directamente.
+- [32:57] Claro.
+- [32:57] ¿Se hacen ingresos de activos fijos de documentos físicos que no hayan llegado digitalmente?
+- [33:10] No debiesen.
+- [33:12] ¿No debiesen?
+- [33:13] No.
+- [33:14] Perfecto.
+- [33:24] Ahí, por ejemplo, también, por lo que veo, se dejó para la asociación de centro de costos.
+- [33:28] No, el centro de costos tampoco va.
+- [33:38] Porque los demás campos son netamente informativos, no tienen relación con los demás.
+- [33:42] Así es. Ahí, por ejemplo, cuando ya veamos directamente el uso, en caso de que sobre falte un campo informativo, es fácil de implementar, la verdad.
+- [33:51] Ya. Tengo una duda acá.
+- [33:57] Ya. Acá, nosotros al poner los datos, ¿haría el cálculo de la depreciación mensual?
+- [34:04] Debería.
+- [34:05] Ya.
+- [34:08] Vamos a hacer un rellenado de datos bien rápido, la verdad.
+- [34:11] A ver si es que hace el cálculo, porque debería hacer el cálculo.
+- [34:15] Por ejemplo, vamos a bajarlo como 120 meses. Por ejemplo, este cálculo de vida útil en meses corresponde. Igual encuentro como que sea un selector de meses. Quizás podría ser con fechas.
+- [34:28] No, sí, son meses.
+- [34:29] Son con meses.
+- [34:30] Sí.
+- [34:31] Perfecto. Fecha de comienzo, vamos a bajarlo al día de hoy. Valor residual, 120. Vamos a bajarlo como así, sin tipo de cambio.
+- [34:42] Ya, no hace el cálculo. Debería aparecer aquí abajo una calculadora automática al ingresar estos datos, ¿verdad?
+- [34:58] Deja ver algo.
+- [35:06] Sí. Lo que pasa es que la vida útil tributaria debía ser la misma que la vida útil.
+- [35:15] Porque nosotros hacemos la depreciación tributaria.
+- [35:26] Sí, pero falta que haga como un despliegue de...
+- [35:29] Yo creo que es por la fecha, porque al pasar el mes, recién se deprecia un mes.
+- [35:35] No, no está hecho el cálculo. Por ejemplo, ¿qué debería mostrarte como información de cálculo automático?
+- [35:46] Mira, por ejemplo, la fecha de compra pone que fue ahora en octubre, o en septiembre, el primero, no sé, ya.
+- [35:57] Entonces, acá, en la fecha de comienzo de depreciación, pone el mismo 21, pone el primero de octubre.
+- [36:03] Y entonces, al finalizar el mes, debería tener un mes de depreciación.
+- [36:12] Ahora, no sé si te dejará calcularlo.
+- [36:18] A sus familias.
+- [36:19] Yo miro, por ejemplo, ahí te cambió algo.
+- [36:37] Se había cambiado la vida útil.
+- [36:40] Sí, la calcula automática ahí.
+- [36:42] Pero debería salirnos como un campo entonces editable.
+- [36:50] No, la vida útil tributaria es la misma que la vida útil en meses.
+- [36:56] Ese monto habría que sacarlo.
+- [36:57] Lo que hay que ver es cómo calcular la depreciación mensual.
+- [37:01] Aquí se hace parece la depreciación del mes, pero debería mostrártela igual directamente en el otro ítem, ¿verdad?
+- [37:21] No, porque en el otro ítem, como lo estamos ingresando, ninguno va a tener depreciación.
+- [37:26] Porque solamente se le ingresa en el mes.
+- [37:29] Claro, aquí hizo la...
+- [37:31] Ah, ahí la hizo.
+- [37:33] Sí, sí.
+- [37:37] Ahí está bien, porque abajo te dice que la vida útil era en 36 meses y se ha consumido un mes.
+- [37:43] ¿Hay algún dato de estos que falten directamente o con eso está bien?
+- [37:49] La acumulada te va a faltar el mes siguiente.
+- [37:59] Y acá lo que vamos a tener quizás que agregar es la corrección monetaria.
+- [38:08] ¿Con eso a qué te refieres, Marín?
+- [38:09] Lo que pasa es que los activos fijos tienen corrección monetaria que se hace por el IPC mensual.
+- [38:19] Entonces lo ideal es siempre ir corrigiendo el monto con el IPC mensual y después calcular la diferencia.
+- [38:26] Entonces, en este caso deberíamos tener acá un panel de acciones que te permita hacer eso, ¿verdad?
+- [38:33] Claro, sí. De hecho, en parametrización deberíamos poder poner la corrección monetaria mensual, porque son indicadores.
+- [38:40] Aquí, por ejemplo, en confirmar el traspaso faltan cuentas de precarizaciones, maquinarias y equipos.
+- [38:58] Voy a revisarlo.
+- [39:05] Y acá en la parametrización lo que tenemos directamente son las familias, subfamilias, ubicaciones y tipos de documentos.
+- [39:12] Entonces tendríamos que agregar para que se pueda ir parametrizando el IPC, ¿verdad?
+- [39:17] Sí.
+- [39:22] Eso lo van obteniendo de forma manual.
+- [39:25] O sea, se puede obtener de la página del servicio.
+- [39:28] Perfecto, vamos a ver si es que podemos evaluar e implementar de que sea automático.
+- [39:39] Último que aparezca como un historial.
+- [39:42] Y hablando de historiales, por ejemplo acá, como esto se va a ir viendo directamente mes a mes,
+- [39:48] Dentro de las acciones también sería ir viendo el historial de cada uno de los ítems, de los valores que han ido cambiando.
+- [39:57] Historial tanto de cambios como de quién realizó el cambio de la parametrización, ¿verdad?
+- [40:03] O sea, no deberíamos tener un cambio en el monto ingresado.
+- [40:09] Lo único que se va a ir es corrigiendo monetariamente.
+- [40:12] Ah, claro. Entonces, teniendo como el historial solamente del monto y como la visual del valor de cada mes que tenía, sería suficiente, ¿verdad?
+- [40:22] O sea, acá está perfecto que diga valor neto.
+- [40:25] Ya.
+- [40:26] Y que todos los meses se vaya actualizando. Yo solamente ahí agregaría la corrección monetaria.
+- [40:38] Y aquí, por ejemplo, en los totalizados sería también bueno tener el IPC, ¿verdad?
+- [40:43] Sí.
+- [40:43] Y ahí con eso, al confirmar el traspaso, se generaría un asiento contable directamente, ¿verdad?
+- [41:05] Sí.
+- [41:10] Hablando de eso, en contratistas, en el traspaso y cierre contable, vamos a ocupar el del modo demo.
+- [41:22] Bueno, aquí lo que vendría a ser en contratistas, se listan para generar el cierre las proformas que están aprobadas y las que están con facturas.
+- [41:32] Entonces, ¿está bien o deberían solamente las que están aprobadas y con facturas?
+- [41:37] ¿Para la centralización?
+- [41:41] Sí.
+- [41:43] Deberían ser las que están aprobadas y las que están con facturas.
+- [41:46] Perfecto, entonces estamos bien.
+- [41:48] Cuando, por ejemplo, tenemos, bueno, esto es totalizado, esto es netamente información,
+- [41:51] que son las que están entrando al cierre, que cumplen con los requisitos,
+- [41:55] y aquí, por ejemplo, informativo solamente, no entran al cierre,
+- [41:59] es las que están fuera del asiento, que vendría a ser porque están pendientes de aprobación,
+- [42:03] son un borrador, etc.
+- [42:04] Aquí los ingresos diarios que están fuera de proformas.
+- [42:09] Y aquí el histórico del cierre en caso de que alguien haya abierto el mes y indique el motivo del porqué.
+- [42:19] Acá es lo que vendría a ser el cierre de mes.
+- [42:22] Hace un totalizado también nuevamente del total de las proformas, el monto.
+- [42:27] Y acá, bueno, aquí como estamos en el modo demo no está configurado, pregunta al debe y el haber, lista las cuentas y existe la posibilidad de dejar guardado por defecto.
+- [42:36] Que eso ya los teníamos directamente a la cuenta que nos habías mencionado, que justo en este momento se me olvidó.
+- [42:42] Ya.
+- [42:43] Que ya viene preseleccionado.
+- [42:45] Mano de obra contratista.
+- [42:46] Mano de obra contratista.
+- [42:48] Y te permite, en caso de, nosotros lo pensamos así, de que en el día de mañana vaya a necesitar generar otra cuenta por X motivo,
+- [42:56] poder cambiar esto, debe ya ver que no quede fijo, junto con la glosa que se va a generar.
+- [43:02] Sí, está bien, porque eso va a quedar a cargo de la jefatura.
+- [43:09] Perfecto, me gustó esta idea del cuenta con glosa como aparece en el cierre, ¿te parece que este también lo repliquemos en lo que vendría a ser insumos?
+- [43:17] Sí.
+- [43:19] Perfecto, porque aquí también en la glosa se podría agregar cualquier detalle, informativo, etcétera, en caso de que vendríamos a dejarlo acá también en el cierre de bodega.
+- [43:33] No sé si es que les queda alguna duda, algo que quieran ver, alguna sugerencia.
+- [43:48] Por mi lado no, ¿ustedes? ¿Algo con tesorería?
+- [43:53] ¿Cuándo más es la reunión?
+- [43:55] No sé si vamos a tener otra reunión esta semana.
+- [43:59] Podríamos aprovechar igual mañana y revisar tesorería, como lo estamos haciendo ahora.
+- [44:04] Sí.
+- [44:05] Sí, mejor.
+- [44:07] ¿Les parece el mismo horario?
+- [44:08] Sí.
+- [44:08] Sí.
+- [44:09] Bien. Perfecto. Ahí también podríamos aprovechar de ver cómo se pasa en relación a la contabilidad, a ver si es que también queda una duda, podríamos aprovechar de ver esos dos temas. Ya. Perfecto. Ah, y con respecto a la actualización, María, se me fue a avisar que ya está actualizado el sistema, ahora también voy a pasar estas actualizaciones como está, y dependiendo del día de mañana cómo vayamos con las correcciones que vimos ahora, también aviso por otra actualización.
+- [44:36] Consulta, Carlos, por ejemplo, ¿y hoy día podría empezar a crear usuarios en el modo real?
+- [44:42] Sí, sí. De hecho, podemos ver cómo se crea un usuario más o menos, porque igual, como tenemos separado lo que vendría a ser los permisos de aprobación y los roles, quizás puede ser un poquitito más así como confuso. De hecho, si quieres, podemos hacer la simulación.
+- [44:56] Ya.
+- [44:56] Aquí, bueno, siempre hay que ingresar desde el administrador para crear los usuarios y lo primero que hay que crear son los roles. Es lo primero que el sistema va a pedir. Está implementado para que en caso de que falte algo, para que el sistema funcione, da esta alarma.
+- [45:14] Entonces, por ejemplo, si no tuviésemos plan de cuentas, va a avisar acá, faltan cuentas de la hoja tanto.
+- [45:20] Si, por ejemplo, hay un día que no se sincronizó el banco central, va a aparecer este icono que va a decir, el día de hoy no hay sincronización del banco central por alguna falla o algo, para que se haga la consulta manual.
+- [45:30] Entonces, este es como el aviso de si es que le llegase a faltar algo para utilizar el sistema.
+- [45:34] Ya.
+- [45:35] Que igual tenemos que hacer un borrado de la información que teníamos como demo, antes de que lo empiecen a ocupar.
+- [45:44] Entonces, lo primero que hay que crear son los roles.
+- [45:46] Los roles que son prácticamente definir a qué páginas va a tener acceso cada persona.
+- [45:52] Aquí podemos ver por ejemplo un operador contratista, tiene acceso al panel operativo que es como el menú de inicio,
+- [46:00] y se salta por ejemplo lo que vendría a ser administración, se puede minimizar, parametrización, y aquí empiezan los permisos.
+- [46:08] Por ejemplo, de contratista, tiene permiso de lectura a todas las páginas y solamente en proformas y facturas puede enviar información y jugar con lo que vendría a ser todas las funciones.
+- [46:21] Entonces, aquí es donde se define lectura y escritura y el acceso a cada uno de los módulos, submódulos, también los pueden marcar ahí de manera rápida.
+- [46:28] Obviamente, si van a marcar lectura, se les va a marcar, perdón, escritura, se va a marcar automáticamente lectura por obvias razones.
+- [46:35] Y lo mismo cuando se desmarcan todas.
+- [46:40] Aquí como informativo también aparecen los usuarios que ya existen en el rol, que si están creando un rol nuevo no les va a aparecer.
+- [46:48] Después tienen que crear directamente al usuario, que por eso la información es súper fácil.
+- [46:53] Aquí definen a cuáles de las empresas, si es AlmaWeb o ALM Service, pueden ingresar.
+- [46:59] El rol que configuramos.
+- [47:03] Contraseña.
+- [47:03] El rol de vigencia desde hasta es en caso de que sea como una persona temporal que va a acceder al sistema. La jefatura, que esto es netamente un dato informativo, y si es que está activo o no, ahí le pueden dar a crear.
+- [47:17] Y una vez ya creado el usuario, si por ejemplo esta persona va a trabajar en roles que tengan que ver con órdenes de compra, proformas e insumo, en cada uno de estos aspectos, que aquí me voy a salir del modo demo porque si tengo creador local, tenemos que crear los grupos.
+- [47:34] Para crear los grupos, se hace directamente desde acá de configuración, nuevo grupo, y aquí pregunta el tipo, el nombre del grupo, y aquí directamente podemos seleccionar o buscar a los usuarios que están dentro de esta empresa para incluirlos en el grupo.
+- [47:50] Una vez teniéndolos todos seleccionados, de todos esos usuarios tenemos que seleccionar al aprobador final, que va a ser como el primer eslabón de la cadena que va a estar preconfigurado, que va a aparecer como el que está acá en insumos.
+- [48:04] Entonces, por ejemplo, aquí ya es un grupo.
+- [48:08] Se pueden crear varios, por ejemplo, pueden tener más de un grupo de insumos, más de uno en proforma, más de uno en órdenes de compra.
+- [48:14] Esto es como para tener diferentes cadenas de aprobación.
+- [48:18] Y, por ejemplo, de esta cadena de aprobación, si yo quisiera agregar una persona, tengo que hacerlo directamente desde acá.
+- [48:29] Pero esto ya como vendría a ser parte de lo que vendría a ser las cadenas de aprobación,
+- [48:32] La idea es que ocupen el sistema, vayan experimentando y nos ayuden también a encontrar posibles errores que se nos hayan saltado a nosotros.
+- [48:40] Mira, yo creo que terminando la reunión voy a empezar a crear algunos usuarios.
+- [48:44] Perfecto. Entonces ahí podríamos ya, por ejemplo, el día de hoy, probar todo lo que vendría a ser como la parametrización de lo que está en la página.
+- [48:51] Ya, en modo real.
+- [48:52] En modo real. Yo, por ejemplo, voy a hacer una limpieza de todo, menos de lo que vendría a ser el módulo de parametrización. O sea, perdón, de administración.
+- [49:00] Ya.
+- [49:00] De parametrización voy a meterme a hacer la precarga de, por ejemplo, los centros de costo, elementos de costo y todo eso que los tenemos, que ahí también lo puedes hacer tú, pero como para dejarlo para que puedas directamente utilizarlo.
+- [49:13] Consulta, Carlos, por ejemplo, si yo después quiero crearlo, creo, en el mismo módulo, ¿cierto?
+- [49:23] Así como crear nuevas áreas de negocio y todo eso?
+- [49:26] Sí.
+- [49:26] Sí, sí, de hecho acá, por ejemplo, en cada uno de los módulos, dependiendo si, por ejemplo, te creaste un usuario como administrador o estabas usando este mismo administrador, te va a aparecer siempre, por ejemplo, un historial.
+- [49:38] Entonces, en caso de que llegasen a borrar algo, vamos a poder restaurarlo de cierta forma y tenemos también la posibilidad de todo lo que vendría a ser parametrización en todos los campos.
+- [49:49] Dejamos una plantilla para poder rellenar campos, exportar lo que ya tienen, importar una nueva.
+- [49:56] Entonces, por ejemplo, si van a modificar para probar, la idea es que sea como respaldar con el exportar,
+- [50:01] cosa de en caso de cualquier cosita tener ese respaldo en Excel e importarlo directamente con esta opción.
+- [50:08] Y también se pueden ir creando como uno a uno, y editando, eliminando.
+- [50:14] Así que voy a hacer por mientras la limpieza de los datos demos, voy a dejar los que sean datos reales, voy a limpiar solamente los datos demos, había hartos usuarios demos que no aplican, y voy a también quizás hacer una limpieza de los grupos, voy a dejar uno por concepto y en general no más, para que pueda asignar en caso de que lo haga un usuario y sea un poquitito complejo, por último tengamos una opción predeterminada.
+- [50:41] Eso, no sé si es que se nos pasará algo, de su parte tienen alguna duda.
+- [50:48] Después igual puedo editar los montos de aprobación, ¿cierto?
+- [50:51] Sí, sí, todo es editable, directamente editable.
+- [50:55] Por ejemplo acá, en reglas de aprobación, si tú por ejemplo cliqueas a alguno de estos personajes te va a salir este menú.
+- [51:03] Ya, perfecto.
+- [51:04] Y puedes editar, y por ejemplo una cadena la puedes hacer para que sea más de un aprobador.
+- [51:07] Puedes seleccionar acá y te van a salir todos los integrantes y puedes aprobar directamente.
+- [51:12] Aquí puedes seleccionar que apruebe o una persona u otra.
+- [51:17] Esta hace que sean sí o sí los dos aprobadores o tres que selecciones.
+- [51:21] Y este es un aprobador de una sola persona.
+- [51:24] Ya.
+- [51:26] Entonces todo esto es editable. Por ejemplo, si quieres agregar entremedio, también puedes agregar uno acá al final, uno entremedio.
+- [51:31] Este lo puedes editar directamente el último.
+- [51:34] Pero siempre tiene que quedar con uno.
+- [51:36] Ya.
+- [51:38] Y bueno, aquí también tenemos más opciones, funciona la suplencia en caso de que por ejemplo tengan que hacer reemplazo por licencia, vacaciones, etc.
+- [51:47] Esto está funcionando, te va a preguntar a qué persona, en qué grupo, va a suplir y cuánto tiempo.
+- [51:54] Y por ejemplo acá también para ver cómo es lo que configuraste de manera rápida, así como por ejemplo, no sé, de este grupo, cuando empiezo a dar las aprobaciones,
+- [52:02] si yo quiero 1.500.000, tiene que pasar por todas estas personas.
+- [52:05] Entonces ahí como que tiene estas opciones. Y bueno, acá al importar y al exportar, este como que guarda toda la configuración, así que también en caso de que quieran respaldar algo que ya tienen construido, lo pueden exportar y después podemos respaldar eso en caso de que se pierda.
+- [52:23] Ya, buenísimo.
+- [52:26] Bueno, eso por mi parte. Creo que con eso estamos más que listos. Nosotros nos llevamos igual harto trabajo y ahí pueden ustedes también utilizar el sistema.
+- [52:33] Ya, buenísimo, Carlos.
+- [52:35] Estamos entonces.
+- [52:36] Perfecto, ahí mañana les comento lo de la reunión, ahí la formalizamos en la mañanita bien, pero de momento no sé si le acomoda que sea en este mismo horario de las 4.
+- [52:47] Sí, no, acomoda el horario de las 4.
+- [52:49] Ya, perfecto, perfecto, me quedo con eso entonces, y ahí quizá mañana también vaya a participar Sergio y podamos tener más dudas.
+- [52:55] Ya.
+- [52:56] Ya, pues chicas, que tengan muy buena tarde.
+- [52:58] Igual tú.
+- [52:59] Igual, chao.
+- [53:00] Chao, chao.

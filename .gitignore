@@ -11,6 +11,8 @@ ERP/erp_front/
 ERP/backups/*.dump
 ERP/backups/*.sql
 ERP/backups/*.backup
+ERP/backups/*.zip
+ERP/backups/*RESTAURAR.txt
 
 # Extracciones locales de reuniones (no versionar)
 .tmp-video/
@@ -62,3 +64,8 @@ docs/qa/resultados/*-raw.md
 historial_cursor_exportado.md
 tools/recovered-workspace-context/
 tools/transcript-ollama/out/
+docs/reuniones/medios/**/*.wav
+tools/transcript-whisper/*.log
+*.log
+docs/historico-chats/
+

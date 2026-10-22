@@ -24,9 +24,10 @@
     main { min-width: 0; }
     .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
     .bar h2 { margin: 0; font-size: 1rem; }
-    .actions { display: flex; gap: 8px; }
-    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
     .actions button:disabled { opacity: .4; cursor: default; }
+    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
     .frame { position: relative; display: inline-block; max-width: 100%; }
     .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
     button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
@@ -43,6 +44,7 @@
     <div class="bar">
       <h2 id="title"></h2>
       <div class="actions">
+        <a class="menu" href="index.html">Menú</a>
         <button type="button" id="prev">Anterior</button>
         <button type="button" id="next">Siguiente</button>
       </div>

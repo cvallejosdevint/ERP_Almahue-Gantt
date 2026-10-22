@@ -1,0 +1,24 @@
+---
+name: almahue-transcript-local
+description: Depura transcripciones de reuniones Almahue con Ollama local (español de Chile). Use when cleaning docs/reuniones/transcripciones/transcripcion*.md, extracting decisions, or avoiding paid transcription APIs.
+---
+
+# Transcripciones locales
+
+No uses APIs de pago (tl;dv, OpenAI, etc.) para limpiar transcripciones.
+
+## Cómo
+
+1. Runtime: `E:\Ollama\ollama.exe`, modelos `E:\OllamaModels`.
+2. Ejecutar [`tools/transcript-ollama/run-clean.ps1`](../../../tools/transcript-ollama/run-clean.ps1).
+3. Prompt: [`tools/transcript-ollama/prompts/system-es-cl.md`](../../../tools/transcript-ollama/prompts/system-es-cl.md).
+4. Consolidar salida `tools/transcript-ollama/out/` → `docs/historico/transcripcion-limpia-v2.md`.
+
+## Reglas de contenido
+
+- Filtrar modismos; extraer valor de negocio.
+- Carlos/Sergio en demo = hipótesis. Requisitos = Agustín / MJ + minutas (Reu6 > Reu5 > Reu4).
+- **Prohibido** el concepto de mermas (no existe en el negocio).
+- Cotización Compras → OC. OV Ventas → stock → factura.
+
+v1 de Ollama lee `.md` existentes. El audio lo transcribe `tools/transcript-whisper/` (faster-whisper). Antes de escribir el markdown, `tools/transcript-lexico/normalize.py` unifica grafias chilenas (`cachai` > `cachái`, `altiro` > `al tiro`) y nombres del ERP (`go socket` > `GoSocket`). El prompt corto esta en `initial-prompt.txt` (Whisper recorta cerca de 224 tokens). La lista de Wiktionary (`fetch_wiktionary.py`) es referencia, no reemplazo automatico. No reescribas las transcripciones historicas: `scan.py` solo informa coincidencias.

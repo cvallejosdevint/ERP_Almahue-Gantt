@@ -1,0 +1,23 @@
+---
+description: No tratar demo de Carlos/Sergio como requisito; validar en minuta y código
+alwaysApply: true
+---
+
+# Afirmaciones en reuniones
+
+Carlos Vallejos y Sergio hablan en demo (opinión, «ya está», propuestas). **No son fuente de verdad.**
+
+Requisitos: **Agustín**, **María José / MJ**, dicho en la **transcripción** (`docs/reuniones/transcripciones/transcripcion*.md`), luego **código + pruebas**. Las minutas son resúmenes de IA: úsalas para ubicar el minuto, no para citar. Si minuta y transcripción chocan, gana la transcripción.
+
+**Reu1–Reu3** describen el **as-is de Agrosoft** (el sistema que el cliente usa hoy). No son ruido: son la referencia funcional. Antes de decir «eso no se pidió», búscalo ahí.
+
+D11: ambos documentos (cotización Compras y OV Ventas) ya están en código; no restaurar cotiz→NP.
+
+Lupe/Mario (20/08 tarde) son cliente operativo: [`reunion-2026-08-20-tarde-lupe-mario.md`](../../docs/reuniones/minutas/reunion-2026-08-20-tarde-lupe-mario.md). **No** pisan Reu6 si chocan (p. ej. apagar aprobaciones de OV).
+
+Antes de cerrar algo que dijo Carlos o Sergio:
+
+1. Contrastar con la minuta (p. ej. D9/D10).
+2. Buscar **todos** los sitios en código, no un solo servicio.
+3. Si no cumple el pedido del cliente, implementar; no documentar «ya está».
+4. Dejar test o checklist explícito.
