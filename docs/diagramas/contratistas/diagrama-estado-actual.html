@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Almahue — Diagrama Arquitectónico Navegable (Estado Actual & Cierre Contratistas)</title>
+  <style>
+    :root {
+      --bg-canvas: #090d16;
+      --bg-panel: rgba(15, 23, 42, 0.95);
+      --bg-card: rgba(30, 41, 59, 0.85);
+      --border-color: rgba(255, 255, 255, 0.12);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --col-param: #38bdf8;
+      --col-campo: #4ade80;
+      --col-proforma: #c084fc;
+      --col-aprob: #fbbf24;
+      --col-cierre: #f87171;
+      --col-compras: #f472b6;
+      --col-contab: #2dd4bf;
+    }
+
+    [data-theme="light"] {
+      --bg-canvas: #f1f5f9;
+      --bg-panel: rgba(255, 255, 255, 0.95);
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --border-color: rgba(0, 0, 0, 0.12);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      user-select: none;
+    }
+
+    body {
+      background: var(--bg-canvas);
+      color: var(--text-main);
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      height: 64px;
+      background: var(--bg-panel);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 50;
+      flex-shrink: 0;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .header-titles h1 {
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-titles p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .filter-group {
+      display: flex;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      gap: 4px;
+    }
+
+    .filter-btn {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .filter-btn.active {
+      color: #fff;
+      background: #2563eb;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+    }
+
+    .filter-btn.alert {
+      color: #fca5a5;
+    }
+    .filter-btn.alert.active {
+      background: #dc2626;
+      color: #fff;
+    }
+
+    .actions-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-tool {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-tool:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-tool.primary {
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+    }
+
+    #canvas-container {
+      flex: 1;
+      width: 100%;
+      height: calc(100vh - 64px);
+      position: relative;
+      cursor: grab;
+      overflow: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(244, 114, 182, 0.05) 0%, transparent 40%),
+        radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 28px 28px;
+    }
+
+    #canvas-container:active {
+      cursor: grabbing;
+    }
+
+    svg#main-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transform-origin: 0 0;
+    }
+
+    .swimlane-bg {
+      fill: rgba(18, 24, 38, 0.45);
+      stroke: var(--border-color);
+      stroke-width: 1.5;
+      rx: 16px;
+    }
+
+    .swimlane-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      fill: var(--text-muted);
+    }
+
+    .diagram-node {
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .diagram-node:hover rect.node-box {
+      stroke-width: 2.5;
+      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.5));
+    }
+
+    .diagram-node.selected rect.node-box {
+      stroke-width: 3;
+      stroke: #60a5fa !important;
+      filter: drop-shadow(0 0 18px rgba(96, 165, 250, 0.8));
+    }
+
+    .diagram-node.dimmed {
+      opacity: 0.18;
+    }
+
+    .node-box {
+      fill: var(--bg-card);
+      stroke: var(--border-color);
+      stroke-width: 1.5;
+      rx: 12px;
+      transition: all 0.2s;
+    }
+
+    .node-header {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .node-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+
+    .node-subtitle {
+      font-size: 12px;
+      fill: #94a3b8;
+    }
+
+    .node-badge {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .diagram-edge {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.28);
+      stroke-width: 2;
+      stroke-linecap: round;
+      transition: all 0.2s;
+    }
+
+    .diagram-edge:hover {
+      stroke-width: 3.5;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    }
+
+    .diagram-edge.emphasis {
+      stroke: #38bdf8;
+      stroke-width: 2.2;
+    }
+
+    .diagram-edge.alert-edge {
+      stroke: #f87171;
+      stroke-dasharray: 6,4;
+      stroke-width: 2.4;
+    }
+
+    .diagram-edge.reverse-edge {
+      stroke: #fbbf24;
+      stroke-dasharray: 5,4;
+      stroke-width: 2.2;
+    }
+
+    .diagram-edge.success-edge {
+      stroke: #4ade80;
+      stroke-width: 2.2;
+    }
+
+    .edge-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      fill: #cbd5e1;
+      text-anchor: middle;
+    }
+
+    .edge-badge-bg {
+      fill: #0f172a;
+      stroke: rgba(255, 255, 255, 0.2);
+      stroke-width: 1;
+      rx: 4px;
+    }
+
+    .floating-hud {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 40;
+    }
+
+    .hud-btn {
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .hud-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .zoom-level-text {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 0 8px;
+      color: var(--text-muted);
+      min-width: 52px;
+      text-align: center;
+    }
+
+    #detail-drawer {
+      position: absolute;
+      top: 64px;
+      right: -490px;
+      width: 480px;
+      height: calc(100vh - 64px);
+      background: var(--bg-panel);
+      backdrop-filter: blur(16px);
+      border-left: 1px solid var(--border-color);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 45;
+      overflow-y: auto;
+    }
+
+    #detail-drawer.open {
+      right: 0;
+    }
+
+    .drawer-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .drawer-close:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .drawer-module {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .drawer-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .drawer-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .meta-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
+    .meta-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 13.5px;
+      color: var(--text-main);
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      word-break: break-all;
+    }
+
+    .discussion-card {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(185, 28, 28, 0.05));
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 8px;
+    }
+
+    .discussion-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #fca5a5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .discussion-text {
+      font-size: 13.5px;
+      color: #fecaca;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <header>
+    <div class="brand-group">
+      <div class="brand-badge">ALMAHUE ERP</div>
+      <div class="header-titles">
+        <h1>Diagrama Arquitectónico Navegable: Estado Actual & Cierre Contratistas</h1>
+        <p>Mapeo total de entidades, funciones, estados de proforma/ingreso y rutas de contingencia</p>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <button class="filter-btn active" onclick="setDiagramFilter('all')">Todo el Sistema</button>
+      <button class="filter-btn" onclick="setDiagramFilter('operativo')">Flujo Operativo</button>
+      <button class="filter-btn" onclick="setDiagramFilter('cierre')">Cierre & Asientos</button>
+      <button class="filter-btn" onclick="setDiagramFilter('reabrir')">Re-Apertura & Reversas</button>
+      <button class="filter-btn alert" onclick="setDiagramFilter('cliente')">⚡ Puntos a Decidir con Cliente</button>
+    </div>
+
+    <div class="actions-group">
+      <a href="cierre-contratistas.html" class="btn-tool" title="Ir a la Presentación TV">
+        📺 Modo Presentador TV
+      </a>
+      <button class="btn-tool" onclick="toggleTheme()" title="Tema claro/oscuro">🌓</button>
+      <button class="btn-tool primary" onclick="fitDiagramToScreen()" title="Centrar todo el diagrama">
+        Encajar Pantalla
+      </button>
+    </div>
+  </header>
+
+  <div id="canvas-container">
+    <svg id="main-svg">
+      
+      <defs>
+        <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#4ade80" />
+        </marker>
+        <marker id="arr-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+        <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#f87171" />
+        </marker>
+        <marker id="arr-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#f472b6" />
+        </marker>
+        <marker id="arr-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 9 5 L 0 9 z" fill="#2dd4bf" />
+        </marker>
+      </defs>
+
+      <g id="viewport">
+
+        <!-- ============================================================
+             1. SWIMLANES (7 COLUMNAS PERFECTAMENTE SIMÉTRICAS)
+             ============================================================ -->
+        <!-- Lane 1: Parametrización (X: 40, W: 360) -->
+        <rect x="40" y="40" width="360" height="900" class="swimlane-bg" style="stroke: var(--col-param); stroke-opacity: 0.3;" />
+        <text x="65" y="80" class="swimlane-title" fill="var(--col-param)">01. Parametrización</text>
+
+        <!-- Lane 2: Operación Campo (X: 430, W: 380) -->
+        <rect x="430" y="40" width="380" height="900" class="swimlane-bg" style="stroke: var(--col-campo); stroke-opacity: 0.3;" />
+        <text x="455" y="80" class="swimlane-title" fill="var(--col-campo)">02. Operación Campo</text>
+
+        <!-- Lane 3: Gestión Proformas (X: 840, W: 410) -->
+        <rect x="840" y="40" width="410" height="900" class="swimlane-bg" style="stroke: var(--col-proforma); stroke-opacity: 0.3;" />
+        <text x="865" y="80" class="swimlane-title" fill="var(--col-proforma)">03. Gestión Proformas</text>
+
+        <!-- Lane 4: Aprobaciones (X: 1280, W: 370) -->
+        <rect x="1280" y="40" width="370" height="900" class="swimlane-bg" style="stroke: var(--col-aprob); stroke-opacity: 0.3;" />
+        <text x="1305" y="80" class="swimlane-title" fill="var(--col-aprob)">04. Aprobaciones & Firma</text>
+
+        <!-- Lane 5: Cierre & Asientos (X: 1680, W: 440) -->
+        <rect x="1680" y="40" width="440" height="900" class="swimlane-bg" style="stroke: var(--col-cierre); stroke-opacity: 0.3;" />
+        <text x="1705" y="80" class="swimlane-title" fill="var(--col-cierre)">05. Cierre & Asientos</text>
+
+        <!-- Lane 6: Compras & DTE (X: 2150, W: 420) -->
+        <rect x="2150" y="40" width="420" height="900" class="swimlane-bg" style="stroke: var(--col-compras); stroke-opacity: 0.3;" />
+        <text x="2175" y="80" class="swimlane-title" fill="var(--col-compras)">06. Compras & Calce</text>
+
+        <!-- Lane 7: Contabilidad & Tesorería (X: 2600, W: 440) -->
+        <rect x="2600" y="40" width="440" height="900" class="swimlane-bg" style="stroke: var(--col-contab); stroke-opacity: 0.3;" />
+        <text x="2625" y="80" class="swimlane-title" fill="var(--col-contab)">07. Contabilidad & Tesorería</text>
+
+
+        <!-- ============================================================
+             2. CONEXIONES Y FLECHAS (TODAS CON ORIGEN Y DESTINO EXACTOS)
+             ============================================================ -->
+
+        <!-- [E1] Parametrización -> Campo -->
+        <path d="M 380 210 L 450 210" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="390" y="196" width="50" height="18" class="edge-badge-bg" />
+        <text x="415" y="209" class="edge-badge">Tarifas</text>
+
+        <!-- [E2] TipoContrato -> TraspasoCierre -->
+        <path d="M 380 490 C 800 490, 1600 360, 1720 250" class="diagram-edge" marker-end="url(#arr-blue)" />
+        <rect x="940" y="475" width="130" height="18" class="edge-badge-bg" />
+        <text x="1005" y="488" class="edge-badge">Cuentas Debe/Haber</text>
+
+        <!-- [E3] Ingreso Diario -> Ciclo Estados Ingreso -->
+        <path d="M 620 280 L 620 420" class="diagram-edge success-edge" marker-end="url(#arr-green)" />
+        <rect x="545" y="340" width="150" height="18" class="edge-badge-bg" />
+        <text x="620" y="353" class="edge-badge">PENDIENTE ➔ ASOCIADO</text>
+
+        <!-- [E4] Ingreso Diario -> Proforma (Corte) -->
+        <path d="M 790 210 L 860 210" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="795" y="196" width="60" height="18" class="edge-badge-bg" />
+        <text x="825" y="209" class="edge-badge">Corte Net</text>
+
+        <!-- [E5] Proforma -> Modificación Post-Aprobación -->
+        <path d="M 1045 280 L 1045 420" class="diagram-edge reverse-edge" marker-end="url(#arr-amber)" />
+        <rect x="975" y="340" width="140" height="18" class="edge-badge-bg" />
+        <text x="1045" y="353" class="edge-badge">Solicitud Modificación</text>
+
+        <!-- [E6] Modificación -> Adjuntos -->
+        <path d="M 1045 560 L 1045 700" class="diagram-edge" marker-end="url(#arr-purple)" />
+        <rect x="990" y="620" width="110" height="18" class="edge-badge-bg" />
+        <text x="1045" y="633" class="edge-badge">Respaldos Tarjas</text>
+
+        <!-- [E7] Proforma -> Aprobaciones -->
+        <path d="M 1230 210 L 1300 210" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="1235" y="196" width="60" height="18" class="edge-badge-bg" />
+        <text x="1265" y="209" class="edge-badge">Aprobar</text>
+
+        <!-- [E8] Aprobaciones -> Rechazo -->
+        <path d="M 1465 280 L 1465 420" class="diagram-edge alert-edge" marker-end="url(#arr-red)" />
+        <rect x="1405" y="340" width="120" height="18" class="edge-badge-bg" />
+        <text x="1465" y="353" class="edge-badge">Rechazo con Motivo</text>
+
+        <!-- [E9] Rechazo -> Vuelve a Proforma Borrador -->
+        <path d="M 1300 490 C 1230 490, 1230 280, 1180 280" class="diagram-edge reverse-edge" marker-end="url(#arr-amber)" />
+        <rect x="1190" y="380" width="115" height="18" class="edge-badge-bg" />
+        <text x="1248" y="393" class="edge-badge">Vuelve a BORRADOR</text>
+
+        <!-- [E10] Aprobaciones -> Traspaso Cierre -->
+        <path d="M 1630 210 L 1720 210" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="1635" y="196" width="80" height="18" class="edge-badge-bg" />
+        <text x="1675" y="209" class="edge-badge">DEFINITIVA</text>
+
+        <!-- [E11] Traspaso Cierre -> Asiento Devengo -->
+        <path d="M 1900 280 L 1900 420" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="1830" y="340" width="140" height="18" class="edge-badge-bg" />
+        <text x="1900" y="353" class="edge-badge">Asiento Devengo Gasto</text>
+
+        <!-- [E12] Reabrir Cierre -> Asiento Devengo (Reversa) -->
+        <path d="M 1900 700 L 1900 560" class="diagram-edge reverse-edge" marker-end="url(#arr-amber)" />
+        <rect x="1815" y="620" width="170" height="18" class="edge-badge-bg" />
+        <text x="1900" y="633" class="edge-badge">Asiento Reversa & Anula</text>
+
+        <!-- [E13] Reabrir Cierre -> Libera Proformas -->
+        <path d="M 1720 770 C 1250 770, 950 600, 950 280" class="diagram-edge reverse-edge" marker-end="url(#arr-amber)" />
+        <rect x="1150" y="740" width="140" height="18" class="edge-badge-bg" />
+        <text x="1220" y="753" class="edge-badge">Libera a Periodo Abierto</text>
+
+        <!-- [E14] PeriodoContable -> Bloqueo Traspaso Cierre -->
+        <path d="M 2640 180 C 2350 70, 2020 70, 1900 140" class="diagram-edge alert-edge" marker-end="url(#arr-red)" />
+        <rect x="2200" y="60" width="220" height="18" class="edge-badge-bg" />
+        <text x="2310" y="73" class="edge-badge">assertPeriodoOperable: Bloqueo CERRADO</text>
+
+        <!-- [E15] PeriodoContable -> Bloqueo Reapertura -->
+        <path d="M 2820 280 C 2820 650, 2350 770, 2080 770" class="diagram-edge alert-edge" marker-end="url(#arr-red)" />
+        <rect x="2380" y="710" width="190" height="18" class="edge-badge-bg" />
+        <text x="2475" y="723" class="edge-badge">Bloquea Reabrir si Mes F29 Cerrado</text>
+
+        <!-- [E16] Asiento Devengo -> Calce Factura Compras -->
+        <path d="M 2080 490 L 2180 490" class="diagram-edge emphasis" marker-end="url(#arr-blue)" />
+        <rect x="2085" y="475" width="90" height="18" class="edge-badge-bg" />
+        <text x="2130" y="488" class="edge-badge">Disponibiliza FxR</text>
+
+        <!-- [E17] Factura DTE -> Calce Factura -->
+        <path d="M 2360 280 L 2360 420" class="diagram-edge" marker-end="url(#arr-pink)" />
+        <rect x="2305" y="340" width="110" height="18" class="edge-badge-bg" />
+        <text x="2360" y="353" class="edge-badge">DTE 33 Recibido</text>
+
+        <!-- [E18] Calce Factura -> Desacople Obligatorio -->
+        <path d="M 2360 560 L 2360 700" class="diagram-edge alert-edge" marker-end="url(#arr-red)" />
+        <rect x="2290" y="620" width="140" height="18" class="edge-badge-bg" />
+        <text x="2360" y="633" class="edge-badge">Si Requiere Reabrir</text>
+
+        <!-- [E19] Desacople Compras -> Reabrir Cierre -->
+        <path d="M 2180 770 L 2080 770" class="diagram-edge alert-edge" marker-end="url(#arr-red)" />
+        <rect x="2085" y="756" width="90" height="18" class="edge-badge-bg" />
+        <text x="2130" y="769" class="edge-badge">Desacopla DTE</text>
+
+        <!-- [E20] Calce Factura -> Asiento Factura Compra -->
+        <path d="M 2540 490 L 2640 490" class="diagram-edge emphasis" marker-end="url(#arr-pink)" />
+        <rect x="2545" y="475" width="90" height="18" class="edge-badge-bg" />
+        <text x="2590" y="488" class="edge-badge">Cancela FxR $0</text>
+
+        <!-- [E21] Asiento Compra -> Tesorería Pago -->
+        <path d="M 2820 560 L 2820 700" class="diagram-edge" marker-end="url(#arr-teal)" />
+        <rect x="2740" y="620" width="160" height="18" class="edge-badge-bg" />
+        <text x="2820" y="633" class="edge-badge">Deuda Pasa a Tesorería</text>
+
+
+        <!-- ============================================================
+             3. NODOS POR CARRIL (FILAS Y: 140, 420, 700)
+             ============================================================ -->
+
+        <!-- LANE 1: PARAMETRIZACIÓN -->
+        <g class="diagram-node" id="node-actividad-labor" onclick="selectNode('actividad-labor')" transform="translate(60, 140)">
+          <rect width="320" height="140" class="node-box" style="stroke: var(--col-param);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-param)">01.01 Maestro Agrícola</text>
+          <text x="16" y="58" class="node-title">Actividades & Labores</text>
+          <text x="16" y="80" class="node-subtitle">Jerarquía: Actividad ➔ Labores asociadas</text>
+          <text x="16" y="102" class="node-subtitle">Tarifas Trato / Día vigentes</text>
+          <rect x="16" y="112" width="120" height="18" fill="rgba(56, 189, 248, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-param)">tabla: erp.Labor</text>
+        </g>
+
+        <g class="diagram-node" id="node-tipo-contrato" onclick="selectNode('tipo-contrato')" transform="translate(60, 420)">
+          <rect width="320" height="140" class="node-box" style="stroke: var(--col-param);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-param)">01.02 Mapeo Contable</text>
+          <text x="16" y="58" class="node-title">Tipos de Contrato Contratista</text>
+          <text x="16" y="80" class="node-subtitle">Cuentas Debe / Haber configuradas</text>
+          <text x="16" y="102" class="node-subtitle">Mano de Obra vs FxR Contratistas</text>
+          <rect x="16" y="112" width="180" height="18" fill="rgba(56, 189, 248, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-param)">TipoContratoContratista</text>
+        </g>
+
+        <!-- LANE 2: OPERACIÓN CAMPO -->
+        <g class="diagram-node" id="node-ingreso-diario" onclick="selectNode('ingreso-diario')" transform="translate(450, 140)">
+          <rect width="340" height="140" class="node-box" style="stroke: var(--col-campo);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-campo)">02.01 Captura en Terreno</text>
+          <text x="16" y="58" class="node-title">Ingreso Labor Diario</text>
+          <text x="16" y="80" class="node-subtitle">Cuartel, Labor, Cuadrilla, Kilos / Horas</text>
+          <text x="16" y="102" class="node-subtitle">Edición ágil por digitador de campo</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(74, 222, 128, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-campo)">IngresoLaborDiario</text>
+        </g>
+
+        <g class="diagram-node" id="node-ingreso-estados" onclick="selectNode('ingreso-estados')" transform="translate(450, 420)">
+          <rect width="340" height="140" class="node-box" style="stroke: var(--col-campo);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-campo)">02.02 Ciclo de Vida Ingreso</text>
+          <text x="16" y="58" class="node-title">Estados: PENDIENTE ➔ ASOCIADO</text>
+          <text x="16" y="80" class="node-subtitle">PENDIENTE: Libre edición y corrección</text>
+          <text x="16" y="102" class="node-subtitle">ASOCIADO: Bloqueado por Proforma</text>
+          <rect x="16" y="112" width="170" height="18" fill="rgba(74, 222, 128, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-campo)">EstadoIngresoLabor</text>
+        </g>
+
+        <!-- LANE 3: GESTIÓN DE PROFORMAS -->
+        <g class="diagram-node" id="node-proforma" onclick="selectNode('proforma')" transform="translate(860, 140)">
+          <rect width="370" height="140" class="node-box" style="stroke: var(--col-proforma);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-proforma)">03.01 Liquidación Consolidada</text>
+          <text x="16" y="58" class="node-title">Proforma de Contratista</text>
+          <text x="16" y="80" class="node-subtitle">Corte semanal / quincenal agrupado</text>
+          <text x="16" y="102" class="node-subtitle">BORRADOR ➔ PENDIENTE ➔ DEFINITIVA</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(192, 132, 252, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-proforma)">ProformaContratista</text>
+        </g>
+
+        <g class="diagram-node" id="node-proforma-modificacion" onclick="selectNode('proforma-modificacion')" transform="translate(860, 420)">
+          <rect width="370" height="140" class="node-box" style="stroke: var(--col-proforma);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-proforma)">03.02 Excepción Controlada</text>
+          <text x="16" y="58" class="node-title">Solicitud Modificación (C6)</text>
+          <text x="16" y="80" class="node-subtitle">Motivo obligatorio + propuesta cambios</text>
+          <text x="16" y="102" class="node-subtitle">Autorización formal antes de factura</text>
+          <rect x="16" y="112" width="190" height="18" fill="rgba(192, 132, 252, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-proforma)">modificacionSolicitadaAt</text>
+        </g>
+
+        <g class="diagram-node" id="node-adjuntos" onclick="selectNode('adjuntos')" transform="translate(860, 700)">
+          <rect width="370" height="140" class="node-box" style="stroke: var(--col-proforma);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-proforma)">03.03 Evidencia Documental</text>
+          <text x="16" y="58" class="node-title">Adjuntos & Trazabilidad</text>
+          <text x="16" y="80" class="node-subtitle">Tarjas firmadas, Pesajes, Guías, F30-1</text>
+          <text x="16" y="102" class="node-subtitle">Bitácora inmutable de eventos</text>
+          <rect x="16" y="112" width="170" height="18" fill="rgba(192, 132, 252, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-proforma)">AuditoriaContratista</text>
+        </g>
+
+        <!-- LANE 4: APROBACIONES & FIRMA -->
+        <g class="diagram-node" id="node-aprobaciones" onclick="selectNode('aprobaciones')" transform="translate(1300, 140)">
+          <rect width="330" height="140" class="node-box" style="stroke: var(--col-aprob);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-aprob)">04.01 Firma de Autorización</text>
+          <text x="16" y="58" class="node-title">Aprobación Proforma (PIN)</text>
+          <text x="16" y="80" class="node-subtitle">Escalas por Monto Total Neto</text>
+          <text x="16" y="102" class="node-subtitle">Pasa a estado: DEFINITIVA</text>
+          <rect x="16" y="112" width="170" height="18" fill="rgba(251, 191, 36, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-aprob)">AprobacionContratistas</text>
+        </g>
+
+        <g class="diagram-node" id="node-rechazo" onclick="selectNode('rechazo')" transform="translate(1300, 420)">
+          <rect width="330" height="140" class="node-box" style="stroke: var(--col-aprob);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-aprob)">04.02 Corrección de Liquidación</text>
+          <text x="16" y="58" class="node-title">Proforma RECHAZADA</text>
+          <text x="16" y="80" class="node-subtitle">Aprobador rechaza con observaciones</text>
+          <text x="16" y="102" class="node-subtitle">Vuelve a BORRADOR para el campo</text>
+          <rect x="16" y="112" width="140" height="18" fill="rgba(251, 191, 36, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-aprob)">Estado: RECHAZADA</text>
+        </g>
+
+        <!-- LANE 5: CIERRE MENSUAL & ASIENTOS -->
+        <g class="diagram-node" id="node-traspaso-cierre" onclick="selectNode('traspaso-cierre')" transform="translate(1720, 140)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-cierre);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-cierre)">05.01 Bloqueo & Traspaso</text>
+          <text x="16" y="58" class="node-title">Traspaso / Cierre Periodo</text>
+          <text x="16" y="80" class="node-subtitle">POST /contratistas/traspaso-cierre</text>
+          <text x="16" y="102" class="node-subtitle">Filtra DEFINITIVA, ENVIADA, FACTURADA</text>
+          <rect x="16" y="112" width="190" height="18" fill="rgba(248, 113, 113, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-cierre)">PeriodoCierreContratista</text>
+        </g>
+
+        <g class="diagram-node" id="node-asiento-devengo" onclick="selectNode('asiento-devengo')" transform="translate(1720, 420)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-cierre);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-cierre)">05.02 Centralización Gasto</text>
+          <text x="16" y="58" class="node-title">Asiento Devengo Proforma</text>
+          <text x="16" y="80" class="node-subtitle">DEBE: 6-1-01-01-002 (Mano de Obra CC)</text>
+          <text x="16" y="102" class="node-subtitle">HABER: 2-1-08-02-003 (FxR Provisión)</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(248, 113, 113, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-cierre)">erp.Asiento</text>
+        </g>
+
+        <g class="diagram-node" id="node-reabrir-cierre" onclick="selectNode('reabrir-cierre')" transform="translate(1720, 700)">
+          <rect width="360" height="140" class="node-box" style="stroke: #fbbf24; stroke-dasharray: 4,3;" />
+          <text x="16" y="32" class="node-header" fill="#fbbf24">05.03 Reversa Asistida</text>
+          <text x="16" y="58" class="node-title">Reapertura Periodo Contratistas</text>
+          <text x="16" y="80" class="node-subtitle">POST /contratistas/periodos/:p/reabrir</text>
+          <text x="16" y="102" class="node-subtitle">Asiento Reversa, Anula original, Log</text>
+          <rect x="16" y="112" width="210" height="18" fill="rgba(251, 191, 36, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="#fbbf24">PeriodoCierreContratistaEvento</text>
+        </g>
+
+        <!-- LANE 6: COMPRAS & DTE -->
+        <g class="diagram-node" id="node-factura-dte" onclick="selectNode('factura-dte')" transform="translate(2180, 140)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-compras);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-compras)">06.01 Recepción Tributaria</text>
+          <text x="16" y="58" class="node-title">Recepción Factura (DTE 33)</text>
+          <text x="16" y="80" class="node-subtitle">Entrada electrónica vía GoSocket / SII</text>
+          <text x="16" y="102" class="node-subtitle">Validación RUT Contratista</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(244, 114, 182, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-compras)">RegistroCompra</text>
+        </g>
+
+        <g class="diagram-node" id="node-calce-factura" onclick="selectNode('calce-factura')" transform="translate(2180, 420)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-compras);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-compras)">06.02 Calce Cero</text>
+          <text x="16" y="58" class="node-title">Asociación Factura ➔ Proforma</text>
+          <text x="16" y="80" class="node-subtitle">PATCH /contratistas/proformas/:id/factura</text>
+          <text x="16" y="102" class="node-subtitle">Proforma pasa a FACTURADA</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(244, 114, 182, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-compras)">AsociarFacturaDto</text>
+        </g>
+
+        <g class="diagram-node" id="node-desacople-factura" onclick="selectNode('desacople-factura')" transform="translate(2180, 700)">
+          <rect width="360" height="140" class="node-box" style="stroke: #f87171; stroke-dasharray: 4,3;" />
+          <text x="16" y="32" class="node-header" fill="#f87171">06.03 Desacople Obligatorio</text>
+          <text x="16" y="58" class="node-title">Desvincular Factura en Compras</text>
+          <text x="16" y="80" class="node-subtitle">Compras debe liberar DTE antes de reabrir</text>
+          <text x="16" y="102" class="node-subtitle">Protege saldo de cuenta puente FxR</text>
+          <rect x="16" y="112" width="180" height="18" fill="rgba(248, 113, 113, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="#f87171">Gate de Seguridad Compras</text>
+        </g>
+
+        <!-- LANE 7: CONTABILIDAD & TESORERÍA -->
+        <g class="diagram-node" id="node-periodo-contable" onclick="selectNode('periodo-contable')" transform="translate(2640, 140)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-contab);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-contab)">07.01 Control Tributario</text>
+          <text x="16" y="58" class="node-title">Periodo Contable (F29)</text>
+          <text x="16" y="80" class="node-subtitle">Estado: ABIERTO o CERRADO</text>
+          <text x="16" y="102" class="node-subtitle">assertPeriodoOperable bloquea si cerrado</text>
+          <rect x="16" y="112" width="150" height="18" fill="rgba(45, 212, 191, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-contab)">PeriodoContable</text>
+        </g>
+
+        <g class="diagram-node" id="node-asiento-compra" onclick="selectNode('asiento-compra')" transform="translate(2640, 420)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-contab);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-contab)">07.02 Liquidación Pasivo</text>
+          <text x="16" y="58" class="node-title">Asiento Factura de Compra</text>
+          <text x="16" y="80" class="node-subtitle">DEBE: FxR (2-1-08-02-003) $0 Puente</text>
+          <text x="16" y="102" class="node-subtitle">HABER: Proveedores por Pagar (Tesorería)</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(45, 212, 191, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-contab)">LibroComprasAsiento</text>
+        </g>
+
+        <g class="diagram-node" id="node-tesoreria-pago" onclick="selectNode('tesoreria-pago')" transform="translate(2640, 700)">
+          <rect width="360" height="140" class="node-box" style="stroke: var(--col-contab);" />
+          <text x="16" y="32" class="node-header" fill="var(--col-contab)">07.03 Pago a Proveedor</text>
+          <text x="16" y="58" class="node-title">Tesorería: Pago & Nómina</text>
+          <text x="16" y="80" class="node-subtitle">Calce cartola bancaria y comprobante</text>
+          <text x="16" y="102" class="node-subtitle">Extingue pasivo con el contratista</text>
+          <rect x="16" y="112" width="160" height="18" fill="rgba(45, 212, 191, 0.15)" rx="4" />
+          <text x="22" y="125" class="node-badge" fill="var(--col-contab)">TesoreriaPago</text>
+        </g>
+
+      </g>
+    </svg>
+  </div>
+
+  <div class="floating-hud">
+    <button class="hud-btn" onclick="zoomIn()" title="Acercar (+)">+</button>
+    <button class="hud-btn" onclick="zoomOut()" title="Alejar (-)">−</button>
+    <div class="zoom-level-text" id="zoom-text">100%</div>
+    <button class="hud-btn" onclick="resetZoom()" title="Restablecer (100%)">1:1</button>
+    <button class="hud-btn" onclick="fitDiagramToScreen()" title="Encajar todo el diagrama">⛶</button>
+  </div>
+
+  <aside id="detail-drawer">
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    <div class="drawer-module" id="d-module" style="color: #38bdf8;">MÓDULO</div>
+    <h2 class="drawer-title" id="d-title">Nombre del Proceso</h2>
+    <p class="drawer-desc" id="d-desc">Descripción del funcionamiento interno en el código actual.</p>
+
+    <div class="meta-card">
+      <div class="meta-label">Tabla Prisma / Entidad</div>
+      <div class="meta-value" id="d-table">erp.Tabla</div>
+    </div>
+
+    <div class="meta-card">
+      <div class="meta-label">Servicio & Endpoint Backend</div>
+      <div class="meta-value" id="d-endpoint">POST /api/v1/...</div>
+    </div>
+
+    <div class="meta-card">
+      <div class="meta-label">Regla Operativa en Código Actual</div>
+      <div class="meta-value" id="d-rule" style="font-family: inherit; font-size: 13.5px; color: #cbd5e1;">Regla...</div>
+    </div>
+
+    <div class="discussion-card" id="d-discussion-box">
+      <div class="discussion-title">
+        <span>⚡</span> Punto Crítico a Negociar con el Cliente
+      </div>
+      <div class="discussion-text" id="d-discussion">
+        Pregunta a resolver con Mario/Lupe...
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    const nodesData = {
+      'actividad-labor': {
+        module: '01. Parametrización & Maestros',
+        moduleColor: 'var(--col-param)',
+        title: 'Actividades & Labores Asociadas',
+        desc: 'Estructura jerárquica corregida: la Actividad es el agrupador superior del campo (ej. Cosecha, Poda, Riego) y contiene a sus Labores operativas hijas con tarifas vigentes por trato o jornada diaria.',
+        table: 'erp.Actividad, erp.Labor, erp.TarifaContratista',
+        endpoint: 'GET /contratistas/labores?actividadId=..., POST /contratistas/actividades',
+        rule: 'Inversión de flujo completada: al crear o editar, el usuario selecciona la Actividad y asigna o desvincula las labores pertenecientes.',
+        discussion: 'Confirmar con el cliente si desean tarifas diferenciadas por temporada o si se mantiene una tarifa fija activa por cuartel.'
+      },
+      'tipo-contrato': {
+        module: '01. Parametrización & Maestros',
+        moduleColor: 'var(--col-param)',
+        title: 'Tipos de Contrato Contratista',
+        desc: 'Mapeo contable fundamental que vincula el tipo de servicio con las cuentas contables de imputación de costo y pasivo provisorio.',
+        table: 'erp.TipoContratoContratista, erp.CuentaContable',
+        endpoint: 'GET /contratistas/tipos-contrato, POST /contratistas/tipos-contrato',
+        rule: 'Cada proforma exige un tipoContratoId válido con cuentas activas e imputables; de lo contrario traspasoCierre arroja BadRequest.',
+        discussion: 'Validar si todos los contratistas usarán la cuenta puente estándar (2-1-08-02-003) o si segregarán por tipo de faena.'
+      },
+      'ingreso-diario': {
+        module: '02. Operación Campo (Diario)',
+        moduleColor: 'var(--col-campo)',
+        title: 'Ingreso Diario de Labores',
+        desc: 'Registro rápido y masivo de las jornadas trabajadas por las cuadrillas. Cada ingreso asocia fecha, cuartel, contratista, labor, personas y rendimiento (horas o kilos).',
+        table: 'erp.IngresoLaborDiario, erp.CuadrillaContratista',
+        endpoint: 'POST /contratistas/ingresos-labor, POST /contratistas/ingresos-labor/bulk',
+        rule: 'Cadena de aprobación eliminada de este nivel: el digitador edita libremente mientras el registro esté en estado PENDIENTE.',
+        discussion: '¿Se requiere un corte diario de rendimientos o la jefatura de campo solo revisará una vez por semana al armar la proforma?'
+      },
+      'ingreso-estados': {
+        module: '02. Operación Campo (Diario)',
+        moduleColor: 'var(--col-campo)',
+        title: 'Ciclo de Estados del Ingreso Diario',
+        desc: 'Un ingreso nace PENDIENTE (editable libremente por campo). Al consolidarse en una Proforma pasa a ASOCIADO (bloqueado para edición directa). Al recepcionarse la factura pasa a FACTURADO.',
+        table: 'erp.IngresoLaborDiario (estado: PENDIENTE, ASOCIADO, FACTURADO)',
+        endpoint: 'POST /contratistas/proformas (asocia ingresos)',
+        rule: 'Si se elimina una proforma en borrador, los ingresos asociados regresan inmediatamente a PENDIENTE para ser reutilizados.',
+        discussion: '¿Debe permitirse desasociar un ingreso puntual de una proforma en borrador sin borrar la proforma completa?'
+      },
+      'proforma': {
+        module: '03. Gestión de Proformas',
+        moduleColor: 'var(--col-proforma)',
+        title: 'Proforma de Contratista (Liquidación)',
+        desc: 'Documento financiero que consolida los ingresos diarios de un contratista en un periodo semanal o quincenal, calculando el neto a pagar, anticipos y retenciones.',
+        table: 'erp.ProformaContratista, erp.ProformaContratistaItem',
+        endpoint: 'POST /contratistas/proformas, GET /contratistas/proformas/preview',
+        rule: 'Es el ÚNICO lugar del módulo que contiene la cadena jerárquica de aprobación. Pasa por estados BORRADOR ➔ PENDIENTE_APROBACION ➔ DEFINITIVA.',
+        discussion: '¿Qué tolerancia de diferencia de pesos se aceptará si la factura del contratista difiere por pocos pesos con la proforma?'
+      },
+      'proforma-modificacion': {
+        module: '03. Gestión de Proformas',
+        moduleColor: 'var(--col-proforma)',
+        title: 'Solicitud de Modificación Post-Aprobación (C6)',
+        desc: 'Mecanismo formal cuando se detecta un error de campo en una proforma ya aprobada (DEFINITIVA), antes de que llegue la factura legal del proveedor.',
+        table: 'erp.ProformaContratista (modificacionSolicitadaAt, modificacionPropuesta, modificacionAutorizadaAt)',
+        endpoint: 'POST /contratistas/proformas/:id/solicitar-modificacion, POST /contratistas/proformas/:id/autorizar-modificacion',
+        rule: 'El supervisor solicita indicando motivo y propuesta de cambio. La jefatura autoriza formalmente, reajustando los ingresos.',
+        discussion: '¿Quién tiene potestad de autorizar la modificación? ¿El mismo aprobador que firmó la proforma o Gerencia?'
+      },
+      'adjuntos': {
+        module: '03. Gestión de Proformas',
+        moduleColor: 'var(--col-proforma)',
+        title: 'Repositorio de Adjuntos & Trazabilidad',
+        desc: 'Almacén de respaldos que fundamentan la liquidación: fotos de tarjas firmadas en terreno, tickets de pesaje de camiones de cosecha y certificados laborales F30-1.',
+        table: 'erp.AuditoriaContratista, erp.ProformaArchivoAdjunto',
+        endpoint: 'POST /contratistas/proformas/:id/adjuntos, GET /contratistas/auditoria',
+        rule: 'Registro inmutable de auditoría: cada cambio de estado, nota o adjunto registra fecha, hora y usuario que ejecutó la acción.',
+        discussion: '¿Será obligatorio adjuntar la tarja escaneada antes de permitir el envío a aprobación o será opcional?'
+      },
+      'aprobaciones': {
+        module: '04. Aprobaciones & Firma',
+        moduleColor: 'var(--col-aprob)',
+        title: 'Cadena de Aprobación Jerárquica con PIN',
+        desc: 'Validación por escalas de montos: si la proforma es menor al umbral aprueba el Administrador de Campo; si supera el umbral escala a Gerencia General.',
+        table: 'erp.GrupoAprobacion, erp.EscalaAprobacion, erp.AprobacionContratistas',
+        endpoint: 'POST /contratistas/proformas/:id/aprobar-definitiva',
+        rule: 'Exige PIN de seguridad. Al aprobarse, la proforma queda inmutable (DEFINITIVA) y habilita su traspaso al cierre mensual.',
+        discussion: 'Definir con el cliente los montos exactos de corte: ¿$5.000.000 para requerir firma de Gerencia o $10.000.000?'
+      },
+      'rechazo': {
+        module: '04. Aprobaciones & Firma',
+        moduleColor: 'var(--col-aprob)',
+        title: 'Rechazo con Observaciones en Aprobación',
+        desc: 'Si el aprobador encuentra discordancias en los kilos o montos, rechaza la proforma indicando el motivo en el flujo.',
+        table: 'erp.ProformaContratista (estado: RECHAZADA)',
+        endpoint: 'POST /contratistas/proformas/:id/rechazar',
+        rule: 'Al ser rechazada, la proforma vuelve automáticamente a estado BORRADOR, permitiendo al administrativo de campo corregir los ingresos.',
+        discussion: '¿El rechazo notifica automáticamente por correo al digitador que cargó la proforma?'
+      },
+      'traspaso-cierre': {
+        module: '05. Cierre Mensual & Asientos',
+        moduleColor: 'var(--col-cierre)',
+        title: 'Traspaso / Cierre Periodo Contratistas',
+        desc: 'Proceso formal de fin de mes que bloquea los ingresos y proformas del mes y genera automáticamente el asiento contable de provisión (devengo del gasto).',
+        table: 'erp.PeriodoCierreContratista, erp.Asiento',
+        endpoint: 'POST /contratistas/traspaso-cierre',
+        rule: 'Verifica assertPeriodoOperable: si el periodo contable general de Almahue está cerrado, Contratistas no puede traspasar. Genera asiento con DEBE Gasto y HABER FxR.',
+        discussion: 'EL GRAN DILEMA: ¿El cierre debe ser global mensual para todo el campo, o permitir cierres parciales por contratista/semana?'
+      },
+      'asiento-devengo': {
+        module: '05. Cierre Mensual & Asientos',
+        moduleColor: 'var(--col-cierre)',
+        title: 'Asiento Centralización de Devengo',
+        desc: 'Reconoce el costo de la mano de obra en el mes que ocurrió el trabajo, imputando al Centro de Costo de cada cuartel contra la cuenta puente de pasivo.',
+        table: 'erp.Asiento, erp.LineaAsiento',
+        endpoint: 'Servicio ContabilizarService.createAsientoCentralizacion',
+        rule: 'Cuentas estándar Almahue: 6-1-01-01-002 (Mano de Obra Contratista) y 2-1-08-02-003 (Facturas por Recibir Contratistas).',
+        discussion: '¿Se requiere que el asiento detalle cada proforma individual en el diario o un asiento consolidado mensual con anexo?'
+      },
+      'reabrir-cierre': {
+        module: '05. Cierre Mensual & Asientos',
+        moduleColor: '#fbbf24',
+        title: 'Reapertura de Cierre & Reversa Asistida',
+        desc: 'Mecanismo para corregir liquidaciones después del cierre. El backend actual anula el asiento original, genera un Asiento de Reversa automático y regresa el periodo a abierto.',
+        table: 'erp.PeriodoCierreContratista, erp.PeriodoCierreContratistaEvento',
+        endpoint: 'POST /contratistas/periodos/:periodo/reabrir',
+        rule: 'Condición dura: Si el periodo contable general del mes ya fue cerrado por Contabilidad, reabrirCierre arroja ConflictException ("Primero debe reabrirse el período contable").',
+        discussion: 'PUNTO CLAVE CLIENTE: ¿Se permitirá reabrir meses históricos o se obligará a que cualquier corrección de mes cerrado se haga vía Proforma de Ajuste en el mes vigente?'
+      },
+      'factura-dte': {
+        module: '06. Compras & Calce Factura',
+        moduleColor: 'var(--col-compras)',
+        title: 'Recepción Factura DTE 33 del Proveedor',
+        desc: 'Llegada de la factura electrónica legal emitida por el contratista a través de GoSocket / SII al Libro de Compras.',
+        table: 'erp.RegistroCompra, erp.DteDocumento',
+        endpoint: 'GET /compras/registro-compras',
+        rule: 'La factura entra como documento por pagar pero requiere asignación de cuenta o imputación contra orden/proforma para no duplicar gasto.',
+        discussion: '¿Qué pasa si el contratista emite una sola factura que cubre 3 proformas de diferentes semanas?'
+      },
+      'calce-factura': {
+        module: '06. Compras & Calce Factura',
+        moduleColor: 'var(--col-compras)',
+        title: 'Asociación Factura ➔ Proforma (Calce Cero)',
+        desc: 'El operador de adquisiciones calza el folio del DTE con la proforma aprobada. Esto instruye a la contabilidad que no debe imputar gasto nuevamente.',
+        table: 'erp.ProformaContratista (registroCompraId, facturaFolio)',
+        endpoint: 'PATCH /contratistas/proformas/:id/factura',
+        rule: 'Al asociar la factura, la cuenta puente 2-1-08-02-003 (Facturas por Recibir) se debita en Compras, cancelando exactamente la provisión a $0.',
+        discussion: 'Si se necesita modificar la proforma después de calzada la factura, Compras debe desacoplar obligatoriamente primero.'
+      },
+      'desacople-factura': {
+        module: '06. Compras & Calce Factura',
+        moduleColor: '#f87171',
+        title: 'Desacople Obligatorio en Compras',
+        desc: 'Gate de seguridad de datos: Contratistas prohíbe reabrir o modificar una proforma si ya tiene una factura tributaria asociada en Compras.',
+        table: 'erp.ProformaContratista (registroCompraId = null)',
+        endpoint: 'DELETE /contratistas/proformas/:id/factura',
+        rule: 'Compras debe primero desvincular la factura para liberar la proforma; esto protege los saldos de la cuenta puente y evita descuadres.',
+        discussion: 'Definir el protocolo: Si la factura ya fue pagada en Tesorería, el desacople queda totalmente prohibido.'
+      },
+      'periodo-contable': {
+        module: '07. Contabilidad & Tesorería',
+        moduleColor: 'var(--col-contab)',
+        title: 'Periodo Contable General (F29 / Balance)',
+        desc: 'Control maestro de meses contables (YYYY-MM). Cuando Contabilidad declara el IVA F29 ante el SII, el periodo pasa a CERRADO.',
+        table: 'erp.PeriodoContable (estado: ABIERTO / CERRADO)',
+        endpoint: 'GET /contabilidad/periodos, POST /contabilidad/periodos/cerrar',
+        rule: 'Inmutabilidad tributaria: ningún módulo auxiliar (Compras, Ventas, Contratistas) puede crear ni reversar asientos en un periodo cerrado.',
+        discussion: 'Acuerdo con el cliente: No reabrir periodos contables cerrados; resolver desfases con Proforma de Ajuste en periodo activo.'
+      },
+      'asiento-compra': {
+        module: '07. Contabilidad & Tesorería',
+        moduleColor: 'var(--col-contab)',
+        title: 'Asiento Factura Compra (Paso a Tesorería)',
+        desc: 'Asiento definitivo de la factura legal: cancela la provisión puente, reconoce el IVA Crédito Fiscal y acredita la cuenta Proveedores.',
+        table: 'erp.Asiento, erp.CuentaCorrienteProveedor',
+        endpoint: 'POST /compras/facturas/:id/contabilizar',
+        rule: 'DEBE FxR 2-1-08-02-003, DEBE IVA Crédito 1-1-07-..., HABER Proveedores 2-1-01-... La deuda pasa a nómina de pago en Tesorería.',
+        discussion: 'Confirmar si los anticipos pagados al contratista se descuentan en la proforma o se calzan en tesorería contra la factura.'
+      },
+      'tesoreria-pago': {
+        module: '07. Contabilidad & Tesorería',
+        moduleColor: 'var(--col-contab)',
+        title: 'Tesorería: Pago & Extinción de Deuda',
+        desc: 'Programación de la transferencia electrónica o cheque al contratista según nómina semanal/quincenal.',
+        table: 'erp.PagoProveedor, erp.CartolaBancaria',
+        endpoint: 'POST /tesoreria/pagos, POST /tesoreria/conciliacion',
+        rule: 'DEBE Proveedores por Pagar, HABER Banco (1-1-02-...). El pasivo legal queda cancelado.',
+        discussion: '¿Los pagos se realizan por transferencia masiva bancaria (archivo de nómina banco) o emisión de cheques individuales?'
+      }
+    };
+
+    let scale = 0.58;
+    let translateX = 30;
+    let translateY = 20;
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+
+    const viewport = document.getElementById('viewport');
+    const container = document.getElementById('canvas-container');
+    const zoomText = document.getElementById('zoom-text');
+
+    function updateTransform() {
+      viewport.setAttribute('transform', `translate(${translateX}, ${translateY}) scale(${scale})`);
+      zoomText.innerText = `${Math.round(scale * 100)}%`;
+    }
+
+    function zoomIn() {
+      scale = Math.min(scale * 1.2, 2.5);
+      updateTransform();
+    }
+
+    function zoomOut() {
+      scale = Math.max(scale / 1.2, 0.25);
+      updateTransform();
+    }
+
+    function resetZoom() {
+      scale = 1;
+      translateX = 50;
+      translateY = 50;
+      updateTransform();
+    }
+
+    function fitDiagramToScreen() {
+      const containerW = container.clientWidth;
+      const containerH = container.clientHeight;
+      const diagramW = 3120;
+      const diagramH = 960;
+
+      const scaleX = (containerW - 60) / diagramW;
+      const scaleY = (containerH - 60) / diagramH;
+      scale = Math.min(scaleX, scaleY);
+      translateX = (containerW - diagramW * scale) / 2;
+      translateY = Math.max(15, (containerH - diagramH * scale) / 2);
+      updateTransform();
+    }
+
+    container.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.diagram-node')) return;
+      isPanning = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      updateTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+      isPanning = false;
+    });
+
+    container.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
+      const mouseX = e.clientX - container.getBoundingClientRect().left;
+      const mouseY = e.clientY - container.getBoundingClientRect().top;
+
+      const newScale = Math.max(0.2, Math.min(2.5, scale * zoomFactor));
+      translateX = mouseX - (mouseX - translateX) * (newScale / scale);
+      translateY = mouseY - (mouseY - translateY) * (newScale / scale);
+      scale = newScale;
+      updateTransform();
+    }, { passive: false });
+
+    let activeNodeId = null;
+
+    function selectNode(nodeId) {
+      activeNodeId = nodeId;
+      const data = nodesData[nodeId];
+      if (!data) return;
+
+      document.querySelectorAll('.diagram-node').forEach(n => n.classList.remove('selected'));
+      const el = document.getElementById(`node-${nodeId}`);
+      if (el) el.classList.add('selected');
+
+      document.getElementById('d-module').innerText = data.module;
+      document.getElementById('d-module').style.color = data.moduleColor;
+      document.getElementById('d-title').innerText = data.title;
+      document.getElementById('d-desc').innerText = data.desc;
+      document.getElementById('d-table').innerText = data.table;
+      document.getElementById('d-endpoint').innerText = data.endpoint;
+      document.getElementById('d-rule').innerText = data.rule;
+      document.getElementById('d-discussion').innerText = data.discussion;
+
+      document.getElementById('detail-drawer').classList.add('open');
+    }
+
+    function closeDrawer() {
+      document.getElementById('detail-drawer').classList.remove('open');
+      document.querySelectorAll('.diagram-node').forEach(n => n.classList.remove('selected'));
+      activeNodeId = null;
+    }
+
+    function setDiagramFilter(filterType) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const allNodes = document.querySelectorAll('.diagram-node');
+      allNodes.forEach(n => n.classList.remove('dimmed'));
+
+      if (filterType === 'operativo') {
+        allNodes.forEach(n => {
+          const id = n.id.replace('node-', '');
+          if (!['actividad-labor', 'ingreso-diario', 'ingreso-estados', 'proforma', 'adjuntos', 'aprobaciones'].includes(id)) {
+            n.classList.add('dimmed');
+          }
+        });
+      } else if (filterType === 'cierre') {
+        allNodes.forEach(n => {
+          const id = n.id.replace('node-', '');
+          if (!['proforma', 'aprobaciones', 'traspaso-cierre', 'asiento-devengo', 'periodo-contable'].includes(id)) {
+            n.classList.add('dimmed');
+          }
+        });
+      } else if (filterType === 'reabrir') {
+        allNodes.forEach(n => {
+          const id = n.id.replace('node-', '');
+          if (!['traspaso-cierre', 'asiento-devengo', 'reabrir-cierre', 'desacople-factura', 'calce-factura', 'periodo-contable'].includes(id)) {
+            n.classList.add('dimmed');
+          }
+        });
+      } else if (filterType === 'cliente') {
+        allNodes.forEach(n => {
+          const id = n.id.replace('node-', '');
+          if (!['proforma-modificacion', 'traspaso-cierre', 'reabrir-cierre', 'desacople-factura', 'periodo-contable'].includes(id)) {
+            n.classList.add('dimmed');
+          }
+        });
+        selectNode('traspaso-cierre');
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    window.addEventListener('resize', fitDiagramToScreen);
+    fitDiagramToScreen();
+  </script>
+</body>
+</html>

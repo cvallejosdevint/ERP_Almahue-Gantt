@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Almahue — Flujo Integral de Contratistas & Protocolo de Cierre</title>
+  <style>
+    :root {
+      --bg-main: #0a0e17;
+      --bg-card: rgba(18, 24, 38, 0.85);
+      --bg-card-hover: rgba(28, 36, 56, 0.95);
+      --border-color: rgba(255, 255, 255, 0.12);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --color-param: #38bdf8;
+      --color-campo: #4ade80;
+      --color-proforma: #c084fc;
+      --color-aprob: #fbbf24;
+      --color-contab: #2dd4bf;
+      --color-compras: #f472b6;
+      --color-cierre: #f87171;
+
+      --card-radius: 16px;
+      --font-scale: 1;
+    }
+
+    [data-theme="light"] {
+      --bg-main: #f8fafc;
+      --bg-card: rgba(255, 255, 255, 0.95);
+      --bg-card-hover: #ffffff;
+      --border-color: rgba(0, 0, 0, 0.12);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(192, 132, 252, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(74, 222, 128, 0.05) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* BARRA SUPERIOR PARA PRESENTACIÓN TV */
+    header {
+      padding: 16px 32px;
+      background: rgba(10, 14, 23, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+
+    .title-group h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .title-group p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      gap: 4px;
+    }
+
+    .nav-tab {
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-tab:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-tab.active {
+      color: #fff;
+      background: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+    }
+
+    .action-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .action-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    main {
+      flex: 1;
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .view-section {
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .view-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pipeline-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(360px, 1fr));
+      gap: 24px;
+      min-width: 2200px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pipeline-wrapper.fit-screen .pipeline-grid {
+      grid-template-columns: repeat(6, 1fr);
+      min-width: 100%;
+      gap: 12px;
+    }
+
+    .pipeline-wrapper.fit-screen .stage-card {
+      padding: 16px 14px;
+    }
+
+    .pipeline-wrapper.fit-screen .stage-title {
+      font-size: 16px;
+    }
+
+    .pipeline-wrapper.fit-screen .step-box {
+      padding: 10px;
+    }
+
+    .pipeline-wrapper.fit-screen .step-box p, 
+    .pipeline-wrapper.fit-screen .step-box ul {
+      font-size: 12px;
+    }
+
+    .pipeline-wrapper.fit-screen .voucher-box {
+      font-size: 11px;
+      padding: 8px 10px;
+    }
+
+    .pipeline-wrapper.fit-screen .connector-arrow {
+      width: 24px;
+      height: 24px;
+      font-size: 11px;
+      right: -13px;
+    }
+
+    .pipeline-wrapper.fit-screen .step-box {
+      padding: 10px;
+    }
+
+    .pipeline-wrapper.fit-screen .step-box p, 
+    .pipeline-wrapper.fit-screen .step-box ul {
+      font-size: 12px;
+    }
+
+    .pipeline-wrapper.fit-screen .voucher-box {
+      font-size: 11px;
+      padding: 8px 10px;
+    }
+
+    .pipeline-wrapper.fit-screen .connector-arrow {
+      width: 24px;
+      height: 24px;
+      font-size: 11px;
+      right: -13px;
+    }
+
+    .stage-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stage-card:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Colores temáticos por módulo */
+    .stage-card.param { border-top: 5px solid var(--color-param); }
+    .stage-card.campo { border-top: 5px solid var(--color-campo); }
+    .stage-card.proforma { border-top: 5px solid var(--color-proforma); }
+    .stage-card.aprob { border-top: 5px solid var(--color-aprob); }
+    .stage-card.contab { border-top: 5px solid var(--color-contab); }
+    .stage-card.compras { border-top: 5px solid var(--color-compras); }
+
+    .stage-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 14px;
+    }
+
+    .stage-number {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .stage-card.param .stage-number { background: rgba(56, 189, 248, 0.15); color: var(--color-param); }
+    .stage-card.campo .stage-number { background: rgba(74, 222, 128, 0.15); color: var(--color-campo); }
+    .stage-card.proforma .stage-number { background: rgba(192, 132, 252, 0.15); color: var(--color-proforma); }
+    .stage-card.aprob .stage-number { background: rgba(251, 191, 36, 0.15); color: var(--color-aprob); }
+    .stage-card.contab .stage-number { background: rgba(45, 212, 191, 0.15); color: var(--color-contab); }
+    .stage-card.compras .stage-number { background: rgba(244, 114, 182, 0.15); color: var(--color-compras); }
+
+    .stage-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 6px;
+      line-height: 1.3;
+    }
+
+    .actor-tag {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .actor-tag span {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .stage-body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .step-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .step-box-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-box p, .step-box ul {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .step-box ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .step-box li {
+      margin-bottom: 4px;
+    }
+
+    /* Asientos contables resaltados */
+    .voucher-box {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12.5px;
+    }
+
+    .voucher-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .voucher-row.debe { color: #38bdf8; }
+    .voucher-row.haber { color: #f472b6; padding-left: 14px; }
+    .voucher-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-contab);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    /* Badge de regla de oro */
+    .rule-pill {
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      color: #fef08a;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* Flecha conector entre columnas */
+    .connector-arrow {
+      position: absolute;
+      right: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background: #1e293b;
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ============================================================
+       VISTA 2: MODO PRESENTADOR PASO A PASO (SLIDE FOCUS)
+       ============================================================ */
+    .presenter-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .presenter-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      background: var(--bg-card);
+      padding: 16px 24px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stepper-dots {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .step-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid var(--border-color);
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .step-dot.active {
+      background: #2563eb;
+      border-color: #60a5fa;
+      color: #fff;
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.6);
+      transform: scale(1.15);
+    }
+
+    .step-dot.completed {
+      background: rgba(34, 197, 94, 0.2);
+      border-color: #22c55e;
+      color: #4ade80;
+    }
+
+    .slide-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      min-height: 580px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .slide-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .slide-desc {
+      font-size: 19px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 1000px;
+    }
+
+    .slide-details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .detail-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .detail-box h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .detail-box p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .slide-footer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+    }
+
+    .nav-big-btn {
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .nav-big-btn.prev {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .nav-big-btn.prev:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .nav-big-btn.next {
+      background: #2563eb;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    .nav-big-btn.next:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       VISTA 3: PROTOCOLO DE CIERRE Y RE-APERTURA (SOLUCIÓN)
+       ============================================================ */
+    .cierre-container {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .cierre-hero {
+      background: linear-gradient(135deg, rgba(248, 113, 113, 0.15), rgba(185, 28, 28, 0.05));
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .cierre-hero-text h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fecaca;
+      margin-bottom: 8px;
+    }
+
+    .cierre-hero-text p {
+      font-size: 16px;
+      color: #cbd5e1;
+      max-width: 900px;
+      line-height: 1.5;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .case-card.c1 { border-top: 6px solid #22c55e; }
+    .case-card.c2 { border-top: 6px solid #f59e0b; }
+    .case-card.c3 { border-top: 6px solid #ef4444; }
+
+    .case-badge {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      align-self: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .case-card.c1 .case-badge { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+    .case-card.c2 .case-badge { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+    .case-card.c3 .case-badge { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+
+    .case-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .case-condition {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .case-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .case-impact {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .case-card.c1 .case-impact { color: #4ade80; }
+    .case-card.c2 .case-impact { color: #fcd34d; }
+    .case-card.c3 .case-impact { color: #fca5a5; }
+
+    /* Keybindings info */
+    .keyboard-legend {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px;
+      font-size: 13px;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border-color);
+      margin-top: 24px;
+    }
+
+    .kbd {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: monospace;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- HEADER FIJO DE CONTROL TV -->
+  <header>
+    <div class="brand">
+      <div class="logo-badge">ALMAHUE</div>
+      <div class="title-group">
+        <h1>Ciclo Operativo Contratistas & Protocolo de Cierre</h1>
+        <p>Visualización Ejecutiva de Arquitectura — ERP Almahue</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="nav-tabs">
+        <button class="nav-tab active" onclick="switchView('pipeline')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+          1. Mapa Panorámico (TV)
+        </button>
+        <button class="nav-tab" onclick="switchView('presenter')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+          2. Presentador Paso a Paso
+        </button>
+        <button class="nav-tab" onclick="switchView('cierre')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          3. Solución Cierre / Re-Apertura
+        </button>
+      </div>
+
+      <button class="action-btn" id="btn-fit" onclick="toggleFitScreen()" title="Ajustar los 6 Módulos en Pantalla">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        <span id="fit-label">Ver 6 Módulos</span>
+      </button>
+
+      <button class="action-btn" onclick="toggleTheme()" title="Cambiar tema">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+
+      <a href="diagrama-estado-actual.html" class="action-btn" style="text-decoration: none;" title="Explorar Diagrama Navegable del Estado Actual">
+        🗺 Diagrama Navegable
+      </a>
+
+      <button class="action-btn" onclick="toggleFullScreen()" title="Pantalla Completa (F11)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        F11 TV
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- ============================================================
+         VISTA 1: PIPELINE HORIZONTAL / SWIMLANES (TV WIDEBOARD)
+         ============================================================ -->
+    <section id="view-pipeline" class="view-section active">
+      <div class="pipeline-wrapper">
+        <div class="pipeline-grid">
+
+          <!-- 1. PARAMETRIZACIÓN -->
+          <div class="stage-card param">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 01</span>
+                <h3 class="stage-title">Parametrización & Maestros</h3>
+                <div class="actor-tag">Responsable: <span>Administrador / Agrícola</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Jerarquía: Actividad ➔ Labores</div>
+                <p>La Actividad (Cosecha, Poda, Riego) es el maestro principal que agrupa múltiples labores operativas.</p>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Tarifas & Cuarteles</div>
+                <ul>
+                  <li>Definición de pago: Trato (kilos, plantas) o Día/Jornada.</li>
+                  <li>Asociación directa a Cuartel y Centro de Costo contable.</li>
+                </ul>
+              </div>
+              <div class="rule-pill">
+                <span>⚡</span>
+                <span>Regla: La labor sólo puede ejecutarse si está vinculada a una actividad válida y tarifa activa.</span>
+              </div>
+            </div>
+            <div class="connector-arrow">➔</div>
+          </div>
+
+          <!-- 2. OPERACIÓN CAMPO -->
+          <div class="stage-card campo">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 02</span>
+                <h3 class="stage-title">Operación de Campo (Diario)</h3>
+                <div class="actor-tag">Responsable: <span>Jefe Cuadrilla / Digitador</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Ingreso Masivo de Labores</div>
+                <p>Captura diaria y ágil de rendimientos por cuadrilla, contratista, cuartel y fecha.</p>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Edición Operativa Flexible</div>
+                <p>El digitador corrige libremente errores de digitación de personas o kilos antes de liquidar.</p>
+              </div>
+              <div class="rule-pill" style="background: rgba(74, 222, 128, 0.1); border-color: rgba(74, 222, 128, 0.3); color: #86efac;">
+                <span>✓</span>
+                <span>Sin Aprobación Individual: Los ingresos diarios NO exigen cadenas de aprobación burocráticas individuales.</span>
+              </div>
+            </div>
+            <div class="connector-arrow">➔</div>
+          </div>
+
+          <!-- 3. PROFORMAS Y ADJUNTOS -->
+          <div class="stage-card proforma">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 03</span>
+                <h3 class="stage-title">Proformas & Respaldos</h3>
+                <div class="actor-tag">Responsable: <span>Administración Agrícola</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Corte de Liquidación</div>
+                <p>Corte semanal o quincenal por contratista. Agrupa ingresos diarios y calcula el Monto Neto y Descuentos.</p>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Repositorio de Documentos Adjuntos</div>
+                <ul>
+                  <li>Fotografías de Tarjas firmadas en terreno.</li>
+                  <li>Tickets de báscula / pesaje de camiones.</li>
+                  <li>Certificados F30-1 laborales del contratista.</li>
+                </ul>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Estado Inicial</div>
+                <p><strong style="color: #c084fc;">BORRADOR</strong>: Modificable por el supervisor agrícola.</p>
+              </div>
+            </div>
+            <div class="connector-arrow">➔</div>
+          </div>
+
+          <!-- 4. APROBACIONES -->
+          <div class="stage-card aprob">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 04</span>
+                <h3 class="stage-title">Sistema de Aprobaciones</h3>
+                <div class="actor-tag">Responsable: <span>Jefe Agrícola ➔ Gerencia</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Cadena en la Proforma</div>
+                <p>La aprobación se ejerce <strong>exclusivamente sobre la Proforma</strong> consolidada.</p>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Escalas Jerárquicas por Monto</div>
+                <ul>
+                  <li><strong>Tramo 1:</strong> Administrador de Fundo (Firma con PIN).</li>
+                  <li><strong>Tramo 2:</strong> Gerencia Agrícola / General si supera el umbral presupuestario.</li>
+                </ul>
+              </div>
+              <div class="rule-pill">
+                <span>🔒</span>
+                <span>Proforma Aprobada = DEFINITIVA e Inmutable para el personal de campo.</span>
+              </div>
+            </div>
+            <div class="connector-arrow">➔</div>
+          </div>
+
+          <!-- 5. CONTABILIDAD (DEVENGO) -->
+          <div class="stage-card contab">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 05</span>
+                <h3 class="stage-title">Contabilidad (Devengo)</h3>
+                <div class="actor-tag">Responsable: <span>Centralización Automática</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Reconocimiento Oportuno del Gasto</div>
+                <p>Se asienta el costo de mano de obra en el mes que ocurrió el trabajo, sin esperar la factura tributaria.</p>
+              </div>
+              <div class="voucher-box">
+                <div class="voucher-title">Asiento Centralización Proforma</div>
+                <div class="voucher-row debe">
+                  <span>DEBE: Gasto M.O. Contratistas (CC Cuartel)</span>
+                  <span>$ 8.500.000</span>
+                </div>
+                <div class="voucher-row haber">
+                  <span>HABER: Facturas por Recibir Contratistas</span>
+                  <span>$ 8.500.000</span>
+                </div>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Cuenta Puente de Pasivo</div>
+                <p>La cuenta <em>Facturas por Recibir</em> mantiene la provisión exacta de la deuda con el contratista.</p>
+              </div>
+            </div>
+            <div class="connector-arrow">➔</div>
+          </div>
+
+          <!-- 6. COMPRAS Y CALCE -->
+          <div class="stage-card compras">
+            <div class="stage-header">
+              <div>
+                <span class="stage-number">Módulo 06</span>
+                <h3 class="stage-title">Compras & Calce Factura</h3>
+                <div class="actor-tag">Responsable: <span>Adquisiciones / Tesorería</span></div>
+              </div>
+            </div>
+            <div class="stage-body">
+              <div class="step-box">
+                <div class="step-box-title">Recepción DTE 33 (Factura Proveedor)</div>
+                <p>El contratista emite su factura electrónica legal y entra al Libro de Compras del ERP.</p>
+              </div>
+              <div class="step-box">
+                <div class="step-box-title">Asociación a Proforma Aprobada</div>
+                <p>Compras calza el folio de la factura con la proforma devengada.</p>
+              </div>
+              <div class="voucher-box">
+                <div class="voucher-title">Asiento Factura de Compra (Calce Cero)</div>
+                <div class="voucher-row debe">
+                  <span>DEBE: Facturas por Recibir Contratistas</span>
+                  <span>$ 8.500.000</span>
+                </div>
+                <div class="voucher-row debe">
+                  <span>DEBE: IVA Crédito Fiscal (19%)</span>
+                  <span>$ 1.615.000</span>
+                </div>
+                <div class="voucher-row haber">
+                  <span>HABER: Proveedores por Pagar (Tesorería)</span>
+                  <span>$ 10.115.000</span>
+                </div>
+              </div>
+              <div class="rule-pill" style="background: rgba(244, 114, 182, 0.12); border-color: rgba(244, 114, 182, 0.3); color: #fbcfe8;">
+                <span>🎯</span>
+                <span>Calce Perfecto: La cuenta puente queda en $0 y la deuda pasa a Tesorería para pago.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VISTA 2: MODO PRESENTADOR PASO A PASO
+         ============================================================ -->
+    <section id="view-presenter" class="view-section">
+      <div class="presenter-container">
+        
+        <div class="presenter-nav">
+          <div style="font-weight: 700; font-size: 16px; color: var(--text-muted);">
+            Paso <span id="current-step-num" style="color: #60a5fa; font-size: 20px;">1</span> de 6
+          </div>
+          <div class="stepper-dots">
+            <div class="step-dot active" onclick="goToStep(0)">1</div>
+            <div class="step-dot" onclick="goToStep(1)">2</div>
+            <div class="step-dot" onclick="goToStep(2)">3</div>
+            <div class="step-dot" onclick="goToStep(3)">4</div>
+            <div class="step-dot" onclick="goToStep(4)">5</div>
+            <div class="step-dot" onclick="goToStep(5)">6</div>
+          </div>
+          <div style="font-size: 13px; color: var(--text-dim);">
+            Usa las teclas <span class="kbd">←</span> <span class="kbd">→</span>
+          </div>
+        </div>
+
+        <div class="slide-card" id="slide-content">
+          <!-- El contenido se inyecta dinámicamente con renderSlide() -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VISTA 3: PROTOCOLO DE CIERRE Y RE-APERTURA
+         ============================================================ -->
+    <section id="view-cierre" class="view-section">
+      <div class="cierre-container">
+
+        <div class="cierre-hero">
+          <div class="cierre-hero-text">
+            <h2>Resolución del Dilema: Cierre vs Re-Apertura en Contratistas</h2>
+            <p>
+              El campo necesita flexibilidad para corregir tarjas o personas mal asignadas, pero la contabilidad exige inmutabilidad para no alterar balances tributarios ya declarados. Aquí se presenta la solución de tres niveles acordada.
+            </p>
+          </div>
+          <div style="background: rgba(0,0,0,0.3); padding: 16px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <div style="font-size: 13px; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Regla Suprema</div>
+            <div style="font-size: 18px; font-weight: 800; color: #f87171; margin-top: 4px;">Integridad Contable</div>
+          </div>
+        </div>
+
+        <div class="cases-grid">
+
+          <!-- CASO 1 -->
+          <div class="case-card c1">
+            <span class="case-badge">Caso 1: Re-Apertura Limpia</span>
+            <h3 class="case-title">Proforma Aprobada SIN Factura Asociada</h3>
+            <div class="case-condition">
+              <strong>Condición:</strong> Periodo contable del mes abierto y ninguna factura vinculada en el Libro de Compras.
+            </div>
+            <div class="case-steps">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div>Supervisor con permiso solicita re-apertura indicando motivo justificado.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div>El ERP genera automáticamente el <strong>Asiento de Reversa</strong> de la provisión contable original.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div>La proforma regresa a estado <strong>BORRADOR</strong>. Se corrigen días, kilos o cuarteles.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">4</div>
+                <div>Se vuelve a aprobar con PIN y se genera la nueva centralización contable correcta.</div>
+              </div>
+            </div>
+            <div class="case-impact">
+              ✓ Impacto: Cero descuadre. La reversa y el nuevo asiento quedan en el mismo mes.
+            </div>
+          </div>
+
+          <!-- CASO 2 -->
+          <div class="case-card c2">
+            <span class="case-badge">Caso 2: Requiere Desacople</span>
+            <h3 class="case-title">Proforma con Factura YA Asociada</h3>
+            <div class="case-condition">
+              <strong>Condición:</strong> La factura DTE 33 del contratista ya fue recepcionada y asociada a la proforma en Compras.
+            </div>
+            <div class="case-steps">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div><strong>Bloqueo Estricto:</strong> Contratistas no permite re-abrir directamente.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div>El usuario debe ir primero a <strong>Compras</strong> y desvincular la factura de la proforma.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div>Con la factura liberada, Contratistas autoriza la reversa y re-apertura del Caso 1.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">4</div>
+                <div>Tras corregir y re-aprobar la proforma, Compras vuelve a vincular la factura legal.</div>
+              </div>
+            </div>
+            <div class="case-impact">
+              ⚠ Impacto: Protege la cuenta puente evitando facturas flotantes sin respaldo.
+            </div>
+          </div>
+
+          <!-- CASO 3 -->
+          <div class="case-card c3">
+            <span class="case-badge">Caso 3: Periodo Cerrado</span>
+            <h3 class="case-title">Mes Contable Oficialmente Cerrado</h3>
+            <div class="case-condition">
+              <strong>Condición:</strong> El mes en que ocurrió la labor ya fue cerrado por Contabilidad / F29 tributario presentado.
+            </div>
+            <div class="case-steps">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div><strong>PROHIBIDO RE-ABRIR HISTÓRICO:</strong> No se tocan proformas ni asientos de meses cerrados.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div>Se genera una <strong>Proforma de Ajuste (+ / -)</strong> en el periodo contable activo actual.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div>La proforma de ajuste hace referencia explícita al folio y contratista del mes anterior.</div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">4</div>
+                <div>El ajuste contable imputa en el mes vigente, cumpliendo auditoría tributaria estricta.</div>
+              </div>
+            </div>
+            <div class="case-impact">
+              🛡 Impacto: Cumple 100% normativa SII, auditorías externas y balances anuales.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="keyboard-legend">
+    <span>💡 Atajos de teclado para presentación:</span>
+    <span><span class="kbd">1</span> Mapa Panorámico</span>
+    <span><span class="kbd">2</span> Modo Presentador</span>
+    <span><span class="kbd">3</span> Solución Cierre</span>
+    <span><span class="kbd">←</span> Anterior</span>
+    <span><span class="kbd">→</span> Siguiente</span>
+    <span><span class="kbd">T</span> Tema Claro/Oscuro</span>
+    <span><span class="kbd">F</span> Pantalla Completa</span>
+  </footer>
+
+  <!-- LÓGICA INTERACTIVA JAVASCRIPT -->
+  <script>
+    const slidesData = [
+      {
+        badge: "Paso 1: Configuración de Base",
+        badgeColor: "var(--color-param)",
+        title: "Parametrización: Actividades, Labores & Tarifas",
+        desc: "La operación agrícola se organiza de forma natural: la Actividad es la categoría rectora (Cosecha, Poda, Raleo) y las Labores son las tareas específicas de campo. Cada labor define su unidad de cobro (trato por kilo/planta o jornada diaria) y su Centro de Costo contable.",
+        details: [
+          { icon: "📁", title: "Asociación Invertida", text: "El usuario selecciona la Actividad y gestiona las labores hijas asociadas, eliminando dispersión." },
+          { icon: "💰", title: "Tarifario Vigente", text: "Se configuran valores por trato o día para asegurar que los ingresos diarios tengan valorización inmediata." },
+          { icon: "🚜", title: "Asignación Cuartel", text: "Cada cuartel mapea automáticamente al Centro de Costo contable que recibirá el gasto devengado." }
+        ]
+      },
+      {
+        badge: "Paso 2: Captura en Terreno",
+        badgeColor: "var(--color-campo)",
+        title: "Operación Diaria: Ingreso Masivo y Rápido",
+        desc: "El personal de campo o digitador registra los rendimientos diarios de las cuadrillas sin trabas burocráticas. La meta es registrar rápido personas, horas, cuartel y kilos. La edición es libre mientras los ingresos no formen parte de una liquidación cerrada.",
+        details: [
+          { icon: "⚡", title: "Agilidad Operativa", text: "Decenas o cientos de registros al día se capturan en segundos con validación de cuadrilla y cuartel." },
+          { icon: "✏", title: "Edición sin Trabas", text: "El digitador corrige errores tipográficos en el día sin requerir aprobaciones gerenciales." },
+          { icon: "🛡", title: "Sin Aprobación Individual", text: "Se eliminó la cadena de aprobación de la labor diaria; aprobar día por día saturaba a la jefatura." }
+        ]
+      },
+      {
+        badge: "Paso 3: Consolidación Financiera",
+        badgeColor: "var(--color-proforma)",
+        title: "Proformas: Corte Semanal & Adjuntos de Respaldo",
+        desc: "Al finalizar la semana o quincena, se ejecuta el corte por contratista. El sistema agrupa todos los ingresos registrados y genera una Proforma con el total neto, retenciones y anticipos. Aquí se adjuntan las evidencias de campo.",
+        details: [
+          { icon: "📑", title: "Corte Automático", text: "Consolida labores del periodo, calcula subtotales por cuartel y muestra el neto a liquidar." },
+          { icon: "📎", title: "Documentos Adjuntos", text: "Carga de fotos de tarjas firmadas por jefes de campo, pesajes de báscula y certificados F30-1." },
+          { icon: "🔍", title: "Estado Borrador", text: "Permite al supervisor agrícola revisar detalladamente antes de disparar la cadena de aprobación." }
+        ]
+      },
+      {
+        badge: "Paso 4: Validación y Firma",
+        badgeColor: "var(--color-aprob)",
+        title: "Cadena de Aprobación Jerárquica con PIN",
+        desc: "La aprobación se ejerce exclusivamente sobre la Proforma consolidada. Según el monto total calculado, el sistema determina los niveles requeridos (Jefe Agrícola ➔ Administrador de Fundo ➔ Gerencia General), garantizando control de costos.",
+        details: [
+          { icon: "📊", title: "Escalas por Monto", text: "Montos menores requieren solo aprobación de campo; montos altos escalan a Gerencia." },
+          { icon: "🔑", title: "Firma Segura con PIN", text: "Cada aprobador ingresa su PIN personal intransferible para autorizar el desembolso." },
+          { icon: "🔒", title: "Congelamiento Inmutable", text: "Al ser aprobada, la proforma pasa a DEFINITIVA y queda blindada contra ediciones en campo." }
+        ]
+      },
+      {
+        badge: "Paso 5: Integración Contable",
+        badgeColor: "var(--color-contab)",
+        title: "Centralización: Devengo Oportuno del Gasto",
+        desc: "Inmediatamente después de la aprobación de la proforma, Contabilidad ejecuta la centralización. Se reconoce el gasto en el mes en que efectivamente se realizó el trabajo agrícola, utilizando la cuenta puente de provisión.",
+        details: [
+          { icon: "📈", title: "Gasto al Debe", text: "Imputa a la cuenta 'Mano de Obra Contratistas' distribuida en los Centros de Costo de cada cuartel." },
+          { icon: "🏦", title: "Pasivo al Haber", text: "Acredita a 'Facturas por Recibir Contratistas', dejando la provisión exacta de la obligación." },
+          { icon: "⚖", title: "Balance Fidedigno", text: "Los estados financieros reflejan el costo real sin depender de la fecha en que el contratista facture." }
+        ]
+      },
+      {
+        badge: "Paso 6: Liquidación y Tesorería",
+        badgeColor: "var(--color-compras)",
+        title: "Compras & Calce de Factura Electrónica (DTE 33)",
+        desc: "Cuando el contratista emite su factura electrónica oficial, el módulo de Compras la recepciona y la asocia a la proforma devengada. La cuenta puente se salda a $0 y la deuda real pasa a Tesorería para su pago bancario.",
+        details: [
+          { icon: "🧾", title: "Recepción DTE", text: "Factura recibida vía SII / GoSocket con validación de RUT y montos contra la proforma." },
+          { icon: "🔄", title: "Calce Cuenta Puente", text: "El asiento de compra debita 'Facturas por Recibir Contratistas' cancelando la provisión a cero." },
+          { icon: "💵", title: "Paso a Pago", text: "Se acredita 'Proveedores' y Tesorería programa la transferencia según nómina y vencimiento." }
+        ]
+      }
+    ];
+
+    let currentSlide = 0;
+
+    function renderSlide(index) {
+      currentSlide = index;
+      const data = slidesData[index];
+      const container = document.getElementById('slide-content');
+      document.getElementById('current-step-num').innerText = index + 1;
+
+      // Actualizar dots
+      const dots = document.querySelectorAll('.step-dot');
+      dots.forEach((dot, idx) => {
+        dot.className = 'step-dot';
+        if (idx === index) dot.classList.add('active');
+        else if (idx < index) dot.classList.add('completed');
+      });
+
+      container.innerHTML = `
+        <div>
+          <span class="slide-badge" style="background: rgba(255,255,255,0.1); color: ${data.badgeColor}; border: 1px solid ${data.badgeColor};">
+            ${data.badge}
+          </span>
+          <h2 class="slide-title">${data.title}</h2>
+          <p class="slide-desc">${data.desc}</p>
+
+          <div class="slide-details-grid">
+            ${data.details.map(item => `
+              <div class="detail-box">
+                <h4><span>${item.icon}</span> ${item.title}</h4>
+                <p>${item.text}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="slide-footer-nav">
+          <button class="nav-big-btn prev" onclick="prevSlide()" ${index === 0 ? 'style="visibility:hidden"' : ''}>
+            ← Anterior
+          </button>
+          <div style="font-size: 14px; color: var(--text-muted);">
+            Navegación: Presiona las flechas del teclado
+          </div>
+          <button class="nav-big-btn next" onclick="nextSlide()">
+            ${index === slidesData.length - 1 ? 'Ver Solución Cierre ➔' : 'Siguiente Paso ➔'}
+          </button>
+        </div>
+      `;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slidesData.length - 1) {
+        renderSlide(currentSlide + 1);
+      } else {
+        switchView('cierre');
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        renderSlide(currentSlide - 1);
+      }
+    }
+
+    function goToStep(idx) {
+      renderSlide(idx);
+    }
+
+    function switchView(viewName) {
+      document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+
+      if (viewName === 'pipeline') {
+        document.getElementById('view-pipeline').classList.add('active');
+        document.querySelectorAll('.nav-tab')[0].classList.add('active');
+      } else if (viewName === 'presenter') {
+        document.getElementById('view-presenter').classList.add('active');
+        document.querySelectorAll('.nav-tab')[1].classList.add('active');
+        renderSlide(currentSlide);
+      } else if (viewName === 'cierre') {
+        document.getElementById('view-cierre').classList.add('active');
+        document.querySelectorAll('.nav-tab')[2].classList.add('active');
+      }
+    }
+
+    function toggleFitScreen() {
+      const wrapper = document.querySelector('.pipeline-wrapper');
+      const isFit = wrapper.classList.toggle('fit-screen');
+      document.getElementById('fit-label').innerText = isFit ? 'Vista Grande' : 'Ver 6 Módulos';
+    }
+
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => alert(`Error: ${err.message}`));
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    // Atajos de teclado para televisión / presentación
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+        const presenterActive = document.getElementById('view-presenter').classList.contains('active');
+        if (presenterActive) nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        const presenterActive = document.getElementById('view-presenter').classList.contains('active');
+        if (presenterActive) prevSlide();
+      } else if (e.key === '1') {
+        switchView('pipeline');
+      } else if (e.key === '2') {
+        switchView('presenter');
+      } else if (e.key === '3') {
+        switchView('cierre');
+      } else if (e.key.toLowerCase() === 'm' || e.key.toLowerCase() === 'z') {
+        toggleFitScreen();
+      } else if (e.key.toLowerCase() === 't') {
+        toggleTheme();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullScreen();
+      }
+    });
+
+    // Inicializar slide
+    renderSlide(0);
+  </script>
+</body>
+</html>
