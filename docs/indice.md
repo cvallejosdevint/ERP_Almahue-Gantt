@@ -18,6 +18,11 @@ Mapa vigente desde el 2026-09-28. El código de la app sigue en `ERP/erp_back` y
 | Auditoría de datos entre módulos: faltan, sobran, no cuadran (13/10) | `docs/requerimientos/auditoria-flujo-datos-2026-10-13.md` |
 | Cumplimiento vs cliente + GoSocket (21/10) | `docs/requerimientos/cumplimiento-cliente-2026-10-21.md` |
 | Reunion cliente 21/10 (MJ, Fran, Lupe) | `docs/reuniones/transcripciones/transcripcion-2026-10-21-reunion-cliente.md` + minuta `docs/reuniones/minutas/reunion-2026-10-21-cliente.md` |
+| Reunion presencial 26/10 (manana ~01:24 + tarde ~01:54 reparada) | Transcripciones `transcripcion-2026-10-26-presencial.md` y `transcripcion-2026-10-26-presencial-tarde.md` |
+| Minuta presencial 26/10 v2.0 | `docs/reuniones/minutas/reunion-2026-10-26-presencial-v2.md` |
+| Contraste apuntes 26/10 vs transcripcion | `docs/requerimientos/contraste-minuta-revision-cliente-2026-10-26.md` |
+| Plan implementacion por modulo (menu ERP, post 26/10) | `docs/requerimientos/PLAN-IMPLEMENTACION-MODULOS-2026-10-26.md` |
+| Excel/plan cuentas MJ 26/10 | `docs/reuniones/compartidos/mj-2026-10-26/` |
 | Notas de una fecha, con sus capturas | `docs/sesiones/` |
 | Planes de prueba | `docs/qa/planes/` |
 | QA Reu4 archivado | `docs/qa/historico-reu4/` |
