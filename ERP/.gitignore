@@ -1,8 +1,8 @@
 .env
-.env.local
-.env.*.local
+.env.*
 !.env.example
 !.env.production.example
+*.rar
 
 # Datos locales de conexión al server (IP, user, paths de clave) — nunca commitear
 .deploy/
@@ -19,5 +19,6 @@ qa-reu4-*/qa-sessions.json
 
 # Playwright / dumps temporales de QA (nunca versionar)
 .qa-tmp/
+scripts/qa-tmp-*
 qa-tmp/
 **/node_modules/

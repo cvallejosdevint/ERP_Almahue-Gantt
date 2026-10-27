@@ -1,0 +1,909 @@
+# Reunion presencial Almahue 2026-10-26 (Whisper large-v3, audio celular parcial)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Desktop\26-10-2026 12.33.m4a (01:24:40, celular)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+Aviso: empieza ya entrada en sala (resultado del ejercicio). No es el 100% de la reunion. Audio de celular: hay cortes, nombres mal oidos (Carleta, computabilidad, etc.). Desde ~01:21 hay conversacion de almuerzo.
+
+- [00:00] ¿Y no están los demás?
+- [00:04] Y el formato número, ¿cierto?
+- [00:06] Ya, mira, acá está la diferenciación.
+- [00:09] Que me sale el resultado acumulado.
+- [00:12] Si se fijan, es el mismo diciembre.
+- [00:15] Este lo saca el 31 de diciembre, que está aquí.
+- [00:19] Pero acá yo no tengo el resultado del ejercicio, como cuentan, ¿ya?
+- [00:23] Entonces, si yo lo saco a enero, está el resultado del ejercicio, que es del año anterior.
+- [00:30] 1.383, que si tú te fijas, es el monto que está acá abajo.
+- [00:39] Tendríamos que entonces incluir que aparezcan ahí en el reporte.
+- [00:44] O sea, ¿cuál?
+- [00:47] El estado de...
+- [00:49] ¿El estado de resultados?
+- [00:50] Sí.
+- [00:52] Es que el estado de resultados te va a salir solamente esta información.
+- [00:56] Solo esto, clasificado.
+- [01:00] Todo esto compone el estado de resultados.
+- [01:02] Y ahí te da un resultado del ejercicio que tú estás comparando.
+- [01:06] Y en el estado de situación financiera te va a aparecer el resultado acumulado y el resultado del ejercicio.
+- [01:13] O si no, no te va a cuadrar el estado de situación financiera.
+- [01:15] Hay que hacer entonces el cálculo...
+- [01:21] ¿Cuál es? Porque el otro ejercicio...
+- [01:24] Este es a diciembre y este es a enero.
+- [01:27] ¿Cuál es la diferencia?
+- [01:28] Que, por ejemplo, si yo me voy a los ingresos y costos,
+- [01:31] Están solamente lo que yo ingresé en enero, del 1 de enero al 31 de enero.
+- [01:38] Entonces, este es el resultado que yo llevo solo de enero.
+- [01:41] ¿Pero están descontando lo del año pasado?
+- [01:43] Está acá arriba.
+- [01:44] Claro.
+- [01:45] Entonces, este saldo pasó al estado de situación financiera.
+- [01:49] Ya lo entendí.
+- [01:53] ¿Con esos dos?
+- [01:54] Porque el otro es la pérdida, ¿cierto?
+- [01:57] En este caso sería la pérdida del año anterior.
+- [01:59] Y acá se supone que vamos con una utilidad.
+- [02:03] Ok. De enero. Resultado del ejercicio. Sí. Resultado del ejercicio. Sí. Resultado del ejercicio y el resultado acumulado.
+- [02:27] Ah, pero no sé si me van a guardar con los colores.
+- [05:35] Y ahí se me ha enviado el correo.
+- [05:50] Sí, también me llegó.
+- [06:13] ¿Hay algo de contabilidad fuera de estos puntos que hemos visto que quizás se nos haya quedado al debe?
+- [06:23] La reportería, ¿no?
+- [06:25] Eso es lo que nos falta.
+- [06:55] Ahí, dice carga masiva.
+- [06:58] Todavía no tenemos como una parametrización, tendríamos que pasar una igual así como algún...
+- [07:03] Ya, mira, nosotros tenemos un archivo, pero igual lo podríamos mejorar.
+- [07:09] Pero que yo estaba pensando, Carlos, que podríamos ir a configuraciones, que tú, por ejemplo, no sé, el tipo de documento, o no sé, el periodo.
+- [07:18] El periodo que se llama... a ver cómo lo dejo... tiene el periodo, ¿cierto?
+- [07:24] Y dentro del periodo que el usuario pueda configurar a nombre de la columna del formato Excel.
+- [07:34] Por ejemplo, no sé por si puede llamar, acá nosotros lo tenemos como periodo, pero en el Excel se llama periodo asiento, por dar un ejemplo.
+- [07:42] Y que lo carguen ahí para que puedan, si en el caso futuro el Excel cambia o ya no se llama periodo asiento, sino que es periodo X,
+- [07:51] Y luego lo modifiquen en esa configuración y el programa, de forma inteligente, sepa que esa columna corresponde al periodo de la serie.
+- [07:59] Como inmapeándolo en una de las columnas.
+- [08:01] Sí.
+- [08:02] Para no cerrarlo a un formato que ustedes nos digan ahora y que a lo mejor en el futuro puede variar.
+- [08:09] Eso es lo que digo.
+- [08:11] Que nos quiera como dar la flexibilidad de que cualquier Excel pueda entrar, por así decirlo,
+- [08:18] Y que ustedes digan, como por ejemplo, de este Excel tal columna, quiere decir esto.
+- [08:22] O la atracción del cálculo sería restrictivo, que sea como un tipo y tengan, si tienen otro tipo de Excel, lo tengan que adaptar como a este formato tipo.
+- [08:38] O sea, igual va a estar el soporte y nosotros podemos ir haciendo los ajustes que ustedes necesiten.
+- [08:43] Solamente lo digo para que no queden amarrados un formato inicialmente.
+- [08:47] O sea, igual prefiero que quede amarrado un formato, porque así obliga a la persona que está digitando que tenga que tener todos los campos.
+- [08:56] ¿Qué pasa si lo dejamos muy abierto? Un ejemplo, puedo comprar una cuenta, que la Fran no ponga el centro de costo y me la grabe igual. ¿O no?
+- [09:04] O sea, no, no debe ser un tema aparte. Si se configura así, por ejemplo, el periodo, lo podemos pedir obligatorio.
+- [09:12] Ya. Entonces, cuando pasa ese registro, llegue y no tiene periodo, no se agrega. Y se debería generar un reporte diciendo, mira, se cargaron 1.800 y 300 no cargaron.
+- [09:27] Por ejemplo, aquí yo tengo una carga masiva. Ay, me va a parar.
+- [09:34] ¿Podemos ver el vidrio?
+- [09:36] ¿El vidrio?
+- [09:36] ¿Sí?
+- [09:36] Sí.
+- [09:38] Me parece que...
+- [09:41] ¿No se puede ver?
+- [09:42] Mira, por ejemplo, este es el archivo que nosotros tenemos actualmente de carga masiva.
+- [09:59] Entonces, nos da el correlativo, que es el número de líneas que tiene el comprobante,
+- [10:03] el tipo de comprobante, en este caso siempre es traspaso cuando lo subimos por el área de contabilidad,
+- [10:08] La fecha del comprobante, el tipo, o sea, el valor tipo de cambio, la cuenta contable, el código de planta en caso de tener, y aquí están todos los campos que yo le puedo agregar a cada cuenta contable.
+- [10:22] Entonces, dependiendo de la cuenta que yo se le ponga acá, es los campos obligatorios que me tiene que dejar, me tiene que pedir.
+- [10:28] Al fin y al cabo, cuando tú pones un dato, ese se toma como obligatorio.
+- [10:31] Exacto, exacto. Por ejemplo, si la cuenta contable de, supongamos que este servicio es packing, yo la tengo parametrizada para que siempre me pida centro de costo, si yo no le pongo centro de costo, no me tiene que dejar contabilizar ese comprobante.
+- [10:44] Todo lo que he pensado yo. Por ejemplo, un formulario, que ustedes puedan parametrizar todo, ¿cierto? Y aquí dice el periodo, ya, que marcar si es obligatorio o no, y que ustedes puedan agregar todos lo que ustedes quieran, ¿cierto? O sea, en el formulario, esto lo hacemos nosotros inicialmente.
+- [11:11] Y acá en el Excel, por ejemplo, en el Excel que ustedes generan, o van a cargar, aquí, por ejemplo, el periodo, en este se llama P, por dar un ejemplo, la columna.
+- [11:25] Y aquí van los periodos hacia abajo, ¿cierto?
+- [11:27] Ya.
+- [11:27] Y yo acá, en este formulario, digo ya, voy a cargar, y en el campo periodo viene la columna P.
+- [11:36] ¿Se entiende?
+- [11:36] Sí.
+- [11:37] Entonces, a usted, de paso duro, si a este Excel le agregan una columna adicional, lo pueden agregar acá.
+- [11:46] Ya, entiendo.
+- [11:47] Se entiende, así que es totalmente ajustable como usted quiera.
+- [11:51] Ya, pero igual se debería, por ejemplo, con este formato de carga.
+- [11:57] Porque mira, acá, este es el formato que tenemos actualmente de carga.
+- [12:01] Entonces, todo lo que tenemos acá como filas son datos que pueden o no pueden ir.
+- [12:10] Por eso, por ejemplo, si tú no quieres el código de referencia, no lo agregas a nuestro formulario y entonces no se va a cargar.
+- [12:20] Pero tú dices que cada vez que subamos un archivo tengamos que hacer...
+- [12:23] No, una sola vez. Porque si ese ya lo tienes definido, haces esta carga de configuración y ya después para adelante vas a trabajar siempre con esta documentación.
+- [12:33] Es que el problema es que todas las cuentas tienen parametrizaciones diferentes.
+- [12:39] Por ejemplo, no todas las cuentas te piden centro de costo. No todas las cuentas te piden auxiliar.
+- [12:44] Entonces, por eso quedaría más complicado. En cambio, así, por cuenta...
+- [12:50] Después si tengo un ejemplo más...
+- [12:52] Es permanente, ¿eh?
+- [13:00] Mira, por ejemplo, acá tengo un opción más extenso.
+- [13:08] Y aquí vale la pena hacer una carga masiva.
+- [13:10] Entonces, si tú te fijas, ya.
+- [13:11] Esto se mantiene para todos, siempre.
+- [13:15] Pero aquí, dependiendo de la cuenta, es si me pide, por ejemplo, planta, centro de costo, área de negocio, va a depender.
+- [13:21] Entonces, en este caso, justo no pide nada, pero acá me pide el tipo de auxiliar, si es proveedor, si es cliente, si es persona, el código, el tipo de referencia, puede ser tanto factura como anticipo o provisión, acá el número, la fecha, el código financiero, si va el dedo a la red.
+- [13:45] Y acá me da lo mismo, el tipo de cambio, el monto nacional y el monto en dólares.
+- [13:51] Y la glosa.
+- [13:53] Ah, pero entonces hay campos que son condicionantes.
+- [13:55] Sí, condicionantes.
+- [13:57] Pero igual se podría construir como una llave compuesta.
+- [14:04] Podría ser, porque yo, por ejemplo acá, yo elijo la parametrización de las cuentas.
+- [14:13] Entonces aquí yo decido si quiero que, por ejemplo, proveedores me pida...
+- [14:19] Ah, claro, algo similar a esto.
+- [14:21] Los proveedores me piden si quiero plantas, centro de costo, especies, en este caso yo pido que sea auxiliar, la referencia y el vencimiento.
+- [14:30] Pero yo puedo editar aquí que por ejemplo pida elementos de costo y lo guardo.
+- [14:34] Entonces de aquí en adelante esta cuenta siempre me va a pedir elementos de costo.
+- [14:38] Si no se ponen elementos de costo no me va a dejar cargar nada.
+- [14:41] O sea, no carga nada, por ejemplo, si los otros registros están correctos.
+- [14:46] No, no carga.
+- [14:47] No carga, se cae. ¿Y está bien eso que se hace?
+- [14:48] Se cae, sí.
+- [14:49] Por ejemplo, déjame ver si puedo...
+- [14:53] O sea, esa pantalla sería otra de...
+- [14:57] Mira, por ejemplo, yo aquí elijo el archivo.
+- [14:59] Ya le puse carga masiva.
+- [15:01] Lo vamos a poner más chido.
+- [15:09] Y hacemos un cambio a este.
+- [15:11] Yo lo elijo y pongo subir archivo.
+- [15:14] Ahí la ropa.
+- [15:15] Entonces, yo tengo que ver qué rol tiene ese comprobante.
+- [15:19] ¿Tipo dado?
+- [15:20] Claro.
+- [15:22] ¿En serio?
+- [15:23] A ver, subamos lo que ya habíamos subido.
+- [15:26] Ya, por ejemplo, acá me pone inconsistencia entre el periodo a contar y la fecha de comprobante.
+- [15:33] Me manda al tiro la alerta.
+- [15:34] Entonces yo sé que en todas esas líneas tengo inconsistencia, que es porque yo lo puse agosto y estoy en octubre.
+- [15:42] Pero si yo le elimino la fecha y le cambio la fecha, ya sé que la diferencia entre el debe y el haber es cero,
+- [15:47] y la diferencia entre el debe y el haber en dólar es cero.
+- [15:49] Entonces cuando me da cero y cero, yo puedo subir el comprobante.
+- [15:53] Si no, no me deja grabarlo.
+- [15:56] O sea, y con esa población no cargó nada.
+- [15:59] No, no cabe nada. Entonces yo tengo que irme al archivo, modificar el...
+- [16:04] Yo pongo el 10, el 10, el 20, el 26. Y lo subo. Ahí. Me deja contabilizar.
+- [16:44] Y yo bajo, muestra el detalle. Sí, me muestra todo lo que yo he cargado.
+- [16:47] ¿Es el detalle el mismo del Excel? Sí, es el mismo del Excel.
+- [16:52] Pero solamente me muestra los campos que tienen datos.
+- [16:55] Ya. Pero es el mismo del Excel.
+- [16:57] Ya vas a entender cómo es el campo compuesto, o la habilidad compuesta.
+- [17:09] Esa configuración estaría buena.
+- [17:11] Podríamos agregar ese formulario, que ustedes carguen solamente los nombres de las columnas correspondientes a cada dato,
+- [17:18] y por otro lado, configurar las cuentas como lo tienen ahí en Agrosoft.
+- [17:23] Sí, eso va a estar interesante, la configuración de cuentas.
+- [17:30] Y esa configuración actualmente, ¿se la hacen por cuenta? ¿Cuántas tienen ustedes ya configuradas?
+- [17:43] Son como 150.
+- [17:51] ¿Hacemos algo muy similar a Agrosoft, esa configuración, o prefieren algo totalmente distinto?
+- [17:56] ¿Estaría bueno así?
+- [17:57] Yo lo encuentro bueno.
+- [17:59] Sí, porque así pinchamos...
+- [18:00] O sea, si vamos a hacer algo muy similar a eso, ¿se puede exportar esa configuración?
+- [18:05] Ah, sí, se puede.
+- [18:09] Si se puede exportar, ¿lo podríamos utilizar?
+- [18:10] Si yo si lo exporto, me aparece el plan de cuentas y me aparece así, prácticamente lo mismo.
+- [18:21] La 1, 2, 3, 4 y 5, la 1 se va abriendo el plan de cuentas, por ejemplo, si yo filtro por una, activo, pasivo, dióxido y gasto, si yo pongo la 1 y la 2, se va abriendo, activo hasta activo circulante, activo fijo, pasivo, pasivo circulante, disponible, es como más generalizado.
+- [18:51] Y ya cuando llego a la cuenta contable es el nivel 5, que yo tengo que hacer realmente la cuenta que yo ocupo en el plan de cuentas.
+- [18:59] Hay cajas, bancos, bancos chiles.
+- [19:11] ¿Y los vacíos qué quiere decir?
+- [19:18] ¿Cuál vacío?
+- [19:19] Por ejemplo, esto.
+- [19:21] ¿Esto?
+- [19:23] Sí.
+- [19:24] Que no lo exigen.
+- [19:26] ¿Y el?
+- [19:27] El no.
+- [19:28] Que no lo exigen.
+- [19:29] Debería ser claro.
+- [19:30] No deberían aparecer en montos vacíos.
+- [19:32] Deberían ser campos núcleos.
+- [19:36] O sea, debería aparecerlo, ¿no? Si no, lo que sigue es la N.
+- [19:42] No, pero...
+- [19:44] ¿Y con alguno con S?
+- [19:47] Ah, sí, sí, ahí.
+- [19:48] Sí, sí, ahí.
+- [19:49] En referencia, ¿no?
+- [19:50] En todo hay con S.
+- [19:51] Ya.
+- [19:56] Por ejemplo, todas las que piden área de negocio son todas S.
+- [19:59] Ya.
+- [20:03] Ahora, yo personalmente creo que está mal parametrizado el área de negocio en este archivo.
+- [20:13] Porque en su momento el área de negocio le dieron a la especie,
+- [20:15] Y después, cuando fueron creciendo la especie, nos fueron actualizando el área de negocio. Eso al final después no se usó.
+- [20:25] Entonces, ¿vamos a servir?
+- [20:29] ¿Para cargarlo? O sea, serviría un 80%.
+- [20:33] No, pero habría que... No, yo creo que esta va a ser pega para nosotros de ir revisando cuenta por cuenta qué real efectivamente vamos a seguir usando y qué no.
+- [20:44] Ya.
+- [20:45] Y cuando esté ya listo, se lo mandamos para la carga.
+- [20:49] Ya, bien.
+- [20:49] Tendría que ser el plan de cuenta actualizado, el centro de costo actualizado y el elemento de costo actualizado.
+- [20:57] Porque eso puede variar ahora.
+- [21:00] ¿Y las columnas de la carga? No de este, de la otra.
+- [21:05] ¿De la carga masiva?
+- [21:06] De la carga masiva.
+- [21:06] ¿Me manda el archivo?
+- [21:08] Ya, y esa, por ejemplo, no sé si puedes destacar algunas columnas que sí o sí tienen que ser obligatorias.
+- [21:14] Ya.
+- [21:15] Como la base y después vendría esto que es compuesto.
+- [21:18] Te puedo hacer un, como, cruzar los dos archivos, quizás mandarte el carga masiva con todas las cuentas contables y todo lo que debería ir pinchando ese, ¿se entiende?
+- [21:28] Sí, sí, se entiende, pero si no se da más pega eso.
+- [21:32] Sí.
+- [21:34] Si es más pega.
+- [21:36] No, pero por eso, creo que igual por separado está bien, así, y el otro de carga masiva, ver cuáles son todas las columnas, y ahí, Carlos, tenemos que ir haciendo la magia.
+- [21:48] Aquí, por ejemplo, tengo una duda porque, de hecho, creo que esto en algún momento se lo explicaba Mario, acá en el plan de cuentas tenemos aquí donde se asocian también los centros de costo, elementos de costo, áreas de negocio asociados.
+- [22:03] ¿Eso tendría que ir, entonces, siguiendo esa configuración?
+- [22:15] Lo que pasa es que, por ejemplo, la cuenta contable generalmente te cambia mucho el centro de costo y el elemento de costo.
+- [22:23] Por ejemplo, gasto de aduanas y embarque va a estar asociado a centros de costo, pueden ser las especies, todas las especies, y elementos de costo, el detalle de la operación.
+- [22:43] Por ejemplo, puede ser documento de origen, certificado de origen, DUS, ley de arrival, entonces, claro, puede ser, no va a estar como tan rígido que esa cuenta lleva ese centro de costo y ese elemento de costo.
+- [22:59] Entonces, esto de acá, esta configuración no debería aplicar...
+- [23:02] Ahora, si se puede... Ah, pero tú lo puedes como asociar.
+- [23:07] Sí, directamente en una de las cuentas.
+- [23:09] Lo que podría ser quizás esto que sea como un dato como predeterminado en el momento de cada movimiento, como igual poder tener la posibilidad de editarlo.
+- [23:16] Ya sí, entonces sí.
+- [23:17] Cosa de que cuando, por ejemplo, yo llame a esta cuenta...
+- [23:21] Te salen solamente los que están asociados ahí, tú puedes agregar uno adicional.
+- [23:25] Cambiarlo en caso de que sea...
+- [23:26] Ah, sí, estaría bueno.
+- [23:27] Pero yo lo que veo es un centro de costo en la cuenta.
+- [23:30] Uno.
+- [23:33] Claro, es que por eso...
+- [23:34] Tendría que ser agrupado, sí.
+- [23:38] Por ejemplo, que Gasto Adonis Embarque pueda tener, no sé, 20 centros de costo que son los que ocupa la PIA
+- [23:46] y después los 20 elementos de costo que son los que son de ella.
+- [23:49] Porque los elementos de costo están más creados por departamento.
+- [23:54] Cada departamento productivo tiene su centro de costo, su elemento de costo, perdón.
+- [23:58] Pero el centro de costo es más transversal porque cerezas lo ocupan todos.
+- [24:02] Sí, claro.
+- [24:02] No sé, administración lo ocupamos nosotros, pero ya lo ocupa Contabilidad, lo ocupa Recursos Humanos, lo ocupa, no sé, pues, el Agustín Gerencia.
+- [24:13] Entonces, eso podría ser más difícil de parametrizar.
+- [24:19] Pero aquí, bueno, en ese caso podría ser como datos sugerentes, no como restrictivos.
+- [24:25] O sea, a mí igual me gusta que sea restrictivo porque...
+- [24:27] Control.
+- [24:27] Sí, porque me pasó mucho que cuando tú le preguntás al área, no sé, vaya a Regística, por ejemplo,
+- [24:37] no le toman el peso a que tienen que imputar bien, porque si no después el presupuesto no sirve de nada.
+- [24:43] Entonces, así se hacen cargos.
+- [24:47] Pero ahí, por ejemplo, tú mencionabas que puede ser a la cuesta varios centros de costo, varios elementos de costo.
+- [24:53] Sí.
+- [24:53] Entonces eso podría tener, si lo miramos como una liga, con tres columnas, y que puedan agregar N, ¿cierto? Y después cuando selecciones la cuenta, te enliste esos elementos, o centro.
+- [25:11] Claro. O sea, como que igual... ¿Cómo podemos poner...? Porque el centro de costo es una carga masiva, ¿no? Porque todos los centros de costo que existen.
+- [25:24] Sí.
+- [25:25] Pero eso se puede parametrizar en la cuenta contable. Así como esta cuenta contable puede usar solamente estos elementos de costo, o centros de costo.
+- [25:31] Eso es lo que está volviendo.
+- [25:32] Ya, entonces sí.
+- [25:34] Pero vamos a tener que trabajar en eso, sí.
+- [25:36] Saldrían aquí, por ejemplo, como tres columnas y tú podrías darle como agregar y en los que ya están como quitar y te va a sugerir de cada uno de esos tres, en cada uno de los conceptos que corresponda, lo que está asociado solamente a ese plan.
+- [25:50] Pues eso, porque cuando tú trabajes con esa cuenta, te va a avistar solo esos centros de costo.
+- [25:54] Sí.
+- [25:54] ¿Está bien?
+- [25:55] Sí.
+- [25:57] ¿Está bien?
+- [25:58] Sí.
+- [25:59] Aprobado.
+- [26:00] Lo que sí, esto es lo donde hay que trabajar mucho.
+- [26:02] Sí, pues la parametrización inicial para poder usar el sistema va a estar lleno de signos de exclamación amarillo.
+- [26:08] Sí, el trabajo, o sea, al inicio va a ser duro, pero igual ordena mucho.
+- [26:14] Sí, demasiado.
+- [26:15] Sí.
+- [26:16] De hecho, actualmente tenemos como...
+- [26:21] Ah, ese es el otro.
+- [26:23] Por ejemplo.
+- [26:24] El archivo de laadora.
+- [26:33] Uf, se me borró.
+- [26:34] Miren, por ejemplo, cómex y logística son muy ordenados en lo que es el centro de costo y el elemento de costo.
+- [26:41] Entonces, ellos por temporada nos mandan a qué área corresponde, si es cómex o logística, el centro de costo que utilizan,
+- [26:50] que aquí hay que agregar más, y acá el elemento de costo.
+- [26:55] Entonces, estos sí o sí son sólo de ellos.
+- [26:58] Si yo pongo logística, me aparecen solo los elementos de costo que él ocupa como logística, que no son los mismos que tengo en Comex. Así va a quedar. Entonces es ideal porque así no hay errores.
+- [27:19] ¿Y ahí cuáles son las otras áreas que no son ordenadas por eso?
+- [27:23] Todas las demás.
+- [27:25] ¿Y ahí cómo lo haces con el presupuesto?
+- [27:27] Lo que pasa es que con Mario nos ponemos de acuerdo para asignarle como su cuenta contable y su elemento de costo, pero ellos cuando asignan solamente aprueban el documento, no tienen la responsabilidad de decir va a esta cuenta, va a este elemento de costo, entonces la idea es que eso este año cambie, que cada uno se haga cargo de sus costos y sus elementos, porque después cuando van al presupuesto dicen, ah, es que yo no lo quería y no era acá,
+- [27:55] Ah, pero uno no adivina.
+- [28:00] Ah, porque realmente hay compras que son gastos compartidos.
+- [28:04] Sí.
+- [28:06] Ah, pues administración y otro área.
+- [28:09] Generalmente se mezcla, por ejemplo, VINs, que uno es, no sé, ¿cómo se llama?
+- [28:19] Confección VINs.
+- [28:21] Y arriendo VINs.
+- [28:22] Los VINs son esos contenedores de plástico grandes, ¿no?
+- [28:24] Ya, la confección vins es cuando al vins le agregan los totes.
+- [28:29] ¿Qué son los totes?
+- [28:30] Los totes son las cajitas chiquititas de 8 kilos que tú puedes echar ahí.
+- [28:33] Ya, y el arriendo de vins es el general.
+- [28:36] Entonces, ¿qué pasa? La persona encargada a veces no sabía si era confección o arriendo.
+- [28:42] Entonces, pues cuando quería ver el presupuesto tenía un ejemplo, tenía 3 millones en confección y nada en arriendo.
+- [28:48] Ah, es que está malo. ¿Por qué me tengo que ser responsable de toda esa ignación?
+- [28:51] Porque al final, si está mal o viene de ellos, es malo.
+- [29:00] Entonces, ahí teníamos el tema.
+- [29:04] Aquí, aprovechando de consultar, por ejemplo, cómo vamos a hacer una asociación a los planes de cuenta,
+- [29:10] en los mantenedores acá de parametrización, de, por ejemplo, de los elementos de costo y centro de costo,
+- [29:17] sería bueno que tengan aquí como una columna que diga la cuenta que está asociada.
+- [29:28] Deja, señor, la mitad al revés.
+- [29:29] Es que sería al revés, claro, por ejemplo, no sé, pues que sería ese tipo, con todas las cuentas contables. Va a ser más, va a ser como más engorroso verlo desde el centro de costo.
+- [29:44] No sé si es que, más que nada como si es que le dan como utilidad, o a lo mejor como por ejemplo, verá, este centro de costo, a ver a qué cuenta está asociado.
+- [29:53] Por último, podría aquí salir como un contador del total de las cuentas para verlo cuando uno le dé clic que aparezca el detalle.
+- [29:59] Ya.
+- [29:59] Serían centro, elementos y área de negocio, ¿verdad?
+- [30:15] Sí.
+- [30:18] ¿El elemento que asociaba al centro de costo?
+- [30:20] No.
+- [30:21] Porque dijiste que era como más generalizado el centro de costo.
+- [30:25] El elemento es más detallado.
+- [30:27] Sí, el elemento es más detallado.
+- [30:29] Entonces, si yo dejo el elemento al centro de costo, puede ser que haya el centro de costo que no lo tenga, por ejemplo, Comex.
+- [30:36] Comex va a usar, es más general el centro de costo, pero es más detallado el elemento.
+- [30:41] Es que, por ejemplo, si yo dejo, no sé, por el DUS asociado a cereza, cereza lo ocupan todo el área y el DUS solamente come eso.
+- [30:57] Entonces, ¿no puedo asociar el elemento al centro de costo?
+- [30:59] O me lo pienso. Por ejemplo, puede ser en cualquier momento de la temporada, puede ser agarriendo o confección, pero puede ser de la misma cereza o de otra fruta.
+- [31:22] Pero lo de la misma cierreza puede ser a confección o a riesgo.
+- [31:29] No sé, como que detalla las facturas que tiene.
+- [31:34] ¿Y esa asignación lo hace con factura hermana?
+- [31:40] En el mundo ideal sería con la orden de compra.
+- [31:43] Ah, claro.
+- [31:44] Pero...
+- [31:45] Ah, pero es verdad que todo hace uso.
+- [31:46] Todo nace en la orden de compra.
+- [31:49] Pero actualmente es con la factura hermana.
+- [31:52] De hecho, también nos pasa que preguntamos cuatro veces a una persona si la factura es de él.
+- [31:57] No, no, no, no, no. Y después era mía.
+- [32:02] ¿Ahí?
+- [32:03] Me han ganado cuatro.
+- [32:05] Siguiente pregunta.
+- [32:42] Actualmente, actualmente, la orden de compra nosotros la trabajamos con artículos, y el
+- [33:09] El artículo se enlaza a una cuenta contable.
+- [33:13] ¿Se entiende?
+- [33:14] Sí.
+- [33:14] Ya.
+- [33:15] Entonces, en la orden de compra nosotros seleccionamos el artículo, el centro de costo y el elemento de costo.
+- [33:22] Ya.
+- [33:23] Y el artículo puede agruparse en una cuenta contable.
+- [33:30] Por eso, pero ahí entonces está asignando un solo centro de costo, un solo elemento.
+- [33:34] Ya, me ha pasado que, por ejemplo, el artículo, no sé, cuál puede ser cualquiera, software.
+- [33:42] Yo tengo que en una factura el software se va de 50% a TI y el otro 50% a contabilidad. Yo no puedo poner el artículo software con un distinto elemento de costo.
+- [33:55] No, sería un solo centro. Sería un solo centro de costo, pero dos elementos de costo.
+- [34:04] Un elemento de costo con dos centros de costo.
+- [34:06] Sí, sería un elemento de costo con dos centros de costo.
+- [34:10] Sí, porque por ejemplo el elemento de costo ahí es software, servicio software, pero ese servicio podría haber sido para contabilidad y para TI, entonces el centro de costo en ese caso es contabilidad y TI.
+- [34:24] Ah, y un solo elemento.
+- [34:26] Claro, que eso solo sería el servicio que se está prestando.
+- [34:29] ¿Y ahí cómo entonces queda la línea de talla?
+- [34:32] Es que en ese caso no podemos hacer la orden de compra en Agrosoft, no nos permite poner...
+- [34:37] Ah, pero entonces tenemos que considerarlo acá.
+- [34:40] O sea, no más líneas, sino que asociamos más de un centro de costo a la línea.
+- [34:48] O sea, mira, por ejemplo, si tenemos que agregar cuatro veces el artículo, nos da lo mismo,
+- [34:55] pero que podamos poner el mismo artículo con distintos centros de costo y el mismo elemento de costo.
+- [35:00] Porque en el sistema acá no nos deja, nos lee el artículo único, nos deja poner el mismo artículo dos veces.
+- [35:06] Y esa asignación o división que hacen, ¿es por porcentaje o por cantidades?
+- [35:13] Va a depender del detalle de la factura.
+- [35:16] ¿Puede ir por monto?
+- [35:17] Sí, puede ir por, claro. Pasa muy poco, pero pasa.
+- [35:21] ¿Y si lo cerramos a monto?
+- [35:25] Es que quizás no va a ser tan monto porque no ha pasado en cómics y logística y ahí tienen ellos claros cuánto es de cada factura.
+- [35:33] O sea, cuánto es tuyo, cuánto es mío.
+- [35:35] ¿Por centro de costo? ¿Por eso?
+- [35:36] Claro.
+- [35:37] ¿Claro en pesos?
+- [35:40] Sí, o sea, lo tienen claro, no sé, la factura viene cobrada a Comix y Logística,
+- [35:47] en vez de haberla separado, porque igual pide su facturación separada,
+- [35:50] pero nos falta el que la imita a cuenta.
+- [35:52] Entonces, en ese caso, no nos permite hacer la orden de compra.
+- [35:55] Tenemos que ingresarla por detalle de que ellos nos indiquen.
+- [36:10] Ahí, por ejemplo...
+- [36:12] ¿Pero ellos, por ejemplo, si eligen, ellos tendrían que desplegar como sus opciones, ¿no? ¿Cierto?
+- [36:25] Porque, por ejemplo, ya, no sé, soy cómics y voy a hacer mi orden de compra y estoy con este servicio que en ese caso sería el elemento de costo
+- [36:33] y aprieto, no sé, un botón y se despliegan las opciones que yo tengo a centro de costo, ¿no?
+- [36:40] Que sea como limitado para ellos.
+- [36:43] Va a quedar limitado para todos, si lo paramos en el centro de costo.
+- [36:44] O sea, la amenaza es que en este caso, como son dos jefaturas, cada uno haría su orden de compra y será el momento de que no llegue la factura, tendríamos que asociar esas dos órdenes de compra a esa factura.
+- [36:59] Que eso no sé si se va a poder.
+- [37:02] Sí, sería como la facturación, o sea, puede agregar varias órdenes de compra para una factura.
+- [37:09] Sí, porque el monto de la factura es mucho mayor a la orden de compra por su parámetro.
+- [37:13] Sí, entonces en ese caso no habría problema. El problema es cuando es de la misma área a distintos centros de costo.
+- [37:19] Claro, una sola orden y una sola factura.
+- [37:23] Exacto.
+- [37:25] Claro.
+- [37:28] Sí, porque ahí ya...
+- [37:30] Y una orden compartida.
+- [37:34] Yo creo que no, pero no me quedo.
+- [37:36] No, pero...
+- [37:37] No tenemos ninguna factura de que hay...
+- [37:45] Yo sé que en logística no hay nada.
+- [37:55] Prácticamente un salto.
+- [37:59] Yo trabajé hace un tiempo con un Salvin's World, pero nunca me gustó.
+- [38:04] A nosotros nos ofrecieron un Sardines One.
+- [38:07] ¿Quién vino?
+- [38:09] Ay, no me acuerdo.
+- [38:10] Exis, Seido.
+- [38:12] No me acuerdo, pero sí recuerdo que cuando nosotros dijimos, saben que no está asociado,
+- [38:16] lo mismo que tenemos el área gris, pero tenemos el área comercial,
+- [38:20] nos ofrecieron otra opción, que no me acuerdo cómo se llama.
+- [38:23] El A3.
+- [38:25] ¿Qué más grande?
+- [38:26] Es como, era como muy arcaico, era como Agrosoft.
+- [38:31] ¿SAP Business One? No, el que nos ofrecieron como reemplazo de un SAP.
+- [38:40] Ah, no se puede. No.
+- [38:44] No, y aparte el costo va a ser más elevado.
+- [38:47] Mucho más caro.
+- [38:48] Al final, esto lo hacíamos por... de monedas, bueno.
+- [38:55] Entonces va a quedar amarrado a línea de talla y un centro de costo, ¿no?
+- [39:14] Sí.
+- [39:14] O va a quedar compartido.
+- [39:15] Eso aplicaría en las órdenes de compra y en las órdenes de compra de insumos.
+- [39:26] Las de insumos eran las que podíamos ser parcializadas.
+- [39:34] Con las guías.
+- [39:35] Con las guías.
+- [39:37] Yo creo que cae la camioneta.
+- [39:46] ¿Y en ese caso, por ejemplo, como el de insumos, que cada una su pequeña gata y se haga una marca?
+- [39:55] El de insumos, la embargada, o cosa como.
+- [39:56] Ah, por la hija dices tú. Claro. Por ejemplo, un centro de costo que sería logística, haría como una orden de compra hija, comex sería otra de hija y sería una madre y esa se...
+- [40:10] Y se contabiliza uno o dos por solo. Ah, claro.
+- [40:18] Sí, yo creo que eso podría ser, porque así en cada uno de las clavejas vive el detalle de cada uno.
+- [40:24] Pero la hija se queda siempre privando las facturaciones personalizadas.
+- [40:29] En este caso tendría que quizás tener como tipo...
+- [40:32] Como tu orden de compra, o sea, una y esa es la madre, y esa sea una con la factura, no la hija.
+- [40:39] Pero es que al final, mejor dejar que podáis elegir dos órdenes de compra para asociarles a la factura.
+- [40:44] Y en el detalle de la asociación te va a quedar el detalle de cuántas órdenes de compra se asocian.
+- [40:52] Pero igual ahí al tenerlas dos separadas, puede que alguien vea una y no vea la otra, como tenga como la asociación.
+- [40:59] Nos vivirían como el mismo registro, por así decirlo, al tener dos órdenes de compra juntas.
+- [41:05] A menos que se mire directamente la factura que está asociada.
+- [41:20] Sí, parece que se había caído.
+- [41:23] Corriendo el ratoncito ahí.
+- [41:28] Parece que arreglaron el tema del centro de costo.
+- [42:00] El evento de costo.
+- [42:04] Parece que fue esa vez que se pidieron de quién era y la persona firmó, ¿se acuerdó?
+- [42:10] No, no, no, que se arregló el sistema, no es que hayamos pedido que lo arreglaran.
+- [42:14] Que pudiéramos poner distintos centros de costo, mismo elemento, y después distintos elementos, mismos centros de costo.
+- [42:22] ¿Te lo permite? Ahora.
+- [42:28] Se lo enseñó en el proyecto.
+- [42:33] Pero al final, todas las mejoras que han hecho como sistema han sido, nosotros no, de hecho, alertas.
+- [42:40] No, nunca ha sido una mejora que venga de otro proveedor.
+- [42:45] A lo mejor se la aplican directo a ustedes, ¿no?
+- [42:48] No, porque de hecho al principio era el tema de que no pueden hacer mejoras porque afectaba a los demás.
+- [42:58] Yo creo que ahora lo venden como mejora de ellos y solidaridad de nosotros.
+- [43:03] Pero por ejemplo, si el mar es bien acceso, ¿por qué no es servidor en ello?
+- [43:12] ¿O puede ser a la base de algo? ¿O no es a la base de algo que es bien acceso?
+- [43:17] Igual que a la base de algo.
+- [43:18] Y en ese caso, por ejemplo, acá, al momento de generar, por ejemplo, la nueva orden de compra, si yo, por ejemplo, selecciono acá, por ejemplo, un centro de costo, una cuenta contable, un elemento de costo, que quizá aquí al ladito aparezca el signo de más para poder asociar un segundo y que quede en el registro de esa orden de compra, solo como registro.
+- [43:47] ¿Cómo?
+- [43:48] Por ejemplo, que acá, cuando yo seleccione, por ejemplo, un centro de costo o elemento de costo, te aparezca la opción, como aquí al ladito, de poner un más y de asociarlo.
+- [44:01] Ahí, por ejemplo, debería cambiar el orden, ¿cierto?
+- [44:04] Debería ir la cuenta, centro de costo, y que si no han seleccionado la cuenta, el centro del elemento debería estar bloqueado.
+- [44:13] Sí.
+- [44:13] Y lo otro, que yo igual dejaría rígido, por ejemplo, si, no sé, otro departamento está solicitando que se agregue a esa cuenta contable a otro centro de costo, que tenga que solicitarlo.
+- [44:26] Eso, porque si no va a quedar claro.
+- [44:27] Sí, van a abrirlo, no va a servir de nada que tengamos parametrizado.
+- [44:31] ¿Cómo? ¿O si va a la cuenta?
+- [44:34] Claro, por ejemplo, no sé, la PIA selecciona la cuenta contable, gasto de aduana.
+- [44:38] Y en centro de costo, ella quiere usar, no sé, bodega, que no la deje agregar, que solicite que se tenga que asociar.
+- [44:48] Al administrador.
+- [44:49] Sí.
+- [44:50] Así como que en caso de que la lista no aparezca, solicitar...
+- [44:53] Tiene que solicitar.
+- [44:54] No le va a aparecer ahí igual.
+- [44:55] Claro, ella tiene que solicitar que se quede agregada.
+- [44:59] Pero la solicitud sería como interna o que la haga el sistema?
+- [45:02] Podría ser el sistema.
+- [45:03] Claro, porque así queda registro de que haya solicitado de que ese centro de costo se...
+- [45:09] Entonces ahí teníamos, por ejemplo, la última opción que no existe, o solicitar nuevo.
+- [45:16] Claro.
+- [45:17] Y esa solicitud se levante con un motivo nomás, solo un motivo, y el solicitador va a saber qué usuario fue, qué cuenta...
+- [45:24] Sí, lo mismo para el elemento de costo.
+- [45:36] Este igual va a quedar con un RP bien exclusivo para exportación.
+- [45:48] Muy creativo.
+- [45:48] Muy creativo.
+- [46:27] Yo hablé con otra exportadora con un movimiento de contabilidad y me decía que usaban, por ejemplo, para lo que es reporte de contabilidad, un sistema y para lo que era gestión, otro sistema.
+- [46:38] Entonces, igual fue, ¿no?
+- [46:39] Sí, bueno.
+- [46:41] No hay venida, ¿no?
+- [46:42] No, no hay venida.
+- [46:43] Son de su vida.
+- [46:44] Son de su vida.
+- [46:46] Excelentamente, la verdad.
+- [46:49] Oigan, en este caso, referente, por ejemplo, a lo que vendría a ser asociar dos elementos.
+- [46:55] Lo que me imagino es que por ejemplo acá, si es solamente uno, selecciono uno, no hay ningún problema, si yo quisiera adicionar otro, que acá aparezca como signo más, poder asociar otro y que acá aparezca, en vez de salir los dos por línea, que aparezca como la opción de darle clic y ver cuáles son los dos que tiene asociado.
+- [47:20] Pero, María Jesús ha dicho que es mejor que agregar otra línea, ¿no?
+- [47:25] Sí, no, o sea, como que no me complica el...
+- [47:30] O sea, no me complica que en el detalle vengan 20 líneas y que la misma, o sea, la misma cuenta contable que cambie el puro centro de costo.
+- [47:40] Porque igual esto después se va a exportar a PDF.
+- [47:43] Sí.
+- [47:43] Entonces igual la línea, o sea, la vista va a ser totalizada.
+- [47:46] Sí.
+- [47:47] Pero igual se podría hacer como agrupar por centro.
+- [47:51] Sí.
+- [47:51] Sí, claro.
+- [47:54] O sea, en el momento de exportar, te da la opción de si lo tienen agrupado o no.
+- [47:59] Es que igual, por ejemplo, te va a tener la diferencia el elemento de costo.
+- [48:03] Ah, claro.
+- [48:03] Porque si no, claro, si fuera por agrupar por cuánto lo iba a ir.
+- [48:06] O sea, se va a agrupar por la cuenta.
+- [48:08] Claro.
+- [48:09] Es lo único que se podría comprar.
+- [48:11] Claro.
+- [48:12] Pero igual te va a salir el detalle.
+- [48:14] O si tengo alguna factura, las de producción son con detalle.
+- [48:17] O sea, tiene como la cuenta contable.
+- [48:23] ¿Tanto centro de costo de hacer eso? ¿Tanto? ¿De mi cariño tanto? ¿Y de cuánto?
+- [48:28] O si no, de duplicarse la información hacia otro. Por ejemplo, el tal como se va a agregar algo.
+- [48:41] O si tiene algún reporte que usted ya no trabaje.
+- [48:50] Imaginad la vista como acá, como en el plan de cuentas, que aparezca como por escala.
+- [48:58] Ya mira, por ejemplo, acá.
+- [48:59] Por ejemplo, que nuevamente salga como el plan de cuentas, según la cuenta.
+- [49:03] Y el pueblo más bajito te sale como un árbol los centros de oceano, así como diferencial.
+- [49:08] Ah, como el que hiciste en... ¿en dónde? ¿en un reporte de cuentas? No, no, en...
+- [49:17] Sí, me parece que era acá.
+- [49:18] No, no, en... ¿con silencio? No.
+- [49:21] Sí.
+- [49:22] ¿Cómo te da?
+- [49:23] Fuente de solenía, parece.
+- [49:24] Sí.
+- [49:29] ¿Qué era lo que hiciste de ocupación?
+- [49:32] Creo que era... el estado de cuenta, parece.
+- [49:41] Sí, este.
+- [49:42] ¿Así? ¿Así es esto?
+- [49:43] Sí, sí, como algo así me imagino, que primero acá salga la cuenta y después se vayan abriendo como por cada uno de los elementos que se vayan agregando.
+- [49:53] ¿La orden de compra?
+- [49:54] Sí.
+- [49:55] Mira, por ejemplo, acá hay una orden de compra de combustible que es, esta se va a dar de, se mantiene la cuenta y se mantiene el elemento de costo pero cambia solamente el centro de costo.
+- [50:04] Entonces, la primera vista es la general que nos sale el artículo, que el artículo es combustible.
+- [50:11] Pero si yo quiero ver el detalle, acá me sale la cuenta contable, el centro de costo y el elemento de costo.
+- [50:17] Ah, pero la vista principal no muestra el centro de costo.
+- [50:21] No. Ahora, yo prefiero que la muestre.
+- [50:24] Porque esa segunda hoja, ¿será necesaria?
+- [50:27] No, yo creo que no es necesaria.
+- [50:29] Que esto debería aparecer al principio, porque cuando nosotros queremos revisar,
+- [50:33] Tenemos que ver la segunda hoja, la segunda hoja es la importante.
+- [50:37] Sí.
+- [50:37] Pero, por ejemplo, ahí tiene artículo, descripción, cantidad.
+- [50:43] Acá tiene solamente la descripción del artículo.
+- [50:47] Esta no es la cuenta contable, es el artículo.
+- [50:49] Sí, sí, sí.
+- [50:50] Ahora, yo, en lo personal, tengo otra hoja para ti.
+- [50:56] Igual, en realidad, o sea, esa orden de compra es la que usted entrega, ¿cierto?
+- [51:04] O envía.
+- [51:04] No, la que nosotros hacemos para el... o sea, debiese ser la que enviamos.
+- [51:11] Claro, sí, pero para que después le facturen esa orden de compra.
+- [51:16] Entonces, si va al centro de costo en ese PDF...
+- [51:20] Ah, tú decís, pero eso es la primera hoja...
+- [51:22] Claro, debe ser por eso.
+- [51:25] Porque el centro de costo, el elemento, para el proveedor no tiene ningún sentido.
+- [51:30] Claro, como nosotros trabajamos después de la factura, lo hacemos así.
+- [51:36] Claro, esta sería como la que se debería enviar al proveedor.
+- [51:41] Claro, pero ¿y esto cómo lo vamos a ocultar?
+- [51:44] Bueno, a lo mejor que tenga la opción sobre el exportar la primera hoja, que sería como la orden de compra oficial.
+- [51:50] Que sería como exportar y exportar con detalle, podría ser.
+- [51:53] Claro.
+- [51:55] Y si apareciera la segunda hoja.
+- [51:57] O sea, si es con detalle, o con información contable, yo la descripción abajito le concateno todos los centros de costo y todos los elementos de costo.
+- [52:16] ¿Y no se puede dejar, por ejemplo, solamente descargar la primera hoja?
+- [52:21] Sí. ¿Cómo?
+- [52:22] ¿Que esta solamente sea visible en el sistema? Porque al final nosotros nos enviamos un papel físico para ver la factura y la orden de compra. Siempre la vemos en sistema.
+- [52:32] Entonces que solamente la primera hoja sea siempre descargable.
+- [53:06] Mándeme más información.
+- [53:09] Información de mano.
+- [53:10] O sea, de cierto modo, separan las aulas.
+- [53:13] Sí.
+- [53:14] Tú traes tu orden de compra y...
+- [53:16] Sí, la idea es que cada departamento se encargue de su orden de compra.
+- [53:18] Ya.
+- [53:19] Entonces, que esta hoja nomás sea la exportable, para poder sacarla en PDF o poder descargarla o cualquier cosa.
+- [53:27] Porque en el sistema, por ejemplo, cuando traes la orden de compra...
+- [53:30] Y que, claro, en el sistema yo pueda ver las hojas.
+- [53:32] Ver el detalle.
+- [53:33] Sí.
+- [53:33] O ver el detalle, por más que...
+- [53:34] Claro, sí, ver el detalle.
+- [53:36] No sé dónde lo hiciste, también tenía un botoncito que era el primer detalle.
+- [53:40] El detalle no lo he visto.
+- [53:41] Ahí, ahí, por ejemplo, detalle.
+- [53:43] Algo así, igual eso.
+- [53:45] Por ejemplo, está el orden de compra, y si le das el detalle, que te muestre todo el...
+- [53:51] Exacto, sí.
+- [53:57] Carlos, sí.
+- [53:59] Pide la broma.
+- [54:02] Y, por ejemplo, eso, el detalle, no sé si es que será más cómodo o no esta vista,
+- [54:07] El plan de cuentas, que sea como escalonado, para que no tenga que salir como tantas líneas en la primera parte, por ejemplo, así como el plan de cuentas, repetido, denumerado tantas veces, sino que aparezca la primera vez y después a la izquierda salga como...
+- [54:21] ¿El plan de cuentas?
+- [54:22] No, no, no, el que vendría a ser el detalle que no se va a imprimir.
+- [54:26] ¿Ya?
+- [54:26] Que, por ejemplo, que no te salga listado toda la información al principio del plan de cuentas como sale ahí, sino que salga así como escalonado, como en forma de arbolito.
+- [54:36] O para que sea fácil verlo visualmente, o lo dejamos tal cual como una...
+- [54:39] ¿Pero en qué parte? ¿En la orden de compra? ¿Acá?
+- [54:42] Sí, en el que vendría a ser el detalle.
+- [54:44] ¿En este?
+- [54:45] Sí.
+- [54:45] ¿Acá?
+- [54:46] Sí.
+- [54:47] Ah, ya que por ejemplo te salga solamente una del combustible.
+- [54:49] Sí.
+- [54:50] ¿Y ahí la centro de costo y el lamento de costo?
+- [54:52] Cosa de que cuando quieras ver el segundo ítem, no tengas que andar viendo cuál era...
+- [54:56] Ya te cacho, ¿sí?
+- [54:57] ¿Sí?
+- [54:58] Sí.
+- [54:59] Perfecto.
+- [55:00] Porque así copiamos la vista que tenemos acá.
+- [55:17] Acá como el flujo de caja, que va como por periodo, después concepto, y ahí viene listado los códigos financieros.
+- [55:24] Claro, sí.
+- [55:26] Esto también me podría mejor utilizar de plantilla.
+- [55:29] Sí, queda mejor así.
+- [55:34] Pero eso se va a visualizar solo en el sistema.
+- [55:36] Solo en el sistema.
+- [55:37] ¿Va a ser necesario un primer acto?
+- [55:41] No.
+- [55:42] ¿No?
+- [55:43] Sólo la oficia.
+- [55:44] Sólo la oficia.
+- [55:45] Sólo la oficia, sí.
+- [56:28] No, no lo traje.
+- [56:29] Tenía que romperle la mochila.
+- [56:30] Era la mochila muy apretada.
+- [56:31] Traje el mouse, sí, pero...
+- [56:32] Sí.
+- [56:36] De hecho, después del almuerzo podríamos ir a ver el campo.
+- [56:37] Ah, sí.
+- [56:56] Para caminar un poco.
+- [56:59] Un break.
+- [57:00] Para que se vayan la idea.
+- [57:01] Sí.
+- [57:02] Podemos ir a ver los caballos.
+- [57:03] Hay algunos acá.
+- [57:04] Sí.
+- [57:05] Lo que pasa es que acá hay una media luna también.
+- [57:06] Sí.
+- [57:07] Lo que pasa es que acá hay una media luna también.
+- [57:08] Sí.
+- [57:09] Lo que pasa es que acá hay una media luna también.
+- [57:10] Sí, lo que pasa es que acá hay una media luna también.
+- [57:14] ¿En serio?
+- [57:15] Sí.
+- [57:15] ¿Pero y son dos de la misma?
+- [57:17] De todos nosotros.
+- [57:18] Y de todo lo que hay aquí.
+- [57:19] ¿Es el padre?
+- [57:20] No, es el padre.
+- [57:21] ¿El padre?
+- [57:22] Sí.
+- [57:23] El tipo.
+- [57:30] ¿Sí?
+- [57:30] Sí.
+- [57:34] Yo no los voy a elegir los papás.
+- [57:39] Vamos a pintar la broma.
+- [57:47] Padrina.
+- [57:49] Es inteligente.
+- [57:56] Sí, por algo tiene.
+- [57:57] Sí, es inteligente. Bueno, la gente que nace nunca, sí. Es que sí, o sea, los recursos estaban. Pero él ha sabido también hacer su capital. Y, por ejemplo, Nico, yo encuentro que también ha sabido hacer su capital. Porque los demás hermanos, como que al final cayeron en la empresa. Pero Nico ha sido, yo lo encuentro muy inteligente. Muy inteligente.
+- [58:19] ¿Sintáctil también?
+- [58:21] ¿Niko?
+- [58:22] ¿Sí?
+- [58:23] Sí, sí, pero es cosa seria.
+- [58:25] Sí, sí, pero es cosa seria.
+- [58:26] Nico es cosa seria.
+- [58:28] Pero los demás, Pablo, ¿qué es como más?
+- [58:31] Claro, pero a lo mejor debe ser que no nos ha escuchado de nosotros, porque a lo mejor no está metido en este proyecto.
+- [58:41] O sea, igual del minuto uno o del minuto cero, siempre pensé como en por si acaso, por si acaso, por si acaso, por si acaso.
+- [58:51] Porque al final, igual la mayoría de las mejores que tienen por el lado de allá son por el lado de acá.
+- [58:57] Entonces, si el día de mañana quieren ocupar el sistema, que lo puedan ocupar con facilidad.
+- [59:04] Y yo creo que estamos matando todas las problemáticas que tienen en general ellos y nosotros.
+- [59:09] Bueno, el programa de hoy va a solucionar la vida.
+- [59:16] Tal cual.
+- [59:19] Y lo van a tener que gastar tiempo ahí.
+- [59:21] Claro.
+- [59:23] Sí.
+- [59:25] He visto Softland, Something is One, he desarrollado otro programa.
+- [59:40] A mí Softland me gustaba, de hecho fue como el primer RPG con el que yo tuve interacción en la vida laboral.
+- [59:47] Pero el club o el que se instala en el mundo.
+- [59:51] El que instala.
+- [59:52] Que tiene, el software tiene la parte financiera, tesorería, activo fijo, y lo que me llamaba mucho la atención de ese que me tocó, fue que yo podía eliminar asiento y podía eliminar líneas y aguardarlo con pruebante igual.
+- [01:00:08] Sí.
+- [01:00:08] Entonces, súper inseguro.
+- [01:00:11] Mira, me pasó a la semana pasada.
+- [01:00:14] Fue terrible.
+- [01:00:15] No, la semana pasada me pasó con el jefe de contabilidad de la Universidad Católica de Cervantes, que me hizo el mismo comentario pero al revés, me dijo, no, pucha, si era cierto no lo podía eliminar, no podía editar, nada, pero sopla, tú lo puedes hacer, no hay ningún problema, y como que para él es un beneficio eso, tú dices...
+- [01:00:44] No, para mí es terrible porque tiene muchas manipulaciones.
+- [01:00:46] Sí, ese es el argumento.
+- [01:00:48] Pero, ¿trasabilidad o algo?
+- [01:00:50] No, mi pregunta.
+- [01:00:52] ¿Y eso?
+- [01:00:54] Fui muerta.
+- [01:00:55] Sí, ¿no?
+- [01:00:56] Yo, ojalá le dieran quién a qué hora.
+- [01:01:00] Y esa es la idea, también el tema de protección de datos va con eso.
+- [01:01:04] Es que, aparte, bueno, acá a mí me tocó la experiencia yo recién egresada.
+- [01:01:08] Fue como muy loco porque me hicieron hacer la práctica y yo la agradezco porque de verdad que aprendí mucho.
+- [01:01:14] Pero ¿cómo fue la práctica? Era una empresa que nunca había tenido un practicante y yo tenía que reemplazar al contador que se fue de vacaciones.
+- [01:01:24] Entonces yo quedé directo con el gerente, que yo no tengo nada que decir, me enseñó todo en tiempo récord, pero me pasó que como yo decía ya todos los meses lo mismo, yo veía meses para atrás para ver cómo se hacía y lo hacía en el mes que me tocaba reemplazar.
+- [01:01:38] Y eliminé una línea. Y yo dije, ¿cómo? Y dije, no, la caí, la caí. Bueno, fui al tiro a acusarme y dije, ¿saben qué pasó? No, me fui a acusar. Y me dijo, no, esto se soluciona así, ya, veamos qué línea falta. Y ahí la ingresó y la guardó. Y yo así como, qué inseguro.
+- [01:01:56] Sí, totalmente.
+- [01:02:26] Claro, se conectaba, entonces yo ahí conciliaba, que eso fue como una de las ideas que saqué de ese RP para ahora, que lo encontraba muy bueno, pero por el otro lado lo encontraba muy malo que se pudieran eliminar líneas, de hecho no podía hasta copiar los comprobantes.
+- [01:02:43] Yo le comenté eso al Mario, bueno, lo estaba también tú cuando le dijiste conectarse directo al banco, y así ver los movimientos de obra.
+- [01:02:53] Lo que pasa es que yo no sé si es problema del Ejecutivo o es problema nuestro el tema de tener tan poco acceso al banco.
+- [01:03:03] Porque nosotros tenemos el acceso, pero, por ejemplo, yo he trabajado en otras empresas que las cartolas llegan diarias al correo, en un formato de archivo.
+- [01:03:14] Entonces yo entiendo por qué nosotros no.
+- [01:03:17] ¿En el mismo banco?
+- [01:03:18] Sí, en Banco Chile.
+- [01:03:19] Entonces, como que, no sé si nosotros faltan que pasemos información, que nos ofrezcan los servicios, pero tenemos esa limitancia que yo siento que es muy limitante buscar la información en el banco.
+- [01:03:34] Y, por ejemplo, ustedes vieron que se descarga la cartola, pero en un formato Excel. Podría ser perfectamente un formato PDF y poder subirlo al sistema.
+- [01:03:49] Pero y ese, bueno, es igual que había despasado hasta que vaya a dar una vez al día.
+- [01:03:54] Claro.
+- [01:03:55] Por ejemplo, dentro del día lo podrían ver en movimiento en el momento.
+- [01:03:59] Claro.
+- [01:04:00] Es igual, no sé si ustedes tienen mucho movimiento, bueno, cuando es temporada alta, sí, ¿no?
+- [01:04:06] Los viernes tenemos mucho movimiento, pero tampoco es como que la Lupe vaya apagando y ingresando al tiro del sistema.
+- [01:04:14] No, pero lo recibido.
+- [01:04:17] Lo recibido tampoco lo va como que llevo un pago, no, y es, entonces dice los martes actualizo y ingresa toda la información pendiente.
+- [01:04:24] Entonces, ¿no sería terrible que llegara, por ejemplo, todas las noches?
+- [01:04:31] Aparte que igual el banco se hicieron todos los movimientos.
+- [01:04:35] Entonces, igual podría en la tarde ingresarlo.
+- [01:04:38] O sea, si se puede ver con el banco que manda la cartola, con el recién correo, X,
+- [01:04:46] nosotros la podríamos procesar y la cargamos automático.
+- [01:04:50] Sería la mejor idea.
+- [01:04:50] ¿Por qué yo tampoco sé si el formato que mandó la Lupe del banco es directamente descargado del banco o modifica algo?
+- [01:05:01] ¡Uh!
+- [01:05:02] Voy fruto.
+- [01:05:09] ¿Almorzado?
+- [01:05:11] Ya es miércoles.
+- [01:05:14] ¡Chao, chiquillo!
+- [01:05:15] Bueno, ¿puedo preguntarle?
+- [01:05:23] Si mal no recuerdo, esa cartola se construía, parece.
+- [01:05:26] Entonces, al final, ¿qué realmente se baja del banco?
+- [01:05:30] No, tiene que ser lo más simple posible para...
+- [01:05:32] Sí, o sea, debería ser lo que se descarga del banco, no sé si uno se puede descargar.
+- [01:05:48] Nosotros veníamos por algo simple.
+- [01:05:51] Veníamos a probar el sistema.
+- [01:05:53] Yo no me llamo Berlín Campos.
+- [01:05:58] Ni me interesaba, ¿eh?
+- [01:06:02] Acabo que diría.
+- [01:06:17] ¿Contratistas nos vemos mañana?
+- [01:06:21] Como quieran. Ahora si quieren, por ejemplo, hoy día podemos ver todos los detalles, mañana trabajo con ustedes libre, y el miércoles volvemos a la práctica, vemos algún proceso.
+- [01:06:43] Yo tenía pensado que igual tenemos que ir a hacer el check-in, irnos como a las 3, 3, 4, pero con todo esto.
+- [01:06:50] Ya.
+- [01:06:51] ¿Qué? ¿Con todo esto? ¿Con 10 gigas de... y pero mañana ya traer algo? ¿Sí? Ir sacando por punto. Sí, sí, miren, la oficina, la sala la tenemos pedida lunes, martes y miércoles. Ah, ya. Así que no hay problema, si ustedes mañana se quieren instalar a trabajar todo el día... Y más no queda dormir acá, a ver si no abrimos la puerta. Tenemos una ya. Últimamente una vaquita.
+- [01:07:21] Sí, sin más que nada por el tema del check-in, pero mañana vamos a tener que hacer muchas reglas.
+- [01:07:33] Es harto lo que se está viendo ahora con José y con Diego.
+- [01:07:46] Sí, porque los dos serían, por ejemplo, hoy día...
+- [01:07:50] O sea, igual nosotros todos los tres días nos podemos llevar hasta esta regla,
+- [01:07:53] pero así, en mucho más eficiencia que el aprendizaje online.
+- [01:08:01] ¿Por qué ahora estamos viendo detalles con los detalles?
+- [01:08:03] Sí, sí.
+- [01:08:05] Otro sería, por ejemplo, ahora, llevarnos como todo esto, igual yo preferiría mañana así mover al tiro contratista.
+- [01:08:16] Sí, ojalá en primera hora de mañana así intentar ver todo lo que alcanzamos a mover y en la tarde destinarla para avanzar
+- [01:08:24] y dejar el miércoles para hacer lo mismo en caso de que alguno de los que vamos mañana se extienda más.
+- [01:08:31] ¿Qué nos quedaría? Contratista, insumos, pero...
+- [01:08:36] Ah, lo de la boleta de horario no lo vimos.
+- [01:08:39] Para los proveedores.
+- [01:08:43] ¿Cómo parametrizarlo?
+- [01:08:44] Sí, cómo lo registran en Agrosoft.
+- [01:08:46] ¿Qué es? ¿Un tipo de documento distinto?
+- [01:08:48] Es solamente el tipo de documento distinto.
+- [01:08:50] Se ingresa por el módulo de proveedores.
+- [01:08:51] Ya.
+- [01:08:53] ¿Qué haría? Insumos, contratista y...
+- [01:08:58] ¿Qué sabería?
+- [01:09:00] ¿Tendría que variar con Lupe lo que descarga el banco?
+- [01:09:05] Sí.
+- [01:09:06] ¿Tendría que variar con el formato?
+- [01:09:10] Sí, un Excel.
+- [01:09:12] ¿Sí?
+- [01:09:12] O sea, el actual es un Excel.
+- [01:09:13] ¿No, no, pero el que te mandó la Lupe?
+- [01:09:15] Sí.
+- [01:09:16] Ese es para...
+- [01:09:17] Tenemos una duda.
+- [01:09:22] ¿El formato que se envió de la cartola es directamente descargado al banco o se modifica?
+- [01:09:28] No, directamente.
+- [01:09:29] Directo al banco.
+- [01:09:29] Ah, que bien.
+- [01:09:31] Una libre.
+- [01:09:31] Algo menos.
+- [01:09:34] Estaba mal yo.
+- [01:09:35] No, lo que pasa es que el Agustín cuando me mandaba las cartolas yo sé que las modificaba, pero yo no las modifico, es directamente.
+- [01:09:47] Se agregan dos líneas nomás, si mal no me equivoco, ¿no? En la cartola.
+- [01:09:50] Yo le agrego dos líneas para el detalle y el R.C.
+- [01:09:55] Sí, la O y el R.C.
+- [01:09:56] Sí, me acuerdo.
+- [01:09:56] Dos columnas.
+- [01:09:57] Yo sabía que había algo que sí se agregaba, no estaba tan loco.
+- [01:10:00] Sí, yo le agrego para ir viendo los movimientos.
+- [01:10:04] Sí, sí.
+- [01:10:34] Gracias por ver el video.
+- [01:11:06] Pero en Excel es mejor, porque es más fácil de procesar.
+- [01:11:11] San Excel.
+- [01:11:12] ¿Están tristes?
+- [01:11:13] No.
+- [01:11:14] ¿Están preocupados?
+- [01:11:19] Mientras me pregunten, siempre les digo que no.
+- [01:11:23] No.
+- [01:11:24] Me acuerdo que el cáncer me dio el viento.
+- [01:11:25] Ese es el tema.
+- [01:11:26] Es que es distinto trabajar...
+- [01:11:27] No.
+- [01:11:28] No.
+- [01:11:29] No.
+- [01:11:30] No.
+- [01:11:31] No.
+- [01:11:32] No.
+- [01:11:33] No.
+- [01:11:34] No.
+- [01:11:35] Es que es distinto trabajar acá presencial que online.
+- [01:11:54] Que en realidad, por ejemplo, ya llevamos casi un mes de reuniones, ¿no?
+- [01:11:59] Nos juntamos la semana una hora.
+- [01:12:03] Una hora, una hora.
+- [01:12:04] Por lo bajo una hora, de repente es como una hora y media, dependiendo del mudo que estemos viendo.
+- [01:12:10] Y Carlos se cuelga de otra reunión y otra hora.
+- [01:12:13] ¡Ja, ja, ja, ja!
+- [01:12:48] Eso es lo complicado. Pero yo siento que igual ya la base está en llegar y modificarnos.
+- [01:13:08] De los órdenes de compra, cambiar eso de poder agregar varios centros de costo a una
+- [01:13:13] sola línea, porque ahí nos cambia todo de las compras.
+- [01:13:19] ¿Cómo?
+- [01:13:20] Lo que habíamos conversado de poder asociar varios centros de costo a una línea de diet,
+- [01:13:25] del orden de compra.
+- [01:13:26] ¿Ya?
+- [01:13:27] Si se hacía así, ahí nos cambiaba toda la estructura, el modelo.
+- [01:13:31] Ah.
+- [01:13:32] Porque ya todo lo de compras ya está hecho, para poder crear la sija y todo.
+- [01:13:38] Entonces, ahí vamos ustedes.
+- [01:13:46] Más bien.
+- [01:13:50] Miren, si ya pudieron agregar, o sea, a una factura, dos órdenes de compra, ya nos solucionan la vida.
+- [01:13:57] Sí, se puede, ¿no?
+- [01:13:58] Sí.
+- [01:13:58] A ver, Juan.
+- [01:13:59] Que GoSocket este último día, está horrible. De hecho las pruebas por lo general con GoSocket las hago en la noche, que el sistema funciona más...
+- [01:14:11] ¿Y no tienes alguna factura de descargante y de desasociar la orden?
+- [01:14:16] ¿Qué se puede desasociar? Déjame ver.
+- [01:14:18] Pero, ¿me dejan hacer? ¿Hasta qué hora están ustedes hoy en día?
+- [01:15:02] Hasta las 6.
+- [01:15:03] Hasta las 6.
+- [01:15:04] En realidad debemos quedarnos hasta las 6, así tomamos todo, todo, todo, y como dice María Jesús, mañana tendremos que trabajar y si tenemos dudas podemos ir a molestar.
+- [01:15:15] Sí, no hay problema.
+- [01:15:16] Sí, mejor así.
+- [01:15:24] Tenemos dos turnos.
+- [01:15:32] División de órdenes de compra para asociar.
+- [01:15:34] Orden de compra normal, no de insinuación.
+- [01:16:11] ¿Y qué creen ver de contratista? ¿Cómo quedó el módulo?
+- [01:16:15] Sí.
+- [01:16:15] No.
+- [01:16:16] No, pero no estamos viendo lo de la social.
+- [01:16:20] Sí, todo va a estar en la compra, todo va a estar en la compra, no en la portada.
+- [01:16:22] Sí.
+- [01:16:23] Creo que no tenemos elementos de costo.
+- [01:16:37] Cuando es orden de compra de insumos, si es orden de compra de insumos, ¿se debería poder seleccionar insumos?
+- [01:16:52] Es que se hace directamente el módulo de abastecimiento.
+- [01:16:56] Sí.
+- [01:16:56] No, no, sí sé, claro, pero...
+- [01:19:43] Cuando la veo, ya se había separado ahí, porque antes se me había separado, pero en la unión del nudo con la pulsera.
+- [01:19:59] Entonces se podía enganchar con la pelotita, pero ahora se cortó acá.
+- [01:20:43] Ellos son los que venden las flotas.
+- [01:20:51] Ellos son los que venden las flotas.
+- [01:20:53] Ahí está Pablo.
+- [01:20:55] Pablito, Pablito.
+- [01:20:57] ¿Es el que ve la otra empresa?
+- [01:21:01] Sí.
+- [01:21:03] Es el que ve los campos.
+- [01:21:10] Panchito, hermano de Agustín.
+- [01:21:12] ¿Qué pasó?
+- [01:21:14] Hermano de Agustín y él está encargado del área comercial.
+- [01:21:16] Bueno, es uno de los comerciales.
+- [01:21:23] O sea, igual toda esta familia.
+- [01:21:25] Sí, qué raro.
+- [01:21:39] Le pasaron las cosas.
+- [01:21:41] ¿De verdad?
+- [01:21:43] ¿Tuvieron un tema ya? ¿Bandaron un auto?
+- [01:21:51] Ah, sí, ya.
+- [01:21:54] Y algo con la maleta, ¿verdad?
+- [01:21:55] ¿Qué escuchaba uno?
+- [01:21:56] No, nada.
+- [01:21:57] Sí.
+- [01:22:00] Porque ya había llegado su maleta.
+- [01:22:01] Y él se iba a Miami, y de ahí iba, hizo lo mismo de Martín, pero al revés.
+- [01:22:17] Se juntaron los dos en Miami, y de ahí Martín volvía y él volvía a...
+- [01:22:23] Sí, o sea, todo el campo, ¿qué ha pasado?
+- [01:22:46] Yo pensaba prepararme, que a las 2 vamos a ir en rosa.
+- [01:22:50] Ah, ¿qué?
+- [01:22:52] Que a las 2 vamos a ir en rosa.
+- [01:22:53] Ah, ya.
+- [01:23:00] Y tomamos la sal.
+- [01:23:05] ¿Qué hay de hermoso hoy día? No vio el verano.
+- [01:23:07] Hoy día hay boletos granados, carbonados de vacuno, arroz primavera, quideos con crema, pechuga de la plancha y consola de pollo.
+- [01:23:31] ¿Ah?
+- [01:23:31] ¿Te gusta el verano?
+- [01:23:32] Pechuga de pollo de la plancha.
+- [01:23:33] Por lo mismo. Ya no voy a empezar a listar.
+- [01:23:48] ¿Es que yo lo hago en la espalda o lo hago todo en la escalera?
+- [01:23:50] No, no lo hagas en la espalda.
+- [01:23:51] Ya, de bueno.
+- [01:24:10] ¿Y Pokémon lo ha seguido todo revisando?
+- [01:24:13] Sí.
+- [01:24:14] ¿Entendés?
+- [01:24:16] ¿Y esos detalles, pues ya hemos, porque son todos anotados, no?
+- [01:24:19] ¿Los tenés todos anotados?
+- [01:24:21] Ya he anotado a Carleta.
+- [01:24:22] Tengo separado por módulo, organización, computabilidad.
+- [01:24:30] Y eso es todo.

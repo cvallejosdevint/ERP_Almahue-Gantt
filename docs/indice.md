@@ -28,6 +28,7 @@ Mapa vigente desde el 2026-09-28. El código de la app sigue en `ERP/erp_back` y
 | QA Reu4 archivado | `docs/qa/historico-reu4/` |
 | Informes de corrida (locales, no van a git salvo README y PLANTILLA) | `docs/qa/resultados/` |
 | Documentos de agosto ya superados, planes cerrados, Gantt | `docs/historico/` |
+| Historial de sesiones y prompts de Cursor (128 sesiones hasta 27/10) | `docs/historial-cursor/` |
 | Diagramas (drawio, Lucid, contratistas) | `docs/diagramas/` |
 | Cartolas bancarias (no se versionan) | `docs/datos/cartolas/` |
 

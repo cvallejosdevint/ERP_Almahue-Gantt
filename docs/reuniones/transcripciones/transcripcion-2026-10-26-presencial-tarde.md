@@ -1,0 +1,1448 @@
+# Reunion presencial Almahue 2026-10-26 tarde (Whisper large-v3, audio reparado untrunc)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: 26-10-2026 15.20 REPARADO.m4a (~01:54, reparado con untrunc + referencia 12.33.m4a)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+Minuta consolidada: docs/reuniones/minutas/reunion-2026-10-26-presencial-v2.md
+
+- [00:08] Enviado.
+- [00:09] Entonces es el módulo de contratistas, ¿verdad?
+- [01:45] Uy, se demoró en llegar el correo.
+- [02:24] Recién llegó.
+- [02:25] Llegamos rápido al celular.
+- [02:31] ¿En serio?
+- [02:32] Sí.
+- [02:33] Acá de estos campos... De hecho, voy a poner acá.
+- [02:44] Que se vea un poquitito mejor.
+- [02:47] Las siglas no las comprendo bien.
+- [02:51] Te las voy a preguntar para tomar nota.
+- [02:54] La primera, ¿qué es?
+- [02:57] TLT.
+- [03:00] Planta.
+- [03:01] Planta, planta, después centro de costo, área de negocio, especie, variedad, elemento de costo, auxiliar, referencia, vencimiento, código financiero, no imputable, módulo de gestión.
+- [03:39] Por ejemplo, planta no la usamos.
+- [03:41] La eliminamos entonces.
+- [03:42] Planta no la usamos. Y la variedad tampoco, pero nunca está de más.
+- [04:02] ¿Lo dejamos también o lo libramos?
+- [04:05] Sí, por si acaso.
+- [04:08] Sí, lo dejamos, ¿cierto?
+- [04:10] Sí. Lo libramos por si acaso. No, la variedad no la usamos. Acá no, pero puede que en algún momento la usemos, como puede ser el gestor.
+- [04:26] ¿Qué es la variedad?
+- [04:29] ¿Qué es la variedad? Esa pregunta.
+- [04:32] De la especie, ¿no?
+- [04:34] Entonces, acá tenemos módulo de contratistas, que aquí la parametrización está independiente, pero el listado de contratistas vive dentro del módulo de contratistas.
+- [04:56] Ya, buenísimo.
+- [04:57] Perfecto.
+- [04:58] Acá de la parametrización, tenemos lo que vendría a ser las labores.
+- [05:06] Ya.
+- [05:06] Que las labores se componen de nombre y código.
+- [05:10] Si no me equivoco, la mayoría venía con nombre y código.
+- [05:13] Actividades, sectores, que este también viene con nombre y código, faenas, y créditos sí.
+- [05:29] Tengo una duda. Lo que pasa es que de la actividad nace la labor.
+- [05:34] Aquí se hacen asociaciones. Entonces, por ejemplo, acá va a preguntar o alistar todas las actividades que existen
+- [05:41] Y aquí van a aparecer las actividades ya asociadas y desde acá se puede asociar una nueva actividad.
+- [05:51] Y, por ejemplo, lo que aparece acá no va a aparecer acá y viceversa.
+- [05:55] Entonces, por ejemplo, yo quisiera asociar a esa chahúa, se va a asociar a esa labor y va a desaparecer de acá.
+- [06:03] Es que va a ir al revés.
+- [06:04] ¿Al revés?
+- [06:05] Sí, la actividad manda, una actividad puede tener 20 labores.
+- [06:09] Pero, por ejemplo, ¿la actividad se puede duplicar?
+- [06:16] La actividad no se duplica.
+- [06:18] No.
+- [06:20] A ver, a ver si tengo algún archivo con esa información.
+- [06:25] Me refiero yo a la asignación de labor.
+- [06:27] No sé qué anda en mi computador, pero parece que me habían eliminado mi cuenta.
+- [07:10] Entonces, al fin y al cabo, es una actividad, puede tener tantos números de labores.
+- [07:18] Una actividad, sí.
+- [07:21] Sí, está bien.
+- [07:23] Por eso me preguntaba, por ejemplo, aquí actualmente si tú seleccionas esa labor, ¿cierto?
+- [07:37] Y esa labor, tú la asocias a actividades, pero puede ser en actividades, así como hasta ahora.
+- [07:47] Se pueden repetir, de hecho, por ejemplo, acá en los primeros dos, en ambos existe cosecha o labor.
+- [07:52] Entonces, como debería ser asociada al revés, la actividad es la que no se repite y la labor sí se puede repetir en diferentes actividades.
+- [08:00] Ahí está.
+- [08:35] O sea, las labores que se, por ejemplo, si asignan una labor con una actividad, ¿esa labor no la podría ocupar de nuevo?
+- [08:45] La labor agrupa, la actividad agrupa las labores.
+- [08:51] ¿Pero puedo tener, por ejemplo, dos actividades diferentes que compartan una labor?
+- [08:55] No.
+- [08:56] Entonces, lo que está asociado se va mutiando.
+- [09:00] Se deja, sí.
+- [09:02] Sí, se mantiene.
+- [09:07] Entonces las labores se asocian a una actividad y a la actividad se le pueden asociar muchas labores.
+- [09:13] Sí, no tengo ninguna que se...
+- [09:19] O sea, la magia de estar en vivo y en directo como nunca pilla nada de lo que necesita.
+- [09:27] Nada está actuado.
+- [09:46] ¿Dentro del contratista no habrá alguna parametrización que sí tenga como interacción, así como esta asociación de labores con actividad?
+- [09:56] Una que sea eso de origen. ¿Cuál es la razón?
+- [10:26] Si es que había otra asociación, así como labor y actividades.
+- [10:33] De hecho, la labor es la que nos entrega el detalle del trabajo al contratista.
+- [10:43] Entonces, tendríamos que hacer la inversa y que sean como exclusivas de cada actividad.
+- [10:48] Sí.
+- [10:50] Perfecto. Y bueno, las unidades de control, que también vienen con su respectivo código y nombre.
+- [10:58] Después de tener esa parametrización, aquí tendríamos la lista de los contratistas, que acá tenemos la identificación,
+- [11:22] ¡Uy! ¿Qué sucede?
+- [11:24] A Empana están haciendo...
+- [11:26] Los suyos.
+- [11:26] Los de la HDB.
+- [11:27] Claro.
+- [11:29] El HDB.
+- [11:30] Creo que ni siquiera habló con todas las escenas.
+- [11:32] ¿Se vio bien?
+- [11:33] Sí, sí.
+- [11:33] Sí.
+- [11:35] Preguntó mentalmente.
+- [11:36] Sí.
+- [11:40] ¿Ese está vigente?
+- [11:42] ¿O no?
+- [11:43] Sí, está vigente.
+- [11:44] Ah, pero está bloqueado.
+- [11:45] Sí.
+- [11:47] De hecho, no sé por qué tiene eso bloqueado.
+- [11:49] Debería poder permitir dejarlo...
+- [11:51] Ah, que no está...
+- [11:51] Como no hay gente.
+- [11:53] Sí, hay que alinear las vigencias. El teléfono 1, 2 y esa vigencia alta, ah, verdad, donde contacto.
+- [12:07] ¿Cómo es que lo juntas esto?
+- [12:09] No, o sea, porque ese está muy solopo.
+- [12:13] Sí. Yo creo que sería mejor dejarlo acá arribita.
+- [12:17] A ver, ficha controlista, root, nombre, email, dirección, ciudad comuna.
+- [12:23] Podemos eliminar el teléfono 2 y va a subir.
+- [12:29] Claro.
+- [12:30] Quería la fila de contactos.
+- [12:34] Bueno, le quitamos el título de contacto y lo dejamos ahí.
+- [12:36] Sí, como información y general.
+- [12:38] Exacto.
+- [12:46] ¿Facturación?
+- [12:55] Ahí tengo una duda. ¿Qué asocio?
+- [12:58] Incluir el proveedor de compras para asociar facturas.
+- [13:02] Ah, es como para crearlo como proveedor.
+- [13:05] Sí, pero debería asociarse automáticamente cuando...
+- [13:08] Sí, exactamente. Tenemos que eliminarlo.
+- [13:11] Ahí sobre todo.
+- [13:12] Sí, hay manera que lo corregas.
+- [13:13] Después tendríamos lo que vendría a ser el detalle del ingreso de labores, donde acá seleccionamos el contratista, centro de costos, aquí ya vendría la asociación de las labores con la actividad, pero tendría que ser al revés, ¿verdad?
+- [13:48] Mira, en este caso nos sirve que quede así, la primera es la labor, porque nos pasa que sabemos la labor, pero no sabemos a qué actividad está asociada, entonces seleccionando la labor nos va a salir automáticamente la actividad, ¿o no?
+- [14:02] Entonces, sí, entonces la inactividad no debería ser seleccionable.
+- [14:05] No, debería ser automático.
+- [14:06] Sí, solo informativo.
+- [14:08] Exacto.
+- [14:16] ¿Y aquí no vive nadie?
+- [14:18] ¿Y aquí?
+- [14:19] ¿O aquí?
+- [14:20] ¿En el campo?
+- [14:21] Sí.
+- [14:23] Vicente vive en una casita que...
+- [14:25] No hay casita, no hay casa.
+- [14:27] Antes de doblar la casa en el lento, seguir derecho.
+- [14:31] Ahí hay una casa.
+- [14:33] ¿Vicente cuál?
+- [14:34] Vicente no está hoy día.
+- [14:37] Ah.
+- [14:37] El hermano chico es de Nico, él vive ahí, y los peticeros, vive uno en la casa de entrada, los peticeros son los que cuidan los caballos, y así llaman peticeros, bueno, mañana quizás los saquen a pasear, pero todos los días los saquen a pasear los caballos, uno de los peticeros vive aquí, en la entradita, la casa que está en la entradita.
+- [15:06] Y al otro lado, el otro peticero, que ahí ya tenemos caballos de Ateneo, caballos de Polo y acá caballos de Rodeo, que son los caballos chilenos.
+- [15:22] ¿Cuáles son los más caros?
+- [15:23] Los dos son caros.
+- [15:25] ¿Sí?
+- [15:25] Pero acá está el de Moncabe, ¿te vale la vista, Paloma?
+- [15:27] ¡Ey!
+- [15:31] ¿Tienen tiempo? Vamos a ver los caballos.
+- [15:32] Son dos caros.
+- [15:34] Es que son distintos.
+- [15:38] El de polo es como los típicos dibujos de niños cuando tienen las patas flacas y el cuerpo así, son más altos.
+- [15:46] Dos metros de caballo, sí.
+- [15:48] ¿Cómo?
+- [15:48] Dos metros de caballo.
+- [15:49] Sí, son altos. Son distintos de contextura. Y los de... los chilenos son más...
+- [15:54] Más seteados.
+- [15:56] Claro, esos tienen esa fuerza de...
+- [15:58] Sí.
+- [15:59] De hecho, ese empezamos a escuchar cuando están topeando. ¿Sabes lo que es topear?
+- [16:04] Ya, topiar es cuando van, igual que al rodeo, y están practicando con el...
+- [16:12] Entonces ahí los tres son sobre la...
+- [16:15] ¿Cómo se llama?
+- [16:19] Entonces ahí, eso es topiar, como practicar.
+- [16:26] Y no ha pasado, porque igual el Don Pablo es de los pocos que tiene medio luna.
+- [16:30] A veces vienen otros corredores y traen sus novillos y aquí se hace como un mini rodeo.
+- [16:39] Y ha pasado que a veces el novillo se escapa el lunes a lunes y sale corriendo con los avos.
+- [16:45] Y salen los caballos atrás.
+- [16:48] Y a todo.
+- [16:51] Te pasan caballos.
+- [16:53] No, no, no.
+- [16:53] Ya, de esto, por ejemplo, el tipo como jornada y trato está bien, ¿verdad?
+- [17:06] Sí.
+- [17:07] Perfecto.
+- [17:08] Tenemos la cantidad de horas.
+- [17:09] En un momento se había considerado dejar un mantenedor que fuera de las cantidades de hora con precio unitario,
+- [17:18] pero yo creo que es más conveniente dejarlo en el ingreso acá.
+- [17:21] Si tú pones jornada, ah, esta jornada.
+- [17:23] ¿No te va a pedir cantidad de hora?
+- [17:25] ¿No debería?
+- [17:26] ¿O a través del atrato?
+- [17:27] Sí, piden las dos.
+- [17:28] Ya, porque el atrato es como por cantidad de hectáreas que avancen.
+- [17:41] Como por meta.
+- [17:42] Claro, y el jornada es trabajar de 8 a 8, o sea, 8 horas.
+- [17:47] Entonces en ambos no se piden...
+- [17:48] En atrato no se pide la hora.
+- [17:50] En atrato no debería pedir la hora.
+- [17:53] Pero igual puede ser unidad 1, si no debería influir así.
+- [17:57] Ah, puede influir en el cálculo.
+- [18:01] Sí.
+- [18:02] Pero ahí, por ejemplo, si es a trato, ahí debería solamente pedir precio.
+- [18:08] Precio, sí.
+- [18:10] Pero si es jornada...
+- [18:11] Sí, ahí es con cantidad de horas.
+- [18:13] Pero ahí, ¿cómo van a calcular la hora?
+- [18:15] La calculan.
+- [18:18] Ah, ya.
+- [18:18] O sea, igual no informan, por ejemplo, no sé, ¿estuvieron toda la mañana dentro del campo? ¿O toda la tarde? ¿O todo el día?
+- [18:26] Yo les informo.
+- [18:27] Ah, bien.
+- [18:34] Entonces, trato sin horas solamente.
+- [18:35] Sí.
+- [18:37] Perfecto.
+- [18:42] Precio unitario, predio, predio, un dato opcional, que este viene de la parametrización.
+- [18:46] De hecho, este tiene un botón diferente.
+- [18:51] Sí.
+- [18:53] Tiene un saldillito.
+- [18:54] No, no, ese debe ser del navegador.
+- [18:57] Son valores que tú cargaste en su momento y te los tiras como...
+- [19:00] El botón de acá abajito.
+- [19:01] Mira, ponte en cantidad de dólar.
+- [19:04] A otro campo de un uno digital, le damos un 10.
+- [19:10] Ahí está bien.
+- [19:13] Ahí, quizá en el predio debería ser centro de costo.
+- [19:18] ¿Sí?
+- [19:19] Sí, porque si no lo veo... Ah, el cuartel está arriba.
+- [19:22] Sí, el cuartel está arriba.
+- [19:24] No, está bien.
+- [19:27] Perfecto, y aquí temporada, el sector, faena, que eso viene de la parametrización, que no tenemos campo ingresado, no, no tenemos, viene directamente de la parametrización y el motivo, y acá dependiendo de cuánto se ingrese, lo que vendría a ser cantidad de horas por el precio unitario, se hace el cálculo, y muestra la cadena de aprobación acá, que de hecho, si no me equivoco, para esto todavía no tenemos configurado cadena de aprobación, vamos a configurar una de inmediato,
+- [19:54] Voy a poner el texto para que después sea fácil de identificar cómo borrarlo.
+- [20:10] Francisco, bien, y lo que va a aparecer acá.
+- [20:21] Y entonces automático, y ahí aparece, dependiendo de la cantidad, la cadena de aprobación.
+- [20:54] En este caso no tenemos configurado ni tenemos cadena, entonces si o si le va a pedir a Pian que haga la aprobación de este ingreso diario.
+- [21:02] Ya.
+- [21:06] Estaría bien, ¿cierto?
+- [21:08] Sí.
+- [21:08] No hay tipo de montar lo creativo configurado para contratistas.
+- [21:14] Es tipo contable operativo. Mientras entras a las balinas. La pantalla que no se comparte.
+- [21:33] Chao GPT.
+- [21:35] El torpeo. ¿Cómo soluciono esto?
+- [21:41] Así que esto a lo mejor puede ser donde pasamos a llevar la cadena de aprobación, que en la orden de compra también me pasó.
+- [21:52] Y yo creo que nos faltó hacer un poquitito de prueba.
+- [21:55] Pero al momento de crearse, debería aparecer el estado así.
+- [22:04] Aquí obviamente esto va a aparecer cuando se le asocie directamente a esta labor una proforma y nos debería mostrar los relacionados que vayan a tener.
+- [22:13] Y aquí lo mismo de tener la trazabilidad.
+- [22:19] Por ejemplo, dejamos la opción deshabilitada de editar cuando se hiciera una asociación a proforma.
+- [22:25] Si, por ejemplo, esta labor diaria se asocia a una proforma, para que no cambie los montos, no te permite editarlo.
+- [22:33] Ya.
+- [22:34] ¿Está bien eso?
+- [22:36] ¿Cuando la proforma cambia los montos?
+- [22:38] No, cuando se asocia a una proforma.
+- [22:41] ¿Ya?
+- [22:42] Ahí no te deja editarlo. Cuando esté antes de asociar la labor diaria a una proforma, te permite ingresar y editarlo.
+- [22:49] Pero yo creo que se puede editar en la proforma, asociada a la proforma.
+- [22:52] Sí.
+- [22:52] Sí, cuando no se puede editar, asociada a la factura.
+- [22:54] Cuando se asocia la factura.
+- [23:24] ¿Y después cuando se pasa, lo confirma el...
+- [23:28] La idea es que la proforma la confirme la persona, no el ingreso diario.
+- [23:32] Ah, porque tenemos la aprobación en el ingreso diario.
+- [23:35] No, el ingreso diario no sería muy lento para el chiquillo que...
+- [23:40] En la proforma tendría que estar la aprobación.
+- [23:42] Sí, la proforma, una vez que esté listo el documento, que la persona lo pruebe.
+- [23:45] ¿Está en la carta? ¿Estoy seguro?
+- [23:47] Sí, la gente está haciendo el cálculo acá de la cadena de aprobación en el ingreso diario.
+- [23:52] Ah, ¿verdad?
+- [23:53] Si lo que estamos viendo acá es el ingreso diario.
+- [24:00] Si ahí habría que cambiarlo a la proforma.
+- [24:02] La proforma es la que necesita aprobación.
+- [24:05] A lo mejor está acá duplicado.
+- [24:07] Es que yo casi 100% sé lo que lo digo.
+- [24:10] Pues este es duplicado.
+- [24:11] No, ahí está directamente el ingreso diario.
+- [24:18] Entonces pasaría la proforma por aprobación.
+- [24:21] Sí, la proforma se aprobó.
+- [24:23] Y en ese caso, por ejemplo, si se necesita hacer una modificación de los ingresos diarios
+- [24:27] y la proforma ya fue aprobada,
+- [24:29] Tendría que solicitar permisos de edición como lo hicimos con las órdenes de compra.
+- [24:34] Sí.
+- [24:36] Y lo otro va a ver como un resumen de lo que esté en el ingreso diario que no esté asociado a una proforma a fin de mes.
+- [24:49] Sí, sí, lo tenemos acá.
+- [24:52] En este espacio es irrecontable.
+- [24:54] Tenemos acá, por ejemplo, ingresos fuera de asiento.
+- [24:57] Ya. Entonces cuando uno le da clic aquí, te despliega esta lista, que esta, la primera es la que entra al cierre. Ya. La que está como con ese borde verde. Ya. Y estas dos son netamente informativas, no entran al cierre. Por ejemplo, estas son las proformas que están sin aprobación, o como borrador, o para que lo tengas como dato informativo, y aquí es lo mismo, pero con los ingresos diarios que no tienen proforma asociada. Ya.
+- [25:23] Y es como que se ve si es que faltó asociar alguna, como para tener esa claridad.
+- [25:30] Para ver quién está duplicando información.
+- [25:33] ¿Quién fue?
+- [25:35] De hecho acá, por ejemplo, no tenemos de quién la generó.
+- [25:39] Quizás podríamos tener ese dato, quién generó la proforma en la que están sin aprobar y quién generó la...
+- [25:47] ¿Quién empezó con el usuario?
+- [25:48] Ya, todo identificado.
+- [25:51] Más fácil, después diríjese a la persona.
+- [25:53] Siempre sale el no si yo no fui, si fuiste.
+- [26:00] Acá pasa un poco eso, porque como nos cobran por usuario, no...
+- [26:05] Ah, y lo comparten más de uno.
+- [26:07] Ya no va a pasar.
+- [26:08] Ya no va a pasar.
+- [26:12] Entonces, no ha pasado, yo no fui.
+- [26:16] Aprovocaciones, las profesiones.
+- [26:20] A veces lo hago yo y yo tampoco fui.
+- [26:22] Lo que pasa es que, por ejemplo, para el tema del facturador, está mi usuario para que
+- [26:39] el robot active y pueda hacer la carga masiva. Entonces, me pasó una vez que yo dije, alguien
+- [26:48] se mete un usuario, pero fue porque yo estaba trabajando en una empresa y la han hecho correr
+- [26:53] Entonces, cuando se cierra la sesión, queda la última empresa que se metió. Entonces, había sido la otra. Entonces, yo dije, no, Argentina es mi clave. Y la cambié, y después nos podíamos echar a andar todos.
+- [27:11] No había entendido nada de eso.
+- [27:13] Sí, pero me ha pasado. Igual que, por ejemplo, yo trabajo mucho en la red Miguel Mahue, y me he metido y estoy a los palos. Y no son las empresas que yo habito.
+- [27:22] Entonces, bueno, acá en el ingreso de proformas, al momento entonces de ir agregando, perdón,
+- [27:56] vamos a ir a las proformas, tal vez sí que también estaba, lo acabo de ver, la aprobación.
+- [28:09] No, lo soñé.
+- [28:11] Abajo de la aprobación.
+- [28:13] Son proformas, sí.
+- [28:20] Sí.
+- [28:22] No, pero esto debe estar así como del hombro nomás.
+- [28:24] Pero abajo está pendiente de aprobación.
+- [28:26] Abajo, la última.
+- [28:28] El último registro.
+- [28:30] Tibia, tibia, abajo.
+- [28:32] Ahí está.
+- [28:34] Está como proforma.
+- [28:36] Sí, sí, está bien.
+- [28:38] Pero no aparece acá.
+- [28:40] Al momento de generar las proformas no aparece acá.
+- [28:42] Al momento de generar las proformas no aparece la cadena de aprobación.
+- [28:46] Ah, no la muestra, pero sí entra dentro del...
+- [28:49] Ingresos diarios sí también la tiene, con ingresos diarios...
+- [28:52] No, hay que moverlo, hay que cambiar la proforma.
+- [28:56] Sí, sí.
+- [28:56] Pero está bien como muestra abajo, como están las aprobaciones.
+- [29:00] Sí.
+- [29:02] Sí.
+- [29:02] O sea que las proformas, al momento de ir agregando ingresos diarios, debería mostrarme la cadena de aprobación.
+- [29:12] Sí.
+- [29:15] O sea...
+- [29:17] Porque dependiendo del monto van pasando diferentes aprobaciones.
+- [29:19] Es que por eso, porque al final el ingreso diario, como que entre comillas, va a dar lo mismo hasta que alguien cree la proforma y agrupe sus ingresos.
+- [29:27] Ahí va a ser como un monto considerable de aprobación.
+- [29:29] Por eso, considerarlo al momento de seleccionar todos los ingresos.
+- [29:33] Sí, ahí debería aparecer la aprobación. Bueno, en todo caso, en ambos mundos, una persona a la que aprueba, sea un peso, sean 10 millones.
+- [29:42] Ok.
+- [29:42] Así que no hay mucha, mucha cadena.
+- [29:47] ¿Va a quedar como una cadena de uno nomás?
+- [29:48] Sí.
+- [29:52] Pero después, tú a lo mejor van a hacer, va a crecer más.
+- [29:56] Sí, no, sí, puede ser, sí, sí puede ser, o sea, le dice, pero, como el lado, el lado, eh, está ahí, perfecto.
+- [30:07] Pero en el caso, solamente en el caso de los contradictos.
+- [30:10] Perfecto, entonces acá, en el caso de, bueno, aquí no tenemos un piso diario, vamos.
+- [30:17] Yo sé que se leccionó todo mal, pero...
+- [30:33] Aquí, por ejemplo, me acabo de dar cuenta que no hay una limitancia de horas.
+- [30:54] Y esto es un ingreso diario.
+- [30:56] No podrían ser más de 24 horas.
+- [30:59] ¿Hay gente que trabaja 24 horas? No.
+- [31:02] Pero es que si él, por eso dice que si cumple, o sea, la jornada de un día, por día, hace un ingreso diario.
+- [31:15] No es lo que estaba pensando, a lo mejor pensaba que, no sé, de la semana completa hace un solo ingreso diario.
+- [31:23] En el mundo perfecto sería diario, literal.
+- [31:25] Pero acá igual yo creo que agrupan días.
+- [31:31] Pero en el mundo perfecto debería ser diario.
+- [31:34] O puede ser una real gente donde si...
+- [31:37] Por eso estaba preguntando si en la jornada solo horas, porque podría ser horas y días, o cantidades.
+- [31:44] Sí, debería ser horas. En jornada, horas, y en trato, solo precio.
+- [31:49] Ya.
+- [31:50] Entonces igual lo vamos a limitar para que no vayan a ingresar 24.000 horas.
+- [31:53] Así es, así es.
+- [31:54] Para que llegue un último con dos dígitos.
+- [31:56] Sí.
+- [31:58] Y pueden ingresar hasta los artículos aquí.
+- [32:00] Claro.
+- [32:02] ¿No se puede hasta 24?
+- [32:04] Sí, sí.
+- [32:05] Ah, no.
+- [32:05] No, yo decía porque si después ingresan dos días.
+- [32:11] Sí, por eso lo decía.
+- [32:13] Si hacen como...
+- [32:14] Si hacen como las dos días de ingresa.
+- [32:16] Es que igual si ingresan dos días, debiesen ser 16 horas.
+- [32:20] Porque la jornada es de 8.
+- [32:21] Ah, una semana.
+- [32:25] Sí, y así ingresan la semana ya sería prácticamente a trato.
+- [32:29] Claro, claro.
+- [32:30] Entonces, por ejemplo, acá, al momento de crear las proformas, me va a listar solamente
+- [32:58] Finalmente, lo que corresponde al proveedor que seleccioné y de lo que está pendiente.
+- [33:05] Por ejemplo, en este caso, como estamos en el modo demo, no me voy a listar acá,
+- [33:08] pero aquí debería salir todo el ingreso diario que no está asociado a una proforma.
+- [33:13] Ah, claro, no puede asociarlo a la proforma.
+- [33:15] Exacto, y en el momento de ir seleccionando se va a armar la cadena de aprobación dependiendo del motor.
+- [33:20] Y ahí va a filtrar el contratista.
+- [33:22] Exactamente.
+- [33:22] Aquí, por ejemplo, dice sin opciones, pero esta vendría a ser el listado.
+- [33:27] Ahí tendría que ser como el listado de los ingresos diarios.
+- [33:30] Ya.
+- [33:34] Que una vez ingresado deberían verse así, con este detalle, con la lista abajo de los ingresos.
+- [33:43] Ya.
+- [33:44] ¿Habrá, por ejemplo, alguna instancia de que una proforma tenga muchos ingresos diarios?
+- [33:50] Como para justificar tener un buscador acá.
+- [33:53] Sería lo ideal que una proforma tuviera muchos ingresos diarios.
+- [33:57] Ya.
+- [33:58] Entonces, por ejemplo, acá, al momento de crear la proforma...
+- [34:01] ¿Cómo es típico que uno ocho mueva así a la máxima?
+- [34:06] Sí, sí, uno ocho mueve en línea.
+- [34:09] Por lo general, cuando hacen, por ejemplo, una proforma y filtran por un proveedor,
+- [34:14] me imagino que entran casi todos los ingresos que sale el listado.
+- [34:18] La proforma se hace una vez a la semana.
+- [34:21] La proforma se puede hacer semanal, quincenal, mensual.
+- [34:27] Ya, y en ese caso, por ejemplo, si la hicieran como quincenal, que es como el periodo de tiempo más largo, no sería bueno que tuviera como el botón de seleccionar todos, porque lo que va a listar es netamente de ese proveedor.
+- [34:37] Sí, podría ser.
+- [34:38] Que seleccione el cheque así y ahí en detalle ve qué quita.
+- [34:42] Sí.
+- [34:42] Ya.
+- [34:43] Buscador no creo que sea necesario si son un máximo de ocho, no van a salir tantos.
+- [34:47] Sí, no es mucho.
+- [34:48] Ya.
+- [34:54] Bueno, la aprobación del sistema funciona igual para todos.
+- [34:56] Aquí se lista, sale un poquitito el detalle, el estado, y aquí a la derecha salen los motores de acciones para aprobar, y acá que está este pendiente de aprobación, allá abajito salen directamente.
+- [35:10] Ahí tendría que aprobarlo Martín, ¿cierto?
+- [35:13] Exacto.
+- [35:15] Se entiende totalmente, sí.
+- [35:18] ¿Y la trazabilidad?
+- [35:21] Ahí tenemos la trazabilidad, que no quiere cargar.
+- [35:26] No está para aprobar.
+- [35:27] Oh, todavía salió. No sé si todavía no tiene aprobación. No, no tiene. No, pero la otra, la otra en la que estaba.
+- [35:37] ¿Cómo es el servidor? ¿El internet o el servidor? ¿O yo?
+- [35:47] De la llave. Lo que pasa es que la otra prueba de internet es así nomás.
+- [35:54] ¿Sí? A ver si me acuerdo que una vez estábamos en una reunión y hicieron la llamada maestra para que funcionara el internet.
+- [36:03] ¿Pero es fibra?
+- [36:05] Sí.
+- [36:06] ¿Y es neto?
+- [36:08] O inestable quizá.
+- [36:10] No sé cómo será el sistema del internet, pero se supone que él tiene como cierta capacidad,
+- [36:16] entonces nos abastece a nosotros y abastece a varios más de acá, de la zona.
+- [36:19] Y como que le puede bajar la velocidad a una empresa, va a dársela a la otra.
+- [36:25] Entonces ahí empezamos con los problemas.
+- [36:27] Al sistema.
+- [36:32] Vamos al sistema.
+- [36:37] Bueno, aquí en la auditoría también debería aparecer, por ejemplo, si en este caso va a ser una proforma que se aprueba,
+- [36:44] al darle aquí al origen y cadena debería listar todos los ingresos diarios que van a estar asociados a esa proforma
+- [36:50] que se está solicitando la aprobación para que el aprobador también pudiera ver el detalle de estos.
+- [36:55] En auditoría, esto es prácticamente un log de lo que se hace dentro de...
+- [37:02] En aprobación, arriba. Ahí no debería estar como el detalle de meterte a la proforma.
+- [37:09] Saldría acá, esto es la proforma como tal. Y aquí, por ejemplo, si tú das clic, ves el detalle de la proforma.
+- [37:14] Claro, ahí te va a aparecer todo el detalle y abajo aprobar.
+- [37:17] Exacto.
+- [37:19] Pero no necesito que aparezca en origen cadena, ahí debería aparecer si está aprobado o no.
+- [37:23] Ah, ok. Podríamos entonces eliminar ese. Sí. La idea es que cuando apretemos la proforma salga el detalle de...
+- [37:31] De los ingresos diarios. Sí.
+- [37:32] Perfecto. Bueno, en este caso, porque cuando se asocian los documentos es solamente cuando está aprobada la proforma.
+- [37:41] Y se asocia a la proforma, ¿verdad? A la proforma.
+- [37:44] Perfecto. Entonces, en el otro módulo deberían aparecer solamente las proformas aprobadas.
+- [37:50] Sí. En el módulo de proveedores.
+- [37:53] Perfecto. Y acá me imagino que en origen y cadena sí sería bueno que aparezca la factura.
+- [38:00] Sí.
+- [38:01] Y aquí adentro, en el detalle, también sería bueno que aparezca porque aquí si te das cuenta no dejamos un campo que diga si tiene o no tiene DTE.
+- [38:11] Tiene factura.
+- [38:14] ¿Pero afuera?
+- [38:16] Aquí afuera tenemos solamente acá en la origen y cadena.
+- [38:20] Entonces aquí te podríamos dejar un campo.
+- [38:23] Es que si no está asociada la factura no te va a aparecer, ¿no?
+- [38:28] Exacto.
+- [38:28] Entonces, aunque ponga ahí el campo no te va a aparecer.
+- [38:34] Podría verlo, más que nada como un informativo de que lo que uno está visualizando te aparezca como aquí factura, si es que tiene la factura asociada.
+- [38:41] Es que por eso, mira, hazlo hasta atrás.
+- [38:45] Si no aparece así, es que no está asociado, ¿cierto?
+- [38:48] Claro.
+- [38:48] Ya.
+- [38:49] Entonces, una vez que aparece así, ya no se puede editar la proforma sin aprobación.
+- [38:55] Ya.
+- [38:55] Bueno, que ni siquiera se ha podido estar asociado.
+- [38:57] Eso sí, si se asoció porque calzaron los montos.
+- [39:01] Porque la razón perfecta.
+- [39:03] Ya, entonces, por ejemplo, acá, sabiendo ya que el estado está facturado, ¿no se puede modificar?
+- [39:08] No.
+- [39:09] Y, por ejemplo, este sería el estado anterior, antes de que se asocie la factura.
+- [39:13] Claro, ahí, claro, se sube que no tiene una factura asociada.
+- [39:18] Y ahí se podría editar.
+- [39:20] Y acá, por ejemplo, dentro de esta, si te das cuenta, nosotros podemos ver la factura acá,
+- [39:23] Pero dentro de este menú no te estoy mostrando en ningún momento como el número de factura.
+- [39:29] Es que en ese menú no debería poder ni siquiera editarse.
+- [39:34] Claro, este tendría que ser la vista entonces.
+- [39:36] Exacto.
+- [39:36] O la vista previa.
+- [39:37] Exacto.
+- [39:37] Aparte de editar.
+- [39:38] Por ejemplo ahí, claro, si yo aprieto ahí no debería salir el detalle de la proforma nada más.
+- [39:46] Pero solamente se puede editar cuando no tiene un documento asociado.
+- [39:50] Claro, ahora, si lo veas así, como que uno le da clic y te muestra directamente el editar.
+- [39:59] Claro.
+- [40:00] Entonces tendría que mostrarte informativo, tener el botón editar.
+- [40:03] El detalle.
+- [40:04] Y ahí mostrarte el detalle también.
+- [40:06] Y, por ejemplo, si tengo factura asociada, te debería mostrar acá un campo que diga factura, ¿no? Por lo tanto.
+- [40:11] Sí.
+- [40:11] Pensando que es la lista previa, ¿no? La edición.
+- [40:13] Sí.
+- [40:13] Ya.
+- [40:14] Y si la proforma pasó por el flujo y está aprobada, ¿tampoco ahí se puede editar?
+- [40:20] Ahí la aprobada se puede editar, pero ya asociada no.
+- [40:25] Y ahí pasaría por cadena de aprobación la aprobada, la edición.
+- [40:30] Sí.
+- [40:30] Ah, vuelve.
+- [40:31] Sí, vuelve.
+- [40:33] Vuelve tanto para los dos casos, si es que el monto sube o baja, ¿verdad?
+- [40:37] Sí.
+- [40:38] Si eso es lo que habíamos hablado de que se acostumbran a hacer la miente desde el principio.
+- [40:42] Sí, porque aprueban sin travesar.
+- [40:44] Perfecto.
+- [40:45] ¿Se puso a llover en Serena?
+- [40:47] No, está viviendo todo Chile.
+- [40:50] ¡Qué loco!
+- [40:52] ¿Y estamos cuántos días de Halloween?
+- [40:56] A nada.
+- [40:58] ¿A cinco días?
+- [41:00] Sí.
+- [41:01] Es horrible.
+- [41:04] Halloween con ola de humedad.
+- [41:09] El rostro de tierra roja.
+- [41:10] Me preocupa el calor que va a hacer cuando ya pase esto.
+- [41:13] Dicen que ayer de fecha en la noticia decían que no se va a poder dormir,
+- [41:17] porque para el cuerpo humano no va a estar apto por tanta humedad y el calor.
+- [41:21] Así que va a ser horrible.
+- [41:23] ¿Pero a dónde?
+- [41:24] Para subir el aire.
+- [41:25] ¿En general?
+- [41:26] ¿En general?
+- [41:27] Donde hay todos estos cambios climáticos y va a estar así.
+- [41:31] ¿Qué pasa?
+- [41:32] ¿Sopiclona no va a poder dormir?
+- [41:35] Dicen que en general afecta los focos.
+- [41:38] No me ha dado nada.
+- [41:40] ¿Estás dormiendo?
+- [41:42] No, pero...
+- [41:43] ¿Estás hablando solo, Carmen?
+- [41:44] Ayer pasó, una vez que me operaron y me dieron un buen alojador médico.
+- [41:49] Y ahí me fue a hablar el enfermero en la mañana y me dice, ¿cómo durmieron? Y le dije, bien. Y me dijo, ¿estás sentada a las 2 de la mañana? Y le dije, lo voy a decir, ¿estás durmiendo? Y me dijo, ah, la gente de la zopiclona y yo, ¡qué miedo!
+- [42:06] Con razón, habría escogido todo morado.
+- [42:07] Ah, ¿estaba sentada en la cama como indio o así?
+- [42:11] Una vez le recetaron y me dijeron que por favor que se la tomaran acostada, porque hay gente hasta que compra durmiendo.
+- [42:21] Inconscientemente eso no te sigue. Yo para tomar estaba cagada y te quise salir.
+- [42:28] Yo no lo tomo, por si acaso.
+- [42:29] ¿Qué miedo? ¿Pero cuántico? A mí me habían dicho que la cirugina me daba maravilloso dolor.
+- [42:34] Sí, y después no he podido dormir sin tomarla. A mi mamá le pasa.
+- [42:40] ¿Era limpia?
+- [42:40] Sí, sí. Mi mamá, por ejemplo, antes tenía un problema en las rodillas, pero la operaron todo.
+- [42:45] Pero para poder dormir con el dolor, tomaba esas pastillas, porque ahora no tiene el dolor y no puede dormir sin las pastillas.
+- [42:51] ¿Tú no has probado con marihuana?
+- [42:53] No, ¿será que estoy yo?
+- [42:57] No, lo que pasa es que mis papás son evangélicos.
+- [43:05] Entonces, nada, nada de copete, no.
+- [43:09] ¿Pero la marihuana es verdad?
+- [43:11] ¿La hizo Dios?
+- [43:13] ¿La hizo para esto?
+- [43:16] Y tomando pastillas.
+- [43:19] ¿Qué crees que le hace mucho a la marihuana?
+- [43:20] Sí, totalmente, totalmente, totalmente.
+- [43:24] Porque yo creo que afecta al sistema neurológico.
+- [43:27] Sí, sí.
+- [43:30] Por eso uno genera como, o sea, es como que tu cuerpo no empieza a generar como ese sistema
+- [43:38] que te hace entrar como al sueño liviano y después al sueño ligero.
+- [43:41] Como que hay todo el rato en el sueño liviano y desperté por todo.
+- [43:44] La melatonina.
+- [43:47] Sí, sí, sí.
+- [43:49] Yo he tomado melatonina en gota.
+- [43:51] Yo? Mi inductor del sueño y de ayudar. Mi hija cuando a la vez de estar con el sueño cambiado, fin de semana, el sueño está tarde y el día del lunes me voy a dormir, dos botas de miniaturina y una copa de vino.
+- [44:06] Claro, y un queso.
+- [44:12] Y se quedan en cera, lo regula el sueño.
+- [44:17] Igual dicen que la miniaturina es como más natural, o sea, de todo lo que hay para dormir es como lo más natural.
+- [44:23] Sí, pero en exceso no se puede.
+- [44:26] O sea, yo me siento harto, porque igual a veces es como la típica, duermo pero no descanso.
+- [44:32] Hay unos aromatizantes que ven de Natura, que son de lavanda.
+- [44:36] Eso lo rocé en el almohado y caí en lona.
+- [44:39] ¿Sí?
+- [44:39] Sí, y aparte te sirve para aromatizar la pisa.
+- [44:43] Bueno, bueno, bueno.
+- [44:45] A mí hubo un tiempo que estuve con mucho estrés.
+- [44:48] Me pasaba eso que yo me acostaba a las 3 de la mañana y despertaba a las 6 de la mañana y dormía todo el día así.
+- [44:54] Pero era que no estaba durmiendo, sino que me acostaba y después me sentaba y me iba a trabajar.
+- [45:01] Y venía con mi policía de la ciudad y todo y fui a la acupuntura.
+- [45:06] ¿Ya?
+- [45:07] O yo fui a la acupuntura, llegué a la casa a las 7 de la tarde, me tiré de la cama y dormí hasta como las 12 del rato.
+- [45:15] Maravilloso. Volviste a nacer.
+- [45:17] ¡Qué bacán!
+- [45:19] ¿Crees que es muy buena?
+- [45:21] Sí, a mí me pusieron en la columna, aquí, en el brazo, las piernas, todo, la cabeza, todo.
+- [45:27] Qué guay.
+- [45:29] Pero muy, muy, muy aguantable.
+- [45:31] Cuando hay mucho estrés, es muy genial. Yo dormía y descansé.
+- [45:35] Y ahí sí que pasaron varias cosas.
+- [45:37] Y ahí empecé como a recordar el sueño, ¿no?
+- [45:39] Es terrible el tema del sueño.
+- [45:41] Sí. Horrible.
+- [45:44] Yo creo que la ansiedad es la que...
+- [45:46] Y el celular igual, el celular, la pantalla, todo eso, porque el cuerpo como que asocia cuando ya empieza a bajar la luz, inconscientemente de que se acerca la hora de dormir, y ahora no vive y está lleno de luces todos los días, lleno de luces.
+- [46:16] Oye, a mí me pasó igual de que tenía problemas para dormir, pero era un tema particular que me tenía preocupado, y hay una serie de Netflix que está hecha para que tú la veas ahí, y te quedas dormido.
+- [46:30] ¿Por qué no?
+- [46:34] Yo creo que Carlos es vendedor de Netflix.
+- [46:36] No, pero es una serie, no me acuerdo cómo se llama, como guía para el sueño, no sé cuánto, está en español.
+- [46:45] Y son como bonitos, de estos reportajes con papel lustre así, que son como animaciones y te van hablando como de los factores del sueño, qué es lo que te afecta, pero todo hecho con una narración como súper tranquilita, música de fondo así como ambiental, es como estado de guía.
+- [47:05] Y ya le están poniendo unos bonitos que son así, súper tranquilos.
+- [47:09] Con la serotonina abajo.
+- [47:10] Para que no accedan al tema de la...
+- [47:12] Sí, eso.
+- [47:13] Sí, sí, sí, para que no me generen ansiedad y adicción.
+- [47:16] Son como bonitos cocinando.
+- [47:17] Sí, son como de papel.
+- [47:19] Sí, andan lejos.
+- [47:21] Sí, sí, los cachos.
+- [47:23] No, no, no, sí, sí, cachos.
+- [47:24] La serotonina, ¿no?
+- [47:26] Quien lo empieza a ver va a tomar el celular de una.
+- [47:28] Se aburre.
+- [47:29] Sí.
+- [47:30] Eso no me pasa.
+- [47:32] Pero esa serie recomendada, va.
+- [47:34] Voy a buscar.
+- [47:34] Cinco minutos.
+- [47:35] Ahí durmiendo. Después uno, yo dejo la tele para que se apague, bueno, se apagara sola y dejaba media hora y no me acordaba, ni 20 minutos después de la serie.
+- [47:47] Yo muchas veces me quedo a dormir con la tele también.
+- [47:50] Vamos a ver que se va a dormir mal a dormir con tele igual.
+- [47:52] A mí me encanta dormir con, mientras estoy cabeceando y...
+- [47:56] No, pero allí está viendo.
+- [47:57] Yo digo ya, un ratito más, después la apago, no, la apago no.
+- [48:02] Yo vi a mi abuelo y a mi mamá que hacían eso y decían, ¿por qué no la pagan?
+- [48:14] Era una persona luchando con no querer aceptar que ya le llegó la edad de que le da 6 centavos.
+- [48:23] Sí, me encanta.
+- [48:26] Ay, me da, me da risa cuando, sabes, no es horrible, los abuelos dicen, yo me levanto a las 6 de la mañana, pero pasa todo el día durmiéndose atrás.
+- [48:36] Cuando viven.
+- [48:40] Bueno, acá, volviendo ahí, siendo un poco fome, tenemos la parametrización, la parametrización de Netflix.
+- [48:47] Es netamente todo lo que se hace acá, bueno, lo teníamos pensado igual aplicar a los demás módulos, pero dejamos como la prueba acá, donde esto es una lista de todas las acciones que se hicieron dentro del módulo de contratistas.
+- [49:04] Entonces aquí te sale el dato que estaba antes, el dato que está después, como los metadatos que son los de la base de datos que se cambió, junto con la fecha y quién fue el responsable que lo hizo.
+- [49:14] ¿Y el metadato será necesario? Porque igual yo creo que es muy técnico.
+- [49:19] Sí, yo no lo voy a entender.
+- [49:20] Eso más que nada, como por ejemplo, el mensaje que te sale cuando te salen errores.
+- [49:25] Igual lo podríamos eliminar.
+- [49:26] O sea, sí, yo creo que igual podríamos crear como un menú para el soporte técnico.
+- [49:32] Sí, y que se envíe.
+- [49:33] Y que se envíe.
+- [49:34] Y ahí, por ejemplo, el antes y el después yo los dejaría dos cargos.
+- [49:37] Izquierda o derecha.
+- [49:40] Oye, no sé, tú me dirías.
+- [49:43] Y por telas.
+- [49:44] Ya, pero por ejemplo, ¿qué aparece bien antes y después? ¿La modificación de la proforma?
+- [49:51] Todo lo que se hizo en este módulo.
+- [49:52] Ah, perfecto.
+- [49:53] Todo, todo, todo. Por ejemplo, aquí fue el ingreso de una tarifa.
+- [49:56] Ya, sí, sí, me gusta la idea.
+- [49:59] Entonces, esto igual lo podríamos aplicar a los demás módulos.
+- [50:02] Sí, el metadato que sea enviable.
+- [50:04] Ya.
+- [50:06] Que ha sido así de rápido.
+- [50:11] Soporte.
+- [50:12] Sí, la idea es que tenga el mensajito de como enviar por correo electrónico.
+- [50:18] No, no es eso, aprieta eso un poquito.
+- [50:20] Coloca tu correo.
+- [50:23] Eduliar a cartas.
+- [50:23] Un punto, un punto, que igual que hay que informar, lo agarra de la plataforma.
+- [50:27] Sí.
+- [50:28] Y si lo hace del mismo sistema, no sale el detalle.
+- [50:33] Sí, a nosotros nos sale el detalle.
+- [50:35] Sí, sí, sí.
+- [50:36] Buenísimo.
+- [50:37] Entonces te igual lo ponemos.
+- [50:38] Pero deja lo limitado a dos días.
+- [50:42] Abotosos intentos.
+- [51:12] Aquí lista las proformas, aquí antes las teníamos solamente para que dejara las facturadas, pero con la última reunión que tuvimos pasan las aprobadas, que todavía no tienen factura, o sea que el estado definitivo, y las que tienen factura.
+- [51:29] Ahí están las dos, y estos son como te digo informativos solamente, lo que entra es lo que está en esta verde.
+- [51:36] Y aquí uno los puede maximizar así, o también lo dejamos aquí con estos botoncitos para que sea como un poco más rápido cerrar y abrirlo.
+- [51:43] Y ahí si yo me voy al módulo de editar y eliminar, aquí me debería aparecer limpio.
+- [51:47] Exactamente, exactamente.
+- [51:49] Acá, ahora viéndolo así, no sé si por ejemplo acá sería útil en estos que son informativos,
+- [51:54] que esté el botón de enviar notificación interna y por correo.
+- [51:58] Más que nada porque, no sé, si yo acá y digo, oye, esta proforma está en borrador, ¿por qué?
+- [52:03] ¿Y si deberían aprobarla? ¿Cómo pueden notificar? ¿O a la persona que tiene que aprobarla o al que la genera?
+- [52:09] Ya.
+- [52:10] ¿Le agregamos el botón de notificar?
+- [52:11] Sí. Es una barbaridad del sistema, ¿cierto?
+- [52:14] No.
+- [52:15] Ya.
+- [52:15] ¿No?
+- [52:16] O sea, que como pedir tantos detalles quizás eso no es tan necesario, pero si lo pueden poner, feliz.
+- [52:24] Es que mientras, por ejemplo, el sistema de notificaciones ya lo tenemos construido,
+- [52:30] Entonces lo replicamos del otro módulo para que aquí como que tome lo que se muestra y ahí se viene un poquitito el trabajo de programación como de eso que ya se construyó, reutilizar ese mismo objeto para este concepto como que vendría a ser como por ejemplo el envío de esta data.
+- [52:46] Igual sería bueno como un máximo de viso, porque si no acaba que manden más.
+- [52:53] Pero igual queda toda la otra salida.
+- [52:57] Sí, se sale con el viso.
+- [52:58] O sea, al final en ese traspaso contable lo van a ver la jefatura, ¿no?
+- [53:05] Por ejemplo, y el componente de notificación va a ser único en todo el sistema.
+- [53:09] Entonces, si bien se va a abrir la ventanita desde acá, pero es lo mismo que van a ver en los otros módulos para notificar.
+- [53:17] Entonces, por ejemplo, si yo desde este módulo hice 20 envíos, la otra persona que le llegaron esos envíos va a ver y va a tener 20 trazabilidad de una misma persona que le envió.
+- [53:26] Entonces igual se captura parte del correo, ¿no?
+- [53:31] Acoso laboral.
+- [53:36] El botón de Incarinate.
+- [53:40] Bueno, y acá tendríamos la reportaría de ingresos.
+- [53:43] Aquí, bueno, en esta pantalla es un poquitito grande,
+- [53:45] pero aquí lo que tenemos son estos totalizados que vendrían a ser como del periodo completo
+- [53:50] y aquí vendrían a ser como totalizados de la semana del mes.
+- [53:54] Total de ingresos serían los diarios?
+- [53:57] Exacto, que vendrían a existir en este periodo, que sería la lista de acá.
+- [54:04] Acá nos falta que salga uno, ahí están los seis.
+- [54:08] Entonces, este sería como el detalle por semana, netamente para tenerlo ahí como, no hay ningún detalle.
+- [54:15] Y acá aplicamos esta vista de calendario que le faltan un poquitito de detalles,
+- [54:21] ¿Qué es? Que es como para poder ir viendo por día de manera rápida la lista.
+- [54:25] Por ejemplo, aquí, ¿qué le falta? Un total para que te diga cuántos son los ingresos diarios de ese día.
+- [54:29] Porque ese numerito es la fecha.
+- [54:32] O sea, en un momento de darle clic acá, aparecen los ingresos diarios.
+- [54:38] Buenísimo.
+- [54:40] Y las labores por centro de costo igual.
+- [54:41] Nos pasamos la reportería que nos enviaste para poder construirlo, así que está dentro de lo mismo.
+- [54:47] Acá, por ejemplo, volvemos al mismo tema que teníamos delante.
+- [54:50] Esto sería bien que sea mes y año solamente, porque aquí igual...
+- [54:58] Sí, mes y año.
+- [54:59] Porque aquí es netamente periodo, no tiene como día...
+- [55:03] Sí, mes y año.
+- [55:04] Perfecto.
+- [55:24] Y aquí vendría a ser lo que es el control de la producción.
+- [55:28] Ya está, también lo construimos netamente en dato informativo, no muestra detalle el doble clic.
+- [55:33] Ya.
+- [55:33] ¿Qué más que nada como por contratista, folio, centro de costo, faena? Bueno, como son datos opcionales...
+- [55:41] Eso sería igual como un incluso diario agrupador.
+- [55:44] Sí, ya, sí, exactamente.
+- [55:48] ¿Hay algo, algún reporte, alguna acción que se nos esté escamando? Siento que se lo pregunto tanto en el día.
+- [55:57] Yo encuentro que no, que en este módulo no hay nada que hacerle adicional.
+- [56:01] Habría que revisarlo con la persona que lo ha utilizado entonces.
+- [56:04] Sí, para ver que esté listo y a cómo ingresar la información.
+- [56:08] Perfecto.
+- [56:09] Chiquiaba el tiro.
+- [56:11] ¿Tú, Fran, crees que falta algo?
+- [56:13] A ver si aquí firmen un contrato y digan que no falta nada.
+- [56:21] ¿Contrato?
+- [56:23] No, porque aquí está el detalle de los diarios, está como sacarlo por proforma.
+- [56:28] Lo que habría que cambiar es el tema de las aprobaciones, que sea la proforma y que la proforma aprobada se pueda editar,
+- [56:35] Pero la que está asociada no.
+- [56:38] La factura no y cambia el orden de la asociación.
+- [56:41] Sí.
+- [56:42] ¿Y la otra arriba?
+- [56:44] En el módulo anterior creo que era la que estaba rotada con...
+- [56:50] No, no quitaría, creo que era.
+- [56:52] ¿No quitaría?
+- [56:53] Sí, no quitaría.
+- [56:56] ¿Arriba?
+- [56:57] Ah, no, no, no quitaría.
+- [56:58] ¿Pasa y cierre?
+- [57:06] Que fuera proforma primero y después ingreso.
+- [57:08] Cambiarlo como de orden.
+- [57:09] Ya.
+- [57:10] ¿Y dónde?
+- [57:11] ¿Arriba?
+- [57:12] ¿Los totalizados?
+- [57:13] Para contratistas, el monto, después dice cuántos contratistas trabajaron, y después dice, pasa como proforma porque se ha marginalizado.
+- [57:22] Y el ingreso es más detallado.
+- [57:25] ¿Cuál sería el orden entonces?
+- [57:27] Primero proforma y después ingreso.
+- [57:29] A verlo así como de orden.
+- [57:34] Si yo aprieto proforma, más van a salir las tres, ¿cierto?
+- [57:37] ¿O no?
+- [57:38] Como filtro, está bueno.
+- [57:39] Como detalle.
+- [57:40] Aquí, por ejemplo, solamente aparece el reporte del ingreso diario.
+- [57:47] Aquí lo que podríamos hacer sería que te lleve a las proformas.
+- [57:53] Al darle clic acá.
+- [57:54] Sí, porque así, por ejemplo, si abro de la semana uno, que me parezca el tiro lo de la semana.
+- [57:59] Como que fueran filtros.
+- [58:01] Ah, estos de acá como filtros rápidos.
+- [58:02] Claro.
+- [58:03] Sí, sí, no, porque ir a proforma normalmente se equivocan, darle clic y te cambia la pantalla.
+- [58:10] Me da toque el HDMI y haga eso.
+- [58:12] Se reinicia.
+- [58:13] Entonces aquí filtro rápido que te deje la semana...
+- [58:18] O sea, como que yo aprieto y me sale el detalle.
+- [58:20] Ya, sí, sí. O que te sea el caso de la venta esa semana acá, ¿no?
+- [58:23] Claro.
+- [58:23] Ya. Y este total de proformas también dijiste que era un filtro, ¿no?
+- [58:29] Sí. Y que fuera el otro.
+- [58:31] Que te muestre el de acá.
+- [58:33] No, no, no, que... Claro, o sea que si me salen tres proformas, si yo lo aprieto me aparezcan las tres proformas abajo.
+- [58:39] Como que si esos fueran filtros rápidos, pues yo se ve el detalle abajo.
+- [58:42] Que apriete el cuadrado y salga el detalle abajo.
+- [58:44] Claro.
+- [58:45] Ya, pero ahí solamente estamos, como es el reporte de ingresos,
+- [58:47] estamos dejando solamente los ingresos diarios visibles.
+- [58:52] Claro.
+- [58:54] Entonces tendríamos, no sé si sería mejor que generaran una imagen
+- [58:57] que sea de reporte de proformas.
+- [59:01] Sí, también.
+- [59:01] ¿Cómo no entendí?
+- [59:04] Porque lo que dice es que cuando hagamos clic acá muestra las proformas.
+- [59:09] Claro.
+- [59:10] Pero esta lista de acá es de los ingresos diarios,
+- [59:14] el reporte de ingresos diarios.
+- [59:17] ¿Habrán ya que agregar en las columnas el número de proformas?
+- [59:20] Ya está. Las que tienen asociadas lo tienen.
+- [59:25] ¿Cómo?
+- [59:26] Por ejemplo, acá hay tres proformas que se repiten.
+- [59:29] La 023, la 020 y la 021, que son las que salen acá.
+- [59:33] Y entonces arriba te salen totalizados los ingresos diarios.
+- [59:36] Sí.
+- [59:36] Ah, perfecto.
+- [59:37] Estos son los 20 ingresos diarios.
+- [59:39] Ya.
+- [59:39] Igual podríamos hacer uno que sea como para reportes, o sea, para proformas.
+- [59:43] Ya.
+- [59:44] Y ahí también tendría como que ser totalizado al revés de los ingresos diarios.
+- [59:48] Claro.
+- [59:49] ¿Y eso es mensualizado?
+- [01:00:06] Sí, este es del periodo actual.
+- [01:00:09] Ya, perfecto.
+- [01:00:12] ¿Y si yo quiero sacar del periodo anterior?
+- [01:00:15] Tendríamos que seleccionar acá el periodo anterior.
+- [01:00:18] Ah, me tendría que cambiar de mes.
+- [01:00:20] Sí, o podríamos dejar igual de que tener el filtro de todos acá, como lo habíamos dicho en el otro,
+- [01:00:28] Y que te cargue los de este año, y si quieres ver de años anteriores, que tengas que seleccionarlo manualmente.
+- [01:00:35] Ya. Lo ideal es que toda la reportería uno pueda filtrar por fecha, sin tener que cambiarse de mes.
+- [01:00:49] Ok.
+- [01:00:50] Vamos a aplicar un filtro, ese botoncito, flechita, que vaya recorriendo, por ejemplo, seleccionas el año.
+- [01:01:06] Y de octubre, y te pincha la fecha y va moviéndose en un periodo.
+- [01:01:10] Ah, de caja.
+- [01:01:11] ¿De caja?
+- [01:01:14] Sí.
+- [01:01:16] Se me había perdido una palabra que quería escribir.
+- [01:01:18] Carlos, te escribí y te estaba molestando.
+- [01:01:20] ¿Puedo hacer dos cosas al mismo tiempo?
+- [01:01:24] Y estoy escribiendo así cualquier cosa.
+- [01:01:27] Hace ruido, no me lo puedo creer.
+- [01:01:32] ¿Cómo que estoy en vivo y me ven?
+- [01:01:45] Entonces aquí, lo mismo me imagino con los filtros, ¿verdad?
+- [01:01:48] Sí.
+- [01:01:48] Ya, lo vamos a replicar en la reportería para que...
+- [01:01:52] De hecho, aquí este buscar está horrible.
+- [01:01:55] Está horrible este buscar, lo vamos a corregir.
+- [01:02:13] Bueno, ahí es el momento de generar el traspaso y el cierre.
+- [01:02:17] Aquí arribita.
+- [01:02:19] Esto también lo habíamos visto.
+- [01:02:21] Te sale como una lista de lo que va a entrar al cierre con un pequeño totalizado.
+- [01:02:25] Y aquí te pregunta las cuantas debe haber.
+- [01:02:28] Ya. Dependiendo de las que selecciones, las puedes guardar para que sean esas siempre por defecto, con la opción de poder cambiarla a futuro, y en la glosa hay que poder elegir un detalle.
+- [01:02:39] No sé si, por ejemplo, aquí en la glosa faltará agregar otro tipo de detalle.
+- [01:02:44] No. Ahí sería cero contable, contratista, y el mes.
+- [01:02:51] Ya. Bueno, aquí igual está la opción de cómo agregar el texto en caso de que sea necesario.
+- [01:02:56] ¿Y ese que precarga debería quedar bloqueado?
+- [01:03:02] Si yo hago el trasmuezo de cierre.
+- [01:03:04] No, por ejemplo, se puede borrar, ¿cierto?
+- [01:03:07] O sea, se puede dejar guardado y la próxima vez te va a salir el que dejaste guardado y te da la opción de cambiarlo.
+- [01:03:14] No, no, es agrosa.
+- [01:03:16] ¿Ah, la agrosa?
+- [01:03:17] La puedo borrar completa.
+- [01:03:18] Esta está automática y la puede editar completa.
+- [01:03:19] Y después de ese texto que precarga, ¿se queda bloqueado? ¿Solamente una adicional se agrega o...?
+- [01:03:29] O sea, por ejemplo, nosotros creo que el que tenemos automatizado es centralización, contratista y el mes.
+- [01:03:41] Aquí más que nada yo me pensaba en caso de que, por ejemplo, no sé, hubiera algún cierre que por algún motivo tenga que ser sin alguna confirmación de algún contratista, dejarlo así como pendiente, cierre, tal, contratista.
+- [01:03:53] Lo que pasa es que el cierre de los módulos se hace, por ejemplo, al mes siguiente del cierre contable.
+- [01:04:09] Entonces, un ejemplo, tengo ahora hasta el 31 del 10 para ingresar la información del mes que corresponde.
+- [01:04:16] Y yo los cierres contables los empiezo el 1 de noviembre.
+- [01:04:20] Entonces, siempre debería estar al momento del traspaso hacia la contratista todo ingresado.
+- [01:04:26] No debería haber un pero. Ya fue lo real.
+- [01:04:34] ¿Y eso ocurre en la vida real?
+- [01:04:37] Cuando yo estaba en la vida.
+- [01:04:41] Eso es lo pasado.
+- [01:04:44] Entonces podríamos, igual la consulta, Sergio, por ejemplo, esta glosa que sea editable o que podamos, o sea, que quede como bloqueada y se le agregue una adicional.
+- [01:04:54] Y que venga como ese prefijo ahí en caso de que lo vaya a utilizar.
+- [01:05:13] ¿Emojis no se pueden agregar?
+- [01:05:15] No hay de ello, mira.
+- [01:05:18] Ya, por ejemplo, la glosa es contabilización contra listas de mes, año.
+- [01:05:26] ¿Lo dejamos así?
+- [01:05:28] Contabilización contra listas.
+- [01:05:29] Y acabo de echarme que en septiembre no está cerrado.
+- [01:05:35] ¿Y quién cierra?
+- [01:05:37] La grita.
+- [01:05:37] ¿Tienen lactosa?
+- [01:05:46] Sí, pero la pastilla...
+- [01:05:48] ¿Tienes que comerte una empanada para probar la pastilla?
+- [01:05:54] Ah, después se muere.
+- [01:05:57] Sergio en el baño.
+- [01:06:00] No es verdad.
+- [01:06:01] Después me voy en camino y no llego.
+- [01:06:03] Por tu seguridad, no vas a comer toda la...
+- [01:06:05] Bueno, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no.
+- [01:06:13] Era contabilización, contratistas, el cierre, ¿verdad?
+- [01:06:19] Contabilización, contratistas, mes, año.
+- [01:06:28] Yo soy igual, prefiero el Ikea rígido.
+- [01:06:32] No, porque si después uno filtra y se va a entrar en los meses que están cerrados.
+- [01:06:37] A mí me gusta la grosa más estandarizada, así puedo buscar más rápido.
+- [01:06:43] No, pero era muy creativa, que la da rígida, pero que daba la opción de agregar más.
+- [01:06:47] Ah, sí, sí, sí.
+- [01:06:49] Por ejemplo este, lo puede editar todo.
+- [01:06:54] Este es el texto que se agarra como por defecto, en caso de que no necesite modificar, guardar.
+- [01:06:58] Y que si quiere estándar y si alguien quiere ponerle su cosecha, va a depender de cada...
+- [01:07:03] ¿Cómo se podría buscar para adicionar?
+- [01:07:05] Un comentario también podría hacer y dejar la clasa fija y el comentario no aparecería en el...
+- [01:07:11] Quizá en el documento, aparecería solamente acá en el cierre.
+- [01:07:18] Es que al final no sé en qué puede influir mayormente un comentario adicional o algo, porque es cierre contratista, ¿no?
+- [01:07:24] Porque, claro, en el mundo ideal, como tú dices, el cierre debería no abrirse, ¿no?
+- [01:07:31] Exacto. O sea, igual, lo que pasa es que nosotros actualmente trabajamos con la reversa de cuando tenemos que abrir el cierre.
+- [01:07:39] Un ejemplo, yo cerré contratista y me dicen, no, es que falta modificar algo, ya.
+- [01:07:43] Hago la reversa del comprobante contable, después tengo que abrir el mes y ahí recién pueden editar, porque una vez que yo contabilizo cierro el mes para que no puedan editar.
+- [01:07:53] Entonces en ese caso, por ejemplo, uno hace la reversa en el otro módulo, ¿verdad?
+- [01:08:02] Actualmente lo hacemos en el módulo de contabilidad.
+- [01:08:04] ¿En contabilidad sería la reversa?
+- [01:08:05] Buscamos el comprobante y reversamos el comprobante.
+- [01:08:08] Y ahí, por ejemplo, los permisos, por así decirlo, de aquí el jefe que va a ser, por ejemplo, de contratista, ¿tendría la posibilidad de abrir directamente desde acá el mes?
+- [01:08:24] ¿O tendría que pedirlo a Contabilidad que hagan el reverso primero y ahí él tener la opción de tener el mes para abrirlo y editar algo?
+- [01:08:30] Lo que pasa es que, por ejemplo, el traspaso contable cierre no está habilitado para los analistas.
+- [01:08:35] Está habilitado solo para el jefe de fatura.
+- [01:08:38] Entonces, dentro de la parametrización, un ejemplo, si la FRA necesitará editar algo, me va a tener que pedir, no a mí que reverse la contabilización porque yo lo puedo hacer, pero para meter algo en el mes, tiene que hacerse pedir un permiso como ahora en el mes.
+- [01:08:57] Ya, lo preguntaba más que nada para que, si está registrado ya un cierre, a menos que se haga la reversa, te permita hacer la apertura.
+- [01:09:04] Claro, sí. Tiene que estar hecha la reserva para hacer la apertura. Una vez que está cerrada, los profesionales van a quedar todos entre las sesiones.
+- [01:09:18] Entonces sería, la vuelta completa sería, por ejemplo, el jefe se entera de que tiene que hacer una modificación por X motivo,
+- [01:09:26] el jefe, él tiene que solicitar a la contabilidad que haga la reserva o lo puede hacer él. Buena pregunta.
+- [01:09:34] En mi mundo, yo...
+- [01:09:36] Es que soy la misma persona.
+- [01:09:40] Soy la misma persona.
+- [01:09:41] Hola, yo, me voy a dar permiso.
+- [01:09:43] Toma, yo.
+- [01:09:45] Claro, es el tema.
+- [01:09:46] Soy yo de nuevo.
+- [01:09:49] No, es que él es la misma persona.
+- [01:09:53] Sí, pues, o sea...
+- [01:09:55] Yo puedo abrir el mes.
+- [01:09:59] Entonces, en ese caso, cuando el mes esté cerrado,
+- [01:10:01] Y seas el administrador de contratistas, que te aparezca la opción de abrir el mes, que te salga una advertencia de que se va a generar la reversa de tal glosa, aceptar, y ahí que automáticamente se genere...
+- [01:10:16] Ahora vámonos como a la operación, si tú se tomas y pones una proforma y quieres editarla, él no va a tener acceso a Contabilidad.
+- [01:10:23] Exacto, por eso lo pregunté.
+- [01:10:24] Entonces al final él va a tener que, si quiere editar el mes, va a tener que mandar una notificación de que necesita editar el mes.
+- [01:10:31] Sí, porque si él la va a abrir y se va a la caja.
+- [01:10:34] No, no.
+- [01:10:37] Entonces ahí sí, pues me tendría que llegar una notificación para yo hacer la reversa y abrirle el mes.
+- [01:10:44] Y ahí él pueda operar tranquilo.
+- [01:10:46] Perfecto, entonces en ese caso sería como acá, cuando ya estás a los años,
+- [01:10:51] debería salir el botón de abrir mes y eso desencadenar como una notificación interna hacia ti,
+- [01:10:57] que la puede hacer que llegue por correo o por acá por el mismo sistema,
+- [01:11:00] Y a ti te va a llegar, hola, ¿puedes generarme esta reversa contable por motivo tanto?
+- [01:11:06] Y tú tendrías que darle solamente a aceptar.
+- [01:11:10] O sea, por ejemplo, acá debería darle la opción a la persona que ingresa solicitar abrir mes.
+- [01:11:17] ¿La persona que ingresa te refieres al jefe?
+- [01:11:22] Al jefe de abastecimiento.
+- [01:11:24] Por eso, porque el jefe de abastecimiento en este caso...
+- [01:11:26] Es que él no va a tener la opción de cerrar o abrir mes.
+- [01:11:29] Esta pantalla no la aparece.
+- [01:11:31] Ah, ok.
+- [01:11:32] ¿No hace el traspaso contable? Solo hace la solicitud.
+- [01:11:40] Entonces, le va a salir como el mes está cerrado y debería salir el botón solicitar apertura.
+- [01:11:47] Solicitar apertura, claro.
+- [01:11:48] Y ahí te va a llegar la notificación a ti.
+- [01:11:50] Sí, y ahí voy a saber que tengo que conversar con él.
+- [01:11:54] Y por el botón se tenga la opción de una observación.
+- [01:11:58] Claro, con un comentario.
+- [01:11:59] Claro, claro.
+- [01:11:59] Solicitar la apertura del mes, comentario.
+- [01:12:02] Y a ti, por ejemplo, cuando te llegue esa notificación, que, así como imaginando, que tú le hagas clic, que se te abra como una pantallita que diga el mes, el motivo, el monto, obviamente, del mes total que se tiene que abrir, y tú que tengas solamente la opción de generar el asiento de reversa, ¿verdad?
+- [01:12:26] No sé si alguien puede llamar al asiento de reversa, o sea, indicándome que lo puedo buscar en el reversa.
+- [01:12:35] O sea, yo creo que ahí debería, si hace esa solicitud, más que nada en los asientos, o sea, que pueda ir directo al asiento, si sabéis cuál es el asiento de reversa.
+- [01:12:45] Por eso lo hacen, por eso.
+- [01:12:46] Y también que, por ejemplo, alguna alerta de todos los asientos que están con solicitud de reversa.
+- [01:12:52] Que te lleve a los asientos contables filtrados con...
+- [01:12:56] Claro, como notificación, ¿cierto? En el sistema, tú pinchas y te va el asiento ya que vaya a reversar y que se habilite el botoncito de reversar.
+- [01:13:04] Claro.
+- [01:13:05] Porque lo que creo que sea necesario agregar, bueno, se podría agregar también la grilla, pero esos que están con esa solicitud, se habilita el botón de reversar.
+- [01:13:13] Pero, por ejemplo, ¿se le hace fácil identificar el asiento?
+- [01:13:19] Sí, porque sería ideal que si la persona dice, no sé, puedo abrirme, no sé, septiembre 2026, me aparezca la centralización de septiembre.
+- [01:13:30] Entonces yo la aprieto, la reverso y abro el mes contable.
+- [01:13:33] Exacto.
+- [01:13:34] Sí, sería ideal.
+- [01:13:37] Así no tengas que ingresar manualmente, que más que nada el mensaje con la notificación venga directo.
+- [01:13:42] El mensaje de mes.
+- [01:13:44] Está pasando por el fondo de mí.
+- [01:13:45] Ahora, ¿todos los movimientos que vieron asientos están controlando el periodo de este abierto?
+- [01:13:53] Sí, van por el periodo seleccionado en la parte de arriba de cada uno de los asientos.
+- [01:14:00] Entonces, en ese caso utilizaríamos esa notificación también para que no tengas que buscarlo manualmente.
+- [01:14:05] Quizás podría aparecerte directamente filtrado esa glosa, así como con un aviso que tenga, como alguien que ha tenido la apertura.
+- [01:14:18] Por ejemplo, mira, acá, que te llegue la notificación, te ha solicitado una apertura a tal persona.
+- [01:14:26] Claro.
+- [01:14:27] Que tú le des clic y te lleve directamente acá, donde están en contabilidad, los comprobantes de asientos,
+- [01:14:34] Que desde venga ese ya filtrado y que tenga aquí como, por ejemplo, un signo de exclamación que alguien te solicitó la...
+- [01:14:42] Por ejemplo, si tú pinchas, pincha ahí.
+- [01:14:45] ¿Acá?
+- [01:14:46] Que te abra el asiento de uno y abajito el botón reversar.
+- [01:14:50] También.
+- [01:14:51] Así, así tal cual.
+- [01:14:52] ¿Sí?
+- [01:14:52] Que dice no la reversar.
+- [01:14:53] ¿Sí? ¿Sí?
+- [01:14:54] Que te abra directamente este asiento.
+- [01:14:57] Sí.
+- [01:14:58] Sí.
+- [01:15:00] Perfecto.
+- [01:15:01] Y obviamente cuando manda enviar la solicitud, debería quedar en la trazabilidad de ese asiento, que hizo la solicitud y quedó en reverso.
+- [01:15:11] Me la he declarado.
+- [01:15:14] Sí.
+- [01:15:15] Sí, de hecho.
+- [01:15:16] Sí, porque así sabemos que la reverso no corresponde al área.
+- [01:15:18] Claro.
+- [01:15:20] Si acá no tenemos trazabilidad en los asientos, vamos a tener que agregarla.
+- [01:15:27] Y por ejemplo, cuando se reversa, o en parte de la ignorancia, cuando se reversa un asiento, después se tiene que generar uno nuevo con el nuevo cierre de mes, ¿verdad?
+- [01:15:34] Ahí podríamos hacer de que tengan entonces el origen y cadena asociados, pues cuando se hizo un cierre, ver si es que, por ejemplo, un cierre de mes de contrarista está en la grosa, pero solamente tiene ese detalle.
+- [01:15:47] Acá podríamos darle clic en origen y cadena y ver la notificación y el nuevo asiento.
+- [01:15:54] ¿Pero será lo que quiere eso?
+- [01:15:56] O sea, ya cuando el asiento está anulado, reversado, ya ojalá no aparezca en alguna parte, pero no en la reportabilidad.
+- [01:16:03] Ojalá que todas las reportabilidades que bajemos ya sean solamente con los actualizados, con los válidos.
+- [01:16:11] Entonces no sería necesario deslazarlo, porque no tiene ninguna utilidad.
+- [01:16:18] Y existe el caso de que, por ejemplo, yo diga así como, ya necesito que abran este periodo porque me equivoqué en un contratista.
+- [01:16:26] Y después diga, no, ¿saben qué? No me equivoqué.
+- [01:16:29] Ah, sin generar una reserva, un reverso, perdón, una reserva.
+- [01:16:33] ¿Cómo?
+- [01:16:34] Por ejemplo, yo te digo, ¿cómo sabes que necesito? Te pido una notificación de que abres porque me equivoqué en algo.
+- [01:16:39] Y tú haces el reverso, y yo después te digo, no, sabes que estaba bien.
+- [01:16:48] No, pero puede pasar, ¿no?
+- [01:16:50] Sí, puede pasar.
+- [01:16:53] Y ahí en ese caso, igual hay que generar un nuevo asiento porque ya se solicitó la reversa de la anterior.
+- [01:17:00] Anular, reversa.
+- [01:17:00] Te decía como activar el...
+- [01:17:01] Anular, reversa, el reverso de la reversa.
+- [01:17:03] Anular, reversa, reversa.
+- [01:17:05] Entonces sí que, más que nada lo pregunto, porque pónganse ustedes en el caso de que un cierre pase tres veces y yo quiero saber el motivo del por qué se hizo el segundo o el primer cierre.
+- [01:17:19] Si no tengo historial, no voy a poder ver la notificación, quién hizo la solicitud, quién la hizo, quién abrió el periodo contable.
+- [01:17:26] Entonces igual de, por trazabilidad, igual deberíamos tener como ese detalle, pero no en esta lista, aparte.
+- [01:17:32] Y también quizás poder ver las glosas que quedaron reversadas.
+- [01:17:39] Sí, pero activar un reverso...
+- [01:17:42] No, eso no...
+- [01:17:44] Me ha pasado que es reversado y no hay que reversar.
+- [01:17:48] Es real.
+- [01:17:54] Que se active.
+- [01:17:55] Que se active.
+- [01:17:58] No pasó nada.
+- [01:18:00] Es que le iba a medir.
+- [01:18:01] Sí, un error menos.
+- [01:18:03] Porque claro, ahí por ejemplo, en ese caso yo lo veo y es como tendrían que tener como un historial de mal, en ese caso.
+- [01:18:11] No hay revaluación, no hay revaluación.
+- [01:18:13] Pero por trazabilidad, en ese caso, por ejemplo, si tú fuiste la que aprobó, la persona que cometió el error fue el que la solicitó.
+- [01:18:21] Exacto.
+- [01:18:22] Pero, ¿dónde veo eso? Ahí va como mi pregunta tan esencial. ¿Dónde podríamos tener la trazabilidad de eso?
+- [01:18:27] Porque si ese asiento que reversaron, viene con proforma, con toda la parabenalidad, flujo de aprobación y todo.
+- [01:18:36] Prácticamente al reversar el asiento tiene que abrirse todo eso, etc. ¿O no?
+- [01:18:41] Es que por el lado de contratistas...
+- [01:18:49] Es que al fin y al cabo lo que da con aprobación son las proformas.
+- [01:18:53] Y si tú necesitas abrir un mes es porque necesitas modificar una proforma
+- [01:18:58] O sea, un ingreso diario que tiene metido.
+- [01:19:00] Pero no tan solo puede ser proforma, porque también puede ser factura, venta.
+- [01:19:04] Es que, por ejemplo, en el módulo de contratista, claro, si me piden abrir un mes, porque ingresaron mal a una proforma.
+- [01:19:11] Claro, el contenido, por ejemplo, en ventas.
+- [01:19:14] Y si me piden abrir el mes, por ejemplo, en insumo, ahí me mueve bodega, si al final todo es una cadena.
+- [01:19:22] Y en ventas, en ventas me movería la orden de venta.
+- [01:19:35] ¿Y compra?
+- [01:19:36] Exacto.
+- [01:19:37] Entonces ahí, por eso preguntaba si al momento de reversar y no aplica la reversa, lo más sano sería como reversar la anulación.
+- [01:19:52] Reversar el reverso anulable.
+- [01:19:53] Claro, cambiar el estado del asiento.
+- [01:19:55] Claro.
+- [01:19:56] Y eliminar la reversa.
+- [01:19:58] Cambiar el estado del asiento.
+- [01:19:59] Es que al cambiar el estado del asiento, volvería a estar activo.
+- [01:20:02] Claro, y se elimina la reversa, el asiento de al revés.
+- [01:20:05] Claro, sí.
+- [01:20:07] O se deja.
+- [01:20:08] Sería como anular la reversa y cambiar el estado del...
+- [01:20:11] Ah, el asiento padre o...
+- [01:20:14] Claro.
+- [01:20:15] Aquí tengo una duda. Por ejemplo, cuando nosotros anulemos un asiento, ¿ese asiento se olvida, así como que se saca de la contabilidad de todo el módulo, o ustedes hacen el asiento de al revés?
+- [01:20:26] Eso es lo minudo porque, por ejemplo...
+- [01:20:29] ¿Pero si necesitas las dos formas de reversar?
+- [01:20:31] Por eso, porque actualmente acá se hace el asiento al revés.
+- [01:20:35] Entonces, por eso me queda reversa-reversado, reversa-reversado, reversa-reversado.
+- [01:20:40] Que estaría bien.
+- [01:20:41] Claro, pero si yo lo quiero activar, sería la otra forma la correcta.
+- [01:20:46] No, porque, o sea, se podría...
+- [01:20:48] O sea, anular la reversa sería eliminar el asiento y cambiar el otro como activado.
+- [01:20:55] Es que esa es mi duda, porque si no lo quiero en la reportabilidad y lo quiero solamente como un dato informativo, sería como ese asiento eliminarlo de que aparezca en los reportes. ¿Se entiende?
+- [01:21:07] ¿El anulado?
+- [01:21:09] El anulado, claro. Pero no que tenga la reversa hecha. Porque la reversa es para dar efecto cero contablemente.
+- [01:21:16] Claro.
+- [01:21:17] Pero si yo lo estoy como segregando de la información, no es necesario hacerle la reversa. Y ahí sí sería viable activar el asiento.
+- [01:21:23] Es como cambiarlo de base.
+- [01:21:53] Está en estado reversado, que es como que salga de la información, completo, pero que sea un uso al asiento, no que sea acá a la reversa.
+- [01:22:01] Ya, lo entiendo. Sí, eso es más simple.
+- [01:22:04] En ese caso es lo que se me ocurre, porque igual hay que tener trazabilidad de todo eso y verlo,
+- [01:22:09] y como dice María que no salga en los reportes, aquí yo creo que nos va a faltar el historial.
+- [01:22:15] No, hay que agregarle trazabilidad, sí o sí, del lado asiento.
+- [01:22:21] Eso más que nada va a mostrar los cambios de estado.
+- [01:22:24] O sea, por ejemplo, igual todos los que se han reversado y se vayan como a esta base de datos de eliminados, igual van a quedar contra esa habilidad de que lo reversó.
+- [01:22:33] Eso es lo que yo me pregunto.
+- [01:22:34] Sí, igual va a quedar y igual le tengo que poner una observación. Se reversó por error en tantos, se solicitó tantos, cualquier cosa. Que quede el detalle.
+- [01:22:43] Pero esa reserva que viene amarrada con toda una línea atrás, ¿qué va a pasar con eso? Por ejemplo, si la...
+- [01:22:52] Lo que pasa es que en el módulo de contratista, al abrir el asiento, el periodo,
+- [01:23:12] sí, porque se liberaría todo lo que tiene la centralización.
+- [01:23:18] O sea, vuelve al origen.
+- [01:23:20] Sí, vuelve como que nunca hubo una centralización, se suelta.
+- [01:23:23] Entonces hay que definir bien qué es lo que va a pasar por cada módulo.
+- [01:23:28] Cuando se anule o se...
+- [01:23:29] Sí, se anule o se anule o no se anule.
+- [01:23:31] Sí.
+- [01:23:31] En todos los módulos que se centralizan, se sueltan.
+- [01:23:39] Sí.
+- [01:23:42] ¿Todo el sistema que se va a centralizar, sí?
+- [01:23:44] Sí, todo el sistema que se va a centralizar.
+- [01:23:46] Porque la centralización es de contratista y pensando cuando yo apruebo la...
+- [01:23:52] Cuando yo apruebo la proforma, reconozco el costo.
+- [01:23:56] Ahí, por ejemplo, ¿qué pasa si, por ejemplo, el contratista le pide abrir el periodo, ¿ya? Y compras, para ellos fue cerrado. Y si el contratista, tú le pides, tú le liberas ese periodo, eso va a impactar a todos los otros módulos. Compra, venta.
+- [01:24:20] Sí.
+- [01:24:21] Entonces, podrían cometer un error en generar un movimiento con el periodo que se supone que para ellos está cerrado.
+- [01:24:26] Sí, de hecho, cuando quieren modificar una proforma que está asociada al contratista, yo tengo que partir regresando el ingreso de la factura.
+- [01:24:40] Porque al yo reversar la factura, se libera la proforma.
+- [01:24:45] Y ahí recién se puede activar la proforma para editarla.
+- [01:24:51] Está todo amarrado.
+- [01:24:52] Ah, claro.
+- [01:24:52] Sí.
+- [01:24:52] En el módulo de contratistas lo que manda es la proforma para la centralización, porque yo con la proforma reconozco el costo y con la factura solamente meteo las cuentas puentes que serían facturas por recibir contratistas, que eso ya va en el módulo de compras.
+- [01:25:22] Pero donde yo reconozco el gasto es en el módulo de contratista.
+- [01:25:35] ¿Podríamos hacer un dibujito de cómo, en caso de anulación, de reversa, de dónde tenemos que importar?
+- [01:25:45] Sí, pues si la proforma está asociada a la factura, habría que impartir reversando la factura.
+- [01:25:49] Si se reversa la factura, se genera...
+- [01:25:51] Ahí se suelta la proforma y ahí se puede editar la proforma.
+- [01:25:55] Y se anula, queda como anulado el asiento.
+- [01:25:57] ¿En realidad la factura no queda anulada?
+- [01:26:03] No, la factura igual habría que reversarla para poder soltar la proforma, porque ya está asociada la factura.
+- [01:26:09] Entonces uno tendría que, por ejemplo, primero solicitar la apertura del mes. Se hace todo este sistema.
+- [01:26:22] Lo ideal es que no se equivoque.
+- [01:26:23] Claro, el mundo ideal, el mundo ideal. Entonces sería como ya hacer este ajuste que vendría a ser a la glosa que se había creado, después cuando yo quiera hacerla, ya tengo el web abierto, tendría que, si la proforma tiene una factura, tendría que solicitar que esa factura quede anulada.
+- [01:26:46] Sí, mira, el flujo es así. Se hacen los ingresos diarios y esos ingresos se van a asociar a una proforma.
+- [01:26:53] Ya, una vez que se asocian a una proforma y se apruebe, se reconoce el gasto o el costo, que en este caso sería mano de obra contratista.
+- [01:27:01] ¿La aprobación es la que...?
+- [01:27:03] La aprobación manda el gasto del mes, en el módulo de contratista.
+- [01:27:07] Sería mano de obra contratista contra facturas por recibir contratista. Ese es el asunto que se hace.
+- [01:27:12] Entonces, una vez que yo centralizo, eso lo reconozco.
+- [01:27:19] Ahí estaríamos duplicando un paso.
+- [01:27:21] ¿Al centralizar se genera el asiento?
+- [01:27:23] Sí, al centralizar se genera el asiento contable.
+- [01:27:26] Que viene con todas las proformas.
+- [01:27:27] Un gran asiento con todas las proformas.
+- [01:27:29] Con todas las proformas.
+- [01:27:30] Entonces, yo en el módulo de contabilidad, cuando ingreso la factura en proveedor,
+- [01:27:37] se me hace facturas por recibir el contratista, proveedor, el contratista que es.
+- [01:27:41] Entonces, ahí me queda en el mes el gasto con el proveedor y se me meten las facturas por recibir. ¿Qué pasa cuando la factura cae al mes siguiente? Me queda pendiente la cuanta facturas por recibir el contratista. Y ahí yo sé que me falta una factura por recibir de ese contratista. Pero el gasto yo lo reconozco en el mes.
+- [01:27:59] Entonces, si yo quiero reversar una, que sería raro reversar una proforma, a menos que se haya equivocado el ingreso diario.
+- [01:28:08] Entonces, ahí tendría que reversar la factura para soltar esa proforma, hacer la reversa de la centralización del mes, y ahí recién la proforma estaría para editar.
+- [01:28:20] O sea, si alguien se equivoca mandando el ingreso diario, se entera el jefe, se entera la contabilidad.
+- [01:28:24] Todos, sí, siempre.
+- [01:28:27] ¿Se enteran compras también?
+- [01:28:30] Todos.
+- [01:28:33] Pero acá somos poquitos, somos poquitos, pero no se enteran.
+- [01:28:38] No, pero sí, es que todos los módulos son complicados.
+- [01:28:42] O sea, todos se centralizan en contabilidad, pero cada módulo que se alimenta contabilidad
+- [01:28:48] hay que soltar primero en la contabilidad para poder regresarlo a otro módulo.
+- [01:28:52] Y en ese caso, por ejemplo, entonces la vuelta sería contabilidad,
+- [01:28:55] Claro, después en compras tendríamos que hacer con la factura la reversa y ahí recién podrían modificar el ingreso diario de la proforma.
+- [01:29:03] Claro, la única forma sería que justo en la proforma que quieren modificar no esté asociada a factura.
+- [01:29:09] Claro, que todavía no había llegado.
+- [01:29:10] Y ahí no habría que reversarla en contabilidad y podría reversarse directamente al módulo.
+- [01:29:15] Ese sería como la sección.
+- [01:29:16] Solamente para ajustar el gasto, porque en realidad si te asocian a una factura sería como ya caer de madura, casi que va a tener el ingreso.
+- [01:29:28] ¿Pasa?
+- [01:29:29] Sí.
+- [01:29:33] Sentí ese gustito de como enojo ahí.
+- [01:29:37] Sí, porque ya se tiene la factura y ya como te equivocas ahí en digital.
+- [01:29:45] Y entonces el cierre.
+- [01:29:48] Esa es la pasión.
+- [01:30:19] Lo más corta posible.
+- [01:30:22] Sí, es el... ¿dónde?
+- [01:30:25] Sí, sí.
+- [01:30:27] Entonces, quizás soy un poco reiterativo, pero no, está muy claro.
+- [01:30:31] No tiene que quedar trazabilidad visible en los módulos,
+- [01:30:34] pero yo igual encuentro que, por ejemplo, si uno va a hacer la apertura de un mes,
+- [01:30:39] debería haber un historial de la apertura y de cierre del módulo.
+- [01:30:44] O sea, de la apertura no es necesario.
+- [01:30:47] Ah, claro, claro.
+- [01:30:48] Pero del cierre sí, o sea, pero por ejemplo también nos pasa que si yo ya voy cerrando los módulos mes a mes y yo quiero modificar, que ha pasado, estoy en septiembre y quiero modificar mayo, tengo que reversar todo hasta llegar a mayo, no me dejo reversar un mes y tengo el siguiente cerrado.
+- [01:31:13] ¿Y eso está bien? ¿Legalmente tiene que ser así?
+- [01:31:15] ¿O es restricción del sistema?
+- [01:31:18] Es restricción del sistema.
+- [01:31:20] Sí, porque al final no le dice que hay que regresar todos los meses.
+- [01:31:22] Si tengo el error en un puro mes.
+- [01:31:25] Pero actualmente es así.
+- [01:31:29] A ver, si lo quieren así o lo dejamos.
+- [01:31:31] No, quizás el mes de error.
+- [01:31:34] Porque en realidad no te influye mayormente.
+- [01:31:37] Si tú modificas el mes de error,
+- [01:31:39] vayas a centralizar ese mes,
+- [01:31:40] no te corre el gasto para el mes siguiente.
+- [01:31:43] Claro.
+- [01:31:43] Si al final te estoy moviendo a los reales del mes.
+- [01:31:49] Entonces,
+- [01:31:49] Entonces, yo lo que me imaginaba ahora teniendo esta conversación es como tener igual acá en el módulo de auditoría, porque este es el que al fin y al cabo...
+- [01:32:10] Sí, este es el busete, aquí tiene que estar todo lo que se hizo acá en el mes.
+- [01:32:15] Y aquí se muestra que en el periodo tacto se hizo una apertura, un cierre, una apertura, un cierre, quién la hizo, quién la probó, todo.
+- [01:32:22] Y aquí solamente queda, y no queda nada nivel contable, lo otro...
+- [01:32:25] Igual deberíamos tener, yo creo que, por ejemplo, de estas reversas que se van a hacer,
+- [01:32:30] no que desaparezcan, sino que tener un lugar donde verlas.
+- [01:32:33] Sí, lo dejaría dentro de la auditoría.
+- [01:32:35] Ya.
+- [01:32:36] Sí.
+- [01:32:36] Y te muestra antes y después.
+- [01:32:37] Sí, aquí muestra todo lo que se ha editado, movido, todo en el mes.
+- [01:32:43] Ya, ahí tendríamos resuelto eso para saber las modificaciones anteriores, quién la hizo.
+- [01:32:49] Lo demás, yo creo que tendría que ser con notificación interna y que la notificación, como dijo Sergio, al momento de darle clic,
+- [01:32:57] te abra directamente la glosa que se generó, o sea, perdón, el movimiento que se generó acá y ahí uno puede darle el botón anular, reversar.
+- [01:33:07] Es que en sí no es, eso está pensando que no es sobre el asiento, o sea, va a ser sobre el documento o la factura.
+- [01:33:14] Sí, pero al final igual ahí me va a mí ayudar a decir, ya tengo que reversar esto y qué hacer, qué seguir haciendo.
+- [01:33:22] Sí, sí, sí, pero en sí el usuario la solicitud de reversa no lo va a hacer sobre un asiento específico, sino que lo va a hacer sobre el cierre o un documento.
+- [01:33:32] Claro, o sea, al final, por ejemplo, si la persona me dice, abrir mes, no sé, favor abrir mes, no sé, septiembre, por error en tal documento o por error en tal proforma.
+- [01:33:44] Entonces ahí yo voy a saber todo lo asociado que tengo que hacer, puede ser culpa de él.
+- [01:33:47] No, por eso, pero yo digo que, por ejemplo, si la proforma se encuentra ya asociada a una factura,
+- [01:33:54] Que el usuario, en realidad, pueda, desde la misma listada de proforma, ir a la proforma y de ahí solicitar la reversa.
+- [01:34:04] O la reversa.
+- [01:34:06] Claro, eso más que nada sería como el comentario para que abra en el mes solamente.
+- [01:34:10] Claro, pero él lo va a hacer dentro de la proforma.
+- [01:34:14] Ya, ya.
+- [01:34:14] Lo mismo que va a hacer, por ejemplo, si hay una factura asociada a órdenes de compra y, no sé,
+- [01:34:21] Si quiero que me liberen esa factura, porque tengo que editar la orden de compra, hay también una solicitud de reversa, ¿o no?
+- [01:34:28] Sí.
+- [01:34:30] Entonces eso hay que ver, porque claro, cuando yo voy a llegar, la solicitud es en el asiento, ¿cierto?
+- [01:34:37] Claro, o sea, ya te entiendo que mejor sea en la glosa para que quede la transabilidad, o sea, en la proforma para que quede la transabilidad.
+- [01:34:43] ¿En qué proforma fue?
+- [01:34:44] Claro.
+- [01:34:45] Ya, y yo ahí tengo que hacer el traspaso, la revés y todo.
+- [01:34:48] Y ahí, por ejemplo, lo que me dice es que si ya esta proforma está asociada a esta factura, es que ya regresarla también.
+- [01:34:56] Y ahí, pero ahí, después se puede asociar nuevamente la factura a la proforma.
+- [01:35:00] Sí.
+- [01:35:01] Por eso tendría que abrir el mes igual.
+- [01:35:02] Sí.
+- [01:35:03] Tendría que abrir igual el mes.
+- [01:35:05] Sí, no, si se abre el mes.
+- [01:35:06] Entonces, tú decís como que sea, no ir a donde está el botón de cerrar el mes, sino que se haga directamente como en cada plataforma.
+- [01:35:15] En cada caso para que lo uséis.
+- [01:35:17] O sea, se sepa dónde lo están pidiendo.
+- [01:35:20] Porque si te lo dejan en el, no sé, cierre periodo,
+- [01:35:23] y mandan una notificación ahí a abrir por esto y todo,
+- [01:35:26] igual va a ser un tema manual.
+- [01:35:28] Me refiero yo para la revisión tuya.
+- [01:35:30] Vas a tener que estar leyendo lo que colocó,
+- [01:35:33] y si pegó o copió mal,
+- [01:35:36] va a ir a contactar al usuario y decir,
+- [01:35:37] pero no te entendí esta parte.
+- [01:35:40] O me equivoqué en el número.
+- [01:35:42] Claro.
+- [01:35:43] Sí, directamente en el movimiento.
+- [01:35:45] Claro.
+- [01:35:46] Ok. Y ahí, por ejemplo, se desencadenaría el pack completo que sería abrir el mes y también dar la posibilidad de editar la proforma o el ingreso de oro.
+- [01:36:03] Y ahí, por ejemplo, si una factura de proveedor está parada, ¿qué pasa con esa lucra? Por ejemplo, si tiene una reversa.
+- [01:36:13] Lo que pasa es que la mayoría de las veces cuando han querido modificar proforma es porque se equivocan en el cuartel, pero no en el monto a pagar.
+- [01:36:27] Se equivocan en la información a qué gasto imputaron el dinero.
+- [01:36:33] ¿Y en ese caso es necesario hacer una apertura si la modificación no va a ser de un monto?
+- [01:36:38] No, si se puede modificar solamente la imputación sería perfecto.
+- [01:36:45] Sí, porque si va a ser un cambio de nombre...
+- [01:36:48] Sí, generalmente no es por monto, es porque se equivocaron en la labor, se equivocaron en el cuartel, esas son las modificaciones que hay.
+- [01:36:55] Claro, entonces, si es así...
+- [01:36:57] Pero no, más no.
+- [01:36:59] No, pero sí hay que tener, tienen que tener la posibilidad de poder reversar.
+- [01:37:03] Ah, sí.
+- [01:37:04] Van a poder dar caso.
+- [01:37:04] Sí, en caso de sí.
+- [01:37:06] O sea que tienen la posibilidad de reversar, pero si ahora se puede editar directamente la proforma sin hacer todo lo demás, buena idea.
+- [01:37:13] Claro, mientras no tenga el documento o la factura asociada.
+- [01:37:16] Claro, ahí lo que habría que hacer es revalorizar el módulo, una cosa así.
+- [01:37:21] Porque si yo estoy cambiando la imputación contable, se me va a mover el centro de costo o la labor.
+- [01:37:29] Y ahí cambiaría el gasto en sí.
+- [01:37:32] Igual tendría que hacer como una nueva centralización.
+- [01:37:34] Claro, pero depende de los datos que edite.
+- [01:37:38] Claro, pero ahí quedaría solamente en el módulo de contratista, no tendría que ir más al módulo de contabilidad.
+- [01:37:43] En ese caso no sería más cómodo que, por ejemplo, yo si quiero hacer una modificación, le dé clic a solicitar modificación, me levante lo que estaba, poner la modificación que necesito y a ti te llega una modificación con el antes, el después y el movimiento.
+- [01:38:00] Y ahí también podríamos discriminar si son montos, qué es lo que se dice en la modificación.
+- [01:38:05] Pero igual va a pasar por la revisión de la jefatura.
+- [01:38:08] O que va a ser primero quizás por la jefatura.
+- [01:38:11] Claro, o sea, igual tendría que abrir, reversar.
+- [01:38:17] Porque así yo pensaba, como verlo más rápido, no pedirte permiso para modificar para que después me llegue tu notificación de que me diste permiso para modificar y aguardar.
+- [01:38:31] Ahí en el primer paso te mandaría en qué me equivoqué, lo que estaba malo, lo que está bueno, te llegaría quizás esa información, quizás va a ser un poco mono leerla, pero dependiendo de lo que es, si es por ejemplo solamente modificación y no se tiene que hacer como una apertura, por ejemplo un nombre o una letra, que no haga reversa.
+- [01:38:53] Pero, por ejemplo, ¿se puede si me dice ya antes decía, no sé, ejemplo, Santina 2020 y ahora quiere decir Santina 2021? ¿Yo pongo aceptar y se haga la modificación?
+- [01:39:05] Sí, porque ahí envíe recién la solicitud de modificación y que a ti te llegue como ese desglose delante y después, le diría aceptar y se haga la modificación si es que no depende de una...
+- [01:39:19] Pero ahí al hacer la modificación igual harían dentro de la proforma.
+- [01:39:24] Claro.
+- [01:39:25] O sea, igual tendría que reversar contratistas, o sea, reversar la centralización, abrir el módulo y que ellos puedan reversar la proforma.
+- [01:39:35] Sería automático, sería automático, porque ahí como viene todo ligado, tú deberías que sí, por ejemplo,
+- [01:39:41] ah, sí, en este mes contable esta persona se equivocó, me puso que se equivocó, porque también tiene que venir con el motivo,
+- [01:39:47] Pero va a venir el antes y el después, y la modificación ya después no va a tener que pasar a la otra persona que la ingrese, por así decirlo.
+- [01:39:53] Es como que ya te envió la info directamente.
+- [01:39:56] Ya, pero por ejemplo, si yo la acepto, ¿sabía automático el acento? ¿Es como la revalorización de la centralización?
+- [01:40:01] Sí, sí.
+- [01:40:02] ¿Y así es así? Perfecto.
+- [01:40:04] Sí. Porque así enviaríamos directamente toda la info y sería valor si y no.
+- [01:40:12] Pero incluso, si lo acepta, ¿vas a generar todo el acento o no?
+- [01:40:18] Sí, porque ese asiento se iría como a papelera y se derriba al asiento, ¿no?
+- [01:40:23] ¿Por eso?
+- [01:40:24] Sí.
+- [01:40:25] No sé si se desea ver así.
+- [01:40:33] Sí, creo que sí es que es valable.
+- [01:40:36] Yo dejaría la proforma, la edición, que edite ciertos campos.
+- [01:40:42] Por ejemplo, si solo glosa y cosas así, que lo puede editar la proforma.
+- [01:40:47] Claro, pero si no va a la imputación, claro.
+- [01:40:50] No puede cambiar el boot del proveedor, ese tipo de cosas, no puede asociar ni nada.
+- [01:40:53] Pero solamente texto que no afecte en la contabilidad.
+- [01:40:59] ¿O podría dejarte los dos y que el sistema discrimine que si hace otra modificación se tenga que gatillar toda la cantidad de reaperturas, por así decirlo?
+- [01:41:10] Es que el usuario no va a saber cuál es cuál, porque le va a aparecer la alerta, le va a decir, ah, se mandó a contabilidad esta notificación,
+- [01:41:17] Si le da editar y se levanta el modal de la proforma con solo habilitados los campos que él puede editar, ahí va a ser distinto.
+- [01:41:29] Y después ya, por ejemplo, si lo quiere reversar, ahí es que lo manda solicitado a María Jesús.
+- [01:41:35] Y ahí María Jesús pasa el flujo de abrir el periodo y todo.
+- [01:41:39] Sí, creo que se podría hacer.
+- [01:41:40] Pero, por ejemplo, en el momento en que se le abre la pantalla para poder editar los campos que se van a seleccionar,
+- [01:41:47] ¿Ahí él guarda y se edita?
+- [01:41:50] Sí.
+- [01:41:51] No, igual me gustaría que fuera con una previa aprobación.
+- [01:41:53] Ah, ya.
+- [01:41:54] Sí, porque si no es muy libre para que editen.
+- [01:41:56] Va a ser todo malo.
+- [01:41:59] No, y es muy libre para que editen.
+- [01:42:01] ¿Pero qué datos podrían editar?
+- [01:42:04] ¿Los centros de costo?
+- [01:42:06] No, pero eso tú tienes que decirme, sabes que ya, para editar una proforma que ya fue aprobada, facturada, asociada a factura, solo estos campos, por si acaso.
+- [01:42:16] O lo otro sería que si esa persona puede editar, que llegue una alerta, tal persona editó tal proforma.
+- [01:42:23] Pero ¿de qué igual es la historia de que se editó una proforma?
+- [01:42:26] Porque ahí en la valorización del módulo, debía haber una modificación.
+- [01:42:33] Entonces la forma que uno puede realizar rápido si efectivamente se hizo bien o no,
+- [01:42:37] es comparando lo que había antes con lo que había ahora.
+- [01:42:39] ¿Me entienden?
+- [01:42:41] ¿Pero entonces esa modificación no pasaría por aprobación?
+- [01:42:46] Sí, pasaría por aprobación del encargado de contratista.
+- [01:42:55] Y ya cuando tenían que editar más, tendrían que pasar a la contabilidad.
+- [01:43:02] Pasarían como dos niveles de edición.
+- [01:43:07] Sí, porque si yo tengo, por ejemplo, la proforma, ¿estas sociales facturas van a poder editarla?
+- [01:43:15] No deberían, pues estas sociales facturas.
+- [01:43:16] O sea, está, se supone que perfectamente revisado.
+- [01:43:20] Sí.
+- [01:43:20] Porque esa debería saltar al momento que llega la factura si hay algún error.
+- [01:43:25] Tendrían que ser las proformas que no están asociadas a factura, las que se puedan editar.
+- [01:43:31] Sí, claro.
+- [01:43:32] O sea, si lo dejamos como muy flexible, igual puede pasar que un usuario ya le pille la maña y quede de proforma y después lo esté editando.
+- [01:43:46] Al rato.
+- [01:43:47] Al rato.
+- [01:43:47] Quizás si hoy sí tendría que pasar la aprobación por el jefe.
+- [01:43:50] Cual sea la aprobación que sea, y que dependiendo del tipo de modificación que se necesite, el jefe tenga que involucrarse en todo.
+- [01:43:58] Mira, deja de los casos que hay, después llamamos al señor, el señor Rodríguez, porque al final él tiene el... el interno.
+- [01:44:09] Pero el cierre. El cierre, ¿cuál es el cierre?
+- [01:44:15] Oye, está muy fuerte el viento.
+- [01:44:18] Sí, la verdad es que sí.
+- [01:44:19] ¿No es usual?
+- [01:44:20] Así, o sea, aquí corre mucho viento cuando hay temporal, pero está muy constante, eso me tiene...
+- [01:44:29] Sí, como que están arrastrando un piano en el cielo, se escucha súper fuerte.
+- [01:44:33] No, y está de nuevo constante, la frente.
+- [01:44:37] Lo que pasa es que lo estamos poniendo en todos los escenarios...
+- [01:44:40] Ah, bueno, fue más o menos ahí, padre.
+- [01:44:44] Lo estamos poniendo en todos los escenarios del módulo de contratista.
+- [01:44:47] ¿Ya?
+- [01:44:48] Entonces ya les comentaba que el error más común puede ser que se haya equivocado en la imputación del campo o en la labor.
+- [01:44:57] ¿Sigue pasando ese error?
+- [01:45:02] O sea, se podría, pero no contabilizado ya.
+- [01:45:07] Sería como dentro del periodo en el que uno está ingresando, que uno puede editar el...
+- [01:45:11] Ya, pero por ejemplo actualmente están los ingresos diarios.
+- [01:45:15] Después se va a poder seleccionar ciertos ingresos para generar una reforma.
+- [01:45:20] Ya sea semanal, quincenal, como tú quieras.
+- [01:45:24] Esa proforma va a poder estar asociada a una factura, cuando la factura de la contratista llegue en el mes.
+- [01:45:30] ¿Esa se puede asociar más de una proforma a la factura?
+- [01:45:32] Sí.
+- [01:45:32] Ah, ya.
+- [01:45:33] Y además se pueden reconocer los costos de la proforma sin que estén asociadas a la factura,
+- [01:45:39] cuando la factura caiga en el mes siguiente.
+- [01:45:41] Eso también puede pasar.
+- [01:45:43] Se reconocen como al momento en que uno hace la proforma.
+- [01:45:45] Sí.
+- [01:45:46] Ya.
+- [01:45:47] Si no hago proforma, no se suman los costos.
+- [01:45:50] La aprobación de la proforma manda.
+- [01:46:20] ¿Puede ser que se solicite a evitar las proformas?
+- [01:46:22] ¿Que se solicite a evitar las proformas?
+- [01:46:24] Sí.
+- [01:46:30] Puede ser.
+- [01:46:32] ¿Pero no las que están facturadas?
+- [01:46:34] No las que están facturadas, no.
+- [01:46:36] ¿Cien por ciento?
+- [01:46:38] Sí, porque, ¿qué puede pasar en un caso hipotético?
+- [01:46:42] La cosecha.
+- [01:46:44] No sé, no sé si puede pasar, por lo menos, como lo hemos visto bien a la última,
+- [01:46:51] Todavía intentamos llevarlo bien al día, pero la cosecha como es a trato, puede ser que de repente tengamos un precio, y empiezan a haber los precios de China, no sé, y que digan que el precio se modificó por tal cosa.
+- [01:47:07] Y hasta echar la proforma, entonces puede que tengamos que ir al patrón del mes, me imagino que abrir la proforma y modificar el precio de la labor de cada una de las labores de esa proforma.
+- [01:47:18] Y luego volver a cerrar la proforma. Entonces, no sé si la proforma hecha se puede como abrir, ¿no?
+- [01:47:26] O sea, sí, se podría, pero se tiene que reversar todo lo que cubrió.
+- [01:47:30] Pero, por ejemplo, en este caso serían solamente las proformas que no tienen asociación de factura.
+- [01:47:35] Por lo tanto, no sería necesario reversar la factura, como el paso previo.
+- [01:47:39] Podríamos editar directamente del módulo de contratista.
+- [01:47:42] Y ahí lo que tendríamos que hacer es una revalorización de los costos.
+- [01:47:45] No sé si se puede hacer todo con un paso inverso, tipo si hago proforma también puedo desarmar esa proforma y por ejemplo todo como antes.
+- [01:47:53] A lo de ingreso, liberar lo de ingreso.
+- [01:47:55] Claro, como que al final como que lo amarro, no sé, pues tengo la labor del 1 al 10 y la amarro y hago la proforma 1.
+- [01:48:00] Pero si no sé, pues di que me dio que, desarmé la proforma 1 y tengo todo libre. No sé si se puede hacer eso.
+- [01:48:09] Entonces como liberar eso, ya, liberar lo de ingreso en diario y poder cargarlo en otra proforma.
+- [01:48:14] Yo hablo más o menos como cuando uno reversa, que queda como todo ahí el...
+- [01:48:17] Lo que queremos es limitar la reversa.
+- [01:48:19] Ah, limitar la reversa.
+- [01:48:24] Sí, porque la idea que teníamos era...
+- [01:48:26] Ah, que teníamos, la patrón.
+- [01:48:27] La idea de los chiquillos es que en el módulo de contratista, tú la proformas, puedas editarla ahí mismo.
+- [01:48:37] Si te equivocaste, por ejemplo, o hay algún cambio en el...
+- [01:48:40] Bueno, el comentario sería que se cambió la tarifa.
+- [01:48:45] O sea, eso está justificado.
+- [01:48:46] Pero si hay que hacer el cambio de tarifa, o el cambio de centro de costo, o labor, que tú en la misma proforma puedas editar esa parte y aceptar.
+- [01:48:56] Y ahí se genera como una revalorización del mes.
+- [01:49:00] Perdón, me perdí. O sea que tú haces la proforma, ya está todo aceptado.
+- [01:49:09] Y tú quieres como revisarla y en vez de como de reversar la proforma y tener todo el día, como que en la misma proforma tú la podés dar como...
+- [01:49:16] Ah, ya. Sí, también puede ser. Tendría que modificar el mes y los costos igual, ¿no?
+- [01:49:24] O sea, habría que modificar el ingreso diario, pero de esa línea, no de toda la...
+- [01:49:28] Ah, ya. Entiendo.
+- [01:49:30] Si quisiera, ¿no podrían asociar más ingresos diarios?
+- [01:49:37] No, porque, o sea, si fueran más ingresos, igual no habría problema porque puedo crear otra proforma.
+- [01:49:43] Y asocio otra proforma, no sé, me faltó un ingreso del día 10 y vamos al día 14, creo una proforma...
+- [01:49:48] Yo creo que más que nada es como el tema de, más que de editar.
+- [01:49:58] En Requino había estado lloviendo y en Totigo estaba granizando.
+- [01:50:04] ¿Y dónde estamos nosotros?
+- [01:50:06] No, no, no.
+- [01:50:08] Requino, Totigo, así estamos.
+- [01:50:10] ¿Qué año es?
+- [01:50:16] Granizando.
+- [01:50:18] Me dijo mi mamá que era rato porque estaba en el jimbo, me dijo en el jimbo no estaba en el jimbo, no estaba en el jimbo.
+- [01:50:21] No estaba en el jimbo porque el clima.
+- [01:50:26] No había buen clima.
+- [01:50:29] Sí que era chistoso porque al lado de la gente estaba solidadísima.
+- [01:50:32] Sí, sí.
+- [01:50:33] Y para acá se escuchan todos los tronos.
+- [01:50:34] Los tronos estaban como los de los días que no paraban.
+- [01:50:40] Están parejos.
+- [01:50:44] Entonces, más que nada tenés la opción de tirar para atrás o en el caso de...
+- [01:50:48] Enrique no se cortó nada.
+- [01:50:49] Más que editar.
+- [01:50:50] No, entonces vamos a tener que pedir la aprobación del aprobador.
+- [01:50:55] Sí, y abrir el mes.
+- [01:50:57] O sea, todo va a haber.
+- [01:50:59] Claro, la única diferencia es que no habría que reversar en contabilidad el ingreso de la factura.
+- [01:51:05] Pero si no va a tener factura asociada.
+- [01:51:07] Eso se va a poder modificar solamente en las que no tienen factura asociada.
+- [01:51:10] Claro, por eso.
+- [01:51:11] Sí.
+- [01:51:12] ¿Y la factura asociada igual se puede ingresar asociada o que hay...?
+- [01:51:16] Pero ese es otro punto.
+- [01:51:17] Sí.
+- [01:51:18] Porque no debería.
+- [01:51:19] Claro, no debería, pero a lo que voy es cara del viejo romano, entonces...
+- [01:51:25] Esa es la pregunta, porque si claro, si se instala proforma, si se instala la proforma y asocian una factura, tendrían que...
+- [01:51:33] O sea, el director de volumen, claro, sí, porque el director, ahí está fallando el que ingresa y el que aprueba.
+- [01:51:40] ¿Por qué no dice que tendría que regresar una factura de proveedor?
+- [01:51:47] ¿No debería ser?
+- [01:51:47] No, no, no, no debía ser.
+- [01:51:49] ¿La factura del proveedor?
+- [01:51:51] Sí, pues no debía ser, porque ya tenía una factura y ya estaba cobrado.
+- [01:51:56] El proveedor quiere cobrar menos.
+- [01:52:01] Claro.
+- [01:52:03] No, no debía ser.
+- [01:52:05] A ver, ¿puede pasar quién?
+- [01:52:13] Que no se quiebra el centro de costo.
+- [01:52:16] No sé, puede ser.
+- [01:52:20] Porque con el tiempo después, si se quiera modificar el centro de costo, no sé, puede darse el caso.
+- [01:52:25] No sé si, por ejemplo, realmente me acuerdo quién...
+- [01:52:29] Yo creo que ya si el centro de costo se equivocó al mes siguiente, a los dos meses siguientes se ha dado un registro contable nomás y se modifica el centro de costo.
+- [01:52:38] Porque ya ponen los...
+- [01:52:38] Ah, cinco.
+- [01:52:40] Pero...
+- [01:52:40] No, pero me refiero a dentro del mes.
+- [01:52:43] No, es que dentro del mes vas a tener todas las opciones de modificar.
+- [01:52:47] Me está igualando si es un tornado.
+- [01:52:50] No, ya vamos a ver.
+- [01:52:57] Uy, bien, bien, bien.
+- [01:53:03] ¿Qué onda?
+- [01:53:21] Requi no se cortó la lengua.
+- [01:53:22] Se ve como si fuera cerrada por el cielo.
+- [01:53:28] ¿Están grabando?
+- [01:53:34] Oye, Requi no va a ver el viento.
+- [01:53:36] Amarre las vaquitas, se las va a llevar.
+- [01:53:38] ¿Están grabando?
+- [01:53:40] No lo puedo, se me oscura.
+- [01:53:42] Está bien, espérenme.

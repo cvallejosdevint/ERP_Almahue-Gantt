@@ -20,16 +20,15 @@ ERP/backups/*RESTAURAR.txt
 # Cartolas bancarias (extractos; no versionar)
 docs/datos/cartolas/*.xls
 
-# Videos de reuniones (pesados; viven en disco local)
-docs/reuniones/medios/videos/*.mp4
+# Videos y audios de reuniones (pesados; viven en disco local)
+docs/reuniones/medios/**/*.mp4
+docs/reuniones/medios/**/*.wav
+docs/reuniones/medios/**/*.m4a
+docs/reuniones/medios/**/*.aac
+docs/reuniones/medios/**/*.mp3
+docs/reuniones/medios/**/frames/
 docs/reuniones/medios/cronologia/**/frames/
-docs/reuniones/medios/2026-08-19-demo-interno/audio.wav
-docs/reuniones/medios/2026-08-19-demo-interno/frames/
-docs/reuniones/medios/2026-08-20-reunion-sergio/audio.wav
-docs/reuniones/medios/2026-08-20-reunion-sergio/frames/
 docs/reuniones/medios/2026-08-20-reunion-sergio/transcribe.py
-docs/reuniones/medios/whisper-local/**/audio.wav
-docs/reuniones/medios/whisper-local/**/frames/
 
 
 # API keys de herramientas externas (tl;dv, Trello). Copiar tools/.env.example → tools/.env
@@ -68,4 +67,7 @@ docs/reuniones/medios/**/*.wav
 tools/transcript-whisper/*.log
 *.log
 docs/historico-chats/
+docs/historial-cursor/
+tools/untrunc/
+*.rar
 
