@@ -1,0 +1,1448 @@
+# Reunion Almahue 2026-10-27 PM (Tarde) - Whisper large-v3 + lexico
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Desktop\27-10-2026 15.24.m4a (01:47:50, tarde)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] ¿Va probando a conciencia? ¿No debería haber errores?
+- [00:02] En ese caso, por ejemplo, hay otro de estos casos de uno en mil que vayan a ocurrir también como esto.
+- [00:10] Pensándolo más que nada, en los otros cierres, por ejemplo, en el cierre de insumo y bodega, ¿esto también podría aburrir?
+- [00:16] Porque la idea de dejarlo como para el... No, en el de insumo y bodega ocurre menos.
+- [00:22] ¿Pero va a aburrir? Mucho menos. Y de hecho yo creo que, si es que hay ajustes nomás, pero ni siquiera son por el orden de consumo,
+- [00:29] Porque el consumo se hace directamente de los consumos de los páginas, entonces es automático.
+- [00:35] Ya.
+- [00:36] Y por el lado de las recepciones se hacen con guía, que es lo que realmente llegó.
+- [00:40] Entonces ahí no debería haber algo.
+- [00:41] A menos de que fuese tomada como una devolución al proveedor.
+- [00:47] Ya.
+- [00:48] En ese caso, por ejemplo, bueno igual de todas formas, acá en Contradista,
+- [00:55] aparte del cierre que esté de auditoría, debería tenerlo solamente la jismatura.
+- [00:58] Y acá, por ejemplo, va a detallar todos los movimientos, lo que habíamos hablado.
+- [01:02] De hecho, aquí en un modem debería aparecer.
+- [01:05] Y aquí, por ejemplo, te va a decir quién hizo una modificación y vas a ver que antes ya había un cierre.
+- [01:10] Entonces tienes como llegar a ver, oye, este mes hicieron tantas modificaciones, después de un cierre, ¿qué está pasando?
+- [01:16] ¿Fue esta persona? Entonces ahí vas a poder como monitorear.
+- [01:18] Y ya para ver el detalle en el mes, lo puedes ver directamente en el asiento para ver las modificaciones de cada movimiento.
+- [01:23] Entonces lo que pensaba es dejar este sistema de contratistas también para insumos, tanto la auditoría, que es como el historial de todo, y la posibilidad de hacer la modificación.
+- [01:36] Ojalá la auditoría esté en todos los módulos, o hacer un módulo de auditoría, o una como demás.
+- [01:42] Yo creo que igual sería bueno tener por cada uno de los módulos su propia auditoría, porque así lo puedes tener acceso como tú y el jefe del área y no meterse a la auditoría de los demás.
+- [01:50] Sí, buena observación.
+- [01:51] Entonces, se lo dejaríamos como ahí arriba de la reportería, como así, con cachitos.
+- [02:02] Entonces, replicarlo también es lo que vendría a ser...
+- [02:06] Pero contratista, insumo, activo fijo.
+- [02:09] Activo fijo también tiene que tener cierre, ¿verdad?
+- [02:11] Sí.
+- [02:12] Y contabilidad.
+- [02:14] Perfecto.
+- [02:16] Y así tendríamos trazabilidad de todas las modificaciones, control y restricción.
+- [02:21] Me gustó.
+- [02:27] Nadie va a hacer nada sin que me pida permiso.
+- [02:29] Este sí o no, sí o no.
+- [02:32] Usario de Dios.
+- [02:36] Entonces, ya con esto, podríamos, no sé si hacer un módulo de auditoría como descentralizado de todo.
+- [02:50] Es que se mostraría la información.
+- [02:52] Sí, directa, bien por módulo, porque si yo doy algún error me meto al mismo módulo.
+- [02:55] Sí, directamente.
+- [02:56] O sea, y sé de qué es.
+- [02:57] O sea, que te dice hoy alguno cuadra, ¿en qué fecha? Te va a ir a la auditoría y luego te da la fecha.
+- [03:01] Claro, porque al final, si lo aumento como un módulo, tendría que tener más revisión.
+- [03:07] De todas las áreas.
+- [03:09] Sí.
+- [03:10] Sí, y a partir de igual el presupuesto va a ayudarnos a esto, a esto, mensualmente.
+- [03:15] El comparativo.
+- [03:17] Porque hay cosas que son fijas.
+- [03:24] Revisar, que aquí tenía notado cuatro cositas que tenía dudas.
+- [03:26] Tengo mi torpeda acá, traje las mandalinas.
+- [03:32] ¿Qué era lo que habíamos hablado ayer de el factor de... ¿cómo se llamaba, Sergio?
+- [03:40] ¿Factor de honorarios creo que era?
+- [03:42] ¿Sí?
+- [03:43] La suma del mes anterior, si no me equivoco, ¿verdad?
+- [03:46] No, el resultado, no.
+- [03:49] O sea, no para de dar los nombres, qué mal.
+- [03:51] ¿Qué factor?
+- [03:53] Lo que estábamos viendo de contabilidad.
+- [03:55] No, es para los balances.
+- [03:56] El resultado del ejercicio y el resultado acumulado.
+- [04:28] ¿De dónde viene la data? ¿Cómo se ordenan las datas? ¿Cuáles son los montos que se juntan?
+- [04:36] Ah, pero es que todo empieza del libro a diario. Del libro a diario eso pasa, es como toda la información que se va distribuyendo al resto.
+- [04:46] Empieza por el libro diario, libro mayor, del libro mayor al balance, del balance al estado de resultados, y del estado de resultados, entonces termina la situación, ¿no?
+- [04:58] Sí, lo que pasa es que el balance, la parte de arriba es la situación y la parte de abajo es el resultado.
+- [05:02] Pero los dos se alimentan del balance.
+- [05:05] Y hay ocho columnas.
+- [05:06] Ok.
+- [05:07] Sí.
+- [05:08] Eso, cuando se hace como el cierre de mes, es que se hace...
+- [05:13] El informe con todo eso.
+- [05:15] Sí, sí.
+- [05:16] Que ya tendríamos que tener cerrados todos los módulos y ahí...
+- [05:20] O sea, claro, yo puedo ir sacando un balance, por ejemplo,
+- [05:24] estamos a mediados de noviembre y te va a salir igual la información
+- [05:28] de todo lo que está ingresado y...
+- [05:30] Hasta el momento, sí.
+- [05:32] Con la diferencia de que si no se han pagado, ¿no?
+- [05:36] Con la diferencia de que, por ejemplo, no te va a aparecer el consumo
+- [05:39] ni de bodega ni de contrarista porque son módulos que no se han centralizado.
+- [05:42] Y mientras no se centralicen, no pasa nada contabilidad.
+- [05:45] Perfecto.
+- [05:45] Sí.
+- [05:46] Perfecto. ¿El cálculo, por ejemplo, es literal? ¿Una suma de un asiento o no?
+- [05:52] Literal, es una suma. Lo que cambia es, por ejemplo, si yo bajo el...
+- [06:00] En el balance siempre te va a salir del primero de enero a la fecha que estás consultando.
+- [06:04] Yo voy a agarrar el balance para que lo vean con un oído visual.
+- [06:08] El balance. Es como si tú ponías a otro y te sale solo a otro.
+- [06:18] Está balanceado, ¿no es cierto?
+- [06:21] Sí.
+- [06:21] Entonces, acá, en esta línea de detalle, la primera que va a salir es el, ¿o no?
+- [06:28] La cuenta.
+- [06:29] Sí, son las cuentas que tú mueves, que tienen movimiento.
+- [06:35] Pero igual se va a entender ya más cómodo.
+- [06:49] Y ese que aparece, me dijeron que eran los movimientos, ¿cierto?
+- [06:53] Sí, por ejemplo, la cuenta caja, tú, si te llega dinero, se te va a mover el dedo.
+- [07:01] Si tú pagas algo, se te va a mover el AVE.
+- [07:03] Y todo lo que se va moviendo, al final se va totalizando en la suma del debe y el haber.
+- [07:09] Eso sería como la cuenta T de la cuenta.
+- [07:12] Vale.
+- [07:13] Ya, eso te da un resultado.
+- [07:14] Si tú rectas los dos conceptos, claro.
+- [07:19] Entonces, ahí te va a decir si la cuenta tiene un saldo deudor o un saldo acreedor.
+- [07:24] Por regla general, los activos y los gastos tienen un saldo deudor.
+- [07:30] Y lo que es pasivo, patrimonio e ingresos tienen un salto acreedor.
+- [07:36] Si está al revés, hay que analizar por qué está al revés.
+- [07:39] Hay problemas.
+- [07:40] Sí, eso no debería ser.
+- [07:42] A menos que sea una cuenta puente, que no la brújula debe la ver y no tenga como naturaleza en sí.
+- [07:47] Que pueden ser las previsiones o los anticipos próximos o gastos próximos a temporada.
+- [07:55] Pero esas son cuentas que ya están parametrizadas y están en el Excel que mandaste, ¿cierto?
+- [07:58] Sí.
+- [07:58] Ah, ya.
+- [07:59] Entonces, de ahí nace el saldo deudor y acreedor. Si te fijas, cada cuenta tiene solamente si es saldo deudor o saldo acreedor.
+- [08:07] Las cuentas de activo, pasivo y patrimonio se clasifican en inventario activo e inventario pasivo.
+- [08:14] Y las cuentas de ingreso y gasto se clasifican en el resultado a pérdida y el resultado a ganancia.
+- [08:20] Perfecto.
+- [08:21] Y ahí se compone el parágrafo de 8.1.
+- [08:31] Y la más que ocurre, abajo.
+- [08:34] ¿Abajo?
+- [08:35] Sí.
+- [08:37] ¡Bajo tierra!
+- [09:10] Lo que tiene entre la ganancia y la pérdida.
+- [09:13] Lo que realmente, es como lo real.
+- [09:15] Vale.
+- [09:17] Entonces, lo estamos...
+- [09:18] Ahí, esa es la parte.
+- [09:19] Claro, esto debería ser...
+- [09:20] Aquí obviamente deberían haber más líneas de detalle.
+- [09:23] Claro, sí, es que igual uno está acostumbrado a ver como el balance hacia abajo.
+- [09:26] Claro, claro, perfecto.
+- [09:28] Pero abajo, abajo estaría el tema de la utilidad.
+- [09:32] Perfecto, entonces, como tenemos la estructura por lo que veo, estamos...
+- [09:36] Está bien.
+- [09:37] Excelente.
+- [09:38] ¿Qué otro tema? A ver mis torpeditos. ¿Qué tenía pendiente a preguntar? Se me perdió el torpedo.
+- [10:11] Bueno, igual la que va a tomar la decisión es la Jesús. Así que yo puedo ayudar como con cosas medias técnicas, ¿no?
+- [10:18] ¡Excelente! ¡Excelente, excelente!
+- [10:22] Es mi primer año de experiencia, así que algo puedo aportar, ¿no?
+- [10:26] Ya, tiene más experiencia que yo.
+- [10:28] Contrabilidad puede ser.
+- [10:32] No sé, no sé si...
+- [10:37] Experiencia, contrabilidad...
+- [10:50] El manastro.
+- [11:09] Sí, sí.
+- [11:21] No, el otro.
+- [11:23] Hay una más con María Jesús.
+- [11:27] A ver si se lo estaba preguntando a los dos chicos la María Jesús si es que iba a venir con su esposa.
+- [11:39] Ahí saqué a reconocer mi habilidad en inglés.
+- [11:41] Estaba así.
+- [11:43] ¿Estás muy buena con el inglés?
+- [11:44] Sí, le aplico algo.
+- [11:45] Ya.
+- [11:46] Es que mi hija habla, habla super fluido, entonces, como que no puedo quedar...
+- [11:50] Ay, no puedo ser menor.
+- [11:51] No, no puedo ser menor.
+- [11:52] Soy el que más sabe inglés en la casa.
+- [11:54] No puedo perder mi puesto.
+- [11:56] Bien, bien.
+- [11:59] A mí me iba, no me iba mal en inglés, pero siento que como lo dejé ahí, no lo...
+- [12:03] No lo desarrollaste.
+- [12:04] No lo desarrollé.
+- [12:05] Ya, sí, sí pasa, sí pasa.
+- [12:07] Yo ahora, creo que sabía mucho entenderlo, pero no hablaba.
+- [12:12] Y ahora con mi hija, de repente nos baja la lecera y cuando queremos molestar a la gente de la casa, empezamos a hablar entre nosotros en inglés.
+- [12:19] Bueno, así practica y buenísimo.
+- [12:22] Tiene 13 años y ya con ella yo me iría seguro a Estados Unidos, solo con ella.
+- [12:27] Ah, sí, claro.
+- [12:27] Sí, sí, sí. De hecho, en esta cuestión de Roblox, se pone a hablar con gente y habla en inglés.
+- [12:35] Se practica todo el día.
+- [12:37] Juega caché en los juegos de rol en inglés.
+- [12:42] Y ahí lo encuentro como ya avanzado al máximo porque son cosas muy específicas, uno se sabe como el inglés como para sobrevivir.
+- [12:51] Yo no sé como por ejemplo decir, oh tengo un resfriado, ella es la que me va enseñando, y el Duolingo, pero el Duolingo sirve mejor.
+- [13:02] No, yo no, nunca apliqué el inglés en mi vida después de lo que estudié nomás, y inglés 3, pero hasta ahí llegué no.
+- [13:12] Ya, a mí depende de dónde te enseñen es más o menos la exigencia.
+- [13:17] No, es que igual, por ejemplo, bueno, en cuanto a el día en inglés, yo, o sea, lo daba para pasar.
+- [13:23] Sí.
+- [13:24] Entonces no era como que me centrara y que me gustara para aplicar.
+- [13:31] Pero sí, en inglés abre muchas puertas.
+- [13:33] Sí.
+- [13:34] Muy importante.
+- [13:35] De hecho, a mí me han dado ganas de hacer como esta cuestión de estas aplicaciones que son como para hablar entre gente que habla otro idioma, como que me pican un chiste así de repente, así como a practicar inglés solo.
+- [13:47] Es que si ya lo tiene la base, siempre hay que cuidarnos.
+- [13:51] Sí, pero me da miedo la gente y todo lo otro.
+- [13:55] Con la IA, por último.
+- [13:56] Claro, me he falso la cara.
+- [13:57] A ver, aquí encontré el documento.
+- [14:02] Dentro, aquí tenía anotado el resultado del ejercicio, que vendría a ser este mismo, la utilidad del ejercicio, el resultado del ejercicio, ¿verdad?
+- [14:28] Sí.
+- [14:28] ¿Qué pasa al estado de resultados?
+- [14:34] ¿Qué es lo que está tomando?
+- [14:57] Y después la utilidad del ejercicio pasa al estado de resultados, que ahí se utiliza como esa línea, por así decirlo.
+- [15:03] Y ya no te supo rápido, pero en algún momento se habló de algo que se llama OPB.
+- [15:17] OPB, el embarcador.
+- [15:19] Que había, eso era como una, podría ser como una cuenta intermediaria.
+- [15:23] Eso no, ese OPB es el de la nota de cobro.
+- [15:27] Ya.
+- [15:28] Que cuando nosotros nos llegaban las facturas, pero OPB es el que pagaba.
+- [15:32] ¿Se acuerda que había?
+- [15:34] Sí, sí, sí, ahora me estoy haciendo memoria.
+- [15:35] Ya, está OPB que llega a las facturas, es el emplazador que le paga a ellos y nosotros después hacemos, llevan la nota de cobro y se calza, por así decirlo.
+- [15:47] Entonces, faltaría también tener aquí el registro de la nota de cobro.
+- [15:50] Sí.
+- [15:51] Eso no lo teníamos considerado.
+- [15:53] ¿En qué parte?
+- [15:55] Nota de cobro.
+- [15:56] Pero en el registro, como en ingresar las facturas.
+- [16:01] Sí.
+- [16:01] Sí.
+- [16:02] Se pueden agregar como tipo de documento, como el dato de horario, ¿cierto?
+- [16:13] Sí, o sea, igual si no se fue alguno de proveedores, pero ¿no va a quedar como una parte donde yo pueda parametrizar el tipo de documento y si afecta, ¿cierto? ¿Qué afecta?
+- [16:24] Así como una parametrización general del tipo de documento, creo que sí lo tenemos.
+- [16:28] ¿Por qué igual vamos a tener que generar la invoice y el documento que la estén considerando?
+- [16:37] Si aquí los tenemos tipo documentos.
+- [16:40] Sí, ahí, ya.
+- [16:42] Faltaría entonces ver si es que el tipo, ¿cierto?
+- [16:53] Ahí lo que faltaría va a tener que ser el de honorario, que se va modificándose.
+- [17:02] La nota de cobro era la que habíamos dicho como que íbamos a seleccionar las facturas y ligarlas a las notas de cobro.
+- [17:48] Entonces, ¿a las facturas se les puede asociar nota de cobro?
+- [17:55] La nota de cobro se asocia a las facturas.
+- [17:57] Por ejemplo, si me llega la nota de cobro, era como que íbamos a pinchar las facturas que se ligaban y se calzaban.
+- [18:09] Y en ese caso, por ejemplo, la nota de cobro puede estar asociada a N número de facturas.
+- [18:14] Entonces faltaría un módulo que podamos recibir la nota de cobro y poder asociarla a las facturas.
+- [18:23] La nota de cobro igual, no sé si seguirá igual, pero nos envían por correo el detalle de las facturas que se asocian a esa nota de cobro y la nota de cobro al PDR.
+- [18:36] Ah, pero no llega como las facturas como un documento que tienen que subir manualmente.
+- [18:41] Sí, no llega ni el registro de servicio, ni las notas de cobro, ni la inbox.
+- [18:47] En ese caso, ¿debería estar en tesorería ese módulo?
+- [18:56] O sea, son dos módulos.
+- [18:58] Es que son tipos de documentos.
+- [19:01] No es mayormente un módulo, tiene el mismo tratamiento de una factura.
+- [19:06] Yo creo que el problema sería como el tema de la visualización, ¿no?
+- [19:10] Claro, dejarlo que sea visual para que se puedan asociar a diferentes facturas.
+- [19:14] No, pero digo, como que no se puede ver como el PDF, ¿se podrá así como subir el PDF de la nota de cobro?
+- [19:23] Sí.
+- [19:24] ¿Y qué quiere como registrar?
+- [19:25] Es que igual lo quería el respaldo, pero al ingresarlo tendría que ser por el módulo de proveedores, ingresarlo como tipo documento, nota de cobro, y la cuenta que vaya...
+- [19:41] Porque sería como un documento junto a la cobertura.
+- [19:52] ¿Le puede enlinarlo?
+- [19:55] Siempre hay que hacer una puerta así como documentos para recibir, contra el proveedor, y las facturas que van tendrían que ir contra uno de los tres.
+- [20:20] Pero en todo caso, esas las ingresamos por carga masiva, entonces se ingresaban por el módulo de la cuenta de dinero.
+- [20:26] Nosotros hacemos el Excel de la carga masiva de las notas de cobro y ponemos todas las facturas contra el reconocimiento de la nota de cobro después de ingresar en la nota de cobro como documento.
+- [20:39] Entonces tendríamos que tener la opción de subir la nota de cobro, hacer la carga masiva y asociarla a la factura.
+- [20:47] Crear la nota de cobro.
+- [20:48] Crear el documento de nota de cobro.
+- [20:50] Sí.
+- [20:51] Y asociar contra la factura recibida.
+- [20:54] Sí.
+- [20:55] Pero, o sea, ustedes tienen un Excel, ¿cierto?
+- [20:59] Sí.
+- [21:02] Y ahí no podríamos mejor, o sea, si tienen, que sería, ¿cuánto registro vienen en el Excel?
+- [21:09] Mira, depende.
+- [21:11] Al principio de temporada son, han venido 400 registros en un Excel.
+- [21:16] Pero después llegamos a como 10 facturas en un mes.
+- [21:20] Entonces baja mucho.
+- [21:21] A veces hasta un mes.
+- [21:22] Sí, a veces no te cobran por una factura.
+- [21:24] Es que podríamos hacer en esa carga, porque viene el número de la factura, ¿no?
+- [21:27] Entonces, esa carga de Excel contra nota de cobro, que diga ya, todas estas facturas sí existen, eso también tiene que variar, que esté como una factura recibida.
+- [21:38] Estas existen, y las que no, esas quedan ahí.
+- [21:43] O no se podría crear una nota.
+- [21:47] Ah, porque se tiene que cuadrar, ¿no?
+- [21:50] Si no cuadra, no pasa.
+- [21:51] No pasa.
+- [21:52] Eso se podría hacer, con esa carga masiva, que si, con una prevalidad, que si existen todas las facturas, y recién se cree la nota, o sea, claro, se contabiliza la nota de cobro.
+- [22:07] ¿Se contabiliza la nota de cobro?
+- [22:09] Sí.
+- [22:10] Sí, porque ahí yo reconozco que no le debo la factura al proveedor que me la emitió, sino que al proveedor que me la pagó.
+- [22:17] Claro.
+- [22:18] Ahí está el proveedor de la nota de cobro.
+- [22:20] Ahí estaría vos, Pérez.
+- [22:22] ¿Por qué me abandonas?
+- [22:29] ¿Qué digo ahora?
+- [22:31] Vamos juntos.
+- [22:33] Yo también quiero.
+- [22:35] Vamos a ver el campo, chiqui.
+- [22:37] ¿Qué tal deberíamos escuchar si la vemos en el campo?
+- [22:39] ¿O prefieren mañana?
+- [22:41] Como salieron estos temas, yo diría que mañana.
+- [22:44] ¿Ya?
+- [22:45] No, quiero ir a ver otro campo.
+- [22:48] ¿Ayer qué querías ver otro campo?
+- [23:21] Cuando se me había olvidado que hizo una modificación a la vista de activos fijos, que es acá en el reporte.
+- [23:33] Acá hay algo que le ha faltado, me ha olvidado la hora.
+- [23:37] Hizo un grafiquito.
+- [23:39] Bueno.
+- [23:40] Cachái, entonces aquí te muestra los últimos tres.
+- [23:43] Y aquí te lo muestra gráficamente.
+- [23:45] Y ahí cachantino si se agregó un activo fijo y se invadió el mes.
+- [23:50] Exacto, este es como la vista de un activo fijo, entonces tú puedes ver los últimos tres meses de ese activo, la variación.
+- [24:01] Es que eso siempre te va a dar línea entonces, lo que podría ser como el cálculo total de los de precesión mensual.
+- [24:09] ¿De todos?
+- [24:09] Sí, porque ahí voy a tener una variación en el cuadro de acá.
+- [24:13] Que podría ser entonces como un botoncito que te muestra aquí un gráfico grande con todo.
+- [24:17] Sí. Ya. Entonces ahí yo voy a saber cuándo se empieza a depreciar un activo que fue recientemente ingresado.
+- [24:23] Perfecto. Entonces te digo que yo me entame y yo.
+- [24:31] Entonces ese gráfico lo sacamos de acá y lo dejamos como en una lista general.
+- [24:36] Sí, porque si lo hace así por activo, va a ser lineal. Nosotros usamos la depreciación lineal.
+- [24:42] El progredir a la baja. Sí, y el mismo monto.
+- [24:44] Ya. Ok. Malo que trabajas.
+- [24:49] Me amanecí haciéndolo.
+- [24:54] Y entonces se rompió.
+- [24:57] Pero esto lo he dado al general.
+- [25:00] O sea, al final es agrupar los activos.
+- [25:04] Lo que sí pidió Agustín, porque nosotros, como el módulo de Agrosoft,
+- [25:08] en realidad nunca nos sirvió para tener un módulo de activos.
+- [25:12] Nosotros lo ingresábamos directamente de contabilidad.
+- [25:14] Ahora, nosotros ingresamos el activo directo a la cuenta, pero él quiere que se haga como una proforma, una orden de compra del activo, como que igual vaya todo con orden de compra.
+- [25:29] Ya, entonces acá en las asociaciones también, dependiendo de donde se haga como la...
+- [25:37] ¿Qué habló directamente de la factura? ¿No mostró el historial?
+- [25:40] Libro de compras.
+- [25:41] Sí, porque aquí debería abrir el historial, pero estaba andando directamente al movimiento, de donde viene.
+- [25:57] Aquí debería mostrarte como el detalle de los asociados.
+- [26:00] Ya.
+- [26:03] ¿Y algo dijiste que iba a faltar acá?
+- [26:08] La orden de compra.
+- [26:09] ¿Que se asocia a la orden de compra?
+- [26:10] Sí. O que genere órdenes de compra. Que se genere orden de compra, pero quizá en el módulo activo directamente desde la orden de compra.
+- [26:17] O que tenga como la opción de activo. Sí.
+- [26:23] Sí, entonces desde el libro de compras. De la orden de compra.
+- [26:29] Donde se genera la orden de compra. Ahí, que tenga la nota.
+- [26:37] Bien, el detalle de los ítems, ¿cierto?
+- [26:39] Que venga quizá en referencia, ¿cuál será el despacho?
+- [26:43] Sí, porque acá tenemos...
+- [26:44] ¿Cómo lo vamos a ver?
+- [26:45] Tipo de orden, ahí.
+- [26:46] Ahí dice servicio, que diga orden de compra también.
+- [26:50] Adicional, orden de compra.
+- [26:52] Y esto genera...
+- [26:53] O sea, ahí digamos lo mismo.
+- [26:54] Eso, y...
+- [26:55] ¿Cómo?
+- [26:57] En ese caso, ¿tiene que ser todo un activo fijo que ya exista?
+- [27:02] No.
+- [27:02] ¿Se genera o no?
+- [27:03] Sí, con que vamos a comprar.
+- [27:05] Ya.
+- [27:05] Entonces, el de acá, activo fijo, eso sería como una generación de un activo fijo nuevo.
+- [27:15] Sí.
+- [27:16] ¿Qué sería acá en el orden de compra para ese activo fijo nuevo? ¿Un nombre?
+- [27:21] ¿Qué sería adicional?
+- [27:23] Porque acá, por ejemplo, un activo fijo al momento de crear uno, nos pide...
+- [27:29] No, pero en el orden de compra, eso es lo que es el orden de compra, no es como que se cree el activo fijo.
+- [27:33] Sí, pero por ejemplo, el orden de compra cuando ya pasa a aprobado o a recepcionado, podría meterse acá.
+- [27:47] ¿Automáticamente?
+- [27:48] Sí, porque es de ahí que nosotros creemos la ficha del activo, desde el orden de compra.
+- [27:53] Como que el activo mismo está ligado al orden de compra del activo.
+- [27:57] O podríamos hacerlo como se asocian las órdenes de compra a la facturación, pues de que te muestre las órdenes de compra que ya están y las puedas tú asociar a los activos fijos que tienes ahí.
+- [28:12] Sí, entonces crear activo y arrojarse a la orden de compra.
+- [28:14] Sí, sí.
+- [28:16] Entonces por acá sería entonces, si ya existe la orden de compra, poder aquí como seleccionar las que ya están,
+- [28:22] o generar el activo sin orden de compra y al momento de generar la orden de compra puede seleccionarlo activo.
+- [28:29] Ya.
+- [28:30] Como también son dos canales.
+- [28:31] Sí, me gusta eso de ver la orden de compra en...
+- [28:36] Porque puede pasar, o sea, pasa de que se genere primero la orden de compra y después el activo y viceversa, ¿cierto?
+- [28:41] O sea, te dices en la idea de que si hubieras venido rápido y le compras.
+- [28:44] Y con necesidad a comprarla.
+- [28:46] Ya.
+- [28:48] En el mundo, ya.
+- [28:49] En el mundo, ya.
+- [28:50] Allá vamos.
+- [28:53] Perfecto.
+- [28:54] ¿Y qué quedó con la nota de cobro?
+- [28:56] Estaba recuperando.
+- [28:59] ¿Estamos a otro tema?
+- [29:00] Sí.
+- [29:01] Estaba rechazando el espacio.
+- [29:02] Fue el miedo de nuevo, dijo.
+- [29:05] Estaba bailando mientras esperaba que llegue.
+- [29:08] A ver.
+- [29:09] Sé que estaba así pidiendo si me iba a pasar el tema.
+- [29:12] ¿Pasaron los temas?
+- [29:15] ¿En serio te la nota de cobro te queda?
+- [29:18] No.
+- [29:19] No dijo, pasando el tema.
+- [29:27] Entonces la nota de cobro debería quedar sobre el módulo de compra, ¿no?
+- [29:36] De insumos es mucho, ¿no?
+- [29:37] No, de proveedores.
+- [29:39] De proveedores, perdón.
+- [29:42] Entonces, claro, compras, compras, compras, compras, compras, compras.
+- [29:49] El 100% de las notas de cobre son, no.
+- [29:57] Se retractó.
+- [29:59] Sí, el 100% no, son facturas.
+- [30:01] ¿Qué son?
+- [30:03] El 98% son facturas.
+- [30:05] ¿Y el 2%?
+- [30:06] Son de las notas de cobre.
+- [30:10] Hay dos tipos de notas de cobre.
+- [30:12] ¿Qué llegan?
+- [30:13] La nota de cobro, generalmente viene porque nos cobran facturas que pagaron los empajadores.
+- [30:28] Y hay otra nota de cobro que la hace la asociación de exportadores, que es un gasto directo que nosotros le ingresamos por el módulo proveedor.
+- [30:36] Pero nosotros seleccionamos la cuenta de comisión comité.
+- [30:39] Entonces hay que dar comisión, comité, contra el proveedor, con una nota de cobro.
+- [30:45] Y una vez que ingresamos las facturas de cobro, ahí lo ingresamos por el módulo de contabilidad,
+- [30:50] devolvemos todo al proveedor con las facturas que estamos rebajando, contra el proveedor con la nota de cobro.
+- [30:57] ¿Y esa factura de cobro?
+- [31:00] La nota de cobro.
+- [31:03] No, pero después... No, no te pises.
+- [31:05] No, no.
+- [31:11] Y una era muy fea.
+- [31:43] Reviviendo traumas.
+- [31:46] Voy al baño.
+- [31:51] Y ahí llega la nota de cobro.
+- [31:53] Hombre, tío, pura cosa rara.
+- [31:55] Y ahí llega la nota de cobro, ¿ya?
+- [31:58] Y ahí llega la de las OECs.
+- [32:00] Sí.
+- [32:01] Y ahí eso.
+- [32:03] Bueno, ¿y qué es el problema de los proveedores?
+- [32:05] Ya, ya te lo diría.
+- [32:07] ¿Le podríamos poner nota de cobro? Porque como nota de crédito, ¿no?
+- [32:11] La vamos a poner en una foto y vamos a ver qué nota de crédito va a dar.
+- [32:17] La nota de crédito sí que va a dar.
+- [32:19] Sí, entendieron súper mal.
+- [32:21] No te les era.
+- [32:23] ¿Se entiende?
+- [32:25] Sí.
+- [32:27] Se ingresa por el módulo de proveedores.
+- [32:31] De proveedores.
+- [32:33] Cuando se ingresa por el módulo de proveedores, se imputa directamente al gasto.
+- [32:37] Entonces, te queda el gasto. Cuando uno ingresa, la parte del proveedor se hace automática por el módulo de proveedores. Entonces, tú solamente ingresas la línea del gasto. Y al guardarlo o contabilizarlo, se te genera gasto contra proveedor.
+- [32:51] Ya. Ah, pero eso es porque tiene una configuración así en el sistema.
+- [32:55] Sí, sí.
+- [32:57] ¿El tipo de documento?
+- [32:58] Sí. O sea, no es el módulo de proveedores. La idea es que todo lo que se ingresa al módulo de proveedores, que al tiro el gasto lo que es contra el proveedor.
+- [33:07] Y cuando viene asociado a facturas, nosotros igual podríamos con el módulo de proveedores asociar las facturas, pero tendríamos que digitar la cuenta proveedor, proveedor, proveedor, proveedor, a cada rato.
+- [33:29] Proveedor contra que cuando lo guardemos se va a generar el proveedor de la venta.
+- [33:35] Entonces para evitar eso nosotros hacemos la carga masiva en el módulo de contabilidad.
+- [33:40] Pero igual se va al módulo de proveedores en su registro contable.
+- [33:45] Entonces me hace el cárcel de las facturas que vienen asociadas y se metean como que ya están pagadas
+- [33:51] y me reconoce la deuda en el proveedor que me...
+- [33:54] Pero, ¿dijeron algo de factura de la asociación de exportación?
+- [34:00] Sí, la asociación, la nota, que vienen notas de cobro con la Asoex, y esas se ingresan directo al gasto, no pasan por una, de proveedor a proveedor.
+- [34:10] Se va aquí, ¿cierto? Directo al gasto.
+- [34:13] Sí, directo al gasto.
+- [34:14] La de la asociación, Asoex, se va directo a eso.
+- [34:19] A mí me cobran una comisión por exportar. Entonces ahí yo no es que le deba un tercero o que me haya pagado un documento, sino que yo estoy pagándole directamente el cobre, reemplazo la factura por la nota de cobro directa.
+- [34:34] Ahí no hay un cambio de proveedor, no tengo que ir a hacer facturas, es un gasto directo.
+- [34:38] Ah, un gasto directo.
+- [34:39] Sí.
+- [34:41] ¿Y aquí te lo has dicho en ese acuerdo de proveedores?
+- [34:44] Sí, y esas vienen facturas asociadas, no me cobran un gasto adicional, porque los gastos adicionales de ellas, los facturas.
+- [34:51] ¿Y el pago que se le hace? ¿Y el pago que se le hace al SOEX o algo así?
+- [35:07] ¿Al SOEX? Ah, sí, a esa puerta de salería.
+- [35:10] ¿Y queda relacionado a Mamota Cobro?
+- [35:13] Sí, es como un proveedor más.
+- [35:15] Ah, entonces, pero igual eso tendríamos que considerarlo entonces un tesorerío.
+- [35:19] Es que sería como un pago de más, no más.
+- [35:21] Lo que pasa es que todo lo que se ingrese tiene que irse en modo de un tesorerío, ya sean facturas de compra o de venta.
+- [35:42] Sí, porque al final eso nos impide que nosotros podamos ingresar por el módulo de aprobadores,
+- [35:49] porque al final la carga masiva te pide un asiento cuadrado, y como el módulo en sí ya te da una parte automática,
+- [35:54] No puede subir un asiento. Y la carga, ¿son facturas, facturas? Todo lo que es factura. Sí. Y contra la nota de cobro, que es la 71. Y ahí queda calzado. Sí. Como arriba.
+- [36:09] Como arriba. Como arriba. Y este es el asiento de la 70. Cero. 71. Ahí. Bien. Y este es el asiento de la SUEX, que se da directo de gasto por la compra.
+- [36:22] Y este es como porque hablan así de que todas las facturas asociadas a esa nota de cobro.
+- [36:26] Que son el rastro y ahí es el problema.
+- [36:28] Que sería la nota de cobro de OPP.
+- [36:31] Y ahí se ve el auxiliar y todo eso.
+- [36:34] En realidad la nota de cobro es una factura.
+- [36:36] Sí, sí.
+- [36:37] ¿Cuál es la nota de cobro?
+- [36:39] Te dije que te lo decía porque no te di nada.
+- [36:43] ¿Qué pasa? ¿Qué hay?
+- [36:44] Al principio...
+- [36:45] Cuando la fe empezó a escribir...
+- [36:50] El tratamiento de una factura. ¿Cómo es? La factura te hace un cobro de algo que tú adquiriste.
+- [36:59] En este caso, es el mismo tratamiento de la factura, pero el tipo de documento es nota de cobro.
+- [37:05] La nota de cobro tiene dos conceptos. Uno, que te cobran directamente un gasto.
+- [37:09] Y la otra, que te pagaron tus facturas y te las están cobrando.
+- [37:14] Por el lado del gasto, uno la ingresa como una factura.
+- [37:17] Entonces, reconoce el gasto y se hace automáticamente el asiento de gasto y proveedor.
+- [37:22] Claro.
+- [37:23] Con el tipo de documento, nota de cobro.
+- [37:25] Pero cuando yo estoy pagando facturas, yo de mi sistema ya las tengo ingresadas y las tengo pendientes de pago.
+- [37:30] Entonces, como un tercero ya las pagó por mí, yo tengo que asociar el pago que le voy a hacer a ese tercero con todas las facturas que ya me pagó.
+- [37:38] Y ahí se ocupa la...
+- [37:39] Exacto. Entonces, ahí yo rebajo todos los proveedores y las facturas que tengo pendientes de pago que me pagó el tercero.
+- [37:46] Y reconozco la deuda con el tercero.
+- [37:51] Creo que lo entendí.
+- [37:54] Ya, ok. Entonces, tendría que ser interacción tanto de compras con tesorería.
+- [38:02] Sí, o sea, tesorería igual va a tener siempre la interacción con el módulo de compras y de ventas.
+- [38:08] ¿Por la carga masiva?
+- [38:10] Sí, la duda de la carga masiva es que, como son muchos documentos,
+- [38:16] Nosotros la hacemos por carga masiva por el módulo de contabilidad, pero si se pudiera hacer por el módulo de proveedores, sería perfecto.
+- [38:24] Pero nosotros la hacemos por contabilidad porque al final, para una carga masiva te pide el asiento en sí,
+- [38:30] entonces te pide la parte del debe y la parte de la vete, y que esté cuadrado y esté perfecto.
+- [38:37] En cambio, por el módulo de proveedores, cuando tú ingresas un documento, solamente carga el debe.
+- [38:41] En el caso de la factura, factura, factura FEC, factura exenta, nota de débito y la nota de cobro.
+- [38:50] Y cuando hay nota de crédito, carga de la vera.
+- [38:51] Pero se carga solamente una parte porque la otra parte es automática.
+- [38:56] Que es proveedores, igual debe de haber.
+- [38:58] Es mejor que sean proveedores.
+- [39:02] Si se puede en proveedores, sí, pero ahí solamente en proveedores tendríamos que subir las facturas que vamos a pagar.
+- [39:07] ¿Cómo seleccionar las facturas que vamos a alcanzar en esa nota de cobro?
+- [39:12] Estoy pensando.
+- [39:19] ¿Y si en compra se pone como un módulo de nota de cobro solamente?
+- [39:23] A ver si me da nada.
+- [39:25] Es que se puede seleccionar así como...
+- [39:27] Sería, bueno, si está listado de documentos pendientes, puedes seleccionar,
+- [39:31] porque así también te evita ir a todos los proveedores a buscar que realmente te la faltan.
+- [39:35] ¿Y esa nota de cobro la trabaja Lupe?
+- [39:38] No, no, nosotros.
+- [39:39] ¿Y quién trabaja la compra? Lupe, ¿no?
+- [39:41] No, la Lupe ve el tema de los pagos y los ingresos.
+- [39:50] Ah, ya, ya, es verdad, sí, sí, sí.
+- [39:52] Pero esa carga de eso, como tú bien dices, va a estar mezclado. Un 2% va para los Odex, ¿no?
+- [40:04] Asoex.
+- [40:05] Asoex.
+- [40:07] Y el 98% contra Noruego.
+- [40:11] Igual sería bueno un módulo de nota de cobro porque sería ahí un control, porque nosotros igual tenemos harta interacción con logística.
+- [40:18] Y que hay un registro de cuáles notas de cobro se han ingresado.
+- [40:21] Y ahí por ejemplo, si las facturas recibidas quedan asociadas a la nota de cobro, por ejemplo, como se aparece ahí, quedan bloqueadas en el cobro.
+- [40:34] O sea, esas prácticamente están pagadas, esas están pagadas, o sea, nunca van a cobrar la nota de cobro.
+- [40:39] Está todo listo.
+- [40:40] O sea, la que el facturador paga es la nota de cobro.
+- [40:43] Exacto.
+- [40:44] Ya.
+- [40:53] Ay, y en el caso de Asoex, ¿también queda pendiente el pago de eso?
+- [40:58] Sí.
+- [41:00] Es como la factura más.
+- [41:01] Sí.
+- [41:04] ¿El único problema es la nota de cobro?
+- [41:06] ¿Cuál es la pregunta?
+- [41:07] No, ¿y cómo esa plata ustedes la declaran?
+- [41:11] Debajo, tanto los documentos, porque el OPB o el embarcador que sea, nos manda la nota
+- [41:17] Nota de cobro y nos manda todas las facturas que pagaron ellos, con el comprobante de pago.
+- [41:21] ¿En la SOEX?
+- [41:23] Ah, en la SOEX. No, nos piden los comprobantes de la SOEX, nos llevan una nota de cobro directa a la SOEX.
+- [41:29] ¿Den un documento electrónico?
+- [41:31] ¿Pero cómo rebajan? ¿Esas son con IVA?
+- [41:34] No.
+- [41:35] ¿Con exentos?
+- [41:35] Con exentos.
+- [41:36] ¿Y ese gato cómo lo declaran ustedes?
+- [41:40] Se declara igual.
+- [41:41] Ah, ya. ¿Pero no es con un documento electrónico?
+- [41:44] No.
+- [41:46] ¿Por qué?
+- [41:46] No sé, de hecho es un cacho que las notas de cobro no pasen por el servicio de impuesto interno porque se quedan todas atrás de la guía.
+- [41:53] De hecho es una de las, en la auditoría es una de las que nos pidieron mucho respaldo.
+- [41:57] Claro, que yo puedo decir, oye, no hice una nota de cobro del mismo, 4.000 millones de pesos.
+- [42:01] Exacto.
+- [42:03] No, pero ahí tenemos, tuvimos que mandar los cobrados de servicio, tuvimos que mandar el respaldo de los pagos, tuvimos que mandar la nota de cobro emitida por ellos, el contacto de ellos, pedir un estado de cuenta.
+- [42:17] Cacho.
+- [42:18] Sí, el cacho, pero no entiendo, ellos trabajan así, no entiendo por qué.
+- [42:24] Y no es poco lo que cobran, imagínate, a nivel nacional.
+- [42:28] ¿Por eso?
+- [42:30] Negocio.
+- [42:31] No, no debe de ir.
+- [42:32] Negocio, socio.
+- [42:35] Próximo rubro.
+- [42:37] Además, eso no te cobran por exportar, o sea.
+- [42:39] Bueno, creo que no, papi, tal vez.
+- [42:42] Papi, el tránsito consistente.
+- [42:44] Papi.
+- [42:46] ¿Sabes qué tengo? Una cerrada.
+- [42:49] Pobre, se muere.
+- [42:50] ¿Qué quiere decir?
+- [42:51] Sí, lo que pasa es que ahí nosotros ingresamos proyectos.
+- [42:54] ¿Pero proyectos qué?
+- [42:55] Por ejemplo, yo digo, yo necesito, no sé, el modo del robot para ingresar las notas de la computadora.
+- [43:03] Entonces, es general, ¿no?
+- [43:05] Sí, aquí está, ahí está.
+- [43:08] Lo he probado, pero me necesito más cosas.
+- [43:10] ¿Tanto ahora más que ayer?
+- [43:12] Aquí está todo.
+- [43:13] Y entonces ahí tú ingresas y ahí te cae un formulario donde dice cuál es tu problemática, cuáles son las mejoras y qué propones, y qué impacto tiene tu trabajo.
+- [43:25] Y ahí ellos lo evalúan en el comité, que es súper arbitrario el comité, y evalúan si es factible o no es factible.
+- [43:32] ¿Está bueno?
+- [43:36] O sea, pero si han sacado proyectos.
+- [43:38] Sí, por ejemplo, bueno, el proyecto de la facturación fue como el impulso de que se hiciera esto, como que la gente pudiera darnos ideas, pero yo pedí unas mejoras en la página de AlmaWeb, la que después les quiero pasar a ustedes, porque está muy hecho comercial, pero yo también tengo que sacar información de ahí, o sea, no fue pensado para la información que yo necesito, entonces yo pedí unas mejoras.
+- [44:06] Bueno, eso lo ve el Mario, ¿no?
+- [44:13] El Mario la sigue y Agustín.
+- [44:16] ¿Y ellos son parte del comité?
+- [44:17] Sí, pero si tengo que ir muy al video, pues al final no tiene como...
+- [44:22] ¿No es al video?
+- [44:24] No.
+- [44:25] Hay muchos filtros ahí.
+- [44:28] Sí.
+- [44:28] Y bueno, lo que pasa es que todo esto pasó porque...
+- [44:35] Pedían y pedían como por pasillo.
+- [44:36] Exacto.
+- [44:37] Como conversación de pasillo y quedaba ahí.
+- [44:42] Claro, así como que están en el almuerzo y dicen, oye, chiquillos, podríamos crear esto.
+- [44:45] Y los chiquillos lo creaban y después lo pasaban.
+- [44:47] Te voto.
+- [44:48] Le digo un nombre que me están dando.
+- [44:50] Yo creo que eso va a ser como a lo mejor poner como el módulo dentro de las compras, nota de cobro.
+- [45:11] Claro.
+- [45:11] Y que se ligue la factura para pincharla y que se contabilice con la nota de cobro.
+- [45:17] Así como un check que se vaya marcando en la lista.
+- [45:19] Claro.
+- [45:20] ¿Y qué queda como el registro? ¿De qué notas de cobro son las que están?
+- [45:30] Porque la nota de cobro viene con un número, como la factura.
+- [45:33] La nota de cobro no hace uno, que ya queda ahí que la nota de cobro uno ya está ingresada.
+- [45:39] Y en ese caso, ¿se haría como el asiento que le puse del 3-3 con el 71?
+- [45:49] El 3-3 es la factura normal contra el 71 que es la nota de cobro.
+- [45:54] Esa comparativa, ¿cuál la podríamos tener dentro de ese mismo módulo que muestran las dos?
+- [46:01] ¿Como el asiento?
+- [46:02] Sí, sí, como...
+- [46:03] Claro, que tenga como una visualización...
+- [46:06] Pareciera a la del asiento, así para poder, como tenerlo ahí...
+- [46:09] Claro, sí, porque por ejemplo en el asiento que veo en el Excel sale factura del 3, el auxiliar, el número de factura y el monto.
+- [46:18] Y ahí sale todo.
+- [46:19] Igual que la nota de compra.
+- [46:23] Y ahí tiene que cuadrar, si no cuadra no...
+- [46:26] Y problemas.
+- [46:27] Y ahí habría un control con la nota de cobro, porque pasa mucho con logística que a veces me pasa en la misma nota de cobro repetida y tengo que estar revisando si es que se ingresó o no.
+- [46:43] Y ahí estaría duplicando toda la información.
+- [46:48] Y en ese caso, bueno, acá podríamos tener también esta visualización de la factura.
+- [46:54] Acá, cuando tengan asociado una nota de cobro.
+- [47:00] Y aquí tienen como el numerito y tienen el acceso.
+- [47:02] Ah, claro, claro.
+- [47:03] Lo que pasa es que en caso de que sea nota de cobro se pinche y sale como todo, ya, así.
+- [47:07] Me gusta.
+- [47:07] Y ahí veríamos como el enlace tanto de la libro de compras para ver como el estado de cada uno lo ha asociado.
+- [47:12] Y aquí tienen el submenú para hacer esa asociación.
+- [47:16] Claro.
+- [47:17] ¿Se consulta aquí, por ejemplo, en el caso de...
+- [47:22] ¿En eso?
+- [47:23] ¿Sí?
+- [47:24] Esta es la nota de cobro, ¿cierto? En tu caso es la nota de cobro.
+- [47:27] Sí, por carga masiva, claro.
+- [47:29] O sea, es contrafactura, ¿cierto?
+- [47:30] Sí, es la siente que se hace.
+- [47:34] Contrafactura, ¿cierto?
+- [47:36] Sí.
+- [47:39] Ahí se estaría como prácticamente pagando las facturas.
+- [47:45] Ya.
+- [47:50] Es el debe y el...
+- [47:51] Adivinen dónde escribió Sergio.
+- [48:05] Este bolete tiene la letra más fea. Ni yo me entiendo. Por eso me gusta el teclado.
+- [48:14] Todo digital, ¿no? Sí.
+- [48:17] Pero esto es un momento de la creación, ¿cierto? Cuando se crea. Se hace de lo más conocido.
+- [48:22] Sí. O sea, al momento. No, de asociar. De asociar.
+- [48:27] O sea, lo ideal sería asociarla para crearla en un decoro. Sería el mundo perfecto.
+- [48:33] Lo ideal sería poder seleccionar las facturas pendientes y asociarlas a una, como crear una nota de cobro.
+- [48:40] Pero tiene la duda de cuándo se crea ese asiento, ¿o no?
+- [48:43] Sí.
+- [48:44] Ya, ese asiento se crea cuando se asocia con las facturas.
+- [48:49] O sea, ese asiento se haría cuando yo ya haga el checklist.
+- [48:53] Ya, o sea...
+- [48:54] Cuando yo ya seleccione todas las facturas, se haría ese asiento.
+- [48:57] Como lo que se siente hoy día el proforma con centralización.
+- [49:00] Sí.
+- [49:00] O sea, ahí sería, si se puede seleccionar todas las facturas, sería crear o nota de cobro, y ahí ponerle el número de la nota de cobro.
+- [49:14] Ah, tú dices como el ingreso diario con la proforma.
+- [49:20] Sí.
+- [49:20] Como se crea la proforma, se selecciona el ingreso diario que ya está.
+- [49:23] Ah, ahí sería el escenario perfecto, porque ahí no solo vemos al tiro, que es en todo el documento.
+- [49:29] Y el paso a menos.
+- [49:29] ¿Pero si en la carga masiva no se podría trabajar?
+- [49:35] No, no lo hacemos con carga masiva.
+- [49:38] De hecho la carga masiva igual es un cacho, la larga, porque tienes que ver que todos los campos estén activos.
+- [49:44] ¿Qué significa OPB?
+- [49:48] Es el proveedor.
+- [49:49] No, no es el proveedor.
+- [49:51] Es que no llega la nota de cobro de OPB, que es embarcador o proveedor.
+- [49:57] ¿Son dos notas de cobro? ¿Dos tipos de notas de cobro?
+- [50:02] No, es el mismo reglamento.
+- [50:04] Pero solo que abajo se hizo carga masiva.
+- [50:07] Sí, solo que arriba...
+- [50:08] Ah, te decís por el tema de seleccionar.
+- [50:11] Es que eso lo podemos empezar con este buen móvil a probar cómo lo es la factura.
+- [50:18] Seleccionamos el base y guardamos los...
+- [50:20] No se calienta la cabeza con las rex.
+- [50:22] No.
+- [50:22] Eso es una factura más.
+- [50:23] Sí.
+- [50:24] Solo que hay que crear el tipo de documento que es nota de cobre.
+- [50:26] Claro.
+- [50:27] ¿Pero qué debería que se controle del módulo? ¿Un módulo de nota de cobro o un menú nota de cobro?
+- [50:36] O sea, sí, porque ahí se va a ver, o sea, mi directora nota de cobro que está en el sistema.
+- [50:41] Ahí tendría que haber como un registro, el número que ingresó.
+- [50:44] O sea, podríamos mirar la creación de factura y claro, va a pedir la cuenta mayor por línea, ¿no?
+- [50:49] Sí, la cuenta de factura.
+- [50:50] Bueno, la cuenta de factura.
+- [50:53] ¿Ya? ¿Se ha aprendido?
+- [50:56] Sí, yo creo que sería entonces crear en compras un submódulo que pueda hacer la asociación y crear uno a uno.
+- [51:05] O sea, que sea una sola pantalla en realidad.
+- [51:08] Sí.
+- [51:08] Una sola pantalla con los caballeros.
+- [51:10] Sería o ingresa a cuenta contable o selecciona factura.
+- [51:14] Claro.
+- [51:14] Por ejemplo, lo que tenía SAP era, por ejemplo, a nivel de detalle, uno dice si es por servicio o no, o por artículo.
+- [51:22] Cuando el artículo termine la cuenta.
+- [51:24] ¿Ya?
+- [51:24] Que pasaría a ser como esta.
+- [51:26] Y si es por servicio, iría a buscar las facturas.
+- [51:56] Sí, voy al baño, Netflix, el poco Chanel.
+- [52:02] El cocardo.
+- [52:03] El cocardo.
+- [52:03] Sé que hay que ir al cocardo.
+- [52:05] Ah, bueno, el cocardo.
+- [52:09] El coccila.
+- [52:11] El coccila.
+- [52:12] Ya te dijeron, tenemos mucho pendiente y era la buena de las cuentas.
+- [52:16] Así era la buena de las cuentas.
+- [52:17] Tenía, y ahora con más.
+- [52:22] Ana, con todas esas monjas.
+- [52:25] Sí, sí. Esa era la idea de pulir los detalles.
+- [52:34] Casi helado, ¿cierto? Sí, se lo había visto.
+- [52:38] Así que sean como caníbales.
+- [52:47] Estaba pensando, y aquí dentro de las notas no tengo ningún otro pendiente,
+- [52:51] pero creo que algo más nos faltaba consultar.
+- [52:53] No me voy a acordar.
+- [52:55] La nota de coro me quedó, quedé clarito, como el agua.
+- [53:04] ¿Cómo le ponemos el tipo a nivel de detalle?
+- [53:09] Para ver si pide seleccionar las facturas recibidas o la cuenta, por línea.
+- [53:17] ¿Cómo le podemos dejar un tipo?
+- [53:19] El servicio puede ser...
+- [53:25] Ya, si es por artículo, va contra la factura.
+- [53:29] Si es por servicio, es contra el...
+- [53:31] ¿Y ahí pide cuenta?
+- [53:32] Sí.
+- [53:33] Ya.
+- [53:34] Por servicio tendría que haber cuenta.
+- [53:36] Y por el oro puede ser servicio en proveedor. Y por proveedor de efectos, por dicho, la factura.
+- [54:06] Y van a agregar igual que otro tipo de documento, pero ahí es cuando con y sin retención también, está como el...
+- [54:13] Debería tener un seleccionable cuando es boleta, ¿no?
+- [54:16] Claro, acuérdate que la boleta tiene distintos números, distintos códigos, cuando es con o sin retención.
+- [54:23] Sí, pero ahí estaría como marcado...
+- [54:27] Por ejemplo, la 1001 creo que es boleta en horario de boleta electrónica, la 1002 es boleta en horario sin retención,
+- [54:34] La 1003 es con el 3% de retención del préstamo solidario.
+- [54:38] ¿Es el último documento, vale?
+- [54:39] Sí.
+- [54:40] ¿En serio? ¿1001? ¿En serio, de verdad?
+- [54:46] Sí.
+- [54:49] No, de verdad, no, tío.
+- [54:54] ¿No es el 1001?
+- [55:04] O sea, es 1001 y es 1002, pero mundialmente no.
+- [55:09] ¿Otra cosa, de verdad?
+- [55:12] En Chile, no sé.
+- [55:15] Voy al baño.
+- [55:28] ¿En serio? ¿Dónde ves eso?
+- [55:37] En el servicio.
+- [55:55] ¿Cómo lo has quedado rápido?
+- [55:56] Honorario, nota de cobro, OBD, ya lo vas a ganar.
+- [56:31] Solicitud de modificación también.
+- [56:40] La apertura del mes también, que al fin y al cabo no va a haber apertura del mes con el sistema que planean.
+- [56:45] No se van a reabrir, se va a editar la línea nomás.
+- [56:49] Centralización también.
+- [56:53] La actividad de las labores ya está lista.
+- [57:08] Todo el ejercicio también.
+- [57:19] ¿Cómo ponemos la tarjeta?
+- [57:26] No, no, estará como documento de votación.
+- [57:51] ¿Sale la factura de venta, boneta, guía de despacho y notas?
+- [57:55] Exportaciones.
+- [57:57] ¿Seguro?
+- [57:59] Entonces un código del sistema.
+- [58:02] ¿El número que está en la tarjeta?
+- [58:03] Puede ser, ¿no?
+- [58:04] Déjemoslo así.
+- [58:05] Sí.
+- [58:08] No me voy a prender el recódigo.
+- [58:14] Sí.
+- [58:14] Ya.
+- [58:21] ¿Pero es 1001? ¿Cuál es? ¿1001 sería boleta honoraria o electrónica?
+- [58:26] Electrónica.
+- [58:26] ¿La 1002?
+- [58:27] 1002, exenta.
+- [58:29] ¿Boleta honoraria o exenta electrónica?
+- [58:30] Sí.
+- [58:31] ¿La 1003?
+- [58:32] Boleta honoraria con retención del 3%.
+- [58:34] ¿La 2 cuál era, por favor?
+- [58:38] ¿Cuál era?
+- [58:41] Sí, pero hasta el 2025, ¿no?
+- [58:43] Sí.
+- [58:44] ¿Cuál era la 1002?
+- [58:46] ¿La 1002?
+- [58:46] La 1003.
+- [58:47] ¿La 1003?
+- [58:48] ¿Cuál era la 1003?
+- [58:49] Estoy atrasado.
+- [58:50] La 1003 no.
+- [58:52] Profe, ¿puedes estar más lento?
+- [58:55] La 1.002, boleta de exigencia electrónica.
+- [58:58] Ya.
+- [59:00] ¿Y la 1?
+- [59:02] Boleta de...
+- [59:03] ¿La 3 entonces no?
+- [59:07] No.
+- [59:09] La 1.002, ya.
+- [59:11] Eh, no.
+- [59:13] Pero esas son solo recibidas, ¿cierto?
+- [59:16] Sí.
+- [59:20] Tienen acceso al portal de DSEI, ¿cierto?
+- [59:22] Sí.
+- [59:22] ¿Puedo ver las recibidas?
+- [59:24] Sí.
+- [59:26] ¿Podemos contarnos?
+- [59:28] No tengo el portal.
+- [59:32] Soy el hermano de los indirectos.
+- [59:36] No tengo el portal, está cercano.
+- [59:40] ¿Vas a armar la mesa mañana cuando nos veamos?
+- [59:47] Sí, está buena.
+- [59:49] Te dije que ayer era el momento.
+- [59:50] Esta la venden en...
+- [59:52] ¿Y una vez ha sido una mesa?
+- [01:00:27] O sea, es lo mismo que la...
+- [01:00:34] ¿Y cómo regiquen la ola? ¿Ustedes?
+- [01:00:47] Aquí se podría hacer un trabajo, pero yo creé esta parte si sería para un segundo release.
+- [01:00:51] Se podría registrar la clave tributaria y podría descargar estos boletos de anuario
+- [01:00:57] Y que se carguen al portal de AlmaWeb.
+- [01:01:35] No, lo que pasa es que acá hay un tema con ALM que es, nosotros trabajamos con un abogado externo.
+- [01:01:56] Entonces, el abogado precisamente nos emite boletas con ALM por la prestación de servicios.
+- [01:02:02] Pero como ella hace todo el tema legal, se le paga a ella las boletas de honorarios exentas, que por ejemplo son de notaría, de firmatriz, timbre, actualización de carátula, entonces todas esas chiquititas.
+- [01:02:18] Son como de ocho locas las boletas.
+- [01:02:20] ¿Pero cómo las vende ella?
+- [01:02:22] No te pagan cuando nos cobran.
+- [01:02:25] Entonces ella nos paga, pero en realidad nos la inviten a nosotros.
+- [01:02:28] Pero nosotros no las ingresamos porque al final estábamos duplicando el gasto.
+- [01:02:32] Ah, como lo de...
+- [01:02:34] Claro, pero es que acá, por ejemplo, yo al final no tengo el detalle de quién es el que me está cobrando ahí.
+- [01:02:41] Yo sé que solamente tengo que pagar las cuantas de un horario con retención, porque las seis de retención, ella las paga.
+- [01:02:50] Es como que su servicio está pagar las boletas, los gastos de los chicos, y cobrarse un horario.
+- [01:02:57] Y le meten la boleta de un horario así.
+- [01:02:59] Llegando otro hombre, pero lo ha pagado otra señora.
+- [01:03:05] ¿Y esas cómo las cuadras tú, por ejemplo, y a todas estas?
+- [01:03:07] Por ejemplo, esta no la ingresa.
+- [01:03:10] Claro.
+- [01:03:11] ¿Quién no la ingresa?
+- [01:03:12] La Fran.
+- [01:03:13] Y si la rinde, por ejemplo, a Marlene, que también tiene que ver con el tema de los finiquitos,
+- [01:03:18] eh...
+- [01:03:22] Por eso, pero esa plata que ustedes están pagando,
+- [01:03:27] yo esa bolita de horario, ¿contra qué la asocian? ¿Contra nada?
+- [01:03:30] Nada.
+- [01:03:30] ¿Qué hago de ley?
+- [01:03:30] Nada, a menos que, por ejemplo, Recursos Humanos haga la rendición y el que pagó efectivamente esta boleta.
+- [01:03:36] Entonces nosotros ingresamos la boleta.
+- [01:03:38] No, no, sí se puede.
+- [01:03:39] Sí, pero si no, en el caso de Dolores, que anda en el aire, no la ingresamos.
+- [01:03:43] Entonces, en los totales, el libro está cuadrado, pero en la cantidad de documentos, no.
+- [01:03:48] Y en el total, es solamente que están con retención.
+- [01:03:52] Lo malo de aquí es que, por ejemplo, yo no sé si lo pagaron o no, y ahí es cuando yo no sé si la ingreso o no.
+- [01:03:58] Por ejemplo, acá nunca han rendido una boleta de honorario de notaría, y las cartolas las actualizan cada dos o tres meses.
+- [01:04:09] Entonces, esa es la persona que las paga, que es de Dolores, que nos hace el trámite, las rinde.
+- [01:04:16] Ahora está Trinidad, que es parte de nuestra empresa, que también está haciendo trámites notariales, y que también las rinde.
+- [01:04:23] Entonces, cuando las rinde, nosotros las ingresamos, pero las que no, asumimos que las paga Dolores.
+- [01:04:27] ¿Y ese impuesto quién lo dará? ¿Ustedes? ¿Ah, no son exentas?
+- [01:04:35] Es que son exentas.
+- [01:04:38] Bueno, la prestación sí la ingresamos. La exenta depende.
+- [01:04:42] Ya no sé, sí.
+- [01:04:43] Sí, ya es prácticamente un...
+- [01:04:45] Pero ya es gasto para ustedes, ¿no?
+- [01:04:46] Sí.
+- [01:04:49] Pero dice igual, las que quedan ahí en el aire no las contabilizan nada.
+- [01:04:52] Lo que pasa es que si las contabilizamos quedan eternamente pendientes.
+- [01:04:56] Pendientes, claro.
+- [01:04:57] Sí.
+- [01:04:58] Y ahí aparecen las rendiciones, ¿no?
+- [01:05:02] O sea, puede venir alguien y decir, mira, todas estas son mías.
+- [01:05:09] Nico.
+- [01:05:14] Sí, porque al final, eso castigarla, porque hay quien tiene que reversar el acto cuando lo ha probado.
+- [01:05:19] Entonces, por eso después toma una decisión también de ingresarla,
+- [01:05:22] menos que alguien me haga con un documento en rendición.
+- [01:05:29] Porque si no hay consenso, entonces se está pagando en la boleta de honorarios de la Dolores.
+- [01:05:37] Bueno, yo lo dejaba en la opción.
+- [01:05:39] Pero claro, si no...
+- [01:05:40] Pero...
+- [01:05:42] O sea, igual página ruido.
+- [01:05:43] Porque esto en realidad lo ven ustedes, ¿no?
+- [01:05:48] El acceso, bueno, quien tenga también acceso a ese guía.
+- [01:05:51] Pero ahí en realidad lo que está diciendo es cuánto porcentaje tiene sin asociar o sin vendir.
+- [01:05:57] Porque ahí yo creo que sería un buen punto para empezar a tomar tanto en el asunto,
+- [01:06:02] porque al final Dolores igual debería de taller, pero esta persona está cobrando.
+- [01:06:06] O incluso ella misma podría dar acceso y ella seleccionarla por el...
+- [01:06:10] Ah, pero voy a tomar entonces.
+- [01:06:13] Bueno, ahí después lo vemos con post-cierre, post-entrega.
+- [01:06:34] Hay dos dólares también, cuando salgamos produciendo esto.
+- [01:06:45] Si bien lo tomo en la edad, después ya lo tengo usándolo.
+- [01:06:48] Sí.
+- [01:06:48] ¡Gracias!
+- [01:07:28] Y lo de nota de cobro también me quedó súper claro.
+- [01:07:33] Lo que sigo ahí con mi nebulosa es el tema de las reservas.
+- [01:07:37] Ah, no, digo, de hecho quiero un ajuste.
+- [01:07:40] Traspaso.
+- [01:07:41] Sí, de la reversa de contratistas.
+- [01:07:44] Sí.
+- [01:07:44] Quiero hacer un ajuste.
+- [01:07:45] Llega.
+- [01:07:47] O sea, cuando el mes esté cerrado, ¿sí va a asociar un ajuste?
+- [01:07:52] Sí.
+- [01:07:55] Centralizado y mes cerrado.
+- [01:07:57] Sí.
+- [01:07:58] Centralizado, ya se hace el ajuste para si es que hay algún error, se ajusta, pero si es reversar la proforma para poder editarla, se ajusta en otra línea.
+- [01:08:08] Sí, lo que pasa es que si está centralizado, está al asiento, y si quieren modificar ahí, se va a hacer una línea de modificación, y ya si el mes está cerrado, se va a hacer un ajuste.
+- [01:08:22] Ya. Ok. No sé si tenemos más. No, no. Siento que algo se nos olvidó hacer. Tengo esa sensación de arrancarme. Para un búnker anti-Bernardo.
+- [01:08:43] Lo del plan de cuenta quedó perfecto, ¿sí es cierto? Sí. Hay que hacer la modificación en activos fijos que hablábamos.
+- [01:08:56] Ah, y también en la cuenta, la nueva pestañita.
+- [01:09:01] El TAF, para poder asociarlo, por plan de cuenta asociarlo a los tres, sí.
+- [01:09:09] ¿Qué más?
+- [01:09:10] Estoy pensando.
+- [01:09:12] ¿Por qué se ríen alto?
+- [01:09:14] No, porque ríen porque harto.
+- [01:09:16] Pero igual les mandé una vuelta a todos los módulos.
+- [01:09:19] Sí, hemos aprovechado.
+- [01:09:20] O sea, el número de contratistas es el que más, y el último que no.
+- [01:09:24] Si mal no me equivoco, lo último que nos falta es ver el pago con Lupe.
+- [01:09:29] ¿Cómo?
+- [01:09:29] El registro de pagos, porque creo que lo hablamos de que venía de la cartola, pero no quedamos con nada, si es que estaba bueno, había que hacer alguna modificación.
+- [01:09:56] ¿Sumir la cartola?
+- [01:09:57] Porque lo último que alcanzamos a ver es que por banco tuvieran que tener su tema de hacer la cuenta, de poder agregar la cuenta.
+- [01:10:08] Sí.
+- [01:10:08] Pero creo que fue él. ¿O que alcanzamos a ver solamente con...?
+- [01:10:11] O sea, lo ideal es que en el banco se pueda ver la cuenta corriente porque siempre nos piden ese dato y así es más fácil buscarlo.
+- [01:10:17] Y pues sacar el pantallazo y mandarlo a los proveedores.
+- [01:10:23] Pero lo que habría que ver es el tema de la carga de la cartola.
+- [01:10:28] Como se supone que se va a subir la cartola y ya no va a venir con el detalle que le lo puso por al lado, porque se va a contabilizar directamente los movimientos.
+- [01:10:34] Era, te me acordé, que era que la cartola no se cargaba una vez en el periodo, que se podía cargar varias veces.
+- [01:10:42] Sí, que debía discriminar.
+- [01:10:44] No pisara, o sea, que se pisara o no, sí, eso, eso era. Sabía que algo faltaba ahí.
+- [01:10:48] ¿Cómo, cómo, cómo?
+- [01:10:49] Porque la cartola se puede hacer carga ya sea como una vez al mes, como todos los días del día.
+- [01:10:54] Todos los días del día.
+- [01:10:54] Entonces, la cartola viene con todos los movimientos, junto con los nuevos.
+- [01:10:58] Entonces, para que no se dupliquen, tiene que hacer la discriminación con los que ya están.
+- [01:11:02] O solamente agregar los que...
+- [01:11:03] Los faltan, exactamente.
+- [01:11:06] ¿Y eso lo hablamos el lunes?
+- [01:11:08] Sí, sí creo que lo hablamos el lunes.
+- [01:11:10] Sí, creo que sí.
+- [01:11:11] Lo habíamos hablado la vez pasada, pero le pedí...
+- [01:11:14] No, por reunión.
+- [01:11:14] La...
+- [01:11:15] Por reunión...
+- [01:11:16] Creo que fue la última...
+- [01:11:17] Sí, esa fue la última reunión que tuvimos.
+- [01:11:19] Que me pidieron que le mandaran las cartas.
+- [01:11:21] Yo no tuve.
+- [01:11:23] Sí, eso.
+- [01:11:24] Entonces, otra cosa que se está obligando.
+- [01:11:29] ¿Estás jodido?
+- [01:11:33] ¡Anda al baño, Carlos!
+- [01:11:37] Bueno, y cuando me acuerdo por último, mando una bomba por WhatsApp y me salvo el grupo.
+- [01:11:48] Eso no es más.
+- [01:11:51] Va a estar igual en algún momento.
+- [01:11:53] Todas las preparaciones hechas aquí en WorldWare, no sé.
+- [01:11:55] Y después si uno lo va a saltar igual, si es que falta algo.
+- [01:12:01] Sí, en el uso siempre uno encuentra cosas.
+- [01:12:04] Por eso yo creo que luego te vas a usar la plataforma de GoSocket.
+- [01:12:09] Porque justo nos va a tocar el operativo cuando estamos en el boom de imaginación.
+- [01:12:14] Entonces si se puede, abre, ¿cuándo vamos a poder ir con el sistema?
+- [01:12:18] ¿Cuándo parten con el boom?
+- [01:12:20] En noviembre.
+- [01:12:21] La última semana.
+- [01:12:25] Yo creo que en la quincena ya estamos juntos.
+- [01:12:32] Yo creo que el podcast va a ser un ultra esfuerzo, pero necesitaríamos la data de contabilidad.
+- [01:12:39] ¿La data del lado de datos?
+- [01:12:44] Sí, todos los movimientos que llevan de este año para cargarlo por último de este año.
+- [01:12:50] Cargarlo de este año y ya el histórico después podemos trabajar por...
+- [01:12:54] Sí, carga...
+- [01:12:55] Sí, por la tira.
+- [01:12:57] Pero, ¿necesitaríamos esa información con Mario? Y todos estos ajustes que hemos visto, obviamente ya mañana tendríamos que llegar con más mejoras, y dentro de esta semana también otras mejoras, y la próxima semana juntarnos medio día completo, y ya vamos a llegar.
+- [01:13:19] No me preocupan ustedes, no me preocupa a vosotros.
+- [01:13:23] Pero, o sea, igual yo creo que en la prueba de fuego ahora...
+- [01:13:25] No, se veía perfecto que pudiéramos hacer la prueba de fuego. De hecho, nosotros ya habíamos conversado en que el mes que estuviéramos a prueba, lo ideal era en temporada y poder usar los dos sistemas para ir comparando los modos espejos.
+- [01:13:39] Pero no hemos podido avanzar con GoSocket. Si se supone que con GoSocket, digamos, en septiembre.
+- [01:13:46] Sí, o si me acuerdo que... o si no tiene sentido el que haga el asiento en ello, porque acepta la cobra un año completo.
+- [01:13:53] O sea, acepte, ya está cobrando mensualmente.
+- [01:13:56] Ah, mensual.
+- [01:13:57] Sí, y todavía no nos manda los archivos de respaldo para hacer la carga masiva en GoSocket.
+- [01:14:04] Eso va a tener que ver, ¿no?
+- [01:14:08] Pero GoSocket...
+- [01:14:12] Pobre Pablo, ya no sabe qué decir en la reunión.
+- [01:14:15] Sí, me da igual porque no soy responsable de Pablo.
+- [01:14:17] Y él ha trabajado súper bien.
+- [01:14:18] Sí.
+- [01:14:21] De hecho, en el correo que mandé yo puse, así como que lamentablemente se está viendo afectado el trabajo de Pablo,
+- [01:14:26] ¿Qué hablas? He hecho excelente. ¿Cuál es el tema que más podías decirme?
+- [01:14:35] Ah, un facturador. Aquí te vuelven 50 pesos.
+- [01:14:40] Eso lo hizo Mario, pero ahora no.
+- [01:14:43] Porque el trabajo de la colección con el servicio que tú tienes, no es algo rápido.
+- [01:14:50] Me podría demorar dos días, por eso no...
+- [01:14:52] No.
+- [01:14:54] Me debías mucho.
+- [01:14:57] ¿Listo la cámara?
+- [01:14:59] Está listo.
+- [01:15:01] Mira, prueba.
+- [01:15:03] Sí, creo que sería lo más sano. Igual el Mario me había comentado que igual quieren como después ver la forma de ofrecerlo a su portadora.
+- [01:15:20] LRB, ¿me parece?
+- [01:15:27] Sí.
+- [01:15:28] ¿Aprobado?
+- [01:15:29] Listo.
+- [01:15:31] No, sí, está escuchado.
+- [01:15:33] Bueno, aquí está acepta.
+- [01:15:34] Es horrible aceptar.
+- [01:15:37] Sí.
+- [01:15:37] Ay, me ha pasado, porque a veces creen que no va a ser contabilidad, como bien sabe, todas las cosas.
+- [01:15:47] Yo voy a tocar.
+- [01:15:48] Jesús, me voy a aceptar.
+- [01:15:52] Yo, apágate el computador.
+- [01:15:55] Reinícialo.
+- [01:15:55] Sí, de nuevo.
+- [01:15:57] Pon el modo abierto.
+- [01:15:59] No, me pasa mucho que me dicen así, como que creen que yo me sé, y no me manejo de aceptar.
+- [01:16:03] Entonces, ya yo intento hacer la guía de despacho que le corresponde a producción agrícola.
+- [01:16:08] Y a veces me tira el error de que tiene mucha línea. Y tengo que empezar a borrar y averiguar qué campo le puse mucho texto. ¿Por qué no tiene un tope? ¿Me deja escribir? ¿Y saca la carta?
+- [01:16:26] Es que arregla que sí.
+- [01:16:28] Ponen límites.
+- [01:16:30] Ponen límites.
+- [01:16:33] Acepta lo compró, ¿cómo se llama?
+- [01:16:40] ¿SOS parece?
+- [01:16:41] Sí, fue terrible el cambio.
+- [01:16:45] Con Acepta yo hablaba directamente con el ejecutivo y me solucionaba.
+- [01:16:50] Cuando lo compró Sobo, el ticket, y el ticket nunca me ha solucionado un ticket.
+- [01:16:54] Generalmente como que la página vuelve a...
+- [01:16:56] No, no, y nunca me han solucionado un ticket. De hecho, cuando, porque te mandan un manual de ticket, te mandan a otra plataforma donde tú creas el ticket y está en inglés, partiendo por ahí.
+- [01:17:10] Qué entretenido.
+- [01:17:11] Sí, después vas a traducir páginas, traducir temas, y no está específicamente lo que tú quieres poner, entonces al final yo termino creando cualquier ticket y en la descripción pongo el problema.
+- [01:17:19] No sé qué pasará, por ejemplo, hay otras empresas que están comprando ahora acá, empresas de tecnología.
+- [01:17:45] Por ejemplo, bueno, Asobo partió con una Cepta y otra más.
+- [01:17:49] Ahora Sivo, que compró CAME, y ahora compraron Bissell, creo.
+- [01:17:55] Bissell, no sé si lo vieron.
+- [01:17:57] Sí.
+- [01:17:57] También compraron Bissell.
+- [01:17:59] Pero son empresas americanas, pues.
+- [01:18:02] Es que el soporte es muy malo.
+- [01:18:03] Sí, bueno.
+- [01:18:03] El soporte es malísimo.
+- [01:18:05] Y también el, por ejemplo, para mí, para mí un facturador.
+- [01:18:16] ¿Qué tipo de fenómeno habrá hoy?
+- [01:18:18] Claro, quiero sorprender al día de hoy.
+- [01:18:21] ¿Qué cosa?
+- [01:18:22] Que donde tienen la puerta abierta y sale y digo, ¿qué habrá ahora?
+- [01:18:26] ¿Tú sabías que en temporada ha sido el ritmo?
+- [01:18:29] ¿Aca se nota mucho el campo cuando empieza la cosecha?
+- [01:18:31] Full, todo entrando y saliendo.
+- [01:18:33] Ya salió el chile.
+- [01:18:34] Y estaba enojado el chile.
+- [01:18:36] ¿Sí?
+- [01:18:37] Sí.
+- [01:18:37] Que no había el tornado.
+- [01:18:40] No sé, no sé, ¿cuál será?
+- [01:18:44] ¿Encontrar la cota?
+- [01:18:50] No, está bien, está bien.
+- [01:18:53] Ya se me la pasan y con la instrucción de que hablaron con todos los chinos que vinieran a China y no había cota.
+- [01:18:59] Para ver si realmente era posible la cota.
+- [01:19:12] ¿Y eso lo coste a ellos?
+- [01:19:14] Sí, a ellos también.
+- [01:19:17] Sí, bueno, si no lo coste a ellos.
+- [01:19:19] Business.
+- [01:19:30] El clima, sí.
+- [01:19:32] ¿Cuál hace este año?
+- [01:19:33] O que la fruta evolucione.
+- [01:19:40] El clima.
+- [01:19:44] Yo creo que va a ser este año, seguramente.
+- [01:21:26] Debería haber llegado el chino, ¿no?
+- [01:21:29] ¿Abrir la fruta?
+- [01:21:30] Ah, sí, lo voy a llevar.
+- [01:21:31] ¿Siempre se da?
+- [01:21:33] Enganchándolo, enganchándolo.
+- [01:21:36] Me va a llevar a la tascuna.
+- [01:21:39] Ya llegó una, ya.
+- [01:21:42] Una vez yo fui a Airbus, que es una empresa que se encarga de vender helicópteros, aviones,
+- [01:21:49] que estaba ahí en La Reina.
+- [01:21:52] Hay un helipuerto, que se llama un aeropuerto, no sé cómo se llama, y tiene muchos aviones y aparte helicópteros.
+- [01:22:05] Y ellos, esa empresa, se encargaba de vender helicópteros, aviones y además de las mantenciones de los dramos.
+- [01:22:18] Y en el caso del helicóptero, se tiene que hacer la mantención una vez al año, que se desarma completo el helicóptero.
+- [01:22:25] Pero completo, completo, completo.
+- [01:22:27] Y lo revisan pieza por pieza.
+- [01:22:31] ¿Y esas son después las auditorías que hacen cuando hay accidentes?
+- [01:22:34] Claro.
+- [01:22:35] Entonces, yo fui a implementar facturación electrónica y voy y le pregunto al tipo con el que lo recibió, y le dije, ¿cuántos son los helicópteros?
+- [01:22:48] Y lo puse entre 2 o 3 millones. Y yo en mi cabeza me fui, 2 o 3 millones de pesos, mejor, ¿por qué no hay gente mejor, personalmente?
+- [01:22:56] Yo lo compré en el otro.
+- [01:22:58] Ya, genial, quedé así con la empresa.
+- [01:23:00] Ya hay ganga.
+- [01:23:02] Me da uno, me da dos.
+- [01:23:02] Me da dos, que le cambie este auto por dos y compré.
+- [01:23:06] Claro, desde que... Y el otro día, Juan se va.
+- [01:23:09] Y yo dije, ¿en serio son tan pagados?
+- [01:23:14] Y le dije, ¿pero con 2 o 3 millones de pesos, cuál es pagado?
+- [01:23:16] No, por favor, si todo es bien en dólares, no vamos a estar mal para nada.
+- [01:23:21] La prueba dice.
+- [01:23:23] La compra, la compra, el daño.
+- [01:23:25] La mantención salía como dos millones de dólares.
+- [01:23:35] Pero son, pero al día de hoy los probaban y eso es la base.
+- [01:23:41] Y el que los probaba era un argentino.
+- [01:23:45] Y el que lo probaba era mucha, mucha plata y cobraba por hora, de acuerdo.
+- [01:23:50] Por hora.
+- [01:23:50] Por hora, de acuerdo.
+- [01:23:56] No puede cobrar tres minutos.
+- [01:23:58] No tiene plata, ¿sabes?
+- [01:24:00] Sí, creo.
+- [01:24:01] ¿Pero y siempre es el arriendo del helicóptero? ¿El arriendo es para el piloto de servicio? ¿El piloto?
+- [01:24:05] Sí.
+- [01:24:07] ¿Sí o el de su padre?
+- [01:24:08] No, porque siempre lo hagan.
+- [01:24:12] ¿Pero lo hacen para el piloto de servicio?
+- [01:24:18] ¿Qué le dicen si es que es el hermano?
+- [01:24:20] Y yo saco la licencia del piloto.
+- [01:24:22] ¿Sí?
+- [01:24:22] Sí. Y él fue su instructor.
+- [01:24:24] ¿Sí?
+- [01:24:24] Sí.
+- [01:24:25] ¿Y tú guardas la licencia?
+- [01:24:26] Me debe una bolsa.
+- [01:24:30] Sí.
+- [01:24:30] Me dijo la vez que me iba a llevarlo a la bolsa.
+- [01:24:36] ¿Sí?
+- [01:24:37] Sí.
+- [01:24:38] ¿Alguien no sabe dónde...
+- [01:24:40] Confío. Nunca ando con fiebre.
+- [01:24:41] No, a mi igual, pero hay que hacerlo, Sergio.
+- [01:24:45] Mañana va a haber un tornado y ahí quedamos.
+- [01:24:49] Lo pensaría dos veces.
+- [01:24:53] Claro, y en el tornado viniendo así, vamos a subir al helicóptero.
+- [01:24:57] ¿Al helicóptero o no al helicóptero?
+- [01:25:08] Yo sí, a todo. Todo lo que tenía en mi cariño yo lo reí.
+- [01:25:12] ¿Sí? ¿Te gusta?
+- [01:25:14] Sí. Yo me quiero tirar en paracaídas antes de ser mamá.
+- [01:25:16] ¿Te quieres tirar? No, me quiero tirar. Ah, te quieres tirar. Pero me da miedo de marearme. Yo quiero tener que tirar sola. No, no, pero lo que pasa es que, por ejemplo, la Lupe es full trekking, no sé si lo encuentras, full trekking, deporte, y ella a la vez me llevaba a andar a caballo muy alto, y la vista era espectacular, pero yo, te juro que me paralizaba con la altura, yo me paralizaba y me mareaba.
+- [01:25:41] Entonces yo no podía andar como el que el cuerpo no te lo responde. Entonces yo dije, quizás voy a estar arriba y no voy a desmayar. Me voy a morir.
+- [01:25:53] Entonces eso es lo que me limita.
+- [01:25:57] No creo que se desmaye.
+- [01:25:59] Yo creo que no, porque está firme con la persona atrás. No siente esa soledad en la altura.
+- [01:26:08] Y vale, pero es peligroso, porque eso depende de mucho como cierre, como cierre en el guarda, en el paracaídas.
+- [01:26:18] A mi me pasó que son dos paracaídas, dos tienen de emergencia y normal.
+- [01:26:27] Y el, pues dos veces normal.
+- [01:26:31] Si ya no salen, una de las segundas, ¿por qué no salen?
+- [01:26:34] Y lo mismo para el de emergencia.
+- [01:26:36] Y el de emergencia, bueno, no le funcionó, tiró el de emergencia y le salió.
+- [01:26:42] Y se abre, pero quedó mal guardado.
+- [01:26:48] Y eso se abre como de a poco, y se salió de golpe, y tenía trastos y trastos morados.
+- [01:26:55] ¿Me entienden cómo quedó ese desnudo?
+- [01:26:58] Sí, sí, sí.
+- [01:26:59] ¿Qué dijo? ¿Dijo, puta, sí?
+- [01:27:01] Solo espero que se vaya, pero esto es mal muerto.
+- [01:27:04] Sí, sí, obvio.
+- [01:27:05] ¿Pero él, por ejemplo, igual lo adopó?
+- [01:27:07] Pues que quizás el de emergencia es para abrirse así, pues me supone que ya está llegando a piso.
+- [01:27:12] No, o sea, ¿pero qué no iba llegando a piso? O sea, ¿no se le abrió el normal?
+- [01:27:19] Qué miedo. Yo en parapente me he tirado.
+- [01:27:22] ¿Sí?
+- [01:27:23] Sí, en parapente. Ese mío ahí, así como va corriendo, ya es como una montita al máximo.
+- [01:27:29] De ser de que una vuelta.
+- [01:27:32] No sé si me tiraría, por ejemplo, en 20.
+- [01:27:35] Es de las piernas, que agarra las puras piernas. Ahí, no sé.
+- [01:27:41] La fractura se borra esa cuestión.
+- [01:27:43] Ya he visto gente que, o sea, no lo he visto, literal, pero ya ha muerto mucha gente.
+- [01:27:47] Sí, sí.
+- [01:27:48] En Brasil, no sé, lo he visto tirado.
+- [01:27:50] ¿Lo tiraron sin amarrarlo?
+- [01:27:52] Sí.
+- [01:27:53] No, no.
+- [01:27:54] No, eso yo creo que no.
+- [01:27:56] Pero el resto, creo que sí.
+- [01:27:57] Yo no.
+- [01:27:58] Yo creo que no están.
+- [01:28:00] Algo, viendo el ámbito.
+- [01:28:01] Viendo el ámbito.
+- [01:28:02] A mí me gustan esas cosas, pero me mareo en las ruedas de la fortuna que están en la playa, chiquititas, dos vueltas y termino así, mal, mal, me mareo mucho.
+- [01:28:15] La última vez con mi hija en la playa nos subimos primero al barco pirata, así, bien, nos subimos a la rueda de la fortuna y, wow, ultra lento, ultra lento, y ya dos vueltas y ya me quería bajar, claro, estuvimos como media hora en la cuestión, horrible.
+- [01:28:30] Yo una vez me subí a un barco pirata y se le olvidó porque el tipo de abajo le empezó a conversar.
+- [01:28:36] Ocho vueltas, corre, Dios mío.
+- [01:28:38] Sí, le gritaban porque se le olvidó conversando con una mina ocho vueltas seguidas.
+- [01:28:45] Esa mina estaba para hablar con mi mamá, que no parara la rueda.
+- [01:28:49] Pero ocho vueltas, y todos le gritaban.
+- [01:28:53] Suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena, suena.
+- [01:28:59] ¡Hay que tirarse, hermano!
+- [01:29:05] Ya de Fantasyland ya hace muchos años que no voy.
+- [01:29:08] Muchos años.
+- [01:29:11] Muchos años que no voy.
+- [01:29:13] Ahora no creo que...
+- [01:29:14] A mí más me gusta, pero es cierto que mi cuerpo ya no me acompaña.
+- [01:29:21] La última vez que fui tenía como 16 años.
+- [01:29:26] Más o menos.
+- [01:29:27] Hace 15 años y nos subimos como a los tres primeros juegos, porque todos van como de a poquito en los juegos y vamos escalando.
+- [01:29:33] Entonces dijimos, ya llegamos temprano, vámonos los tres más...
+- [01:29:36] Sí, vamos, lo que más se llena.
+- [01:29:38] Vamos a bajar más o menos a mitad del tercero.
+- [01:29:41] Mal, mal. Como tres horas sentados y ahí como que respiramos y no pudimos volver a subir a los juegos.
+- [01:29:47] No, yo voy.
+- [01:29:50] De hecho, me subí al juego de hace rato, el de Universal, que es como una de las montañas rusas más ofensivas.
+- [01:29:55] Sí.
+- [01:29:55] Es maravilloso.
+- [01:29:56] Sí.
+- [01:29:58] Yo siento que ese parque es 100% para adultos.
+- [01:30:02] Ah, yo quiero ir a ver los parques allá en Estados Unidos.
+- [01:30:07] Son hermosos.
+- [01:30:08] Quiero ir al de Universal porque el de Universal es tal de Nintendo.
+- [01:30:12] El de Universal es hermoso.
+- [01:30:13] Sí, porque tiene de Harry Potter, de todo ese tipo.
+- [01:30:16] Sí.
+- [01:30:17] Sí, sí quiero ir.
+- [01:30:19] Es gigante.
+- [01:30:21] Y las montañas rosas son todas de la linda.
+- [01:30:23] En el mega salió el que es Jaime Lento.
+- [01:30:32] ¿Lento?
+- [01:30:33] Está hablando de un F3 que se viene para la región.
+- [01:30:40] Otro tornado pero grado 3.
+- [01:30:42] ¿Y el anterior fue grado?
+- [01:30:43] Dos.
+- [01:30:45] ¿A la misma región?
+- [01:30:50] ¿Qué va a hacer la tele?
+- [01:30:54] El sargente ya está dañado.
+- [01:31:59] El 28 de octubre a las 22 horas el servicio puerto interno estará suspendido.
+- [01:32:04] ¿Dañar?
+- [01:32:05] Parece que por el problema va a durar 4 o 5 horas.
+- [01:32:15] Por el tema de la vulnerabilidad, hubo un lenguaje de programación que se vieron afectados en el tema de la ley y tienen que actualizar versiones.
+- [01:32:30] Que terrible, que se veía delirio que la iba a destacar algo, no podía ser tan linda.
+- [01:32:36] Con todo puede hacer cosas terribles, con todo, con todo lo puede llevar a algo horrible.
+- [01:32:45] ¿Hay cabletas ahora de, sobre todo en Estados Unidos, denuncias de cabros chicos que les sacan una foto a los compañeros y las ponen en películas?
+- [01:32:55] Por ejemplo, en el colegio de mis hijas, está prohibido...
+- [01:33:07] ¿Celular?
+- [01:33:08] Sí, en la catedral.
+- [01:33:09] Debería ser en todo el país, ¿no?
+- [01:33:10] ¿Colegio de mis hijas igual?
+- [01:33:11] No, pero no.
+- [01:33:12] ¿Debería estar prohibido? La verdad es que este es un asentimiento.
+- [01:33:14] No solamente los alumnos, me refiero a que...
+- [01:33:17] ¿No es un asentimiento igual?
+- [01:33:17] No, profesor, y también, por ejemplo, si hay un evento, una actividad, los padres que van no pueden grabar a sus hijos.
+- [01:33:25] Porque claro, uno graba a un hijo, pero va a aparecer todo.
+- [01:33:29] Oye, qué triste lo que hemos llegado.
+- [01:33:37] Mi hija al menos no tiene... o sea, tenía TikTok, pero no lo pescó mucho.
+- [01:33:43] Me preocupaba porque ocupaba los Roblox.
+- [01:33:46] Los Roblox igual es peligroso, pero igual le conversamos a Toto y ella, por ejemplo, cuando tuvo TikTok, no subía fotos de ella.
+- [01:33:52] Nada, nada, nada, como que no fue una campaña de como darle miedo y terror, pero ella como sola sacó su conclusión.
+- [01:34:00] Lo que pasa es que hay generaciones que es como...
+- [01:34:02] Los Instagram, así no tienen nada.
+- [01:34:04] Sí, yo publico todo.
+- [01:34:07] A mí me da frujera.
+- [01:34:07] Trata mucho que soy milenio.
+- [01:34:08] Me da frujera, pero por ejemplo todos mis amigos ahora tienen tres fotos.
+- [01:34:12] Sí, no, yo igual si me da recuerdo, voy a compartir, no tengo en redes sociales gente que no conozco.
+- [01:34:17] Pero igual yo sé que, por ejemplo, se presta para saber de ti, ¿no?
+- [01:34:23] Sí.
+- [01:34:24] Sí, sí, uno tiene que tener las redes sociales privadas.
+- [01:34:27] Sí.
+- [01:34:28] Por ejemplo, cuando salgo de vacaciones, la telemetrónoma, no me gusta andar como subiendo fotos que estoy de vacaciones, pues.
+- [01:34:35] Porque ando pensando de que...
+- [01:34:37] Yo las subo después.
+- [01:34:38] Sí, igual.
+- [01:34:39] De hecho, por ejemplo, yo estuve de vacaciones en septiembre y todavía no subí de nada.
+- [01:34:41] Igual, sí.
+- [01:34:42] Pero igual que lo subí después fue un viaje...
+- [01:34:44] En la nube, sí.
+- [01:34:48] Después te salen los recuerdos, qué bonito.
+- [01:34:49] Sí.
+- [01:34:52] De hecho, pago la nube de Google porque tengo demasiadas fotos y videos.
+- [01:34:57] Demasiadas.
+- [01:35:00] Pago la que tiene 2TB.
+- [01:35:03] Y ya voy a tener que pagar la de 5.
+- [01:35:05] Yo pago de 2TB.
+- [01:35:06] También.
+- [01:35:07] Yo pago de 2TB.
+- [01:35:09] Está caro.
+- [01:35:10] Sí.
+- [01:35:11] Pero nada, ¿sí?
+- [01:35:12] No.
+- [01:35:12] No me gusta porque tengo fotos del 2010 más o menos, como la antigua.
+- [01:35:21] Porque a cierto rato me va llegando así como tiene recuerdo del 2012, 2013.
+- [01:35:28] Igual se perdió el tema de imprimir las fotos.
+- [01:35:35] No, y ahora con la guía, las fotos de ciertos años en adelante ya uno puede sospechar que puede ser mentira,
+- [01:35:40] No puede ser mentira, pero de efectos años para atrás uno ya sabe que son fotos más verídicas y comprobables que sean verdad.
+- [01:35:46] Por ejemplo, hace poco falleció un tío y no le encontramos ni una foto que no saliera con cara de curado.
+- [01:35:54] ¿De qué?
+- [01:35:55] De curado.
+- [01:35:55] Claro.
+- [01:35:56] Pero ninguna, ninguna, y mi hermana se dio la tarea de buscar como todas las fotos, las que se vieran más o menos decentes,
+- [01:36:03] Se las pasó a la guía y le generó la típica fotita así como en el fondo, así del cielo, así bien enfilicada, con camisas, con ropa y todo, y era él. Era él. A diferencia de otras veces que uno como que la ve y dice, no, este no es mi tío, este no.
+- [01:36:19] Sí, no, yo siento que han mejorado mucho el tema de los sociales.
+- [01:36:23] Sí, se dejan de los robots en la calle, esto es loco, yo creo que después va a pasar eso, se van a prohibir las cosas, estas cosas, se van a prohibir, o el acceso, el uso, por ejemplo, si yo quiero prestar servicios de IA, me van a decir, ya, pero si alguien te pregunta de esto, de esto, de esto, de esto, no puede responder y tienes que notificarlo, yo creo que eso va a pasar, como que no va a existir la IA como ya privada.
+- [01:37:05] Y creo que la tercera gana es un viral.
+- [01:37:07] Ya, va a ser solo una gana.
+- [01:37:09] Ya, a ver, no me voy con tercera.
+- [01:37:12] ¿Qué más?
+- [01:37:12] No, o sea, la idea es muy peligrosa.
+- [01:37:15] Sí, es demasiado.
+- [01:37:17] La parte que no sube la mano es por nosotros,
+- [01:37:18] por la empresa de los talentos que dice
+- [01:37:20] yo siguiendo todos los balances de la empresa
+- [01:37:22] para que la idea me haga un análisis de información.
+- [01:37:25] Sí, en realidad.
+- [01:37:30] Por eso están implementando la ley de datos.
+- [01:37:36] Pero la idea igual queda en la cifra.
+- [01:37:37] Sí, un histórico ya queda, ya.
+- [01:37:39] No, y aún así, yo creo que va a seguir funcionando bajo el reglamento que se supone que nada, todo lo que se sube a la red.
+- [01:37:50] Mientras tenga acceso a internet, puede ser algo muy bueno o muy malo.
+- [01:37:58] Me han tornado el tren, se pronostica para Maule, yo diría.
+- [01:38:04] ¿Qué tornado? ¿Hay otro?
+- [01:38:06] El que se pronostica.
+- [01:38:08] ¿Para cuándo?
+- [01:38:12] No, pero para el sur.
+- [01:38:13] ¿Para el sur?
+- [01:38:13] Sí, para el sur.
+- [01:38:14] Bueno, hoy día tenemos que ir a trabajar.
+- [01:38:31] Que hoy día no llegue el tornado.
+- [01:38:34] No debería haber nada.
+- [01:38:36] Va a pasar el rumbito.
+- [01:38:40] Anda el animal en su compu... no, el...
+- [01:38:42] Sí, el animal.
+- [01:38:43] Dime que no queda la información.
+- [01:38:47] Vayan al animal, hay más cosas alrededor.
+- [01:38:50] O vayan al portal a conocer, tan super suerte va.
+- [01:38:53] ¿El qué?
+- [01:38:53] ¿Dónde? El portal. Ahí está el yugo grande. ¿El centro? No, ese está para el sector noreste. Para la cordillera.
+- [01:39:04] Pero están como a... ¿Caminando? No, caminando no llegan. O sea, llegan pero... ¡Gracias! ¿Por qué fue?
+- [01:39:15] Los vi subiendo la escalera y no llegan. Están como a 4 kilómetros, 3 kilómetros.
+- [01:39:22] Sí, caminando, pero no, ¿serán 5 minutos?
+- [01:39:25] Ah, lo otro que tienen cerca es el Plaza América, que esos sí pueden ir caminando.
+- [01:39:34] Y ahí tienen supermercado en Líder, tienen farmacia, tienen heladería, tienen patiocomía.
+- [01:39:39] Y ese local que tú dijiste, ¿cómo se llamaba?
+- [01:39:42] El República.
+- [01:39:44] El República, ¿eso es que está abajo?
+- [01:39:45] No, no, está por abajo.
+- [01:39:47] Hay una hamburguesa rosada ahí en la parte.
+- [01:39:50] No, el República es aquí atrás.
+- [01:39:52] ¿El que está allá?
+- [01:39:54] ¿El que está allá?
+- [01:39:54] ¡Suscríbete al canal!
+- [01:40:54] Sí, bueno, ¿eh?
+- [01:40:55] ¿Sí?
+- [01:40:55] Sí.
+- [01:40:58] Tienen película en blanco y negro.
+- [01:41:02] Tienen música clásica.
+- [01:41:10] Nunca había sentido tan ofendido.
+- [01:41:12] No, pues no, no tengo 32, ¿no?
+- [01:41:14] Yo tengo 18.
+- [01:41:16] Ahora tengo 31.
+- [01:41:18] ¿Qué es tu trabajo en la misma edad?
+- [01:41:21] 37.
+- [01:41:23] No, pero...
+- [01:41:23] Adulto mayor.
+- [01:41:24] Adulto mayor.
+- [01:41:26] Bueno, la fan tiene veinticuatro.
+- [01:41:30] Veinticuatro.
+- [01:41:32] Recién cumplidos.
+- [01:41:34] Baby.
+- [01:41:35] Tiene veinticuatro y dos días.
+- [01:41:38] Estoy bien de nacido.
+- [01:41:41] Y yo jurando que parecía el hermano de mi hija.
+- [01:41:51] Y me tocando el tomallón.
+- [01:41:53] Oye, pero creo que en la calle parecía el hermano de mi hija.
+- [01:41:56] Se usó el hermano.
+- [01:41:58] Es que aparte es de mi porte.
+- [01:42:02] ¿Sabes lo malo de hoy en día? Que por ejemplo veía a un papá y una hija y pensás que es la pareja.
+- [01:42:06] Como que ya no sabís si es papá, si es hija, si...
+- [01:42:10] Y acá está usted que dice que es mi hermano.
+- [01:42:16] Mi mamá me decía con eso cuando yo lo tomo a la mano en la calle.
+- [01:42:19] Pues ahora sí me parece que es mi viejo cariño.
+- [01:42:22] Pero eso por hermano.
+- [01:42:24] Pero sí, es mi viejo cariño.
+- [01:42:28] Se vivió mi papá cuando era joven, pues a los 17.
+- [01:42:33] Así cumplió como 15 días.
+- [01:42:36] O sea, a los 16 ya sabéis que había ese poco.
+- [01:42:39] Sí.
+- [01:42:42] ¿Tú le has inculcado a su hija que en tu ayambo puede ser mamá?
+- [01:42:45] Y repetir la historia.
+- [01:42:46] No quiero ni saber.
+- [01:42:47] ¿La mamá no la metió?
+- [01:42:49] ¿De verdad?
+- [01:42:50] Sí, pues los papás viejos son súper jóvenes.
+- [01:42:52] O sea, igual es un pro y un contrapro.
+- [01:42:54] O sea, igual es bacán ser papá joven.
+- [01:42:56] Sí, pero no nos andan inculcándole eso a los niños.
+- [01:42:57] No, no, no.
+- [01:42:57] ¿Qué pro? ¿De qué un pro?
+- [01:42:59] No, no, no.
+- [01:43:00] No, no, no.
+- [01:43:00] El muy joven no es tan bacán.
+- [01:43:02] No, es que al final igual te perdías el trabajo.
+- [01:43:04] Sí.
+- [01:43:05] Eso es verdad.
+- [01:43:06] Te perdías el trabajo.
+- [01:43:07] Pero si después, claro, cuando ya eres, con el tiempo, por ejemplo, tú eres súper joven, porque tu hija ya está grande.
+- [01:43:17] El tema, por ejemplo, ya, tú ya lo has analizado tu vida.
+- [01:43:21] Ya, para, para tu...
+- [01:43:22] Yo tengo una amiga que fue mamá a los 15.
+- [01:43:25] Ya.
+- [01:43:26] Entonces, ella obviamente se perdió muchas etapas que no sabía, el grupo de amigas siguió viviendo,
+- [01:43:32] Tiene que salir, viajar, todo el tema. Pero, por ejemplo, su hijo ahora tiene 16. Entonces, ella puede hacer lo que quiera, mientras otra del grupo fue mamá recién. Entonces, ella está ahí como en la otra etapa.
+- [01:43:47] Pero, ¿qué pasa? Que al final, si ella vuelve a ser mamá, tiene que vivir todo el proceso de nuevo. Y generalmente, los que fueron papás muy jóvenes, como que se quedan con uno y nada más. Porque es volver a crear.
+- [01:43:57] No, aparte no alcancé a tener como una preparación para estar como firme en la vida, entonces después ya como que salí de eso un poco cuando ya dejan de ser tan niño y como ya ahora voy a desarrollarme yo y como que voy a tener como ese segundo aire de salir a carretear todo, pero yo en lo personal como que dije no, no voy a estudiar.
+- [01:44:15] Entonces, como que ya otra carga más. Y ahora, por ejemplo, a mí me gustaría tener un hijo varón. Yo diría que es la catáfora hombre. Me gustaría tener un hijo varón. Pero, como que digo, tengo que hacer esto primero, esto primero, esto primero, esto primero, para no pasar todo lo que pasé antes. Entonces, como que ahí en la...
+- [01:44:33] Yo creo que en la 10 está más caro.
+- [01:44:34] Claro. Horrible. Horrible.
+- [01:44:37] Sí, muy bien.
+- [01:44:38] Yo vi que cuatro veces el varón.
+- [01:44:41] Y en la cuarta está horrible.
+- [01:44:45] La cerramos todavía.
+- [01:44:46] Adoptar.
+- [01:44:47] No, no, no. Muchísimo. Todos me dicen, cuando salimos a cenar o algo, todos quedan mirando
+- [01:44:56] así, y de repente lo peseo y son cuatro niñas. Chancletero.
+- [01:45:04] Sí, igual...
+- [01:45:05] Sí, ma.
+- [01:45:06] Cuatro hijos.
+- [01:45:07] ¿Pero tú no planeaste tener cuatro hijos?
+- [01:45:09] Los dos primeros, no.
+- [01:45:11] Ya.
+- [01:45:12] Y los dos últimos, sí, eran los de un niño.
+- [01:45:15] Buscando el varón.
+- [01:45:16] Ya.
+- [01:45:17] Ah, no, pero me refiero a que, por ejemplo, tu proyecto de vida era tener cuatro hijos.
+- [01:45:21] No.
+- [01:45:21] Ah, ya.
+- [01:45:23] No, pero, o sea, mis papás son como cinco hermanos.
+- [01:45:29] Ya.
+- [01:45:29] Entonces, como de familia.
+- [01:45:31] Sí, sí.
+- [01:45:33] No, bueno, yo estoy bien.
+- [01:45:34] A mí también.
+- [01:45:36] A mí también.
+- [01:45:38] Pero igual es bacán, yo creo que, porque yo creo igual, no sé, mi niña tiene un solo hijo, y es como, no sé.
+- [01:45:46] Yo lo voy a decir para el niño, porque él igual siempre anda buscando a la prima.
+- [01:45:51] Lo que pasa es que él, por ejemplo, no tiene hermano y tampoco va a tener sobrino.
+- [01:45:54] Exactamente.
+- [01:45:55] Entonces, al final, ¿quiere quitarte? ¿Le podés dar la forma?
+- [01:45:59] En mi caso, mi hija con mi sobrino se llevan como por ocho meses.
+- [01:46:02] Mi sobrino mayor, entonces, son un y muy bien.
+- [01:46:05] Ah, claro, son la misma edad.
+- [01:46:06] Son la misma edad.
+- [01:46:08] Pero sí, ahora ya se están diferenciando en que uno es hombre y el otro es mujer.
+- [01:46:12] Entonces como que ya nos andan como juntitos así como todo el día.
+- [01:46:17] Cuando va la hija a la casa, yo paso a buscar a mi sobrino,
+- [01:46:21] y mi sobrino está más conmigo que con mi hija.
+- [01:46:24] Antes no, antes ninguno lo tomaba pescado.
+- [01:46:26] Es que tú eres más joven.
+- [01:46:29] Yo recuerdo después en el carrete y todo, empiezan a salir juntos.
+- [01:46:32] ¿Qué carrete? ¿Hay permiso o no? Así de sencillo.
+- [01:46:35] Yo lo puedo creer.
+- [01:46:36] Yo les dije a mi hija, los 25 años y recién para...
+- [01:46:39] ¿Y qué era eso en tu hija?
+- [01:46:40] Mi hija ahora, el 22 de noviembre, cumple 15, la maestra que viene tiene 13, la Julieta tiene 8, y la Isabela tiene 6.
+- [01:46:50] Ah, igual con, sí, con parejas.
+- [01:46:55] Sí, las dos más chiquititas, claro, son súper juntas, y las dos más grandes, bueno, de tribu que pelean, pero poco y nada, son súper unidas.
+- [01:47:02] Qué bueno.
+- [01:47:03] ¿Y qué le dice lo de 15 contra eso de colorear? O salir, perdón.
+- [01:47:07] O sea, hace muy poco me llegó con el chiste que diría, permiso, va por olea, que hay un niño, pero es súper tranquila, y le dije que todavía no, pero que no le quitaba que se juntara, que la vea como a mí.
+- [01:47:26] Es complejo.
+- [01:47:27] Sí.
+- [01:47:28] Nunca pensé que iba a llegar ese día.
+- [01:47:31] Ay, complejo.
+- [01:47:32] O sea, ahora, por ejemplo, yo ya estoy a los 31, yo digo, y ahora entiendo a mi papá por qué a los 16.
+- [01:47:37] No me dejaba hacer tantas cosas.
+- [01:47:40] Mi papá siempre me dio permiso para todo.
+- [01:47:41] Y siempre me dio la herramienta y como la libertad de todo.
+- [01:47:47] Me dio la charla chica, sí.
+- [01:47:48] Ya.
+- [01:47:48] Ahí me traumó, por supuesto yo soy mamá.
