@@ -42,7 +42,14 @@ foreach ($part in ($Boxes -split ';')) {
   $g.DrawRectangle($pen, $x, $y, $w, $h)
   $size = $g.MeasureString('NUEVO', $font)
   $ly = [Math]::Max(0, $y - [int][Math]::Ceiling($size.Height) - 2)
-  $g.DrawString('NUEVO', $font, $brush, $x, $ly)
+  $badgeW = [int][Math]::Ceiling($size.Width) + 8
+  $badgeH = [int][Math]::Ceiling($size.Height) + 2
+  $ly = [Math]::Max(2, $y - $badgeH)
+  $bgBrush = New-Object System.Drawing.SolidBrush $color
+  $whiteBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::White)
+  $g.FillRectangle($bgBrush, $x, $ly, $badgeW, $badgeH)
+  $g.DrawString('NUEVO', $font, $whiteBrush, $x + 4, $ly + 1)
+  $bgBrush.Dispose(); $whiteBrush.Dispose()
 }
 
 $bmp.Save($Out, [System.Drawing.Imaging.ImageFormat]::Png)

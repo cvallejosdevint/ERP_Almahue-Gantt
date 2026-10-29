@@ -1,0 +1,110 @@
+{
+  "proformasFilter": {
+    "x": 1304.6875,
+    "y": 440,
+    "width": 93.484375,
+    "height": 40
+  },
+  "proformasKpis": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 960
+  },
+  "caso1BtnReversar": {
+    "x": 1398.984375,
+    "y": 546,
+    "width": 32,
+    "height": 32
+  },
+  "caso1ClaveInput": {
+    "x": 565,
+    "y": 462,
+    "width": 406,
+    "height": 40
+  },
+  "caso1ConfirmBtn": {
+    "x": 876.984375,
+    "y": 531,
+    "width": 94.015625,
+    "height": 40
+  },
+  "caso1Modal": {
+    "x": 544,
+    "y": 376,
+    "width": 448,
+    "height": 208
+  },
+  "caso2MotivoInput": {
+    "x": 310,
+    "y": 559.5,
+    "width": 953.46875,
+    "height": 40
+  },
+  "caso2BtnReabrir": {
+    "x": 1275.46875,
+    "y": 559.5,
+    "width": 206.53125,
+    "height": 40
+  },
+  "caso2Banner": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 960
+  },
+  "caso3Banner": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 960
+  },
+  "caso3BtnCerrarDisabled": {
+    "x": 1429.09375,
+    "y": 88,
+    "width": 82.90625,
+    "height": 32
+  },
+  "caso3Alert": {
+    "x": 297,
+    "y": 464.5,
+    "width": 1198,
+    "height": 34
+  },
+  "caso4Banner": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 960
+  },
+  "caso4BtnEmitirAjuste": {
+    "x": 1246.21875,
+    "y": 582.5,
+    "width": 233.78125,
+    "height": 40
+  },
+  "caso4MotivoInput": {
+    "x": 565,
+    "y": 476,
+    "width": 406,
+    "height": 40
+  },
+  "caso4PinInput": {
+    "x": 565,
+    "y": 552,
+    "width": 406,
+    "height": 40
+  },
+  "caso4BtnModalEmitir": {
+    "x": 789.296875,
+    "y": 658,
+    "width": 181.703125,
+    "height": 40
+  },
+  "caso4Modal": {
+    "x": 544,
+    "y": 249,
+    "width": 448,
+    "height": 462
+  }
+}
