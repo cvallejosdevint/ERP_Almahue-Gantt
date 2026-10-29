@@ -4,56 +4,92 @@
   <meta charset="utf-8" />
   <title>Recorrido - Ciclo Completo de Reapertura, Doble Visto Bueno y Re-cierre</title>
   <style>
-    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --card: #fff;
+      --compras: #9a3412;
+      --ventas: #166534;
+      --conta: #1d4ed8;
+      --teso: #b45309;
+      --param: #0f766e;
+      --accent: #2563eb;
+    }
     * { box-sizing: border-box; }
     body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1440px; margin: 0 auto; }
-    h1 { font-size: 1.05rem; margin: 0; }
-    .layout { display: grid; grid-template-columns: 280px 1fr; gap: 12px; max-width: 1440px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
-    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 6px; }
-    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; color: inherit; font: inherit; }
-    nav button.step.on { background: #f5f5f4; font-weight: 600; }
-    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px 6px; max-width: 1440px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; font-weight: 700; }
+    .layout { display: grid; grid-template-columns: 290px 1fr; gap: 14px; max-width: 1440px; margin: 0 auto; padding: 4px 16px 12px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+    nav .rail-header { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 4px 8px 8px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 10px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 8px 10px; cursor: pointer; color: inherit; font: inherit; transition: background .15s ease; margin-bottom: 4px; }
+    nav button.step:hover { background: #f5f5f4; }
+    nav button.step.on { background: #f0ede6; font-weight: 600; outline: 1px solid #d6d3cb; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; flex-shrink: 0; }
     .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
-    .ttl { font-weight: 650; }
+    .ttl { font-weight: 650; font-size: 13px; line-height: 1.25; margin-top: 2px; }
+    .step-pills { display: flex; gap: 4px; margin-top: 6px; align-items: center; }
+    .step-pills .pill-btn { border: 1px solid #d6d3d1; background: #fff; border-radius: 9999px; font-size: 10px; font-weight: 700; padding: 1px 6px; color: #57534e; cursor: pointer; transition: all .15s ease; }
+    .step-pills .pill-btn:hover { background: #e7e5e4; }
+    .step-pills .pill-btn.active { background: #facc15; border-color: #eab308; color: #1c1917; font-weight: 800; transform: scale(1.08); box-shadow: 0 1px 3px rgba(0,0,0,.25); }
     .compras { background: var(--compras); }
     .ventas { background: var(--ventas); }
     .conta { background: var(--conta); }
     .teso { background: var(--teso); }
     .param { background: var(--param); }
     main { min-width: 0; }
-    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
-    .bar h2 { margin: 0; font-size: 1rem; }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    .bar-title-wrap { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .bar h2 { margin: 0; font-size: 1rem; font-weight: 700; }
+    .step-badge { display: inline-flex; align-items: center; padding: 3px 8px; font-size: 11px; font-weight: 800; border-radius: 6px; background: #1c1917; color: #fff; letter-spacing: .02em; }
     .actions { display: flex; gap: 8px; align-items: center; }
-    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
-    .actions button:disabled { opacity: .4; cursor: default; }
-    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
-    .frame { position: relative; display: inline-block; max-width: 100%; }
-    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 170px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
-    button.pin { position: absolute; width: 28px; height: 28px; margin: -14px 0 0 -14px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(0,0,0,.45); z-index: 1; opacity: .75; cursor: pointer; transition: transform .15s ease, opacity .15s ease; }
-    button.pin:hover { opacity: 1; transform: scale(1.1); }
-    button.pin.on { width: 38px; height: 38px; margin: -19px 0 0 -19px; font-size: 16px; opacity: 1; outline: 3px solid #facc15; z-index: 5; transform: scale(1.05); }
-    .card { margin-top: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
-    .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
-    .card p { margin: 0; color: #44403c; line-height: 1.4; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 14px; color: inherit; text-decoration: none; font-weight: 600; font-size: 13px; transition: all .15s ease; }
+    .actions button:hover:not(:disabled) { background: #f5f5f4; border-color: #d6d3d1; }
+    .actions button:disabled { opacity: .35; cursor: default; }
+    .actions button.primary { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .actions button.primary:hover:not(:disabled) { background: #292524; }
+    .actions button.auto-btn { background: #fefce8; border-color: #fef08a; color: #854d0e; }
+    .actions button.auto-btn.active { background: #facc15; border-color: #eab308; color: #1c1917; font-weight: 700; }
+    .frame { position: relative; display: block; width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #fbfbfa; }
+    .frame img { display: block; width: 100%; height: auto; max-height: calc(100vh - 195px); object-fit: contain; }
+    button.pin { position: absolute; width: 32px; height: 32px; margin: -16px 0 0 -16px; padding: 0; border-radius: 50%; border: 2.5px solid #fff; color: #fff; font-weight: 800; font-size: 15px; box-shadow: 0 3px 8px rgba(0,0,0,.5); z-index: 2; opacity: .78; cursor: pointer; transition: transform .2s ease, opacity .2s ease; }
+    button.pin:hover { opacity: 1; transform: scale(1.15); z-index: 6; }
+    button.pin.on { width: 42px; height: 42px; margin: -21px 0 0 -21px; font-size: 19px; opacity: 1; outline: 3.5px solid #facc15; outline-offset: 2px; z-index: 10; transform: scale(1.1); animation: pinPulse 1.8s infinite; }
+    @keyframes pinPulse {
+      0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.75), 0 3px 8px rgba(0,0,0,.5); }
+      70% { box-shadow: 0 0 0 12px rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,.5); }
+      100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,.5); }
+    }
+    .card { margin-top: 10px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 18px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+    .card-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+    .card h3 { margin: 0; font-size: 0.98rem; font-weight: 700; color: #1c1917; display: flex; align-items: center; gap: 8px; }
+    .card .pin-tag { font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 9999px; background: #facc15; color: #1c1917; letter-spacing: .02em; }
+    .card p { margin: 0; color: #44403c; line-height: 1.45; font-size: 14px; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; pt-2; border-top: 1px dashed var(--line); font-size: 11px; color: #78716c; }
     @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
   </style>
 </head>
 <body>
   <header>
     <h1>Ciclo de Doble Visto Bueno y Bandeja de Reversas</h1>
-    <div class="bar">
-      <h2 id="title"></h2>
-      <div class="actions">
-        <a class="menu" href="comparacion.html">Ver Comparación</a>
-        <button type="button" id="prev">Anterior</button>
-        <button type="button" id="next">Siguiente</button>
-      </div>
+    <div class="actions">
+      <button type="button" id="autoBtn" class="auto-btn" title="Avanza automáticamente por cada detalle de número">▶ Reproducir Automático</button>
+      <a class="menu" href="comparacion.html">Ver Comparación</a>
+      <button type="button" id="prevBtn">← Anterior</button>
+      <button type="button" id="nextBtn" class="primary">Siguiente →</button>
     </div>
   </header>
   <div class="layout">
     <nav id="rail"></nav>
     <main>
+      <div class="bar">
+        <div class="bar-title-wrap">
+          <span class="step-badge" id="stepBadge">Paso 1 de 5</span>
+          <h2 id="stepTitle"></h2>
+        </div>
+      </div>
       <div id="stage"></div>
       <div class="card" id="card"></div>
     </main>
@@ -67,7 +103,7 @@
         alt: "Modal de solicitud formal de reapertura con justificación de ajuste y aviso de período contable cerrado",
         pins: [
           { x: 50.0, y: 56.8, t: "Justificación Obligatoria", d: "El administrativo ingresa el motivo fundado de la corrección (horas de cuadrilla en Cuartel 3). Al estar el mes contable cerrado, el sistema advierte que requerirá autorización previa con PIN de Contratistas y posteriormente de Contabilidad." },
-          { x: 50.0, y: 64.1, t: "Aviso de Doble VºBº", d: "Al estar el período contable cerrado, el sistema bloquea la reapertura directa y notifica formalmente que se requerirá la aprobación secuencial del Administrador de Contratistas y del Administrador de Contabilidad." },
+          { x: 50.0, y: 64.1, t: "Aviso de Período Contable Cerrado", d: "Al detectar que el período contable 2026-08 se encuentra cerrado, la interfaz notifica formalmente que se requerirá el flujo secuencial de Doble Visto Bueno (Abastecimiento y Contabilidad)." },
           { x: 56.4, y: 72.1, t: "Enviar Solicitud a Jefaturas", d: "Al pulsar Enviar Solicitud a Jefaturas, el sistema genera el folio SOL-REV-2026-001 y notifica internamente al Administrador de Contratistas para su primera revisión técnica." }
         ]
       },
@@ -77,8 +113,8 @@
         img: "despues-paso2-vb-contratistas.png",
         alt: "Tarjeta de seguimiento de solicitud mostrando el primer visto bueno de Contratistas aprobado con PIN y esperando Contabilidad",
         pins: [
-          { x: 90.0, y: 54.5, t: "Estado Solicitud: Esperando Contabilidad", d: "El badge superior refleja que el primer paso técnico está completado y que el flujo se encuentra derivado a Contabilidad." },
-          { x: 39.2, y: 76.9, t: "1º VºBº Otorgado con PIN", d: "Pablo (Jefatura de Contratistas) validó en terreno la pertinencia del ajuste y autorizó ingresando su PIN de 4 dígitos. Queda constancia de fecha, hora y justificación técnica." },
+          { x: 90.0, y: 54.5, t: "Estado: Esperando VºBº Contabilidad", d: "El badge superior refleja que el primer paso técnico está completado y que el flujo se encuentra derivado a la bandeja de Contabilidad." },
+          { x: 39.2, y: 76.9, t: "1º VºBº Aprobado con PIN por Pablo", d: "Pablo (Jefatura de Contratistas) validó en terreno la pertinencia del ajuste y autorizó ingresando su clave PIN de 4 dígitos (4821). Queda constancia de fecha, hora y justificación técnica." },
           { x: 92.3, y: 78.2, t: "Derivación a Bandeja Contable", d: "Como el mes contable 2026-08 está cerrado, la proforma permanece resguardada y se habilita el acceso directo para el segundo visto bueno de Contabilidad." }
         ]
       },
@@ -90,7 +126,7 @@
         pins: [
           { x: 8.5, y: 54.0, t: "Menú Solicitudes de Reversa", d: "Nuevo submódulo en Contabilidad (ubicado antes de Reportes) que centraliza, clasifica y audita todos los pedidos de reapertura provenientes de los módulos operativos." },
           { x: 50.0, y: 62.0, t: "Autorización con PIN Contable", d: "El Administrador de Contabilidad (Fran / Rodrigo) verifica la consistencia del balance e ingresa el PIN de 4 dígitos (4821) para firmar la reapertura autorizada." },
-          { x: 56.0, y: 77.1, t: "Liberación de Proforma", d: "Al confirmar con PIN, la solicitud queda APROBADA y el sistema restituye la proforma a estado REVERSADA, notificando al administrativo solicitante que la edición se encuentra habilitada." }
+          { x: 56.0, y: 77.1, t: "Liberación de Proforma a Edición", d: "Al confirmar con PIN, la solicitud queda APROBADA y el sistema restituye la proforma a estado REVERSADA, notificando al administrativo solicitante que la edición se encuentra habilitada." }
         ]
       },
       {
@@ -116,103 +152,211 @@
       }
     ];
 
-    let step = 0;
-    let pin = 0;
+    let currentStep = 0;
+    let currentPin = 0;
+    let autoInterval = null;
 
-    const titleEl = document.getElementById("title");
     const railEl = document.getElementById("rail");
     const stageEl = document.getElementById("stage");
     const cardEl = document.getElementById("card");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
+    const stepTitleEl = document.getElementById("stepTitle");
+    const stepBadgeEl = document.getElementById("stepBadge");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const autoBtn = document.getElementById("autoBtn");
 
     function renderRail() {
-      railEl.innerHTML = steps.map((s, i) => `
-        <button type="button" class="step ${i === step ? "on" : ""}" data-idx="${i}">
-          <div class="n ${s.cls}">${i + 1}</div>
-          <div>
-            <div class="mod">${s.mod}</div>
-            <div class="ttl">${s.title.replace(/^\\d+\\.\\s*/, "")}</div>
-          </div>
-        </button>
-      `).join("");
+      railEl.innerHTML = `
+        <div class="rail-header">Etapas del Recorrido</div>
+        ${steps.map((s, i) => `
+          <button type="button" class="step ${i === currentStep ? "on" : ""}" data-step-idx="${i}">
+            <div class="n ${s.cls}">${i + 1}</div>
+            <div>
+              <div class="mod">${s.mod}</div>
+              <div class="ttl">${s.title.replace(/^\\d+\\.\\s*/, "")}</div>
+              <div class="step-pills">
+                ${s.pins.map((p, pIdx) => `
+                  <span class="pill-btn ${(i === currentStep && pIdx === currentPin) ? "active" : ""}" data-step="${i}" data-pin="${pIdx}" title="${p.t}">
+                    ${pIdx + 1}
+                  </span>
+                `).join("")}
+              </div>
+            </div>
+          </button>
+        `).join("")}
+      `;
+
       railEl.querySelectorAll("button.step").forEach(btn => {
-        btn.addEventListener("click", () => {
-          show(Number(btn.getAttribute("data-idx")), 0);
+        btn.addEventListener("click", (e) => {
+          const pill = e.target.closest(".pill-btn");
+          if (pill) {
+            e.stopPropagation();
+            const sIdx = Number(pill.getAttribute("data-step"));
+            const pIdx = Number(pill.getAttribute("data-pin"));
+            goTo(sIdx, pIdx);
+            return;
+          }
+          const sIdx = Number(btn.getAttribute("data-step-idx"));
+          goTo(sIdx, 0);
         });
       });
     }
 
-    function show(sIdx, pIdx) {
-      const stepChanged = (step !== sIdx);
-      step = sIdx;
-      pin = pIdx;
+    function renderScreen() {
+      const step = steps[currentStep];
+      stepTitleEl.textContent = step.title;
+      stepBadgeEl.textContent = `Paso ${currentStep + 1} de ${steps.length}`;
 
-      const current = steps[step];
-      titleEl.textContent = current.title;
-
-      let frame = stageEl.querySelector(".frame");
-      if (stepChanged || !frame) {
-        stageEl.innerHTML = `
-          <div class="frame">
-            <img src="${current.img}" alt="${current.alt}" />
-            ${current.pins.map((p, idx) => `
-              <button type="button" class="pin ${current.cls} ${idx === pin ? "on" : ""}" style="left:${p.x}%; top:${p.y}%;" data-pin="${idx}">
-                ${idx + 1}
-              </button>
-            `).join("")}
-          </div>
-        `;
-        stageEl.querySelectorAll("button.pin").forEach(pinBtn => {
-          pinBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            show(step, Number(pinBtn.getAttribute("data-pin")));
-          });
-        });
-        renderRail();
-      } else {
-        stageEl.querySelectorAll("button.pin").forEach((pBtn, idx) => {
-          if (idx === pin) pBtn.classList.add("on");
-          else pBtn.classList.remove("on");
-        });
-      }
-
-      const item = current.pins[pin] || current.pins[0];
-      cardEl.innerHTML = `
-        <h3>Pin ${pin + 1}: ${item.t}</h3>
-        <p>${item.d}</p>
+      stageEl.innerHTML = `
+        <div class="frame">
+          <img src="${step.img}" alt="${step.alt}" />
+          ${step.pins.map((p, idx) => `
+            <button type="button" class="pin ${step.cls} ${idx === currentPin ? "on" : ""}" style="left:${p.x}%; top:${p.y}%;" data-pin-idx="${idx}" title="${p.t}">
+              ${idx + 1}
+            </button>
+          `).join("")}
+        </div>
       `;
 
-      prevBtn.disabled = (step === 0 && pin === 0);
-      nextBtn.disabled = (step === steps.length - 1 && pin === current.pins.length - 1);
+      stageEl.querySelectorAll("button.pin").forEach(pinBtn => {
+        pinBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const pIdx = Number(pinBtn.getAttribute("data-pin-idx"));
+          goTo(currentStep, pIdx);
+        });
+      });
+
+      renderRail();
+      updatePinDetails();
+    }
+
+    function updatePinDetails() {
+      const step = steps[currentStep];
+      const pin = step.pins[currentPin] || step.pins[0];
+
+      // Update pin active state on the screenshot
+      stageEl.querySelectorAll("button.pin").forEach((pBtn, idx) => {
+        if (idx === currentPin) pBtn.classList.add("on");
+        else pBtn.classList.remove("on");
+      });
+
+      // Update pills in rail
+      railEl.querySelectorAll(".pill-btn").forEach(pill => {
+        const s = Number(pill.getAttribute("data-step"));
+        const p = Number(pill.getAttribute("data-pin"));
+        if (s === currentStep && p === currentPin) pill.classList.add("active");
+        else pill.classList.remove("active");
+      });
+
+      // Update Card
+      cardEl.innerHTML = `
+        <div class="card-header">
+          <h3>
+            <span class="pin-tag">Número ${currentPin + 1} de ${step.pins.length}</span>
+            <span>${pin.t}</span>
+          </h3>
+          <span style="font-size:12px; font-weight:600; color:var(--muted)">
+            Pantalla ${currentStep + 1} / ${steps.length}
+          </span>
+        </div>
+        <p>${pin.d}</p>
+        <div class="card-footer">
+          <span>Pulsa <strong>Siguiente</strong> o la tecla <strong>→</strong> para avanzar al detalle siguiente.</span>
+          <span>${currentPin + 1} de ${step.pins.length} detalles vistos en esta pantalla</span>
+        </div>
+      `;
+
+      // Update Buttons with explicit wording
+      const isFirst = (currentStep === 0 && currentPin === 0);
+      const isLast = (currentStep === steps.length - 1 && currentPin === step.pins.length - 1);
+
+      prevBtn.disabled = isFirst;
+      nextBtn.disabled = isLast;
+
+      if (currentPin > 0) {
+        prevBtn.textContent = `← Detalle Anterior (${currentPin})`;
+      } else if (currentStep > 0) {
+        prevBtn.textContent = `← Pantalla Anterior (${currentStep})`;
+      } else {
+        prevBtn.textContent = `← Anterior`;
+      }
+
+      if (currentPin < step.pins.length - 1) {
+        nextBtn.textContent = `Siguiente Detalle (${currentPin + 2} de ${step.pins.length}) →`;
+      } else if (currentStep < steps.length - 1) {
+        nextBtn.textContent = `Siguiente Pantalla (Paso ${currentStep + 2}) →`;
+      } else {
+        nextBtn.textContent = `Fin del Recorrido ✓`;
+      }
+    }
+
+    function goTo(stepIdx, pinIdx) {
+      const stepChanged = (currentStep !== stepIdx);
+      currentStep = stepIdx;
+      currentPin = pinIdx;
+      if (stepChanged) {
+        renderScreen();
+      } else {
+        updatePinDetails();
+      }
     }
 
     function forward() {
-      const s = steps[step];
-      if (pin < s.pins.length - 1) {
-        show(step, pin + 1);
-      } else if (step < steps.length - 1) {
-        show(step + 1, 0);
+      const s = steps[currentStep];
+      if (currentPin < s.pins.length - 1) {
+        goTo(currentStep, currentPin + 1);
+      } else if (currentStep < steps.length - 1) {
+        goTo(currentStep + 1, 0);
+      } else {
+        stopAuto();
       }
     }
 
     function back() {
-      if (pin > 0) {
-        show(step, pin - 1);
-      } else if (step > 0) {
-        show(step - 1, steps[step - 1].pins.length - 1);
+      if (currentPin > 0) {
+        goTo(currentStep, currentPin - 1);
+      } else if (currentStep > 0) {
+        const prevStep = currentStep - 1;
+        goTo(prevStep, steps[prevStep].pins.length - 1);
       }
     }
 
-    prevBtn.addEventListener("click", back);
-    nextBtn.addEventListener("click", forward);
+    function toggleAuto() {
+      if (autoInterval) {
+        stopAuto();
+      } else {
+        startAuto();
+      }
+    }
+
+    function startAuto() {
+      autoBtn.classList.add("active");
+      autoBtn.textContent = "⏸ Pausar";
+      autoInterval = setInterval(() => {
+        forward();
+      }, 3500);
+    }
+
+    function stopAuto() {
+      if (autoInterval) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+      autoBtn.classList.remove("active");
+      autoBtn.textContent = "▶ Reproducir Automático";
+    }
+
+    prevBtn.addEventListener("click", () => { stopAuto(); back(); });
+    nextBtn.addEventListener("click", () => { stopAuto(); forward(); });
+    autoBtn.addEventListener("click", toggleAuto);
 
     window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") back();
-      else if (e.key === "ArrowRight") forward();
+      if (e.key === "ArrowLeft") { stopAuto(); back(); }
+      else if (e.key === "ArrowRight") { stopAuto(); forward(); }
+      else if (e.key === " ") { e.preventDefault(); toggleAuto(); }
     });
 
-    show(0, 0);
+    renderScreen();
   </script>
 </body>
 </html>
