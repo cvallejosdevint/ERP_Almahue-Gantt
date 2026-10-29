@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Cierre de Contratistas con Doble Visto Bueno y Bandeja de Reversas - Antes y Después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+    .menu-bar { margin: 12px 0 0; display: flex; gap: 10px; }
+    .menu-bar a { display: inline-block; padding: 8px 14px; background: #1c1917; color: #fafaf9; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cierre de Contratistas con Doble Visto Bueno y Bandeja de Reversas - Antes y Después</h1>
+    <p>Agrícola Almahue S.A. · Modo demo local · Período 2026-08. Los recuadros verdes y la etiqueta NUEVO destacan las funcionalidades añadidas. Un clic abre la imagen en el visor de alta resolución. La rueda o las teclas + y - hacen zoom. Flechas izquierda y derecha alternan entre el antes y el después. Esc cierra.</p>
+    <div class="menu-bar">
+      <a href="recorrido.html">Ver Recorrido Paso a Paso Interactivo</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. Traspaso Contable y Cierre: Solicitud de Reapertura, Doble Visto Bueno y Auditoría</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-traspaso-cierre.png" alt="Panel de traspaso antes del flujo de reapertura formal con doble visto bueno" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-traspaso-cierre-marcado.png" alt="Nuevo panel con seguimiento de doble visto bueno y auditoría de re-cierre" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Se eliminaron los botones de reapertura directa o no controlada. Cuando el módulo de contratistas y el mes contable están cerrados, cualquier modificación requiere una solicitud formal con justificación. La reapertura exige un primer visto bueno del Administrador de Contratistas (Abastecimiento) con su PIN de cuatro dígitos, y un segundo visto bueno del Administrador de Contabilidad en su panel dedicado. Al completar la edición y re-centralizar, se preserva el registro de auditoría con ambas firmas y el nuevo asiento contable.</li>
+      <li><strong>Qué no se apretó:</strong> No se alteraron los asientos contables históricos ni se desarmaron los mayores generales.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Bandeja de Proformas: Estado REVERSADA con Desbloqueo Controlado</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-proformas.png" alt="Listado de proformas sin soporte de estado reversada" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-paso4-proforma-reversada-edicion-marcado.png" alt="Proforma PRF-2026-020 en estado REVERSADA con edición de labores y cuadrillas" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Al obtener ambos vistos buenos, la proforma pasa a estado formal <code>REVERSADA</code>. Los ingresos de labor diarios permanecen asociados para permitir corregir horas de cuadrilla, cuarteles o centros de costo sin tener que rearmar el documento desde cero. El solicitante recibe una notificación indicando que puede proceder con la corrección y re-enviar a aprobación.</li>
+      <li><strong>Qué no se apretó:</strong> No se ejecutó la eliminación de ítems ni se modificaron las tarifas contratadas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Contabilidad: Nueva Bandeja de Solicitudes de Reversa y Reapertura</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-traspaso-cierre.png" alt="Menú contable sin bandeja de solicitudes de reversa" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-contabilidad-reversas-marcado.png" alt="Nueva pantalla de solicitudes de reversa en Contabilidad antes de reportes" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Se habilitó el acceso <strong>Contabilidad › Solicitudes de reversa</strong> en el menú lateral antes de Reportes. Esta pantalla centraliza los pedidos de reversa de todos los módulos operativos (Contratistas, Compras, Insumos), permitiendo a los administradores de contabilidad evaluar la justificación, revisar el primer visto bueno del área técnica y autorizar con su clave PIN de cuatro dígitos.</li>
+      <li><strong>Qué no se apretó:</strong> No se rechazó ninguna solicitud para conservar la trazabilidad completa del ciclo.</li>
+    </ul>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.getAttribute("alt"),
+        caption: img.closest("figure").querySelector("figcaption").textContent.trim(),
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const visorTitulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let parActual = 0;
+    let ladoActual = 0;
+    let zoom = 1;
+    let panX = 0;
+    let panY = 0;
+    let arrastrando = false;
+    let inicioX = 0;
+    let inicioY = 0;
+
+    function renderTransform() {
+      visorImg.style.transform = `translate(calc(-50% + ${panX}px), calc(-50% + ${panY}px)) scale(${zoom})`;
+    }
+
+    function abrir(parIdx, ladoIdx) {
+      parActual = parIdx;
+      ladoActual = ladoIdx;
+      zoom = 1;
+      panX = 0;
+      panY = 0;
+      const item = pares[parActual][ladoActual];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      visorTitulo.textContent = `${item.titulo} (${item.caption})`;
+      visor.hidden = false;
+      visor.classList.add("abierto");
+      renderTransform();
+    }
+
+    function cerrar() {
+      visor.classList.remove("abierto");
+      visor.hidden = true;
+    }
+
+    function cambiarLado(nuevoLado) {
+      if (nuevoLado === ladoActual) return;
+      ladoActual = nuevoLado;
+      const item = pares[parActual][ladoActual];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      visorTitulo.textContent = `${item.titulo} (${item.caption})`;
+    }
+
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        const parIdx = [...document.querySelectorAll(".pair")].indexOf(pair);
+        const ladoIdx = [...pair.querySelectorAll("img")].indexOf(img);
+        abrir(parIdx, ladoIdx);
+      });
+    });
+
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+
+    document.getElementById("zoom-in").addEventListener("click", () => {
+      zoom = Math.min(3, zoom + 0.25);
+      renderTransform();
+    });
+
+    document.getElementById("zoom-out").addEventListener("click", () => {
+      zoom = Math.max(0.5, zoom - 0.25);
+      renderTransform();
+    });
+
+    document.getElementById("zoom-reset").addEventListener("click", () => {
+      zoom = 1;
+      panX = 0;
+      panY = 0;
+      renderTransform();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (visor.hidden) return;
+      if (e.key === "Escape") cerrar();
+      else if (e.key === "ArrowLeft") cambiarLado(0);
+      else if (e.key === "ArrowRight") cambiarLado(1);
+      else if (e.key === "+" || e.key === "=") {
+        zoom = Math.min(3, zoom + 0.25);
+        renderTransform();
+      } else if (e.key === "-") {
+        zoom = Math.max(0.5, zoom - 0.25);
+        renderTransform();
+      }
+    });
+
+    lienzo.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      zoom = Math.min(3, Math.max(0.5, zoom + delta));
+      renderTransform();
+    }, { passive: false });
+
+    lienzo.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      arrastrando = true;
+      inicioX = e.clientX - panX;
+      inicioY = e.clientY - panY;
+      lienzo.classList.add("arrastrando");
+    });
+
+    window.addEventListener("pointermove", (e) => {
+      if (!arrastrando) return;
+      panX = e.clientX - inicioX;
+      panY = e.clientY - inicioY;
+      renderTransform();
+    });
+
+    window.addEventListener("pointerup", () => {
+      arrastrando = false;
+      lienzo.classList.remove("arrastrando");
+    });
+  </script>
+</body>
+</html>
