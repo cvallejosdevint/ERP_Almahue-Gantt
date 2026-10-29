@@ -1,0 +1,2460 @@
+# Reunion Almahue 2026-10-28 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Downloads\Mobile Devices\28-10-2026 09.45.m4a (03:04:06)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] No separes modismos.
+- [00:36] Entonces, tienen todos los propulsores, controles, porque la herramienta al final como optimiza un poco la planificación, cachái.
+- [00:43] Ya. ¿Se conecta con las bases internas?
+- [00:46] Sí, bueno. Da igual, es como que extraen información de la informática y van haciendo como, como se puede llegar hasta crear los contenidos.
+- [00:54] Es decir, qué cargar en los contenedores, qué tipo de fuentes.
+- [00:56] Ah, bueno.
+- [00:57] Porque la idea es que los contenedores sean lo más homogéneos posible.
+- [01:00] Y bueno, fruta de una calidad específicamente.
+- [01:04] ¿Y eso está en el packing? ¿O viene...?
+- [01:08] ¿Como que en la reta?
+- [01:09] ¿Sí?
+- [01:10] No, acá. Se la maneja acá.
+- [01:11] Acá.
+- [01:12] Y de acá se da la instrucción del packing de qué cargar en los contenedores.
+- [01:15] Claro, por eso. Se conecta con todo el proceso del packing ahí.
+- [01:18] Nosotros leemos como la existencia, qué es lo que está saliendo del proceso, ya como pronto terminado.
+- [01:22] Y la herramienta como que hace la optimización, un modelo con las variables, restricciones y todo.
+- [01:27] Y te da como el pool de contenedores que debería armar.
+- [01:30] En función de la función objetivo que creamos.
+- [01:35] ¿Y esa base de datos ustedes las ponen?
+- [01:37] Tenemos. O sea, nosotros al instalar el fruto al patio, aparece la existencia en el patio.
+- [01:43] Y la existencia yo la saco del sistema de los patios.
+- [01:48] ¿Y cómo medí eso? ¿Es por tema de cubitaje?
+- [01:52] Cantidad de caja.
+- [01:53] ¿Cantidad de caja? Ah, ya.
+- [01:55] Siempre son como 3.500 talleres, 3.520.
+- [01:57] Eso es como reglas que le dimos.
+- [02:00] Y eso lo haces con, por ejemplo, no un pallet, no uno completo y el otro a la mitad o menos de la mitad.
+- [02:09] Va viendo un pallet completo. Llega hasta un punto donde ve los pallets completos, obviamente el pallet es unificado, mismo calibre, misma categoría, misma nota, todo igual, mismo embalaje.
+- [02:23] Y después hay otra parte del modelo, que es una parte del modelo 2.0, que junta como todos los puchos, porque claro, en el mundo ideal, el palo sale armado y todo listo, pero en un proceso de repente se arman como 3 palos, incompletos, porque no todas las fundas clasifican igual, se arman como de caja roja, 20 cajas, de caja negra, no sé, 10 cajas, ¿verdad?
+- [02:48] Y otra parte del modelo unifica todos estos buchos, ¿cachái?
+- [02:53] Va juntando.
+- [02:54] ¿Solo palet?
+- [02:55] Lo junta.
+- [02:56] Ah, ya.
+- [02:57] Pero si te deja más caído que lo del otro.
+- [02:58] Ah, ya.
+- [02:59] Que son como palet más mixtos.
+- [03:00] Ya, mixtos.
+- [03:01] Pero al final le dimos la misma función objetivo, más pequeña, pero como juntar
+- [03:06] cuando ya no tienen como hacer palet con peso.
+- [03:09] Ya, bueno.
+- [03:10] Entonces ya, si no puedes juntar con esto, ya, y pásate a este valor.
+- [03:13] Si no, junta con este.
+- [03:14] Ya, en el último caso, ya junta todo junto.
+- [03:17] Y le dando según los pesos, que son como las notas, tiene que como maximizar la nota.
+- [03:24] Bien. O sea, no podéis mezclar cualquier fruta en un mismo palo.
+- [03:27] No. Tiene que ser lo más modificado posible.
+- [03:31] Y en el contenedor también tiene que ir ubicado lo más modificado posible.
+- [03:35] O sea, un contenedor ojalá solamente de caja negra.
+- [03:40] Porque la caja roja tiene menor valor.
+- [03:42] La caja roja como es de menor calidad, se espera que tenga menos precio.
+- [03:48] La caja negra, como es la más premium, se espera que tenga un precio más poderoso.
+- [03:53] Entonces, a veces, si los combináis en el contenedor, nos pasa que la caja roja le baja el precio a la caja negra.
+- [03:59] Como se están vendiendo en el mismo contenedor.
+- [04:01] Ya, te entiendo.
+- [04:03] Ah, pero usted va a comerciar, no es que afecte el...
+- [04:05] Yo te voy a comerciar.
+- [04:06] Ah, ya.
+- [04:07] Te voy a comerciar.
+- [04:08] La venta, al final, es como te cagan los precios.
+- [04:11] Bien.
+- [04:12] A ver, porque lo abren allá y te digo ya, entonces...
+- [04:15] Yo voy a estar al lado y...
+- [04:15] Esta vale 10, esta vale, no sé, 20, más o menos 15. Así se negocia, entonces, mejor que esté puro negro, no tenga mucho donde negociar.
+- [04:29] Y se da por la fiesta filete.
+- [04:31] Y eso también lo estamos dando en vivo ahora, ¿no es verdad?
+- [04:34] Claro, ahí están probando.
+- [04:35] Claro.
+- [04:40] José me comentó que ayer estaba viendo un tema de los accesos, están saliendo cuartos de ahí, no sé.
+- [04:46] Allá estábamos hablando, como con una...
+- [04:50] Lo que pasa es que me falta como dónde capturar, en qué base de datos capturar la fecha de apertura.
+- [04:55] Para nosotros es súper importante ir midiendo los tiempos de todo lo que es la línea productiva.
+- [05:00] Entonces medimos desde que la fruta llegó al parque hasta que entró el proceso.
+- [05:04] Cuánto nos demoramos, horas, días, etc.
+- [05:07] Y ahí ponemos un semáforo, ¿verdad?
+- [05:09] Después entre el proceso y, pues, como el despacho.
+- [05:13] Cuánto nos demoramos para poder preciar, que realmente tiene contenido que se vaya.
+- [05:17] Después está entre el despacho y el puerto.
+- [05:20] Después entre el puerto y el...
+- [05:23] O sea, cuando ya sale la nave y el destino, cuando llega arriba a China.
+- [05:28] Entonces vamos viendo toda esa cantidad de días.
+- [05:32] Y bueno, es lo que queremos agregar a la medición Maya.
+- [05:35] Cuando ya llegamos a China y listo.
+- [05:37] En abril el contenido de venta.
+- [05:39] Entonces, ¿dónde puedo encontrar o cómo voy a hacer el match entre el número de contenedor y la fecha de apertura?
+- [05:46] Ya, ¿te lo entregó así o no?
+- [05:48] Estábamos revisando en qué tabla está.
+- [05:50] Ya, a ver.
+- [05:51] Eso le dije a mi cliente si podíamos juntarlo para que me ayudara a encontrar esa fecha.
+- [05:57] Claro, porque la página lo calcula, ¿no?
+- [05:58] Y que el cuerpo es la fecha de apertura y el precio es la fecha de apertura.
+- [06:01] ¿Eso es el ETA, no? ¿Cómo se llama?
+- [06:02] ¿Cómo?
+- [06:02] ¿El ETA?
+- [06:03] El ETA es cuando arriba a la nave derecha.
+- [06:05] Ah, ya, cuando arriba.
+- [06:06] Después, cuando la fecha de apertura, cuando ya se está vendiendo el contenedor.
+- [06:08] Y la decisión es que llevamos el contenido completo con precio y amplio.
+- [06:13] Entonces, claro, hasta el año pasado, nuestro KPI era que desde que recepcionaba la fluta hasta que se posicionaba en China,
+- [06:19] en el barco de la guerra, 30 días.
+- [06:22] ¿Ya, pero si se volaron dos semanas en venta o una semana?
+- [06:25] Claro, de ahí perdíamos, después como que nos desprojugamos y después qué pasa allá, no sabíamos.
+- [06:31] Y con esto queremos ir ya...
+- [06:33] Claro, pues llegamos con 30 días y la fluta se voló dos semanas, perdimos igual.
+- [06:37] O sea, todo lo que hicimos como bien óptimo acá, lo perdimos allá en la hostia.
+- [06:44] Por eso para mí esa fecha es súper importante, porque así puedo saber, y puedo ver que entonces el cliente todavía no está en el mercado.
+- [06:52] Oye, ¿quien la vende es un solo partner tuyo o son varios?
+- [06:57] Son varios, son varios brokers.
+- [06:59] Ya, brokers.
+- [07:01] Claro, como clientes, por así decirlo, y con todo el portal de crédito, poder compararlo, poder compararlo y el minuto que se está vendiendo, el minuto que se está vendiendo súper mal, el minuto que se está vendiendo súper bien, ya, corte las pilas, o si no, le vas a toda la puta a esto.
+- [07:17] Claro, ya lo entiendo.
+- [07:20] Que es como gestión que antes no hacíamos.
+- [07:21] O sea, yo agüita, yo agüita.
+- [07:24] Pero, por ejemplo, ellos si les llega la fruta, pero tú lo mides con la misma calidad de fruta, la misma fruta.
+- [07:33] Sí, por eso en el módulo que hicimos de marketing y trading, yo lo he escrito para yo decir, ya quiero comprar la fruta que es 3J, el embalaje que es dieta negra y la variedad que es lácteos.
+- [07:47] Y en eso quiero saber el ranking de mi bro que es comúnmente, que es el mejor y que es el peor.
+- [07:54] Y ahí, por ejemplo, ¿cada bro que le vaya a pasar la aplicación?
+- [08:00] Lo que quiero es que le llegue como todas las mañanas un reporte automático.
+- [08:03] Pero ellos, por ejemplo, ellos están vendiendo, ¿cierto?
+- [08:06] Entonces, y, ah, bro, no, tiene otra empresa que es de Freshly que están estudiando el mercado.
+- [08:12] Claro, claro, pero esa es la información que es la que queremos comprar.
+- [08:20] Pero ¿quién va a estar sacando las fotos de esa empresa, cierto?
+- [08:22] No, no, pero tenemos dos trabajadores chinos que están en el mercado. Están asignados uno en cada mercado, ¿cachái? Ellos van a estar todo el día ahí viendo los contenedores de AlmaWeb como se están vendiendo, ¿vale? Entonces la idea es que los propios estén ellos ahí sacando fotos, ingresando los precios, que estén en la aplicación.
+- [08:43] Pero entonces la aplicación no la va a tener el PROC.
+- [08:45] No, no, no, yo creo que no, que al final reciba un reporte diario, cachái, y diga si es que vivía hasta en el ranking 5.
+- [08:54] ¿Pero cómo te vas a enterar a cuánto la está vendiendo ese blog?
+- [08:59] Con la captura de precios que hace el chino que trabaja con nosotros.
+- [09:02] Ya, pero esas dos personas, esos dos chinos, van a tener que estar recorriendo todo el mercado constantemente.
+- [09:09] Estaba hablando recién con Kevin, me decía que a las 5 de la mañana ya empieza la captura de precios.
+- [09:15] Todo el día, desde que tengamos todos los precios.
+- [09:18] La vez pasada, obviamente, anotaban los precios y después se los llevaban en la tarde a la oficina y la oficina como que los visitaba.
+- [09:25] Desde que teníamos la misma aplicación, bueno, pagaban todos los precios.
+- [09:29] Y en el contenedor estaba, la verdad, seguía.
+- [09:34] Y así se va llegando a la base.
+- [09:37] Y en el futuro, igual, ¿piensas después hay que pasarle todo a los brokers?
+- [09:41] Yo creo que sí, yo creo que va a tener como su app, un modo, un usuario, un rol, un cliente, ¿ya sé?
+- [09:48] Claro, sí, porque le va a salir los accesos ya, sí, porque igual, bueno, no sé qué tamaño del mercado haya, es un mercado, ¿cierto?
+- [09:56] Claro.
+- [09:57] Y si venden rápido y no alcanzáis a capturar ese precio.
+- [10:02] No, que igual siempre está el informe.
+- [10:05] Ya.
+- [10:05] Claro, tienen que vender, no hay opción de que no pillen el contenedor.
+- [10:11] No hay chance. No, tampoco que se haya vendido muy, muy rápido.
+- [10:15] Tembló el rancabo.
+- [10:16] Sí, cachái. Sí tembló acá.
+- [10:19] ¿De verdad? Sí, yo lo sentí.
+- [10:21] Pero muy despacito.
+- [10:23] Te ha ido una mala suerte.
+- [10:26] Este es el canal en el que nos falta habilidad.
+- [10:27] Es la patita del reporte que queremos poner de todas las medias, cachái.
+- [10:31] Ya.
+- [10:31] Que le diga así como, no sé, o al cliente jinglí,
+- [10:35] que en este tipo de rutas estáis vendiendo súper bien,
+- [10:37] en este estáis vendiendo súper mal,
+- [10:38] y acá no estáis vendiendo.
+- [10:39] Ya, entendido.
+- [10:41] Te estáis demorando cuatro días en abrir el contenedor y te estáis demorando tres días en enviar el promedio.
+- [10:46] Eso se lo pediste a José, ¿no?
+- [10:48] Todavía no.
+- [10:49] Todavía no.
+- [10:50] Pero estamos meditando un poco el reporte.
+- [10:52] Ya.
+- [10:53] La notificación.
+- [10:54] La notificación.
+- [10:55] Ahora que hemos creado un módulo de notificaciones, podemos agregar ese tipo.
+- [10:59] Claro.
+- [11:00] Y el final les compara todo.
+- [11:02] Pero esa notificación va a ser para sus brokers, ¿no?
+- [11:06] Claro.
+- [11:07] Y también ustedes van a tener notificación interna.
+- [11:09] Claro.
+- [11:10] Pero que al final le esté llegando a Nico todas las mañanas un informe del mercado.
+- [11:14] Claro.
+- [11:15] Que le diga, como fruta AlmaWeb, de tu fruta, ¿qué mejor me entregué?
+- [11:20] La fruta que se está vendiendo mejor es la 3J.
+- [11:24] El embalaje que se está vendiendo mejor es el NoBeam.
+- [11:28] ¿Y cómo sacan el mejor? Porque puede ser que uno venda a mejor precio, pero más lento.
+- [11:33] Y el otro vende un poquito más barato, pero más rápido.
+- [11:37] ¿Cuán...?
+- [11:38] O sea, ahí tenéis la variable, porque si es más lento una semana, no va a ser.
+- [11:45] Y difícilmente, y difícilmente si se demora más, va a vender un poco.
+- [11:52] Porque la fluta igual ya, pensé que ya nos va por un mes, más 10 días, 40 días, y la fluta ya puede estar en el periódico.
+- [12:00] Los chinos van viendo a los contenedores que van a verlo.
+- [12:02] O sea, ese es el lapso que tienen que vender la fluta.
+- [12:08] Debe ser un caos, yo creo.
+- [12:09] Es un caos, los videos que mandan es como, peor que...
+- [12:13] Ah, es que mostraste tú un poquito.
+- [12:14] Sí, y eso es como, no es mucho porque eso ya estaba de noche, en el día era caótico.
+- [12:20] Claro, el año pasado a ver cómo nos pasó, que en un contenedor,
+- [12:23] la voz de Nico empezó a... Nico estaba ya en China,
+- [12:26] y empezó a hablar con el contenedor que por qué estaba con tantos días ya en venta.
+- [12:32] Y buscamos el contenedor y claro, hasta nuestro control,
+- [12:34] había cumplido los 30 días, ¿cachái?
+- [12:36] Entre la recepción y la llegada, ¿cachái?
+- [12:39] Pero entre la llegada y que lo bajaron realmente al mercado, ahí el chino como que se lo guardó el contenido.
+- [12:45] Seguramente especuló y dijo, ¿sabes qué? Si lo guardo un par de días, está a lo mejor suba el precio, ¿cachái?
+- [12:51] Pero la otra gente pierde la liado.
+- [12:53] Y eso no lo vimos hasta que ya el contenedor ya perdió los tiempos, ¿cachái?
+- [12:57] Cambiar algo en la aplicación, pues yo llevo ahí viendo que este contenedor llegado,
+- [13:00] ¿sabes qué tengo? Estos tres que todavía no aparecen.
+- [13:02] Están abiertos, están en proceso de venta.
+- [13:04] Cuando hemos bajado o no nos hemos encontrado en el mercado, cachái, que ahí van a tener que ir los muchachos a traer macotes al mercado a buscar el contenedor donde está.
+- [13:14] ¿Qué tiene el contenedor?
+- [13:16] Claro, el contenedor.
+- [13:17] Ya pelear la... claro, el contenedor, si nosotros le damos la herramienta para pelear el precio en el momento y lugar, lo logra, cachái.
+- [13:25] Pero si ya lo hacemos en marzo o abril, ya pasó mucho agua con el contenedor.
+- [13:31] No van a tener las liquidaciones perfectamente líneas. Bueno, el despacho va a ser de un par de días.
+- [13:36] Aquí hay criterios de los brokers que les van a dar, ¿no?
+- [13:38] Claro. Entonces ahí se les dificulta mucho la negociación.
+- [13:41] Sí. O sea, generalmente los brokers que han pasado lo anticipo que nos van mandando.
+- [13:45] Porque todo parte de que ellos nos empiecen a mandar dinero como para reservar su fruta.
+- [13:50] Y nosotros después empezamos a mandar fruta.
+- [13:52] Entonces después se liquida y hay veces en que o ellos tienen que pagar o nosotros tenemos que devolver.
+- [13:57] Ah, pagar a donde van. Abonar a donde van.
+- [13:58] Claro, claro. Pero no, la temporada pasada nos pasó que quedaron debiendo y ahí están las negociaciones de el por qué.
+- [14:07] Claro.
+- [14:08] Claro, porque él como...
+- [14:10] Como que él puede decir, oye, el mercado estaba mal.
+- [14:11] Estaba mal y lo vendió muy barato.
+- [14:12] Claro.
+- [14:13] O la fruta no era...
+- [14:14] Pero no se tiene que defender y decir, oye, pero es que, pucha, este contenedor, entonces, se vendió este precio, porque tú no pudiste.
+- [14:20] Acá, ¿esa data no la tienen ahora ustedes? Por ejemplo, para esos casos.
+- [14:24] ¿Cómo?
+- [14:24] Del año pasado.
+- [14:25] ¿Pueden justificar el por qué estamos vendiendo el precio?
+- [14:29] No, porque ya no tenemos.
+- [14:31] ¿Cómo decís que hay una...
+- [14:33] A buena fe.
+- [14:34] A buena fe.
+- [14:35] Ahora con la obligación está cagado.
+- [14:37] Está cagado, porque vamos a tener el precio ya antes.
+- [14:40] Y de la competencia también.
+- [14:42] Y de la competencia.
+- [14:43] No te puedes decir hoy si estás vendiendo por este motivo tan barato.
+- [14:46] Entonces ese es el valor nacional de la plataforma.
+- [14:49] Puedes yo en el momento compararme y sabes cómo voy.
+- [14:52] Claro.
+- [14:52] Y ya cuando empiezan a llegar las liquidaciones, que es como enero aproximadamente, mitad de diciembre, ya voy viendo el tiro, porque muchas veces qué es lo que declaran y después qué es lo que llega en la liquidación.
+- [15:04] Obviamente va a haber un rango, pero tenemos que ver con la cosa cuál va a ser como el...
+- [15:08] Y esas liquidaciones es como la nota de pago, la nota de cobro.
+- [15:17] Esa liquidación está llena, ¿cierto? Y una sola liquidación, ¿cierto?
+- [15:22] Es una liquidación por contenedor.
+- [15:24] Por contenedor, ah, ya.
+- [15:25] El mismo patrilice que cargamos a una página, llega a ser validito por contenedor, no sé, como con 10 líneas, que son las 10 iluminaciones de la caja que había, con precio.
+- [15:38] Ya.
+- [15:39] Y esas aplicaciones en el sistema, ¿no? Y empezamos el proceso de ya liquidación al producto.
+- [15:43] Ah, ya. Y ahí la contabilidad tiene que decir, ya, de esto tenemos que pagar y ver los abonos, todo eso.
+- [15:49] Sí, pues, la liquidación ahí, contabilidad.
+- [15:51] Y la liquidación de la temporada anterior.
+- [15:54] ¿Y esos abonos dónde los registras?
+- [15:57] Una bonita liquidación.
+- [15:59] Claro.
+- [16:01] Eso son dólares, ¿no?
+- [16:03] Yuenes.
+- [16:03] O sea, yuenes y dólares.
+- [16:05] Ah, ya.
+- [16:10] ¿Cachái que son las mismas combinaciones que les pedí para la página de Frecint, verdad?
+- [16:13] Sí.
+- [16:13] Entonces, el chino, en estas mismas combinaciones, va declarando el precio.
+- [16:17] Y yo después lo voy comparando cuando llegue hasta archivo.
+- [16:20] Tienen que poner otros costos, todos sus puestos de flete, los 10, son los mundos, los puestos de tránsito, los taxis, todas esas cosas.
+- [16:38] ¿Y los abonos dónde los registran hoy día?
+- [16:40] ¿Tenés que abrir el contrato de Antisipo?
+- [16:42] ¿Sí, Antisipo?
+- [16:43] ¿Lo registramos desde aquí?
+- [16:45] Sí, Antisipo cliente.
+- [16:48] Antisipo cliente exportación.
+- [16:51] ¡Ay, Dios!
+- [16:51] Ya después, cuando ya está la liquidación y todo el tema, ya entra más contabilidad, tesorería, todo el...
+- [16:58] ¿Y esa liquidación, esa cobertura, cómo la hacen? ¿El día a mano?
+- [17:02] ¿Sobre esa planilla versus los abonos que han...?
+- [17:06] Sí, vemos la facturación que nosotros le emitimos versus lo que ellos nos han pagado.
+- [17:10] ¿Al cliente? ¿Por cliente o no?
+- [17:12] Por cliente, por broker.
+- [17:13] Por broker.
+- [17:13] Sí.
+- [17:14] Un broker puede tener varios clientes.
+- [17:16] Un broker es un proveedor, ¿no?
+- [17:18] El broker es el intermediario.
+- [17:19] Es como el que a nosotros nos deposita el dinero a nombre de los clientes chinos.
+- [17:28] Ah, claro.
+- [17:31] Y un cliente puede trabajar con varios brokers.
+- [17:33] Por eso ahora no siempre le cargamos dinero al broker.
+- [17:36] Porque antes era al cliente y después veíamos que los clientes no eran los mismos,
+- [17:41] que se andaban como con varios brokers.
+- [17:44] Entonces nos costaba mucho hacer la liquidación.
+- [17:46] Ah, claro. ¿A qué broker corresponde?
+- [17:48] Claro, o sea, que si me llevo esta plata, ¿a qué grupo de clientes corresponde?
+- [17:52] Entonces ahora es por broker.
+- [17:55] La facturación sigue siendo el cliente, pero el ingreso del dinero es por broker.
+- [17:59] ¿Qué tipo de documento emiten?
+- [18:00] La factura electrónica de exportación.
+- [18:03] Ah, de exportación.
+- [18:04] La 110.
+- [18:05] La 110, ya.
+- [18:06] Sí, 111 y 112 son las liquidaciones.
+- [18:08] Ya.
+- [18:11] ¿Y esa liquidación no queda amarrada a eso?
+- [18:14] No.
+- [18:15] De hecho, estas liquidaciones son de los contenedores que la María José vendía ayer.
+- [18:20] Como Frenchly, porque nosotros adicionales venimos con una de las fértil, y ella hizo la gestión para ver como un broker más.
+- [18:28] Y esa es programando la fórmula.
+- [18:34] Ese Excel se podría cargar al sistema para que tú puedas asociarlo a modo de hacer la factura.
+- [18:43] Habría que verlo, porque este formato lo mandó Franklin, pero este formato lo mandó yo, porque al final es la vela que vamos a usar.
+- [18:58] Entonces nosotros tenemos un paño de información donde dice Martín, dicen liquideo, dicen ya, veamos la liquidación de los yobos.
+- [19:07] Es un yobo lo que facturamos, lo que nos facturó y hay que liquidar el cuarzo al plato.
+- [19:11] Ese es un número que me gustaría ver en mi sistema, que en los sexos que nos mandamos por correo. Ese registro no queda en ninguna plataforma.
+- [19:25] ¿En realidad ahí no sabes cuánto... o sea, control de lo que puede que te deban o tú debes? ¿Dónde lo controlas en un lado?
+- [19:34] Lo controlamos solamente los documentos que emitimos, pero nos queda el cálculo en sí para hacer el último documento que es nota de crédito o débito, no es que hablemos de ninguna plataforma.
+- [19:45] Ah, claro, es que claro, si tú le quedas debiendo, debiendo una nota de débito.
+- [19:49] Sí.
+- [19:50] Es decir...
+- [19:52] Sí.
+- [19:55] Claro, como una factura adicional.
+- [19:58] Sí, es que el primero, como el primer precio estimativo va a ser a los documentos y el segundo es para ver cuánto efectivamente se vendió.
+- [20:04] Ya.
+- [20:05] Ah, entonces por lo general un contenedor o un broker o un cliente tiene siempre una nota de crédito, una nota de débito asociada a la factura.
+- [20:13] Siempre. Cuando el libro de consignación siempre va a una factura asociada a un documento con el que venta bien.
+- [20:18] Ya.
+- [20:19] Cuando se venta firme es solamente la factura, pero aún así hay que analizar el IBE.
+- [20:27] El libro de consignación nunca se ha dado que la factura casi perfecta con el libro de consignación.
+- [20:31] No, de hecho no.
+- [20:34] Es que es difícil porque claro, no es variable.
+- [20:37] Se hace como un precio estimativo, en base a la fecha en que vais sacando los contenedores, pero actualmente es el programa que tenemos con el servicio de impuesto interno.
+- [20:51] Ah, pues entonces sacan los contenedores con la factura emitida.
+- [20:54] Sí, tiene que ser con factura. Cuando uno empieza el proceso se emite el DUS, y el DUS va a ser la factura.
+- [21:00] Cuando yo quiero legalizar o ya finiquitar el proceso, se hace el IBB. Y el IBB va a ser una nota de crédito o de débito.
+- [21:13] ¿Y sale contenido con la factura de exportación?
+- [21:15] Siempre. Es un requisito. Y aún así tenemos problemas con el servicio impuesto interno.
+- [21:22] ¿Por?
+- [21:23] Porque ellos dicen que todo lo que nos llega como anticipo del cliente debemos facturarlo.
+- [21:29] Y a un bus genérico.
+- [21:30] No, facturando, por ejemplo, si él me depositó 100.000 dólares, facturarle 100.000 dólares.
+- [21:37] Pero en realidad no son 100.000 dólares, si yo a final de temporada se cuenta efectivamente.
+- [21:48] Qué raro.
+- [21:52] Eso, ya, que os dejo porque van a salir a la cote.
+- [21:56] ¿Tipo dos y medio o dos y uno?
+- [21:57] Ya.
+- [22:00] Perfecto.
+- [22:01] Oye, ah, ¿cómo? Perdón.
+- [22:03] Dos y medio.
+- [22:04] Dos y medio me voy a almorzar.
+- [22:05] Ya.
+- [22:06] Y después los vamos a liberar.
+- [22:07] Para que puedan volver a sus hogares.
+- [22:10] Dos y medio.
+- [22:11] Ah, ya.
+- [22:11] Sí, es que eso era hablar con ustedes, que me adelanté a una reunión a las 4, entonces, para no estar quejando, entrar desde...
+- [22:21] Sí, pues, entonces vamos a la 2 y media, va a estar a la 1, y a la 2, y después a la...
+- [22:24] Ya, va bien, va bien.
+- [22:26] Sí, nos vemos a la 1 y media, eso es.
+- [22:29] Bien, por favor.
+- [22:31] Ahí sí que vamos a estar en locura.
+- [22:33] Ahora, sin tornado.
+- [22:35] Oye, permíteme, ¿tú quieres hacer un llamado?
+- [22:39] ¿Ya me tomas un dulce?
+- [22:40] Sí, sí, estoy... si se me escapa la idea...
+- [22:44] Carlos, yo soy la de vida de chilenos.
+- [22:47] No, yo vi súper tarde que mandaste la foto.
+- [22:51] Es que ya va a llegar todo seco.
+- [22:54] Vamos a ver, hay dulce, eso es lo importante.
+- [23:01] Creo que ese chofe está como raro.
+- [23:03] Ay, ese mato.
+- [23:06] Ahora, ¿te haría ahora que me electrocutas?
+- [23:08] No, ¿qué falta?
+- [23:15] En noviembre me va a venir con armadura.
+- [23:19] En caso de cualquier cosa.
+- [23:49] ¿Cómo que lluvia?
+- [23:53] Yo de nada sentí el temblor.
+- [23:56] Y yo dije, habla.
+- [23:57] ¿Cómo que ahora fue?
+- [23:58] Estábamos aquí conversando con Mario.
+- [24:02] Ni gaché.
+- [24:03] Y dije, fue un temblor.
+- [24:05] Ni gaché.
+- [24:05] Por recaído.
+- [24:07] No hay que llamar a la vía gracia.
+- [24:09] No.
+- [24:11] ¿Vieron el choque de los trenes en España?
+- [24:17] No.
+- [24:18] Chocaron trenes en España.
+- [24:20] Oye, ahora veníamos y hubo un choque múltiple en la carretera, pero hacia el...
+- [24:24] Yo no sé por qué, en esa carretera chocan prácticamente todos los días.
+- [24:31] ¿En serio? ¿O suave?
+- [24:33] Todos los días, y cuando empieza como el calor, como que todos los días, yo me acuerdo que una vez,
+- [24:38] estuve avisando como, creo que dos semanas, todos los días, choc, choc, choc, choc, choc, choc, choc.
+- [24:47] ¿Me sabía eso?
+- [24:49] Hay que sacarme el clima.
+- [24:50] A lo mejor no se ha hecho nada.
+- [24:53] Exactamente eso.
+- [24:53] Pensamiento de soa.
+- [24:55] Sí.
+- [24:55] ¡Gracias por ver este video!
+- [27:03] Sí, las cosas necesito.
+- [27:04] Sí, sí.
+- [27:06] Para preocuparles.
+- [27:07] La idea de eso igual es como que uno tenga la independencia de, por ejemplo, si necesitas como poner un comentario, no tengamos que dar como reunión,
+- [27:15] deje el comentario ahí y en caso de que después pase el rato o el mismo motivo o tengamos que pasar a otro punto,
+- [27:22] eso quede como registro de que es un pendiente pero no prioritario.
+- [27:25] Ya.
+- [27:26] Entonces la idea de eso es como ir anotando todo, ir anotando todo, todo, todo y después uno va revisando la carta y como,
+- [27:30] Ah, no faltó esto, esto ahora sí aplica, esto ya no aplica. Esa es como la idea. Y así no necesariamente es esperar como a la reunión a revisarlo.
+- [27:39] Pero, en contraposición, salen más productos en la reunión que anotándolo en el trelo.
+- [27:47] Sí.
+- [27:49] Por eso como que no, al menos no viene lo personal, no me preocupa mucho que esté desactualizado en este momento.
+- [27:54] Ya.
+- [27:54] Cuarto, el proyecto igual ya lo tenemos bien avanzado y tendríamos que detallar mucho en el trelo como para que quede utilizable.
+- [28:06] A menos que Francisco diga que hay que ocuparlo.
+- [28:13] Es que igual es un seguro para los dos lados, cachái, porque en reunión podemos decir mucho y el día de mañana ustedes nos dicen, oye, pero esto se lo pidieron, nosotros como, no, no, lo pidieron.
+- [28:24] En cambio en el tren no es como, no, pues está de acá del día número tanto pedido lo que te...
+- [28:30] Ah, si tenían razón, se nos pasó a los otros.
+- [28:33] Con un seguro igual para ustedes.
+- [28:34] Todo lo que me dicen.
+- [28:36] Control.
+- [28:39] Rechazado todo.
+- [28:45] Ahora sí hago como en un bolsacito.
+- [28:48] Hoy me siento mal comiendo bolsacito y ustedes están en modo IMC.
+- [28:54] ¡Gracias por ver este video!
+- [29:24] Me lo llevo, entonces.
+- [29:27] Bueno, el set como, no sé si no come porque le puede hacer mal.
+- [29:32] Sí, yo creo que eso.
+- [29:34] Pero, por ejemplo, la talla de los nímenes, creo que sí.
+- [29:38] Es que creo que le hace mal como el 90% de...
+- [29:41] Le hace mal comer.
+- [29:42] Sí.
+- [29:42] El más caro es.
+- [29:44] Sí, el más caro.
+- [29:47] Más comida.
+- [29:49] Pero en qué hace con...
+- [29:50] Carlos Feliz.
+- [29:52] Y el por la toma se lo hace pasar.
+- [29:53] Fue más... al asilo que nos mandaste.
+- [29:58] No, si éramos los más viejos.
+- [30:02] ¿De verdad?
+- [30:03] Sí, sí fuimos.
+- [30:04] ¿A Malabar?
+- [30:06] Sí, sí fuimos.
+- [30:08] No, si había otros lolosaurios ahí...
+- [30:10] ¿Pero si es piola?
+- [30:11] Sí, si es piola.
+- [30:12] No, o sea, es que es bueno para ir como a nuestro nivel de edad.
+- [30:15] Sí, es como ambiente como trabajador y universitario.
+- [30:18] Sí, sí.
+- [30:20] Ahí cerca hay universidad, ¿no es cierto?
+- [30:22] Sí, están los institutos, están muy cerca, como a una cuadra, el Santo Tomás, el Ayer, juntos, y el Duop, que están muy cerquita, y bueno, yo creo que hay más, pero no los cacho.
+- [30:42] Sí, ayer me di cuenta, cuando fuimos al bar, ahí estaban todos los universitarios, un cara estresado.
+- [30:48] ¡Gracias por ver este video!
+- [31:27] ¿Está por el costado de un instituto?
+- [31:34] No hay referencia.
+- [31:37] La calle de institutos, así.
+- [31:39] Siguiendo los nombres, es súper conocido, pero yo no me acuerdo.
+- [31:42] Pero ahí vendían como las típicas, completas en el shop, como por dos lucas.
+- [31:47] Podían ir a la dompa.
+- [31:48] Ya.
+- [31:53] La pica del universitario.
+- [31:54] Sí, de verdad que es pica.
+- [31:57] Pero en esos tiempos, yo no sé si ahora.
+- [31:59] Las mejores picas son las que uno puede pagar con jura.
+- [32:02] Yo creo que ahí pueden pagar con jura.
+- [32:04] ¿En la bomba se acuerda de las cosas?
+- [32:05] Sí.
+- [32:06] Y dependiendo del lado, bueno, ahora ya creo que no se hace, pero en mi tiempo se podía comprar el copero.
+- [32:12] Pues sí que no.
+- [32:13] No, ya no, ya, pero en mi tiempo sí se podía.
+- [32:17] Ahora sí, bien hasta los... Bueno, justo cuando yo estuve, menos mal bajaron como hasta dos sellos, y ahora hasta tres sellos no se puede comprar en YouTube.
+- [32:25] No, nada, nada.
+- [32:28] No se puede comprar cosas a la sede o nada.
+- [32:32] Son 45, Lupe, no es malo.
+- [32:34] No, no es malo.
+- [32:35] Ahí se van en puros dulces, busco todos los dulces de dos sellos.
+- [32:40] Sí, de dos sellos.
+- [32:42] Para la casa, cosas así. Y cuando salí a comer por ahí, no sé, o si me quedaba muy tarde.
+- [32:53] Yo para abajo.
+- [32:55] La juna.
+- [32:56] Yo voy con puras, así como aceite, con la juna.
+- [32:58] Ya.
+- [32:59] Con pura aceite, pura aceite, fideos, como esas cosas que se pueden comprar de harto y no se van a echar a perder.
+- [33:03] Sí, no se van a echar a perder.
+- [33:05] Porque no voy a comprar nada, todo lo demás fome.
+- [33:07] ¿Todo lo demás fome?
+- [33:08] Todo, sí.
+- [33:10] El fin de la juna es que se alimenten bien.
+- [33:16] ¿Qué es eso del menú juna, eh?
+- [33:18] Habían unas partes, bueno, yo soy de la CAF, y ahí había unos menús que se pagaban con juna, pero eran buenos.
+- [33:23] Ya.
+- [33:24] También fueron buenos.
+- [33:26] Y ahí comía cuando me quedaba hasta tarde.
+- [33:28] Pero había unos tipos que no sé cómo lo hacían, que sacaban la plata.
+- [33:35] ¡Qué tránsito!
+- [33:36] Y sacaban la plata.
+- [33:38] ¿De qué?
+- [33:38] ¿De la juna?
+- [33:39] ¿Los demás que les cobraban como una comisión?
+- [33:41] No sé cómo lo hacían, pero como que daban ese servicio de sacar esa plata.
+- [33:49] ¡Qué dráfico!
+- [33:50] Sí.
+- [33:51] ¡Yo quiero!
+- [33:53] No, nunca les expliqué que no, al final compraban igual cosas.
+- [33:59] ¿Igual se sirve la plata?
+- [34:01] Sí, o se servía, por ejemplo, paga en sí, no sé si servía.
+- [34:05] ¿Paga con mucho?
+- [34:06] Claro.
+- [34:07] Pero... que en ese tiempo mi abuela me daba plata con la anciana.
+- [34:22] Entonces yo compraba cosas en la casa, pero ayudaba a la familia.
+- [34:29] Bueno, en esos tiempos montaban 45 locas con frascos, porque hoy en día...
+- [34:33] Sí, bueno, no, no, no, no, no, no, no, no, no, no, no, no, no.
+- [34:36] La extraño.
+- [34:39] No la valoré hasta que la perdí.
+- [34:43] Sí.
+- [34:45] No, yo no sacaba hasta el último peso, decía, no pienso regalar ni un peso al gobierno.
+- [34:49] ¿No?
+- [34:49] ¿No lo simulaba?
+- [34:50] Hasta el 5 del otro mes, chao.
+- [35:20] Juntaban dos. Sí. Entonces ahí uno compraba. Ahí uno aprovecha. Sí, aprovechaba. Pero este año estuvo mal. Ahora que mi mamá se puso a estudiar, se ganaron la gratuidad y no les dieron.
+- [35:34] Y no hay que comer. Pero sí hicieron muchos recortes. No, pero eso fue en el Oro, güey. Justo en ese, cuando terminó.
+- [35:43] Es que si, lo que pasa es que yo estoy aquí. Qué raro, sí, porque en gratuidad yo tenía entendido que te daban la jona.
+- [35:48] Es que daban la juna, pero la única explicación que le dieron es que no había plata.
+- [35:53] Yo me acuerdo que era el búho.
+- [35:53] Y no dieron la juna.
+- [35:54] O podís tener la juna, y el siguiente nivel es como gratuidad con juna.
+- [35:58] Ya, es que depende de la pila.
+- [36:00] Esa pilita, sí.
+- [36:02] Y no, aquí por el Claudio, la pila completa, y no, no hay plata.
+- [36:07] No, le dieron a todos juna.
+- [36:09] ¿Y no tiene juna?
+- [36:11] ¿Qué le han dado?
+- [36:12] Porque algunos sí, algunos no.
+- [36:14] Y la única explicación, apelaron, apelaron, apelaron, y no.
+- [36:18] No, no hay plata.
+- [36:20] ¿Qué, la data?
+- [36:21] Sí. Horrible.
+- [36:23] Una ciudad que quema, no le puedo arreglar mucho.
+- [36:26] Sí, la única respuesta es no, no hay plata.
+- [36:28] Sí, igual.
+- [36:29] Y esa cuestión viene en ese rato ya con el problema.
+- [36:33] Que habían sacado harta plata.
+- [36:35] Lo que pasa es que igual son beneficios que están muy regulados.
+- [36:38] Yo estuve en la UNAP y tenía compañeros que tenían mejor situación económica que yo.
+- [36:43] Y tenían rotulidad.
+- [36:44] Había una ética en el privado de edad.
+- [36:46] Sí, se está muy enfocando.
+- [36:47] Entonces, al final, yo decía, ¿cómo lo hacen?
+- [36:51] Eso viene mal de hace muchos días.
+- [36:54] Sí, porque al final, su atún no existe, ¿no?
+- [36:58] Lamentablemente, la astucia del chileno.
+- [37:04] Lo malo es que, bueno, en el caso que conozco aquí,
+- [37:06] Claudio, uno de los más cercanos que conozco,
+- [37:08] pero ya pasó mucho en los institutos,
+- [37:11] y él sí la necesitaba.
+- [37:13] Entonces, ahí da la causa.
+- [37:15] Sí, pues igual tenía compañeros que la necesitaban, sí. Entonces, ver a unos que no la necesitaban y a otros que no. Entonces, la compraban y bueno. Y mi mamá igual se la ganó. Y otros compañeros igual, entonces cuando se juntan a comer le pagan el, como de su juna al Claudio. Ah, ya. Entonces, como que se unen las juneras.
+- [37:41] Ahí se ve, es más flexible. Pero igual, ¿qué le haces? Es que no le da un beneficio.
+- [37:56] ¿Estás listo para que mostremos lo del trabajo?
+- [37:58] Sí, estaba aprovechando de hacer una migración de la base de datos. Justo terminó.
+- [38:02] Ya, buenísimo.
+- [38:09] Bueno, va a llegar como...
+- [38:32] No, yo creo que está más peligroso, ¿no?
+- [38:35] Jugamos limbo.
+- [38:40] ¿Tienes coach?
+- [38:43] ¿No tiene aquel sonido?
+- [38:44] Sí.
+- [38:45] Eso graba todo.
+- [38:52] ¿Graba todo o nada?
+- [38:58] Esa cámara costó un montón de nada.
+- [39:01] Y luego cuando la usamos nos veían todos transparentes.
+- [39:04] El otro lo veía en blanco.
+- [39:06] El otro lo veía en blanco.
+- [39:08] El filtro de Instagram hacía el máximo.
+- [39:12] Caras plásticas.
+- [39:18] Déjenme extender el escritorio para que no vean trampas balinas.
+- [39:22] Trampas balinas.
+- [39:27] Y ahí es donde ocurre la magia, eso no lo pueden ver.
+- [39:31] Tampoco creo que vayan a entender nada.
+- [39:36] La elemento es un word, así, como falta de ortografía.
+- [39:41] Son rojos, sí.
+- [39:43] ¿Y ahora lo que está?
+- [39:45] Lo están sucediendo en la página en Chile.
+- [39:47] ¿En Chile? ¿Y acá en Chile?
+- [39:49] ¿En Chile?
+- [39:50] Sí, acá sí.
+- [39:53] Déjame verlo contigo.
+- [39:55] Porque están tratando de cargar la información en ese web.
+- [39:58] ¿Y cuándo fueron las últimas que aprobaron?
+- [40:02] Hace una semana.
+- [40:03] ¿Y funcionaba bien?
+- [40:04] Funcionaba.
+- [40:06] Sí, porque era esto.
+- [40:07] ¿Habrán sido los cambios que subieron los últimos?
+- [40:09] No lo sé.
+- [40:11] Que me dijeron que limpiaran todo para poder empezar a cargar la información ahora de la temporada, pero que ya partió.
+- [40:19] Y ahora ya la pago por los datos que trae, ¿no?
+- [40:21] Ya.
+- [40:22] Lo veo.
+- [40:52] L, L, L.
+- [40:55] Eso, ¿por qué eso tiene?
+- [40:56] ¿Es una fiesta que hay ahí?
+- [40:57] Sí, sí está allá.
+- [41:00] Hoy día.
+- [41:00] No sé si se ha acabado.
+- [41:03] Siempre están los...
+- [41:04] Todos los miembros.
+- [41:06] Todos.
+- [41:06] Pero es carrete, carrete.
+- [41:08] Pero todos los miembros.
+- [41:08] Terminación de la sincronía, ¿sí?
+- [41:10] Qué horrible, mitad de semana.
+- [41:13] El brillo.
+- [41:15] Qué responsables.
+- [41:16] O sea, yo encuentro que es terrible.
+- [41:18] Pueden ser los jueves, pero...
+- [41:20] Sí, es como un poco más cercano a ella.
+- [41:23] Claro.
+- [41:24] ¿Sofrió un día en la pega?
+- [41:25] Dice que es muy buena. Por eso dura hasta las 5. Sí. Me parece que en Rancagua, después de Punta del Este, se partió como toda la buena disco. Y la disco que hay ahora actualmente, bueno, es una disco y un pub. Es siempre lo mismo. Siempre el mismo público. Entonces MDM es como la gente que quedó sin casa de cariño.
+- [41:50] ¿Y es como una fiesta casi en un lugar?
+- [41:54] No, es una disco.
+- [41:54] ¿Es una disco?
+- [41:55] Sí.
+- [41:56] Es horrible.
+- [41:57] Las cosas lugares.
+- [42:02] Yo quiero ir.
+- [42:04] Yo no sé si iría un viernes.
+- [42:07] No, si igual.
+- [42:09] Fuerza voluntad.
+- [42:10] Si ando con lentes de sol, un día jueves.
+- [42:17] Sí, por ejemplo, sí.
+- [42:18] Pero jueves es más pasado, porque un día nomás que no aguanta.
+- [42:21] Lo malo es que el día igual es largo.
+- [42:51] Sí, ya lo he intentado, pero no...
+- [42:55] Ya, porfa.
+- [42:57] Ya no aguanto más.
+- [42:58] No ponte ahí a María José, que lo está viendo, porfa.
+- [43:00] No aguanto, aguanto poco el sueño, le pido así, carreteo en la noche.
+- [43:09] De hecho, el sábado ya salí bien, el domingo, te tengo vegetar en mi cama.
+- [43:15] Domingo de cierre.
+- [43:16] Sí.
+- [43:26] He pensado, Pedro, ¿por qué?
+- [43:32] Porque la María José le mandó la guía, y le puso, bueno, bien Pedro, ¿listo la guía?
+- [43:37] Y el Pedro le puso, gracias, ¿cuánto pasaste? Y le pone sobre la bisexual, y el Pedro le dice, ¿qué es eso?
+- [43:45] Y es Larisa Malarco, y pide caer el cómico.
+- [43:51] La bisexual tiene que ver con...
+- [43:52] ¿Qué es eso?
+- [43:56] ¿Por qué me tratas así?
+- [44:03] Comerciales.
+- [44:03] Oigan, hicimos acá, bueno, está macheteado, hay otras cositas que funcionan, pero hay otras que todavía no está la función lista, codificada, pero aquí sería el submenú, quedo en compras, como notas de cobro, y por ejemplo acá tenemos, bueno, estos son dos que están en el modo demo, así se vería como la página,
+- [44:35] Y aquí estarían los dos tipos de notas de embarcador y gasto directo.
+- [44:41] Acá en el gasto directo, acá, bueno tengo mis dudas que una vez terminemos de ver el módulo lo vamos a revisar,
+- [44:49] pero acá por ejemplo puedes seleccionar de los beneficiarios que existen, que ya están en el sistema,
+- [44:55] o te permite de todas formas ingresarlo de manera manual en caso de que no exista.
+- [44:59] Lo hice pensando así, más que nada porque no sabía si es que la persona que iba a tener acceso a esto iba también a tener acceso para agregar...
+- [45:09] Yo lo dejaría seleccionable, no.
+- [45:12] Solamente seleccionable.
+- [45:13] Sí, porque todo lo que se tenga que crear se tiene que autoexer.
+- [45:16] Ya, genial.
+- [45:18] Y acá se puede tipificar la cosa que va a tener, pero no sé si es que había que tener algún mensaje por defecto, como en los otros casos.
+- [45:26] Creo que la versión más digital es esta.
+- [45:30] Ya.
+- [45:30] Porque va a depender de qué sea.
+- [45:32] Actualmente tenemos dos tipos, pero después no sabemos si puede haber una tercera.
+- [45:36] Y eso también.
+- [45:37] ¿El número de la nota debería ser autoincrementable?
+- [45:43] ¿Aquí se cree solo o que ustedes lo tipeen?
+- [45:45] Pero nosotros lo tipeemos.
+- [45:46] Ya.
+- [45:46] Porque viene con su número.
+- [45:49] Ya, perfecto.
+- [45:50] Actualmente está así.
+- [45:51] Sí.
+- [45:53] ¿Y ese tiene que tener una validación si ya existe?
+- [45:57] Sí.
+- [45:58] Ya.
+- [45:58] Pero si ya existe, a menos que dos personas estén ingresando al mismo.
+- [46:07] No tenemos dos personas.
+- [46:10] Yo, yo.
+- [46:12] No, sí, debería tener una validación que ya existe.
+- [46:15] Ya, perfecto.
+- [46:17] Sí, porque a veces me entregan de nuevo la validación.
+- [46:19] Sí, mejor.
+- [46:21] Lo que pasa es que como es un detalle que no llega por ninguna plataforma como oficial, se supone que no es solo el momento de pagar, solicitamos el documento.
+- [46:33] Pero es un mismo entre tesorería y contabilidad.
+- [46:36] Porque si tesorería no pasa el documento, nosotros tenemos los pagos reflejados.
+- [46:43] Entonces ahí hay veces que se remite el documento.
+- [46:47] Ah, se puede remitir el documento.
+- [46:49] No ha pasado dos veces el mismo documento.
+- [46:52] ¿Y eso está bien?
+- [46:53] No.
+- [46:54] Entonces, ¿debería validar el punto de instrucción?
+- [46:55] Sí.
+- [46:56] ¿Obinatorio o el que no se incluye?
+- [46:58] Sí, validarlo.
+- [46:59] Ya.
+- [47:00] Ese hay que validarlo por banca.
+- [47:05] Acá, por ejemplo, podemos agregar las líneas.
+- [47:08] Esto hay que hacerlo que sea un poquitito más compacto.
+- [47:11] Aquí viene la descripción, cuenta imputable, centro de costo, la cantidad y el precio unitario.
+- [47:17] Y se puede agregar más de una línea.
+- [47:19] Ahí pasa el precio, el tipo de moneda desde el dato anterior, ¿cierto?
+- [47:28] Sí.
+- [47:28] Sí, porque esto también puede llegar en diferentes monedas, ¿cierto?
+- [47:34] Sí, pero no se la pasamos a pesos, porque llega en UF.
+- [47:44] ¿No sería bueno que lo puedan tipificar en UF y a lo mejor que haga la transformación solo?
+- [47:53] Tendría que agarrarse la vuelta del pago, hay que descender a otro tema, va a depender de la fecha de pago.
+- [48:00] Porque creo que con la integración del Banco Central se puede traer la UEFA.
+- [48:09] Sí, pero por ejemplo, el orden de cobro no ha pasado. El orden de cobro dice mayo y no hay entrega ni en septiembre.
+- [48:16] Porque yo pensaba, si tú le vas a poner, ingresar una fecha que aparece en el documento, que el sistema vaya a esa fecha y saque el valor de la UEFA.
+- [48:26] Nosotros pagamos el tipo de cambio de la bolsa al momento del pago, y a veces las notas de cobro tienen fecha muy anterior y el pago es muy posterior, y la entrega es más posterior.
+- [48:38] Entonces conviene que sea...
+- [48:39] Sí, es manual.
+- [48:39] Ya, ya.
+- [49:12] Esta descripción por ítem no hay ningún otro campo que nos falte, ¿cierto? Por cada línea.
+- [49:20] Es un ejemplo, ¿cierto?
+- [49:21] Sí, solamente ejemplo. Dice test.
+- [49:27] No, bueno, dice laboras contratistas.
+- [49:29] Ah, sí, lo que pasa es que con las modificaciones que hemos hecho en el plan de cuentas, hay varias que quedaron deshabilitadas porque les falta ingresar información.
+- [49:44] Que hay que regularizarlo para que tomen los nuevos campos que le dejamos a la puerta de afuera.
+- [49:48] Y estas son como las que están regularizadas, pero como para poder tener algunas seleccionadas o no.
+- [49:52] Ya.
+- [49:54] Eh, no.
+- [49:55] Y aquí aparecería como el detalle al final de cómo sería como el disclosure.
+- [50:01] Y ahí arriba están los detalles.
+- [50:13] Buenísimo.
+- [50:13] Un momento que te voy a echar a notar.
+- [50:20] Las preguntas que tenía, aquí ya tengo respuestas.
+- [50:24] Ah, yo también tenía otra consulta, que vendría a ser el de la nota de embarcador, donde aquí salen las facturas, o sea, la información se está pasando encima.
+- [50:44] Pero aquí estarían todas las facturas que se podrían asociar para generar una nota de cobro.
+- [50:50] Aquí, por ejemplo, tengo una duda de que el listado de estas facturas son solamente las que se recepcionaron por GoSocket y no tienen ningún otro orden de compra asociado, ¿verdad?
+- [51:04] O podrían ser algunas que ya estén asociadas a otro movimiento.
+- [51:09] Todas van a tener nota de orden de compra.
+- [51:13] ¿Es obligatorio?
+- [51:14] Sí.
+- [51:15] ¿Solo las que tienen orden de compra?
+- [51:16] No, todas las facturas que estén ingresadas en el sistema van a tener orden de compra.
+- [51:20] Todas.
+- [51:21] Ya.
+- [51:21] Y aquí tendríamos la opción de realizar la carga masiva, que tenemos que ajustarlo al Excel como tal.
+- [52:11] Y se podría cargar directamente.
+- [52:12] Y aquí mostraría como el detalle de lo que se cargó en el documento.
+- [52:15] Y aquí muestra, como ya había seleccionado esas tres, el totalizado de las seleccionadas.
+- [52:23] Lo que pasa es que con el seleccionador manual nos confirmamos al tiro que la factura esté pendiente.
+- [52:40] Ya.
+- [52:40] La cargamos, bueno, el sistema anterior dejaba contabilizar y te queda la factura negativa.
+- [52:48] Entonces no hay que usarle una carga masiva.
+- [52:50] No, o sea, en este caso, como está con el detalle, yo creo que es mucho mejor ir seleccionando.
+- [52:59] Vale, ya va a sentir de control.
+- [53:02] ¿Y qué filtro ocuparía?
+- [53:05] Ahí, puede ser que si yo, por ejemplo, pincho el proveedor, me salgan todas las facturas, las pinche, después pueda pinchar el proveedor y seguir seleccionando.
+- [53:18] Sí, podemos agregar el filtro de que te aparezcan como todos los nombres de los proveedores y vayas seleccionando como proveedor, haciendo check en cada una de esas facturas y cuando pongas como todos, te aparezca como los que fuiste seleccionando.
+- [53:31] Sí, porque lo hacemos por proveedor.
+- [53:34] Ya, entonces aquí arribita estaría como un selector aparte de este filtro que igual te permite buscar por proveedor.
+- [53:49] Pero aquí la idea es que sea como un seleccionable, la que te liste de los que está solamente ahí.
+- [53:54] Así también se puede dar cuenta de que hay algún proveedor que no tenga factura porque no aparece ahí en la lista.
+- [53:59] Genial.
+- [54:08] Aquí nos implementó el seleccionador.
+- [54:23] Y aquí también debería ser así que te muestra la lista de los routes que ya existen en el sistema, que te deje tipificar manualmente.
+- [54:35] Y ahí se crearía dentro del listado.
+- [54:46] Acá estaría la acción de contabilizar, sin que se haga queda como borrador.
+- [54:51] Cuando se genere debería contabilizarse automáticamente, o estaría que queda así, o también tiene que pasar como por aprobación.
+- [54:58] ¿Qué es directo contabilizado?
+- [55:07] Y te mostraría acá el asiento que se generó.
+- [55:09] ¿Estás segura que quieres contabilizado?
+- [55:13] ¿Cómo que...?
+- [55:15] Porque con el sitio material cuando hayas cargado macía y haces una revisión previa, ¿cuándo te lo has pasado?
+- [55:22] Entonces, ¿y si quiero contabilizado?
+- [55:23] ¿Tienes el asiento antes para contabilizar?
+- [55:25] Sí, no quiero, no puedo revisar.
+- [55:30] Es un botón, así que no...
+- [55:31] ¿Es que una revisión no?
+- [55:33] No, solo quiero contabilizar.
+- [55:38] Sí, puedo.
+- [55:41] Entonces, ¿qué queda? ¿Así como está? ¿Con un borrador y después contabilizar?
+- [55:44] Pero después tengo que estar revisando, por lo cual sí que los voy a echar el día 7 de contabilización.
+- [55:49] ¿No hay un nivel que es bien contabilizado?
+- [55:51] Sí, voy a estar seleccionando las facturas.
+- [55:54] Sí, porque si después de la conclusión que hemos listado de todas las facturas,
+- [55:59] ahí yo tendría que revisarlas todas, así que está bien.
+- [56:01] ¿Y ahí estás haciendo una revisión?
+- [56:03] Sí.
+- [56:04] Sí, cuenta tu suplamento.
+- [56:06] ¿Qué es el contabilizador?
+- [56:07] Ya.
+- [56:08] ¿De una?
+- [56:08] Sí.
+- [56:09] Que sería aquí directamente.
+- [56:11] ¿Qué es el contabilizador?
+- [56:11] Pero por ejemplo, consulta, si son muchas facturas, no sé, ¿por qué motivo tiene que pausar la nota de cobro?
+- [56:23] Si la guarda como borrador, después puede continuar.
+- [56:27] Porque ahí, si le da guardar, se va a contabilizar de una, y si quedan las facturas fuera, va a tener que...
+- [56:32] Lo que pasa es que ahí, por ejemplo, el primer filtro, Iván, bueno, le hacen una reestructuración, el primer filtro es logística.
+- [56:41] Entonces, se supone que logística tiene que revisar que todo lo que le estén cobrando efectivamente corresponde a los factores que tiene pendiente.
+- [56:49] El segundo filtro no existía, pero yo igual revisaba porque sabía que había embarcadores que eran medio desordenados
+- [57:00] y te cobraban dos o tres veces el mismo documento y si pasaba, pasaba.
+- [57:05] Entonces ahí empecé a revisar factura por factura.
+- [57:08] Y ahí se les pasaba al astral, porque ya estaba totalmente revisado.
+- [57:12] Y había veces en que la misma factura venía con distintos montos.
+- [57:16] Entonces ahí tampoco pasaba pago la nota de cobro.
+- [57:24] Entonces se supone que el primer filtro es la persona que va a estar pasando la nota de cobro a pago.
+- [57:28] ¿Y el detalle de cuántas, por ejemplo, las notas de cobro, cuántas facturas máximo que pueden pagar?
+- [57:33] Yo creo que la más grande es unas 400 facturas.
+- [57:37] Por ese nivel yo creo que ahí vale un tema.
+- [57:40] Es considerable.
+- [58:10] El guardar puede contabilizar, o sea, como una parametrización distinta con el perfil.
+- [58:17] Claro, ¿no? Se entiende. Dentro de la misma pantalla siempre se puede contabilizar, para que tenga acceso a esa pantalla.
+- [58:22] Sí.
+- [58:23] Ya.
+- [58:25] Entonces, conservamos el guardar como borrador y después el contabilizar.
+- [58:29] Sí.
+- [58:30] De estos, van a necesitar que, por ejemplo, se exporte como un detalle en Excel de lo que contiene la nota de cobro.
+- [58:36] Sí.
+- [58:37] Ya. Como PDF también.
+- [58:39] Sí.
+- [58:39] Todo así.
+- [58:40] Todo siempre PDF y Excel.
+- [58:42] Ya, ya.
+- [58:43] Todo así.
+- [58:44] Todo, todo así.
+- [58:47] Acá, por ejemplo, se agregó la acción de poder anular y liberar la factura.
+- [58:54] Sí, ahí está en regreso.
+- [58:58] Exactamente, y aquí tenía solamente el motivo.
+- [59:02] Ya.
+- [59:03] Tiene que pasar por aprobación.
+- [59:08] Sí.
+- [59:10] Sería aprobación del administrador, no de la cadena de aprobación.
+- [59:13] Sería así, déjame ver esto.
+- [59:19] Si está guardada, ¿por qué habría que reversarla?
+- [59:23] Pero ojo, ahí por ejemplo, esa persona que tiene acceso a...
+- [59:28] Yo creo que si está guardada y después...
+- [59:30] Ah, ¿verdad que no tiene nada?
+- [59:34] Sí, el motivo de eliminación tendría que ser como...
+- [59:39] Error, tiene que ser error.
+- [59:43] Pero por ejemplo ahí, pensemos que el usuario quien va a estar viendo esta pantalla es el que también va a poder contabilizar y todo.
+- [59:52] Entonces, ¿aprobación de quién sería?
+- [59:58] ¿El usuario? La aprobación.
+- [01:00:01] Vamos que el usuario va a ser tú.
+- [01:00:02] Pero eso, ¿el usuario?
+- [01:00:05] Pero solamente en caso de que lo quiera eliminar.
+- [01:00:10] Allí por ejemplo.
+- [01:00:11] Que no debiese ser el caso.
+- [01:00:14] No...
+- [01:00:14] No creo que haya un error de ello.
+- [01:00:16] Y no sería bueno, a lo mejor, en vez de...
+- [01:00:18] ¿Una aprobación? ¿Un código?
+- [01:00:21] ¿Como una clave?
+- [01:00:23] Ah, pero igual, claro, tendría que...
+- [01:00:26] La aprobación no podría ser solicitaria igual.
+- [01:00:30] Pero...
+- [01:00:30] Porque acá nos podríamos tomar de los listadores de acá.
+- [01:00:33] A menos que esa clave solo tenga acceso a usted y pueda meterse usted a un laboratorio.
+- [01:00:38] Sí.
+- [01:00:39] Sin enviar como una solicitud.
+- [01:00:41] Como la centralización actualmente.
+- [01:00:42] Claro.
+- [01:00:43] ¿Pero y cómo la institución se va a enterar de que tiene que anular esa nota de cobro?
+- [01:00:51] No sé de qué nos estamos refiriendo. Hay dos formas. ¿Quieren decirlo en persona o quieren que el sistema lo haga? Hay dos formas. Que la Fran se dé cuenta con sus análisis o que el mismo dé cuenta cuando lo revisa o lo análisis. Hay dos formas de decirlo. Bueno, como la Fran va a hacer todo perfecto, le vamos a sacar ese botón.
+- [01:01:14] Lo que pasa es que como está quedando de seleccionar la factura, el error debería ser cero.
+- [01:01:21] Porque si no está la factura, no pasa la nota de cobro.
+- [01:01:24] Yo me imagino que quizás podría ser el error de nombre, quizás.
+- [01:01:29] O un nombre de proveedor muy similar.
+- [01:01:31] Es que yo creo que no ha pasado que, no sé, de las 47 facturas,
+- [01:01:34] venían 10 en la nota de cobro siguiente.
+- [01:01:37] Entonces ya en este filtro, la Fer le va a decir a...
+- [01:01:40] Creo que Cristina le va a decir a Cristina.
+- [01:01:42] En esta nota de cobro me faltan 10 facturas, que ya están pagadas en esta nota de cobro.
+- [01:01:49] Como la única manera es que yo tontabilice, es que yo ya tengo todas las facturas.
+- [01:01:58] El documento te cae, exacto.
+- [01:02:00] Entonces el error, por eso, para anularla tendría que ser ya como, tendría que ser porque te equivocaste.
+- [01:02:09] O se te pasó un cheque quizá.
+- [01:02:11] No, que te digo, ¿quién eliminarla? Si no debería alguien eliminarse. Como que por error eliminí.
+- [01:02:18] No, claro, y aparte si va a tener que guardar como borrador, va a poder hacer una revisión.
+- [01:02:22] Ahí hago el último check.
+- [01:02:23] El doble check.
+- [01:02:24] Es que eso es poco.
+- [01:02:26] Sí, porque en ese borrador tendría que ahí aparecerme como la lista de todas las facturas que yo tomé, para compararla con la nota de cobro y ahí contabilizar.
+- [01:02:34] Con el total y todo.
+- [01:02:36] Bueno, pero igual va a tener que dejar la anulación como una aprobación.
+- [01:02:40] Sí, bueno, por eso aquí podríamos tomarnos directamente de los que están como administradores acá, que nos pasen por la regla de aprobación como tal del módulo de compra.
+- [01:02:51] Ya, sí. Porque la eliminación sería casi un error uno, seguro. Eliminan a por error.
+- [01:03:06] A ver, a ver, no sé, ¿estás seguro que quieres mandarla a anular?
+- [01:03:10] Después lo lanzaste. Esto no debería pasar, ¿verdad?
+- [01:03:12] Se merece una foquita.
+- [01:03:14] Y solamente, por ejemplo, aquí en este caso sería como el motivo.
+- [01:03:26] Ah, pero aquí sería con el, como con... Ah, pero el acceso. El acceso a... Sí.
+- [01:03:30] Sí, porque aquí te llegaría a ti... Hola, soy Fran y me equivoqué por...
+- [01:03:39] Bueno, pero Fran...
+- [01:03:40] No, sería... Yo creo que no... No hay motivo de anulación, pero ahí te dejamos por si acaso.
+- [01:03:48] Reemplazo, pero no anulación.
+- [01:03:50] Anulación y solicitud de renuncia.
+- [01:03:57] Perfecto, y aquí también estaría el botón de contabilizar, junto con el botón de acción rápida que está acá.
+- [01:04:02] Ahí aparecían las facturas que había tomado, ¿cierto?
+- [01:04:06] Exactamente.
+- [01:04:09] Acá nos faltó la web, al igual que estamos en el modo demo, no existe como tal esa factura,
+- [01:04:12] pero le dejas que tú le des clic y te lleva a ver esa factura.
+- [01:04:22] Entonces estaríamos bien con esta implementación del módulo.
+- [01:04:26] Sí, nos facilitan dos dólares de cáncer en la nota de cobro.
+- [01:04:36] Y por ejemplo, en la nota de cobro que se ingresa el gasto, tampoco debería haber error a menos que te...
+- [01:04:42] Pero hay mentirales y que está...
+- [01:04:44] Porque ya se está ingresando.
+- [01:04:45] Ya se está ingresando.
+- [01:04:46] Entonces no debiese, por ninguno de los dos, no haber error.
+- [01:04:50] A menos que sienta algún problema de ello.
+- [01:04:55] A menos que, claro, después te digan, no, es que era para, pues, dicen caro, si no te dicen el porcentaje para cada especie.
+- [01:05:02] Ahí puede haber un error de centro de costo, pero igual bien formado.
+- [01:05:08] Así que estaría...
+- [01:05:09] La fecha, por ejemplo, si yo pongo fecha, la fecha de vencimiento se deja a un mes.
+- [01:05:17] Se supone que todas las notas de cobro se entraron cuando ya se pagaron, así que puede ser el mismo día de la nota de cobro.
+- [01:05:23] Ya, porque ya chequeé y tenía que poner la fecha de vencimiento.
+- [01:05:26] Entonces, no sé si...
+- [01:05:29] La regla general es un mes.
+- [01:05:34] ¿Podría ser que automáticamente de la fecha de emisión cargue el mes siguiente?
+- [01:05:38] Y se pueda cambiar.
+- [01:05:39] ¿Y modificarlo?
+- [01:05:40] Sí.
+- [01:05:40] ¿Eso es para el pago?
+- [01:05:42] Sí, regla general es un mes y de ahí esa opción.
+- [01:05:46] Ah, porque Lupe trabajaría con esa fecha, para ver qué semana es pago.
+- [01:05:50] Sí.
+- [01:05:51] Sí, con nosotros por regla general ponemos un mes.
+- [01:05:53] Ya.
+- [01:05:54] A ver, y todavía.
+- [01:05:59] Al día.
+- [01:05:59] Y eso es dependiendo de la fecha de emisión del documento, ¿verdad?
+- [01:06:03] Sí, fecha de emisión del documento.
+- [01:06:06] No de la fecha de que se está generando la nota.
+- [01:06:08] No, la fecha de emisión.
+- [01:06:11] Que por ejemplo, por el lado de los embarcadores, la fecha de emisión es la misma fecha de registro, porque no es un documento en sí.
+- [01:06:20] Pero por el lado de la Sodex, viene con fecha impresa.
+- [01:06:27] Sodex es... ¿cómo era?
+- [01:06:28] Asociación de exportadores.
+- [01:06:30] A Sodex.
+- [01:06:31] A Sodex.
+- [01:06:31] Solo pienso en Sodexo y la Juna.
+- [01:06:39] ¿Puede pasar tú y los demás?
+- [01:06:41] ¿Sí?
+- [01:06:41] Pues, a ver, cuéntame las que has seleccionado.
+- [01:06:46] Exactamente.
+- [01:06:48] Te voy a hacer un retotalizado.
+- [01:06:58] Y aquí en este caso sería bueno que cuando uno le dé clic acá, te muestre el PDF de la factura directamente.
+- [01:07:04] Es mucho PDF.
+- [01:07:10] Si se puede.
+- [01:07:11] Sí, sí, sí.
+- [01:07:12] Es que como la recepción de GoSocket por la factura,
+- [01:07:16] Cuando tú recibes, te aparece como el documento, es un link, tú le des clic y te abre un visualizador.
+- [01:07:25] Y eso ya existe, entonces sería trasladarlo a... acá.
+- [01:07:29] Sí, sería bueno.
+- [01:07:30] Sí, porque a veces me preguntan y tengo que irme a la otra, a hacer esto, a buscar.
+- [01:07:38] Iván me pregunta por la...
+- [01:07:41] ¿Qué es esto?
+- [01:07:42] ¿Tú le decís que la revisemos?
+- [01:07:44] ¿Te supone que la revisemos?
+- [01:07:46] Sí, me calza.
+- [01:07:47] Sí, es que me la quería poner aquí.
+- [01:07:50] Igual tú vas a poder visualizar la factura en casi todos los módulos que va a entrar una factura.
+- [01:08:11] Yo me voy a meter a cualquier módulo.
+- [01:08:18] Y si no, también a vosotros.
+- [01:08:22] Lo habíamos pensado, ahora se me ocurrió otra cosa, porque cuando en los otros módulos uno le da clic a la factura,
+- [01:08:27] te lleva al libro de compras donde se hace la recepción de las facturas,
+- [01:08:33] pero creo que mejor sería que te muestre directamente el PDF y abajito que tenga un botón que diga
+- [01:08:37] Ir al libro de compra filtrando esta factura, como para que puedas ver el detalle del estado, y todas esas cosas.
+- [01:08:44] Porque mira, así, la mayoría de los módulos, cuando uno ingresa y le das click, te muestra esta página, pero con el filtro para mostrarte la factura.
+- [01:08:57] Entonces, yo creo que lo mejor sería que aquí, cuando uno le dé click, te muestre directamente con esta vista,
+- [01:09:12] El documento, y acá tener como un botoncito que diga ir al libro de compras y te muestre ya ahí este filtro con el documento de ahí.
+- [01:09:22] Así puedes ver como lo asociado, todo directamente, pero yo creo que lo más útil es ver la factura en los demás módulos.
+- [01:09:27] Sí, ver la factura.
+- [01:09:28] Ya.
+- [01:09:30] Entonces, como te digo, como ya está implementado, no es tanto, no...
+- [01:09:35] Mostraría esta visualización y abajito tendría el filtro para llevarte al libro de compras y así no tendrías que salir de la pantalla.
+- [01:09:40] ¿Dónde estás revisando la nota de cobro?
+- [01:09:44] Sí, porque generalmente quieren ver la factura y lo que nos importa es ver la orden de compra.
+- [01:09:55] Entonces ahí dependiendo de lo que necesiten, si es ver la factura, verían el PDF, y si
+- [01:09:59] necesitan ver cómo la orden de compra asociada, sería ocupar el otro botón para que te llegue
+- [01:10:03] a esta lista y ahí poder ver lo asociado, aquí en el origen y cadena.
+- [01:10:07] Sí.
+- [01:10:10] Ok.
+- [01:10:10] Y de las notas que vimos ayer, esto es como lo que alcanzamos a implementar, el sistema de nota de recobro.
+- [01:12:41] Yo creo que la próxima patita va a ser lo que estábamos hablando de la reversa y las modificaciones cuando tendría que hacerse una apertura, que ya no se va a hacer apertura como tal.
+- [01:12:56] Así que quería dejarlo implementado, pero no me dio el tiempo.
+- [01:13:00] No, abrió buena manzana. ¿Te imaginas que esto lo hablamos ayer?
+- [01:13:03] Se podía hacer más.
+- [01:13:05] Sergio no me dejó.
+- [01:13:08] Ah, te gustaste.
+- [01:13:10] Es que es entretenido. Yo me entretengo haciendo esto.
+- [01:13:17] Sí, es bastante entretenido.
+- [01:13:19] Como hacer soluciones.
+- [01:13:22] Yo pensé que ibas a ir metiendo a otro mundo.
+- [01:13:24] Sí, de esto no tenía idea de nada. Hace como cuatro meses no tenía idea de nada de facturación, nada.
+- [01:13:29] Sumo a restos, sumo a restos.
+- [01:13:34] Ahora me puedo truquear un poco.
+- [01:13:37] Pero sí, está entretenido este sistema.
+- [01:13:43] Lleva mucho.
+- [01:13:47] Y también me gusta que el resto no lo entiendan.
+- [01:13:54] Ya.
+- [01:13:58] De hecho, ayer en la tarde hablé con José Tamás, que es el jefe de abastecimiento,
+- [01:14:04] y le comenté lo que estábamos haciendo en el módulo y confirmé con él que efectivamente
+- [01:14:09] los consumos por el lado de bodega nunca van a tener modificaciones, a menos que el
+- [01:14:14] Para quien se haya equivocado en algún archivo, porque son... uno hace una receta.
+- [01:14:19] ¿Cachái la receta?
+- [01:14:21] No.
+- [01:14:21] Ya. Por ejemplo, yo te digo, estos son los embalajes que yo voy a hacer como empresa,
+- [01:14:27] y cada embalaje ocupa estos materiales.
+- [01:14:29] Entonces, en base a las cajas que van armando, yo sé cuánto material se consumió de cada producto.
+- [01:14:34] Ya.
+- [01:14:36] Entonces, con esa receta, él dice, ya, les paguen tanto, yo tuve tanta producción,
+- [01:14:40] por lo tanto, este es el material que se ocupó.
+- [01:14:42] Y eso se carga automático y es el consumo mensual. Esos son los cierres de bodegas por el lado de ALM. Y cuando se hacen ajustes es cuando ya se cierra la temporada y te dicen ya, yo quedé con este material y tú me pasaste este material. Entonces ahí cuando hay diferencias o nosotros le facturamos al página o ellos nos facturan a nosotros.
+- [01:15:01] Es la única parte que se hace como algún ajuste más real.
+- [01:15:08] Y por el lado de los contralistas, él también tiene mensualizados los trabajos que hay que hacer y él los carga.
+- [01:15:15] Entonces al final no van a haber errores en algún ingreso diario o en alguna proforma.
+- [01:15:22] Entonces como que en insumo y contralistas no deberían haber...
+- [01:15:25] No, se cierra el mes y no vamos a tener esos ajustes de cierre de mes.
+- [01:15:33] Pero por el otro lado, el...
+- [01:15:36] ¿Igual implementamos la posibilidad de analizar ajustes?
+- [01:15:39] Sí, igual sí que implementamos, pero si al final tenemos que pensarlo con un...
+- [01:15:43] Ah, que se puede equivocar, se puede equivocar.
+- [01:15:46] Bueno, el otro punto.
+- [01:15:47] Claro.
+- [01:15:47] El agrícola.
+- [01:15:48] Sí.
+- [01:15:49] Aquí no existe el error.
+- [01:15:50] Una cara se seca.
+- [01:15:51] Aquí todos perfectos.
+- [01:15:52] No, no, yo por ejemplo confío en contratistas y en insumos, pero en la OALM no hay mayor error.
+- [01:16:02] Ya.
+- [01:16:03] No, yo confío en cómo han estado con el T6.
+- [01:16:05] Ah, bueno, genial, genial.
+- [01:16:08] Primer error, José López.
+- [01:16:11] Uy, vale que entender que es un sistema nuevo.
+- [01:16:13] Sí, y aparte igual lo chiquillo es que habían trabajado en la implementación con la página y Agrosoft.
+- [01:16:20] Porque, ¿qué pasaba? Tenían que hacer el consumo por la página que estaba linkeado en los páginas y después ese consumo lo implicaban en Agrosoft.
+- [01:16:27] Entonces ahora le queda linkeado. Entonces eso ya no va a existir.
+- [01:16:31] Entonces después yo creo que va a haber que ver la forma de cómo linkear la página al sistema.
+- [01:16:37] Porque si sabes descargar un archivo, puedes cargarlo.
+- [01:16:40] ¿Esto cómo lo haría?
+- [01:16:41] No, o sea, no.
+- [01:16:42] ¿Por el login es esto?
+- [01:16:46] ¿Por dónde?
+- [01:16:47] ¿Cómo linkearlo la página?
+- [01:16:49] Lo que pasa es que actualmente linkearon el consumo de la página de AlmaWeb, que ahí llegan los reportes de los páginas, al Agrosoft.
+- [01:16:57] Para que la Roxana no tuviera que digitar dos veces los consumos.
+- [01:17:01] Ah, ya.
+- [01:17:02] Entonces, en un futuro vamos a tener que ver cómo linkear la página a esta plataforma.
+- [01:17:08] Ah, pero parece que es una API. Una API, lo que tiene Mario, ¿no?
+- [01:17:14] Sí, parece que es una API.
+- [01:17:15] No sé, nos podríamos conectar, como lo hicimos, parece que un parque con Presslink, igual nos conectamos a una base, que hace lo del packing completo.
+- [01:17:26] Ya, claro, ahí el Mario nos puso una API, y nosotros nos conectamos a API y ahí hicimos la carga de datos.
+- [01:17:33] Sí, en esa parte estaba participando igual el proyecto.
+- [01:17:36] Vamos a ver si es con API, mucho más fácil.
+- [01:17:38] Mucho más directo.
+- [01:17:41] Si es así, no hay problema.
+- [01:17:42] No andan cobrando tan temprano.
+- [01:17:47] Le pregunto, ¿sí hacía Mario? Para que lo tengan como idea, porque eso va a ser un tema muy interesante, sin embargo, al menos.
+- [01:17:54] ¿Sí?
+- [01:18:51] Ya, ¿qué te acuerdas que me habías comentado que habías conectado la API de la página con Agrosoft para los consumos de cosecha más?
+- [01:19:01] ¿Qué?
+- [01:19:01] Para que no tuvieras que pisar la red de zona de ingresar.
+- [01:19:03] ¿Eso lo vas a tener? ¿Eso es con la página? ¿Con el RP?
+- [01:19:09] Sí, bueno.
+- [01:19:10] ¿Pero es una API expuesta a usted?
+- [01:19:12] Sí.
+- [01:19:12] Ah, la consumimos nosotros y...
+- [01:19:16] Sí, pero ahora los movimientos que va a hacer en esta página no son los de Agrosoft, ¿no?
+- [01:19:21] O sea, Agrosoft va a morir y esto pasa.
+- [01:19:23] Sí, pues Agrosoft muere.
+- [01:19:26] Agrosoft muere.
+- [01:19:27] Claro.
+- [01:19:27] Tiene fecha de producir.
+- [01:19:29] Qué bueno, Agrosoft.
+- [01:19:31] Claro, entonces pasa aquí.
+- [01:19:34] Entonces la versión va a empezar acá y eso se va a conectar con la página.
+- [01:19:37] A través.
+- [01:19:38] Ah, ya.
+- [01:19:38] Ah, al revés.
+- [01:19:39] O sea, nosotros tenemos que poner esta data a través de API.
+- [01:19:43] ¿Para que desde la página ya lo consuman?
+- [01:19:45] Claro.
+- [01:19:46] Ah, ya lo vi.
+- [01:19:47] Pero la app ya está hecha, entonces yo le cambio el origen nomás.
+- [01:19:50] En vez de que sea Agrosoft, la voy a cambiar desde acá.
+- [01:19:53] Y ahí se traspase al export manager.
+- [01:19:56] Ah, ¿y usted va a tener acceso a esta base?
+- [01:19:59] Idealmente.
+- [01:20:00] Ya.
+- [01:20:01] Igual que iba a ofrecer.
+- [01:20:01] Ya, ok, entiendo.
+- [01:20:03] Entonces si me dan ese acceso, yo la voy a poner en la cadena de base.
+- [01:20:07] El app y el canal ya está hecho.
+- [01:20:08] O sea, en realidad es transparente para la página web.
+- [01:20:11] ¿Vas a seguir consumiendo la misma o qué?
+- [01:20:14] Claro, sí. Para la página web no cambia nada.
+- [01:20:17] Yo nada más que cambio el origen.
+- [01:20:19] Exacto.
+- [01:20:19] Me muevo desde allá para acá.
+- [01:20:21] Ya te digo.
+- [01:20:23] Pero al final los campos son los mismos.
+- [01:20:25] El material es el mismo, el código material es el mismo, los tipos de movimientos son los mismos.
+- [01:20:32] ¿Ya?
+- [01:20:33] ¿No quisieras volver?
+- [01:20:35] No, no, no, acá.
+- [01:20:37] No, porque acá tiene todo su... va a ser la recepción, los movimientos, todo el choque, acá.
+- [01:20:41] O sea, acá va a tener el stock de bodega, pero los consumos no se hacen por receta?
+- [01:20:49] Los consumos, pero los movimientos, no.
+- [01:20:52] Por eso, y la receta queda en la otra página?
+- [01:20:54] En la otra página, sí.
+- [01:20:54] Entonces la receta de esa página la tienen vos en la otra?
+- [01:20:57] Sí, después, claro, me puedo pasar los consumos de vuelta, pero eso lo hace para finalmente ver.
+- [01:21:01] Sí.
+- [01:21:02] Una vez al mes.
+- [01:21:03] Sí.
+- [01:21:03] Eso sí hay que hacerlo, sí.
+- [01:21:05] Ya.
+- [01:21:08] Ya, no es para bajar el stock, no?
+- [01:21:10] A ver cuánto hay en cada bodega.
+- [01:21:11] Claro, con todos los movimientos de ajustes, positivos, negativos, salidas, entradas, clientes, va generando el stock.
+- [01:21:18] Después los consumos de centro de costo, esos son los consumos de la evolución, eso los toma directamente del proceso.
+- [01:21:25] Ya, gracias.
+- [01:21:33] No hay problema.
+- [01:21:34] Gracias.
+- [01:21:38] Entonces ahí tenemos que crear con la evolución una cuenta para Mario, para la base.
+- [01:21:47] ¿Y una API?
+- [01:21:48] No, que ya tiene acceso, por ejemplo, a Presslink, a la base de Presslink.
+- [01:21:53] Ah, que tiene que directamente procesar a un usuario en la base de datos.
+- [01:21:56] Sí.
+- [01:21:57] Ah, ya.
+- [01:21:58] Y se conecta directo y saca la información de uno.
+- [01:22:00] Ya, sí.
+- [01:22:02] Ok, ok.
+- [01:22:03] Me preguntaron si va a tener formato celular.
+- [01:22:09] Esto igual está pensado, eso lo hemos revisado responsivo.
+- [01:22:12] No lo hemos, no está considerado que esté un diseño responsivo.
+- [01:22:16] Yo creo que siempre hay que darle el apretón, ¿sí?
+- [01:22:19] No, no lo hagan en serio.
+- [01:22:21] No, pero si eso...
+- [01:22:22] Seguro a todos.
+- [01:22:24] Pueden mirar por otro lado.
+- [01:22:26] No, es que la verdad es que no lo vi.
+- [01:22:29] No, pero ahí es que...
+- [01:22:30] Tampoco entiendo.
+- [01:22:33] Pero, o sea, se tiene que ajustar eso, pero igual,
+- [01:22:36] una remesa sí, pero el apretón sí o...
+- [01:22:39] Mucha data, yo creo que...
+- [01:22:41] O sea, la verdad que...
+- [01:22:43] Yo siempre voy a traer con el computador.
+- [01:22:46] Pero lo querían ver por el tema de si es que lo van a usar nada, Nicolás, para que los ingresos diarios salgan directamente del campo y no tienen que ingresar a la empresa.
+- [01:22:54] Ah, si es así, claro, pero ahí tendría que ser una aplicación mobile.
+- [01:22:58] Que eso se instala.
+- [01:22:59] Que es como lo que hicimos para China, ¿no?
+- [01:23:02] De ellos lo que es como van reportando, subiendo las imágenes, eso sería primero eso de mobile, directo.
+- [01:23:08] Y es mucho más cómodo.
+- [01:23:09] Obviamente no tiene todo lo que tiene el ARP.
+- [01:23:12] No, tiene solamente el móvil.
+- [01:23:13] Es como la versión live, lo justo y necesario que necesitan es el teléfono.
+- [01:23:18] Claro, pero eso en realidad está en el levantamiento del proyecto.
+- [01:23:25] Pero lo que se puede hacer, se vuelve.
+- [01:23:31] Voy a hablar un poco, no lo voy a decir.
+- [01:23:34] En realidad, para los ingresos diarios, ¿están acá ustedes?
+- [01:23:38] Es que actualmente llegan acá, pero...
+- [01:23:41] Todo le pega, porque al final el jefe de campo es el que ve si efectivamente están las contratistas haciendo el trabajo.
+- [01:23:49] Y ellos nos notan la información, nosotros la tenemos, como sabes que están haciendo en el campo.
+- [01:23:59] Pero igual sí, también vamos a hacer una revisión de responsabilidad, para que, por ejemplo, toda esa información, agosto, octubre, todo eso se vea bien.
+- [01:24:07] Hay otra información que a lo mejor vamos a tener que ocultar cuando sea con el tamaño móvil.
+- [01:24:14] Es que quizás podríamos hacer una revisión completa, así como una mañana,
+- [01:24:20] revisar completamente cómo van a ser los que de verdad te quedan en utilidad en el teléfono
+- [01:24:24] y eso es como que dar el foco primero para adaptarlo.
+- [01:24:28] Y así podríamos después dejar esa misma estructura cuando hagamos la aplicación.
+- [01:24:34] También.
+- [01:24:37] Pero repartían, salían bien los motocicletas.
+- [01:24:40] No, aunque perdimos como una segunda vuelta.
+- [01:24:43] Ay, le dije a la chiquilla que fuimos a ir al barco.
+- [01:25:03] Ay, no se le emocionaba.
+- [01:25:05] No, no, ¿se olvidó el nombre? ¿Lo dijeron recién?
+- [01:25:08] No lo he dicho.
+- [01:25:09] Ah, ok, no, no.
+- [01:25:12] Como Habana, ¿no?
+- [01:25:14] Sí, más o menos fue el primer.
+- [01:25:19] Oh, no, se olvidó. ¿No se lo dijeron?
+- [01:25:21] ¿Lo encontré?
+- [01:25:27] No lo encuentra.
+- [01:25:31] Sí, la hamburguesa en Malabar estaba, ¿verdad?
+- [01:25:34] ¿Estaba buena?
+- [01:25:34] No, nos pidió una chorrillera.
+- [01:25:35] Ya, que las chorrilleras son buenas, las papitas.
+- [01:25:39] Sí, están buenas.
+- [01:25:41] ¿Qué te gustaron?
+- [01:25:43] Se me lo corté todo.
+- [01:25:45] No me dejaste nada.
+- [01:25:46] Era para hacerte un bien, para que no tuvieras que comerlas tú.
+- [01:25:51] No, eran papas plásticas.
+- [01:25:53] Sí, eso sí.
+- [01:25:55] Prescritas.
+- [01:25:57] ¿Qué loca la cae el pavo natural?
+- [01:25:59] ¿Aquí no hay pavo natural?
+- [01:26:01] Está con buena cebollita, la carnecita está bien.
+- [01:26:11] ¿Ya? ¿Ya nos la podemos ir a la oficina?
+- [01:26:14] Sí, la vamos a ir a la oficina.
+- [01:26:16] ¿Ya estaba lleno?
+- [01:26:20] No, no estaba tan lleno.
+- [01:26:22] Cuando nos estábamos yendo, ahí como que ya se estaba llenando con más gente.
+- [01:26:26] Sí, no sé, pero temprano.
+- [01:26:30] Pero como una hora.
+- [01:26:31] Temprano como la boca.
+- [01:26:33] Como una hora.
+- [01:26:35] Sí, sí.
+- [01:26:38] Pero había gente joven.
+- [01:26:40] ¡Gracias por ver este video!
+- [01:27:14] ¿Ya? ¿Y el que anda todo tatuado? ¿Ya? Él, está. ¿Dónde está la cerveza? No sé cómo se llama. Sí, es como San Luis de Iguala, se está recordando el nombre. Con su letra de gallego.
+- [01:27:30] Sí. ¿Dónde hay papas naturales también? En la Pamplona. ¿Dónde le envíe la cerveza de Coyenegro?
+- [01:27:36] Ay, qué mala cerveza es. Ahí hay papas tan buenas. Sí. Sí. Ahí hay papas ricas. Y las chorrillanas enormes, por lo que dice.
+- [01:27:46] ¡Oh, qué rico!
+- [01:27:48] El lugar de las papas.
+- [01:27:49] Creo que la compré un igualito, una, dos, tres.
+- [01:27:52] Pero no, yo comí una chorrilla.
+- [01:27:55] ¿Sabes qué pasa? Yo comí una chorrilla y no de cuatro personas, solo.
+- [01:27:58] Yo igual, yo comí una de las otras, yo comí una de las chorrillas.
+- [01:28:00] No.
+- [01:28:01] Una de las papas, la papa frita y...
+- [01:28:02] Es que la papa frita no es una de las que no toco.
+- [01:28:04] Sí.
+- [01:28:05] Y bueno, sí, sí.
+- [01:28:06] ¿Vamos a comer papas?
+- [01:28:08] El lugar me dejó ni medio...
+- [01:28:12] ¡Mis!
+- [01:28:14] ¿Qué tal, eh?
+- [01:28:15] Mira, es como bien casero, pero es abundante.
+- [01:28:20] Ya. ¿Es rico? Sí, lactosa. Hay de todo. Hay de todo. No, hay de todo. Hay de todo.
+- [01:28:26] Venís cazuela, bueno, yo creo que quizás hay pastel de choclo, lengua. ¡Oh, pastel de choclo! ¡Qué rico!
+- [01:28:32] Eso que es como pernil. Ah, bien. Eh... carne. Pollo, carne. Hay de todo.
+- [01:28:40] Bien. Sienta al frente de algo súper. Sí. Sí. Yo lo que creo es que antes era mucho más bueno.
+- [01:28:48] Antes de que la señora ya no...
+- [01:28:51] Mucho que todo.
+- [01:28:52] Pero no cabe después, como hay que cambiar la mano.
+- [01:28:54] Sí.
+- [01:28:54] Pero es como lo conocido de aquí.
+- [01:28:57] Sí, sí.
+- [01:28:57] Y el pan está rico.
+- [01:28:59] Y deben pagar buena publicidad, porque en la carretera valen 2 kilómetros, pan y medio.
+- [01:29:03] Sí.
+- [01:29:04] Un kilómetro, pan y medio.
+- [01:29:05] Es que 2 kilómetros, pan y medio es muy conocido.
+- [01:29:07] Es histórico aquí.
+- [01:29:08] Yo creo que tiene más de 50 años.
+- [01:29:09] Sí.
+- [01:29:11] Y nosotros no teníamos ni idea.
+- [01:29:12] Ni lo conocían.
+- [01:29:13] No, y entonces porque las almacenas están vestidas con esos vestidos.
+- [01:29:16] Sí.
+- [01:29:17] Es como un pegotado.
+- [01:29:18] Muy bien.
+- [01:29:18] No, no soy bueno, no hay gusto, fan sector, es más que nada porque histórico que es de aquí, o sea, hay una variedad de comidas de decir a gusto al consumidor, porque el otro que está cerca es el, ¿cuál es el?
+- [01:29:38] Tinguirica, pero el Tinguirica tiene como pollo con poca frita o empanada.
+- [01:29:44] ¿Cómo se llama?
+- [01:29:45] Tinguirica.
+- [01:29:47] Anganarica.
+- [01:29:48] ¡Gracias por ver este video!
+- [01:30:24] La casa se boncó, ¿no?
+- [01:30:25] ¿Sabes qué? Ahí te soy yo como igual.
+- [01:30:26] ¿Qué pasa, tío? ¿Hablas con una pastinera?
+- [01:30:28] Actualmente no pasa nada.
+- [01:30:30] A mí me gusta la pastinera con un pedazo de carne, ¿no?
+- [01:30:34] Siempre.
+- [01:30:34] Siempre me voy a mi casa con un pedazo de carne, el pollo, el carne, lo que sea, y la pastinera, ¿no?
+- [01:30:39] Me encanta.
+- [01:30:42] Ahorita te voy a echar lo que le echamos.
+- [01:30:43] Un poquito de ala.
+- [01:30:44] Un poquito de ala.
+- [01:30:45] Ya.
+- [01:30:46] Calcicina y...
+- [01:30:47] De todo un poco.
+- [01:30:48] Qué rico.
+- [01:30:51] Me dio hambre.
+- [01:30:54] Creo que a mí me llevan solo dos aves.
+- [01:30:57] ¿Hay galletas y cómo?
+- [01:30:59] No, hay que hacer hambre para ir a comer.
+- [01:31:02] ¿Quién será?
+- [01:31:02] ¿Se puede comer?
+- [01:31:03] No.
+- [01:31:06] ¿O no puede echar para ir a la sala?
+- [01:31:07] Sí, se puede para comer.
+- [01:31:09] El lunes la ropa, que era caliente, comer bebidas y todo.
+- [01:31:12] Ayer también me comí todo.
+- [01:31:13] Oye, de verdad miro una cara de hambre ayer, si me dieron el mismo plato.
+- [01:31:17] No, es así, si es el...
+- [01:31:19] Por eso nosotros empezamos un poquito, después.
+- [01:31:21] No, yo miré para el lado, un poquito...
+- [01:31:24] Sí, sí, de verdad, era un cráneo de hambre.
+- [01:31:28] Hoy la sopita estaba muy rica, la de crema.
+- [01:31:31] La de carbonato.
+- [01:31:32] La de carbonato desechada.
+- [01:31:35] Ahí las sopas son muy buenas.
+- [01:31:37] El reciclado, ayer.
+- [01:31:38] De hecho, no han dado de zapallo, de pollo.
+- [01:31:41] Oh, qué rica.
+- [01:31:42] No, sí, rica, de verdura, de lenteja, de poroto.
+- [01:31:45] Sí, son buenas.
+- [01:31:47] Es tan rico comer esas sopitas cuando uno está resfriado.
+- [01:31:49] Sí, pero las que no son muy ricas son las cuando son consomé, porque son muy aceitosas, pero las cuando son crema son muy buenas.
+- [01:31:59] En el invierno no salen.
+- [01:32:04] Algo, quedamos ayer, ¿qué íbamos a revisar hoy día?
+- [01:32:07] Tesorería, ¿no?
+- [01:32:09] Tesorería, ¿no?
+- [01:32:14] En este momento, lo último que vimos fue tesorería y la popular no fue en el trabajo.
+- [01:32:18] Sí, pero no sé si fue antes de ayer que dijimos, veámoslo mañana para irnos con eso.
+- [01:32:27] Eso es lo que yo estaba pensando de que nos faltaba ver el día de ayer.
+- [01:32:29] Pero diría si era la nota de cobro o la reversa, uno o la otra.
+- [01:32:35] Porque no es la reversa del campeonista, porque habíamos dicho que saltaba la isla, la proforma,
+- [01:32:40] pero eso era como lo que había quedado pendiente de lunes para martes.
+- [01:32:43] Que ayer lo definimos.
+- [01:32:44] Que ayer lo definimos.
+- [01:32:46] Sí, era el trompazo, ¿cierto? Cuando estuvieron los dos cerrados.
+- [01:32:49] Sí, que cuando ya fuera solamente el cierre del módulo, se pudiera hacer el ajuste en el asiento, y cuando fuera el cierre del mes contable, ya se tuviera que hacer un ajuste contable referenciado a la centralización.
+- [01:33:02] Claro.
+- [01:33:07] Y ahí estuve con esa sensación de que se me olvidaba algo, mucho rato.
+- [01:33:11] ¿No era lo que dijo que era complejo de bodega, de insumo?
+- [01:33:19] ¿De los consumos?
+- [01:33:20] Sí, parece que era eso.
+- [01:33:22] Algo de eso, no me acuerdo de qué era, y luego de insumo.
+- [01:33:26] ¿Tú comenzaste como a hablar de insumos?
+- [01:33:28] No, la reversa del insumo.
+- [01:33:30] Cuando te hablaste de insumos te dije, no, mañana, mañana, mañana.
+- [01:33:32] Sí, ¿dónde te hablaste de insumos?
+- [01:33:34] En el mundo del insumo.
+- [01:33:36] ¿Tú dijiste que era más complejo ese mundo del insumo?
+- [01:33:40] Sí, a lo mejor.
+- [01:33:44] Pero el próximo capítulo.
+- [01:33:46] ¿Estás seguro que quieres abarcar este tema?
+- [01:33:50] Bueno, vamos a ver, vamos a ver.
+- [01:33:52] Siendo las 11.20, ¿estás seguro que quieres abrir esa puerta?
+- [01:33:55] Lo que pasa es que, para plegarte un poco, los insumos como los vimos por el lado de la leyenda son los consumos de la receta de los paquins, del consumo de los paquins, entonces es automatizado.
+- [01:34:12] Lo que abastece el módulo de insumos son los que va ingresando a bodegas y los traspasa entre bodegas, para ir viéndolo esto.
+- [01:34:20] Pero por el otro lado de la agrícola, Santa Petra es la que abastece las agrícolas.
+- [01:34:28] Entonces las agrícolas le compran a Santa Petra, recepcionan y consumen.
+- [01:34:35] El tema es que a veces el consumo es antes que la recepción y eso fuera algo que tienen que ir mejorando.
+- [01:34:39] ¿Cómo consumen?
+- [01:34:41] Que al final consumen y después dicen, ah, consumí esto y ya me faltaba cargar esto.
+- [01:34:45] Como que como saben que son empresas que tienen relación, como que le da lo mismo hacer una cosa que la otra. Pero eso igual va a tener que cambiar.
+- [01:34:54] ¿Tú te refieres a consumir o usar el stock?
+- [01:34:57] Sí.
+- [01:34:58] ¿Como que lo dejan stock negativo?
+- [01:35:00] No, como que no hace tener consumo hasta que ingresen al producto. Como que aplican, pero después hacen lo que es administrativo.
+- [01:35:08] Y ya, entonces, ¿qué pasa?
+- [01:35:10] O sea, tú de un producto no consumes el producto entero.
+- [01:35:15] Tú puedes consumir ML, gramos, son dosis.
+- [01:35:21] ¿Ya?
+- [01:35:22] Entonces ya se hace la compra, se ingresa el producto y se va consumiendo según la dosis recomendada para la semana.
+- [01:35:32] Entonces la idea es que se hagan...
+- [01:35:35] ¿Ahí elige la palabra?
+- [01:35:39] ¿Esas son como hojas de producción?
+- [01:35:40] Sí, orden de aplicación. Que en base a la orden de aplicación se haga el consumo en bodega, cosa que la orden de aplicación tiene que estar bien. Porque actualmente se hace una orden de aplicación pero no se ocupa mayormente. Y para que sea un control debes hacer que la orden de aplicación haga el consumo de la bodega.
+- [01:36:04] Para emitirlo.
+- [01:36:07] Y ahí, por ejemplo, uno trabaja con, no sé, productos compuestos. ¿A qué me refiero yo? Por ejemplo, tienes varios insumos.
+- [01:36:20] ¿Como que todo va a una aplicación?
+- [01:36:22] No, por ejemplo, no sé. Este ejemplo, la mesa con síguelo. La mesa sí parece ser como un comedor, digamoslo así, y ese es el producto pan.
+- [01:36:33] No.
+- [01:36:33] No existe acá donde ustedes no trabajan.
+- [01:36:35] Ya, perfecto.
+- [01:36:36] Bueno, y si. No, no, no. No, cada producto es su aplicación. Ya. En directa. Por ejemplo, esa orden de aplicación tiene varios insumos, ¿cierto? Sí. Y ponen productos. Sí. Y con sus respectivas cantidades. Sí. Ya. Y eso se tiene que ir trabajando del stock. Sí. A medida que se cree. O sea, yo ese módulo lo haría así. Ya. Sí, porque así la orden de aplicación lo tiene que hacer el encargado de bodega y va a saber si tiene stock o no. Entonces, si no tiene stock, está obligada a investigar.
+- [01:37:09] ¿Y esa orden de aplicación qué pasa después, posterior a eso? Porque ya movió el stock, ¿cierto?
+- [01:37:20] No, ¿qué debería pasar?
+- [01:37:25] ¿Y eso? Ah, ya.
+- [01:37:31] Claro, se hace el ingreso de mercadería y después ya se ocupa esa mercadería con la orden de consumo.
+- [01:37:45] ¿Cuál es el tema? Que actualmente la bodega avance a precio promedio.
+- [01:37:55] Tú vas ingresando y dependiendo de la diferencia de precios, es un precio promedio en bodega.
+- [01:38:00] ¿Y es en base también al stock que tienen?
+- [01:38:02] Sí. Entonces el consumo se hace en base al precio promedio. No se respeta el...
+- [01:38:08] Es una fórmula, ¿cierto? Precio promedio ponderado, ¿no?
+- [01:38:10] Sí, eso es lo que hemos encontrado. Puede ser por precio promedio o por FIFO, pero nosotros usamos precio promedio.
+- [01:38:15] ¿El FIFO es por precio de vencimiento?
+- [01:38:17] Sí, sí. Entonces, cuando nosotros hacemos una devolución a proveedor, el stock que saquemos independiente de que sepamos de qué factura fue, igual te la saca precio promedio.
+- [01:38:30] Queremos ver la forma de que eso no pase así.
+- [01:38:37] Si yo estoy sacando un stock específico de una factura o de una guía de despacho,
+- [01:38:42] que respete el precio de la guía de despacho.
+- [01:38:44] Ah, te entiendo.
+- [01:38:47] ¿Por qué? ¿Porque esa devolución puede que tú le pagues más o menos?
+- [01:38:52] Más que le pague más o menos me genera una diferencia a mí en lo personal,
+- [01:38:56] porque yo le devuelvo el producto y con el proveedor yo quedo...
+- [01:39:00] Ok.
+- [01:39:00] Ok.
+- [01:39:01] Ok, pero ¿qué pasa? Desde mi bodega yo la saco a precio promedio cuando yo saque precio en la ingresión.
+- [01:39:07] Entonces ahí puede generar o que saque más o que saque menos.
+- [01:39:12] ¿En precio solamente? ¿O es que las cantidades van a ser la misma?
+- [01:39:14] En precio.
+- [01:39:16] ¿Y eso cuando está esa salida, con esa salida o esa devolución, tú recalculas tu precio promedio?
+- [01:39:22] Sí.
+- [01:39:28] ¿Y recalculas con el precio promedio que salió?
+- [01:39:32] Sí.
+- [01:39:34] Ah, claro, ahí te cuesta.
+- [01:39:35] Entonces, al final, si yo tengo esa pieza...
+- [01:39:37] No es real, no es real esa pieza.
+- [01:39:39] No es real.
+- [01:39:41] Ya te entiendo.
+- [01:39:43] Es verdad. Ese está complicado.
+- [01:39:45] Esa fue una implementación que hubo de...
+- [01:39:47] de Barcés.
+- [01:39:49] Que está mal.
+- [01:39:51] Sí, está mal.
+- [01:39:56] O sea, al final, si yo tengo toda la trazabilidad del producto, debería poder sacarlo al precio que es, ¿no?
+- [01:40:00] Pero eso ya es como parte...
+- [01:40:02] Ah, sí, el de abastecimiento.
+- [01:40:04] Parte de producción, ¿no?
+- [01:40:06] Abastecimiento. Y ahí muere, ahí muere la hoja de abastecimiento, bueno, la salida de la devolución. Sí. En realidad sería... Lo que pasa es que igual la bodega tiene varios movimientos. Tipos de movimiento. Sí, tipos de movimiento. Tiene ingresos, ingresos, salidas. Salida, merma. Sí, tiene como ocho. Traspaso. Sí. Devolución al vientre. Ah, pero acá no está, no está en sumo. Ah, sí está. Sí está en sumo.
+- [01:40:35] Ah, pero ese punto no es tan complejo. Ah, pero igual se contabiliza, ¿no?
+- [01:40:43] Igual se centraliza.
+- [01:40:47] Ya, pero ahí le digo a María Jesús que no mueva el carro.
+- [01:40:51] Sí.
+- [01:40:56] Guía, MEDMA, y el tema del stock.
+- [01:41:02] ¿Y esa devolución tú quieres, por ejemplo, seleccionar la guía?
+- [01:41:10] Y en base a esa guía, ¿ahí tiene el precio?
+- [01:41:13] Sí, sí, seleccionar la guía. Porque siempre son productos específicos de la guía.
+- [01:41:19] ¿Para qué se la reúne?
+- [01:41:29] Con alto café. Alto café de grano.
+- [01:41:34] Se me que pasaron las drogaduras nomás.
+- [01:41:38] ¿Qué te pasaron?
+- [01:41:39] Nada.
+- [01:41:41] No mites, no mites eso.
+- [01:41:44] Dice que hay que pasar a las drogaduras.
+- [01:41:48] Una maratón de una semana y media.
+- [01:41:50] Sin sorpresa.
+- [01:41:51] Sin salir de la pieza, sí.
+- [01:41:55] Cerrada por fuera.
+- [01:41:58] Vamos a buscarlo.
+- [01:42:00] ¿Cuál va a ser la siguiente prioridad?
+- [01:42:12] El de insumos no lo veo tan complejo.
+- [01:42:14] O sea, la parte contable va a depender mucho de ustedes.
+- [01:42:18] Pero ese flujo del ingreso, salida, devolución, es como muy similar a lo que existe en todos lados.
+- [01:42:25] Y la orden de aplicación también.
+- [01:42:26] Yo veo que es como una guía interna, yo veo que es así.
+- [01:42:30] Va a ser como una orden de compra.
+- [01:42:32] Claro, pero esa es muy stock.
+- [01:42:34] Sí.
+- [01:42:35] Sí, la guía de aplicación va a ser la que va a mover el stock de bodega.
+- [01:42:38] Entonces, por ejemplo, yo tengo la guía de aplicación y pongo ya, no sé, Campo, Santa Pilar, Lote de Cuadras.
+- [01:42:45] Voy a aplicar este, este, este, este y este.
+- [01:42:47] Y como bodega no puede darme para seleccionar, me va a traer al tiro el stock que debería tener en bodega.
+- [01:42:52] Entonces yo pongo las cantidades.
+- [01:42:53] ¿Y es una bodega?
+- [01:42:55] ¿O puede ser para ir a bodega?
+- [01:42:56] Una bodega. Una bodega por empresa.
+- [01:42:58] Un mejor.
+- [01:43:00] Sí. Una bodega por empresa.
+- [01:43:03] Entonces ahí yo voy a ver las cantidades y si la persona no lo tiene, ya tiene que ingresar la...
+- [01:43:08] ¿Qué te parece el día?
+- [01:43:10] Consulta, ¿se puede trabajar con esto negativo?
+- [01:43:12] No.
+- [01:43:13] O sea, va a ser...
+- [01:43:15] Va a ser rígida.
+- [01:43:16] Si tú, por ejemplo, te va a decir que tienes 50 y quieres 60, lo siento, es un ingreso, tenés que...
+- [01:43:21] Tenís que tener 60 y se le obliga a 60.
+- [01:43:23] Ya, ok.
+- [01:43:24] Sí, porque hay empresas que trabajan con el stock negativo.
+- [01:43:29] Así ha pasado.
+- [01:43:31] Si ha pasado y después se dan cuenta cuando tienen negativo al final de mes,
+- [01:43:34] que les falta el stock de eso.
+- [01:43:36] Ya.
+- [01:43:36] Igual es un poco de eso.
+- [01:43:37] Ah, claro.
+- [01:43:38] En realidad, haciendo eso, o sea, si es que después al fin de mes
+- [01:43:41] todavía estamos en el día, se te pierde la guía, no sé.
+- [01:43:45] Es que eso pasaba mucho y después nosotros hacíamos inventario.
+- [01:43:50] Ah, aquí está.
+- [01:43:51] Pasó mucho también que, por ejemplo,
+- [01:43:52] Dos meses no estaba el producto y el tercero apareció.
+- [01:43:57] Entonces, como lo ajustaste acá y no estás diciendo que lo tengo que levantar de nuevo.
+- [01:44:02] Ya, entiendo.
+- [01:44:04] ¿Y el ingreso siempre es con guía de despacho?
+- [01:44:08] Sí.
+- [01:44:11] Eso es lo que ya avanzaste tú, ¿no?
+- [01:44:14] Eso...
+- [01:44:14] Sí.
+- [01:44:16] ¿La emisión de la guía de despacho?
+- [01:44:19] El ingreso en su mojo, ¿no?
+- [01:44:21] Siempre es con guía.
+- [01:44:23] ¿En su bodega?
+- [01:44:24] Sí, es el orden de insumos.
+- [01:44:29] ¿Dónde estoy? ¿Dónde estoy?
+- [01:44:32] Estamos con la presentación.
+- [01:44:41] Esos son la... Ah, orden de aplicación era otro, ¿no?
+- [01:44:48] Sí.
+- [01:44:49] Es que puede ser lo mismo.
+- [01:44:52] Es que acá tienen... La orden de insumos es... ¿Qué sería?
+- [01:44:57] Esta es cuando se hace la recepción con la guía de despacho y genera las hijas, que dejamos que no fuera directamente en el módulo de ordenes de compra de compra, son como órdenes de compra de insumos.
+- [01:45:19] Ya. ¿A esto se refería, por cierto? No. No, a la empresa de bodegas. Claro, porque esto es para almacenar, o sea, abastecer a la bodega. Sí. La otra, la orden de aplicaciones para sacar productos de la bodega.
+- [01:45:34] La orden de aplicaciones creo que no la tenemos. Ya, eso es que... En ese caso, entonces, deberíamos, como, ordenar un poco lo que... Pero debería aparecer el equipo, ¿no? Sí. Aquí mismo, movimiento de bodegas, nuevos movimientos, entonces... Claro. Aquí debería aparecer, claro. Sí.
+- [01:45:48] O sea, el movimiento, claro, tipo. Ahí debería estar lo que es. No, no, debería estar ingreso, salida, traspaso, orden de aplicación.
+- [01:46:03] Pero dependiendo de cada tipo de movimiento, por ejemplo, si es un ingreso, aumento de stock, si es salida, baja, y orden de aplicación, baja stock.
+- [01:46:24] Pero lo que sí yo, no sé si sería, por ejemplo, acá el movimiento y como una segunda pestaña la orden de aplicación, no la orden de aplicación como aparte.
+- [01:46:34] ¿Por qué? Porque el movimiento en sí va a ser como por el lado de la Roxana, que va a ser ingresar, ingresar esto, bajar esto, pero es solamente esto.
+- [01:46:47] En cambio, en el otro lado va a tener que seleccionar lo que tiene el lavadero, ¿no?
+- [01:46:53] Pero aquí igual también cuando hagan, por ejemplo, si es un ingreso, ese ingreso viene con guía, ¿cierto?
+- [01:46:59] Pero, por ejemplo, acá yo voy a poder poner más de un producto.
+- [01:47:03] No, no hay ningún producto.
+- [01:47:04] No, tiene que ser, tiene un scope, una factura.
+- [01:47:07] Sí, tiene que ser, si vienen 10 productos, los 10 productos.
+- [01:47:10] Hay temas de contabilidad, no se registra nada, ¿cierto?
+- [01:47:15] Cuando se hace el ingreso, un ingreso por cariño, por ejemplo.
+- [01:47:18] No.
+- [01:47:18] Ni una cuenta, nada.
+- [01:47:19] No.
+- [01:47:20] No, el ingreso no.
+- [01:47:22] Acá se abastece la bodega, pero yo, en la centralización no aparece la existencia.
+- [01:47:30] Ya, ok.
+- [01:47:31] Entonces aquí, por ejemplo, esos datos de cabecera, fecha, bueno, ahí falta también el proveedor, ¿no?
+- [01:47:37] Por ejemplo, si es un ingreso, viene con proveedor, ¿cierto?
+- [01:47:42] Sí.
+- [01:47:42] Que ahí iría, en realidad, cuando registren la guía, eso sería el documento de ingreso.
+- [01:47:49] Sí, además de que se recepciona con guía, se queda en realidad como el documento.
+- [01:47:53] Pero sí, yo podría hacer un movimiento de ingresos que no sea una guía despacho.
+- [01:48:01] No debería ser.
+- [01:48:02] ¿No?
+- [01:48:03] Tiene que haber algún documento. Puede ser guía o factura, pero siempre en un guía.
+- [01:48:08] O sea, si entonces, si es el tipo de, en realidad, si es tipo ingreso, en vez de mostrar, o sea,
+- [01:48:16] poder agregar líneas de detalle, debe ser un buscador de guía.
+- [01:48:19] Sí, me lo estaba pensando.
+- [01:48:22] O como en el otro que te listaba como todas las facturas y tú podías darle...
+- [01:48:25] Claro, así tal cual. Si es ingreso.
+- [01:48:30] Sí.
+- [01:48:31] Si es salida, salida, un merma, cierto.
+- [01:48:33] Para hacer el producto específico.
+- [01:48:35] Eso se va.
+- [01:48:36] Sí.
+- [01:48:36] Y si es orden de aplicación, ese sí debería poder explicarle el detalle.
+- [01:48:41] Sí.
+- [01:48:42] De los artículos y...
+- [01:48:43] Sí, porque en la orden de aplicación tendría que tener el stock de bodega para el tipo de consumir.
+- [01:48:47] Claro, esa sería como una factura validando el stock en línea.
+- [01:48:50] Sí.
+- [01:48:51] Entonces, este tenía que desplegar como todo lo que tiene la bodega y poder seleccionar ítems y qué vas a consumir de esos ítems.
+- [01:48:57] Exacto.
+- [01:48:58] Y que te valíes si no tienes stock suficiente.
+- [01:49:01] Exacto.
+- [01:49:02] Ok.
+- [01:49:02] Ok, entonces dependiendo del tipo, lo que se muestra para seleccionar.
+- [01:49:09] Sí.
+- [01:49:09] ¿Y el estado, ese será necesario, ese estado confirmado o no?
+- [01:49:15] No.
+- [01:49:17] No, porque ahí no pasa por aprobación ni nada.
+- [01:49:20] Sí, puede ir a origen, puede ir a destino.
+- [01:49:31] Aquí entonces no debería ser factura de origen.
+- [01:49:35] No, no debe tener factura, debe tener la guía.
+- [01:49:39] ¿Siempre guía?
+- [01:49:41] Arrepiento.
+- [01:49:42] No te creo.
+- [01:49:43] No.
+- [01:49:43] Ah, sí.
+- [01:49:46] Estos son por los sagrados. Yo no me echaba la raza. Cuando llegué, dije, oh, son quintos. Son tiernos. Son quintos. Como que eran tan quintos. Y no, son de toda Argentina. Son carísimos.
+- [01:50:05] Sergio, ¿qué ha venido en la camioneta? Yo no lo he encontrado ni un día. Sí, yo lo he encontrado desde un tresal.
+- [01:50:15] ¡Soy yo, Sergio, soy yo!
+- [01:50:22] ¿Ayer dispararon un viaje en helicóptero?
+- [01:50:35] ¿Sí?
+- [01:50:36] ¿En serio?
+- [01:50:38] ¿Sí?
+- [01:50:39] ¿Y nosotros por qué no participamos?
+- [01:50:40] Dile a Mario y proclámale.
+- [01:50:42] Me voy molesto. No quiero nada, Juan y me...
+- [01:50:45] ¡Colo!
+- [01:50:46] Yo quiero helicóptero.
+- [01:50:49] Me voy a ir en helicóptero a la casa, por favor.
+- [01:50:50] ¿Cómo se dice en helicóptero?
+- [01:50:52] ¿Y cuándo?
+- [01:50:54] ¿Y ayer justo estabas hablando?
+- [01:50:56] Sí.
+- [01:50:56] ¿Ayer te subiste al alicótero?
+- [01:50:58] No, no sé cuándo.
+- [01:51:00] No, ayer lo arriesgaron.
+- [01:51:01] Sí, lo arriesgaron y gané.
+- [01:51:04] ¿Y yo estaba aquí?
+- [01:51:06] Tienes que secuestrarlo y pedir rescate.
+- [01:51:09] ¿De qué hay que secuestrar?
+- [01:51:12] Es verdad, me lo prometieron hace como dos años.
+- [01:51:15] Sí, sí.
+- [01:51:15] Sí.
+- [01:51:16] Con almuerzo.
+- [01:51:17] A veces hay que ir con pie.
+- [01:51:18] ¿Y hacia dónde irían al...
+- [01:51:21] ¿Al monte?
+- [01:51:21] ¿Al monte de un abuelo?
+- [01:51:22] ¿Arriba?
+- [01:51:22] ¡Gracias por ver el video!
+- [01:51:55] ¿Sí? Sí. Sí. ¿Te sale la opción de pedir helicóptero? ¿Tengo auto? ¿Auto AGM? ¿Helicóptero?
+- [01:52:03] En la voladora. Yo creo que en la voladora en 2040.
+- [01:52:08] Cuando la voladora esté bien devaluada.
+- [01:52:15] Con una hélice el perla.
+- [01:52:21] Igual, hombre. Permiso.
+- [01:52:24] Lo soporté.
+- [01:52:25] Mucha comida.
+- [01:52:26] Es que desde que dijeron ayer la palabra helicóptero, lo único que pienso es GTA, pescarlo, robarlo en un suite y mágicamente saber manejarlo.
+- [01:52:54] Yo no ando ni en avión, creo que voy a ser piloto de helicóptero.
+- [01:53:10] Esa va a ser mi próxima meta, tener la licencia de piloto de helicóptero, para no ocuparla nunca.
+- [01:53:20] Oye, estaba pensando, como prioridad, tendríamos que ver primero finiquitar el cierre de contratista, que es el que ya lo teníamos discutido pero no se ha aplicado.
+- [01:53:31] Revisar que se le haya hecho ese módulo y yo creo que el siguiente va a ser si va a ser insumo.
+- [01:53:36] Señor, como digo, no lo veo tan complejo.
+- [01:53:40] El regadito es como un reguía de despacho, una factura, dependiendo del tipo.
+- [01:53:43] Si es el tipo de ingreso, buscador de guía, si es salida, seleccionar el producto que vaya a sacar, si es un orden de abaste de aplicación, seleccionar el producto que va a aplicar, dependiendo de la obra.
+- [01:53:57] Porque así tendríamos... Bueno, estas dos, administración y parametrización, van modificándose cada vez que hacemos una revisión, así que eso la verdad yo lo dejaría como la última de dar una revisa.
+- [01:54:10] Pues ya tendríamos listos contratistas, venta y compra, igual lo dejaría después de estos que son ya muy nuevos, cachái, tendríamos listos contratistas, tendríamos listos insumos, y ya lo último sería finiquitar activos fijos, que igual le debe faltar un par de detalles, y contabilidad y tesorería.
+- [01:54:26] Y ahí darle ya una segunda vuelta quizá a compra y venta, pero después de ver esos módulos, porque como mientras estábamos remoto lo que más se vio fue compra y venta.
+- [01:54:37] Entonces ya independiendo de todas las modificaciones que vamos los demás, la implementación, siempre van saliendo filtros nuevos, todo, darle un segundo cheque al módulo de compra y venta.
+- [01:54:45] Ya.
+- [01:54:47] Si dentro de la semana podríamos matar eso, bueno, matando a los otros, ya damos un segundo cheque.
+- [01:54:52] Ay, oíla.
+- [01:54:54] Ay, le digo a Oyeco.
+- [01:54:58] Yo creo que llegamos de nada, si es que no salen más sorpresas de algún módulo que por ejemplo hubo el de activo fijo, yo creo que llegamos Sergio.
+- [01:55:08] ¿Sí?
+- [01:55:08] Sí, sí, sí, sí, sí.
+- [01:55:14] Porque así dejando tesorería de contabilidad para el final, ya teniendo todo esto construido, los asientos, cómo viajan, todo, solamente chequear que la información se esté pasando bien.
+- [01:55:54] Chico. Pero digo, aún, bueno, no sé si María Jesús, cuando nos va a entregar el tema de los roles y permisos, perfiles de usuario, que es igual de importante porque va a inventar toda la plata.
+- [01:56:10] Sí.
+- [01:56:11] Parece que hoy día dijo que me iba a vender la cara.
+- [01:56:13] ¿Sí?
+- [01:56:14] Parece.
+- [01:56:15] Ah, ya lo he dicho.
+- [01:56:16] Dijo que se iba a centrar en eso.
+- [01:56:19] Vale.
+- [01:56:27] Pero eso fue lo que entendí.
+- [01:56:29] Muy bien.
+- [01:56:30] No tengo ni el helicóptero.
+- [01:56:34] ¿Y el K-Fi se puede pedir?
+- [01:56:37] ¿Con un jet privado?
+- [01:56:39] ¿Hay pistas?
+- [01:56:44] ¿Para caídas no?
+- [01:56:48] ¿Un plátano?
+- [01:56:50] No, este...
+- [01:56:52] el helicóptero se pone ahí como en un...
+- [01:56:54] ¿A la mala?
+- [01:56:58] Puro pato.
+- [01:57:00] Es que claro, siendo campo abierto...
+- [01:57:02] ¿Eso?
+- [01:57:05] No, amigo, a ver.
+- [01:57:07] Y el helicóptero no va a ser, pues.
+- [01:57:10] Pues el que dijo hacerse lo arrenda.
+- [01:57:13] Era de la Marina.
+- [01:57:16] Hay que hacerse familia acá, Sergio.
+- [01:57:29] Ya fuiste a hacer el tránsito y obviamente lo pilló.
+- [01:57:37] O sea, de nada, pero me autopadriné.
+- [01:57:48] Igual cuando llegué la primera vez yo ha sido como...
+- [01:57:50] Yo ya les comentaba que una otra vez fui yo a implementar facturación electrónica a una de las empresas de los LUCI, allá en Santiago, en el metro de Alcántara.
+- [01:58:05] Ah, y se me olvidó comentarte que el último piso de esa torre, de Minera Antofagasta, no, tanto Minera Antofagasta, ¿no es cierto?
+- [01:58:14] ¿Cómo?
+- [01:58:14] Minera Antofagasta, ¿cómo no se dice?
+- [01:58:16] ¿Qué?
+- [01:58:17] Y el último piso no podía llegar a un ascensor.
+- [01:58:20] Y ahí es donde, realmente, lo que era el SII, y ahí llegué a la sala de horario, era como de acá hasta donde está la muralla donde está el AlmaWeb, y la mesa llegaba hasta por allá.
+- [01:58:42] Era enorme, gigante, ancho, hasta como donde está el otro, y yo, yo, por ejemplo, hablaba mucho espacio, como...
+- [01:58:52] Y entré y apretó unos botones la niña y bajaron las cortinas y tenía un mueble como esto, pero el otro, si todo estaba lleno de las fotos de la familia, y bajar bajo el proyector, y levantar el carro, el negocio de ellos, y ellos tenían campos, esa empresa, sí, levantó otra empresa.
+- [01:59:22] Que venía del campo, solo pasto, y cobraban por un peso ganado a la paga. Ese es el negocio. Y facturaban, no sé, 22.000, 22 millones de dólares en salario.
+- [01:59:43] ¿Puedo decir eso con el pasto que está allá afuera de mi casa?
+- [01:59:48] A ver, increíble la innovación.
+- [01:59:53] ¿Negocio? Bueno, no tiene idea que...
+- [01:59:55] No se lo juro, no, no, que vaya a tener esa idea.
+- [01:59:57] Es que pega bien el palo, si soy yo.
+- [02:00:09] Yo no me imaginaría que alguien facture tanta plata alimentando vaquitos.
+- [02:01:46] Mi hermano va a tomar las travesuras de mi sobrino.
+- [02:01:51] ¿Qué edad tiene tu sobrino?
+- [02:01:53] Ah, bebé.
+- [02:01:54] Chicos, ¿podemos ver el motor de tesorería?
+- [02:01:57] ¿Claro, Lupe, quiere verlo?
+- [02:01:58] Sí.
+- [02:02:00] ¿Hora del baño?
+- [02:02:02] Hora del baño.
+- [02:02:22] Me perdí en el espacio.
+- [02:02:23] ¿Cómo está todo allá?
+- [02:02:25] Sí, bien, bien ya, todo ordenado.
+- [02:02:29] ¿Pero fue mucho?
+- [02:02:31] Sí, es que fue como de película en general ya, la verdad.
+- [02:02:36] ¿Sí?
+- [02:02:36] Sí, como todos los techos destruidos, banderetas abajo.
+- [02:02:42] Sí, pues, la Fran también estuvo ahí ayudando, así que...
+- [02:02:47] Ah, sí, sí, contó bien.
+- [02:02:48] No, pero es terrible.
+- [02:02:49] Pero ya ayer se dejó todo más ordenado, las calles ya se podían transitar, que eso ya era algo, porque la primera noche era pasar entre cables y árboles.
+- [02:03:07] Peligroso también.
+- [02:03:09] Sí.
+- [02:03:10] Ayer me dijeron que habían quedado algunas calles electrificadas.
+- [02:03:14] Sí, ahí estaban, seguían limpiando ese tema porque como que hacían conexiones y no iban sacando los cables, entonces eso estaban revisando.
+- [02:03:26] Sí, igual estuvo ahí, tuvieron hasta tareas.
+- [02:03:30] Hasta tareas.
+- [02:03:31] Sí.
+- [02:03:33] Pero más, hasta más también.
+- [02:03:35] Sí, bueno.
+- [02:03:36] Mucha gente llegó a ayudar, así que no, se agradeció toda la ayuda, que era necesario y para como quedó, se veía que era como para muchos días así de estar trabajando, y ya ahora uno pasa y la casa está así, sin escombro.
+- [02:03:59] Que eso es lo...
+- [02:04:01] Igual se removió rápido.
+- [02:04:03] Sí, se removió todo rápido.
+- [02:04:05] Ojalá que te lleve de nuevo.
+- [02:04:07] Esperemos que no lleve, porque la mayoría de las casas están sin pecho.
+- [02:04:11] Sí, sí, claro.
+- [02:04:18] El pecho está bien.
+- [02:04:19] Sí, y si al final no hubo lesionados, que uno, si las cosas se recuperan.
+- [02:04:24] Sí, claro.
+- [02:04:25] Lo material, de una u otra forma, uno las recupera.
+- [02:04:30] Pero no hubo ningún lesionado, que eso es lo más importante.
+- [02:04:33] La señora que les conté es vecina de la Lupe, mi tía, la que la rechazó el papi, y hoy día en la mañana hablaba con mi novia, la vecina, y yo le dije yo no soy evangélica mi vecina, si ahí le ayudamos y ya estaba solito, le dejamos todo el patio así limpio, limpio, limpio, y el hijo andaba ahí y los militares le dejaron todo el patio,
+- [02:05:03] Le ayudaron como a resguardar el techo.
+- [02:05:07] Ah, quedó con techo.
+- [02:05:09] Sí, quedó con techo, como provisorio, con plástico, como toda la mayoría de las casas.
+- [02:05:17] Pero estaba asustada ella.
+- [02:05:20] Y me asustaron.
+- [02:05:21] Sí, porque ella la vi yo adentro.
+- [02:05:25] Entonces, me decía, era como de película, yo pensé que era una pesadilla, un sueño.
+- [02:05:32] Nunca pensó que...
+- [02:05:34] Era un paro.
+- [02:05:35] Sí, porque, sí, sí, que son ya de edad, o sea, toda esa población es de edad.
+- [02:05:43] Una caída mala puede haber sido.
+- [02:05:48] Sí, porque se dio cuenta, son como ventanales, entonces explotó el ventanal, la ventana, y la, como que la levantó y la azotó contra la pared, que ya iba hacia una pieza.
+- [02:06:02] Si quedaban dentro las casas, era un rollo.
+- [02:06:09] Increíble.
+- [02:06:10] Si las casas sin vidrio, sin techo, árboles caídos, era como...
+- [02:06:18] Y en menos de 24 horas, así, de la nada.
+- [02:06:22] ¿Cuánto duró eso?
+- [02:06:23] ¿Media hora?
+- [02:06:24] Media, menos.
+- [02:06:26] Pero antes se formó, destruyó, hizo eso, hizo media hora.
+- [02:06:30] Pero lo que pasó fue que iba.
+- [02:06:33] Y ahí para donde yo vivo, todos los árboles así, en Caracas, no se podía transitar.
+- [02:06:39] ¿Peligroso? ¿Fue peligroso?
+- [02:06:42] Sí, sí era...
+- [02:06:44] Ahí escaché porque había un poco menos de autos de la vuelta.
+- [02:06:47] Ahí había unos árboles en la mitad, así.
+- [02:06:50] En la mitad, sí, era así rajado.
+- [02:06:52] Yo veía pajaritos así, corrientes todos muertos, sí, se veían.
+- [02:06:57] Alimentación. Animalito igual se perdieron. Sí, muchos muertos. Sí, fue de terror ahí.
+- [02:07:12] Pero dicen que hay que acostumbrarse, como estar un poco preparado ya para este tema, porque va a ser habitual.
+- [02:07:20] ¿En tornado? Sí. ¿En feria? Sí.
+- [02:07:24] ¿Pero depende nacional o solo como para acá para el sur?
+- [02:07:27] Zona central, creo que. Se supone que se espera de tres, es Paramaule, Biotío y Ñoble. Sí. Pero es que lo que pasa es que Requinoa tiende a tener mucho viento. Hay un temporal y el viento ahí es heavy. De hecho, la otra vez ya había quedado la embarrada, botaba pocos y todo el tema.
+- [02:07:48] Sí, los árboles de ahí, es típico que el viento con los árboles cae, con mucho viento.
+- [02:07:56] Pero sí, dijeron que iba a ser como ya parte de Chile el tema de los tornados.
+- [02:08:01] Sí, pero ya se hizo.
+- [02:08:02] Ya se ha quedado la puerta ya.
+- [02:08:05] El portal.
+- [02:08:07] Ahí ya pasa.
+- [02:08:08] Sí.
+- [02:08:09] Hoy que te arregles.
+- [02:08:10] Entonces ahora hay que estar más preparado, hay que ver cómo se evacúa en caso de...
+- [02:08:16] ¿Y eso va a impactar también la construcción?
+- [02:08:19] También la construcción.
+- [02:08:22] ¿O se ha cambiado todo el material ligero?
+- [02:08:25] Lo que pasa es que el material...
+- [02:08:27] ¿Pero se cambia el material ligero por el tema de poder después construir de nuevo?
+- [02:08:31] Porque el material ligero claramente usted no se lo llevó.
+- [02:08:33] Sí, pues se lo llevó.
+- [02:08:34] Es más económico.
+- [02:08:35] Solo que dicen allá en Estados Unidos como que es más fácil volver a...
+- [02:08:39] Pero el concreto yo creo que se lo llevó.
+- [02:08:41] Por eso el concreto se lo llevó igual, lo construyeron.
+- [02:08:44] No hubo daño en las casas, no hubo daño, porque le cayó parte del cemento, le dio parte de la casa, el cemento adelante, la reja en el piso.
+- [02:08:57] Por eso, no es el viento así, sino las cosas que van entrando, pero y los postes que estaban botados, también fue por las planchas, porque iban y se borraron los cables y botaron.
+- [02:09:08] Sí, sí, sí, sí, sí, sí, sí, sí.
+- [02:09:38] Colombia tuvo terremotos, aquí Colombia no era una zona cívica, pero mirá, en todos los países como que tuvieron un poco de arsín.
+- [02:09:46] El verano ahora cuando se va a poner aquí también es calor, ahora es calor.
+- [02:09:51] Creo que hay lluvia y...
+- [02:09:54] ¿Lluvia y calor?
+- [02:09:55] Ah, sí.
+- [02:09:55] ¿Diciembre?
+- [02:09:56] Sí.
+- [02:09:57] Pero creo que en el febrero va a ser mucho, mucho calor.
+- [02:09:59] Yo veía las noticias en que abril y mayo van a ser con mucha agua y puede que también
+- [02:10:08] En buen valor, no, el que ahora el invierno, ya la gente se va a asustar.
+- [02:10:14] Yo lo personal, como el viviendo ahí, ya viene mucho dinero.
+- [02:10:17] ¿El otro año?
+- [02:10:18] Sí.
+- [02:10:20] A ver qué...
+- [02:10:22] Todo remoto del otro año.
+- [02:10:24] Más de que nosotros.
+- [02:10:29] No, y aquí, que igual hay como hartas parcelas.
+- [02:10:33] Mucho espacio abierto.
+- [02:10:34] Oye, imagínate un tornado en pleno campo, te vola toda la fruta.
+- [02:10:38] Pero sí, la tía de la trampa tenía un damasco gigante, a mí me encantaba, y estaba lleno. Yo lo fui a ver ayer limpiando y nada, no tenía ni hojas.
+- [02:10:52] Imagínate, allá en la pimpinela, ahí en la piscina, se acabó la provisión.
+- [02:10:59] Hubo pérdida total de ciruelas, pérdidas campanas, pero fue por el granizo, sí, el granizo también estuvo, lo hubo pérdida total solo por el granizo.
+- [02:11:12] ¿Y en Paraguay vieron los granizos? Sí. En Paraguay, en Brasil, eran gigantes. Una piedra así. Eso me da miedo también. ¿Y ese tamaño de...?
+- [02:11:24] Aquí tenemos donde se realiza la carga de las cartolas.
+- [02:12:00] Lo único que hice fue dejar el periodo actual y así se vería la visualización, donde esto se nutre directamente.
+- [02:12:33] Hicimos la parametrización para agregar bancos y en la parametrización también dejamos la posibilidad de agregar las cuentas a los bancos.
+- [02:12:41] Entonces aquí te van a salir todo lo que se agregue en parametrización.
+- [02:12:45] Si necesitan agregar un banco nuevo aparte de los cuatro que ya trabajan, se puede hacer.
+- [02:12:50] Y se puede también agregar la cuenta y asociar a una moneda directamente.
+- [02:12:55] Acá, bueno en este computador creo que no tengo Excel, pero voy a mostrar el otro computador.
+- [02:13:03] Tres bandolinas.
+- [02:13:07] Acá, a ver qué, no veo nada.
+- [02:13:49] Así ven ustedes mi pantalla, no se ve nada.
+- [02:13:51] Se carga lo que habíamos hablado de que estos que están acá abajo son los que aparecen directamente cuando realizamos la carga, representan estos de acá.
+- [02:14:09] Entonces, por ejemplo, acá como se veía de arriba, estábamos la empresa AlmaWeb, este automáticamente igual discrimina si es que dice ALM o AlmaWeb para poder seleccionarlo,
+- [02:14:20] Pero te da la opción en caso de que venga mal escrito o cualquier cosa o venga con otro nombre, que tú lo puedas asignar.
+- [02:14:26] Si te das cuenta, este que no tenía nombre, ni en AlmaWeb ni en ALM lo vas a seleccionar automáticamente porque no se llama como la empresa.
+- [02:14:35] Entonces, dependiendo de si, por ejemplo, estás en AlmaWeb y ese corresponde ahí, tienes que hacerle el check.
+- [02:14:39] Si no, tendrías que hacer el cambio de la parte de arriba para hacer esta carga de cartola.
+- [02:14:42] Y acá, bueno, me da la advertencia porque en esta página, a diferencia de la otra, en parametrización no tengo bancos cargados.
+- [02:14:53] Por eso aparece ese error. De hecho, si nos vamos acá, aprovechando de ver el menú cómo se agrega,
+- [02:15:01] aquí sale la advertencia que esto cuando falta una configuración vital, ¿sabes? Esa exclamación en el menú.
+- [02:15:07] Eso es como que el sistema lo necesita para operar.
+- [02:15:14] Exacto.
+- [02:15:15] Y acá ya vienen con su información pregargada del Banco Central.
+- [02:15:19] Directamente.
+- [02:15:19] Entonces debería de aquilistar todos los bancos disponibles que existen como acá en Chile.
+- [02:15:24] Así que errores de tipeo no deberían haber.
+- [02:15:27] Y acá, para agregar cuentas, número de cuenta, tipo y moneda.
+- [02:15:35] Y viene casi, como habían dicho que siempre son cuentas corrientes,
+- [02:15:37] lo dejé para que eso viniera preseleccionado.
+- [02:15:40] Pero en el caso de igual, está la nota alternativa.
+- [02:15:47] No sé si por ejemplo acá debería haber como un nombre de la cuenta, porque este es el número y este es el tipo, como para poder identificarlo.
+- [02:16:02] Así como darle como un apodo, por así decirlo.
+- [02:16:08] Por si tienen, por ejemplo, un banco con dos cuentas corrientes, a ver la diferencia de una a otra.
+- [02:16:16] No solamente viendo el número, que igual se puede ver con el número la diferencia.
+- [02:16:19] No tenemos ese caso, porque es una cuenta nomás por banco, cuenta corriente.
+- [02:16:27] Claro.
+- [02:16:28] ¿No?
+- [02:16:28] La única diferencia sería si es peso dólar o iban.
+- [02:16:30] Si es peso dólar o iban, eh.
+- [02:16:34] Ya, entonces sí estaría bien.
+- [02:16:36] Perfecto, entonces vamos a agregar un banco acá que no tenemos.
+- [02:16:41] No es necesario y obligatorio agregar la cuenta.
+- [02:16:45] Como para agregar el banco, eso es como opcional.
+- [02:16:48] Ya.
+- [02:16:49] Ah, muy bien.
+- [02:16:53] ¿Ustedes no vieron eso?
+- [02:16:57] Dificultades técnicas.
+- [02:17:05] Entonces acá yo podría agregar, por ejemplo, el banco de estado.
+- [02:17:11] Y ahí, ahora en el otro menú, me va a salir para seleccionar el banco de Chile y el banco de estado en la carga de la cartola.
+- [02:17:23] Acá, si se dieron cuenta, el periodo contable en el que estamos es octubre y yo estoy cargando una cartola que es de junio.
+- [02:17:33] ¿Lo va a dejar igual?
+- [02:17:35] Esa era mi duda.
+- [02:17:36] Lo tengo así porque a modo de prueba, para no tener que todos los meses ir generando una, lo tengo habilitado para que de momento permita hacer como esta carga.
+- [02:17:45] Pero la idea es que acá diga de inmediato que la data que se está cargando no corresponde al periodo actual.
+- [02:17:53] También, creo que esto lo habíamos hablado, pero igual prefiero preguntarlo, acá si se dan cuenta el último movimiento de esta cartola, que eso lo habíamos visto en videollamada,
+- [02:18:01] Era de un periodo anterior. ¿Se excluye? Perfecto. Esta carga de cartola se hace varias instancias en el mes, ¿verdad?
+- [02:18:16] De 10 a 10, la idea es cargarla semanalmente.
+- [02:18:21] Ya, entonces no está todavía implementado para que no haga duplicidad, porque me imagino que la cartola va creciendo.
+- [02:18:27] Entonces, lo que cargaste en la semana 1, va a venir también en la cartola que va a cargar la semana 2, entonces no se tiene que duplicar, ¿verdad?
+- [02:18:35] Sí, no se va a duplicar.
+- [02:18:37] Perfecto. ¿Eso está pendiente? Sí, todavía.
+- [02:18:38] Ya.
+- [02:18:39] Eso está pendiente.
+- [02:18:43] Tenemos las monedas seleccionadas. Ah, lo que les decía, ahora aparece el banco correspondiente.
+- [02:18:54] Entonces, ahí hace la separación por moneda, si se dan cuenta, el archivo de origen es el mismo, pero hace la separación por moneda.
+- [02:19:02] Para acá empezar ya a realizar el trabajo con cada una de las monedas.
+- [02:19:08] Entonces acá, si por ejemplo son egresos, tenemos el check para seleccionar varios
+- [02:19:15] y poder asignarlos a la semana, a la nómina semanal.
+- [02:19:27] Entonces se puede hacer también uno a uno,
+- [02:19:32] se puede hacer también uno a uno que al momento de darle aquí a contabilizar,
+- [02:19:37] También va a preguntar, si es que lo hacemos así de manera individual, de que lo podamos asignar uno a uno a una de las semanas y aquí también se puede adjuntar algún documento referencial en caso de.
+- [02:19:49] Al adjuntar documento, ¿aplica?
+- [02:19:53] Sí, podría aplicar en el tema de las rendiciones que podría escanear y cargarlas ahí como adjunto para visualizarlo.
+- [02:20:02] ¿Y qué más podría ser? ¿Algún gasto adicional? ¿Alguna notaría?
+- [02:20:13] ¿Pero y lo que dice? ¿Por ejemplo, los SWIFT, por ejemplo?
+- [02:20:16] No, también.
+- [02:20:17] ¿Ah, si van a quedar asociados a esa nominación monal?
+- [02:20:21] Sí.
+- [02:20:21] Los SWIFT son más para los ingresos.
+- [02:20:24] Para los ingresos.
+- [02:20:24] Ya.
+- [02:20:25] El documento de respaldo de la transferencia de la empresa.
+- [02:20:28] Sí.
+- [02:20:29] Se le puede subir los SWIFT.
+- [02:20:30] Ya, por ejemplo aquí lo dejamos solamente como añadir documento, pero me imagino que igual, ah no, si tienes la opción de darle un nombre.
+- [02:20:39] Ya.
+- [02:20:40] Ya lo había hecho, soy...
+- [02:20:41] Soy tan pro que ya lo había hecho.
+- [02:20:42] Entonces la idea es que podamos hacer como la carga, y aquí podemos editar el nombre del documento, directamente como para darle ese apodo.
+- [02:20:50] Ah, ya.
+- [02:20:50] Pero va a guardarse con el mismo nombre que tenía de origen.
+- [02:20:54] Y se puede subir más de un documento entonces.
+- [02:20:58] Perfecto.
+- [02:20:59] Entonces aquí ya se podrían seleccionar por cada uno de los elementos la contra cuenta, el código y el destino. Mi duda es, porque así como aprovechando esta opción de poder asignar a la nómina semanal, pasa de que dependiendo de estos movimientos pasen al mismo código financiero, contra cuentas, como para aprovechar ese menú y hacer también esa contabilización masiva,
+- [02:21:28] ¿O casi siempre van a diferentes contracuentas cada uno de estos movimientos?
+- [02:21:35] Sí, van a diferentes. Que sea la cuenta...
+- [02:21:39] La cuenta en la misma fue, pero el detalle siempre es distinto.
+- [02:21:43] Por ejemplo, si pongo ingresos, clientes, exportación, son 20 brokers.
+- [02:21:47] Entonces la asociación a la nómina nomás que se puede hacer, ¿verdad?
+- [02:21:50] Sí.
+- [02:21:50] Ya, perfecto. Asociémoslo.
+- [02:21:56] No correte el marido.
+- [02:22:01] ¿Cómo? ¡Eso está mal!
+- [02:22:04] Creo que el ejemplo ha sido de otra realidad.
+- [02:22:11] Claro, es santiaguino.
+- [02:22:16] Por ejemplo aquí, al seleccionar el destino, aparece esta nueva información.
+- [02:22:26] ¿Qué vendría a ser el tipo de documento para asociar?
+- [02:22:29] ¿El número que aquí busca en la base de datos?
+- [02:22:32] Por eso aparece el botoncito de buscar.
+- [02:22:35] Y también seleccionar el proveedor.
+- [02:22:40] Hay algún campo que falte de esta asignación.
+- [02:22:42] Obviamente el orden hay que reorganizarlo para que se vea mejor.
+- [02:22:45] Este es un ingreso, ¿cierto? No es un egreso.
+- [02:22:48] Este era un egreso, sí.
+- [02:22:51] Tengo dudas con los ingresos cuando viene un pago por todo, suponte, por cereza y...
+- [02:22:59] Antes en el... ¿Ese era egreso?
+- [02:23:03] ¿Puede ser que no pida proveedor ni tipo de documento?
+- [02:23:11] ¿En los egresos?
+- [02:23:12] ¿Sí?
+- [02:23:12] ¿Sí?
+- [02:23:17] No, pero no es como reina general.
+- [02:23:19] Lo que pasa es que cuando no...
+- [02:23:20] Quizá funciona.
+- [02:23:21] Quizá funciona.
+- [02:23:22] Lo que pasa es que actualmente va un poco desfasado con el ingreso de factura y el pago.
+- [02:23:26] Entonces se lleva todo anticipo proveedor.
+- [02:23:28] Pero como ya va a estar más automatizado y vamos a ir al día que no le ingrese la factura,
+- [02:23:32] la idea es que Lupe pueda tener la opción de seleccionar la factura in situ en el módulo.
+- [02:23:36] Pero en caso de que no esté la factura y hay que recontagresar el movimiento, que pueda poner anticipo proveedor.
+- [02:23:42] Ah, sí.
+- [02:23:44] No está, pero lo vamos a implementar.
+- [02:23:49] Con los ingresos, ¿qué duda tenía?
+- [02:23:53] Quedaría como lo mismo de los egresos, ¿cierto?
+- [02:23:57] Lo que pasa es que hay veces donde hay que ocupar dos elementos, dos códigos financieros.
+- [02:24:04] Uno puede suponer si viene un solo pago de cereza y nectarina.
+- [02:24:11] No, puede abrir el ingreso.
+- [02:24:13] Sí, poder abrir el ingreso.
+- [02:24:17] ¿Cómo ver el detalle?
+- [02:24:19] A ver, en...
+- [02:24:20] No, por ejemplo, si llevan 100.000 dólares, que 50 los vamos a cargar a cereza y 50 los vamos a cargar a nectarina.
+- [02:24:26] ¿Cómo dividirlo?
+- [02:24:27] Dividirlo.
+- [02:24:28] Tendría que aquí como que tener la opción de agregar como una división y preguntar cuánto va a ser seleccionado para cada uno de ellos.
+- [02:24:37] Para cada uno de ellos, si eso me pasa más en AlmaWeb.
+- [02:24:40] Ya, ya, entonces aquí tendríamos que tener como un botón de más y cuando se dé clic que pregunte cuántos montos van a ser para cada uno de los códigos financieros, ¿cierto?
+- [02:24:51] Sí, de los códigos financieros.
+- [02:24:53] Perfecto, y que se base directamente en el total de la moneda, la asignación también en la moneda, ¿cierto?
+- [02:24:58] Si es yuan, es yuan. Perfecto. No hay que hacer conversión ni nada.
+- [02:25:03] No.
+- [02:25:06] Ya.
+- [02:25:07] No podemos llevar las tres monedas.
+- [02:25:08] Sí, sí.
+- [02:25:09] Actualmente pasamos de yuan a dólar, pero ahí igual tenemos una pérdida de tipo de cauda.
+- [02:25:14] Ya.
+- [02:25:16] Perfecto, entonces yo creo que el más va a estar acá y ahí dependiendo de eso, cuando se dé clic, puede ser dos o más.
+- [02:25:26] Sí, me ha tocado, hasta tres me han tocado.
+- [02:25:30] Perfecto, y ahí le dejamos con la regla de que te limite para que no puedas pasarte del monto.
+- [02:25:34] Del monto, sí.
+- [02:25:36] Y que te notifique si dejas tu monto pendiente también, que tenga que estar cuadrado.
+- [02:25:41] Sí.
+- [02:25:42] Genial.
+- [02:25:44] De los ingresos, ¿hay algún campo adicional que no tengan los egresos, aparte de esta división del código financiero con montos?
+- [02:25:53] No, sería eso, no.
+- [02:25:55] Esa sería como un campo de texto.
+- [02:26:10] Sería como un cliente.
+- [02:26:11] Un cliente.
+- [02:26:12] Sí, seleccionar el cliente.
+- [02:26:14] Ya.
+- [02:26:15] Sí, porque ahí no...
+- [02:26:16] Así se contabilizaría, ¿cierto?
+- [02:26:20] Debería aparecer cuando seleccionamos los campos de acá como en el otro.
+- [02:26:23] Ya.
+- [02:26:31] ¿Pero aparece solo cuando pones factura?
+- [02:26:33] Creo que sí.
+- [02:26:35] Ya, porque la realidad...
+- [02:26:36] Ah, no, algo.
+- [02:26:37] Sí, sí, sí.
+- [02:26:39] No, no creo que no.
+- [02:26:40] Cree y mal.
+- [02:26:41] Sí, quiere que sea, sí, sí.
+- [02:26:43] Hombre, que miente.
+- [02:26:46] Sí, salen esos dos.
+- [02:26:48] Ya.
+- [02:26:49] ¿Los destinos también son solo eso?
+- [02:26:51] ¿O hay que eliminar algunos?
+- [02:26:53] Ay, eso se puede editar, ¿para qué?
+- [02:26:55] ¿Quieres dejarlo editarlo?
+- [02:26:57] ¿Podríamos hacerlo en la parametrización?
+- [02:26:58] Sí.
+- [02:26:59] Agregar un módulo que sea los destinos de...
+- [02:27:02] Sí, que tengo que ir a comprar la parametrización.
+- [02:27:04] Genial.
+- [02:27:05] Cambiando todos los nombres después.
+- [02:27:07] En ese módulo también podríamos parametrizar cuándo se despliegan estas opciones, dependiendo del destino.
+- [02:27:21] Sí, porque ahí debería ser en factura, anticipo y en rendición, porque en rendición también tenemos que poner el personal.
+- [02:27:28] ¿Todo ocupa en estos tres campos o hay alguno que tenga otro campo más?
+- [02:27:32] El de rendición tendría que ser, en vez de cliente, personal o trabajador.
+- [02:27:41] Entonces ahí cuando estemos armando el mantenedor podemos dejar como tipificar cada uno de los destinos
+- [02:27:47] y también tener como esa regla para el lado de darle check y qué va a pedir cada uno.
+- [02:27:52] Ya, nunca no.
+- [02:27:53] Así lo dejamos parecido a como lo hicimos con el plan de cuenta.
+- [02:27:56] Buenísimo.
+- [02:27:58] Buenísimo.
+- [02:27:59] Y los documentos lo mismo, puede ser en el número de documentos.
+- [02:28:02] Y pasaría a la contabilización, que acá estábamos en el modo, ¿no? Estamos en el modo real.
+- [02:28:19] Oye, pero hagamos lo real esto.
+- [02:28:22] ¿Cuál tendría que ser la contracuenta?
+- [02:28:25] ¿Es un ingreso?
+- [02:28:26] Sí.
+- [02:28:30] Cliente exportación.
+- [02:28:34] Cliente exportación, ahí está.
+- [02:28:37] Código financiero.
+- [02:28:39] En este caso puede ser venta cereza, venta exportación.
+- [02:28:43] ¿Y destino?
+- [02:28:49] Antisipo.
+- [02:28:53] Antisipo.
+- [02:28:55] Antisipo, cliente.
+- [02:28:58] No, no, va a estar lo que era el tipo de documento.
+- [02:29:00] No sabía cuándo se anticipó.
+- [02:29:02] Pedir tipo de documento.
+- [02:29:06] Ahí debería pedir tipo de referencia.
+- [02:29:09] Que puede ser documento, puede ser un detalle de si anticipo, traspaso, provisión.
+- [02:29:15] No para de crecer ese menú. Son dos.
+- [02:29:31] Y a ver, esto lo vamos a dejar acá como estos tipos que tenemos que hacer la modificación.
+- [02:29:37] Acá creo que no tenemos factura.
+- [02:29:40] Y esto debería ser un desplegable que muestre la...
+- [02:29:42] No, es que en tipo de documento podemos cambiarlo a tipo de referencia.
+- [02:29:46] Y ahí nosotros elegimos qué movimiento es y el número que se le va a asignar.
+- [02:29:54] ¿Se le va a asignar un número entonces?
+- [02:29:56] Sí. Actualmente cuando por ejemplo son anticipos, el número se asigna el mismo número del comprobante automático.
+- [02:30:05] Ya.
+- [02:30:06] Pero también nosotros podemos poner factura y que se pone el número de factura.
+- [02:30:26] Dificultades técnicas.
+- [02:30:27] Pues eso está bien, pues. Te dijo que no se encontró el documento, así que hay que elegirle el anticipo.
+- [02:30:33] Sí, que estaba como anticipo, ¿no?
+- [02:30:36] No, no le sale aceptable.
+- [02:30:37] Pero le dice tipo documento, tiene que elegir el anticipo.
+- [02:30:40] Por eso es mejor ponerle tipo referencia.
+- [02:30:42] Sí.
+- [02:30:43] El contabilizar.
+- [02:30:49] No, justo lo que tiene que contabilizar.
+- [02:30:52] Bueno, vamos a ir en el modo demo.
+- [02:30:54] Ustedes tienen que imaginarse como que esto sí, no salió ese mensaje rojo.
+- [02:30:57] Acá, por ejemplo, así quedarían cuando ya quedan contabilizados, indicando acá abajito el detalle, si se dan cuenta el número de asientos que se generó.
+- [02:31:22] Sí, eso también tenemos que ver cuáles van a ser como las nomenclaturas de cada uno de los documentos para definir los siglos, prefijos.
+- [02:31:29] Sí, sí.
+- [02:31:31] A anotar también.
+- [02:31:33] ¿Eso no los tienen?
+- [02:31:35] Sí.
+- [02:31:35] ¿Podríamos dejarlo notado? Pero creo que lo habíamos notado.
+- [02:31:39] Lo que pasa es que los números de los comprobantes son correlativos.
+- [02:31:43] No, no, sí sé, pero viene, habías dicho que viene un prefijo antes.
+- [02:31:47] Sí, traspaso, ingreso, egreso, apertura y...
+- [02:31:52] ¿Pero sí va a ser texto completo y el número?
+- [02:31:54] No, puede ser el inicial T-E-I-A, no me falta uno, B-U-V.
+- [02:32:04] ¿Cuál es el número?
+- [02:32:05] Pensaje, ¿cierto?
+- [02:32:07] ¿Cuáles serían? Traspaso, ingreso, egreso, venta, proveedor y apertura.
+- [02:32:25] ¿Y ahora el idioma crea el ajuste?
+- [02:32:28] Sí.
+- [02:32:30] Ah, ya he invertido.
+- [02:32:30] Apertura y ajuste.
+- [02:32:32] Estoy viendo A.
+- [02:32:33] A, J.
+- [02:32:35] No noté nada, estaba haciendo como que escribía.
+- [02:32:42] Y ahí sería como la contabilización.
+- [02:33:05] Bueno, aquí también van apareciendo por monedas, como la habíamos visto antes.
+- [02:33:09] El documento referenciado, que imagino que igual puede ir cambiando el nombre,
+- [02:33:15] Y como se va descargando, va quedando con el entre paréntesis 1, 2, 3, 4, ahí dependiendo.
+- [02:33:20] Y cada uno de aquí sabe si es que está como pendiente.
+- [02:33:24] En este caso, el que está amarillo es el que le falta realizar dos contabilizaciones.
+- [02:33:28] Los que están en verde es porque ya están contabilizados, sí.
+- [02:33:41] Ah, muestra ese mismo menú.
+- [02:33:42] No debería decir trabajar ese, debería ser ver detalles.
+- [02:33:46] Pero alguien dice que podés contabilizar los pendientes.
+- [02:33:52] Sí, sí.
+- [02:33:53] Pero que están cerrados los detalles.
+- [02:33:58] Quizás eliminar eso y dejar solamente el detalle al lado.
+- [02:34:01] O sea, el proceso y cerrada.
+- [02:34:04] ¿Cuál? ¿Cuál deseo?
+- [02:34:06] Porque, por ejemplo, que está cerrado y está cansado.
+- [02:34:11] Sí.
+- [02:34:11] Entonces, este delineo debería estar solamente este, que este no pueda poder, por ejemplo, el proceso apretarlo y pueda conseguir contabilizarlo.
+- [02:34:18] Sí.
+- [02:34:19] Ah, ya te entiendo.
+- [02:34:20] Solo con uno, pero que sea...
+- [02:34:21] Claro.
+- [02:34:23] Sí.
+- [02:34:23] De hecho, no debería permitir... Ah, sí, no te permite.
+- [02:34:39] Sale, te ha echado el botón de cerrar si es que tienes pendientes de contabilizar.
+- [02:34:43] Uy, sí.
+- [02:34:44] Me obligaba.
+- [02:34:48] Todo bajo control.
+- [02:34:49] No, me está durando.
+- [02:34:51] Y al lado son las notas.
+- [02:34:54] Sí, no, latigazo.
+- [02:34:56] Latigazo.
+- [02:34:56] La planta, mira.
+- [02:34:59] Vale, ya me acostumbré.
+- [02:35:02] ¡Gracias por ver este video!
+- [02:35:40] Ya, aquí la pestaña de conciliación, bueno, como lo pudimos hacer la contabilización por error que teníamos acá en el sistema, lo vamos a abrir igual en el modo demo, que, bueno, aquí tengo estos conflictos de que, por ejemplo, uno le da clic acá y muestra exactamente lo mismo de lo que hace el botón, entonces, también podríamos hacer lo mismo de eliminar ese botón y dejar quizás espacio para algo más.
+- [02:36:05] Y acá, por ejemplo, sale este tipo de detalle, que esto es por banco.
+- [02:36:34] Pero ese que dice depósito por identificar es porque ese todavía no está contabilizado, ¿cierto?
+- [02:36:42] Exactamente.
+- [02:36:42] Ah, ya.
+- [02:36:43] Exactamente.
+- [02:36:44] De hecho, acá afuera, si te das cuenta, te sale el contador que vimos afuera en el otro.
+- [02:36:49] Ya.
+- [02:36:50] Y hay dos que están contabilizados y hay dos pendientes.
+- [02:36:55] Ya.
+- [02:36:57] Y si yo hago la desconsideración, ¿la elimina?
+- [02:37:03] La verdad no sé.
+- [02:37:05] Debería eliminarse.
+- [02:37:06] ¿Qué debería hacer? Quedar suelto el movimiento. ¿Qué debería ocurrir? Debería quedar suelto el movimiento. Sí, para poder evitarlo. Y ahí debería la cartola nuevamente hacer... Sí, sí. Ya, queda liberado para volver a contabilizar. Sí, claro.
+- [02:37:29] Bueno y acá, dependiendo de, deberían aparecer más bancos de la carga.
+- [02:37:40] Un poquito del zoom, que aquí el flujo de caja, si le tengo que agregar zoom, tendríamos estos totalizados, que esto es prácticamente por la moneda, y este es como el total de todos los bancos transformados a pesos, debería ser con algún tipo de cambio en especial, este totalizado es el tipo de cambio de hoy, ¿cierto?
+- [02:38:25] Porque esto solamente como que transforma todos los demás bancos y hace como una suma general.
+- [02:38:32] No, yo creo que eso está bien, que sea real, porque al final es la transformación de algún monto en el día, ¿o no?
+- [02:38:40] Sí.
+- [02:38:41] Sí, es real.
+- [02:38:42] Ya.
+- [02:38:46] Y acá este detalle lo dejamos con estos botones, que si se dan cuenta estos que están en amarillo son porque son monedas extranjeras.
+- [02:38:54] Y aquí si deseamos verlo de manera como individual, podemos ver el precio de la moneda en ese pequeño detalle que aparece arriba, o si quieren verlo directamente en la tabla, podemos verlo acá con este de acá.
+- [02:39:10] Sacar. Sacar el ver en pesos y ahí aparece por la moneda, como informativo.
+- [02:39:16] Lo primero que aparece siempre es la apertura, que se ingresa directamente desde acá por banco,
+- [02:39:27] y en caso de que necesiten modificarla, se puede hacer directamente desde acá.
+- [02:39:34] No lo dejé con la opción de eliminar porque me imaginé que debería tener siempre una apertura por cada una de las monedas, ¿verdad?
+- [02:39:41] O no debería tener apertura.
+- [02:39:46] Es que la ruptura es una emisión de Almea, ¿no?
+- [02:39:50] Sí.
+- [02:39:50] Sí, siempre.
+- [02:39:52] Entonces cada uno de los...
+- [02:39:52] Se va a traer el saldo de Almea.
+- [02:39:54] Sí.
+- [02:39:54] Sí.
+- [02:39:56] Eso sí se tipea manualmente, debería sacarse automático.
+- [02:40:00] Automático.
+- [02:40:01] Ya.
+- [02:40:02] No.
+- [02:40:06] ¿Por qué pregunté eso?
+- [02:40:09] ¿Se debería?
+- [02:40:10] Sí.
+- [02:40:11] Ahí se debería.
+- [02:40:12] Se va a tener que hacer la tarea de, por nuestra parte, y quizás te vamos a pedir ayuda,
+- [02:40:16] de hacer la simulación completa de los módulos para poder hacer un cierre ficticio
+- [02:40:22] y ver que el saldo que se esté pasando ahí de esta apertura corresponda.
+- [02:40:26] ¿Sí?
+- [02:40:27] No.
+- [02:40:30] Voy al baño.
+- [02:40:33] Ya, perfecto, perfecto.
+- [02:40:36] Entonces, la opción de tipificar la manual no debería ni considerarse.
+- [02:40:40] De momento que no está automático, si está automático tiene que ser el saldo de la cartola, si no va el saldo de la cartola hay un error.
+- [02:40:49] De momento lo vamos a dejar así como tipiado como para mostrar el sistema, pero una vez tengamos esa revisión completa, ya teniendo un cierre real, puedo tomar esa información y trasladarla a cada una de las unas.
+- [02:41:00] Eso es como lo que necesito, y ahí aprovechamos de hacer el recorrido completo que no lo hemos hecho, por los módulos para llegar a contabilizar y después a disolvería.
+- [02:41:06] Que es igual, yo creo que serían dos maños.
+- [02:41:10] ¿Quieres hacer esa prueba?
+- [02:41:12] Sí, sí. Y le doy igual que podamos tener como la participación de ustedes,
+- [02:41:16] que estemos todas capas de ver el flujo completo y siempre que salen los detalles...
+- [02:41:22] Siempre que esa revisión la vamos a esperar y que ustedes vengan.
+- [02:41:26] Porque la idea es, por ejemplo, que la Roxy me haga un ingreso real de esos documentos,
+- [02:41:31] Ver en qué falta, si quieren alguna mejora o algo, y que ella haga el movimiento.
+- [02:41:37] Después, no sé, por la Fran, que ingrese el libro de compra, que ingrese el libro de venta.
+- [02:41:43] Por el lado de la Lupe, que ingrese las cartolas.
+- [02:41:45] Y cada uno que haga su movimiento.
+- [02:41:48] Me voy a duplicar.
+- [02:41:52] Y aquí, por ejemplo, dejamos...
+- [02:41:54] No, pero se lo hacemos en horario nuestro.
+- [02:41:57] No, me gustaría igual estar...
+- [02:41:59] En la tarjeta.
+- [02:42:00] No respondiste, no saco el guía temprano.
+- [02:42:05] A ver si he respondido temprano.
+- [02:42:09] No, pero sí, sí.
+- [02:42:10] Sí, porque ahí...
+- [02:42:12] Soy preguntón, saco todas las dudas al tiro.
+- [02:42:16] Ya, entonces vamos organizando esa jornada de trabajo.
+- [02:42:20] Y mi terapeuta me dice que me pongo en situaciones catastróficas, entonces ahí empiezo todos los errores que voy a pasar en el proceso.
+- [02:42:26] Es lo mejor para este trabajo.
+- [02:42:28] Sí, es lo mejor.
+- [02:42:29] ¿Cómo que era?
+- [02:42:30] ¿Cómo que se llama?
+- [02:42:32] ¡Qué ansiedad!
+- [02:42:33] En preparación.
+- [02:42:34] ¿Cómo que no ven el fotógrafo?
+- [02:42:35] ¿Cómo que no ven el fotógrafo?
+- [02:42:38] ¿Cómo que no ven el fotógrafo?
+- [02:42:38] Yo pensé que era mejor poder.
+- [02:42:40] Yo pensé que era mejor poder.
+- [02:42:41] Yo solo pensé que era precavido.
+- [02:42:45] Y acá, por ejemplo, estas líneas que están en negrita son totalizadas por cada uno de los conceptos.
+- [02:42:50] Por ejemplo, este sería como el totalizado de la apertura.
+- [02:42:53] Acá, por ejemplo, del ingreso operacional tendríamos este totalizado, que va por moneda.
+- [02:42:58] Como se ve aquí el ingreso solamente se eleva, entonces vendría uno.
+- [02:43:01] ¿Algo visual? ¿Podemos cambiar la apertura por salte inicial?
+- [02:43:04] ¿Sí? ¿Sí?
+- [02:43:06] No.
+- [02:43:07] Sí, sí.
+- [02:43:08] Sí, sí.
+- [02:43:10] No deja de crecer este documento.
+- [02:43:13] Yo creo que después, haciéndolo, yo creo que voy a cambiar el artículo.
+- [02:43:17] Sí, lo más probable.
+- [02:43:18] Yo no te acostumbrás.
+- [02:43:20] Eso de las tipificaciones, el principio correlativo que tienen que tener cabros de los documentos,
+- [02:43:25] yo creo que igual mejor lo revisamos cuando estemos haciendo como las pruebas del sistema.
+- [02:43:30] Últimos detalles.
+- [02:43:30] Lo que pasa es que esa numeración no va a quedar activa cuando haga la carga masiva.
+- [02:43:35] Ah, genial.
+- [02:43:37] Entonces cada tipo de documento de registro ya tiene su tipificación.
+- [02:43:45] Ah, genial.
+- [02:43:46] Y lo único que va a quedar en 01, 02, 03 va a ser ajuste, que esa tipificación la tenemos creada en el sistema anterior.
+- [02:43:52] Ahí le creamos una.
+- [02:43:53] Exacto.
+- [02:43:54] Perfecto.
+- [02:43:55] Acá, volviendo a lo que vendría a ser los totalizados, se pueden quitar de la vista.
+- [02:43:59] De la vista. Para ver solamente como por línea.
+- [02:44:05] No sé si, por ejemplo, también sería bueno como tener aquí abajo quizás un totalizado por moneda.
+- [02:44:16] ¿Sí?
+- [02:44:19] Sí.
+- [02:44:20] Sí, como el final de todo. La última línea.
+- [02:44:22] Sí. Sí, porque eso va a ser el misal de que puede quedar en caja, que debería ser el de arriba.
+- [02:44:28] Ya. No quiero anotar.
+- [02:44:34] Bueno, y acá vienen los filtros también para ver los movimientos más rápidos por cada una de las monedas.
+- [02:44:49] Y aquí si se dan cuenta también se actualiza el de arriba.
+- [02:44:56] Entonces la idea de acá que en caso de que necesiten como reportería en específica de esto, de alguna moneda en especial, todo, siempre el reporte se saca de lo que se ve.
+- [02:45:06] En CLP, ahí es porque no hay tope, que si el saldo es negativo es porque ya no tengo dinero.
+- [02:45:29] Claro.
+- [02:45:31] Entonces, ¿es difícil que el saldo sea negativo?
+- [02:45:33] Bueno, si no trabajamos con líneas de crédito.
+- [02:45:37] Sí, de hecho, no veo...
+- [02:45:42] Debe ser por el modo de...
+- [02:45:44] Sí, tiene que ser porque pusieron más ingresos, ¿no?
+- [02:45:46] Sí, sí.
+- [02:45:49] Pero...
+- [02:45:50] Por ejemplo, esas reacciones hay que hacerlas con la ejecución real.
+- [02:45:53] Sí.
+- [02:45:53] O sea, ahí estamos un poco más fritos.
+- [02:45:56] Porque por nuestra parte podemos asumir y tentar hacerlo,
+- [02:45:59] pero nunca va a ser igual a una ejecución real.
+- [02:46:02] Y bueno, aquí me acabo de dar cuenta que también falta la opción de sacar el aeropuerto en PDF.
+- [02:46:11] Hay ciertas cosas que tenemos que hacer para todas las páginas que tenemos que regularizar.
+- [02:46:18] Dentro de eso está la posibilidad de exportar PDF y Excel.
+- [02:46:21] ¿El registrar la apertura es qué?
+- [02:46:23] Registrar los saldos iniciales.
+- [02:46:26] Ah, perfecto.
+- [02:46:27] Entonces aquí te sale ese formulario donde te pregunta la fecha que estás haciendo, como el ingreso.
+- [02:46:31] Y el que te va a quedar automático en base a lo que está en la cartola.
+- [02:46:36] Exacto, exacto. Este es el que tenemos que eliminar.
+- [02:46:44] ¿Debería eliminarse o queda como opción?
+- [02:46:48] Debería eliminarse porque el flujo de caja se va a alimentar de los saldos de la cuenta banco.
+- [02:46:52] Y la cuenta banco va a tener sus saldos y sus movimientos en el libro mayor.
+- [02:46:56] Se descarta entonces.
+- [02:46:58] Sí.
+- [02:46:59] Y quizá lo vamos a dejar como para el modo ahora que estamos, como sin esa carga anterior.
+- [02:47:04] Lo vamos a dejar como hasta el último para poder registrar con una apertura simulada.
+- [02:47:13] Y sería el registro de los pagos.
+- [02:47:18] Esto debería notirse de la cartola también, ¿verdad?
+- [02:47:24] En pagos.
+- [02:47:25] Ah, sí.
+- [02:47:30] ¿Es la nómina de pagos?
+- [02:47:31] No, no es la nómina de pagos.
+- [02:47:33] De ingresar un pago.
+- [02:47:35] Ah, de ingresar la cartola.
+- [02:47:38] ¿De ingresar ingresos?
+- [02:47:40] Sí.
+- [02:47:41] No, de ingresar una maña.
+- [02:47:42] Entonces acá debería listar lo que surgió también de la cartola.
+- [02:47:44] Ah, sí.
+- [02:47:45] ¡Gracias por ver el video!
+- [02:48:15] Un mensaje que te decía el Sergio Azarca, me escucha la mamá.
+- [02:48:17] Ah, lo caché.
+- [02:48:18] La chapa, el seguro.
+- [02:48:21] ¿Por qué mandaste una foto?
+- [02:48:24] No funcionaba y no podía hacer nada.
+- [02:48:26] No ha pasado.
+- [02:48:28] Es raro.
+- [02:48:30] Pero te dije que había pasado.
+- [02:48:32] Entonces ahí te lo voy a leer.
+- [02:48:33] A él le ha pasado.
+- [02:48:34] Y dice, fuerte, le doy la mano.
+- [02:48:37] Yo no sé si los hombres echan ya.
+- [02:48:39] La verdad.
+- [02:48:40] Yo sí le echo ya.
+- [02:48:40] Sí, porque si nosotros le echamos, por eso te damos el tema de que se nos atrababa.
+- [02:48:45] Yo tengo la suerte de que no...
+- [02:48:47] Mario sí está en llave y él sí ha quedado atrapado.
+- [02:48:51] Sí, Martín también ha quedado atrapado.
+- [02:48:54] ¿Quieres que me lo cuente?
+- [02:48:56] Ayuda, ya es normal.
+- [02:48:58] Ah, ya pasó.
+- [02:49:00] ¿En serio? ¡Aquí, aquí!
+- [02:49:02] Lo he puesto sin batería.
+- [02:49:04] Estamos teniendo que gritar.
+- [02:49:06] ¡Ayuda!
+- [02:49:08] No hay consola.
+- [02:49:10] Se pone el baño en la ventana.
+- [02:49:15] No, tú, me asusté.
+- [02:49:17] Toma una revista.
+- [02:49:21] Pero la reacción es que hoy se está mal el baño.
+- [02:49:24] Claro.
+- [02:49:26] Eso es más vergüenza.
+- [02:49:27] Sí, en todo caso eso sería más terrible.
+- [02:49:29] ¿Y no está el nuevo implemento en el baño para solucionar?
+- [02:49:32] No.
+- [02:49:32] ¿No hay problema?
+- [02:49:33] Por si se tapa.
+- [02:49:36] Por si se tapa, claro.
+- [02:49:37] Ya, lo voy a contar.
+- [02:49:40] Me interviene una campanita cuando alguien piensa.
+- [02:49:44] Dice que se va al baño.
+- [02:49:49] Yo voy sin teléfono.
+- [02:49:50] Yo también.
+- [02:49:52] Yo voy a ir a decirme.
+- [02:49:53] Es que Mario avisa por teléfono que cuando se encierra.
+- [02:49:59] Mario que pasa de nada.
+- [02:50:01] Tiene que tener tres campanitas, una por si se tapa el baño, una por si no hay confort, y otra por si queda encerrado.
+- [02:50:06] Yo recuerdo que desde que voy, ahora es costumbre revisar que hay agua.
+- [02:50:11] Sí.
+- [02:50:12] ¿Sí?
+- [02:50:12] Ah, también me vieron.
+- [02:50:14] No, no, no, yo doy las llaves, porque se cortaba un problema que había con bombas, y uno ya con las manos en las manos, pero se corta el agua, se corta el aire de las botellas, echándole...
+- [02:50:31] No ha pasado así, no ha pasado así, no.
+- [02:50:35] ¿Cuándo con agua entonces?
+- [02:50:39] El taller está de cloro.
+- [02:50:41] Claro. Oye, volviendo al tema, en este caso, quizá, no sé si es que sería de utilidad tener como esta página solamente como visualizar los pagos.
+- [02:50:51] Ah, para visualizar, podría ser.
+- [02:50:54] O sacar reportería quizás también.
+- [02:51:03] Reportería, sí, para sacar, sí.
+- [02:51:10] Para que valga algo mi trabajo.
+- [02:51:12] No, para reportería sí.
+- [02:51:14] Pero para ingreso, no.
+- [02:51:17] No, pues sería visualizar y sacar data.
+- [02:51:19] Sí, ahí sí.
+- [02:51:20] Ya, entonces le sacariamos el botoncito de acá nomás porque se va a anotar directamente todo lo que se está haciendo en la otra.
+- [02:51:26] Genial.
+- [02:51:27] Sí, porque se me ha quedado más fácil cuando lo metemos en el pavo.
+- [02:51:31] Sí.
+- [02:51:31] Bien, trae, ya.
+- [02:51:33] Mira.
+- [02:51:35] Así, así.
+- [02:51:38] Toma.
+- [02:51:41] Acá nos falta también hacer el ajuste de los filtros que nos habían solicitado en la reunión.
+- [02:51:46] Esto es lo que me acuerdo que había quedado al ir cerrado afuera, como ese detalle de... perdón, no eran los filtros, eran de los estados.
+- [02:51:55] No, no, no falta.
+- [02:51:57] Qué pro, qué pro.
+- [02:51:59] No, que no me acordaba que lo había publicado.
+- [02:52:00] ¿Qué es eso que lo estás viendo? ¿Con la sopliclona?
+- [02:52:06] Sí, sí, son ambos los...
+- [02:52:09] Lo que pasa es que son dos proyectos, pues el que está como en el computador y el servidor que lo está actualizando.
+- [02:52:16] Es que igual no parece esto.
+- [02:52:17] Sí, por eso hay muchas cosas que vemos en un reunión que es tan, y después tú vas a la página y no están, es porque son dos mundos aparte.
+- [02:52:22] No lo hizo.
+- [02:52:25] Son dos apiclones.
+- [02:52:29] Y si yo no tomo, tomo a mi mamá.
+- [02:52:32] ¿Cierto, mamá?
+- [02:52:34] Mi mozor, realmente.
+- [02:52:39] Y aquí, bueno, como a veces había sido el último ajuste que nos faltaba,
+- [02:52:43] Y acá, creo que esto debería estar aprobado, creo. Y acá, por ejemplo, lo que se había hecho, los filtros dependientes.
+- [02:52:55] ¿Se le puede abordar los modos de operación?
+- [02:52:58] Sí, sí. Tiene que ser por la resolución.
+- [02:53:03] Sí, sí.
+- [02:53:05] ¿Por cuánto está ahí?
+- [02:53:07] ¿Estás abriendo?
+- [02:53:11] No, lo que pasa es que por la resolución de Windows, puede ser, porque en mi pantalla cuando proyecto acá se ve más, como más amplia, pero así se debería como ver, así se debería ver, acá por ejemplo, bueno aquí estamos visualizando el periodo actual, se pueden ver las semanas, cada una de las semanas tiene los pendientes y los atrasados como totalizados,
+- [02:53:36] Y para ver el histórico, acá, uno puede usar este selector para poder ver como un registro más amplio de lo que vendría a ser las semanas.
+- [02:53:50] Y acá, dependiendo de las que uno tenga seleccionado, va a mostrar todos los movimientos que estaban incluidos dentro de ese periodo, de ese rango.
+- [02:54:01] O también se podría visualizar por cada una de las semanas, como el detalle.
+- [02:54:06] Y acá debería estar funcionando, no, aquí va a tirar directamente al libro de compras.
+- [02:54:18] Sí.
+- [02:54:19] Acá también vamos a aplicar, cuando uno le dé clic acá, lo primero que muestra es que muestra el PDF de la factura.
+- [02:54:25] Ya.
+- [02:54:26] Un módulo.
+- [02:54:26] Sí.
+- [02:54:27] Y naturalmente a mí te van a ir las facturas.
+- [02:54:28] Exactamente.
+- [02:54:29] Y lo que va a mostrar sería, símil a esta vista, y va a mostrar directamente el documento.
+- [02:54:38] Y ahí uno le da a cerrar y volvería a ver la nómina semanal.
+- [02:54:41] Y si uno quisiera ver como el detalle de esta lista de acá abajito, le vamos a agregar el botón de ir al libro de compras para ver el movimiento.
+- [02:54:56] Y este selector, yo creo que debería estar al principio, en la primera columna, porque este es el que permite aplazar varias de una.
+- [02:55:13] Si no, este lo vamos a mover a la primera columna.
+- [02:55:14] Y si bajas, bajas un poquito.
+- [02:55:16] ¿Y ahí yo lo aprieto y con lo que mover? ¿De ese mano?
+- [02:55:27] Pero de acá, el de arriba. De hecho, si no me equivoco, se habilitan esos botones de ahí cuando uno hace clic acá.
+- [02:55:33] Ah, ya, aprieta.
+- [02:55:35] Va a empezar seleccionado.
+- [02:55:38] Y aquí también se podría mover de manera individual.
+- [02:55:47] Ahí puedo buscar por dos, ya.
+- [02:55:49] Exactamente. No sé si es que también sería bueno que tenga como un selector de todos los proveedores que salen acá para filtrar por proveedor.
+- [02:56:01] Por proveedor, sí, y productor.
+- [02:56:06] Tener la diferenciación de los dos.
+- [02:56:08] Sí. Sí, porque a veces, supongo que me dicen, ¿cuántos productores vamos a pagar esta semana? Solo productores.
+- [02:56:17] Ya, ya.
+- [02:56:19] Entonces, esa es la diferencia que debo tener casi siempre entre proveedores y productores.
+- [02:56:24] Entonces nos faltaría aquí tener el tipo para ver si es que es productor o proveedor
+- [02:56:29] y tener también el filtro para que puedas tener esa visualización.
+- [02:56:32] Sí.
+- [02:56:33] Y con eso también se dice, no, yo necesito saber cuántos de los productores en estos últimos tres meses
+- [02:56:39] estarían toda la herramienta.
+- [02:56:40] Sí.
+- [02:56:41] Excelente.
+- [02:56:43] ¿Hay algún otro filtro, otra utilidad?
+- [02:56:47] Algo, o por ejemplo como esas solicitudes que te piden así que de repente son poco te pides a sacarlo en el sistema actual, que haga falta, ¿verdad?
+- [02:56:56] Lo que pasa es que siempre es con factura los pagos y los anticipos los vemos, yo reviso los anticipos de los productores, que esos no van con factura.
+- [02:57:08] Y yo los cargo directamente después al banco.
+- [02:57:12] Entonces nos van por sistema. Primero yo doy el anticipo y después los cargos, los contabilizos.
+- [02:57:20] ¿Y eso va a controlar proforma?
+- [02:57:23] Eso después va a controlar. Cuando se hace la liquidación final, se toman todos los anticipos y se hace el aprofondo.
+- [02:57:39] Cuántos kilos, y ahí se va bien. Si salió a favor o quedamos con deuda.
+- [02:57:46] Acá, Lupe, en el estado de cuenta tenemos, si te das cuenta, esta pestañita, porque el nombre de roles no aplica mucho la verdad, pero aquí te indica si es proveedor o productor, o los dos, o también es cliente.
+- [02:58:03] Y si yo, ah, pero es solo para ver si es productor o proveedor, ¿cierto? O si yo dicho me va a aparecer algo.
+- [02:58:14] No, solamente como para identificar.
+- [02:58:15] Para identificar.
+- [02:58:16] Exactamente, y así con esto podríamos aplicar el filtro en el otro, como esto mismo.
+- [02:58:23] Y cuando tenga los dos, te muestra las dos opciones, cuando un cliente también pasa a tener los dos.
+- [02:58:28] Porque si yo apretara ahí, agrícola los monstruos, no me va a aparecer todo lo que tiene...
+- [02:58:34] Justo no apareció.
+- [02:58:41] Pero claro, aquí va a mostrar como la línea de detalle y aquí lo mismo.
+- [02:58:44] Como al darle clic, bueno, actualmente está eso que te lleva al libro de compras, pero la idea es que te muestre el PDF de la factura para tener como el registro y ver un poco más de detalle.
+- [02:58:53] Ahí también lo puedo exportar a Excel.
+- [02:58:56] Exactamente. Y aquí también están estos filtros rápidos de ver como solamente los que están pendientes, ver todos los movimientos.
+- [02:59:03] Aquí el histórico te pide, debería pedir, no lo está pidiendo, el rango de fechas también.
+- [02:59:08] Ya. Sí, está bien.
+- [02:59:14] Perfecto. Y aquí este check es más que nada como para ver un totalizado abajo.
+- [02:59:19] Ahí solo me sale calzado, ¿cierto?
+- [02:59:21] Sí.
+- [02:59:22] No me aparece el movimiento.
+- [02:59:25] Es como el movimiento del anticipo del pago.
+- [02:59:29] ¿No será la transparencia?
+- [02:59:31] ¿Eso?
+- [02:59:32] ¿Supiste del link que va a haber en esa página?
+- [02:59:34] ¿Ese?
+- [02:59:34] ¿Ese?
+- [02:59:36] Aquí lleva directamente...
+- [02:59:38] Ah, lleva pagos.
+- [02:59:40] Aquí debería afirmar...
+- [02:59:41] Que es el movimiento bancario, ¿no?
+- [02:59:42] Claro, el movimiento bancario.
+- [02:59:44] Ah, sí, se podría levantar como modal cuando sea movimiento.
+- [02:59:48] Con el detalle.
+- [02:59:48] Sí.
+- [02:59:49] Sí, sí.
+- [02:59:52] O sea, la factura, por ejemplo, si es caso de factura, levanta con la PDF la factura,
+- [02:59:59] y en caso de transferencia el...
+- [03:00:01] Modal con el detalle.
+- [03:00:02] Claro.
+- [03:00:02] Sí, ya, perfecto, eso tendríamos que programarlo.
+- [03:00:05] Ya.
+- [03:00:07] Pero sí estaría bien.
+- [03:00:09] ¿Hay algo que se nos escape de tesorería?
+- [03:00:12] No, hasta el momento no.
+- [03:00:13] Bueno, mi preocupación era esa, era el tema de los proveedores y productores, que los productores los llevamos como...
+- [03:00:24] En cortito.
+- [03:00:24] Sí, y eso lo tengo que tener así como saber cuánto anticipo se le ha dado a cada productor.
+- [03:00:34] Igual ahí la ejecución real que hagamos, yo creo que van a salir más utilidades, quizás algún totalizado que sea de utilidad, algún tipo que sea de utilidad.
+- [03:00:42] Ya. O si es que en algún momento se te llega eso, un saque por WhatsApp para tenerlo comúnmente y en la reunión que tengamos conversar un poquitito más. Ya. Perfecto. Sí, pero está, está bien. Check, por lo que. Sí. Vamos.
+- [03:01:16] ¿Cómo lo hacemos? ¿Dejamos las cosas o las llevamos de una?
+- [03:01:20] ¿Qué dices tú?
+- [03:01:27] Después, ¿ah? Podemos tomar, hay la cartera, ¿cierto?
+- [03:01:29] Sí.
+- [03:01:32] Entonces, ¿llamos las cosas?
+- [03:01:34] Ya, llámenlas.
+- [03:01:35] ¿Las dulces no?
+- [03:01:36] ¡No!
+- [03:01:39] Pero miren, las galletitas en una bolsita.
+- [03:01:44] Sí, llámenlas.
+- [03:01:44] Ahora te paso la bolsita para ver.
+- [03:01:46] Que la dejas así.
+- [03:01:49] Que la llevas así.
+- [03:01:51] Llaman a traer el hacha, no me preocupo.
+- [03:01:59] ¿Tienen lactosa, Sergio?
+- [03:02:08] ¿Tienen cerveza?
+- [03:02:16] Yo cuando empecé a tomar cerveza, tomaba esta roya.
+- [03:02:18] Tomaba la Lyre.
+- [03:02:22] Soy más humilde de mis principios con las cervezas, pero con Valtica.
+- [03:02:29] Pero más Valtica.
+- [03:02:31] Es que mi principio igual fue tarde, fue como los 25 de la serie.
+- [03:02:34] Con poder adquisitivo.
+- [03:02:35] Sí.
+- [03:02:36] Con poder adquisitivo. No, yo no.
+- [03:02:39] Empecé a tomar como los 19.
+- [03:02:44] ¿Tú ganas?
+- [03:02:45] No, no, no.
+- [03:02:46] ¿Tú ganas?
+- [03:02:49] ¿Cuánto?
+- [03:02:50] ¿Cuánto?
+- [03:02:50] No voy a decir la verdad, pero todavía no iba a la media.
+- [03:03:54] Gracias por ver el video.
