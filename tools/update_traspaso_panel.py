@@ -40,3 +40,4 @@ with open(path, 'wb') as f:
     f.write(text.replace('\n', '\r\n').encode('utf-8'))
 
 print("DONE")
+

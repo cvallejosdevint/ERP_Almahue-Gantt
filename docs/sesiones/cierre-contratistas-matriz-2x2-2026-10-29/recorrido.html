@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido - Cierre de Contratistas y Matriz 2x2</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1440px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 12px; max-width: 1440px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 6px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; font-weight: 600; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 170px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .9; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+    .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
+    .card p { margin: 0; color: #44403c; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cierre de Contratistas y Período Contable: Recorrido del Flujo Front</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <a class="menu" href="comparacion.html">Ver Comparación</a>
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Contratistas", cls: "param",
+        title: "1. Bandeja de Proformas: Estado REVERSADA y Filtro Dedicado",
+        img: "despues-proformas.png",
+        alt: "Bandeja de proformas con selector de filtros y soporte del nuevo estado",
+        pins: [
+          {
+            x: 90.0, y: 16.5,
+            t: "Selector de Filtros por Estado",
+            d: "Permite filtrar específicamente por 'Reversadas' además de 'Todas', 'Pendientes' y 'Facturadas'. Al seleccionar una proforma reversada, los ingresos diarios continúan asociados para posibilitar la corrección sin rehacer la captura."
+          },
+          {
+            x: 50.0, y: 11.5,
+            t: "Tarjetas KPI de Totales",
+            d: "Consolidan la cantidad y montos netos segregados por cada estado operativo del ciclo de vida de la proforma, incluyendo el nuevo contador de documentos Reversados."
+          },
+          {
+            x: 78.5, y: 31.0,
+            t: "Acción Contextual: Solicitar Aprobación",
+            d: "Habilitada tanto para estado BORRADOR como para estado REVERSADA. Permite al usuario reingresar la proforma corregida a la cadena de aprobación para que alcance el estado DEFINITIVA."
+          }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "2. Panel de Traspaso y Cierre: Banner Matriz 2x2",
+        img: "despues-traspaso-cierre.png",
+        alt: "Panel de cierre mensual con clasificación de estados de la matriz 2x2",
+        pins: [
+          {
+            x: 50.0, y: 28.5,
+            t: "Banner Matriz 2x2 (Caso 1 al 4)",
+            d: "Informa de forma inmediata el cuadrante vigente: Caso 1 (ambos abiertos), Caso 2 (Contratistas centralizado, Contabilidad abierta permitiendo reapertura), Caso 3 (Contabilidad cerrada bloqueando traspaso), y Caso 4 (Cierre total definitivo)."
+          },
+          {
+            x: 27.5, y: 34.0,
+            t: "Indicadores Independientes de Período",
+            d: "Muestra el estado formal del Período Contable general (ABIERTO/CERRADO) y del Cierre de Contratistas operativo, junto con el enlace directo al asiento contable generado."
+          },
+          {
+            x: 50.0, y: 44.0,
+            t: "Detalle de Cierre por Centro de Costo y Contratista",
+            d: "Refleja la agrupación estricta de débitos en el Debe por centroCostoId ('MO contratista · <CC>') y la provisión en el Haber segregada por Contratista con su RUT auxiliar para conciliación en compras."
+          }
+        ]
+      },
+      {
+        mod: "Seguridad", cls: "compras",
+        title: "3. Protocolo de Cierre Total: Comprobante de Ajuste con PIN",
+        img: "despues-traspaso-cierre.png",
+        alt: "Flujo de seguridad para Comprobante de Ajuste en período cerrado",
+        pins: [
+          {
+            x: 88.0, y: 21.0,
+            t: "Bloqueo de Reapertura y Generación de Ajuste",
+            d: "En el Caso 4 (Cierre total), el botón de reapertura queda bloqueado con ConflictException para impedir desarmar el asiento original de centralización. Toda corrección se canaliza vía Comprobante de Ajuste puntual."
+          },
+          {
+            x: 60.0, y: 34.0,
+            t: "Firma con PIN de Reglas de Aprobación",
+            d: "La autorización del Comprobante de Ajuste exige incondicionalmente el PIN de 4 dígitos (con hash bcrypt) y valida que el usuario sea Administrador o figure explícitamente en las reglas de aprobación activas del ERP."
+          }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+
+      s.pins.forEach((pn, pidx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `pin ${s.cls}` + (pidx === p ? " on" : "");
+        btn.style.left = pn.x + "%";
+        btn.style.top = pn.y + "%";
+        btn.textContent = String(pidx + 1);
+        btn.title = pn.t;
+        btn.addEventListener("click", () => show(i, pidx));
+        frame.appendChild(btn);
+      });
+
+      stage.appendChild(frame);
+      const curr = s.pins[p];
+      card.innerHTML = `<h3>${p + 1}. ${curr.t}</h3><p>${curr.d}</p>`;
+    }
+
+    prev.addEventListener("click", () => {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    });
+
+    next.addEventListener("click", () => {
+      if (pin < steps[step].pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") prev.click();
+      if (e.key === "ArrowRight") next.click();
+    });
+
+    show(0, 0);
+  </script>
+</body>
+</html>
