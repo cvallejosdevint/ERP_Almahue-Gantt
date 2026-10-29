@@ -30,11 +30,12 @@
     .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
     .frame { position: relative; display: inline-block; max-width: 100%; }
     .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 170px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
-    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
-    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .9; outline: 3px solid #facc15; z-index: 2; }
-    .card { margin-top: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+    button.pin { position: absolute; width: 28px; height: 28px; margin: -14px 0 0 -14px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 2px 6px rgba(0,0,0,.45); z-index: 1; opacity: .75; cursor: pointer; transition: transform .15s ease, opacity .15s ease; }
+    button.pin:hover { opacity: 1; transform: scale(1.1); }
+    button.pin.on { width: 38px; height: 38px; margin: -19px 0 0 -19px; font-size: 16px; opacity: 1; outline: 3px solid #facc15; z-index: 5; transform: scale(1.05); }
+    .card { margin-top: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
     .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
-    .card p { margin: 0; color: #44403c; }
+    .card p { margin: 0; color: #44403c; line-height: 1.4; }
     @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
   </style>
 </head>
@@ -65,8 +66,9 @@
         img: "despues-paso1-solicitud-reapertura.png",
         alt: "Modal de solicitud formal de reapertura con justificación de ajuste y aviso de período contable cerrado",
         pins: [
-          { x: 50, y: 48, t: "Justificación Obligatoria", d: "El administrativo ingresa el motivo fundado de la corrección (horas de cuadrilla en Cuartel 3). Al estar el mes contable cerrado, el sistema advierte que requerirá autorización previa con PIN de Contratistas y posteriormente de Contabilidad." },
-          { x: 61, y: 63, t: "Enviar Solicitud", d: "Al pulsar Enviar Solicitud a Jefaturas, el sistema genera el folio SOL-REV-2026-001 y notifica internamente al Administrador de Contratistas para su primera revisión técnica." }
+          { x: 50.0, y: 56.8, t: "Justificación Obligatoria", d: "El administrativo ingresa el motivo fundado de la corrección (horas de cuadrilla en Cuartel 3). Al estar el mes contable cerrado, el sistema advierte que requerirá autorización previa con PIN de Contratistas y posteriormente de Contabilidad." },
+          { x: 50.0, y: 64.1, t: "Aviso de Doble VºBº", d: "Al estar el período contable cerrado, el sistema bloquea la reapertura directa y notifica formalmente que se requerirá la aprobación secuencial del Administrador de Contratistas y del Administrador de Contabilidad." },
+          { x: 56.4, y: 72.1, t: "Enviar Solicitud a Jefaturas", d: "Al pulsar Enviar Solicitud a Jefaturas, el sistema genera el folio SOL-REV-2026-001 y notifica internamente al Administrador de Contratistas para su primera revisión técnica." }
         ]
       },
       {
@@ -75,8 +77,9 @@
         img: "despues-paso2-vb-contratistas.png",
         alt: "Tarjeta de seguimiento de solicitud mostrando el primer visto bueno de Contratistas aprobado con PIN y esperando Contabilidad",
         pins: [
-          { x: 33, y: 64, t: "1º VºBº Otorgado", d: "Pablo (Gerente de Campo) revisó la solicitud y firmó electrónicamente con su clave PIN de 4 dígitos (4821). El sistema registra su nombre, fecha y observación de validación en terreno." },
-          { x: 72, y: 64, t: "Paso 2: Pendiente en Contabilidad", d: "Como el mes contable 2026-08 se encuentra cerrado, la proforma aún no se libera y la solicitud se deriva a la bandeja contable con botón directo para ingresar a evaluarla." }
+          { x: 90.0, y: 54.5, t: "Estado Solicitud: Esperando Contabilidad", d: "El badge superior refleja que el primer paso técnico está completado y que el flujo se encuentra derivado a Contabilidad." },
+          { x: 39.2, y: 76.9, t: "1º VºBº Otorgado con PIN", d: "Pablo (Jefatura de Contratistas) validó en terreno la pertinencia del ajuste y autorizó ingresando su PIN de 4 dígitos. Queda constancia de fecha, hora y justificación técnica." },
+          { x: 92.3, y: 78.2, t: "Derivación a Bandeja Contable", d: "Como el mes contable 2026-08 está cerrado, la proforma permanece resguardada y se habilita el acceso directo para el segundo visto bueno de Contabilidad." }
         ]
       },
       {
@@ -85,8 +88,9 @@
         img: "despues-paso3-menu-reversas-contabilidad.png",
         alt: "Bandeja de solicitudes de reversa en Contabilidad con modal de autorización PIN",
         pins: [
-          { x: 8, y: 54, t: "Menú Solicitudes de Reversa", d: "Nuevo ítem en Contabilidad ubicado antes de Reportes para concentrar y auditar todos los pedidos de reversa y reapertura de los módulos operativos." },
-          { x: 50, y: 48, t: "Autorización con PIN Contable", d: "Fran / Rodrigo valida el impacto en balance e ingresa el PIN de 4 dígitos. Al confirmar, se libera la proforma a estado REVERSADA permitiendo corregir cuadrillas sin alterar los mayores contables." }
+          { x: 8.5, y: 54.0, t: "Menú Solicitudes de Reversa", d: "Nuevo submódulo en Contabilidad (ubicado antes de Reportes) que centraliza, clasifica y audita todos los pedidos de reapertura provenientes de los módulos operativos." },
+          { x: 50.0, y: 62.0, t: "Autorización con PIN Contable", d: "El Administrador de Contabilidad (Fran / Rodrigo) verifica la consistencia del balance e ingresa el PIN de 4 dígitos (4821) para firmar la reapertura autorizada." },
+          { x: 56.0, y: 77.1, t: "Liberación de Proforma", d: "Al confirmar con PIN, la solicitud queda APROBADA y el sistema restituye la proforma a estado REVERSADA, notificando al administrativo solicitante que la edición se encuentra habilitada." }
         ]
       },
       {
@@ -95,8 +99,8 @@
         img: "despues-paso4-proforma-reversada-edicion.png",
         alt: "Listado de proformas con PRF-2026-020 en estado REVERSADA y editable",
         pins: [
-          { x: 52, y: 46, t: "Proforma Reversada", d: "La proforma PRF-2026-020 figura con badge REVERSADA y sus ingresos de labor diarios intactos, lista para modificar horas, cuarteles o centros de costo." },
-          { x: 95, y: 46, t: "Edición y Re-aprobación", d: "El solicitante María José realiza los ajustes y envía la proforma corregida a DEFINITIVA para habilitar la re-centralización del módulo." }
+          { x: 55.1, y: 43.5, t: "Proforma Reversada y Segura", d: "La proforma PRF-2026-020 adopta el estado REVERSADA manteniendo todas las cuadrillas y horas de labor intactas para su corrección puntual." },
+          { x: 95.0, y: 43.5, t: "Edición y Re-envío", d: "El administrativo realiza los ajustes necesarios en horas o centros de costo y envía la proforma corregida a DEFINITIVA para habilitar la re-centralización del módulo." }
         ]
       },
       {
@@ -105,14 +109,15 @@
         img: "despues-paso5-re-cierre-auditoria.png",
         alt: "Panel de traspaso con módulo re-centralizado y tarjeta de auditoría con las firmas de Contratistas y Contabilidad",
         pins: [
-          { x: 50, y: 68, t: "Auditoría de Doble Firma", d: "La tarjeta de auditoría registra permanentemente la aprobación de Pablo (Gerente de Campo) y Fran / Rodrigo (Contabilidad), junto al nuevo comprobante contable CTR-2026-002-REC." },
-          { x: 94, y: 12, t: "Módulo Centralizado", d: "El botón de cabecera confirma el estado Centralizado y notifica automáticamente a ambas jefaturas informando que el período ha quedado balanceado con el detalle modificado." }
+          { x: 88.0, y: 54.5, t: "Re-centralización Contable", d: "El panel de traspaso registra el nuevo asiento CTR-2026-002-REC generado con las cifras corregidas de mano de obra." },
+          { x: 50.0, y: 75.0, t: "Auditoría Histórica Inalterable", d: "Se despliega la tarjeta de trazabilidad con el historial completo de quién solicitó, quién otorgó el 1º VºBº (Contratistas) y quién autorizó el 2º VºBº (Contabilidad)." },
+          { x: 94.0, y: 12.0, t: "Cierre Concluido y Notificado", d: "El indicador de cabecera confirma el estado Centralizado y el sistema despacha las notificaciones automáticas a ambas jefaturas informando el éxito del re-cierre." }
         ]
       }
     ];
 
-    let currentStep = 0;
-    let currentPin = 0;
+    let step = 0;
+    let pin = 0;
 
     const titleEl = document.getElementById("title");
     const railEl = document.getElementById("rail");
@@ -123,7 +128,7 @@
 
     function renderRail() {
       railEl.innerHTML = steps.map((s, i) => `
-        <button type="button" class="step ${i === currentStep ? "on" : ""}" data-idx="${i}">
+        <button type="button" class="step ${i === step ? "on" : ""}" data-idx="${i}">
           <div class="n ${s.cls}">${i + 1}</div>
           <div>
             <div class="mod">${s.mod}</div>
@@ -133,81 +138,81 @@
       `).join("");
       railEl.querySelectorAll("button.step").forEach(btn => {
         btn.addEventListener("click", () => {
-          currentStep = Number(btn.getAttribute("data-idx"));
-          currentPin = 0;
-          render();
+          show(Number(btn.getAttribute("data-idx")), 0);
         });
       });
     }
 
-    function render() {
-      const step = steps[currentStep];
-      titleEl.textContent = step.title;
-      prevBtn.disabled = currentStep === 0;
-      nextBtn.disabled = currentStep === steps.length - 1;
+    function show(sIdx, pIdx) {
+      const stepChanged = (step !== sIdx);
+      step = sIdx;
+      pin = pIdx;
 
-      stageEl.innerHTML = `
-        <div class="frame">
-          <img src="${step.img}" alt="${step.alt}" />
-          ${step.pins.map((p, idx) => `
-            <button type="button" class="pin ${step.cls} ${idx === currentPin ? "on" : ""}" style="left:${p.x}%; top:${p.y}%;" data-pin="${idx}">
-              ${idx + 1}
-            </button>
-          `).join("")}
-        </div>
-      `;
+      const current = steps[step];
+      titleEl.textContent = current.title;
 
-      stageEl.querySelectorAll("button.pin").forEach(pinBtn => {
-        pinBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          currentPin = Number(pinBtn.getAttribute("data-pin"));
-          renderCard();
-          updatePins();
+      let frame = stageEl.querySelector(".frame");
+      if (stepChanged || !frame) {
+        stageEl.innerHTML = `
+          <div class="frame">
+            <img src="${current.img}" alt="${current.alt}" />
+            ${current.pins.map((p, idx) => `
+              <button type="button" class="pin ${current.cls} ${idx === pin ? "on" : ""}" style="left:${p.x}%; top:${p.y}%;" data-pin="${idx}">
+                ${idx + 1}
+              </button>
+            `).join("")}
+          </div>
+        `;
+        stageEl.querySelectorAll("button.pin").forEach(pinBtn => {
+          pinBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            show(step, Number(pinBtn.getAttribute("data-pin")));
+          });
         });
-      });
+        renderRail();
+      } else {
+        stageEl.querySelectorAll("button.pin").forEach((pBtn, idx) => {
+          if (idx === pin) pBtn.classList.add("on");
+          else pBtn.classList.remove("on");
+        });
+      }
 
-      renderRail();
-      renderCard();
-    }
-
-    function updatePins() {
-      stageEl.querySelectorAll("button.pin").forEach((p, idx) => {
-        if (idx === currentPin) p.classList.add("on");
-        else p.classList.remove("on");
-      });
-    }
-
-    function renderCard() {
-      const step = steps[currentStep];
-      const pin = step.pins[currentPin] || step.pins[0];
+      const item = current.pins[pin] || current.pins[0];
       cardEl.innerHTML = `
-        <h3>Pin ${currentPin + 1}: ${pin.t}</h3>
-        <p>${pin.d}</p>
+        <h3>Pin ${pin + 1}: ${item.t}</h3>
+        <p>${item.d}</p>
       `;
+
+      prevBtn.disabled = (step === 0 && pin === 0);
+      nextBtn.disabled = (step === steps.length - 1 && pin === current.pins.length - 1);
     }
 
-    prevBtn.addEventListener("click", () => {
-      if (currentStep > 0) {
-        currentStep--;
-        currentPin = 0;
-        render();
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) {
+        show(step, pin + 1);
+      } else if (step < steps.length - 1) {
+        show(step + 1, 0);
       }
-    });
+    }
 
-    nextBtn.addEventListener("click", () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        currentPin = 0;
-        render();
+    function back() {
+      if (pin > 0) {
+        show(step, pin - 1);
+      } else if (step > 0) {
+        show(step - 1, steps[step - 1].pins.length - 1);
       }
-    });
+    }
+
+    prevBtn.addEventListener("click", back);
+    nextBtn.addEventListener("click", forward);
 
     window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") prevBtn.click();
-      else if (e.key === "ArrowRight") nextBtn.click();
+      if (e.key === "ArrowLeft") back();
+      else if (e.key === "ArrowRight") forward();
     });
 
-    render();
+    show(0, 0);
   </script>
 </body>
 </html>
