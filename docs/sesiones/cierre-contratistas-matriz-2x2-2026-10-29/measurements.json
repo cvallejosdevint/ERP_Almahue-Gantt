@@ -37,13 +37,13 @@
   },
   "caso2MotivoInput": {
     "x": 310,
-    "y": 559.5,
+    "y": 489,
     "width": 953.46875,
     "height": 40
   },
   "caso2BtnReabrir": {
     "x": 1275.46875,
-    "y": 559.5,
+    "y": 489,
     "width": 206.53125,
     "height": 40
   },
@@ -67,7 +67,7 @@
   },
   "caso3Alert": {
     "x": 297,
-    "y": 464.5,
+    "y": 394,
     "width": 1198,
     "height": 34
   },
@@ -79,7 +79,7 @@
   },
   "caso4BtnEmitirAjuste": {
     "x": 1246.21875,
-    "y": 582.5,
+    "y": 512,
     "width": 233.78125,
     "height": 40
   },
@@ -106,5 +106,11 @@
     "y": 249,
     "width": 448,
     "height": 462
+  },
+  "reopenCardBox": {
+    "x": 310,
+    "y": 469,
+    "width": 953.46875,
+    "height": 60
   }
 }

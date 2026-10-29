@@ -39,7 +39,7 @@
   </header>
 
   <section>
-    <h2>1. Bandeja de Proformas: Estado REVERSADA, Filtro Dedicado y Reversa con Clave</h2>
+    <h2>1. Bandeja de Proformas: Estado REVERSADA y Filtro Dedicado</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -47,17 +47,17 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-proformas-marcado.png" alt="Nuevo listado de proformas con filtro de Reversadas, acción de reversa y mantención de labores" />
+        <img src="despues-proformas-marcado.png" alt="Nuevo listado de proformas con filtro de Reversadas y KPI de estado" />
       </figure>
     </div>
     <ul class="nota">
-      <li><strong>Qué cambió:</strong> Se agregó el estado formal <code>REVERSADA</code> en base de datos y front, con filtro dedicado en la barra y botón de reversa con clave de perfil de usuario. Al reversar una proforma, las labores diarias permanecen vinculadas para permitir corregir centros de costo, cuarteles o tarifas sin recapturar información desde cero. Tras las correcciones, se habilita la re-solicitud de aprobación a <code>DEFINITIVA</code>.</li>
-      <li><strong>Qué no se apretó:</strong> No se ejecutó la acción de solicitar aprobación para mantener visible la proforma en estado reversada en el catálogo.</li>
+      <li><strong>Qué cambió:</strong> Se agregó el estado formal <code>REVERSADA</code> en base de datos y front, con badge visual de advertencia y opción en el selector de filtros de cabecera. Al reversar con clave de usuario, los ingresos diarios permanecen asociados permitiendo corregir cuadrillas, cuarteles, centros de costo o tarifas sin rearmar el documento desde cero. Tras corregirse, se habilita la re-solicitud de aprobación a <code>DEFINITIVA</code>.</li>
+      <li><strong>Qué no se apretó:</strong> No se ejecutó la acción de solicitar aprobación para mantener visible la proforma en estado reversada.</li>
     </ul>
   </section>
 
   <section>
-    <h2>2. Panel de Resumen de Cierre y Traspaso: Matriz 2x2 y Comprobante de Ajuste con PIN</h2>
+    <h2>2. Panel de Resumen de Cierre y Traspaso: Matriz 2x2 y Asiento Desglosado</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -65,11 +65,11 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-traspaso-cierre-marcado.png" alt="Nuevo panel de traspaso con banner interactivo de la matriz 2x2 y protocolo de ajuste con PIN" />
+        <img src="despues-traspaso-cierre-marcado.png" alt="Nuevo panel de traspaso con banner de la matriz 2x2 y control de cierre" />
       </figure>
     </div>
     <ul class="nota">
-      <li><strong>Qué cambió:</strong> Se implementó el banner interactivo de la <strong>Matriz 2x2</strong> que clasifica en tiempo real los cuatro cuadrantes de operación entre Contratistas y Contabilidad (Caso 1 al 4). En el Caso 2 se permite la reapertura con anulación de asiento; en el Caso 3 se bloquea el traspaso con aviso de diferimiento; y en el Caso 4 (Cierre total) se bloquea la reapertura protegiendo el balance histórico y se habilita la emisión puntual del Comprobante de Ajuste Contable con firma PIN de Reglas de Aprobación.</li>
+      <li><strong>Qué cambió:</strong> Se incorporó el banner interactivo de la <strong>Matriz 2x2</strong> que clasifica el estado actual en uno de los 4 cuadrantes: Caso 1 (ambos abiertos), Caso 2 (Contratistas centralizado, Contabilidad abierta), Caso 3 (Contabilidad cerrada bloqueando traspaso), y Caso 4 (Cierre total definitivo donde la centralización es intocable y solo rige Comprobante de Ajuste con PIN). Además, el asiento mensual agrupa Débitos estrictamente por <code>centroCostoId</code> y segrega Créditos por Contratista con campo <code>auxiliar: RUT</code>.</li>
       <li><strong>Qué no se apretó:</strong> No se pulsó el botón de Traspaso y Cierre de período para mantener el estado de pre-visualización y auditoría.</li>
     </ul>
   </section>
@@ -147,3 +147,4 @@
   </script>
 </body>
 </html>
+

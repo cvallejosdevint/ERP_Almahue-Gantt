@@ -102,17 +102,17 @@
         alt: "Panel de traspaso en caso 2 con formulario de reapertura de módulo",
         pins: [
           {
-            x: 58.3, y: 34.7,
-            t: "Banner Caso 2 (CTR Centralizado · Contable Abierto)",
-            d: "Identifica que el módulo Contratistas ya fue cerrado generando el asiento CTR-2026-001, pero el período en Contabilidad general sigue abierto."
+            x: 42.0, y: 35.8,
+            t: "Estado de Período y Traspaso",
+            d: "Muestra que el período contable general sigue ABIERTO y el cierre de Contratistas fue ejecutado bajo asiento CTR-2026-001."
           },
           {
-            x: 51.2, y: 60.4,
+            x: 51.2, y: 53.0,
             t: "Motivo Obligatorio de Reapertura",
             d: "Exige registrar una justificación formal de auditoría de al menos 5 caracteres para habilitar la reversión del cierre."
           },
           {
-            x: 89.7, y: 60.4,
+            x: 89.7, y: 53.0,
             t: "Botón Reabrir Cierre Contratistas",
             d: "Genera automáticamente el contra-asiento REVERSA-CTR:2026-10 en Contabilidad, elimina el bloqueo del mes y restituye las proformas a estado abierto para permitir la reversa del Caso 1."
           }
@@ -125,12 +125,12 @@
         alt: "Panel de traspaso en caso 3 con botón de cierre inhabilitado por período contable cerrado",
         pins: [
           {
-            x: 58.3, y: 34.7,
-            t: "Banner Caso 3 (CTR Abierto · Contable Cerrado)",
-            d: "Detecta que hay proformas pendientes de traspasar en Contratistas, pero el período mensual de Contabilidad ya fue clausurado."
+            x: 35.0, y: 35.8,
+            t: "Período Contable CERRADO",
+            d: "Indica que el mes de Contabilidad general se encuentra cerrado, impidiendo incorporar nuevos asientos sin reapertura contable previa."
           },
           {
-            x: 58.3, y: 50.2,
+            x: 58.3, y: 42.8,
             t: "Alerta de Bloqueo Contable",
             d: "Informa que no es posible centralizar en este mes cerrado. Las correcciones deben realizarse en Contratistas y el traspaso debe diferirse al siguiente mes contable abierto."
           },
@@ -148,8 +148,8 @@
         alt: "Modal de Comprobante de Ajuste Contable con PIN de Reglas de Aprobación",
         pins: [
           {
-            x: 58.3, y: 34.7,
-            t: "Banner Caso 4 (Cierre Total Definitivo)",
+            x: 58.3, y: 42.0,
+            t: "Bloqueo de Reapertura y Regla de Ajuste",
             d: "Contratistas y Contabilidad cerrados. La reapertura está estrictamente bloqueada para proteger la inmutabilidad del balance contable histórico."
           },
           {
