@@ -97,6 +97,24 @@
     </ul>
   </section>
 
+    <section>
+    <h2>4. Contabilidad: Comprobante de Ajuste Contable (Rectificación con Período Cerrado)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-traspaso-cierre.png" alt="Contabilidad sin comprobante formal de ajuste para rectificaciones de módulos cerrados" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-paso6-asiento-ajuste-contable.png" alt="Comprobante de ajuste contable formal AJU-2026-001 con imputación balanceada por centros de costo" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Ante la rectificación de una proforma con el mes contable cerrado, el sistema no vulnera la inmutabilidad del asiento original ni de los mayores generales. Genera automáticamente un <strong>Comprobante de Ajuste Contable</strong> (tipo <code>AJUSTE</code>, correlativo <code>AJU-2026-001</code>) con imputación al Debe en Cuartel 3 (Manzanos) y al Haber en Cuartel 1 (Cerezos) en la cuenta <code>6-1-01-01-002</code>, preservando la trazabilidad con el origen <code>AJUSTE-CTR:2026-08:PRF-2026-020</code> y glosa de auditoría detallada.</li>
+      <li><strong>Qué no se apretó:</strong> No se modificaron los asientos históricos ni se alteraron los períodos ya auditados.</li>
+    </ul>
+  </section>
+
   <div class="visor" id="visor" hidden>
     <div class="visor-bar">
       <strong id="visor-titulo"></strong>
