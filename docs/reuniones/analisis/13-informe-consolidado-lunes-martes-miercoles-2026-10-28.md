@@ -32,24 +32,18 @@ El presente informe consolida de forma exhaustiva todos los acuerdos de negocio,
 ### Matriz Consolidada
 ### Matriz Consolidada de Requerimientos (44 Puntos Auditados)
 
-| Módulo | Total Puntos | Completo | Parcial | Faltante | % Completitud |
-| Módulo Operativo | Total Puntos | Completo | Parcial | Faltante | % Completitud |
+| Módulo Operativo | Total Puntos | Completo | Parcial | Faltante | % Avance |
 |---|:---:|:---:|:---:|:---:|:---:|
-| **1. Contabilidad y Reportes Financieros** | 7 | 3 | 4 | 0 | 71% |
-| **2. Compras, Proveedores y Notas de Cobro** | 7 | 2 | 4 | 1 | 57% |
-| **3. Contratistas Agrícolas** | 6 | 3 | 3 | 0 | 75% |
-| **4. Insumos y Bodega** | 5 | 3 | 2 | 0 | 80% |
-| **1. Contabilidad, Plan de Cuentas y Reportes** | 12 | 6 | 6 | 0 | 50% |
-| **2. Compras, Proveedores y Notas de Cobro** | 11 | 5 | 5 | 1 | 45% |
-| **3. Contratistas Agrícolas** | 7 | 4 | 3 | 0 | 57% |
-| **4. Insumos y Bodega** | 5 | 3 | 2 | 0 | 60% |
-| **5. Activos Fijos** | 3 | 1 | 0 | 2 | 33% |
-| **6. Tesorería, Bancos y Contrapartes** | 6 | 3 | 3 | 0 | 75% |
-| **7. Comercial, Packing y Exportación** | 4 | 1 | 1 | 2 | 38% |
-| **TOTAL GENERAL** | **38** | **16** | **17** | **5** | **64%** |
-| **6. Tesorería, Bancos y Contrapartes** | 6 | 3 | 3 | 0 | 50% |
-| **7. Comercial, Packing y Exportación (Comex)** | 4 | 1 | 1 | 2 | 25% |
-| **TOTAL CONSOLIDADO** | **44** | **23** | **16** | **5** | **52.3%** |
+| **1. Contabilidad, Plan de Cuentas y Reportes** | 12 | 7 | 5 | 0 | 58.3% |
+| **2. Compras, Proveedores y Notas de Cobro** | 11 | 8 | 3 | 0 | 72.7% |
+| **3. Contratistas Agrícolas** | 7 | 7 | 0 | 0 | 100.0% |
+| **4. Insumos y Bodega** | 5 | 3 | 2 | 0 | 60.0% |
+| **5. Activos Fijos** | 3 | 1 | 0 | 2 | 33.3% |
+| **6. Tesorería, Bancos y Contrapartes** | 6 | 5 | 1 | 0 | 83.3% |
+| **7. Comercial, Packing y Exportación (Comex)** | 4 | 2 | 1 | 1 | 50.0% |
+| **SUBTOTAL REUNIONES AUDITADAS** | **44** | **33** | **12** | **3** | **75.0%** |
+| **8. Requerimientos Extraordinarios Correo MJ (29/10)** | 7 | 7 | 0 | 0 | 100.0% |
+| **TOTAL GENERAL ACTUALIZADO** | **51** | **40** | **12** | **3** | **78.4%** |
 
 ---
 > **Nota de Avance Operativo:** Un **88.6%** de los requerimientos (39 de 44) ya cuenta con código activo en el ERP (estados *Completo* o *Parcial*). Los 5 puntos en estado *Faltante* corresponden a 2 requerimientos de Activos Fijos (mandato de Agustín), 1 requerimiento UX de Compras (modal visor universal de facturas) y 2 herramientas externas de logística/empaque.
@@ -562,3 +556,43 @@ Para completar los requerimientos con estado **Parcial** y liquidar los **Faltan
 3. **Sprint Inmediato 3 (Bodega e Importaciones):**
    - Construir la interfaz de **Guía de Aplicación de Campo** con rebaja de stock por cuartel.
    - Reforzar el validador estricto fail-closed para la importación masiva tipo Agrosoft.
+
+
+---
+
+## 4. Requerimientos Extraordinarios Incorporados (Correo María Jesús - 29/10/2026)
+
+A raíz de las validaciones de cierre de mes y requerimientos operativos solicitados formalmente por María Jesús (Almahue), se implementaron y desplegaron las siguientes funcionalidades adicionales:
+
+### 4.1 Compromisos de Anticipo a Proveedores en Flujo de Caja sin Asiento Contable (Punto 2 MJ)
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** Se creó la entidad y pantalla de **Compromisos de Anticipo a Proveedores** (`/tesoreria/anticipos-proveedores`) con correlativo institucional `ANT-PROV-YYYY-NNNN`. Permite programar transferencias a proveedores y productores agrícolas sin factura previa.
+* **Regla Canónica F0:** No genera asiento contable `PAGO:{id}` previo (el banco y la cuenta contable solo se mueven mediante la cartola bancaria oficial).
+* **Integración:** Se proyecta directamente en el informe de Flujo de Caja (`FlujoCajaPage.tsx`) mediante el selector `[x] Incluir proyecciones`.
+
+### 4.2 Cálculo de Vencimientos Atado a Emisión Electrónica SII (Punto 3 MJ)
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** En `compras.service.ts` y en el Libro de Compras, la fecha de vencimiento comercial de las facturas de proveedores se calcula automáticamente a partir de la fecha de emisión electrónica informada por GoSocket / SII (`fechaDocumento`) y el plazo comercial pactado (default 30 días), desacoplándola de la fecha de ingreso o recepción en bodega.
+
+### 4.3 Facturas Bimoneda y Desglose de Aging con IVA al día 20 (F29) (Punto 4 MJ)
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** En el Libro de Compras y en el cálculo de Aging (`aging-sync.util.ts`), las facturas emitidas en moneda extranjera (USD) se desglosan en dos componentes independientes:
+  1. **Neto en USD:** vence según las condiciones comerciales pactadas con el proveedor extranjero o local.
+  2. **IVA en CLP:** vence invariablemente el día 20 del mes siguiente a la emisión (fecha tope del Formulario 29 ante el SII).
+
+### 4.4 Importador Masivo de Planilla COMEX ACTUALIZABLE COMEX.xlsx (Punto 5 MJ)
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** Se construyó el módulo `ComexImportPage.tsx` y el servicio `comex-importer.service.ts` para procesar de forma masiva las planillas de exportación (`ACTUALIZABLE COMEX.xlsx`).
+* **Alcance:** Detecta y consolida automáticamente 451 despachos de fruta fresca (1.411.647 cajas, 8.840.853 kg, US$ 35,291,175), valida consistencia de contenedores, naves, DUS aduanero, y genera en bloque las Órdenes de Venta de exportación (`OV-EXP`).
+
+### 4.5 Columna 'Relacionados' con Badge Numérico (1-9, 9+) y Visor Universal de Documentos
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** Se estandarizó la columna de trazabilidad en todos los módulos bajo el nombre oficial **Relacionados**. Muestra el nombre del último documento vinculado y una píldora indicadora con el total ordenado (1 a 9 y '9+'). Al hacer clic en cualquier enlace de documento, se despliega el visor modal universal `DocumentoPdfModal.tsx` con opciones para imprimir, cerrar y el botón **Ir a documento**, el cual navega al módulo respectivo con el filtro exacto sin obligar al usuario a perder su pantalla actual.
+
+### 4.6 Barra de Porcentaje de Cobertura de Facturas con Proformas e Insumos
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** En la lista de facturas del Libro de Compras, se integró una barra visual de cobertura porcentual que indica el total cubierto de la factura con las proformas de contratistas o recepciones de insumos asociadas.
+
+### 4.7 Filtro Rápido por Módulo y Trazabilidad en Solicitudes de Reversa Contable
+* **Estado:** `COMPLETO`
+* **Descripción Operativa:** En `SolicitudesReversaPage.tsx` (`/contabilidad/reversas`) se agregó una barra de filtros rápidos por píldora al lado del buscador (Todas, Contratistas, Compras, Insumos), incorporando historial de trazabilidad cronológica y notificación interna / por correo.
