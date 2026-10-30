@@ -34,16 +34,16 @@ El presente informe consolida de forma exhaustiva todos los acuerdos de negocio,
 
 | M贸dulo Operativo | Total Puntos | Completo | Parcial | Faltante | % Avance |
 |---|:---:|:---:|:---:|:---:|:---:|
-| **1. Contabilidad, Plan de Cuentas y Reportes** | 12 | 7 | 5 | 0 | 58.3% |
+| **1. Contabilidad, Plan de Cuentas y Reportes** | 12 | 8 | 4 | 0 | 66.7% |
 | **2. Compras, Proveedores y Notas de Cobro** | 11 | 8 | 3 | 0 | 72.7% |
 | **3. Contratistas Agr铆colas** | 7 | 7 | 0 | 0 | 100.0% |
 | **4. Insumos y Bodega** | 5 | 3 | 2 | 0 | 60.0% |
 | **5. Activos Fijos** | 3 | 1 | 0 | 2 | 33.3% |
 | **6. Tesorer铆a, Bancos y Contrapartes** | 6 | 5 | 1 | 0 | 83.3% |
 | **7. Comercial, Packing y Exportaci贸n (Comex)** | 4 | 2 | 1 | 1 | 50.0% |
-| **SUBTOTAL REUNIONES AUDITADAS** | **44** | **33** | **12** | **3** | **75.0%** |
+| **SUBTOTAL REUNIONES AUDITADAS** | **44** | **34** | **11** | **3** | **77.3%** |
 | **8. Requerimientos Extraordinarios Correo MJ (29/10)** | 7 | 7 | 0 | 0 | 100.0% |
-| **TOTAL GENERAL ACTUALIZADO** | **51** | **40** | **12** | **3** | **78.4%** |
+| **TOTAL GENERAL ACTUALIZADO** | **51** | **41** | **11** | **3** | **80.4%** |
 
 ---
 > **Nota de Avance Operativo:** Un **88.6%** de los requerimientos (39 de 44) ya cuenta con c贸digo activo en el ERP (estados *Completo* o *Parcial*). Los 5 puntos en estado *Faltante* corresponden a 2 requerimientos de Activos Fijos (mandato de Agust铆n), 1 requerimiento UX de Compras (modal visor universal de facturas) y 2 herramientas externas de log铆stica/empaque.
@@ -106,9 +106,8 @@ pie title Distribuci贸n Consolidada de Requerimientos (44 Puntos)
 #### 1.5 Estado de Resultados Mensual vs Situaci贸n Financiera al 31/12 (K-16, K-18, K-19)
 * **Descripci贸n:** El Estado de Resultados mensual muestra exclusivamente los movimientos del mes consultado. Al 31 de diciembre, la utilidad del ejercicio se traspasa al Estado de Situaci贸n Financiera como Resultado Acumulado, donde deben coexistir ambos conceptos para cuadre formal (validado contra balances de MJ).
 * **Origen / Timestamps:** Lunes AM `[00:19 - 02:03]`.
-* **Estado:** `PARCIAL`
-* **Brecha / Pendiente:** `EstadosFinancierosPage.tsx` genera el balance de situaci贸n y EERR del periodo, pero falta incorporar el par谩metro de traspaso autom谩tico formal de resultados de ejercicios anteriores al patrimonio neto en la consulta multianual.
-* **Evidencia en C贸digo:** [EstadosFinancierosPage.tsx](file:///e:/source/repos/Almahue/ERP/erp_front/src/features/contabilidad/EstadosFinancierosPage.tsx) genera los reportes por periodo; falta formalizar el comando de asiento de cierre autom谩tico de fin de a帽o al 31/12.
+* **Estado:** COMPLETO
+* **Evidencia en C骴igo:** Implementado y validado en [EstadosFinancierosPage.tsx](file:///e:/source/repos/Almahue/ERP/erp_front/src/features/contabilidad/EstadosFinancierosPage.tsx) y [CierreAnualModal.tsx](file:///e:/source/repos/Almahue/ERP/erp_front/src/features/contabilidad/CierreAnualModal.tsx). Incluye alternancia entre Movimientos del mes y Acumulado anual con c醠culo din醡ico de p閞didas y ganancias del periodo, coexistencia formal de Resultado Acumulado (2-4-04-02-001) y Resultado del Ejercicio (2-4-04-02-004) en Situaci髇 Financiera para cuadre patrimonial formal, y comando de Asiento de Cierre Anual autom醫ico al 31/12 con previsualizaci髇 en 3 columnas (Ingresos, Gastos, Patrimonio), comprobante cuadrado y persistencia en periodo diciembre.
 
 #### 1.4 Carga Masiva de Comprobantes Contables (Plantilla Restrictiva Tipo Agrosoft)
 * **Descripci贸n Operativa:** Plantilla Excel con validaci贸n estricta fail-closed. Campos: correlativo (l铆neas del comprobante), tipo de comprobante, fecha, periodo contable, tipo de cambio, cuenta contable, dimensiones (CC, elemento, 谩rea). Regla: si la cuenta exige CC y no viene en el archivo, se rechaza todo el lote (no cargar parcialmente). Validaci贸n de cuadre Debe = Haber en CLP y USD y correspondencia de fecha con periodo contable.
