@@ -115,6 +115,42 @@
     </ul>
   </section>
 
+  <section>
+    <h2>5. Libro de Compras: Asociación Multi-proforma con Contador de Cobertura en Vivo</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-traspaso-cierre.png" alt="Libro de compras sin selección múltiple ni barra de cobertura para proformas" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-paso7-asociacion-multi-proforma.png" alt="Modal de asociación multi-proforma con contador en vivo y calce exacto" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Se incorporó la selección múltiple de proformas asociables a facturas de contratistas (ejemplo FAC-CTR-9901 de Servicios Agrícolas del Valle). Se implementó la barra dinámica de cobertura idéntica a las OC madre e hijas, indicando en tiempo real el Neto Factura ($7.600.000), Monto Seleccionado ($7.600.000), Saldo Restante por Cubrir ($0) y badge de estado 'Calce exacto (100% cubierto)'. El botón 'Vincular N proforma(s)' valida que la suma de proformas no exceda el monto neto del documento tributario.</li>
+      <li><strong>Qué no se apretó:</strong> No se asociaron facturas exentas ni se generaron descalces contables.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Contratistas: Liberación de Factura en Libro de Compras ante Reversa</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-proformas.png" alt="Proformas facturadas bloqueadas sin opción de desvincular factura comercial" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-paso8-liberacion-factura-contratistas.png" alt="Modal de confirmación para liberar factura suelta en Libro de Compras y reabrir proforma" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li><strong>Qué cambió:</strong> Se implementó la acción 'Liberar factura' en la bandeja de proformas facturadas. Al desvincular, la factura comercial queda liberada y suelta en el Libro de Compras para su re-asociación o imputación posterior. La proforma vuelve a estado definitivo o reversada y sus labores diarias regresan a estado asociado, permitiendo corregir horas, cuadrillas o cuarteles antes de re-vincular.</li>
+      <li><strong>Qué no se apretó:</strong> No se anularon los documentos tributarios en el SII ni se alteraron los registros contables de compras.</li>
+    </ul>
+  </section>
+
   <div class="visor" id="visor" hidden>
     <div class="visor-bar">
       <strong id="visor-titulo"></strong>

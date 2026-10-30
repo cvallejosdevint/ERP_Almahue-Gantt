@@ -160,6 +160,28 @@
           { x: 50.0, y: 30.2, t: "Trazabilidad con Módulo Origen", d: "El campo Origen vincula formalmente el comprobante con AJUSTE-CTR:2026-08:PRF-2026-020 y la glosa certifica la reclasificación de cuadrilla de Servicios Agrícolas del Valle." },
           { x: 58.3, y: 59.4, t: "Imputación Balanceada por Centro de Costo", d: "Ajuste cuadrado por $450.000 en Cuenta 6-1-01-01-002: Cargo al Debe en Cuartel 3 (Manzanos) y Abono al Haber en Cuartel 1 (Cerezos)." }
         ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "7. Asociación Multi-proforma con Contador de Cobertura en Libro de Compras",
+        img: "despues-paso7-asociacion-multi-proforma.png",
+        alt: "Modal de asociación de proformas en Libro de Compras con barra de cobertura en vivo y selección múltiple",
+        pins: [
+          { x: 50.0, y: 25.3, t: "Pestañas de Selección (OC y Proformas)", d: "El administrativo selecciona el origen Proformas (3 disponibles del contratista Servicios Agrícolas del Valle) para vincularlas a la factura FAC-CTR-9901 sin requerir orden de compra previa." },
+          { x: 50.0, y: 50.0, t: "Barra Dinámica de Cobertura en Vivo", d: "Control idéntico al patrón de OC madre e hijas: compara en tiempo real el Neto de Factura ($7.600.000) contra el Monto Seleccionado ($7.600.000) con Saldo Restante $0 y badge verde 'Calce exacto (100% cubierto)'." },
+          { x: 72.7, y: 84.9, t: "Vincular Múltiples Proformas", d: "El botón de acción resume la operación 'Vincular 2 proforma(s) ($7.600.000)' habilitándose únicamente cuando las proformas seleccionadas no exceden el monto neto de la factura." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "8. Desvinculación y Liberación de Factura ante Solicitud de Reversa",
+        img: "despues-paso8-liberacion-factura-contratistas.png",
+        alt: "Modal de liberación de factura en Contratistas para soltar el documento en Libro de Compras y reabrir labores",
+        pins: [
+          { x: 45.8, y: 41.8, t: "Desvinculación Segura de Factura", d: "Acción formal desde el listado de proformas que permite desvincular la factura comercial asociada a la proforma cuando se requiere aplicar una reversa operativa." },
+          { x: 50.0, y: 49.2, t: "Impacto: Factura Suelta y Labores Editables", d: "La factura FAC-8891 queda suelta y disponible en el Libro de Compras para su re-asociación posterior, mientras que la proforma y sus labores diarias se restituyen a estado editable para ajustar cuadrillas y horas." },
+          { x: 58.9, y: 57.4, t: "Confirmación Auditada con PIN", d: "Al pulsar 'Liberar factura', la acción queda registrada en la bitácora histórica y notifica tanto al encargado de contratistas como a compras." }
+        ]
       }
     ];
 
