@@ -1,41 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <title>Cobertura de Parcialización, Exportación y Administradores - Antes y Después</title>
   <style>
-    :root { color-scheme: light; }
-    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
-    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
-    header { padding-top: 28px; }
-    h1 { font-size: 1.6rem; margin: 0 0 8px; }
-    header p, .nota { margin: 0 0 8px; color: #57534e; }
-    section { margin: 28px auto; padding-bottom: 8px; }
-    h2 { font-size: 1.15rem; margin: 0 0 12px; }
-    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
-    figcaption { padding: 10px 14px; font-weight: 700; }
-    figure.antes figcaption { background: #e7e5e4; }
-    figure.despues figcaption { background: #dcfce7; color: #14532d; }
-    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
-    ul.nota { padding-left: 1.2rem; }
-    ul.nota li { margin: 4px 0; }
-    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
-    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
-    .visor.abierto { display: block; }
-    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
-    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
-    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
-    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
-    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
-    .lienzo.arrastrando { cursor: grabbing; }
-    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+    :root {
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.45 "Segoe UI", sans-serif;
+      background: #f4f1ea;
+      color: #1c1917;
+    }
+
+    header,
+    section {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    header {
+      padding-top: 28px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 8px;
+    }
+
+    header p,
+    .nota {
+      margin: 0 0 8px;
+      color: #57534e;
+    }
+
+    section {
+      margin: 28px auto;
+      padding-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      margin: 0 0 12px;
+    }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    figcaption {
+      padding: 10px 14px;
+      font-weight: 700;
+    }
+
+    figure.antes figcaption {
+      background: #e7e5e4;
+    }
+
+    figure.despues figcaption {
+      background: #dcfce7;
+      color: #14532d;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: zoom-in;
+    }
+
+    ul.nota {
+      padding-left: 1.2rem;
+    }
+
+    ul.nota li {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 900px) {
+      .pair {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .visor {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      background: rgba(12, 10, 9, 0.92);
+      color: #fafaf9;
+    }
+
+    .visor.abierto {
+      display: block;
+    }
+
+    .visor-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: linear-gradient(rgba(12, 10, 9, 0.85), transparent);
+    }
+
+    .visor-bar strong {
+      margin-right: auto;
+      font-size: 0.95rem;
+    }
+
+    .visor-bar span {
+      color: #d6d3d1;
+      font-size: 0.85rem;
+    }
+
+    .visor button {
+      border: 0;
+      border-radius: 8px;
+      background: #292524;
+      color: #fafaf9;
+      font: 600 14px/1 "Segoe UI", sans-serif;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .lienzo {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      cursor: grab;
+      touch-action: none;
+    }
+
+    .lienzo.arrastrando {
+      cursor: grabbing;
+    }
+
+    .lienzo img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: none;
+      max-height: 88vh;
+      transform-origin: center center;
+      user-select: none;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Cobertura de Parcialización, Exportación Universal y Administradores por Módulo</h1>
-    <p>Almahue Export SpA, periodo 2026-08 (Abierto), Modo Demo. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra.</p>
+    <p>Almahue Export SpA, periodo 2026-08 (Abierto), Modo Demo. El recuadro verde y la etiqueta NUEVO están solo en la
+      captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha
+      cambian entre el antes y el después. Esc cierra.</p>
   </header>
 
   <section>
@@ -47,10 +185,14 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-libro-compras-marcado.png" alt="Libro de compras con barra de cobertura y exportación universal marcados en verde" />
+        <img src="despues-libro-compras-marcado.png"
+          alt="Libro de compras con barra de cobertura y exportación universal marcados en verde" />
       </figure>
     </div>
-    <p class="nota">Se agregó la barra de porcentaje y cobertura en las facturas asociadas a proformas de contratistas (ej. FAC-CTR-9901 con PRF-2026-020 al 63%, indicando cubierto $4.800.000 de $7.600.000 y saldo pendiente) y facturas de OC madre/hijas. Se incorporó la exportación universal en CSV, Excel y PDF corporativo (membrete, logotipo y tipografía institucional según Plantilla de documentos). No se pulsó sincronizar ni contabilizar.</p>
+    <p class="nota">Se agregó la barra de porcentaje y cobertura en las facturas asociadas a proformas de contratistas
+      (ej. FAC-CTR-9901 con PRF-2026-020 al 63%, indicando cubierto $4.800.000 de $7.600.000 y saldo pendiente) y
+      facturas de OC madre/hijas. Se incorporó la exportación universal en CSV, Excel y PDF corporativo (membrete,
+      logotipo y tipografía institucional según Plantilla de documentos). No se pulsó sincronizar ni contabilizar.</p>
   </section>
 
   <section>
@@ -58,14 +200,19 @@
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
-        <img src="antes-administradores.png" alt="Pantalla de administradores de módulo con módulos operativos vacíos" />
+        <img src="antes-administradores.png"
+          alt="Pantalla de administradores de módulo con módulos operativos vacíos" />
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-administradores-marcado.png" alt="Pantalla de administradores de módulo con liderazgos asignados marcados en verde" />
+        <img src="despues-administradores-marcado.png"
+          alt="Pantalla de administradores de módulo con liderazgos asignados marcados en verde" />
       </figure>
     </div>
-    <p class="nota">Se asignaron los administradores por concepto en el entorno demo: Contratistas (Pablo Morales, Gerente de Campo), Insumos (Mario Céspedes, Jefe de Bodega / Operaciones con marca de jefatura de área para creación de OC madre) y Contabilidad (Rodrigo Valdés, Administrador Contabilidad para segundo visto bueno con PIN en solicitudes de reversa). No se pulsó guardar ni eliminar.</p>
+    <p class="nota">Se asignaron los administradores por concepto en el entorno demo: Contratistas (Pablo Morales,
+      Gerente de Campo), Insumos (Mario Céspedes, Jefe de Bodega / Operaciones con marca de jefatura de área para
+      creación de OC madre) y Contabilidad (Rodrigo Valdés, Administrador Contabilidad para segundo visto bueno con PIN
+      en solicitudes de reversa). No se pulsó guardar ni eliminar.</p>
   </section>
 
   <section>
@@ -77,10 +224,12 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-proformas-marcado.png" alt="Listado de proformas con botones de exportación CSV, Excel y PDF marcados en verde" />
+        <img src="despues-proformas-marcado.png"
+          alt="Listado de proformas con botones de exportación CSV, Excel y PDF marcados en verde" />
       </figure>
     </div>
-    <p class="nota">Se habilitó la barra de exportación universal con opciones CSV, Excel y PDF institucional integrado con los estilos corporativos de la empresa. No se pulsó nueva proforma ni anular.</p>
+    <p class="nota">Se habilitó la barra de exportación universal con opciones CSV, Excel y PDF institucional integrado
+      con los estilos corporativos de la empresa. No se pulsó nueva proforma ni anular.</p>
   </section>
 
   <section>
@@ -92,10 +241,29 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-ordenes-insumos-marcado.png" alt="Listado de órdenes de insumos con barra de cobertura y exportación marcados en verde" />
+        <img src="despues-ordenes-insumos-marcado.png"
+          alt="Listado de órdenes de insumos con barra de cobertura y exportación marcados en verde" />
       </figure>
     </div>
-    <p class="nota">Se visualiza la barra de cobertura en la columna Cobertura de las órdenes madre (OC-2026-0006 con $100.000 cubierto por sus dos hijas y 2 de 2 facturadas) y la barra de exportación universal a Excel y PDF corporativo. No se pulsó pedir cierre ni notificar.</p>
+    <p class="nota">Se visualiza la barra de cobertura en la columna Cobertura de las órdenes madre (OC-2026-0006 con
+      $100.000 cubierto por sus dos hijas y 2 de 2 facturadas) y la barra de exportación universal a Excel y PDF
+      corporativo. No se pulsó pedir cierre ni notificar.</p>
+  </section>
+
+  <section>
+    <h2>5. Contabilidad: Solicitudes de reversa con filtro rápido, trazabilidad y relacionados</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-reversas.png" alt="Bandeja de solicitudes de reversa antes del filtro rápido y relacionados" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-reversas-marcado.png"
+          alt="Bandeja de solicitudes de reversa con selector rápido de módulo y columna Relacionados marcados en verde" />
+      </figure>
+    </div>
+    <p class="nota">Se incorporó el filtro rápido por módulo operativo (Todos, Contratistas, Compras, Insumos) al lado del buscador, la columna de Relacionados con badge numérico ordenado y modal interactivo, el modal de trazabilidad de ciclo de vida con historial de autorizaciones y el envío de estado por correo y notificación interna. No se pulsó autorizar ni anular.</p>
   </section>
 
   <div class="visor" id="visor" hidden>
@@ -176,10 +344,11 @@
     function soltar(e) {
       if (!arrastrando) return;
       arrastrando = false; lienzo.classList.remove("arrastrando");
-      try { lienzo.releasePointerCapture(e.pointerId); } catch (_) {}
+      try { lienzo.releasePointerCapture(e.pointerId); } catch (_) { }
     }
     lienzo.addEventListener("pointerup", soltar);
     lienzo.addEventListener("pointercancel", soltar);
   </script>
 </body>
+
 </html>
