@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Requerimientos COMEX, Tesorería y Compras - Antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Requerimientos de Mejoras COMEX y Tesorería: antes y después</h1>
+    <p>Almahue Export SpA, sesión demo y periodo 2026-08. El recuadro verde y la etiqueta NUEVO están solo en la captura para destacar la funcionalidad incorporada. Un clic abre la imagen en el visor interactivo. La rueda del ratón o las teclas + y - hacen zoom. Las teclas izquierda y derecha alternan entre el antes y el después. Esc cierra el visor.</p>
+  </header>
+
+  <section>
+    <h2>1. Flujo de Caja: Proyección de Compromisos de Anticipos sin Asiento Contable</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes (Solo movimientos efectivos de Cartola y Asientos)</figcaption>
+        <img src="antes-flujo-caja.png" alt="Flujo de caja antes de incluir proyecciones" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después (Con selector para incluir proyecciones de compromisos)</figcaption>
+        <img src="despues-flujo-caja-marcado.png" alt="Flujo de caja con toggle para incluir compromisos proyectados" />
+      </figure>
+    </div>
+    <p class="nota">Se incorporó el control para incluir proyecciones de compromisos de anticipos a productores, contratistas y proveedores. Permite modelar escenarios de liquidez sin generar asientos en el libro mayor ni registros prematuros de banco.</p>
+  </section>
+
+  <section>
+    <h2>2. Tesorería: Registro y Control de Compromisos de Anticipo</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes (Sin panel de compromisos futuros)</figcaption>
+        <img src="antes-flujo-caja.png" alt="Tesorería previa sin módulo de compromisos futuros" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después (Módulo dedicado con ciclo Proyectado, Confirmado y Ejecutado)</figcaption>
+        <img src="despues-compromisos-anticipos-marcado.png" alt="Pantalla de gestión de compromisos de anticipo" />
+      </figure>
+    </div>
+    <p class="nota">Permite ingresar compromisos financieros asignados a productores con filtro estricto de esProductor, contratistas o proveedores, con fecha estimada de giro y semana de compromiso. Incluye trazabilidad completa del evento.</p>
+  </section>
+
+  <section>
+    <h2>3. Ventas: Importador Masivo COMEX desde Instructivos Excel</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes (Ingreso manual orden por orden)</figcaption>
+        <img src="antes-flujo-caja.png" alt="Módulo comercial previo sin importador masivo de instructivos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después (Dropzone inteligente de ACTUALIZABLE COMEX.xlsx con cálculo de cajas y USD)</figcaption>
+        <img src="despues-comex-import-marcado.png" alt="Pantalla de importación masiva COMEX procesando instructivos" />
+      </figure>
+    </div>
+    <p class="nota">Procesa las hojas Embarques y Nota De Venta del archivo Excel, detecta duplicados por número de embarque y consolida cajas, kilos y montos en dólares para generar Órdenes de Venta confirmadas con RUT receptor 55.555.555-5 listas para emitir Factura de Exportación 110.</p>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        titulo,
+        src: img.getAttribute("src"),
+        alt: img.getAttribute("alt"),
+        caption: img.closest("figure").querySelector("figcaption").textContent.trim(),
+      }));
+    });
+
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const visorTitulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let parActual = 0;
+    let ladoActual = 0;
+    let escala = 1;
+    let dx = 0;
+    let dy = 0;
+    let arrastrando = false;
+    let sx = 0;
+    let sy = 0;
+
+    function renderVisor() {
+      const item = pares[parActual][ladoActual];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      visorTitulo.textContent = item.titulo + " (" + item.caption + ")";
+      aplicarTransform();
+    }
+
+    function aplicarTransform() {
+      visorImg.style.transform = "translate(calc(-50% + " + dx + "px), calc(-50% + " + dy + "px)) scale(" + escala + ")";
+      document.getElementById("zoom-reset").textContent = Math.round(escala * 100) + "%";
+    }
+
+    function abrir(par, lado) {
+      parActual = par;
+      ladoActual = lado;
+      escala = 1;
+      dx = 0;
+      dy = 0;
+      visor.hidden = false;
+      visor.classList.add("abierto");
+      renderVisor();
+    }
+
+    function cerrar() {
+      visor.classList.remove("abierto");
+      visor.hidden = true;
+    }
+
+    document.querySelectorAll(".pair").forEach((pair, parIdx) => {
+      pair.querySelectorAll("figure").forEach((fig, ladoIdx) => {
+        fig.querySelector("img").addEventListener("click", () => abrir(parIdx, ladoIdx));
+      });
+    });
+
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => { escala = Math.min(4, escala * 1.25); aplicarTransform(); });
+    document.getElementById("zoom-out").addEventListener("click", () => { escala = Math.max(0.5, escala / 1.25); aplicarTransform(); });
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; dx = 0; dy = 0; aplicarTransform(); });
+
+    window.addEventListener("keydown", (e) => {
+      if (visor.hidden) return;
+      if (e.key === "Escape") cerrar();
+      if (e.key === "ArrowLeft") { ladoActual = 0; renderVisor(); }
+      if (e.key === "ArrowRight") { ladoActual = 1; renderVisor(); }
+      if (e.key === "+" || e.key === "=") { escala = Math.min(4, escala * 1.2); aplicarTransform(); }
+      if (e.key === "-") { escala = Math.max(0.5, escala / 1.2); aplicarTransform(); }
+    });
+
+    lienzo.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const f = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+      escala = Math.max(0.5, Math.min(4, escala * f));
+      aplicarTransform();
+    }, { passive: false });
+
+    lienzo.addEventListener("mousedown", (e) => {
+      arrastrando = true;
+      lienzo.classList.add("arrastrando");
+      sx = e.clientX - dx;
+      sy = e.clientY - dy;
+    });
+    window.addEventListener("mousemove", (e) => {
+      if (!arrastrando) return;
+      dx = e.clientX - sx;
+      dy = e.clientY - sy;
+      aplicarTransform();
+    });
+    window.addEventListener("mouseup", () => {
+      arrastrando = false;
+      lienzo.classList.remove("arrastrando");
+    });
+  </script>
+</body>
+</html>
