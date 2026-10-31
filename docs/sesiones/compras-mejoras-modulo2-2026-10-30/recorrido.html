@@ -437,8 +437,8 @@
         titulo: "Jerarquía en Cascada en Orden de Compra (C-1)",
         img: "img/step-2-1-compras-oc-cascada.png",
         pins: [
-          { x: 30, y: 35, label: "Imputación en cascada estricta: Cuenta -> CC -> Elemento" },
-          { x: 80, y: 35, label: "Validación de combos dependientes" }
+          { x: 42, y: 38, label: "Imputación en cascada estricta: Cuenta -> CC -> Elemento" },
+          { x: 80, y: 38, label: "Totales automáticos en tarjeta lateral" }
         ],
         regla: "La imputación en la línea de compra sigue un orden riguroso: primero Cuenta Contable, luego Centro de Costo y finalmente Elemento de Gasto. Sin cuenta seleccionada, los combos de CC y elemento quedan estrictamente bloqueados.",
         origen: "Lunes AM [44:04] · Sesión presencial Lupe y Mario",
@@ -454,7 +454,7 @@
         titulo: "Solicitud al Administrador de Dimensiones Faltantes (C-2)",
         img: "img/step-2-2-compras-oc-solicitar-vinculo.png",
         pins: [
-          { x: 48, y: 44, label: "Enlace 'Solicitar vínculo al administrador' cuando no hay CC asociado" }
+          { x: 50, y: 50, label: "Modal de solicitud formal de dimensión al Administrador con motivo y código sugerido" }
         ],
         regla: "Si una cuenta contable no tiene centros de costo o elementos asociados, el operador no queda bloqueado: la interfaz despliega el enlace para enviar una solicitud formal inmediata al Administrador Contable.",
         origen: "Lunes AM [46:12] · Caso operativo de Lupe",
@@ -470,8 +470,8 @@
         titulo: "Múltiples Líneas de Imputación Contable en OC (C-3)",
         img: "img/step-2-3-compras-oc-multiples-lineas.png",
         pins: [
-          { x: 40, y: 40, label: "Múltiples líneas de compra imputadas a distintas cuentas y CC" },
-          { x: 85, y: 70, label: "Totalización y validación de suma de ítems" }
+          { x: 42, y: 38, label: "Línea 1 imputada a Labores contratistas y Campo" },
+          { x: 42, y: 62, label: "Línea 2 imputada a Proveedores y packing con totales consolidados" }
         ],
         regla: "Permite desglosar una sola orden de compra en múltiples líneas de imputación contable independientes, distribuyendo costos entre diferentes centros de costo y cuentas presupuestarias.",
         origen: "Lunes AM [48:30] · Validación contable Mario",
@@ -487,8 +487,8 @@
         titulo: "Vista de Detalle de OC con Desglose Jerárquico Contable en Árbol (C-4)",
         img: "img/step-2-4-compras-oc-detalle-arbol.png",
         pins: [
-          { x: 50, y: 25, label: "Alternador de vista de árbol contable jerárquico de 4 niveles" },
-          { x: 40, y: 45, label: "Desglose por Cuenta -> CC -> Elemento -> Línea con porcentajes netos" }
+          { x: 48, y: 32, label: "Alternador de vista de árbol contable jerárquico de 4 niveles" },
+          { x: 48, y: 55, label: "Desglose por Cuenta -> CC -> Elemento -> Línea con porcentajes netos" }
         ],
         regla: "Modal de detalle de orden de compra con componente interactivo de árbol contable de 4 niveles (Cuenta > CC > Elemento > Líneas) con cálculo ponderado de porcentajes respecto al total neto de la OC y controles de expansión/colapso.",
         origen: "Lunes AM [48:50] · Requerimiento explícito de visualización de Mario",

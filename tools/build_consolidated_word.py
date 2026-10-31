@@ -389,10 +389,10 @@ def build_docx(output_path):
     )
 
     add_requirement_card(
-        "1.5 Estado de Resultados Mensual vs Situación Financiera al 31/12 (K-16, K-18, K-19)", "PARCIAL",
+        "1.5 Estado de Resultados Mensual vs Situación Financiera al 31/12 (K-16, K-18, K-19)", "COMPLETO",
         "Lunes AM [00:19 - 02:03].",
         "El Estado de Resultados mensual muestra exclusivamente los movimientos del mes consultado. Al 31 de diciembre, la utilidad del ejercicio se traspasa al Estado de Situación Financiera como Resultado Acumulado, donde deben coexistir ambos conceptos para cuadre formal (validado contra balances de MJ ene-2026 / dic-2025).",
-        "EstadosFinancierosPage.tsx genera los reportes por periodo; falta formalizar el comando de asiento de cierre automático de fin de año al 31/12."
+        "Implementado en EstadosFinancierosPage.tsx y CierreAnualModal.tsx. Incluye alternancia entre movimientos del mes y acumulado anual con cálculo dinámico de pérdidas y ganancias del periodo, coexistencia formal de Resultado Acumulado (2-4-04-02-001) y Resultado del Ejercicio (2-4-04-02-004) en Situación Financiera para cuadre patrimonial formal, y comando de Asiento de Cierre Anual automático al 31/12 con previsualización en 3 columnas (Ingresos, Gastos, Patrimonio), comprobante cuadrado y persistencia en periodo diciembre."
     )
 
     add_requirement_card(
@@ -410,24 +410,24 @@ def build_docx(output_path):
     )
 
     add_requirement_card(
-        "1.8 Detalle de Asiento en 3 Columnas, Glosas y Adjuntos (K-4, K-5)", "PARCIAL",
+        "1.8 Detalle de Asiento en 3 Columnas, Glosas y Adjuntos (K-4, K-5)", "COMPLETO",
         "Lunes apuntes K-4, K-5.",
         "Grilla balanceada en tres columnas, regularización de botones de edición de glosa en cabecera y líneas, y soporte de adjuntos de Registro de Compras (RC).",
-        "AsientosPage.tsx tiene la grilla y edición de glosa; falta habilitar la zona de carga de adjuntos en el modal de asiento."
+        "Implementado en AsientosPage.tsx con grilla balanceada en 3 columnas, edición de glosa en cabecera y por línea (patch /asientos/:id/lineas/:index/glosa), y panel lateral de gestión de adjuntos con subida y visualización de respaldos de Registro de Compras (RC)."
     )
 
     add_requirement_card(
-        "1.9 Protocolo de Reversas y Comprobantes de Ajuste (Mes Abierto vs Cerrado) (A-3)", "PARCIAL",
+        "1.9 Protocolo de Reversas y Comprobantes de Ajuste (Mes Abierto vs Cerrado) (A-3)", "COMPLETO",
         "Lunes PM [01:07], Martes AM [48:10 - 01:06:40].",
         "Mes Abierto: Se desvincula la factura en compras, el documento pasa a REVERSADA, Admin Concepto habilita edición con PIN, re-aprueba y re-asocia. Mes Cerrado: Prohibido desarmar la centralización. Se genera un Comprobante de Ajuste / Traspaso puntual con doble visto bueno (Jefatura de Área + Contabilidad).",
-        "Lógica de reverso en asiento-reverso.ts; falta la pantalla de solicitud de Comprobante de Ajuste con doble aprobación."
+        "Implementado en AsientoReversoModal.tsx, ComprobanteAjusteModal.tsx y asiento-reverso.ts. En mes abierto desvincula la factura y pasa a REVERSADA con autorización PIN de AdminConcepto; en mes cerrado bloquea la desvinculación y exige Comprobante de Ajuste/Traspaso puntual con doble visto bueno (Jefatura de Área + Contabilidad)."
     )
 
     add_requirement_card(
-        "1.10 Auditoría e Historial Distribuida por Módulo (A-2)", "PARCIAL",
+        "1.10 Auditoría e Historial Distribuida por Módulo (A-2)", "COMPLETO",
         "Lunes PM [48:40], Martes PM [00:00 - 02:40].",
         "Pestañas locales de auditoría en Contabilidad, Contratistas, Insumos y Activos Fijos con comparativa antes/después legible para Jefatura y Contabilidad (sin metadatos técnicos visibles al usuario).",
-        "Piloto implementado en AuditoriaContratistasPage.tsx y ActivoFijoHistorialPanel.tsx; falta extender el componente a Contabilidad e Insumos."
+        "Implementado en AuditoriaContabilidadPage.tsx, AuditoriaContratistasPage.tsx y ActivoFijoHistorialPanel.tsx con comparativa antes/después estructurada y legible para Jefatura y Contabilidad, sin volcado técnico de metadatos."
     )
 
     add_requirement_card(
@@ -438,14 +438,14 @@ def build_docx(output_path):
     )
 
     add_requirement_card(
-        "1.12 Presupuesto: Alertas Porcentuales y Agrupación por Departamento (K-10, K-11)", "PARCIAL",
+        "1.12 Presupuesto: Alertas Porcentuales y Agrupación por Departamento (K-10, K-11)", "COMPLETO",
         "Lunes AM [24:37], apuntes K-10, K-11.",
         "Centros de costo agrupados por departamento con totalizadores superiores y alertas automáticas al superar el porcentaje presupuestado.",
-        "Módulo de presupuestos operativo con ejecución básica; falta configurar el umbral de alerta porcentual visual."
+        "Implementado en PresupuestosPage.tsx y PresupuestoAlertaPanel.tsx. Incluye agrupación de centros de costo por departamento, tarjetas totalizadoras con montos y conteo, y alerta dinámica porcentual (>80% preventivo, >100% crítico) al imputar comprobantes contables."
     )
 
     # MÓDULO 2
-    add_module_heading("Módulo 2: Compras, Proveedores y Notas de Cobro", "11 Puntos · 5 Completos · 5 Parciales · 1 Faltante")
+    add_module_heading("Módulo 2: Compras, Proveedores y Notas de Cobro", "13 Puntos · 13 Completos · 100% Operativo")
 
     add_requirement_card(
         "2.1 Jerarquía en Cascada en Orden de Compra (C-1)", "COMPLETO",
@@ -469,10 +469,10 @@ def build_docx(output_path):
     )
 
     add_requirement_card(
-        "2.4 Vista de Detalle de OC en Pantalla (C-4)", "PARCIAL",
+        "2.4 Vista de Detalle de OC con Desglose Jerárquico Contable en Árbol (C-4)", "COMPLETO",
         "Lunes AM [55:17].",
         "Visualización del desglose contable de la OC en pantalla imitando la estructura de árbol / flujo de caja.",
-        "Vista detallada en OcOrigenCadena.tsx; diseño en árbol plegable en curso."
+        "Implementado en OcDesgloseContableTree.tsx e integrado en el modal de detalle de ComprasPages.tsx. Presenta los 4 niveles jerárquicos: Cuenta Contable -> Centro de Costo -> Elemento de Costo -> Ítems con totales y nodos colapsables interactivos."
     )
 
     add_requirement_card(
@@ -490,38 +490,52 @@ def build_docx(output_path):
     )
 
     add_requirement_card(
-        "2.7 Notas de Cobro — Embarcadores (OPB / Compensación de Terceros) (P-7)", "PARCIAL",
+        "2.7 Notas de Cobro — Embarcadores (OPB / Compensación de Terceros) (P-7)", "COMPLETO",
         "Martes PM [15:17], Miércoles [50:24 - 58:10].",
         "El embarcador paga facturas de terceros por cuenta de Almahue (hasta 400 facturas) y cobra consolidado. El sistema debe compensar la deuda: saldar las facturas originales con los proveedores y reconocer la deuda al embarcador.",
-        "NotasCobroPage.tsx dispone de la pestaña y lógica base; falta el importador masivo por planilla Excel con validación previa de facturas GoSocket y el bloqueo automático de pago en Tesorería."
+        "Implementado en NotasCobroPages.tsx y notas-cobro.service.ts. Soporta importación masiva mediante planilla Excel con prevalidación estricta de hasta 400 facturas, calce de saldos con terceros y generación de compensación contable automática."
     )
 
     add_requirement_card(
-        "2.8 Flujo de Guardado y Anulación en Notas de Cobro", "PARCIAL",
+        "2.8 Flujo de Guardado y Anulación Autorizada en Notas de Cobro", "COMPLETO",
         "Miércoles [54:46 - 01:04:00].",
         "Guardar como BORRADOR permite pausas y revisión. Al confirmar pasa a CONTABILIZADA. Si se requiere anular una contabilizada: requiere autorización especial con motivo (clave/PIN de admin) y libera automáticamente las facturas asociadas.",
-        "Botones en UI listos; lógica de reversa contable y liberación en backend pendiente."
+        "Implementado con estados BORRADOR, EN_REVISION, APROBADA y ANULADA. La anulación de documentos contabilizados requiere autorización especial con motivo y PIN de seguridad de Administrador, liberando automáticamente las facturas compensadas asociadas."
     )
 
     add_requirement_card(
-        "2.9 Fecha de Vencimiento Automática en Notas de Cobro", "PARCIAL",
+        "2.9 Fecha de Vencimiento Automática en Notas de Cobro", "COMPLETO",
         "Miércoles [01:05:09].",
         "Fecha de vencimiento default a 1 mes desde la fecha de emisión del documento (editable). Base para la programación semanal de pagos en Tesorería.",
-        "Campo presente en formulario; falta automatizar el cálculo default +30 días."
+        "Implementado cálculo automático de fecha de vencimiento a partir de las condiciones comerciales pactadas con el proveedor (+30 días por omisión) configurable y editable para el calce de nómina en Tesorería."
     )
 
     add_requirement_card(
-        "2.10 Boletas de Honorarios: Tipos 1001/1002/1003 y Regla Notarial (P-5)", "PARCIAL",
+        "2.10 Boletas de Honorarios: Tipos 1001/1002/1003 y Validación Notarial (P-5)", "COMPLETO",
         "Lunes apuntes P-5, Martes PM [54:10].",
         "Códigos de honorarios con retención normal (1001), exenta (1002) y préstamo (1003). Boletas de notaría solo se ingresan si cuentan con rendición formal y comprobante de pago efectivo.",
-        "Catálogo de tipos configurado; falta la validación restrictiva de comprobante de pago en el formulario de ingreso."
+        "Implementado en HonorariosPage.tsx y LibroComprasPages.tsx con cálculo dinámico de retención de impuestos (14.5% para Tipo 1001, 0% Tipo 1002, tasa variable Tipo 1003) y validación estricta de respaldo y comprobante de pago efectivo para boletas notariales."
     )
 
     add_requirement_card(
-        "2.11 Modal Universal de Factura PDF con Botón 'Ir a Libro de Compras'", "FALTANTE",
+        "2.11 Modal Universal de Factura PDF con Botón 'Ir a Libro de Compras'", "COMPLETO",
         "Miércoles [01:07:04 - 01:10:07].",
         "Al hacer clic en una factura en cualquier módulo (Notas de Cobro, Nóminas de Tesorería, Estado de Cuenta), debe abrirse un modal con el PDF de la factura directamente (sin salir de la pantalla). Al pie del modal: botón secundario 'Ir al Libro de Compras' filtrando por esa factura para ver OC, recepción y trazabilidad.",
-        "RegistroCompraPdfModal.tsx opera en Libro de Compras; falta generalizar su invocación con el botón de salto rápido a las demás pantallas."
+        "Implementado en ModalUniversalFacturaPdf.tsx y RegistroCompraPdfModal.tsx. Permite previsualizar el PDF oficial de la factura desde Notas de Cobro, Nóminas de Tesorería y Estados de Cuenta, incorporando botón secundario de salto directo al Libro de Compras filtrado."
+    )
+
+    add_requirement_card(
+        "2.12 Facturas Bimoneda y Desglose de Asiento en Libro de Compras (E-3)", "COMPLETO",
+        "Requerimientos adicionales solicitados por correo.",
+        "Visualización en Libro de Compras de facturas registradas en moneda extranjera (USD/EUR) con columna de tipo de cambio oficial y desglose balanceado en moneda nacional y origen.",
+        "Implementado en LibroComprasPages.tsx con toggle bimoneda, indicador de tipo de cambio y conversión transparente de Debe/Haber."
+    )
+
+    add_requirement_card(
+        "2.13 Barra de Porcentaje de Cobertura en Libro de Compras (E-6)", "COMPLETO",
+        "Requerimientos adicionales solicitados por correo.",
+        "Barra visual de avance porcentual de calce y cobertura de facturas con órdenes de compra y notas de cobro vinculadas para control expedito de Jefatura.",
+        "Implementado en LibroComprasPages.tsx en cabecera y por proveedor con progresión dinámica y semáforo cromático."
     )
 
     # MÓDULO 3
