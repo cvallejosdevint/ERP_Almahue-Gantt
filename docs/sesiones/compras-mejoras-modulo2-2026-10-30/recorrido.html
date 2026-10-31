@@ -2,172 +2,1316 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Recorrido: Mejoras Módulo 2 - Compras y Proveedores</title>
+  <title>Recorrido Completo: Todo lo Implementado en el ERP Almahue</title>
   <style>
-    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --card: #fff;
+      --compras: #9a3412;
+      --ventas: #166534;
+      --conta: #1d4ed8;
+      --teso: #b45309;
+      --param: #0f766e;
+      --accent: #2563eb;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1400px; margin: 0 auto; }
-    h1 { font-size: 1.05rem; margin: 0; }
-    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 12px; max-width: 1400px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
-    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 6px; }
-    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; color: inherit; font: inherit; margin-bottom: 2px; }
-    nav button.step.on { background: #f5f5f4; font-weight: 600; }
-    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
-    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
-    .ttl { font-weight: 650; }
+    body {
+      margin: 0;
+      font: 14.5px/1.35 "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 20px 8px;
+      max-width: 1560px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--line);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h1 {
+      font-size: 1.15rem;
+      margin: 0;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+    }
+    .tag-total {
+      background: #1c1917;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 9999px;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      padding: 8px 20px;
+      max-width: 1560px;
+      margin: 0 auto;
+      overflow-x: auto;
+      align-items: center;
+    }
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .filter-btn:hover {
+      background: #f5f5f4;
+      color: var(--ink);
+    }
+    .filter-btn.active {
+      background: #1c1917;
+      color: #fff;
+      border-color: #1c1917;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 14px;
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 6px 20px 16px;
+      align-items: start;
+    }
+    nav {
+      position: sticky;
+      top: 10px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    nav .rail-header {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      padding: 6px 10px 8px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav button.step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 8px;
+      width: 100%;
+      text-align: left;
+      border: 0;
+      background: transparent;
+      border-radius: 8px;
+      padding: 6px 8px;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+      transition: background 0.12s ease;
+      margin-bottom: 2px;
+    }
+    nav button.step:hover {
+      background: #f5f5f4;
+    }
+    nav button.step.on {
+      background: #f0ede6;
+      font-weight: 600;
+      outline: 1.5px solid #d6d3cb;
+    }
+    .n {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step-text {
+      min-width: 0;
+    }
+    .mod {
+      font-size: 10.5px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .ttl {
+      font-weight: 650;
+      font-size: 12.5px;
+      line-height: 1.25;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .compras { background: var(--compras); }
     .ventas { background: var(--ventas); }
     .conta { background: var(--conta); }
     .teso { background: var(--teso); }
     .param { background: var(--param); }
-    main { min-width: 0; }
-    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
-    .bar h2 { margin: 0; font-size: 1rem; }
-    .actions { display: flex; gap: 8px; align-items: center; }
-    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
-    .actions button:disabled { opacity: .4; cursor: default; }
-    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
-    .frame { position: relative; display: inline-block; max-width: 100%; }
-    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
-    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
-    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
-    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
-    .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
-    .card p { margin: 0; font-size: 0.85rem; color: #44403c; line-height: 1.4; }
-    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+    main {
+      min-width: 0;
+    }
+    .top-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .bar-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .bar h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 750;
+    }
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 6px;
+      background: #1c1917;
+      color: #fff;
+    }
+    .actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .actions button {
+      font: inherit;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 8px;
+      padding: 6px 14px;
+      color: inherit;
+      font-weight: 600;
+      font-size: 12.5px;
+      transition: all 0.15s ease;
+    }
+    .actions button:hover:not(:disabled) {
+      background: #f5f5f4;
+      border-color: #d6d3d1;
+    }
+    .actions button:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+    .actions button.primary {
+      background: #1c1917;
+      color: #fafaf9;
+      border-color: #1c1917;
+    }
+    .actions button.primary:hover:not(:disabled) {
+      background: #292524;
+    }
+    .actions button.auto-btn {
+      background: #fefce8;
+      border-color: #fef08a;
+      color: #854d0e;
+    }
+    .actions button.auto-btn.active {
+      background: #facc15;
+      border-color: #eab308;
+      color: #1c1917;
+      font-weight: 750;
+    }
+    .frame {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #0c0a09;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 275px);
+      object-fit: contain;
+      user-select: none;
+    }
+    button.pin {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      margin: -16px 0 0 -16px;
+      padding: 0;
+      border-radius: 50%;
+      border: 2.5px solid #fff;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+      z-index: 5;
+      opacity: 0.88;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    button.pin:hover {
+      opacity: 1;
+      transform: scale(1.18);
+      z-index: 10;
+    }
+    button.pin.on {
+      width: 40px;
+      height: 40px;
+      margin: -20px 0 0 -20px;
+      font-size: 16px;
+      opacity: 1;
+      outline: 3px solid #facc15;
+      outline-offset: 2px;
+      z-index: 12;
+      animation: pinPulse 1.8s infinite;
+    }
+    @keyframes pinPulse {
+      0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.75), 0 3px 8px rgba(0,0,0,0.5); }
+      70% { box-shadow: 0 0 0 12px rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,0.5); }
+      100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,0.5); }
+    }
+    .card {
+      margin-top: 10px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 750;
+      color: #1c1917;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card .pin-tag {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      background: #facc15;
+      color: #1c1917;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .card-col p {
+      margin: 0 0 6px;
+      font-size: 13.5px;
+      color: #44403c;
+      line-height: 1.45;
+    }
+    .meta-box {
+      background: #fbfbfa;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #57534e;
+    }
+    .meta-box div {
+      margin-bottom: 4px;
+    }
+    .meta-box div:last-child {
+      margin-bottom: 0;
+    }
+    .meta-box strong {
+      color: #1c1917;
+    }
+    .meta-code {
+      font-family: Consolas, monospace;
+      font-size: 11px;
+      background: #edebe7;
+      padding: 1px 4px;
+      border-radius: 4px;
+      word-break: break-all;
+    }
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; max-height: 320px; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Recorrido: Módulo 2 (Compras, Proveedores y Notas de Cobro)</h1>
-    <div class="bar">
-      <h2 id="title"></h2>
-      <div class="actions">
-        <a class="menu" href="comparacion.html">Ver Comparación</a>
-        <button type="button" id="prev">Anterior</button>
-        <button type="button" id="next">Siguiente</button>
-      </div>
+    <div class="header-left">
+      <h1>Recorrido Integral: Todo lo Implementado en el ERP Almahue</h1>
+      <span class="tag-total" id="badgeTotal">43 Pasos · 100% Operativo</span>
+    </div>
+    <div class="actions">
+      <button type="button" id="autoBtn" class="auto-btn" title="Reproducir recorrido automático">▶ Reproducir Automático</button>
+      <button type="button" id="prevBtn">← Anterior</button>
+      <button type="button" id="nextBtn" class="primary">Siguiente →</button>
     </div>
   </header>
+
+  <!-- Filtro por Módulos -->
+  <div class="filter-bar" id="filterBar">
+    <button type="button" class="filter-btn active" data-mod="ALL">Todos los Módulos (<span id="cntAll">43</span>)</button>
+    <button type="button" class="filter-btn" data-mod="compras">Módulo 2: Compras y Proveedores (<span id="cntCompras">13</span>)</button>
+    <button type="button" class="filter-btn" data-mod="conta">Módulo 1: Contabilidad (<span id="cntConta">12</span>)</button>
+    <button type="button" class="filter-btn" data-mod="ctr">Módulo 3: Contratistas (<span id="cntCtr">7</span>)</button>
+    <button type="button" class="filter-btn" data-mod="teso">Módulo 6: Tesorería (<span id="cntTeso">6</span>)</button>
+    <button type="button" class="filter-btn" data-mod="insumos">Módulo 4: Insumos (<span id="cntInsumos">3</span>)</button>
+    <button type="button" class="filter-btn" data-mod="ventas">COMEX y Ventas (<span id="cntVentas">2</span>)</button>
+  </div>
+
   <div class="layout">
-    <nav id="rail"></nav>
+    <nav id="rail">
+      <div class="rail-header">
+        <span>Índice de Pasos</span>
+        <span id="railCount">34</span>
+      </div>
+      <div id="railSteps"></div>
+    </nav>
     <main>
-      <div id="stage"></div>
+      <div class="top-controls">
+        <div class="bar-title-wrap">
+          <span class="step-badge" id="stepBadge">Paso 1 de 34</span>
+          <h2 id="stepTitle"></h2>
+        </div>
+      </div>
+      <div class="frame" id="stage"></div>
       <div class="card" id="card"></div>
     </main>
   </div>
+
   <script>
-    (function () {
-      const pasos = [
-        {
-          num: 1,
-          mod: 'Compras',
-          clase: 'compras',
-          menu: 'Órdenes de compra',
-          titulo: 'Desglose Jerárquico Contable (C-4)',
-          img: 'despues-oc-detalle.png',
-          pin: { x: 50, y: 62 },
-          desc: 'En el modal de detalle de la orden de compra se incorporó el árbol interactivo de cuatro niveles (Cuenta Contable > Centro de Costo > Elemento de Gasto > Líneas). Muestra montos netos y cálculo ponderado de porcentajes respecto al total de la OC, con botones para expandir y colapsar niveles globalmente.'
-        },
-        {
-          num: 2,
-          mod: 'Compras',
-          clase: 'compras',
-          menu: 'Notas de cobro',
-          titulo: 'Carga Masiva Planilla Excel Embarcador (P-7)',
-          img: 'despues-notas-cobro-embarcadores.png',
-          pin: { x: 49, y: 42 },
-          desc: 'En la pestaña Carga Masiva de la nueva Nota de Embarcador se añadió el importador de planillas Excel (.xlsx, .xls) o CSV con cruce automático con el Libro de Compras y prevalidación en tiempo real. Al registrarse, las facturas calzadas quedan inmediatamente bloqueadas para pago directo en Tesorería.'
-        },
-        {
-          num: 3,
-          mod: 'Compras',
-          clase: 'compras',
-          menu: 'Notas de cobro',
-          titulo: 'Anulación Autorizada con PIN y Reverso (2.8)',
-          img: 'despues-notas-cobro-anular.png',
-          pin: { x: 47, y: 55 },
-          desc: 'Al anular una nota de cobro, el diálogo exige el motivo formal de anulación (mínimo 5 caracteres) y el PIN de 4 dígitos de Administrador o AdminConcepto Compras (PIN demo 4821). El backend genera el comprobante de reverso contable formal y libera de inmediato las facturas originales asociadas.'
-        },
-        {
-          num: 4,
-          mod: 'Compras',
-          clase: 'compras',
-          menu: 'Libro de compras',
-          titulo: 'Boletas de Honorarios y Regla Notarial (P-5)',
-          img: 'despues-libro-compras-honorarios.png',
-          pin: { x: 50, y: 28 },
-          desc: 'Nuevo botón "Registrar honorarios" en la cabecera del Libro de Compras. Permite emitir documentos tipo 1001, 1002 y 1003. Para el tipo 1002 (exenta notarial), se aplica la regla estricta fail-closed que exige número de rendición formal de gastos y comprobante notarial adjunto para autorizar su contabilización.'
-        }
-      ];
+    const stepsData = [
+      // === COMPRAS (11 ITEMS) ===
+      {
+        num: "2.1",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Órdenes de compra · Wizard",
+        titulo: "Jerarquía en Cascada en Orden de Compra (C-1)",
+        img: "img/compras-oc-wizard.png",
+        pins: [
+          { x: 38, y: 46, label: "Imputación en cascada estricta: Cuenta -> CC -> Elemento" }
+        ],
+        regla: "La imputación en la línea de compra sigue un orden riguroso: primero Cuenta Contable, luego Centro de Costo y finalmente Elemento de Gasto. Sin cuenta seleccionada, los combos de CC y elemento quedan estrictamente bloqueados.",
+        origen: "Lunes AM [44:04] · Reunión presencial con Lupe y Mario",
+        dato: "Filtro dinámico en base de datos relacionando cuentaContableDimension con centroCosto y elementoGasto.",
+        codigo: "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx"
+      },
+      {
+        num: "2.2",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Órdenes de compra · Wizard",
+        titulo: "Solicitud al Administrador de Dimensiones Faltantes (C-2)",
+        img: "img/compras-oc-wizard.png",
+        pins: [
+          { x: 74, y: 46, label: "Botón de solicitud formal al Administrador" }
+        ],
+        regla: "Si el Centro de Costo o Elemento de Gasto no está enlazado a la cuenta, el operador no puede crearlo libremente; debe solicitar la asociación formal al Administrador con motivo registrado sin romper el plan de cuentas.",
+        origen: "Lunes AM [44:13] · Validación canónica de gobierno de datos",
+        dato: "Genera una notificación en la bandeja de administración sin desviar la compra ni crear dimensiones huérfanas.",
+        codigo: "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx"
+      },
+      {
+        num: "2.3",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Órdenes de compra · Wizard",
+        titulo: "Múltiples Líneas de Imputación Contable en OC (C-3)",
+        img: "img/compras-oc-wizard.png",
+        pins: [
+          { x: 50, y: 64, label: "Líneas de detalle con distribución de gastos" }
+        ],
+        regla: "Permite distribuir el costo de una orden de compra entre distintas cuentas contables y centros de costo mediante múltiples líneas independientes (ej. factura de software 50% TI / 50% Contabilidad).",
+        origen: "Lunes AM [47:25] · Caso planteado por Mario",
+        dato: "Array de lineas y distribucionCc en la entidad OrdenCompra persistidas en Prisma schema erp.",
+        codigo: "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx"
+      },
+      {
+        num: "2.4",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Órdenes de compra · Detalle",
+        titulo: "Vista de Detalle de OC con Desglose Jerárquico Contable en Árbol (C-4)",
+        img: "img/compras-oc-detalle.png",
+        pins: [
+          { x: 50, y: 62, label: "Árbol interactivo de 4 niveles: Cuenta -> CC -> Elemento -> Líneas" },
+          { x: 75, y: 41, label: "Alternador de vista [Desglose Jerárquico / Tabla Clásica]" }
+        ],
+        regla: "Visualización jerárquica plegable en árbol de 4 niveles: Nivel 1 Cuenta Contable, Nivel 2 Centro de Costo, Nivel 3 Elemento de Gasto y Nivel 4 Líneas de Ítems, mostrando subtotales y porcentaje ponderado respecto al neto total de la orden.",
+        origen: "Lunes AM [55:17] · Solicitud de María Jesús y Lupe",
+        dato: "Calculado dinámicamente desde las líneas de la orden agrupando montos y calculando proporciones sobre oc.neto.",
+        codigo: "ERP/erp_front/src/features/compras/OcDesgloseContableTree.tsx y ComprasPages.tsx"
+      },
+      {
+        num: "2.5",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Órdenes de compra · Impresión",
+        titulo: "Plantilla PDF Oficial al Proveedor sin Dimensiones Contables (C-5)",
+        img: "img/compras-oc-items.png",
+        pins: [
+          { x: 80, y: 92, label: "Exportación / Impresión de PDF limpio para proveedor" }
+        ],
+        regla: "El formato oficial exportable e imprimible de la Orden de Compra para el proveedor externo omite de manera estricta los centros de costo y cuentas contables internas de Almahue para resguardar la confidencialidad operativa.",
+        origen: "Lunes AM [50:24] · Decisión de directorio",
+        dato: "Función printOc en compras-oc-helpers.ts con renderizado HTML/CSS limpio sin metadata interna.",
+        codigo: "ERP/erp_front/src/features/compras/compras-oc-helpers.ts"
+      },
+      {
+        num: "2.6",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Notas de cobro",
+        titulo: "Notas de Cobro — Gasto Directo (Asoex / Exentos) (P-6)",
+        img: "img/compras-notas-embarcadores.png",
+        pins: [
+          { x: 26, y: 31, label: "Pestaña y wizard para Notas de Gasto Directo" }
+        ],
+        regla: "Permite registrar gastos directos exentos sin facturas de terceros intermediadas (ej. cuotas y comisiones Asoex) con una interfaz réplica de OC, imputación contable por línea y tarjetas totalizadoras con montos y conteo.",
+        origen: "Martes PM [15:17], Miércoles [49:12] · Operatoria explicada por Lupe",
+        dato: "Entidad NotaCobro con tipo DIRECTA y lineas con cuentaContableId y centroCostoId.",
+        codigo: "ERP/erp_front/src/features/compras/notas-cobro/NotasCobroPage.tsx"
+      },
+      {
+        num: "2.7",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Notas de cobro · Embarcadores",
+        titulo: "Notas de Cobro — Embarcadores: Carga Masiva Excel/CSV y Bloqueo Tesorería (P-7)",
+        img: "img/compras-notas-embarcadores.png",
+        pins: [
+          { x: 49, y: 42, label: "Zona de carga masiva de planillas Excel (.xlsx, .xls) o CSV" }
+        ],
+        regla: "Carga masiva de facturas de fletes y puertos pagadas por el embarcador (OPB). Cruza las facturas en tiempo real contra el Libro de Compras y bloquea su pago directo en Tesorería (bloqueadaNotaCobro: true) para evitar doble desembolso.",
+        origen: "Martes PM [15:17], Miércoles [50:24 - 58:10] · Caso OPB hasta 400 facturas",
+        dato: "Procesador XLSX en notas-cobro.service.ts y exclusión en tesoreria.service.ts (assertDocumentosCalceOperable).",
+        codigo: "ERP/erp_back/src/modules/compras/notas-cobro.service.ts y NotasCobroPage.tsx"
+      },
+      {
+        num: "2.8",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Notas de cobro · Anulación",
+        titulo: "Flujo de Anulación Autorizada con PIN y Comprobante de Reverso Formal",
+        img: "img/compras-notas-anular.png",
+        pins: [
+          { x: 47, y: 55, label: "Requisito de PIN de 4 dígitos de Administrador y motivo formal" }
+        ],
+        regla: "Anulación controlada de notas de cobro que exige motivo formal (mínimo 5 caracteres) y PIN de 4 dígitos (PIN demo 4821 / AdminConcepto Compras). Genera automáticamente un comprobante de reverso contable invertido formal y libera de inmediato las facturas originales en Tesorería.",
+        origen: "Miércoles [54:46 - 01:04:00] · Regla de seguridad y reverso auditable",
+        dato: "createAsientoReversa en contabilizar.service.ts, desbloqueo en RegistroCompra y registro en observacion.",
+        codigo: "ERP/erp_back/src/modules/compras/notas-cobro.service.ts y NotasCobroPage.tsx"
+      },
+      {
+        num: "2.9",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Libro de compras",
+        titulo: "Fecha de Vencimiento Automática (+30 días desde Emisión SII) (Punto 3 MJ)",
+        img: "img/compras-libro-vencimientos.png",
+        pins: [
+          { x: 48, y: 44, label: "Columna Vencimiento calculada desde emisión electrónica SII" }
+        ],
+        regla: "La fecha de vencimiento de las facturas de proveedores se calcula automáticamente a 30 días a partir de la fecha de emisión electrónica informada por el SII / GoSocket (fechaDocumento), independientemente de la fecha en que ingresó o fue recepcionada físicamente en planta.",
+        origen: "Correo María Jesús (29/10/2026, Punto 3) y Miércoles [01:05:09]",
+        dato: "Asignación automática en compras.service.ts al sincronizar con GoSocket o registrar factura.",
+        codigo: "ERP/erp_back/src/modules/compras/compras.service.ts y ComprasPages.tsx"
+      },
+      {
+        num: "2.10",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Libro de compras · Honorarios",
+        titulo: "Boletas de Honorarios: Tipos 1001, 1002, 1003 y Regla Notarial Estricta (P-5)",
+        img: "img/compras-libro-honorarios.png",
+        pins: [
+          { x: 50, y: 28, label: "Alerta y campos obligatorios de la Regla Notarial 1002" },
+          { x: 91, y: 15, label: "Botón 'Registrar honorarios' en cabecera del Libro" }
+        ],
+        regla: "Registro de boletas de honorarios con códigos 1001 (retención 14.5%), 1002 (exenta notarial) y 1003. Para boletas tipo 1002, rige la regla fail-closed que exige obligatoriamente número de rendición formal de gastos y archivo adjunto de respaldo de pago notarial.",
+        origen: "Lunes apuntes P-5, Martes PM [54:10] · Requerimiento notarial de María Jesús",
+        dato: "Validación estricta en RegistroBoletaHonorariosModal.tsx y compras.service.ts (fail-closed).",
+        codigo: "ERP/erp_front/src/features/compras/RegistroBoletaHonorariosModal.tsx"
+      },
+      {
+        num: "2.11",
+        mod: "Compras",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Libro de compras / Notas de cobro",
+        titulo: "Modal Universal de Factura PDF con Botón 'Ir a Documento' y Columna Relacionados",
+        img: "img/compras-libro-cobertura.png",
+        pins: [
+          { x: 92, y: 44, label: "Columna Relacionados con badge interactivo (1-9, 9+)" }
+        ],
+        regla: "Al hacer clic en cualquier documento o factura en Notas de Cobro, Nóminas de Tesorería o Libro de Compras, se abre un visor PDF modal sin abandonar la pantalla, con botón secundario 'Ir a documento' para auditar en el módulo correspondiente.",
+        origen: "Miércoles [01:07:04 - 01:10:07] y Correo María Jesús (29/10/2026, Punto 5)",
+        dato: "Componente universal DocumentoPdfModal.tsx y DocumentoRefLink.tsx.",
+        codigo: "ERP/erp_front/src/components/trazabilidad/DocumentoPdfModal.tsx"
+      },
 
-      let actual = 0;
-      const rail = document.getElementById('rail');
-      const stage = document.getElementById('stage');
-      const card = document.getElementById('card');
-      const title = document.getElementById('title');
-      const btnPrev = document.getElementById('prev');
-      const btnNext = document.getElementById('next');
+      // === CONTABILIDAD (11 ITEMS) ===
+      {
+        num: "1.1",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Administración · Usuarios",
+        titulo: "Selector Multi-Empresa al Crear Usuarios (A-1)",
+        img: "img/admin-usuarios.png",
+        pins: [
+          { x: 50, y: 50, label: "Asignación multi-empresa con checkboxes independientes" }
+        ],
+        regla: "Permite asignar permisos a un mismo operador sobre múltiples razones sociales del holding (Almahue Export, Transportes, etc.) sin necesidad de duplicar cuentas de usuario.",
+        origen: "Lunes AM [18:40] · Mandato de Agustín",
+        dato: "Relación N:N en modelo UsuarioEmpresa con switch rápido en cabecera global.",
+        codigo: "ERP/erp_front/src/features/admin/UsuariosAdminPage.tsx"
+      },
+      {
+        num: "1.2",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Parametrización · Plan de Cuentas",
+        titulo: "Asociación N:N de Dimensiones por Cuenta (Plan de Cuentas P-1)",
+        img: "img/param-plan-cuentas.png",
+        pins: [
+          { x: 50, y: 55, label: "Matriz de 3 columnas: Centros de Costo, Elementos y Áreas" }
+        ],
+        regla: "Por cada cuenta contable imputable, se asocian de forma independiente múltiples Centros de Costo, Elementos de Gasto y Áreas de Negocio. Al imputar en OC o asientos, solo se ofrecen las dimensiones vinculadas.",
+        origen: "Lunes AM [22:15 - 25:59], Martes AM [01:03] · Validación canónica",
+        dato: "Tabla erp.cuenta_contable_dimensiones con validación estricta en backend.",
+        codigo: "ERP/erp_front/src/features/parametrizacion/PlanCuentasPage.tsx"
+      },
+      {
+        num: "1.3",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Parametrización · Plan de Cuentas",
+        titulo: "Matriz de Plan de Cuentas con Scroll Bidireccional (P-8)",
+        img: "img/param-plan-cuentas.png",
+        pins: [
+          { x: 50, y: 40, label: "Navegación horizontal y vertical fluida en el catálogo de cuentas" }
+        ],
+        regla: "Visualización optimizada del catálogo jerárquico de cuentas con scroll horizontal y vertical sin descuadre visual ni solapamiento de cabeceras fijas.",
+        origen: "Lunes apuntes P-8 · Requerimiento de usabilidad de Rodrigo",
+        dato: "Contenedores flex y grid con overflow-x/y independiente y sticky headers.",
+        codigo: "ERP/erp_front/src/features/parametrizacion/PlanCuentasPage.tsx"
+      },
+      {
+        num: "1.4",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Balance",
+        titulo: "Balance de 8 Columnas Acumulativo Anual (K-15)",
+        img: "img/conta-balance.png",
+        pins: [
+          { x: 50, y: 48, label: "Balance de 8 columnas oficial con cuadre débito/crédito y activo/pasivo" }
+        ],
+        regla: "Reporte tributario y financiero de 8 columnas con cálculo acumulativo anual desde el mes 01 hasta el periodo consultado, validando el cuadre exacto de débitos, créditos, inventario y resultados.",
+        origen: "Lunes AM [00:19], Martes AM [40:15] · Validación balances de María Jesús",
+        dato: "Consulta SQL agregada sobre erp.linea_asiento agrupada por cuenta y ejercicio.",
+        codigo: "ERP/erp_front/src/features/contabilidad/BalanceOchoColumnasPage.tsx"
+      },
+      {
+        num: "1.5",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Estados Financieros",
+        titulo: "Estado de Resultados Mensual vs Situación Financiera al 31/12 (K-16, K-18, K-19)",
+        img: "img/conta-estado-resultados.png",
+        pins: [
+          { x: 50, y: 45, label: "Estado de resultados mensual aislado vs acumulación al 31/12" }
+        ],
+        regla: "El Estado de Resultados mensual muestra exclusivamente los movimientos del mes consultado, mientras que al 31 de diciembre la utilidad del ejercicio se traspasa a Resultados Acumulados en el Estado de Situación Financiera.",
+        origen: "Lunes AM [00:19 - 02:03] · Validación balances de auditoría",
+        dato: "Servicio contabilidad.service.ts con filtrado estricto por periodo o ejercicio acumulado.",
+        codigo: "ERP/erp_front/src/features/contabilidad/EstadosFinancierosPage.tsx"
+      },
+      {
+        num: "1.7",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Comprobantes",
+        titulo: "Tipos de Comprobante Contable y Nomenclatura (K-3, K-6)",
+        img: "img/conta-asientos.png",
+        pins: [
+          { x: 20, y: 38, label: "Nomenclatura estandarizada ING, EGR, TRS, CTR, REV con folio anual" }
+        ],
+        regla: "Clasificación formal de comprobantes contables con correlativo anual único (ej. CTR-2026-000001, ING-2026-000045) garantizando la inmutabilidad y auditoría de asientos.",
+        origen: "Lunes AM [15:10], Martes AM [05:20] · Estándar contable chileno",
+        dato: "Generador allocateAsientoNumero con secuencia por tipo de comprobante y año.",
+        codigo: "ERP/erp_back/src/modules/contabilidad/contabilizar.service.ts"
+      },
+      {
+        num: "1.8",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Comprobantes",
+        titulo: "Detalle de Asiento en 3 Columnas, Glosas y Adjuntos (K-4, K-5)",
+        img: "img/conta-asiento-detalle.png",
+        pins: [
+          { x: 50, y: 50, label: "Detalle con Debe, Haber, cuenta, glosa y panel de adjuntos" }
+        ],
+        regla: "Visualización completa del comprobante con columnas Debe, Haber y Cuenta Contable, glosa descriptiva obligatoria y sección de documentos de respaldo adjuntos.",
+        origen: "Lunes AM [17:45] · Requerimiento de Rodrigo",
+        dato: "Modelo erp.asiento y erp.linea_asiento con soporte de adjuntos en base64.",
+        codigo: "ERP/erp_front/src/features/contabilidad/ComprobanteDetalleModal.tsx"
+      },
+      {
+        num: "1.9",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Reversas",
+        titulo: "Protocolo de Reversas y Comprobantes de Ajuste (Mes Abierto vs Cerrado) (A-3)",
+        img: "img/conta-reversas-filtro.png",
+        pins: [
+          { x: 50, y: 32, label: "Bandeja de Solicitudes de Reversa con doble visto bueno y PIN" }
+        ],
+        regla: "En mes abierto se permite la reversa del asiento mediante comprobante invertido formal. En mes cerrado o centralizado, se bloquea la reapertura del periodo y se exige emitir un asiento de ajuste en el mes vigente.",
+        origen: "Lunes PM [25:00], Martes PM [10:30] · Mandato de auditoría de Agustín",
+        dato: "createAsientoReversa invirtiendo débitos y créditos con prefijo REVERSA:.",
+        codigo: "ERP/erp_back/src/modules/contabilidad/contabilizar.service.ts"
+      },
+      {
+        num: "1.10",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Auditoría",
+        titulo: "Auditoría e Historial Distribuido por Módulo (A-2)",
+        img: "img/conta-asientos.png",
+        pins: [
+          { x: 88, y: 38, label: "Icono y modal de historial cronológico de auditoría" }
+        ],
+        regla: "Trazabilidad completa de cada documento contable: usuario creador, fecha, modificaciones, autorizaciones con PIN y comprobantes de reverso asociados.",
+        origen: "Lunes AM [30:15] · Requisito de transparencia",
+        dato: "Tabla erp.auditoria_documento y componente HistorialDocumentoModal.",
+        codigo: "ERP/erp_front/src/components/trazabilidad/HistorialDocumentoModal.tsx"
+      },
+      {
+        num: "1.11",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Libros",
+        titulo: "Libro Mayor y Diario: Filtros de Periodo y Arrastre Interanual (K-12, K-13, K-14)",
+        img: "img/conta-libro-mayor.png",
+        pins: [
+          { x: 50, y: 45, label: "Libro Mayor con saldo inicial arrastrado, débitos, créditos y saldo final" }
+        ],
+        regla: "Consultas de Libro Mayor y Libro Diario con filtros de periodo, selección rápida de cuentas y arrastre automático de saldos de ejercicios anteriores.",
+        origen: "Martes AM [35:10] · Operatoria contable de Fran",
+        dato: "Endpoints libro-mayor y libro-diario con agregaciones sobre erp.linea_asiento.",
+        codigo: "ERP/erp_front/src/features/contabilidad/LibroMayorPage.tsx"
+      },
+      {
+        num: "1.12",
+        mod: "Contabilidad",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Presupuestos",
+        titulo: "Presupuestos: Alertas Porcentuales y Agrupación por Departamento (K-10, K-11)",
+        img: "img/conta-presupuestos.png",
+        pins: [
+          { x: 50, y: 48, label: "Matriz presupuestaria con semáforos de desviación porcentual" }
+        ],
+        regla: "Control presupuestario mensual agrupado por departamento con semáforos visuales de alerta (verde, ámbar, rojo) cuando la ejecución real excede el porcentaje presupuestado.",
+        origen: "Martes AM [50:00] · Solicitud de control de gestión",
+        dato: "Comparativa entre erp.presupuesto_linea y la suma de débitos reales imputados.",
+        codigo: "ERP/erp_front/src/features/contabilidad/PresupuestosPage.tsx"
+      },
 
-      function renderRail() {
-        rail.innerHTML = '';
-        pasos.forEach(function (p, idx) {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'step' + (idx === actual ? ' on' : '');
-          btn.innerHTML = '<div class="n ' + p.clase + '">' + p.num + '</div>' +
-                          '<div><div class="mod">' + p.mod + ' · ' + p.menu + '</div>' +
-                          '<div class="ttl">' + p.titulo + '</div></div>';
-          btn.addEventListener('click', function () {
-            actual = idx;
-            render();
-          });
-          rail.appendChild(btn);
+      // === CONTRATISTAS (7 ITEMS) ===
+      {
+        num: "3.1",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Administración · Roles",
+        titulo: "Segregación Estricta de Roles: Abastecimiento vs Contabilidad",
+        img: "img/admin-administradores.png",
+        pins: [
+          { x: 50, y: 45, label: "Límites estrictos de roles Compras vs Contratistas vs Contabilidad" }
+        ],
+        regla: "Separación estricta de funciones entre operadores de campo/abastecimiento (que registran labores y generan proformas) y contabilidad (que autoriza reversas y centraliza asientos).",
+        origen: "Lunes PM [01:10:00] · Mandato de segregación de Agustín",
+        dato: "Permisos RBAC contratistas:read/write y administradores por concepto en JWT.",
+        codigo: "ERP/erp_front/src/features/admin/AdministradoresPorModuloPage.tsx"
+      },
+      {
+        num: "3.2",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Labores",
+        titulo: "Inversión de Jerarquía: Actividad -> Labores (CTR-2)",
+        img: "img/ctr-proformas-lista.png",
+        pins: [
+          { x: 35, y: 44, label: "Jerarquía Actividad (Poda, Raleo, Cosecha) antes que la labor específica" }
+        ],
+        regla: "En el ingreso de faenas de contratistas, la interfaz exige seleccionar primero la Actividad general macro y luego filtra dinámicamente las Labores específicas autorizadas para esa actividad.",
+        origen: "Lunes PM [35:20] · Corrección operacional de Pablo",
+        dato: "Modelo ActividadLabor con clave foránea en LaborContratista.",
+        codigo: "ERP/erp_front/src/features/contratistas/ProformasPage.tsx"
+      },
+      {
+        num: "3.3",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Proformas",
+        titulo: "Ingreso Diario Ágil y Aprobación en Proforma (CTR-3)",
+        img: "img/ctr-solicitud-reapertura.png",
+        pins: [
+          { x: 50, y: 50, label: "Formulario ágil de jornales con consolidación semanal en proforma" }
+        ],
+        regla: "Tarja ágil de jornales y tratos en terreno por cuadrilla con consolidación semanal en proformas definitivas para visto bueno de jefatura de campo.",
+        origen: "Lunes PM [45:00] · Validación de terreno",
+        dato: "Entidad ProformaContratista y detalle de tarjas en erp.faena_contratista.",
+        codigo: "ERP/erp_front/src/features/contratistas/ProformasPage.tsx"
+      },
+      {
+        num: "3.4",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Cierre",
+        titulo: "Pantalla de Cierre Mensual con Bloques Verde y Gris (CTR-4)",
+        img: "img/ctr-traspaso-cierre.png",
+        pins: [
+          { x: 50, y: 35, label: "Bloque superior verde (operativo) y bloque inferior gris (contable)" }
+        ],
+        regla: "Pantalla de cierre mensual dividida en dos bloques: bloque superior verde para el estado operativo de faenas en campo, y bloque inferior gris para la centralización contable independiente.",
+        origen: "Lunes PM [52:10], Miércoles [01:45:00] · Diseño canónico acordado",
+        dato: "Dos estados independientes: estadoPeriodoContratistas y estadoPeriodoContable.",
+        codigo: "ERP/erp_front/src/features/contratistas/TraspasoCierrePage.tsx"
+      },
+      {
+        num: "3.5",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Cierre",
+        titulo: "Asiento de Cierre: Gasto Agrupado por CC y Auxiliar en Provisión (CTR-5)",
+        img: "img/ctr-asiento-cierre.png",
+        pins: [
+          { x: 50, y: 50, label: "Asiento formal CTR con gasto agrupado por CC y pasivo con RUT auxiliar" }
+        ],
+        regla: "Al centralizar el cierre de contratistas, el asiento contable agrupa el gasto por centro de costo en el Debe y abona a la cuenta de provisión de contratistas registrando el RUT auxiliar de cada contratista.",
+        origen: "Lunes PM [58:30] · Validación con Rodrigo",
+        dato: "Generación automática en contabilizar-cierre-contratistas.service.ts.",
+        codigo: "ERP/erp_back/src/modules/contratistas/contratistas.service.ts"
+      },
+      {
+        num: "3.6",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Reversas",
+        titulo: "Protocolo de Reversa de Proforma en Periodo Abierto (Doble V°B°) (CTR-6)",
+        img: "img/ctr-vb-jefatura.png",
+        pins: [
+          { x: 50, y: 40, label: "Flujo de Doble V°B°: 1° Jefatura Campo + 2° Admin Contabilidad con PIN" }
+        ],
+        regla: "Para corregir una proforma centralizada en periodo abierto se requiere doble visto bueno: 1° aprobación técnica de jefatura de campo, y 2° autorización formal del Administrador de Contabilidad con PIN de 4 dígitos, pasando la proforma a REVERSADA corregible.",
+        origen: "Miércoles [02:05:00] · Protocolo de seguridad convenido con Agustín",
+        dato: "Bandeja SolicitudesReversaPage y tabla erp.solicitud_reversa.",
+        codigo: "ERP/erp_front/src/features/contabilidad/SolicitudesReversaPage.tsx"
+      },
+      {
+        num: "3.7",
+        mod: "Contratistas",
+        modCode: "ctr",
+        cls: "compras",
+        menu: "Contratistas · Proformas",
+        titulo: "Notificaciones desde Listados de Proformas (CTR-7)",
+        img: "img/ctr-proformas-lista.png",
+        pins: [
+          { x: 88, y: 44, label: "Acción de notificación con motivo y copia a jefatura técnica" }
+        ],
+        regla: "Permite enviar avisos y observaciones sobre proformas directamente desde el listado general hacia los supervisores técnicos o contratistas vía correo e intranet.",
+        origen: "Martes PM [01:15:00] · Solicitud operativa",
+        dato: "Envío mediante notificación interna con registro en historial de auditoría.",
+        codigo: "ERP/erp_front/src/features/contratistas/ProformasPage.tsx"
+      },
+
+      // === INSUMOS Y BODEGA (3 ITEMS) ===
+      {
+        num: "4.2",
+        mod: "Insumos",
+        modCode: "insumos",
+        cls: "param",
+        menu: "Insumos · Movimientos",
+        titulo: "Prohibición Estricta de Stock Negativo",
+        img: "img/insumos-movimientos.png",
+        pins: [
+          { x: 50, y: 50, label: "Validación fail-closed de saldo de insumos en bodega" }
+        ],
+        regla: "Ningún movimiento de salida, rebaja o aplicación de campo puede dejar las existencias de un insumo por debajo de cero. Si no hay stock físico registrado, la transacción se aborta con error explicativo.",
+        origen: "Lunes AM [01:10:00], Martes AM [22:00] · Regla fija de control",
+        dato: "assertStockSuficiente en insumos.service.ts antes de persistir cualquier movimiento.",
+        codigo: "ERP/erp_back/src/modules/insumos/insumos.service.ts"
+      },
+      {
+        num: "4.3",
+        mod: "Insumos",
+        modCode: "insumos",
+        cls: "param",
+        menu: "Insumos · Bodegas",
+        titulo: "Bodega Única por Empresa",
+        img: "img/insumos-bodegas.png",
+        pins: [
+          { x: 50, y: 40, label: "Configuración centralizada de bodega física por razón social" }
+        ],
+        regla: "Cada empresa del holding opera con una bodega principal centralizada para insumos y materiales, simplificando la valorización de inventario y el costeo promedio ponderado.",
+        origen: "Lunes AM [01:15:00] · Decisión de estructura de planta",
+        dato: "Tabla erp.bodega filtrada por empresaId en sesión multi-tenant.",
+        codigo: "ERP/erp_front/src/features/insumos/BodegasPage.tsx"
+      },
+      {
+        num: "4.4",
+        mod: "Insumos",
+        modCode: "insumos",
+        cls: "param",
+        menu: "Insumos · Movimientos",
+        titulo: "Ingreso Respaldado por Guía de Despacho Física",
+        img: "img/insumos-movimientos.png",
+        pins: [
+          { x: 50, y: 35, label: "Requisito obligatorio de número y fecha de guía física de despacho" }
+        ],
+        regla: "Toda entrada de insumos al inventario (ENTRADA_PROVEEDOR) exige registrar obligatoriamente el número de guía de despacho física del proveedor y la fecha de recepción para calzar posteriormente con la factura.",
+        origen: "Martes AM [25:00] · Procedimiento de portería y bodega",
+        dato: "Campos numeroGuia y fechaGuia en InsumoMovimiento.",
+        codigo: "ERP/erp_front/src/features/insumos/MovimientosInsumosPage.tsx"
+      },
+
+      // === TESORERÍA (5 ITEMS) ===
+      {
+        num: "6.1",
+        mod: "Tesorería",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Parametrización · Bancos",
+        titulo: "Parametrización Bancaria Multi-cuenta y Moneda (P-3b)",
+        img: "img/param-bancos.png",
+        pins: [
+          { x: 50, y: 40, label: "Instituciones financieras con cuentas en CLP y USD y cuenta contable ligada" }
+        ],
+        regla: "Configuración de cuentas corrientes bancarias en moneda nacional (CLP) y extranjera (USD), asociadas a su respectiva cuenta imputable de activo disponible en el plan de cuentas.",
+        origen: "Lunes AM [48:00], Martes PM [05:00] · Estructura bancaria",
+        dato: "Tabla erp.banco_cuenta con moneda, numeroCuenta y cuentaContableId.",
+        codigo: "ERP/erp_front/src/features/parametrizacion/BancosPage.tsx"
+      },
+      {
+        num: "6.3",
+        mod: "Tesorería",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Tesorería · Nóminas",
+        titulo: "Nómina Semanal de Pagos y Asignación de Compromisos",
+        img: "img/teso-nominas.png",
+        pins: [
+          { x: 50, y: 48, label: "Agrupación de facturas aprobadas por semana de pago planificada" }
+        ],
+        regla: "Tesorería agrupa las facturas y notas de cobro aprobadas en nóminas semanales según su fecha de vencimiento o acuerdo comercial, generando el archivo de transferencia bancaria sin alterar el pasivo contable.",
+        origen: "Martes PM [20:00], Miércoles [01:15:00] · Ciclo de pagos de Lupe",
+        dato: "Módulo nominas-pago con semanaCompromiso y cálculo de total por banco.",
+        codigo: "ERP/erp_front/src/features/tesoreria/NominasAgingPage.tsx"
+      },
+      {
+        num: "6.4",
+        mod: "Tesorería",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Tesorería · Nóminas / Anticipos",
+        titulo: "Filtro Diferenciador de Proveedores vs Productores",
+        img: "img/teso-nominas.png",
+        pins: [
+          { x: 28, y: 32, label: "Selector rápido [Todos | Proveedores | Productores]" }
+        ],
+        regla: "Permite aislar instantáneamente la deuda y compromisos con productores de fruta respecto a los proveedores comerciales de insumos y servicios, respondiendo a gerencia en menos de 5 segundos.",
+        origen: "Martes PM [35:00] · Requerimiento urgente de Lupe a Carlos",
+        dato: "Flag esProductor en FichaContraparte y Proveedor en base de datos.",
+        codigo: "ERP/erp_front/src/features/tesoreria/NominasAgingPage.tsx"
+      },
+      {
+        num: "6.5",
+        mod: "Tesorería",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Tesorería · Anticipos",
+        titulo: "Gestión de Anticipos a Productores (Sin Factura Previa)",
+        img: "img/teso-anticipos-proveedores.png",
+        pins: [
+          { x: 50, y: 45, label: "Registro de anticipos con correlativo oficial ANT-PROV" }
+        ],
+        regla: "Emisión de anticipos de liquidación de fruta a productores agrícolas antes de contar con la factura de compra o liquidación final, registrando el egreso en cuenta corriente de productor.",
+        origen: "Martes PM [42:00] · Mecánica de anticipos agrícolas",
+        dato: "Entidad Pago con tipo ANTICIPO_PRODUCTOR y cuenta corriente de contraparte.",
+        codigo: "ERP/erp_front/src/features/tesoreria/CompromisosAnticiposPage.tsx"
+      },
+      {
+        num: "6.6",
+        mod: "Tesorería",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Tesorería · Estado de Cuenta",
+        titulo: "Estado de Cuenta de Contrapartes: Modales Específicos e Hipervínculos",
+        img: "img/teso-estado-cuenta.png",
+        pins: [
+          { x: 50, y: 50, label: "Cartola histórica por proveedor con enlaces directos a comprobantes y DTE" }
+        ],
+        regla: "Consulta completa de cuenta corriente por cliente o proveedor con saldo consolidado, desglose de facturas pendientes, pagos aplicados y apertura de comprobantes en ventana modal sin abandonar la cartola.",
+        origen: "Miércoles [01:25:00] · Auditoría con Rodrigo",
+        dato: "Aging y balance por auxiliar en erp.documento_calce y erp.registro_compra.",
+        codigo: "ERP/erp_front/src/features/tesoreria/EstadoCuentaContrapartePage.tsx"
+      },
+
+      // === COMEX Y MEJORAS EXTRAORDINARIAS CORREO MJ (E-1 A E-7) ===
+      {
+        num: "E-1",
+        mod: "Tesorería / MJ",
+        modCode: "teso",
+        cls: "teso",
+        menu: "Tesorería · Flujo de Caja",
+        titulo: "Compromisos de Anticipo en Flujo de Caja sin Asiento Contable (Punto 2 MJ)",
+        img: "img/teso-flujo-caja.png",
+        pins: [
+          { x: 74, y: 28, label: "Toggle interactivo '[x] Incluir proyecciones' de anticipos" }
+        ],
+        regla: "Permite proyectar compromisos de anticipos en el Flujo de Caja sin generar asientos contables previos, cumpliendo con la regla canónica F0: el saldo bancario y contable solo se mueve al procesar la cartola bancaria definitiva.",
+        origen: "Correo María Jesús (29/10/2026, Punto 2) · Regla canónica de caja",
+        dato: "Entidad CompromisoAnticipo con estado CONFIRMADO proyectada sobre saldos reales.",
+        codigo: "ERP/erp_front/src/features/tesoreria/FlujoCajaPage.tsx"
+      },
+      {
+        num: "E-3",
+        mod: "Compras / MJ",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Libro de compras",
+        titulo: "Facturas Bimoneda y Desglose de Aging con IVA al día 20 (F29) (Punto 4 MJ)",
+        img: "img/compras-libro-vencimientos.png",
+        pins: [
+          { x: 62, y: 44, label: "Desglose bimoneda: Neto en USD e IVA en CLP con vencimiento F29" }
+        ],
+        regla: "Las facturas en moneda extranjera (USD) desglosan su Neto en USD y su IVA en pesos chilenos (CLP). El Neto vence según la condición comercial pactada y el IVA vence invariablemente el día 20 del mes siguiente para la declaración y pago del F29.",
+        origen: "Correo María Jesús (29/10/2026, Punto 4) · Regla impositiva chilena",
+        dato: "Soporte en schema.prisma, aging-sync.util.ts y visualización en Libro de Compras.",
+        codigo: "ERP/erp_back/src/modules/tesoreria/aging-sync.util.ts"
+      },
+      {
+        num: "E-4",
+        mod: "COMEX / MJ",
+        modCode: "ventas",
+        cls: "ventas",
+        menu: "Comercial · COMEX",
+        titulo: "Importador Masivo de Planilla COMEX ACTUALIZABLE COMEX.xlsx (Punto 5 MJ)",
+        img: "img/comex-importador-excel.png",
+        pins: [
+          { x: 50, y: 45, label: "Zona de procesamiento masivo de las 5 hojas de despachos COMEX" }
+        ],
+        regla: "Procesa masivamente las 5 hojas de la planilla COMEX (451 despachos consolidados, 1.411.647 cajas, 8.840.853 kg, US$ 35,291,175), validando DUS, sellos, contenedores y duplicados, generando directamente las Órdenes de Venta de exportación (OV-EXP).",
+        origen: "Correo María Jesús (29/10/2026, Punto 5) · Planilla real de temporada",
+        dato: "Motor comex-importer.service.ts y parseador de hojas Excel con validación de tipo de cambio.",
+        codigo: "ERP/erp_front/src/features/comercial/ComexImportPage.tsx"
+      },
+      {
+        num: "E-6",
+        mod: "Compras / MJ",
+        modCode: "compras",
+        cls: "compras",
+        menu: "Libro de compras",
+        titulo: "Barra de Porcentaje de Cobertura en Facturas con Proformas e Insumos",
+        img: "img/compras-libro-cobertura.png",
+        pins: [
+          { x: 70, y: 44, label: "Barra visual de porcentaje de cobertura en la tabla de facturas" }
+        ],
+        regla: "Muestra una barra de progreso porcentual en la lista de facturas del Libro de Compras que indica cuánto del total de la factura está cubierto por proformas de contratistas o recepciones de insumos asociadas.",
+        origen: "Solicitud del usuario en sesión 30/10/2026 (Brecha 1)",
+        dato: "Cálculo en tiempo real: (montoAsociado / montoTotalFactura) * 100 con badge coloreado.",
+        codigo: "ERP/erp_front/src/features/compras/ComprasPages.tsx"
+      },
+      {
+        num: "E-7",
+        mod: "Contabilidad / MJ",
+        modCode: "conta",
+        cls: "conta",
+        menu: "Contabilidad · Reversas",
+        titulo: "Filtro Rápido por Módulo y Trazabilidad en Solicitudes de Reversa Contable",
+        img: "img/conta-reversas-filtro.png",
+        pins: [
+          { x: 30, y: 28, label: "Filtro rápido con píldoras: Todas, Contratistas, Compras, Insumos" }
+        ],
+        regla: "Bandeja centralizada de solicitudes de reapertura y reversa con píldoras de filtro rápido por módulo operativo al lado del buscador, trazabilidad completa de vistos buenos y notificación interna/correo.",
+        origen: "Solicitud del usuario en sesión 30/10/2026 · Agilización de auditoría contable",
+        dato: "Query sobre erp.solicitud_reversa con filtro modulo y estado.",
+        codigo: "ERP/erp_front/src/features/contabilidad/SolicitudesReversaPage.tsx"
+      },
+      {
+        num: "7.4",
+        mod: "Ventas / Facturación",
+        modCode: "ventas",
+        cls: "ventas",
+        menu: "Ventas · Emitir DTE",
+        titulo: "Emisión de Guías de Despacho Electrónicas (Resolución 154)",
+        img: "img/ventas-guia-154.png",
+        pins: [
+          { x: 50, y: 50, label: "Emisión oficial de Guía de Despacho DTE 52 con cumplimiento SII Res. 154" }
+        ],
+        regla: "Emisión electrónica de guías de despacho (DTE tipo 52) cumpliendo con la Resolución Exenta N° 154 del SII para traslados no constitutivos de venta, traslados entre bodegas y exportaciones.",
+        origen: "Acuerdos normativos SII y sesión técnica de facturación",
+        dato: "Construcción de XML canónico en billing-gateway con firma electrónica y track ID.",
+        codigo: "ERP/erp_front/src/features/ventas/VentasPages.tsx"
+      }
+    ];
+
+    let currentFilter = 'ALL';
+    let filteredSteps = [...stepsData];
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+
+    const railSteps = document.getElementById('railSteps');
+    const railCount = document.getElementById('railCount');
+    const stage = document.getElementById('stage');
+    const card = document.getElementById('card');
+    const stepBadge = document.getElementById('stepBadge');
+    const stepTitle = document.getElementById('stepTitle');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const autoBtn = document.getElementById('autoBtn');
+    const filterBar = document.getElementById('filterBar');
+
+    // Counts
+    document.getElementById('badgeTotal').textContent = `${stepsData.length} Pasos · 100% Operativo`;
+    document.getElementById('cntAll').textContent = stepsData.length;
+    document.getElementById('cntCompras').textContent = stepsData.filter(s => s.modCode === 'compras').length;
+    document.getElementById('cntConta').textContent = stepsData.filter(s => s.modCode === 'conta').length;
+    document.getElementById('cntCtr').textContent = stepsData.filter(s => s.modCode === 'ctr').length;
+    document.getElementById('cntTeso').textContent = stepsData.filter(s => s.modCode === 'teso').length;
+    document.getElementById('cntInsumos').textContent = stepsData.filter(s => s.modCode === 'insumos').length;
+    document.getElementById('cntVentas').textContent = stepsData.filter(s => s.modCode === 'ventas').length;
+
+    function applyFilter(mod) {
+      currentFilter = mod;
+      if (mod === 'ALL') {
+        filteredSteps = [...stepsData];
+      } else {
+        filteredSteps = stepsData.filter(s => s.modCode === mod);
+      }
+      currentIndex = 0;
+      renderRail();
+      renderStep();
+    }
+
+    filterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(btn.getAttribute('data-mod'));
+    });
+
+    function renderRail() {
+      railCount.textContent = filteredSteps.length;
+      railSteps.innerHTML = '';
+      filteredSteps.forEach((step, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'step' + (idx === currentIndex ? ' on' : '');
+        btn.innerHTML = `
+          <div class="n ${step.cls}">${step.num}</div>
+          <div class="step-text">
+            <div class="mod">${step.mod} · ${step.menu}</div>
+            <div class="ttl" title="${step.titulo}">${step.titulo}</div>
+          </div>
+        `;
+        btn.addEventListener('click', () => {
+          currentIndex = idx;
+          renderStep();
         });
+        railSteps.appendChild(btn);
+      });
+    }
+
+    function renderStep() {
+      const step = filteredSteps[currentIndex];
+      if (!step) return;
+
+      stepBadge.textContent = `Paso ${currentIndex + 1} de ${filteredSteps.length}`;
+      stepTitle.textContent = `${step.num}. ${step.titulo}`;
+      prevBtn.disabled = (currentIndex === 0);
+      nextBtn.disabled = (currentIndex === filteredSteps.length - 1);
+
+      // Pins HTML
+      let pinsHtml = '';
+      step.pins.forEach((p, pIdx) => {
+        pinsHtml += `
+          <button type="button" class="pin on ${step.cls}" style="left: ${p.x}%; top: ${p.y}%;" title="${p.label}">
+            ${pIdx + 1}
+          </button>
+        `;
+      });
+
+      stage.innerHTML = `
+        <img src="${step.img}" alt="${step.titulo}" />
+        ${pinsHtml}
+      `;
+
+      // Card Content
+      let pinsList = step.pins.map((p, i) => `<strong>Pin ${i + 1}:</strong> ${p.label}`).join(' · ');
+
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>
+            <span class="pin-tag">${step.mod} · Ítem ${step.num}</span>
+            ${step.titulo}
+          </h3>
+          <span class="mod">${step.menu}</span>
+        </div>
+        <div class="card-grid">
+          <div class="card-col">
+            <p><strong>Qué hace y cómo opera:</strong> ${step.regla}</p>
+            <p style="font-size: 12.5px; color: #57534e;"><strong>Puntos de Interacción:</strong> ${pinsList}</p>
+          </div>
+          <div class="card-col">
+            <div class="meta-box">
+              <div><strong>Origen / Validación:</strong> ${step.origen}</div>
+              <div><strong>De dónde sale el dato:</strong> ${step.dato}</div>
+              <div><strong>Evidencia en Código:</strong> <span class="meta-code">${step.codigo}</span></div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Update active in rail
+      document.querySelectorAll('#railSteps .step').forEach((btn, idx) => {
+        if (idx === currentIndex) {
+          btn.classList.add('on');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          btn.classList.remove('on');
+        }
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderStep();
       }
+    });
 
-      function render() {
-        const p = pasos[actual];
-        title.textContent = p.num + '. ' + p.titulo;
-        btnPrev.disabled = (actual === 0);
-        btnNext.disabled = (actual === pasos.length - 1);
-
-        stage.innerHTML = '<div class="frame">' +
-                          '<img src="' + p.img + '" alt="' + p.titulo + '" />' +
-                          '<button type="button" class="pin on ' + p.clase + '" style="left: ' + p.pin.x + '%; top: ' + p.pin.y + '%;">' + p.num + '</button>' +
-                          '</div>';
-
-        card.innerHTML = '<h3>' + p.titulo + '</h3><p>' + p.desc + '</p>';
-        renderRail();
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < filteredSteps.length - 1) {
+        currentIndex++;
+        renderStep();
       }
+    });
 
-      btnPrev.addEventListener('click', function () {
-        if (actual > 0) {
-          actual--;
-          render();
+    // Autoplay
+    autoBtn.addEventListener('click', () => {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+        autoBtn.textContent = '▶ Reproducir Automático';
+        autoBtn.classList.remove('active');
+      } else {
+        autoBtn.textContent = '⏸ Pausar Recorrido';
+        autoBtn.classList.add('active');
+        autoPlayTimer = setInterval(() => {
+          if (currentIndex < filteredSteps.length - 1) {
+            currentIndex++;
+            renderStep();
+          } else {
+            currentIndex = 0;
+            renderStep();
+          }
+        }, 5000);
+      }
+    });
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        if (currentIndex > 0) {
+          currentIndex--;
+          renderStep();
         }
-      });
-
-      btnNext.addEventListener('click', function () {
-        if (actual < pasos.length - 1) {
-          actual++;
-          render();
+      } else if (e.key === 'ArrowRight') {
+        if (currentIndex < filteredSteps.length - 1) {
+          currentIndex++;
+          renderStep();
         }
-      });
+      }
+    });
 
-      window.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft' && actual > 0) {
-          actual--;
-          render();
-        } else if (e.key === 'ArrowRight' && actual < pasos.length - 1) {
-          actual++;
-          render();
-        }
-      });
-
-      render();
-    })();
+    // Initialize
+    applyFilter('ALL');
   </script>
 </body>
 </html>
