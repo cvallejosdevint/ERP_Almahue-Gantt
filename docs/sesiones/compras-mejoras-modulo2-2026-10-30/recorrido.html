@@ -437,8 +437,8 @@
         titulo: "Jerarquía en Cascada en Orden de Compra (C-1)",
         img: "img/step-2-1-compras-oc-cascada.png",
         pins: [
-          { x: 42, y: 38, label: "Imputación en cascada estricta: Cuenta -> CC -> Elemento" },
-          { x: 80, y: 38, label: "Totales automáticos en tarjeta lateral" }
+          { x: 36, y: 38, label: "Imputación en cascada estricta: Cuenta -> CC -> Elemento" },
+          { x: 55, y: 38, label: "Centro de Costo dependiente habilitado y vinculado a la cuenta" }
         ],
         regla: "La imputación en la línea de compra sigue un orden riguroso: primero Cuenta Contable, luego Centro de Costo y finalmente Elemento de Gasto. Sin cuenta seleccionada, los combos de CC y elemento quedan estrictamente bloqueados.",
         origen: "Lunes AM [44:04] · Sesión presencial Lupe y Mario",
@@ -454,7 +454,7 @@
         titulo: "Solicitud al Administrador de Dimensiones Faltantes (C-2)",
         img: "img/step-2-2-compras-oc-solicitar-vinculo.png",
         pins: [
-          { x: 50, y: 50, label: "Modal de solicitud formal de dimensión al Administrador con motivo y código sugerido" }
+          { x: 50, y: 48, label: "Modal de solicitud formal de dimensión al Administrador con motivo y código sugerido" }
         ],
         regla: "Si una cuenta contable no tiene centros de costo o elementos asociados, el operador no queda bloqueado: la interfaz despliega el enlace para enviar una solicitud formal inmediata al Administrador Contable.",
         origen: "Lunes AM [46:12] · Caso operativo de Lupe",
@@ -470,8 +470,8 @@
         titulo: "Múltiples Líneas de Imputación Contable en OC (C-3)",
         img: "img/step-2-3-compras-oc-multiples-lineas.png",
         pins: [
-          { x: 42, y: 38, label: "Línea 1 imputada a Labores contratistas y Campo" },
-          { x: 42, y: 62, label: "Línea 2 imputada a Proveedores y packing con totales consolidados" }
+          { x: 38, y: 35, label: "Línea 1 imputada a Labores contratistas y Mano de Obra" },
+          { x: 38, y: 55, label: "Línea 2 con imputación independiente a Caja e Insumos Campo" }
         ],
         regla: "Permite desglosar una sola orden de compra en múltiples líneas de imputación contable independientes, distribuyendo costos entre diferentes centros de costo y cuentas presupuestarias.",
         origen: "Lunes AM [48:30] · Validación contable Mario",
@@ -487,8 +487,8 @@
         titulo: "Vista de Detalle de OC con Desglose Jerárquico Contable en Árbol (C-4)",
         img: "img/step-2-4-compras-oc-detalle-arbol.png",
         pins: [
-          { x: 48, y: 32, label: "Alternador de vista de árbol contable jerárquico de 4 niveles" },
-          { x: 48, y: 55, label: "Desglose por Cuenta -> CC -> Elemento -> Línea con porcentajes netos" }
+          { x: 81, y: 43, label: "Alternador a vista de árbol 'Desglose Jerárquico Contable (C-4)'" },
+          { x: 42, y: 52, label: "Árbol jerárquico interactivo: Cuenta -> CC -> Elemento -> Líneas con porcentajes netos" }
         ],
         regla: "Modal de detalle de orden de compra con componente interactivo de árbol contable de 4 niveles (Cuenta > CC > Elemento > Líneas) con cálculo ponderado de porcentajes respecto al total neto de la OC y controles de expansión/colapso.",
         origen: "Lunes AM [48:50] · Requerimiento explícito de visualización de Mario",
@@ -537,8 +537,8 @@
         titulo: "Notas de Cobro – Embarcadores: Carga Masiva Excel/CSV y Bloqueo Tesorería (P-7)",
         img: "img/step-2-7-compras-notas-embarcadores.png",
         pins: [
-          { x: 50, y: 19, label: "Datos de cabecera: Embarcador (OPB), RUT y Monto esperado de control" },
-          { x: 50, y: 48, label: "Zona de carga masiva de planillas Excel/CSV y compensación de deudas" }
+          { x: 38, y: 28, label: "Datos de cabecera: Embarcador (OPB), RUT y Monto total esperado" },
+          { x: 50, y: 62, label: "Zona de carga masiva de planillas Excel/CSV y cruce con Libro de Compras" }
         ],
         regla: "Habilita la zona de carga de planillas Excel (.xlsx, .xls) y CSV con procesamiento en backend vía Multer y XLSX, prevalidando automáticamente contra facturas del Libro de Compras y bloqueando su pago duplicado en Tesorería.",
         origen: "Martes PM [15:17], Miércoles [50:24 - 58:10] · Caso crítico OPB",
@@ -554,8 +554,8 @@
         titulo: "Flujo de Anulación Autorizada con PIN y Comprobante de Reverso Formal",
         img: "img/step-2-8-compras-notas-anular-pin.png",
         pins: [
-          { x: 50, y: 44, label: "Motivo formal de anulación (mínimo 5 caracteres)" },
-          { x: 50, y: 56, label: "Autorización obligatoria con PIN de 4 dígitos y reverso contable automático" }
+          { x: 50, y: 52, label: "Motivo formal de anulación (mínimo 5 caracteres)" },
+          { x: 50, y: 64, label: "Autorización obligatoria con PIN de 4 dígitos y reverso contable automático" }
         ],
         regla: "Exige motivo formal de al menos 5 caracteres y PIN de 4 dígitos de Administrador o AdminConcepto Compras. Al anular, genera automáticamente el comprobante de reverso contable y libera las facturas calzadas.",
         origen: "Martes PM [18:40] · Protocolo de auditoría y seguridad financiera",
@@ -571,8 +571,8 @@
         titulo: "Fecha de Vencimiento Automática (+30 días desde Emisión SII) (Punto 3 MJ)",
         img: "img/step-2-9-compras-libro-vencimientos.png",
         pins: [
-          { x: 28, y: 76, label: "Columna 'Emisión SII' del documento oficial registrado en el SII" },
-          { x: 36, y: 76, label: "Columna 'Vencimiento (+30d)' calculada automáticamente a +30 días por defecto" }
+          { x: 46, y: 42, label: "Columna 'Emisión SII' del documento oficial registrado en el SII" },
+          { x: 59, y: 42, label: "Columna 'Vencimiento (+30d)' calculada automáticamente a +30 días por defecto" }
         ],
         regla: "Calcula automáticamente la fecha de vencimiento sumando 30 días a la fecha de emisión electrónica del DTE registrada en el SII, permitiendo ajuste manual para condiciones especiales acordadas.",
         origen: "Correo María Jesús (29/10/2026, Punto 3) · Estándar comercial de proveedores",
@@ -606,7 +606,7 @@
         titulo: "Modal Universal de Factura PDF con Botón 'Ir a Documento' y Columna Relacionados",
         img: "img/step-2-11-compras-libro-factura-pdf.png",
         pins: [
-          { x: 50, y: 35, label: "Representación gráfica oficial del DTE con timbres y resoluciones SII" },
+          { x: 50, y: 40, label: "Representación gráfica oficial del DTE (GoSocket) con timbres y resoluciones SII" },
           { x: 92, y: 92, label: "Botón 'Ir a documento' con redirección y filtro preaplicado al Libro de Compras" }
         ],
         regla: "Visor universal de factura PDF embebida con botón 'Ir a Documento' para saltar directamente a la fuente, y columna 'Relacionados' con accesos directos e insignias numeradas a órdenes de compra y recepciones.",
