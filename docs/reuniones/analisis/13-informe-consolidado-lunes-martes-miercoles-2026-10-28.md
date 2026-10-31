@@ -72,7 +72,7 @@ El presente informe consolida de forma exhaustiva todos los acuerdos de negocio,
 
 | **1. Contabilidad, Plan de Cuentas y Reportes** | 12 | 11 | 1 | 0 | 91.7% |
 
-| **2. Compras, Proveedores y Notas de Cobro** | 11 | 8 | 3 | 0 | 72.7% |
+| **2. Compras, Proveedores y Notas de Cobro** | 11 | 11 | 0 | 0 | 100.0% |
 
 | **3. Contratistas Agrícolas** | 7 | 7 | 0 | 0 | 100.0% |
 
@@ -84,11 +84,11 @@ El presente informe consolida de forma exhaustiva todos los acuerdos de negocio,
 
 | **7. Comercial, Packing y Exportación (Comex)** | 4 | 2 | 1 | 1 | 50.0% |
 
-| **SUBTOTAL REUNIONES AUDITADAS** | **44** | **37** | **8** | **3** | **77.1%** |
+| **SUBTOTAL REUNIONES AUDITADAS** | **44** | **40** | **5** | **3** | **90.9%** |
 
 | **8. Requerimientos Extraordinarios Correo MJ (29/10)** | 7 | 7 | 0 | 0 | 100.0% |
 
-| **TOTAL GENERAL ACTUALIZADO** | **51** | **44** | **8** | **3** | **80.0%** |
+| **TOTAL GENERAL ACTUALIZADO** | **51** | **47** | **5** | **3** | **92.2%** |
 
 
 

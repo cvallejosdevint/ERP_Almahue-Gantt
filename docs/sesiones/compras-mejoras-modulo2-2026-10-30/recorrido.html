@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido: Mejoras Módulo 2 - Compras y Proveedores</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1400px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 260px 1fr; gap: 12px; max-width: 1400px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 6px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; color: inherit; font: inherit; margin-bottom: 2px; }
+    nav button.step.on { background: #f5f5f4; font-weight: 600; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+    .card h3 { margin: 0 0 4px; font-size: 0.95rem; }
+    .card p { margin: 0; font-size: 0.85rem; color: #44403c; line-height: 1.4; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recorrido: Módulo 2 (Compras, Proveedores y Notas de Cobro)</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <a class="menu" href="comparacion.html">Ver Comparación</a>
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    (function () {
+      const pasos = [
+        {
+          num: 1,
+          mod: 'Compras',
+          clase: 'compras',
+          menu: 'Órdenes de compra',
+          titulo: 'Desglose Jerárquico Contable (C-4)',
+          img: 'despues-oc-detalle.png',
+          pin: { x: 50, y: 62 },
+          desc: 'En el modal de detalle de la orden de compra se incorporó el árbol interactivo de cuatro niveles (Cuenta Contable > Centro de Costo > Elemento de Gasto > Líneas). Muestra montos netos y cálculo ponderado de porcentajes respecto al total de la OC, con botones para expandir y colapsar niveles globalmente.'
+        },
+        {
+          num: 2,
+          mod: 'Compras',
+          clase: 'compras',
+          menu: 'Notas de cobro',
+          titulo: 'Carga Masiva Planilla Excel Embarcador (P-7)',
+          img: 'despues-notas-cobro-embarcadores.png',
+          pin: { x: 49, y: 42 },
+          desc: 'En la pestaña Carga Masiva de la nueva Nota de Embarcador se añadió el importador de planillas Excel (.xlsx, .xls) o CSV con cruce automático con el Libro de Compras y prevalidación en tiempo real. Al registrarse, las facturas calzadas quedan inmediatamente bloqueadas para pago directo en Tesorería.'
+        },
+        {
+          num: 3,
+          mod: 'Compras',
+          clase: 'compras',
+          menu: 'Notas de cobro',
+          titulo: 'Anulación Autorizada con PIN y Reverso (2.8)',
+          img: 'despues-notas-cobro-anular.png',
+          pin: { x: 47, y: 55 },
+          desc: 'Al anular una nota de cobro, el diálogo exige el motivo formal de anulación (mínimo 5 caracteres) y el PIN de 4 dígitos de Administrador o AdminConcepto Compras (PIN demo 4821). El backend genera el comprobante de reverso contable formal y libera de inmediato las facturas originales asociadas.'
+        },
+        {
+          num: 4,
+          mod: 'Compras',
+          clase: 'compras',
+          menu: 'Libro de compras',
+          titulo: 'Boletas de Honorarios y Regla Notarial (P-5)',
+          img: 'despues-libro-compras-honorarios.png',
+          pin: { x: 50, y: 28 },
+          desc: 'Nuevo botón "Registrar honorarios" en la cabecera del Libro de Compras. Permite emitir documentos tipo 1001, 1002 y 1003. Para el tipo 1002 (exenta notarial), se aplica la regla estricta fail-closed que exige número de rendición formal de gastos y comprobante notarial adjunto para autorizar su contabilización.'
+        }
+      ];
+
+      let actual = 0;
+      const rail = document.getElementById('rail');
+      const stage = document.getElementById('stage');
+      const card = document.getElementById('card');
+      const title = document.getElementById('title');
+      const btnPrev = document.getElementById('prev');
+      const btnNext = document.getElementById('next');
+
+      function renderRail() {
+        rail.innerHTML = '';
+        pasos.forEach(function (p, idx) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'step' + (idx === actual ? ' on' : '');
+          btn.innerHTML = '<div class="n ' + p.clase + '">' + p.num + '</div>' +
+                          '<div><div class="mod">' + p.mod + ' · ' + p.menu + '</div>' +
+                          '<div class="ttl">' + p.titulo + '</div></div>';
+          btn.addEventListener('click', function () {
+            actual = idx;
+            render();
+          });
+          rail.appendChild(btn);
+        });
+      }
+
+      function render() {
+        const p = pasos[actual];
+        title.textContent = p.num + '. ' + p.titulo;
+        btnPrev.disabled = (actual === 0);
+        btnNext.disabled = (actual === pasos.length - 1);
+
+        stage.innerHTML = '<div class="frame">' +
+                          '<img src="' + p.img + '" alt="' + p.titulo + '" />' +
+                          '<button type="button" class="pin on ' + p.clase + '" style="left: ' + p.pin.x + '%; top: ' + p.pin.y + '%;">' + p.num + '</button>' +
+                          '</div>';
+
+        card.innerHTML = '<h3>' + p.titulo + '</h3><p>' + p.desc + '</p>';
+        renderRail();
+      }
+
+      btnPrev.addEventListener('click', function () {
+        if (actual > 0) {
+          actual--;
+          render();
+        }
+      });
+
+      btnNext.addEventListener('click', function () {
+        if (actual < pasos.length - 1) {
+          actual++;
+          render();
+        }
+      });
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft' && actual > 0) {
+          actual--;
+          render();
+        } else if (e.key === 'ArrowRight' && actual < pasos.length - 1) {
+          actual++;
+          render();
+        }
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
