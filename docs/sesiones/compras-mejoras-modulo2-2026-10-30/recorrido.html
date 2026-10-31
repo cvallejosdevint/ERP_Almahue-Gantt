@@ -606,8 +606,8 @@
         titulo: "Modal Universal de Factura PDF con Botón 'Ir a Documento' y Columna Relacionados",
         img: "img/step-2-11-compras-libro-factura-pdf.png",
         pins: [
-          { x: 92, y: 38, label: "Menú de acciones con opción 'Ver PDF'" },
-          { x: 80, y: 45, label: "Columna Relacionados con accesos directos a OC y recepciones" }
+          { x: 50, y: 35, label: "Representación gráfica oficial del DTE con timbres y resoluciones SII" },
+          { x: 92, y: 92, label: "Botón 'Ir a documento' con redirección y filtro preaplicado al Libro de Compras" }
         ],
         regla: "Visor universal de factura PDF embebida con botón 'Ir a Documento' para saltar directamente a la fuente, y columna 'Relacionados' con accesos directos e insignias numeradas a órdenes de compra y recepciones.",
         origen: "Lunes AM [58:10], Correo MJ (Punto 6) · Trazabilidad documental",
@@ -623,8 +623,8 @@
         titulo: "Facturas Bimoneda y Desglose de Aging con IVA al día 20 (F29) (Punto 4 MJ)",
         img: "img/step-e-3-compras-libro-bimoneda.png",
         pins: [
-          { x: 62, y: 42, label: "Facturas bimoneda: Neto en USD e IVA en CLP" },
-          { x: 74, y: 42, label: "Aging impositivo: Vencimiento de IVA fijado al día 20 del mes siguiente (F29)" }
+          { x: 55, y: 38, label: "Facturas bimoneda: desglose de compromisos comerciales y fiscales" },
+          { x: 75, y: 38, label: "Aging impositivo: vencimiento de IVA al día 20 del mes siguiente (F29)" }
         ],
         regla: "Las facturas en moneda extranjera (USD) desglosan su Neto en USD y su IVA en pesos chilenos (CLP). El Neto vence según la condición comercial pactada y el IVA vence invariablemente el día 20 del mes siguiente para la declaración y pago del F29.",
         origen: "Correo María Jesús (29/10/2026, Punto 4) · Regla impositiva chilena",
@@ -640,7 +640,7 @@
         titulo: "Barra de Porcentaje de Cobertura en Facturas con Proformas e Insumos",
         img: "img/step-e-6-compras-libro-cobertura.png",
         pins: [
-          { x: 72, y: 42, label: "Barra porcentual de cobertura de facturas con proformas e insumos" }
+          { x: 42, y: 76, label: "Barra porcentual de cobertura de facturas con proformas e insumos (63% cubierto)" }
         ],
         regla: "Muestra una barra de progreso porcentual en la lista de facturas del Libro de Compras que indica cuánto del total de la factura está cubierto por proformas de contratistas o recepciones de insumos asociadas.",
         origen: "Solicitud del usuario en sesión 30/10/2026 (Brecha 1)",
@@ -658,7 +658,7 @@
         titulo: "Selector Multi-Empresa al Crear Usuarios (A-1)",
         img: "img/step-1-1-admin-usuarios-multiempresa.png",
         pins: [
-          { x: 50, y: 48, label: "Checkboxes de asignación multi-empresa al crear o editar usuario" }
+          { x: 50, y: 55, label: "Checkboxes de asignación multi-empresa bajo arquitectura multi-tenant estricta" }
         ],
         regla: "Permite asignar una o múltiples empresas a cada usuario del ERP mediante casillas de verificación directas, otorgando permisos diferenciados por sociedad bajo arquitectura multi-tenant estricta.",
         origen: "Miércoles [01:15:30] · Requerimiento de administración de Agustín",
@@ -674,7 +674,7 @@
         titulo: "Asociación N:N de Dimensiones por Cuenta (Plan de Cuentas P-1)",
         img: "img/step-1-2-plan-cuentas-asociacion.png",
         pins: [
-          { x: 50, y: 45, label: "Asignación N:N de Centros de Costo y Elementos por Cuenta Contable" }
+          { x: 50, y: 50, label: "Asignación N:N de Centros de Costo y Elementos por Cuenta Contable" }
         ],
         regla: "Cada cuenta contable imputable define qué centros de costo y qué elementos de gasto le son permitidos. Esta matriz asociativa alimenta en tiempo real los combos en cascada de Órdenes de Compra y Facturas.",
         origen: "Lunes AM [40:15] · Sesión de plan de cuentas con Mario",
@@ -722,8 +722,8 @@
         titulo: "Estado de Resultados Mensual vs Situación Financiera al 31/12 (K-16, K-18, K-19)",
         img: "img/step-1-5-conta-estados-financieros.png",
         pins: [
-          { x: 35, y: 22, label: "Estado de Resultados mensual comparativo" },
-          { x: 50, y: 22, label: "Situación Financiera al 31/12 con utilidades acumuladas" }
+          { x: 28, y: 24, label: "Selector de periodo: vista Mensual vs Acumulado al 31/12" },
+          { x: 88, y: 24, label: "Comando formal de Cierre Anual y traspaso a Resultado Acumulado" }
         ],
         regla: "El Estado de Resultados mensual muestra exclusivamente movimientos del periodo consultado. Al 31 de diciembre, la utilidad del ejercicio se traspasa al Estado de Situación Financiera como Resultado Acumulado.",
         origen: "Lunes AM [00:19 - 02:03] · Validación balances Mario",
@@ -755,7 +755,8 @@
         titulo: "Detalle de Asiento en 3 Columnas, Glosas y Adjuntos (K-4, K-5)",
         img: "img/step-1-8-conta-asiento-detalle.png",
         pins: [
-          { x: 50, y: 38, label: "Detalle de asiento en 3 columnas: Debe, Haber, Glosa y Adjuntos" }
+          { x: 40, y: 45, label: "Detalle en 3 columnas: Debe, Haber y Glosa explicativa por línea" },
+          { x: 80, y: 45, label: "Panel de respaldo documental para archivos adjuntos y trazabilidad" }
         ],
         regla: "Vista de detalle de comprobante con tres columnas fundamentales (Debe, Haber, Glosa explicativa por línea) y panel lateral de respaldo documental para archivos adjuntos y trazabilidad.",
         origen: "Lunes AM [18:10] · Requerimiento de auditoría contable",
@@ -918,7 +919,7 @@
         titulo: "Asiento de Cierre: Gasto Agrupado por CC y Auxiliar en Provisión (CTR-5)",
         img: "img/step-3-5-ctr-asiento-cierre.png",
         pins: [
-          { x: 50, y: 45, label: "Asiento de cierre: Gasto agrupado por CC y auxiliar en cuenta provisión" }
+          { x: 50, y: 45, label: "Asiento de cierre: Débitos agrupados por CC y crédito a pasivo con auxiliar RUT" }
         ],
         regla: "El comprobante contable de cierre agrupa los débitos de gastos por Centro de Costo (cuartel/campo) y abona a la cuenta pasiva de provisión de contratistas desglosada por RUT auxiliar.",
         origen: "Martes AM [42:15] · Imputación contable definida por Mario",
