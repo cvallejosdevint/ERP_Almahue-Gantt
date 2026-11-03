@@ -1,0 +1,67 @@
+{
+  "_instrucciones": "Copiar a ERP/erp_back/qa-results/marzo-2026-folios-aplicar.json (gitignore). Pegar folioOficial + globalDocumentId tras emision ALM→Export (chat billing o npm run mar26:emit-manifiesto-alm). Luego: npm run mar26:aplicar-folios-dte",
+  "folios": [
+    {
+      "numeroInterno": "F-MAR26-SVC-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "registroCompraId": "REG-MAR26-INTERCO-001",
+      "facturaLibro": "PASTE_FOLIO_SII"
+    },
+    {
+      "numeroInterno": "G-MAR26-INS-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID"
+    },
+    {
+      "numeroInterno": "F-MAR26-OC-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "registroCompraId": "REG-MAR26-OC-001",
+      "facturaLibro": "PASTE_FOLIO_SII"
+    },
+    {
+      "numeroInterno": "G-MAR26-INS-002",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID"
+    },
+    {
+      "numeroInterno": "F-MAR26-OC-002",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "registroCompraId": "REG-MAR26-OC-002",
+      "facturaLibro": "PASTE_FOLIO_SII"
+    },
+    {
+      "numeroInterno": "F-MAR26-CTR-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "registroCompraId": "REG-MAR26-CTR-001",
+      "facturaLibro": "PASTE_FOLIO_SII"
+    },
+    {
+      "numeroInterno": "F-MAR26-EX-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "registroCompraId": "REG-MAR26-EXENTA-001",
+      "facturaLibro": "PASTE_FOLIO_SII"
+    },
+    {
+      "numeroInterno": "NC-MAR26-OC-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID"
+    },
+    {
+      "numeroInterno": "ND-MAR26-CTR-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID"
+    },
+    {
+      "_nota": "Ventas Export→cliente: no vienen del chat ALM; pegar solo si emitiste desde ERP Emitir",
+      "numeroInterno": "F-MAR26-VTA-001",
+      "folioOficial": "PASTE_FOLIO_SII",
+      "globalDocumentId": "PASTE_GID",
+      "documentoComercialId": "DOC-MAR26-FAC-VTA-001"
+    }
+  ]
+}

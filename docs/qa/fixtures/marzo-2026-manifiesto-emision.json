@@ -1,0 +1,159 @@
+{
+  "ciclo": "2026-03",
+  "empresaReceptorErp": "EMP-EXPORT",
+  "razonSocialReceptor": "ALMAHUE EXPORT SPA",
+  "rutReceptor": "77.032.638-9",
+  "emisorUnicoSandbox": {
+    "empresaIdEmisor": "EMP-SERVICES",
+    "razonSocial": "ALM SERVICES SPA",
+    "rut": "77.032.639-7",
+    "nota": "En GoSocket sandbox solo certifica/CAF del biller SERVICES. Todas las DTE de insumos, guías, proformas (libro compras) y NC/ND compras se emiten ALM → Export. El ERP calza por monto + OC/PF + proveedor maestro ALM en EXPORT."
+  },
+  "documentosErp": [
+    {
+      "modulo": "Compras",
+      "erpId": "OC-MAR26-001",
+      "numero": "OC-2026-MAR-001",
+      "proveedorMaestroId": "PROV-ALM-SERVICES-EX",
+      "neto": 1585000,
+      "registroCompraId": "REG-MAR26-OC-001",
+      "placeholderFactura": "PEND-DTE-MAR-OC-001"
+    },
+    {
+      "modulo": "Compras",
+      "erpId": "OC-MAR26-002",
+      "numero": "OC-2026-MAR-002",
+      "neto": 890000,
+      "registroCompraId": "REG-MAR26-OC-002",
+      "placeholderFactura": "PEND-DTE-MAR-OC-002"
+    },
+    {
+      "modulo": "Compras",
+      "erpId": "REG-MAR26-INTERCO-001",
+      "neto": 2450000,
+      "placeholderFactura": "PEND-DTE-MAR-SVC-001"
+    },
+    {
+      "modulo": "Contratistas",
+      "erpId": "PF-MAR26-001",
+      "numero": "PF-MAR26-001",
+      "neto": 4200000,
+      "registroCompraId": "REG-MAR26-CTR-001",
+      "placeholderFactura": "PEND-DTE-MAR-CTR-001"
+    },
+    {
+      "modulo": "Compras",
+      "erpId": "REG-MAR26-EXENTA-001",
+      "neto": 450000,
+      "tipoDte": 34,
+      "placeholderFactura": "PEND-DTE-MAR-EX-001"
+    }
+  ],
+  "emisionesAlmAAlmahue": [
+    {
+      "caso": "BIL-MAR-01",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "neto": 2450000,
+      "numeroInterno": "F-MAR26-SVC-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:F:INTERCO-001",
+      "glosa": "Servicios logísticos intercompany MAR26 · REG-MAR26-INTERCO-001",
+      "calzaErp": "REG-MAR26-INTERCO-001"
+    },
+    {
+      "caso": "BIL-MAR-02",
+      "tipoDte": 52,
+      "prioridad": "P0",
+      "numeroInterno": "G-MAR26-INS-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:G:OC-001",
+      "glosa": "Guía despacho insumos urea · OC-2026-MAR-001",
+      "calzaErp": "OC-2026-MAR-001 / movimiento bodega"
+    },
+    {
+      "caso": "BIL-MAR-03",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "neto": 1585000,
+      "numeroInterno": "F-MAR26-OC-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:F:OC-001",
+      "glosa": "Factura insumos urea · OC-2026-MAR-001",
+      "calzaErp": "REG-MAR26-OC-001"
+    },
+    {
+      "caso": "BIL-MAR-04",
+      "tipoDte": 52,
+      "prioridad": "P0",
+      "numeroInterno": "G-MAR26-INS-002",
+      "idempotencyKey": "MAR26:EMP-SERVICES:G:OC-002",
+      "glosa": "Guía despacho cajas · OC-2026-MAR-002",
+      "calzaErp": "OC-2026-MAR-002"
+    },
+    {
+      "caso": "BIL-MAR-05",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "neto": 890000,
+      "numeroInterno": "F-MAR26-OC-002",
+      "idempotencyKey": "MAR26:EMP-SERVICES:F:OC-002",
+      "glosa": "Factura insumos embalaje · OC-2026-MAR-002",
+      "calzaErp": "REG-MAR26-OC-002"
+    },
+    {
+      "caso": "BIL-MAR-06",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "neto": 4200000,
+      "numeroInterno": "F-MAR26-CTR-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:F:CTR-001",
+      "glosa": "Factura mano de obra contratista · PF-MAR26-001",
+      "calzaErp": "REG-MAR26-CTR-001 / asociar proforma"
+    },
+    {
+      "caso": "BIL-MAR-07",
+      "tipoDte": 34,
+      "prioridad": "P1",
+      "neto": 450000,
+      "numeroInterno": "F-MAR26-EX-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:F:EX-001",
+      "glosa": "Factura exenta servicio apoyo campo · REG-MAR26-EXENTA-001",
+      "calzaErp": "REG-MAR26-EXENTA-001"
+    },
+    {
+      "caso": "BIL-MAR-08",
+      "tipoDte": 61,
+      "prioridad": "P1",
+      "neto": 150000,
+      "codRef": 3,
+      "referenciaNumeroInterno": "F-MAR26-OC-001",
+      "numeroInterno": "NC-MAR26-OC-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:NC:OC-001",
+      "glosa": "NC corrige montos factura insumos OC-001",
+      "calzaErp": "Libro compras / devolución insumos"
+    },
+    {
+      "caso": "BIL-MAR-09",
+      "tipoDte": 56,
+      "prioridad": "P1",
+      "neto": 200000,
+      "codRef": 3,
+      "referenciaNumeroInterno": "F-MAR26-CTR-001",
+      "numeroInterno": "ND-MAR26-CTR-001",
+      "idempotencyKey": "MAR26:EMP-SERVICES:ND:CTR-001",
+      "glosa": "ND ajuste factura contratista PF-MAR26-001",
+      "calzaErp": "Libro compras contratistas"
+    }
+  ],
+  "emisionesVentasExportLocal": [
+    {
+      "nota": "No pedir al chat ALM. Emitir desde ERP Export (Emitir DTE) u otro hilo ventas.",
+      "caso": "BIL-MAR-V01",
+      "tipoDte": 33,
+      "emisorRut": "77.032.638-9",
+      "receptorRut": "76.210.101-7",
+      "neto": 3800000,
+      "numeroInterno": "F-MAR26-VTA-001",
+      "documentoOrigenId": "DOC-MAR26-OV-001"
+    }
+  ],
+  "emisionesSolicitarAlChatBilling": "usar array emisionesAlmAAlmahue — todas EMP-SERVICES biller, receptor 77.032.638-9"
+}

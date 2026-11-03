@@ -54,3 +54,5 @@ Si chocan, gana la más reciente: **Reu6** → Reu4. Reu5 no cuenta (no hubo cli
 - Aprobaciones: `docs/qa/planes/PLAN-PRUEBAS-APROBACIONES.md`
 - Integral: `docs/qa/planes/PLAN-PRUEBAS-INTEGRAL-ERP-v2-2026-08-15.md`
 - Tesorería ciclo: `docs/qa/planes/PLAN-PRUEBAS-TESORERIA-CICLO-2026-08-21.md`
+- Mes contable interempresa Octubre 2026 (importado de Antigravity): `docs/qa/planes/PLAN-MES-CONTABLE-COMPLETO-INTEREMPRESA.md`
+- Estado de esa simulacion (02/11): `docs/qa/resultados/2026-11-02-estado-mes-contable-interempresa.md`
