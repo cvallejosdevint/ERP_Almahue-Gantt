@@ -50,6 +50,21 @@ Alcance: acuerdos 26-28/10 + 03/11 (sin CAF / SII live).
 - [ ] Stock negativo / OA PIN: retest operators
 - [ ] QA punta a punta: alta packing → receta → producción → cierre mes
 
+### Tesorería (Lupe, 28/10 `[02:15]`-`[02:25]`)
+- [x] Carga semanal de cartola sin repetir movimientos ya importados del mismo banco (fecha + ingreso/egreso + monto + referencia o glosa)
+- [ ] Avisar si el archivo no es del periodo de la sesión y excluir el movimiento del mes anterior que viaja al final del archivo (`[02:17:23]`-`[02:18:01]`)
+- [ ] Partir un ingreso de cartola en 2 o 3 códigos financieros, en la moneda de origen, sin pasar el monto y avisando si queda saldo (`[02:23:57]`-`[02:25:36]`)
+- [ ] Nombre de la cuenta bancaria junto al número, al cargar bancos (`[02:15:47]`)
+
+### Insumos (28/10 `[01:38]`)
+- [ ] Devolución a proveedor al precio de la guía o factura de origen, no al precio promedio de bodega
+
+### Compras / Libro (03/11 PM `[55:50]`)
+- [ ] No mostrar Contabilizar si el documento no está asociado a una OC o a una proforma
+
+### Carga de asientos (MJ, 26/10 `[08:47]`)
+- [ ] Si falta un dato obligatorio, rechazar esa línea y entregar el reporte (no abortar el archivo entero). Hoy la carga es todo o nada
+
 ### Fuera de alcance (dejar explícito)
 - [ ] CAF / emisión SII live
 - [ ] Cadena OC desde organigrama (jefaturas) en lugar de grupos/escalas - solo vista; motor sigue grupos+escalas
