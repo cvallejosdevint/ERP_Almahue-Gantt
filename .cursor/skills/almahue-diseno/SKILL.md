@@ -1,16 +1,34 @@
 ---
 name: almahue-diseno
 description: >-
-  Reglas visuales del ERP Almahue: totales en tarjetas plegables, colores de
-  boton por tipo de accion, iconos distintos, tooltip al pasar el mouse,
-  estados centrados, filtro en la barra, aviso al lado del mensaje, columna
-  Origen, marca de configuracion faltante y menu de un solo nivel. Usar al
-  tocar pantallas, tablas, botones, badges, menus o totales del front.
+  Reglas visuales del ERP Almahue: shell de pagina, totales, DataTable,
+  modales densos vs cortos, botones, badges, RowActions, avisos, Origen,
+  export PDF/Excel y menu. Usar al tocar pantallas, tablas, formularios,
+  modales, cards o al normalizar UI del front.
 ---
 
 # Diseño Almahue
 
 Una sola forma por tipo de control. Ordenes de compra (el listado de Compras) queda fuera hasta que se pida.
+
+Matriz de pantallas y deudas: [`reference-normalizacion.md`](reference-normalizacion.md) y `docs/requerimientos/matriz-ui-normalizacion-2026-11-04.md`.
+
+## Objetos reutilizables (minimo)
+
+| ID | Que es | API |
+|---|---|---|
+| C1 | Shell pagina | `PageHeader` |
+| C2 | Totales | `CollapsibleLibroSection` + `KpiStatCard` |
+| C3 | Lista | `DataTable` + `filterBarExtra` / `toolbarExtra` |
+| C4 | Modal ficha densa | `Modal` wide + grilla 2-3 cols + tabs/seccion |
+| C5 | Modal ficha corta | `Modal` + grilla 1-2 cols (sin huecos) |
+| C6 | Seccion formulario | bloque titulo + fondo surface |
+| C7 | Estado | `Badge` |
+| C8 | Acciones fila | `RowActions` |
+| C9 | Aviso | fila mensaje + boton |
+| C10 | Origen | columna Origen / `RelacionadosVer` |
+
+No inventes una undécima variante (banner de color, pastilla emerald custom, segunda barra Buscar).
 
 ## Orden de la pantalla
 
@@ -38,9 +56,21 @@ Bloque de solo lectura (KPI, saldo, suma del periodo): `CollapsibleLibroSection`
 
 Un total que se edita (descuento del wizard Emitir) sigue en `CollapsibleRightPanel`. No lo conviertas en el bloque de solo lectura.
 
+## Formularios y modales (densidad)
+
+Referencia buena: Plan de cuentas > `Detalle y edicion de cuenta`.
+Referencia mala: `Editar Ingreso` con grilla de 3 columnas y celdas vacias.
+
+- `Field` + `Input` / `Select` / `Textarea` / checkbox del design system. Labels arriba.
+- Grilla: `grid items-start gap-x-5 gap-y-4 sm:grid-cols-2 lg:grid-cols-3`.
+- Si la vista tiene **menos de 4 campos visibles**, usa **maximo 2 columnas** (C5). No fuerces 3 cols en `MockListPage` si queda aire.
+- Si la ficha es rica (parametrizacion, cuenta, dimensiones): tabs bajo el titulo, secciones C6, badge de codigo junto al titulo, footer con hint a la izquierda y `Cancelar` ghost + `Guardar` primary (C4).
+- Campos anchos (`Padre`, motivo largo): `sm:col-span-2` o `lg:col-span-3`, no una columna aislada con vacio al lado.
+- Detalle adicional: **modal propio**, no inflar el modal actual con bloques en zigzag (pedido 03/11).
+
 ## Botones
 
-El color dice el tipo de accion. Usa `Button`, tamaño normal, en el pie del detalle. No un boton a todo el ancho en el cuerpo.
+El color dice el tipo de accion. Usa `Button`, tamaño normal, en el pie del detalle. No un boton a todo el ancho en el cuerpo. No `className` con `bg-emerald-*`.
 
 | Accion | Variante | Color |
 |---|---|---|
@@ -49,6 +79,14 @@ El color dice el tipo de accion. Usa `Button`, tamaño normal, en el pie del det
 | Anula, elimina, rechaza o reversa | `danger` | Rojo |
 | Consulta (historial, notificar) | `outline` | Borde |
 | Cierra el dialogo | `ghost` | Sin fondo |
+
+## Export PDF y Excel
+
+Pedido cliente (22/10 y 28/10): **en todos los modulos / todas las paginas de lista**.
+
+- Listados: `DataTable` con `enableExport` (CSV/Excel) y, donde aplique documento oficial, accion PDF (`RowActions` / preview).
+- Export de pagina tambien puede ir en `PageHeader` como `outline`, nunca como unico Buscar custom.
+- Al revisar una pantalla de lista: si no hay Excel/PDF, es deuda (ver matriz).
 
 ## Acciones de fila
 
@@ -61,11 +99,14 @@ Una sola columna Acciones.
 ## Aviso y filtro
 
 - El texto del aviso y su boton van en la misma fila: mensaje a la izquierda, boton a la derecha.
-- El filtro de la lista va en `toolbarExtra` de la tabla, junto a la busqueda. No arriba del titulo de la pagina.
+- El filtro de la lista va en `filterBarExtra` / `toolbarExtra` de la tabla, junto a la busqueda. No arriba del titulo de la pagina.
+- No cajas `bg-amber-50` / `bg-sky-50` / `bg-emerald-50` como "ayuda". Texto muted o fila C9.
 
 ## Estado
 
-`Badge` centra el texto. Si el estado ocupa dos lineas, las dos quedan centradas. No lo alinees a la izquierda dentro de la pastilla.
+`Badge` centra el texto. Si el estado ocupa dos lineas, las dos quedan centradas. No lo alinees a la izquierda dentro de la pastilla. No pastillas custom emerald/amber.
+
+Si estado operativo y contabilizacion conviven, **dos badges o dos columnas** (pedido 03/11), no un solo texto mezclado.
 
 ## Origen
 
@@ -93,3 +134,5 @@ Recorrela en este orden y anota lo que no coincida. No des por bueno un bloque s
 4. La tabla va despues. Contratista, fechas y moneda estan en su barra, junto a la busqueda.
 5. El estado de cada fila es un `Badge` centrado.
 6. Una columna Acciones, iconos distintos, nombre al pasar el mouse.
+7. Modales: densidad C4/C5; sin tercera columna vacia.
+8. Export PDF/Excel presente en listas (salvo excepcion documentada).
