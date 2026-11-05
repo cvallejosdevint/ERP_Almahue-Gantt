@@ -1,0 +1,163 @@
+{
+  "organigrama": {
+    "flujo": [
+      280,
+      216,
+      1232,
+      588
+    ],
+    "cerrar": [
+      1414,
+      233,
+      81,
+      32
+    ]
+  },
+  "packings": {
+    "nuevo": [
+      1353,
+      88,
+      159,
+      40
+    ],
+    "aviso": [
+      0,
+      0,
+      1536,
+      960
+    ]
+  },
+  "oa": {
+    "Recetas packing": [
+      452,
+      346,
+      129,
+      32
+    ],
+    "Producción packing": [
+      590,
+      346,
+      151,
+      32
+    ],
+    "Nueva receta": [
+      1375,
+      88,
+      137,
+      40
+    ]
+  },
+  "asientos": {
+    "quien": [
+      953,
+      457,
+      127,
+      33
+    ],
+    "headers": [
+      "N°",
+      "Periodo",
+      "Fecha",
+      "Tipo",
+      "RUT",
+      "Tipo doc",
+      "N° doc",
+      "Glosa",
+      "Quién / cuándo",
+      "Relacionados",
+      "Debe",
+      "Haber",
+      "Estado",
+      "Acciones"
+    ]
+  },
+  "balance": {
+    "t": "Ocho columnas: sumas/saldos/inventario/resultado. Rango 1 de enero → fin del periodo consultado (activo/pasivo desde ape",
+    "box": [
+      280,
+      144,
+      1232,
+      20
+    ]
+  },
+  "er": {
+    "t": "Períodos contables",
+    "box": [
+      77,
+      996,
+      162,
+      19
+    ]
+  },
+  "esf": [
+    0,
+    0,
+    1536,
+    960
+  ],
+  "cierre": [
+    73,
+    955,
+    166,
+    19
+  ],
+  "notas": [
+    0,
+    0,
+    1536,
+    960
+  ],
+  "smoke": {
+    "oa_errs": 0,
+    "oa_tabs": [
+      "Órdenes de aplicación (3)",
+      "Recetas packing (3)",
+      "Producción packing (2)"
+    ],
+    "oa_after_tabs_errs": 0,
+    "packings_rows": 3,
+    "packings_errs": 0
+  },
+  "pins": {
+    "org_flujo": [
+      58.3,
+      53.1
+    ],
+    "org_cerrar": [
+      94.7,
+      25.9
+    ],
+    "pack_nuevo": [
+      93.3,
+      11.2
+    ],
+    "pack_aviso": [
+      50.0,
+      50.0
+    ],
+    "oa_recetas": [
+      33.6,
+      37.7
+    ],
+    "oa_prod": [
+      43.3,
+      37.7
+    ],
+    "oa_nueva": [
+      94.0,
+      11.2
+    ],
+    "asi_quien": [
+      66.2,
+      49.3
+    ],
+    "bal_rango": [
+      58.3,
+      16.0
+    ],
+    "er_periodo": [
+      10.3,
+      104.7
+    ]
+  }
+}
