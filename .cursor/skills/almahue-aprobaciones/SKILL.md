@@ -13,10 +13,9 @@ Grupo (quién solicita → aprobador inicial)
     → Cadena calculada (el solicitante no elige aprobador)
 ```
 
-- Un usuario: **un grupo por módulo** (hoy **solo Compras**). Excepción: **ROL-1 / `*`** (mantenedor) arma cadena con el **primer grupo activo** del módulo, sin membresía. AdminConcepto y el resto **sí** exigen grupo.
+- Un usuario: **un grupo por módulo** (hoy **solo Compras**). Excepción: **ROL-1 / `*`** arma cadena con el **primer grupo activo** del módulo si no tiene membresía. AdminConcepto y el resto **sí** exigen grupo.
 - Módulos con cadena: **solo Compras (OC)**. Ventas (OV) y Contratistas (proformas) **no** tienen bandeja ni PIN de cadena (corte 21/08, sesión Lupe/Mario).
-- El Administrador **no figura** en grupos ni escalas. Puede aprobar o rechazar cualquier eslabón pendiente de OC (override implícito). El tope de la cadena es un usuario operativo.
-- El Administrador **no figura** en grupos ni escalas. Puede aprobar o rechazar cualquier eslabón pendiente (override implícito). El tope de la cadena es un usuario operativo.
+- Solo la **cuenta raíz** (`admin@almahue.cl` / `.local` y equivalentes protegidos) queda fuera de grupos/escalas; puede override de cualquier eslabón. Otros usuarios con rol Administrador **sí** pueden integrarse a grupos y firmar en la cadena.
 - PIN ligado a **designación en reglas**, no al checkbox de rol. Demo: `4821`.
 
 ## API / auth
