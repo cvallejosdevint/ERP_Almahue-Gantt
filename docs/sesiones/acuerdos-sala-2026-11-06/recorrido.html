@@ -136,6 +136,27 @@
           { x: 44.0, y: 55.2, t: "Centro de Costo", d: "La receta de embalaje incorpora el Centro de Costo para vincularla al cuartel o área de empaque, desvinculándola de un solo packing para repartir cantidades en producción. No se creó ni editó la receta." },
           { x: 74.0, y: 15.0, t: "+ Nueva receta", d: "El alta de receta incorpora el selector de Centro de Costo junto a la especie y componentes de materiales. No se pulsó Guardar Receta." }
         ]
+      },
+      {
+        mod: "Admin", cls: "param",
+        title: "9. Esquema de Ramas (Roles & Aprobaciones)",
+        img: "despues-esquema-ramas-aprobacion.png",
+        alt: "Esquema de Ramas con Gerencia General en la raíz y simulador en vivo",
+        pins: [
+          { x: 49.5, y: 19.5, t: "Vértice común: Gerencia General", d: "La Gerencia General (Don Sergio y Nicolás) encabeza el árbol jerárquico con tope ilimitado. Toda solicitud que exceda las gerencias de área escala directamente a este nivel." },
+          { x: 28.5, y: 38.0, t: "Ramas de Área y regla OR", d: "Cada área (Agrícola, Packing, Administración) tiene su línea de cargos con topes definidos. En jefaturas operativas con varias personas (Mario y Felipe en Campo), la regla OR permite que cualquiera firme para no trabar la faena." },
+          { x: 49.5, y: 78.5, t: "Simulador de Escalamiento", d: "Permite seleccionar el solicitante y el monto para ver en tiempo real la ruta resuelta: solicitudes menores se aprueban directamente en jefatura sin molestar a gerencias." }
+        ]
+      },
+      {
+        mod: "Admin", cls: "param",
+        title: "10. Usuarios con Cargo en Árbol",
+        img: "despues-usuarios-cargo-arbol.png",
+        alt: "Grilla de usuarios con columna Cargo en Árbol Jerárquico",
+        pins: [
+          { x: 48.0, y: 35.0, t: "Cargo Jerárquico", d: "Columna que muestra el cargo, nivel y topes de cada usuario en el árbol. Elimina la necesidad de crear grupos artificiales repetitivos." },
+          { x: 88.0, y: 8.5, t: "Nuevo Usuario", d: "Al crear o editar un usuario se selecciona su Rama y Cargo, heredando automáticamente su posición en el árbol y su escala de aprobación." }
+        ]
       }
     ];
 

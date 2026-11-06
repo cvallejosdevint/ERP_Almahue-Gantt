@@ -158,6 +158,36 @@
     <p class="nota">La grilla de Recetas de Embalaje incorpora la columna y filtro select de Centro de Costo, desvinculando la receta de un único packing para distribuirse por packing en el consumo mensual de producción.</p>
   </section>
 
+  <section>
+    <h2>9. Admin - Esquema de Ramas (Roles & Reglas de Aprobación Unificadas)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-esquema-ramas-aprobacion.png" alt="Configuración dispersa de 20 grupos repetitivos sin jerarquía visual" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, regla OR en jefaturas y simulador en vivo" />
+      </figure>
+    </div>
+    <p class="nota">Se unifica la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) eliminando la necesidad de duplicar grupos. La Gerencia General está en el vértice común con tope ilimitado; las jefaturas de faena cuentan con regla de firma OR para agilizar compras sin trabas; y el simulador interactivo evalúa y resalta en vivo la ruta de escalamiento según monto.</p>
+  </section>
+
+  <section>
+    <h2>10. Admin - Usuarios con Cargo en Árbol Jerárquico</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-usuarios-cargo-arbol.png" alt="Usuarios sin pertenencia explícita a la jerarquía de roles" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-usuarios-cargo-arbol-marcado.png" alt="Columna Cargo en Árbol Jerárquico con nivel, rama y topes" />
+      </figure>
+    </div>
+    <p class="nota">La grilla de Usuarios incorpora la columna de Cargo en Árbol Jerárquico. En el formulario de alta, el usuario simplemente selecciona su Cargo de la Rama (ej. Jefatura de Campo · Nivel 2), heredando automáticamente sus topes y línea de mando sin requerir configuración manual de grupos.</p>
+  </section>
+
   <div class="visor" id="visor" hidden>
     <div class="visor-bar">
       <strong id="visor-titulo"></strong>
