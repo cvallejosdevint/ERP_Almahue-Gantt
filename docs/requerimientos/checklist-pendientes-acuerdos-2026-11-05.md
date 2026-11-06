@@ -3,6 +3,8 @@
 Fecha: 2026-11-05  
 Alcance: acuerdos 26-28/10 + 03/11 (sin CAF / SII live).
 
+Reunion 05/11 ya transcrita. La minuta, la matriz de que dia pisa a otro y la auditoria de lo que falta estan en `docs/reuniones/minutas/reunion-2026-11-05-cliente.md`, `docs/requerimientos/matriz-acuerdos-por-dia-2026-11-05.md` y `docs/requerimientos/auditoria-acuerdos-sistema-2026-11-05.md`. Este checklist no marca como hechos los pedidos nuevos de hoy.
+
 ## Cerrado en este lote
 
 - [x] ER solo periodo; ESF acumulado + resultado del ejercicio
@@ -22,48 +24,48 @@ Alcance: acuerdos 26-28/10 + 03/11 (sin CAF / SII live).
 ## Pendiente / a validar en QA
 
 ### Contabilidad
-- [ ] Parametrizar cuentas puente del Balance 8 (hoy fijas en código)
-- [ ] Carga masiva asientos: cuadratura USD dual
-- [ ] Propagar `creadoPor*` en asientos automáticos (Libro, cierre, cartola), no solo manual
+- [x] Parametrizar cuentas puente del Balance 8 (Admin > Empresas: resultado del ejercicio y acumulado; vacio conserva 2-4-04-02-004 / 2-4-04-02-001)
+- [x] Carga masiva asientos: cuadratura USD dual (columnas debe/haber en moneda paralela)
+- [x] Propagar `creadoPor*` en asientos automaticos de libro, cierre, cartola, centralizacion y revaluacion
 - [x] Migración `20261105180000_asiento_creado_por` aplicada en local (`localhost:5433`, SQL directo + registro; no `migrate deploy` a ciegas)
 - [x] Migración `20261105190000_packing_receta_produccion` aplicada en local (mismo criterio)
-- [ ] Ambas migraciones en prod / otros entornos
-- [ ] Planta fuera del plan de cuentas (flag `requierePlanta` sigue)
+- [ ] Migraciones en prod / otros entornos (incluye `20261105200000_checklist_acuerdos_nov`)
+- [x] Planta fuera del plan de cuentas (la UI ya no la ofrece y el alta/import la deja en falso)
 
 ### Compras / Libro SII
-- [ ] Auto-cuenta desde artículo maestro al armar línea OC (hoy cuenta manual)
-- [ ] Contabilizado de hijas: QA de punta a punta (guía → hija → FAC → asiento → madre CONTABILIZADA)
-- [ ] Enum Prisma `ACTIVO_FIJO` en tipo OC alineado con el front (si aún falta en BD)
-- [ ] Periodo cerrado: no reabrir contable; solo ajuste con 2 VB (hoy `abrirPeriodoContable` existe)
+- [x] Auto-cuenta desde articulo maestro al armar linea OC (selector en el wizard y respaldo al guardar si la descripcion parte con el codigo)
+- [ ] Contabilizado de hijas: QA de punta a punta (guia > hija > FAC > asiento > madre CONTABILIZADA)
+- [x] Enum Prisma `ACTIVO_FIJO` en tipo OC alineado con el front (migracion `20261105200000`)
+- [x] Periodo cerrado: no reabrir contable; el ajuste queda en Contabilidad > Reversas (2 VB)
 
 ### Contratistas
-- [ ] Migrar códigos de labor legacy (L01…) a 4 dígitos sin romper tarifas
-- [ ] Periodicidad proforma quincenal (si aún no está en UI)
-- [ ] QA filtro periodo / wizard reversa abierta vs cerrada (bugs 03/11)
+- [x] Migrar codigos de labor legacy (L01…) a 4 digitos sin romper tarifas (la tarifa sigue por id)
+- [x] Periodicidad proforma quincenal (Mensual / Quincenal en el alta)
+- [x] Filtro de proformas por mes exacto (un rango `2026-06/2026-07` no arrastra otros meses). Wizard de reversa: no ofrece la clave hasta conocer el periodo; abierto y cerrado muestran motivo y los dos vistos buenos; el texto de traspaso ya no pide reabrir el mes
 
 ### Insumos / packing
 - [x] Demo mock packing/recetas/producción/OA + seed local EMP-EXPORT (`scripts/seed-packing-demo-local.ts`)
 - [x] Modo demo: reseed al montar + periodo forzado `2026-08` (`AppSettingsProvider`); OA/Packings/Cierre/Notas/Asientos/ER/ESF/Balance8 sin toast «No se encontró»
 - [x] Sesión antes/después `docs/sesiones/acuerdos-noche-packing-org-2026-11-05/` (comparacion + recorrido, capturas 1536x960)
 - [x] API packings/recetas/producciones levantada (reinicio Nest + rutas 200)
-- [ ] Guía DTE 52 traspaso a bodega del packing (destinatario = packing del mantenedor)
+- [x] Guia DTE 52 traspaso a bodega del packing (el destino solo lista bodegas del mantenedor)
 - [ ] Stock negativo / OA PIN: retest operators
 - [ ] QA punta a punta: alta packing → receta → producción → cierre mes
 
 ### Tesorería (Lupe, 28/10 `[02:15]`-`[02:25]`)
 - [x] Carga semanal de cartola sin repetir movimientos ya importados del mismo banco (fecha + ingreso/egreso + monto + referencia o glosa)
-- [ ] Avisar si el archivo no es del periodo de la sesión y excluir el movimiento del mes anterior que viaja al final del archivo (`[02:17:23]`-`[02:18:01]`)
-- [ ] Partir un ingreso de cartola en 2 o 3 códigos financieros, en la moneda de origen, sin pasar el monto y avisando si queda saldo (`[02:23:57]`-`[02:25:36]`)
-- [ ] Nombre de la cuenta bancaria junto al número, al cargar bancos (`[02:15:47]`)
+- [x] Avisar si el archivo no es del periodo de la sesion y excluir el movimiento del mes anterior que viaja al final del archivo (`[02:17:23]`-`[02:18:01]`)
+- [x] Partir un ingreso de cartola en 2 o 3 codigos financieros, en la moneda de origen, sin pasar el monto y avisando si queda saldo (`[02:23:57]`-`[02:25:36]`)
+- [x] Nombre de la cuenta bancaria junto al numero, al cargar bancos (`[02:15:47]`)
 
 ### Insumos (28/10 `[01:38]`)
-- [ ] Devolución a proveedor al precio de la guía o factura de origen, no al precio promedio de bodega
+- [x] Devolucion a proveedor al precio de la guia o factura de origen, no al precio promedio de bodega
 
 ### Compras / Libro (03/11 PM `[55:50]`)
-- [ ] No mostrar Contabilizar si el documento no está asociado a una OC o a una proforma
+- [x] No mostrar Contabilizar si el documento no esta asociado a una OC o a una proforma
 
 ### Carga de asientos (MJ, 26/10 `[08:47]`)
-- [ ] Si falta un dato obligatorio, rechazar esa línea y entregar el reporte (no abortar el archivo entero). Hoy la carga es todo o nada
+- [x] Si falta un dato obligatorio, rechazar esa linea y entregar el reporte (no abortar el archivo entero)
 
 ### Fuera de alcance (dejar explícito)
 - [ ] CAF / emisión SII live

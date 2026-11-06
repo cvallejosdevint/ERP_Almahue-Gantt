@@ -1,0 +1,1175 @@
+# Reunion Almahue 2026-11-05 (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD (chunks 30 min)
+Fuente: Screen Recording 2026-11-05 124610.mp4 (02:46:01)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+Minuta: docs/reuniones/minutas/reunion-2026-11-05-cliente.md
+
+- [00:58] Hola Mari, buenos días, ¿cómo estás? Bien, ¿y tú? Bien, bien, gracias. ¿Quién más estaba por ahí? Hola, Frank. Hola Frank, ¿cómo estás ahí? Bien, ¿y tú? Bien, bien, aquí... Si escuchan que me muteo es porque la alergia me tiene muerto. Está terrible... No, aquí me tomo un antialérgico que son bastante fuertes, pero a pesar de eso, imposible no andar estornudando y...
+- [01:29] ¡Gracias por ver este video!
+- [02:03] ¡Presenta a todos!
+- [02:37] Entonces, ver de manera como fácil el organigrama, para que no haya como una duda de qué es lo que hace cada una de las partes del ERP, porque en sí, haciendo como un análisis de cómo está el sistema actualmente, no nos conviene cómo hacer la modificación de que las órdenes de aprobación vayan directamente con la jefatura, porque tendríamos que pasar a llevar bastante del sistema.
+- [03:04] Entonces, como para poder tener igual de todas formas el organigrama, apliqué una visualización que se va nutriendo de la parametrización de los usuarios para que quede como el organigrama de la jefatura y, por así decirlo, como sus equipos de trabajo.
+- [03:22] Ya.
+- [04:02] Va a ser esta modificación quizá la parametrización de usuario.
+- [04:07] No sé si referente a lo que vimos en la última reunión o de lo que estábamos hablando ayer,
+- [04:13] ¿habrá algo que se nos habrá quedado pendiente o alguna información?
+- [04:19] Mira, yo después de la reunión hablé con Agustín para explicarle cómo iba a funcionar el módulo de insumos.
+- [04:25] Ok. Y me pidió que quedara, no es que nosotros tenemos las órdenes de aplicación que va a ser por el lado agrícola y la carga de la receta por el lado de ALM. Exacto. Ya, la idea es que igual hay una tercera forma de ingresarlo manual. Ah, ok. Y que las tres queden linkeadas a la centralización de bodega.
+- [04:50] Perfecto. De hecho, lo hicimos completamente al revés. Como no teníamos el Excel con las recetas, lo que se dejó primero hecho fue el ingreso manual.
+- [05:01] Ya, buenísimo.
+- [05:02] Así que nos faltaría la implementación de lo que vendría a ser el Excel, ya teniendo como el tipo que nos manden ustedes para poder cargarlo, y así que vaya nutriendo también como de manera automática con el Excel, junto con la posibilidad de tipearlo manualmente.
+- [05:17] Ya entonces ahí estaríamos listos con ingresar los manuales y con el orden de aplicación.
+- [05:25] Exacto.
+- [05:25] Ya, buenísimo.
+- [05:26] Uno y por el lado de contratistas, no sé si, porque al final todo ha salido en cincena,
+- [05:46] no pudimos darle una vuelta ayer, que estamos en cierre, y ahí como que me quedó una duda
+- [05:53] de cómo se iba a hacer el ajuste en caso de abrir la proforma.
+- [05:55] Perfecto. Al fin y al cabo, con la conversación que tuvimos ayer, en sí, no se va a hacer como una reapertura. Va a quedar la modificación y se va a guardar directamente en la base de datos y va a quedar, como dijimos en auditoría, como el rastro de que se hizo esa modificación.
+- [06:13] Ya, buenísimo.
+- [06:14] Así que en sí, de hecho aquí como estaba haciendo unas modificaciones no me está levantando el sistema, por eso estoy rellenando un poco, como lo dejamos es que va a existir el ajuste directamente a la línea, no va a quedar como un asiento de ajuste, se va a hacer directamente a la línea.
+- [06:39] Y en trazabilidad de auditoría va a quedar identificado quién fue, cuándo fue, quién aprobó, todo eso.
+- [06:47] Ya.
+- [06:48] Y compartir pantalla me confirma si es que se ve.
+- [07:10] Sí se ve.
+- [07:12] Perfecto.
+- [07:17] Entonces, partiendo por lo que vendría a ser la parametrización de los usuarios, en sí, como habíamos hablado ayer, serían tres líneas que van a definir como los diferentes aspectos de un usuario.
+- [07:29] Lo que vendría a ser, por ejemplo, los roles, va a ser solamente definir a qué módulo y submódulo va a tener acceso cada uno de los usuarios.
+- [07:45] Eso es lo que definiría. Entonces, por ejemplo, si necesitamos que ciertos tipos de usuarios vean un menú o dejen de verlo, o puedan, por ejemplo, ver y editar, se tendría que configurar directamente de los roles.
+- [07:56] Entonces, después tendríamos lo que vendría a ser las reglas de aprobación, que las reglas de aprobación lo único que van a definir van a ser montos. Montos en cada uno de estos aspectos.
+- [08:10] Entonces, en sí tendríamos cubierto lo que vendría a ser que puede ver cada uno de los usuarios. Con las reglas de aprobación tendríamos cubierto lo que vendría a ser los montos de las aprobaciones para saber quiénes van a ser uno, los responsables que aprueben.
+- [08:27] Y dos, los montos que les compenden a cada uno. Y lo que se agregó, bueno, también tenemos la parte de los administradores por módulo. Esto es lo que yo creo que en una futura reunión vamos a tener que definir bien, ir viendo módulo por módulo, qué acciones puede hacer directamente el administrador y qué acciones puede hacer el usuario normal.
+- [08:47] Cosa de que acá definamos quiénes van a ser los que tengan como los permisos especiales. Lo primero que me imagino, lo más fácil, es que por ejemplo solamente los que estén aquí en administradores tengan acceso a ver la auditoría general.
+- [09:02] Y quizás los demás usuarios podían ver su auditoría, pero solamente de los movimientos que han hecho ellos.
+- [09:07] Sí.
+- [09:08] Entonces aquí es como que le daríamos los superpoderes a cada una de las jefaturas, por así decirlo, dentro de los módulos.
+- [09:14] Pero, por ejemplo, en la parametrización, si yo creo un jefe de bodega, o jefe de abastecimiento, ¿yo le puedo poner ahí que tenga, en la administradora de los módulos, que tenga acceso a abastecimiento?
+- [09:27] Ahí, en ese caso, lo que tendríamos que hacer sería definir roles. Por ejemplo, para que tenga acceso a lo que vendría a ser abastecimiento, o lo otro que podríamos definir, yo creo que es más fácil, de que si es administrador, tenga acceso a los demás módulos.
+- [09:43] Es que, por ejemplo, igual no me gustaría que todas las jefaturas vieran todos los módulos.
+- [09:53] Perfecto. Entonces, en ese caso tendríamos que tener, por así decirlo, por cada uno de los módulos, dos roles.
+- [09:58] Que vendría a ser el rol del usuario común y el rol del administrador.
+- [10:04] Pero consulta, porque cuando yo creo el rol, puedo poner, por ejemplo, analista contable, ¿no?
+- [10:15] Exacto.
+- [10:16] Y ahí yo puedo pinchar a todo lo que yo quiera que tenga acceso.
+- [10:20] Exacto.
+- [10:21] Entonces, dentro de esos seleccionables, debería estar quizá el módulo de auditoría desplegable para yo poner, por ejemplo, acceso al módulo de insumos. Auditoría, módulo de insumos.
+- [10:32] Claro. Aquí, por ejemplo, lo que te decía, más que nada, estoy calzándolo como existe, pero podemos hacer la modificación de cómo lo necesitas.
+- [10:40] Pero como se había dejado estipulado, es que para ese caso tendría que tener como, por ejemplo, el rol de digitador de, por ejemplo, compras y el rol de administrador compras.
+- [10:56] Y ahí, por ejemplo, el rol de administrador compras, yo podía darle acceso a los demás módulos, por así decirlo.
+- [11:05] Que como te decía, lo que es roles y permisos es solamente acceso a qué página puede acceder cada rol. Es solamente restrictivo en eso.
+- [11:12] Porque eso es lo mismo que yo lo puedo ver en la página, ¿cierto?
+- [11:21] Sí, sí.
+- [11:26] Ya, pues, por ejemplo, acá en el rol y permiso, si yo pongo el rol de analista contable y pongo editar, me aparece todo lo que yo le di acceso pinchándolo.
+- [11:35] Mira, aquí me estoy metiendo directamente a la página que tienen ustedes para revisarlo. Así lo podemos ver en esta pantalla los dos.
+- [11:47] Roles y permisos, acá, ¿verdad?
+- [11:48] ¿Verdad? Sí, enrola y permiso, editar, analista contable, por ejemplo. Y yo ahí pincho todo lo que yo creo que la FRAN tenga acceso. Exactamente. Ya, pues entonces aquí mismo yo quiero pinchar para que cuando haga el jefe de abastecimiento tenga acceso solamente en la parte de auditoría a su módulo.
+- [12:09] Bueno, entiendo, pero a nivel de lo que vendría a ser como la estructura de datos, son dos roles diferentes. No sé si se entiende como la diferencia. Tendría que ser, por ejemplo, analista contable y administrador, aparte de un rol, administrador contable, por así decirlo.
+- [12:30] Y, por ejemplo, al analista contable, porque así tendremos control de lo que te decía, de lo que tienen acceso los usuarios que son los mortales y los que vendrían a ser, por ejemplo, los jefes, que vendrían a ser los del Olimpo.
+- [12:43] Entonces, por ejemplo, mire, de hecho voy a tomarme de este caso, y analista contable tiene acceso a contratistas, ventas y compras.
+- [12:56] Vamos a dejarlo así.
+- [12:57] Entonces, lo que podríamos hacer quizás sería un botón de copiar, acá para que sea un poquitito más fácil realizar el segundo rol, y en ese nuevo rol, que vendría a ser con el botón de copiar, que aquí yo lo voy a hacer en la edición, pero tomemos en cuenta que esto vendría a ser como crear un nuevo rol, yo le crearía el rol de administrador, o quizás jefatura, y a la jefatura solamente yo le dicto qué permisos tiene de acceso diferentes al analista.
+- [13:29] Sí, ahí se pueden mezclar los accesos.
+- [14:14] ¿Tiene que estar revisando cada rol? ¿A qué tiene acceso?
+- [14:16] No, sería un rol por persona.
+- [14:19] Pero, por ejemplo, la jefatura para poder ver el módulo de auditoría tendría que dejarlo con jefatura y además como administrador.
+- [14:26] En ese caso tendríamos que generar un nuevo rol que tenga como esos poderes.
+- [14:30] La idea de tenerlo así es más que nada pensado en que vayan a tener como muchos usuarios
+- [14:35] y que el control de los roles no pasa a llevar a los usuarios que no tengan ese rol, por así decirlo.
+- [14:40] Por ejemplo, si el día de mañana alguna jefatura, como te decía, pierda el acceso o gana el acceso a otro, lo podamos tener segregado. En este caso igual podríamos hacerlo de que en esta misma vista se configure directamente también el acceso al administrador, pero eso igual como que me generaría tener que aquí como agregar una línea más quizás para definir lo que tenga acceso al administrador.
+- [15:06] Quizá eso podríamos hacer. Esta parte de acá me la voy a tomar un poquitito del paint para hacerlo un poquitito visual. Lo que podríamos hacer sería, por ejemplo, esta sección de acá, copiarla y que estos sean los accesos del administrador de ese rol.
+- [15:40] ¿Como que yo pueda en cualquier usuario poner un rol de administrador?
+- [15:43] No. No. Lo que pasa es que la administración de los roles lo único que hace es indicarte a qué página puede acceder.
+- [15:57] Entonces aquí lo que podríamos hacer de que las personas que no estén marcados en este módulo de acá, que vendrían a ser los administradores,
+- [16:06] los que no estén marcados acá van a tener acceso a lo que salga en esta primera lista.
+- [16:13] Tengo una duda, Carlos.
+- [16:15] Dígame.
+- [16:17] ¿Es difícil o no se puede poner que en el módulo de auditoría tenga un desplegable porque la base de datos no está hecha así?
+- [16:27] Que en auditoría tenga un desplegable.
+- [16:30] Lo que pasa es que, por ejemplo, yo estoy viendo Insumo Bodega y está el submundo de auditoría, por ejemplo.
+- [16:38] Claro.
+- [16:39] Entonces, al final yo al jefe le pongo que pueda ver eso y listo.
+- [16:41] O sea, al final a él le importa ver cómo van sus insumos, no le importa ver cómo van las ventas, cómo van los contratistas.
+- [16:50] Sí, pero lo que sí quedaría muy, a mi forma de verlo, quedaría muy segregado el control de los accesos, si lo dejas como por cada uno de los módulos.
+- [17:03] Aquí te quedas centralizado.
+- [17:04] Yo sé que suena un poquitito tedioso, pero es como la forma más ordenada de dejarlo.
+- [17:09] ¿Por qué? Porque, mira, teniendo los roles, por ejemplo, tengo las jefaturas, los analistas, y de estas jefaturas y analistas, yo voy a tener, por ejemplo, por módulo, es mínimo una jefatura, por así decirlo, y pueden ser más.
+- [17:39] Sí.
+- [18:16] Dentro del mismo módulo de contabilidad a lo que vendría a ser la auditoría.
+- [18:23] Entonces, en este caso, yo le creo a él el rol de administrador o jefe de lo que vendría a ser contabilidad.
+- [18:36] Y acá, estos por ejemplo van a tener acceso a menos permisos que vendría a ser por ejemplo solamente contabilidad.
+- [18:43] En este caso, y no directamente a su auditoría.
+- [18:46] Van a tener solamente acceso a contabilidad y este sería, por ejemplo, el rol de analista.
+- [18:53] Entonces, ¿qué ocurre?
+- [18:55] Si, por ejemplo, yo necesito que esta jefatura tenga un acceso más o un acceso menos,
+- [19:03] es más fácil tener el control centralizado dentro de lo que vendría a ser administración
+- [19:09] para que esto sea prácticamente un check dentro de lo que vendría a ser quizá el acceso a otro módulo.
+- [19:14] Lo ponte tú el día de mañana y creemos que tenga también acceso a contabilidad.
+- [19:20] Entonces, se edita directamente este rol y no se pasan a llevar los roles ni tampoco se pasan a llevar los roles que vayan a tener las demás jefaturas y los demás analistas.
+- [19:29] Lo que pasa es que al tenerlo pinchado, igual tengo que modificar el rol de la jefatura.
+- [19:34] La jefatura siempre hace por departamento.
+- [19:37] Entonces, al final sería agregarle un ticket o sacarle un ticket.
+- [19:41] Perfecto.
+- [19:41] En ese caso, lo que podríamos hacer, que es lo que te estaba mostrando un poquitito en el paint,
+- [19:45] Es que exista el rol solamente como por concepto y que tengamos un check extra que indique qué es lo que puede hacer el administrador que vendría a ser como por ejemplo los de acá.
+- [19:55] Y ahí tendrías que generar por ejemplo para lo que es contabilidad solamente un rol y dentro de ese rol definiríamos en estos checks el acceso que tienen los, por así decirlo, los contadores y aquí los que tendría la jefatura, por así decirlo.
+- [20:10] Porque, como tú lo dices, igual podríamos implementarlo, pero por cada uno de los módulos, porque la idea de tenerlo así es que en sí la jefatura no pueda modificar los roles. Los roles solamente los puede modificar el administrador.
+- [20:28] Entonces, por ejemplo, si lo dejamos segregado por módulo, para el administrador, si tiene que hacer, por ejemplo, una reforma de todos los permisos que tiene cada uno de los usuarios, tendría que ir como módulo por módulo, viendo cada una de sus parametrizaciones.
+- [20:46] Es que al final, administradores van a haber dos solamente, que son el gerente general y el jefe de contabilidad, que son administradores. El resto tiene cada uno ver su módulo.
+- [20:55] Perfecto. En este caso, si van a ser esas dos personas los que van a tener acceso como el rol de administrador, que el rol de administrador es más que nada el que configura el sistema solamente.
+- [21:11] La idea no es que el administrador tenga acceso a... puede hacerlo, en caso de emergencia, pero la idea es que el administrador quede como un ente que solamente parametriza.
+- [21:20] Perfecto. Por eso no me interesa que otros jefes tengan nota de administrador. Y prefiero que pinchen, pinchar, hacerle un pinchazo en que puedan ver la auditoría de su módulo. Pero que no tengan mayor poder de eliminar, de mover, de agregar, nada.
+- [21:39] Perfecto. Lo que sí hay que tener en consideración es que, cuando me refiero como administrador, es esta cuenta de administrador, que es como la primera cuenta que viene creada en el sistema que tiene acceso a todo.
+- [21:53] Que esta no puede tener un nombre de una persona, por así decirlo.
+- [21:56] Sí.
+- [21:57] Entonces, esta cuenta la ocuparía solamente la persona que va a configurar los parámetros y también quizás, por ejemplo, la persona que va a crear las cuentas de acceso.
+- [22:07] Que me imagino que podría ser quizás la persona encargada de TI, que podría ser Mario, el que va a tener acceso a este, porque como te digo, es solamente parametrización.
+- [22:13] Y la idea de lo que tú me indicas de que van a haber dos jefaturas es que se parametricen directamente acá, en los administradores por módulo.
+- [22:23] Y estos administradores por módulo, quizás deberíamos cambiar la palabra administrador porque se confunden entre las dos, estos los que van a tener son como la distinción de que, por ejemplo, en el módulo de compras, él es el que tiene más accesos que los demás.
+- [22:45] Entonces, por ejemplo, lo que podríamos hacer también es crear la parametrización de los roles y acá definir qué accesos tiene cada uno de los administradores de esos roles.
+- [22:57] Porque al fin y al cabo lo que tú me dices, que se tenga que editar cada uno de los roles, en sí es como parte de la protección de la segregación de los permisos que tenga cada uno de los roles que se vayan a crear.
+- [23:18] Es como una mala práctica, por así decirlo, crear dos roles en uno.
+- [23:25] Por ejemplo, acá en el mismo módulo que estamos viendo dice configuración de liderazgo y administradores técnicos para cada módulo operativo.
+- [23:31] Permite otorgar vistos buenos, autorizar reapertura y revisar y gestionar reglas de negocio.
+- [24:01] Si por ejemplo, Francisca, existe en el rol de analista contable, y por ejemplo acá también, está como administrador de lo que vendría a ser los accesos que tiene analista contable, que sería contabilidad,
+- [24:14] cuando yo le ingrese acá, se le activen como esos superpoderes dentro del módulo de contabilidad, que los roles solamente sean acceso a la página.
+- [24:25] Es que por eso prefiero que el rol quede definido por el check, porque así yo sé qué persona tiene cada acceso, porque si yo empiezo a agregar un segundo, un tercero, como permiso, después va a ser más que nada personal y no va a ser por el cargo de la persona.
+- [24:48] Al final las jefaturas tienen todo el mismo acceso, los analistas tienen todo el mismo acceso. Yo prefiero crear el rol de analista que estar analista con administrador.
+- [24:57] De hecho, por eso te decía, al fin y al cabo, porque estos checks son el acceso a la página solamente. Por ejemplo, acá puedes leer y aquí puedes escribir, pero por ejemplo, para los permisos de aprobación, aquí si te das cuenta, no hay como, por ejemplo, te deja ver solamente la página de lo que vendría a ser los permisos.
+- [25:21] Si te das cuenta, por ejemplo, acá en contratistas, debería estar acá auditoría, por ejemplo.
+- [25:26] Claro.
+- [25:27] Auditoría, pero aquí lo que vendría a ser auditoría, a pesar de que tiene el check de escritura, realmente auditoría solamente demuestra información.
+- [25:34] Sí.
+- [25:36] Entonces, por ejemplo, si hay un rol que tiene acceso a auditoría, que no es administrador, que no está definido en la otra página, va a poder ver la auditoría, pero solamente de sus movimientos.
+- [25:47] Exacto.
+- [25:47] Pero cuando, por ejemplo, alguien dentro de este rol de analista contable esté también acá como administrador, va a tener acceso a la vista de la auditoría, pero de todos los usuarios.
+- [26:02] Es que por eso, por el final, no es el rol de analista, es el rol de la jefatura.
+- [26:07] Claro, por eso. En ese caso, ¿sería entonces bueno tener rol aparte de jefatura?
+- [26:14] O sea, es que yo dentro del eje fatura lo dejaría como administrador del módulo en el sentido de que pueda ver todo lo que pasa en su módulo.
+- [26:22] Si él se tiene que hacer cargo de la reversa, de los ingresos, de las equivocaciones, una persona que tiene que tener dominio de su módulo.
+- [26:31] Claro, mira, en ese caso, ¿cómo podríamos hacerlo? Tenemos dos opciones.
+- [26:35] Tenemos la opción de hacerlo como un poco más tedioso, de que exista el analista contable y que exista el jefe contable como rol,
+- [26:40] Que al fin y al cabo van a ser dos roles que van a tener los mismos accesos, solamente que uno va a tener más accesos.
+- [26:46] Sí.
+- [26:47] Perfecto. De todas formas, necesitamos como diferenciarlo porque como va a tener más accesos, por ejemplo, si yo le doy a un analista contable el acceso a auditoría, él debería ver solamente su auditoría, ¿verdad?
+- [27:03] Pero ahí no basta con solo los checks de lectura y escritura.
+- [27:06] Lo que pasa es que en los cheques de lectura y escritura, lo único que te dicen es, si tienes solamente lectura, te muestra la información, si tienes escritura, puedes editar.
+- [27:16] Pero ahí estaría como el límite para los analistas y la geopatía.
+- [27:23] Podría ser, podría ser, pero igual queda corto quizá en algunos de los otros casos, por ejemplo, quizá en los vistos buenos de las reversas, ahí quizás podríamos tener problemas.
+- [27:37] Mira, tendría que darle una vuelta.
+- [27:38] Porque por lo que yo tengo entendido, que por lo que veo, siento que con los cheques está como el límite para cada usuario.
+- [27:52] Y ahí la jefatura decidiría qué ve y lo que no ve es una lista.
+- [28:05] Yo creo que podríamos probar de esa forma. No sé qué opina María Jesús.
+- [28:10] Estoy de acuerdo.
+- [28:11] Así que a lo más simple posible.
+- [28:13] Sí, si al final lo que hay que hacer es ver por usuario, o sea, por rol o por cargo, qué tiene acceso y qué no.
+- [28:21] Y ni siquiera lo decide la jefatura del área, lo decide la parametrización como general.
+- [28:27] Por ejemplo, José Tomás, si quiere que la Roxana, que es su analista, vea más información, como la auditoría, me lo tiene que solicitar igual, porque es información confidencial.
+- [28:36] Toda la información del sistema es información confidencial.
+- [28:42] No es como que ellos tengan las autorizaciones para andar mostrando toda la información a todas las personas.
+- [28:47] Por ejemplo, viéndolo de ese caso, yo creo que podríamos simplificarlo así, y quizás, ya estoy pensando, anteponiendo más los casos catastróficos, agregar quizás una tercera columna como acceso especial, por ejemplo, si es que queremos hacer de que cada usuario vea solamente su información,
+- [29:06] Pero de que exista la posibilidad de que el rol de jefatura tenga acceso a la información suya y de todos los usuarios, que tenga un check más de que sea como ver información de todos los usuarios dentro de esto. Y ahí tendríamos como completo el sistema.
+- [29:22] O sea, es que igual dentro de la parametrización que estoy realizando, las jefaturas tienen acceso a todo y los analistas tienen acceso a solamente digitar e ingresar.
+- [29:29] Por ejemplo, ahí me surge la duda porque con el check de escritura ellos van a tener acceso a lo que vendría a ser ingresar datos, pero para el administrador, no sé si por ejemplo acá, me imagino por ejemplo en contratistas, por ejemplo en ingresos diarios, las personas que van a hacer los ingresos diarios, ¿tienen que ver también los ingresos diarios que generaron sus compañeros, por así decirlo?
+- [30:01] ¿O solamente los que hicieron ellos?
+- [30:08] Lo que pasa es que si yo te tengo para modificarte, si tú tuvieras un segundo analista, tú podrías modificar a tu analista.
+- [30:15] Esa es como la segregación que se tiene de esta forma.
+- [30:22] Por eso yo decía lo del tercer check en ese caso.
+- [30:25] Y por eso también se creó como esta...
+- [30:28] La idea es que cada usuario vea solamente lo que hace él como usuario.
+- [31:03] Ver y editar. Pero no tenemos como parametrizar ver, editar, lo de los demás y lo mío. Eso faltaría. Por eso te decía que la idea de tener este de administradores por módulo es que aquí se defina quién va a tener como ese superpoder de aparte de ver lo que ingresa él, ver lo que ingresaron los demás. Y quizás, dependiendo del módulo, darle otros permisos y quitarle a los demás que tengan la vista y la edición.
+- [31:31] O sea, actualmente igual, nosotros podemos ver lo que hace el resto. Si queda guardado y después si yo modifico lo tuyo va a haber un registro de que yo modifique lo tuyo. Porque queda como primero el suelo de Francisca y como segundo el suelo de María Jesús.
+- [31:49] Claro, entonces, no, está bien que se vea la información, si al final, si quieren buscar algo, no lo van a encontrar.
+- [31:58] Bueno, yo creo que respecto a esto, porque tengo 100%, estoy ultra seguro de que en algún momento vamos a tener que hacer la diferenciación de algo que puede hacer el administrador que los demás no.
+- [32:16] Lo que podríamos hacer sería dejar por mientras este módulo de administradores como en caso de que vaya a ocurrir ese caso particular, de que necesitamos identificar a una persona como administrador que va a tener una diferenciación de los demás.
+- [32:29] Lo que pasa es que ahí me genera duda el módulo, porque al final, actualmente, como es la estructura, es analista y jefatura. Y si me dice que el administrador puede tener visibilidad total, pero no participa en la cadena de aprobación, ya no me sirve el jefe, me tiene que soplar el analista, y el analista no puede ser administrador.
+- [32:48] Ahí sí, la cadena de aprobación es esa parte de lo que vendría a ser la jefatura, por así decirlo.
+- [32:57] Es que al final la jefatura es la cadena de aprobación, no tengo más cargos.
+- [33:04] Y por ejemplo con las suplencias, ¿tendríamos que reemplazar a la jefatura?
+- [33:09] Sí.
+- [33:19] Estoy pensando cómo simplificarlo para no pasar tanto a llevar el sistema.
+- [33:26] Porque lo que podríamos hacer, quizás como para hacerlo más simple, es dejarlo como tú decías, de que se defina directamente los roles solamente.
+- [33:36] Es que por eso al final, si yo defino el rol de analista contable y tengo tres analistas, a mí igual me interesa que entre ellos vean su información y si tienen que modificarlo, puedan hacerlo. Siempre y cuando quede el registro de, por ejemplo, que la primera vez lo hizo la Frene, la segunda vez, no sé, la Lupe.
+- [33:54] Ya, ya, eso actualmente está.
+- [34:28] Los roles. Lo vamos a dejar como oculto, más que nada. Y en caso de al final del proceso ya no tengamos la necesidad de utilizar el módulo de administrador, se elimina. No hay ningún problema.
+- [34:42] Ya.
+- [34:43] Y ahí también me surge la siguiente duda, porque, por usuario, si te das cuenta, aquí se puede definir solamente la jefatura.
+- [34:50] Sí.
+- [34:51] Pero no tenemos como un organigrama que sea como fácil de ver las jefaturas, ni las escalas, por así decirlo.
+- [35:00] Ya.
+- [35:01] Y ahí con lo que tú dijiste, estoy pensando también cómo unificar de que los que sean marcados como jefaturas pasen a ser las escalas de aprobaciones.
+- [35:15] ¿Pero eso no se define en rol y permiso?
+- [35:18] No. Por eso te decía, son como tres aristas que vendría a ser como el control.
+- [35:26] Que eran los administradores que vamos a sacar, que esos eran como los que tenían como permiso especial, pero ya con los cheques lo estamos supliendo así que ese se elimina.
+- [35:33] Bueno, aparte, estaban los roles que son los que te dan el permiso dentro de las páginas, que eso va a absorber la administración.
+- [35:42] Y la tercera arista son las reglas de aprobación, que las reglas de aprobación no se nutren directamente como de las jefaturas, ni de los roles, solamente se definen.
+- [35:55] Entonces, déjame darle de acá, de que acá tengo reglas de aprobación, sí.
+- [36:02] Entonces, por ejemplo, acá se crean grupos, pero estos grupos no vienen directamente de los roles.
+- [36:10] Tendríamos que entonces tomar los grupos de los roles, ¿verdad?
+- [36:13] Ya entiendo. No. O sea, en teoría sí, pero lamentablemente no todos los roles tenemos el mismo monto de aprobación.
+- [36:22] Por ejemplo, abastecimiento tiene un monto mucho mayor de aprobación a lo que tengo yo como jefe de contabilidad.
+- [36:29] En ese caso conviene tenerlo así separado, que no se nutra directamente para que no sea restrictivo.
+- [36:36] Exacto, que no se nutra directamente porque va a depender de la operación que tenga en sí el jefe el monto de aprobación,
+- [36:42] porque José Tomás como compro materiales tiene que tener un monto de 30, 40 millones.
+- [36:47] En cambio yo, como soy servicio administrativo, a lo más 4, 5 millones.
+- [36:55] Claro.
+- [36:56] Todos tenemos distintos montos de aprobación dependiendo de la operación.
+- [37:26] ¿Qué es lo que revisa? Es que tengas un rol que te permita acceder, por ejemplo, a compras en este caso.
+- [37:31] O sea, al final la asignación de la jefatura va a quedar con el monto independiente del módulo que esté aprobando, ¿eso?
+- [37:40] No. Más allá de eso, por ejemplo, este módulo, si por ejemplo, tú me creas a mí como usuario, por ejemplo.
+- [37:49] Por ejemplo, si tú me creas a mí como usuario y yo no tengo un rol definido que tenga acceso a compras, perdón, a, claro, sí, a las órdenes de compra, al módulo de compras, yo no te voy a aparecer acá para que me unas a un grupo del módulo de compras.
+- [38:06] Hasta que tenga un rol que me dé el acceso.
+- [38:08] Claro.
+- [38:10] Eso está bien, ¿verdad?
+- [38:11] Sí, eso está bien.
+- [38:12] Perfecto. Lo que sí la parametrización, ya, por ejemplo, tú me creas, me das el rol de acceso a compras, voy a aparecer acá, me van a poder agregar a un grupo o crear un nuevo grupo que tenga acceso al módulo de compras, pero esto no se va a fijar si es que me marcaron a mí como usuario alguna jefatura acá.
+- [38:33] Ya.
+- [38:33] Ahora, se va a fijar solamente en que primero se crea el grupo con sus integrantes, la idea es que al momento de crear un grupo se indique quién va a ser un aprobador, que podría ser una persona temporal, o podrías dejar a cualquiera de los usuarios porque después se puede cambiar, de hecho voy a crear uno acá.
+- [38:54] Alejandra, Andrés, por ejemplo vamos a crear con estos 1, 2, 3, 4, 5 usuarios.
+- [39:04] Al momento de, por ejemplo, seleccionarlos, el sistema sí o sí me pide dejar un aprobador, que se note de los que acabamos de seleccionar.
+- [39:16] Entonces, ese es el que queda como eslabón de la cadena, que de hecho está acá en prueba.
+- [39:25] Si te das cuenta, yo dije a Alejandra Ruiz como eslabón de la primera cadena, pero eso solamente lo pide como para dejar este primer eslabón, no es restrictivo.
+- [39:32] Entonces, se crea el grupo con los usuarios que tienen acceso al módulo de compras, y después de crear el grupo, se empiezan a definir las escalas. Que esto, como te decía, no se nutre directamente de la jefatura, solamente se nutre de los usuarios que están dentro del grupo.
+- [39:49] Entonces, por ejemplo, ya acá yo podría editar de que no sea Alejandro, sino de que sea, por ejemplo, Benjamín.
+- [39:56] Entonces, ahí me cambio a Benjamín, aquí se... no sé por qué no se actualizó.
+- [40:00] ¿Y el nivel 1 sería la aprobación?
+- [40:02] Exacto, este de acá, en la primera aprobación, sería directamente acá en la adición.
+- [40:15] Por ejemplo, acá tendría que ser desde acá, de insertar un aprobador intermedio.
+- [40:22] Por ejemplo, el primero quedó sin monto, entonces, ¿qué quiere decir que está sin monto?
+- [40:26] Que todas las aprobaciones van a pasar por él.
+- [40:30] Pero, por ejemplo, ahí en la segunda aprobación, ¿cómo yo pongo mi jefatura?
+- [40:34] Lo tendría que meter en el grupo, ¿no?
+- [40:35] ¿Cómo? Exacto. Tiene que primero ingresarlo aquí en el grupo para poder agregarlo como cadena de aprobación. Tiene que ser un integrante del grupo.
+- [40:44] Ya, pero por ejemplo, para crear el segundo nivel, ¿cómo sería? Intermedio o el que viene. El que viene. El que viene sería desde acá.
+- [40:52] ¿Desde más que aparece acá? Ya. Y ahí te pide seleccionar a los usuarios.
+- [40:58] Pero por ejemplo, en el mismo de Alejandra deberían aparecer los demás, ¿o no?
+- [41:01] ¿No? Sí, ahí tengo que revisar el por qué no aparecen. Ya. Porque, por ejemplo, si yo ponga Agustín, yo sería mi primera cadena de aprobación, pero mi segunda cadena sería Agustín.
+- [41:11] Exacto. O, si quieres, puedes dejar, por ejemplo, que esta sea la última cadena y aquí agregar otra intermedia. Ya. Y ahí le voy poniendo los topes.
+- [41:23] Exacto. Se puede, no sé si quieres también de que configuremos si yo sí que venga con topes. Sí.
+- [41:29] Ya. Entonces, por ejemplo, acá, si yo le pongo 5 millones, ¿va a llegar a esta aprobación solamente cuando alguna de las órdenes de compra pasen los 5 millones?
+- [41:50] Ya.
+- [41:53] ¿Está bien así, cierto?
+- [41:54] O sea, sí, pues la primera aprobación son el primer nivel de tope.
+- [41:59] Ah, pero ahí tengo una duda. Tengo una duda. Creo que se había definido así, ¿por qué?
+- [42:06] De que pudiera quedar sin tope, porque si mal no recuerdo, las aprobaciones van desde el 1 peso hasta, por ejemplo, en este caso, 5 millones.
+- [42:15] Sí.
+- [42:16] Pero si, por ejemplo, yo lo dejo hasta 5 millones, Alejandra va a poder aprobar hasta 5 millones y lo que pase después va a pasar.
+- [42:25] O sea, lo que pase después tiene que pasar a la siguiente aprobación por tope.
+- [42:30] Claro, pero en este caso, aquí hay un error del sistema.
+- [42:32] En este caso, por ejemplo, como está definido que va a aprobar hasta 5 millones, como dice la palabra, es hasta.
+- [42:37] Lo que pasa es que después no va a pasar a otra cadena. Ahí hay un error del sistema. En sí, por ejemplo, si hay solamente un aprobador, tendríamos que definir de qué es ese aprobador, si o si tenga que aprobar todo.
+- [42:57] Por ejemplo, si hay solamente un aprobador, que la cadena tenga solamente un eslabón, integrantes y un aprobador. Ese aprobador tendría que aprobar todos los montos.
+- [43:15] No está en ese caso.
+- [43:15] ¿No existe? No. O sea, todos los departamentos tienen un aprobador que es el jefe, pero depende del monto de si pasa a gerencia.
+- [43:29] Claro, entonces la limitante es, mira, ahí también viendo eso, de que aquí no se definen las gerencias, entonces las gerencias tendrían que agregarse como integrantes y después agregarse a la cadena, como está actualmente.
+- [43:49] O sea, yo pondría, por ejemplo, dentro del mismo grupo que voy a crear, que va a estar. Ah, y tenemos un tema. Sí, hay un tema.
+- [44:03] ¿Cierto?
+- [44:05] No, hay un tema porque, por ejemplo, la gerencia de Agustín tiene cuatro encargados. Entonces yo a cada grupo voy a tener que ser un grupo prácticamente por departamento.
+- [44:17] Y en cada departamento voy a tener que agregar al Agustín y a Nico como segundo y tercer aprobador.
+- [44:22] Claro.
+- [44:23] Va a tener que ser por departamento o por los montos de aprobación.
+- [44:39] Sí, yo creo que generar grupos no nos agregaría ningún valor realmente.
+- [44:45] Porque en órdenes de compra van a ser todos dentro del mismo grupo.
+- [44:49] Sí, al final quedaría como 20 grupos.
+- [44:55] Claro, porque al fin y al cabo es un grupo por concepto, uno para compras, proforma e insumo.
+- [45:00] Claro.
+- [45:02] Si, en ese caso, porque en sí, dependiendo del monto, sí o sí va a pasar por gerencia, ¿cierto?
+- [45:13] No.
+- [45:15] No en todos los casos.
+- [45:16] No, por ejemplo, si hay una factura que es de 2 millones y yo tengo hasta 5 para aprobar, con mi checklist está lista.
+- [45:24] Claro.
+- [45:24] Le llega a gerencia, pero la idea es que si yo le doy el aprobar y es de 7 millones, ahí se le envía a Agustín que él tiene 50 millones para aprobar.
+- [45:36] Y por ejemplo, en lo que vendría a ser por ejemplo el módulo de compras, proformas e insumos, tendrían como su jefatura aparte y cuando pase de ese monto del que tiene para aprobar la jefatura debería pasar a la gerencia, ¿verdad?
+- [45:52] Sí.
+- [45:52] Ok. Perfecto. En ese caso, lo que se me ocurre... Bueno, lo primero que hay que hacer es eliminar el tema de los grupos, porque al fin y al cabo va a ser un gangrubo. Quizás conservar la vista de como los integrantes, pero que no se subdividan por grupos. Eso sería lo primero.
+- [46:11] Lo segundo sería poder definir dentro de los integrantes del grupo quiénes son las personas que van a aprobar, que vendrían a ser las jefaturas. Y tercero, tendríamos que tener una parametrización que defina quiénes van a ser la gerencia.
+- [46:28] ¿Y no se puede que dentro del usuario donde yo lo creo salga el monto de aprobación o si no corresponde que tenga monto de aprobación? Al final va a quedar por rol.
+- [46:45] Bueno, si estoy pensando cómo dejarlo, porque lo que se me ocurre, como bien dices tú, es dejarlo directamente en la parametrización. ¿Por qué? Porque la parametrización de usuario, al momento de crear el usuario, ya por ejemplo acá, más que quizás marcar la jefatura, sería marcar directamente a qué área pertenece.
+- [47:08] Porque por área hay una jefatura fija. Entonces aquí sería como definir el área y aquí tomarnos de este nuevo módulo que había implementado que vendría a ser como el organigrama.
+- [47:25] Y dentro del organigrama, definir por cada uno de los conceptos, por ejemplo, compras, ventas, insumos y proformas, dejar quién es el jefe de cada uno de estos módulos, desde acá, y que acá también se defina lo que vendría a ser la gerencia.
+- [47:48] Porque al fin y al cabo el control que se necesita, lo único que hace como la diferencia es si una persona es jefe o gerente o ninguno de los anteriores.
+- [48:15] Entonces yo creo que la creación de usuarios debería definir solamente el área que va a pertenecer al usuario, porque en el área se definiría la jefatura, junto con eso también los montos de aprobación de cada una de las jefaturas van a estar asociados a eso.
+- [48:36] Y ahí también se definiría y detallaría también qué monto tiene cada jefatura para aprobar para que en caso de que se exceda eso pase el visto bueno a la gerencia.
+- [48:46] Claro, pero que siempre pase por la jefatura la aprobación.
+- [48:49] Claro.
+- [48:49] Si, no sé, por el documento es de 7 millones y yo tengo 5, que no me salte, sino que igual tengo que hacer una aprobación previa.
+- [48:56] Claro, claro. Por ejemplo, en este caso sería la Fran, te pide, por ejemplo, poniéndolo en el contexto de órdenes de compra.
+- [49:05] ¿Te pide la aprobación de una orden de compra de 4.999.000? ¿Tendría que pasar por ti solamente?
+- [49:15] Claro.
+- [49:17] Perfecto. Si, por ejemplo, la Fran pide algo que sea de 1.000 pesos, también debería pasar por ti, ¿verdad?
+- [49:24] Sí.
+- [49:25] Perfecto. Entonces, ahí definiríamos en este módulo de lo que vendrían a ser las reglas de aprobación.
+- [49:32] Solamente veríamos como nivel informativo los usuarios que son parte de lo que vendría a ser compras.
+- [49:39] Y aquí se definiría solamente la jefatura.
+- [49:44] Claro, pero si supera ese monto ya pasaría a Agustín.
+- [49:47] Exacto.
+- [49:49] Y ahí a Nico. Tenemos tres niveles de aprobación.
+- [49:52] Entonces, por ejemplo, acá sería...
+- [49:55] A ver si es que Paint me ayuda un poquitito.
+- [49:58] Me cuesta un poco explicarme cuando tengo las cosas en la mente.
+- [50:01] Por ejemplo, en este recuadro de acá, aquí solamente serían, como por así decirlo, los integrantes de cada módulo.
+- [50:36] Que estos pueden ser, por ejemplo, los digitadores y jefatura.
+- [50:45] Entonces aquí ya no existirían los grupos, sino que por orden de compra se detallarían todos los integrantes.
+- [50:50] Que serían el digitador y las jefaturas. Y acá, en el nivel 1 y más, se definiría lo que vendría a ser la jefatura, que vendría a ser como el primer eslabón.
+- [51:12] Y aquí se definiría el monto hasta donde puede aprobar sin que pase a gerencia, y en el caso particular se podría agregar también un segundo nivel, dependiendo del módulo, podríamos replicarlo para que tenga acá.
+- [51:32] Y el último nivel, sí o sí, automáticamente debería ser lo que vendría a ser la gerencia.
+- [51:43] El último nivel siempre quedaría parametrizado con la gerencia.
+- [51:47] Que esto sería en caso de que supere el monto de aprobación del jefe.
+- [51:56] Pero, por ejemplo, en ese ejemplo, ¿los jefes quedarían todos con el mismo monto de aprobación?
+- [52:01] Solamente en órdenes de compra.
+- [52:03] Claro, entonces no así nos sirve, tiene que ser por...
+- [52:38] El 2 que vendría a ser como el jefe máximo de compras pasaría directamente a la gerencia.
+- [52:43] Lo que pasa es que al final compras en todos los módulos.
+- [52:49] Entonces ahí quedaría por qué jefe tiene más o menos nivel de aprobación.
+- [52:57] ¿Cómo que compras eso en todos los módulos?
+- [52:59] Porque por ejemplo recursos humanos puede comprar, abastecimiento puede comprar, comercial puede comprar, cómex puede comprar, yo puedo comprar, todos podemos comprar.
+- [53:11] Pero todos tenemos distintos niveles de aprobación, distintos topes.
+- [53:18] Entonces, si tendríamos que tener los grupos.
+- [53:20] Sí.
+- [53:24] Si tendríamos que tener los grupos para diferenciarlos dependiendo del área, por así decirlo.
+- [53:29] Claro, al final los grupos serían las áreas.
+- [53:32] Exacto.
+- [53:33] Sí, lo que sí se van a repetir es la gerencia y la gerencia general.
+- [53:37] Perfecto, entonces conservamos el esquema de los grupos, ya que pueden tener más de un acceso de diferentes áreas a las compras.
+- [53:44] Claro. Perfecto. Entonces conservaríamos eso del esquema anterior que tenemos. Aquí podríamos definir, por ejemplo, voy a hacer aquí una pequeña edición, y aquí definiríamos lo que vendría a ser, por ejemplo, el grupo 2.
+- [54:10] Imaginemos que este podría tener una escalada de aprobación porque tenga una jefatura.
+- [54:16] Claro.
+- [54:18] Entonces ahí definiríamos integrantes, jefatura, gerencia quedaría fijo y gerencia lo tendríamos que dejar para que se parametrice desde el organigrama.
+- [54:29] Es que mira, por ejemplo, editemos un grupo para que lo hagamos práctico.
+- [54:32] Del mismo sistema.
+- [54:35] Y órdenes de compra donde estábamos antes.
+- [54:38] No me parece que está creado.
+- [54:51] ¿Y en el tuyo?
+- [54:53] Tengo acá, en el local tengo uno creado.
+- [54:55] Ya.
+- [54:57] Entonces, reglas de aprobación.
+- [54:58] Ah, pero por ejemplo yo lo puedo crear, ¿no?
+- [55:00] Sí, sí.
+- [55:01] Ya.
+- [55:03] Déjame ver al tiro.
+- [55:21] Este rol de qué va a ser, o sea, perdón, este grupo de qué va a ser.
+- [55:24] Por ejemplo dice tipo orden de compra, nombre, le puse contabilidad, pero yo no aparezco.
+- [55:31] Eso tiene que ser porque quizás no tengas un rol que te dé acceso a eso.
+- [55:35] Déjame ver acá.
+- [55:36] Bueno, Jesús Rodríguez, tienes el rol de administrador.
+- [55:38] Chan, no, es un problema del sistema, deberías poder aparecer.
+- [55:42] Ya, pero mira, voy a poner, no puede ser un grupo ficticio como que estoy aquí.
+- [55:47] Ya, y aprobador final, voy a poner que la Fran es la aprobadora final, ya, guarda.
+- [55:52] No sé si puedes compartir la pantallita igual para ir viendo.
+- [56:15] Sí, porque la traía, la traía ahorita para...
+- [56:22] ¿Se ve?
+- [56:30] Un segundo, por favor.
+- [56:47] ¿Se creó la compra?
+- [56:49] No tengo idea.
+- [56:50] Uy, perdón, me había muerto en estornudos.
+- [56:58] Ya, ahí estoy viendo.
+- [57:00] ¿Se ve?
+- [57:01] Sí, se ve súper bien.
+- [57:02] Por ejemplo, acá creé el de contabilidad que son cuatro integrantes y que Mario sea el primer aprobador.
+- [57:09] Perfecto.
+- [57:10] Ya, pero aquí no me piden ninguna parte.
+- [57:13] Ya, el ASTA.
+- [57:15] Ya, cinco millones.
+- [57:17] Guardar.
+- [57:18] Te van a descreditar, te van a descreditar igual.
+- [57:29] Te va a poner como administrador.
+- [57:30] Ya, bueno, entonces acá yo tengo que agregar uno y no me deja.
+- [57:38] En el final no te deja.
+- [57:40] No, entonces aquí yo tengo que agregar otra persona que cuando el tope de Mario no sea 5 millones, venga el segundo aprobador y después un tercer aprobador y ya gerencia general.
+- [57:53] Sí, déjame revisar eso porque al menos en el que tengo local me deja, quizá a lo mejor en el servidor quedó algún problema.
+- [57:59] Un momento, voy a revisarlo desde acá. Sí, sí, tiene ese problema, Mari, que si no existe, por ejemplo, el nivel 2 creado en otro grupo, no te permite agregar el más. Cuando hay un nivel 2, te permite. Mira, en este caso, tenemos que corregirlo, pero para efectos del ejemplo, te voy a pedir que agregamos uno antes de Mario, en vez de después de Mario. Ahí debería salirte el más.
+- [58:31] Ya, aquí. Ah, perfecto.
+- [58:33] Esto solamente para que podamos ver el ejemplo.
+- [58:36] ¿Y por qué me deja el Cristian y el Asigri y no el Afran?
+- [58:39] Eso debe ser el error de que te decía de que cuando tienen el usuario administrador no aparecen ahí, que eso también lo tengo que corregir.
+- [58:48] Ah, ya, cambiar.
+- [58:51] O sea, ¿dónde está el sistema acá?
+- [58:54] Que estos casos reales es donde salen todos los errores, porque uno lo ocupa como uno lo hace el sistema,
+- [59:00] uno lo ocupa como se imagina que debería usar y no pasan estos casos.
+- [59:03] Bueno, entonces acá yo tengo que dar permiso para que apruebe su orden de compra.
+- [59:13] Y ahí, guardar cambio. Y ahí te dice. Entonces, acá yo lo agrego, seleccionar a la Fran. Y monto ya dos millones y medio. Insertar. Ahí sí.
+- [59:30] Claro, y en este caso debería, por ejemplo, la Fran agregarse al final, que eso lo voy a corregir, pero ahora lo que podríamos hacer sería como cambiar a Francisca por otro, el que está en Francisca por el Mario, y dejar a Francisca al final, lo cual no debería ocurrir porque debería dejarte al final agregar.
+- [59:51] ¿Acá? ¿Así?
+- [59:55] No, no, no, no, no necesariamente.
+- [01:00:00] Lo que te decía, que claro, debería poderte permitir agregar a la Francisca al final, solamente un...
+- [01:00:04] ¡Ah, perfecto! ¡Ah, ya, ya, ya!
+- [01:00:08] Es un problemita del sistema.
+- [01:00:11] Ahí lo pasamos bien, ¿no?
+- [01:00:13] Eh, no.
+- [01:00:16] No sé, a ver...
+- [01:00:17] Dos y medio, y además le voy a costar cinco.
+- [01:00:22] A ver, y debe ser menor a Mario, porque vaya adelante.
+- [01:00:25] ¿Pero eso?
+- [01:00:26] Ya, pues, no me da... si pongo un monto mayor, no es que te lo ponga al final.
+- [01:00:29] Ahí en ese caso lo que tendría que ser, sería como editar el aprobador final que sea otra persona.
+- [01:00:36] Sí, pero en este caso ya vemos que si lo meto en el grupo, tengo que ver el grupo de toda la cadena.
+- [01:00:41] Al final si es contabilidad, la Fran, soy yo, Agustín y Nico.
+- [01:00:46] Si es control de gestión, es la Sigrid, Mario, Agustín y Nico.
+- [01:00:50] De ahí se van generando las cadenas de aprobación.
+- [01:00:53] Porque Agustín transversalmente tiene el monto de aprobación X.
+- [01:00:59] De lo mismo a qué área está aprobando.
+- [01:01:01] Entonces, lo que podríamos hacer sería de que, como se define en este caso a 5 millones, tal cual es el que tiene en pantalla,
+- [01:01:07] como Mario Villo en este caso vendría a ser como la jefatura de ese grupo,
+- [01:01:12] él aprueba hasta 5 millones y automáticamente cuando pase de 5 millones, pase a lo que vendría a ser la gerencia.
+- [01:01:18] Es que así es.
+- [01:01:22] Perfecto. Y por ejemplo, la gerencia, que eso es algo que no está implementado en el sistema que tienen ustedes todavía,
+- [01:01:32] Aquel módulo que te había mostrado del organigrama, no sé si es que será bueno definir ahí la gerencia.
+- [01:01:39] Porque al final igual lo voy a poner en el nivel de aprobación.
+- [01:01:50] Por eso te decía, porque al fin y al cabo la idea de hacerlo así es para que no tengas que agregar la gerencia en cada uno de los grupos, pero si quieres puede ser de esa forma.
+- [01:02:03] Más que nada, por ejemplo, en este caso, como ya se define el tope del jefe, que vendría a ser en este caso como el Mario, ya sabemos que de 5 millones 1 peso pasa de Mario y tendría que pasar a la gerencia, para que no tengas como que agregarla manualmente cada vez que crees un grupo.
+- [01:02:30] Pero aún así hay dos niveles de gerencia, tal que el gerente del área, o sea, del grupo, y está el gerente general.
+- [01:02:39] Ah, y cada uno en diferentes módulos puede tener diferentes montos de aprobación.
+- [01:02:44] Exacto.
+- [01:02:45] Ah, ya, entonces en ese caso tendría que ser así.
+- [01:02:48] Lo que sí, ahí por ejemplo me genera la duda de que es lo que te decía, como el último eslabón tiene la palabra hasta, la idea es que el último eslabón no tenga esa palabra, porque va a aprobar desde lo que no puede aprobar el anterior hasta infinito.
+- [01:03:04] Bueno, lo que pasa es que el último aprobador igual tiene que tener el ASTA porque puede que sea un error de tipeo.
+- [01:03:12] Ah, ok, que no vaya a aprobar 100 mil millones de dólares.
+- [01:03:16] Exacto.
+- [01:03:17] Ya, ya. Ah, entonces conservaríamos entonces el tope.
+- [01:03:21] Sí, porque ya que sea un monto abismante ya tiene que entrar a revisar.
+- [01:03:25] Y en ese caso, por ejemplo, no creo que la inflación vaya a llegar a un punto en que tengamos que aprobar 100.000 millones de pesos, pero no sé si es que, por ejemplo, en ese caso, cuando sea un monto muy abismante y pasen todas las aprobaciones, como que se notifiquen los módulos, por ejemplo, en el de compras, como hoy está ingresando una aprobación de 100.000 millones de pesos.
+- [01:03:49] Sí, por ejemplo, el monto manto que hemos aprobado, yo creo que son 250 millones.
+- [01:03:55] Ya. Entonces el tope de Nico lo dejamos en 400 millones. Ya. Pero ya si es 4000, ya tiene que haber una alerta de qué está pasando. Perfecto, perfecto. Ahora, si realmente fuera 4000, ya hay que editar la aprobación de Nico que suba a 4000. Pero tiene que haber un... una alerta, claro.
+- [01:04:17] En ese caso, por ejemplo, cuando yo esté haciendo una orden de compra y pase del monto de la gerencia, ¿debería solamente bloquearme indicando de que el monto excede?
+- [01:04:31] Claro, debería no dejar aprobar.
+- [01:04:34] Claro, que ni siquiera llega a la cadena.
+- [01:04:35] Claro, o sea, ah, como que hay un ya, te entiendo.
+- [01:04:40] Claro, por ejemplo, si definimos de qué van a ser 400 millones el tope de la gerencia del último eslabón, si yo pongo 400 millones un peso en la orden de compra, ¿debería como mostrarme de qué? ¿Algún mensaje? ¿O solamente bloquearlo y no mostrar nada?
+- [01:05:02] No, debería aparecer un mensaje como que está excediendo el monto.
+- [01:05:07] Ya. Y ahí excediendo el monto de la gerencia, por así decirlo.
+- [01:05:10] Claro. Ahí tengo una duda, Carlos, porque acá como estamos viendo el tema de la triple moneda, ¿yo voy a poder hacer órdenes de compra en yuanes?
+- [01:05:23] Sí, sí, en las órdenes de compra te pregunta el tipo de moneda y el tipo de moneda se nutre de las monedas que están en parametrización.
+- [01:05:29] Ya, y por ejemplo ahí mi tope, si son 5 millones, automático se va a transformar en cuántos dólares son y cuántos yuanes son.
+- [01:05:36] Verdad, no lo había considerado.
+- [01:05:39] Yo tampoco.
+- [01:05:39] Ya, ahí hay que conversar temitas porque la conversión, como sabemos, va a depender mucho del tipo de cambio.
+- [01:05:49] Claro, entonces quizás, bueno, no sé, será muy complicado que al final quizás los montos de aprobación aparezcan en las tres monedas al tiro.
+- [01:05:58] ¿Cómo definirlos por cada moneda?
+- [01:06:01] Claro, porque al final si yo tengo 5 millones, sé que son 5 mil dólares y sé que son, a ver, cuánto, son como 40 mil yones.
+- [01:06:11] Mira, lo que se me ocurre, aprovechando de que ya tenemos el tipo de cambio al día por la integración que tenemos con el Banco Central, lo que se me ocurre es que cuando tú estés creando un eslabón, mira, si puedes ponerle ahí en agregar uno intermedio, como para dejarlo ejemplificado,
+- [01:06:27] Es que, por ejemplo, cuando tú ingreses el monto hasta en pesos chilenos, automáticamente en las demás monedas se va a hacer la conversión del día y te deje el monto en pesos en la conversión de las otras monedas, pero con la opción de editarlo.
+- [01:06:44] Pero no te va a quedar complicado, por ejemplo, porque eso va a quedar guardado al tipo de cambio del que yo lo estoy creando, pues no se va a ir actualizando.
+- [01:06:51] Exactamente. Va a quedar solamente al tipo de cambio del monto.
+- [01:06:54] Sin más que nada, como por ejemplo, sería como por ejemplo, ya, yo quiero, caso bien fácil, quiero por ejemplo dejar un monto de mil pesos y el tipo de cambio del dólar está por ejemplo justo a mil pesos.
+- [01:07:09] En el monto de dólar que va a ser, se va a poner como automáticamente cuando yo ingrese mil, me va a poner automáticamente un dólar por la conversión del día, pero yo voy a poder modificar ese un dólar a tres dólares, dos dólares.
+- [01:07:20] Ya, te entiendo, ¿sabes? Porque en caso de que yo tenga un monto mayor en dólar.
+- [01:07:31] Claro, es más que nada como informativo de que, mira, está exponiendo un peso chileno.
+- [01:07:35] Es como una ayuda de memoria y en caso de cualquier cosa lo puedo editar.
+- [01:07:38] Exacto.
+- [01:07:39] ¿Sí?
+- [01:07:40] Ahí, por ejemplo, también me surge otra duda.
+- [01:07:44] Porque podremos tener diferentes monedas en la cadena de aprobación,
+- [01:07:49] Bien, por ende, cuando haga un segundo eslabón, ¿no debería ocurrir el caso de que la diferencia del monto en peso y el monto en dólar vaya a cambiar mucho, a menos de que el tipo de cambio cambie a futuro, verdad?
+- [01:08:04] Claro, al final el monto que vamos a mandar va a ser el de peso, pero igual va a haber el caso en que queramos hacer órdenes de compra en dólar y órdenes de compra en yuanes.
+- [01:08:14] En ese caso, no creo que vaya a ocurrir de que haya un aprobador de más dependiendo del tipo de moneda, ¿cierto?
+- [01:08:25] No.
+- [01:08:26] ¿Se respetan los mismos?
+- [01:08:27] Sí.
+- [01:08:29] Ya. En ese caso tendríamos que agregar solamente el parámetro dependiendo de las monedas.
+- [01:08:33] Yo creo que debería ser como una lista que esté abajo, porque como se pueden agregar más tipos de moneda,
+- [01:08:38] Para que se vaya como autoactualizando dependiendo de los tipos de moneda y te pida solamente el monto de las monedas disponibles.
+- [01:08:49] Perfecto. Sí, porque no había considerado de la multimoneda para este tipo de casos.
+- [01:09:00] Sería entonces, la gerencia al fin y al cabo se va a agregar como parte de los integrantes de la cadena de aprobación.
+- [01:09:09] Deberíamos tener la opción de tener multimonedas, configurar cada uno de los eslabones con las monedas y sus topes.
+- [01:09:17] Y la gerencia final también va a tener un tope más que nada como por errores de tipeo para ahorrarnos ese dolor de cabeza futuro.
+- [01:09:50] Actualmente con cuántas monedas trabajan? Con tres, verdad?
+- [01:09:54] Con tres.
+- [01:10:06] ¿Hay un café?
+- [01:10:12] De la verdad que no importa.
+- [01:10:15] Gracias por ver el video, si te gustó, dale like y suscríbete al canal.
+- [01:10:52] ¡Gracias por ver este video!
+- [01:11:24] Estaba con una polera matándolo.
+- [01:11:33] Entonces, vamos a tener que hacer estos ajustes de lo que vendría a ser la parametrización de usuarios, para que quede como un poquitito más unificado.
+- [01:11:42] Yo creo que el módulo de administradores se va sí o sí, por lo que estábamos conversando, agregar las multimonedas, y ver estos pequeños problemitas de que no te dejaba agregar una escala al final, que eso también lo tenemos que corregir.
+- [01:11:55] Sí.
+- [01:11:58] Pantalla para mostrar...
+- [01:11:59] Ah, y lo que todavía, bueno, no lo alcanzamos tan mucho. Compartiendo, me avisan si se ve.
+- [01:12:11] No, ¿cómo dejo de compartir acá?
+- [01:12:14] Sí, cuando uno comparte no te deja ver las demás pantallas.
+- [01:12:18] Debería, porque al final si suponemos que estamos en una reunión tenemos que ver todo lo mismo.
+- [01:12:22] Sí, no me gusta el tips por eso.
+- [01:12:27] Entonces, ahí se ve, ¿cierto?
+- [01:12:30] ¿Qué deberíamos ver?
+- [01:12:32] ¿Se ve el RP?
+- [01:12:33] Ahí sí.
+- [01:12:34] Ah, la engañé, estaba viendo esta pantalla.
+- [01:12:36] Estábamos viendo error.
+- [01:12:38] Jajajaja, fallo con éxito.
+- [01:13:11] Podríamos hacer las personas que no son jefatura de nadie. Aquí eso sí, los títulos no corresponden, porque son solamente escalas de jefatura.
+- [01:13:21] Podríamos hacer de que tengan un título, por usuario. Podríamos hacerlo.
+- [01:13:24] Que sería como gerencia general, gerencia de área, jefatura y analista, para abajo.
+- [01:13:32] Exacto, exacto. De hecho, eso mismo lo voy a anotar, Fran, para dejarlo acá estipulado.
+- [01:13:37] Porque abarcan casi todo.
+- [01:13:39] Sí.
+- [01:13:39] Entonces, eso se va nutriendo de lo que tú vas dejando como jefatura en los usuarios, para que tengas como una visualización más fácil de cómo se va generando esa jefatura.
+- [01:13:53] Por ejemplo, estos que no tienen escala, me imagino que son porque no vienen con... debería mostrarlos en color así como analista.
+- [01:14:03] Estos de acá.
+- [01:14:05] Pero, por ejemplo, ahí te va mostrando aproximadamente la escala de las jefaturas que se van definiendo dependiendo de cómo las demás visualizaciones.
+- [01:14:11] De hecho, esta parte de acá arriba, como es solo una guía, la idea es que no aparezca, debería no aparecer. Entonces, ahí pueden ir viendo el organigrama de la empresa, cómo lo está entendiendo el sistema, por así decirlo.
+- [01:14:38] Igual es difícil con nombres no conocidos.
+- [01:14:41] No, sí.
+- [01:14:42] Sí, estos son nombres terribles.
+- [01:14:45] No conozco a nadie.
+- [01:14:47] No, pero sí, o sea, si se va a nutrir de la creación del usuario, va a quedar parametrizado el organigrama.
+- [01:14:54] ¿Y qué tendría que editar?
+- [01:15:27] Las reglas de aprobación.
+- [01:15:34] Claro, pero las reglas de aprobación se dan en base a la creación de rol, ¿o no?
+- [01:15:42] No, de hecho, las reglas de aprobación no tienen como interacción con los roles, solamente con los usuarios.
+- [01:15:52] Entonces, lo que podríamos hacer...
+- [01:15:56] Pero, por ejemplo, si yo hago el rol de analista contable, y tiene una aprobación de 500.000 pesos, ahí no va a ser al usuario.
+- [01:16:07] Pueden haber tres analistas que tengan el mismo rol.
+- [01:16:09] Estoy pensando, y quizás sería más fácil y más cómodo, definir las escalas de jefatura, y en base a esas escalas de jefatura generar...
+- [01:16:39] ¿Y los topes de aprobación?
+- [01:16:43] No, yo creo que es mejor por jefatura. O sea, en el rol poner el monto del tope.
+- [01:16:50] Es que los roles en sí no tienen como interacción con lo que te decía con las reglas de aprobación.
+- [01:16:55] Pero no íbamos a quedar que en la regla de aprobación se iba a poner el monto.
+- [01:17:00] Exacto.
+- [01:17:00] Sí, no hay problema, déjalo así.
+- [01:17:02] Sí, porque el rol, como te decía, es solamente ver a quién puede acceder en esta parte.
+- [01:17:08] Sí, no, en el rol de aprobación, ¿verdad?
+- [01:17:12] La regla de aprobación, dejarlo en base a la cadena.
+- [01:17:18] Ya, entonces esto solamente sería informativo.
+- [01:17:20] Sí.
+- [01:17:21] Ya, perfecto, perfecto.
+- [01:17:23] Lo otro que quería ver, no sé si es que les queda alguna duda con lo que vendría a ser esta parametrización de usuarios, alguna idea, sugerencia.
+- [01:17:47] No, lo que sí nos ha podido destacar mucho en el módulo, porque no me aparecen las actualizaciones, tengo la alimentación que ya he levantado.
+- [01:17:54] Entonces la idea cuando me avisen que está listo, poder hacerlo con casos reales.
+- [01:18:00] De hecho, mira, mientras estamos en la reunión voy a hacer que se actualice el otro sistema.
+- [01:18:07] Así que quizás vamos a ver de que parpadea la pestaña o quizás te sale como un error como de acceso.
+- [01:18:12] Para que se actualice mientras estamos en la reunión, ¿te parece?
+- [01:18:15] Ya.
+- [01:18:16] Estoy trabajando mientras para que haga como el despliegue de esta actualización que tengo acá local.
+- [01:18:38] Lo que quería consultar también ahora es lo que vendría a ser en el módulo de insumos,
+- [01:18:44] Porque aquí dejé maqueteado visualmente solamente lo que vendrían a ser las órdenes de aplicación, junto con las recetas y la implementación del packing.
+- [01:18:56] ¿Qué nos faltaba acá por lo que había entendido del módulo de insumos?
+- [01:19:00] Es la posibilidad de agregar packings, que estos son empresas externas, por ende deberíamos tener control de cada uno de ellos,
+- [01:19:06] que vendría a ser como un módulo muy similar a lo que vendría a ser la parametrización de proveedores.
+- [01:19:11] ¿Ya?
+- [01:19:11] Entonces aquí se agrega el rule, la razón social, el giro, dentro de lo que vendría a ser las órdenes de aplicación, aquí existe la posibilidad de agregar una nueva orden de aplicación, donde dejamos estos campos.
+- [01:19:30] Aquí vendría a ser la fecha, bodega, el cuartel de centro de costos, el sector, la dosificación, y aquí los insumos que se van a utilizar.
+- [01:19:46] Esto vendría a ser como la forma manual de ingresarlo.
+- [01:19:49] Dejamos acá como una nueva pestaña lo que vendría a ser las recetas.
+- [01:19:55] Aquí faltó un botoncito para poder ver la visualización, pero en sí se arman de esta forma.
+- [01:20:00] El código, el nombre, el packing, la especie que la ocupa y los componentes que son por caja, por así decirlo.
+- [01:20:13] Y de aquí sería como la visualización para crear uno nuevo, donde aquí se pueden agregar los diferentes componentes a la receta.
+- [01:20:29] Y se pueden agregar y quitar.
+- [01:20:31] Y estos, aquí tengo una duda porque, por lo que entendí, esto lo estamos viendo del modo demo porque está solamente maqueteado visual, no está la parte lógica todavía.
+- [01:20:39] Pero por lo que entendí, esto se va nutriendo de lo que existe actualmente en existencia en bodegas, ¿verdad?
+- [01:20:46] Sí.
+- [01:20:48] Perfecto, entonces, claro, efectivamente esto debería, como le digo, todavía no está en la parte lógica, debería nutrirse de lo que solamente existe en el maestro de artículos.
+- [01:20:56] Un momentito, por favor.
+- [01:21:18] Vuelvo, enseguida voy a buscarme un vasito con agua que se me está raspando mucho la garganta.
+- [01:21:22] Podemos hacer break, así vamos al baño también.
+- [01:21:26] ¿Ya? ¿Sí? ¿Si quieren? ¿Diez minutitos?
+- [01:21:28] Ya.
+- [01:21:28] Perfecto. 11.31 volvemos entonces.
+- [01:21:32] Buen día.
+- [01:24:34] Hola Sergio, soy Lafran. Estamos en un break y volvemos como a las 11.31.
+- [01:32:04] ¿Están por ahí? ¿Sí?
+- [01:32:11] ¿Volvieron? ¿Están listas? ¿Necesitan más tiempo?
+- [01:32:13] No, están listas.
+- [01:32:17] Yo me tomé como tres litros de palto miel a ver si es que me hacen efecto.
+- [01:32:22] No, están mal, esa cuestión no me agrada el sabor que tiene.
+- [01:32:25] Un palto miel y a seguir.
+- [01:32:28] Oh, y tal cual, mucho confort.
+- [01:32:31] Pero sí que con esta ingestión igual lo pongo el propóleo.
+- [01:32:37] Sí, ese me falta.
+- [01:32:39] De hecho hay uno en Sprite que se ocupa directamente, que es súper rico, pero hoy día en la mañana no lo encontré.
+- [01:32:44] Sí, pero te recomiendo que no compres con alcohol.
+- [01:32:47] Ya.
+- [01:32:49] Porque yo cometí el error de comprar con alcohol y es horrible.
+- [01:32:54] Arde la garganta, ¿no?
+- [01:32:56] Sí, y es como tirarte alcohol de las manos, el Sprite, el alcohol.
+- [01:33:02] El desinfectante.
+- [01:33:02] El desinfectante, sí, te juro.
+- [01:33:05] No, el único alcohol que venga con bebida es con vaso, no más.
+- [01:33:07] Sí, con hielo, por favor.
+- [01:33:14] Sergio me dijo que estaba un poquito ocupado porque igual iba a estar de oyente, así que le damos igual la bienvenida a la reunión.
+- [01:33:23] Y vamos a continuar con lo que estábamos viendo que vendría a ser la generación de las órdenes de aplicación.
+- [01:33:29] Ya.
+- [01:33:32] Dentro de lo que vendría a ser la parametrización, bueno, dejamos estos como totalizados en la parte de arriba.
+- [01:33:37] Y estos campos para la generación de las órdenes de aplicación.
+- [01:33:45] Buenos días, Sergio.
+- [01:33:52] No sé si por ejemplo dentro de lo que vendría a ser las órdenes de aplicación nos faltaría quizá algún campo implementar, algo, bueno, como les comentaba, lo dejé maqueteado solamente visualmente con lo que yo había entendido.
+- [01:34:17] Y ahí tengo una duda.
+- [01:34:27] Cuénteme.
+- [01:34:27] Por ejemplo, en la dosificación autentécnica, ¿cómo te va a calcular la cantidad a aplicar por la hectárea?
+- [01:34:38] ¿Cómo, perdón? ¿Podrías repetir la pregunta?
+- [01:34:40] Que por ejemplo dice, dosificación autentécnica.
+- [01:34:43] Sí.
+- [01:34:45] Entonces, por ejemplo, ahí dice 2,5 la hectárea, 2,5 litros por hectárea.
+- [01:34:51] Exacto, sí.
+- [01:34:52] Ya. Ah, y ahí cuando yo lo selecciono y vea la cantidad de hectáreas, ¿me va a calcular la aplicación?
+- [01:35:00] Exacto, exacto.
+- [01:35:02] Ah, perfecto.
+- [01:35:04] Debería salirte un detalle en la parte de abajo al momento de seleccionar de lo que va a aplicar, ¿verdad?
+- [01:35:09] Eh, ¿cómo? ¿Cómo?
+- [01:35:11] Debería aparecer un detalle de la cantidad que va a aplicar o debería mostrarse solamente acá como indicador.
+- [01:35:16] Por ejemplo, si yo pongo dos meses, que me parezca la cantidad de abrazos.
+- [01:35:23] Perfecto. Por ejemplo, acá lo que sí...
+- [01:35:44] ¿Las órdenes de aplicaciones solamente son para un insumo o pueden ser para más de uno?
+- [01:35:48] No, pueden ser para más de uno.
+- [01:35:50] Entonces aquí tendríamos que agregar por línea, ¿eso faltaría?
+- [01:35:53] Sí, puede ser más de uno.
+- [01:35:54] Por lo que recuerdo, los insumos también se definían como un monto, que era como solamente sugerencia. También debería calcularse en base a ese monto que está acá, pero me imagino que en vez de que aparezca, porque como vamos a seleccionar varias líneas, debería tener un monto acá de cada ítem visual y que al final aparezca un totalizado de los que se seleccionaron, ¿verdad?
+- [01:36:19] Sí, pero igual te vas a confundir porque algunos son tilos y otros son libros. Entonces nos va a parecer una moneda media.
+- [01:36:26] ¿Debería entonces también tener la unidad de medida?
+- [01:36:29] Sí, porque todos los insumos tienen distintas unidades de medida. O sea, pueden tener más de diferentes.
+- [01:36:40] De casualidad, ¿la orden de aplicación tendrán algún documento que ya utilicen, tipo como para basarnos en él?
+- [01:36:47] Dejamos solicitarlo.
+- [01:36:49] Ya, ya. Porque así con eso, si tiene, por ejemplo, uno que tenga más de una línea, nos basamos en los campos que tenga ese para implementarlo acá directamente y no estamos como teniendo como esta incógnita de saber cuáles son los campos que traen un documento que ya están aplicando.
+- [01:37:07] Ya.
+- [01:37:07] Perfecto, pero faltaría entonces el detalle por línea de cada uno de los insumos, faltaría también que muestre el tipo de parámetro que ocupa, si es que es litro, etcétera, y el monto, y un totalizado de ellos abajito, ¿verdad?
+- [01:37:25] Por ejemplo, ahí también tengo la duda, ¿de que el centro de costos se aplica por orden de aplicación o se aplica por cada uno de los ítems? ¿El centro de costos se aplica por la orden en general o va cada uno de sus ítems con su centro de costo?
+- [01:37:47] Por la orden.
+- [01:37:50] ¿En general entonces?
+- [01:37:51] Sí, porque al final el centro de costo en ese caso va a ser prácticamente lo mismo que el sector. De hecho, el centro de costo es mi hectárea, es mi cuartel. Y el centro de costo va a estar parametrizado por el metraje de la hectárea.
+- [01:38:12] ¿Hay algún otro parámetro que nos falte de la parametrización que se tenga que adjuntar quizás por líneas o a nivel general, como por ejemplo plan de cuentas o algo así?
+- [01:38:26] De acá no.
+- [01:38:27] Aparte de centro de costo, ¿no?
+- [01:38:29] No.
+- [01:38:30] No, lo otro que se podría agregar, el elemento de costo.
+- [01:38:38] Perfecto.
+- [01:38:40] ¿Por ítem o a nivel general?
+- [01:38:44] Por...
+- [01:38:45] Y apenas me respondan de abastecimiento agrícola, le hago llegar la orden de aplicación.
+- [01:39:05] Ya, genial, genial. Entonces con eso ahí vemos si es que también nos falta quizá algún otro campo que tengan ahí ya tipificado en la orden.
+- [01:39:14] En este caso, habíamos dicho de que, por ejemplo, acá como se dan cuenta que aparece directamente el texto de enviar aprobación a la cadena de insumos,
+- [01:39:22] Esto pasaría directamente a la parametrización, a la administración de lo que vendrían a ser las reglas de aprobación, pero de insumos. Eso aplica, ¿verdad? Bueno, en este caso no tenemos reglas de aprobación, pero pasaría por la de insumos, ¿verdad?
+- [01:39:41] Y la de insumos también pasaría por lo que vendría a ser las órdenes de compra de insumos.
+- [01:39:51] Está bien de que esa cadena de aprobación aplica los dos aspectos de órdenes de aplicaciones y órdenes de insumos, o deberían estar separados.
+- [01:40:16] Bueno, dejamos unificado lo que vendría a ser la vista del tema de las recetas que le alcanzo a mostrar un poquitito antes, que aquí está la parametrización de las recetas solamente.
+- [01:40:25] ¿Ya?
+- [01:41:00] También en la parametrización de los insumos, que es como el monto que habíamos dicho de que aparezca como sugerencia.
+- [01:41:09] En ese caso tendría que ser, como se parametriza directamente en cada uno de los insumos, debería ser un monto editable o debería venir como fijo?
+- [01:41:17] No debería venir desde la bodega, el costo que está en la bodega.
+- [01:41:23] Y se puede editar o debería quedar con el monto que viene?
+- [01:41:27] Debería quedar con el monto que viene y en caso de que nosotros queramos ajustar, deberíamos hacer de forma manual. Por eso queríamos la tercera forma de ingreso.
+- [01:41:40] Perfecto. En este caso, por ejemplo, las recetas que han guardado, porque esto es netamente como el índice de las recetas que va a quedar, y si se dan cuenta, cada una va con su monto de cada uno de los insumos, y si es que yo, por ejemplo, este insumo que ya existe en bodega, yo lo de modificarse el monto, ¿debería también modificarse automáticamente la receta?
+- [01:42:05] No, debería estar alimentándose del precio promedio que hay en el momento de la bodega, de la creación.
+- [01:42:15] Entonces queda fijo con el momento de la creación.
+- [01:42:18] Claro, entonces si hay una nueva orden de aplicación, por ejemplo, un nuevo consumo al mes siguiente y el monto de la bodega es diferente, queda el monto de la bodega diferente, pero en ese mes.
+- [01:42:28] Entonces, en SII, porque acá por ejemplo no tengo la posibilidad de editar pensando que esto se iba a nutrir siempre de la bodega y que se iba a ir actualizando.
+- [01:42:40] Debería tener la posibilidad de editar las recetas, ¿verdad?
+- [01:42:49] Bueno, igual de todas formas faltaría quizás la opción de eliminarla o desactivarla, que no quede como visible.
+- [01:42:55] Claro.
+- [01:42:56] Porque acá solamente tenemos como la opción de visualizar y crear, pero no permite editarla directamente.
+- [01:43:17] En este caso sí tendría que editarse, ¿verdad?
+- [01:43:22] Ocho, es que se supone que eso está, lo que es receta debería estar establecido en general.
+- [01:43:36] Quizás que el administrador tenga el poder de editar y actualizar.
+- [01:43:40] Sí, porque se supone que los materiales están establecidos con anterioridad. Hay un manual de uso.
+- [01:43:55] No hay cómo cobrar más.
+- [01:43:55] Es que no debería, por ejemplo, no sé, por el packing, si nosotros tenemos como regla de embalaje tener, no sé, una bolsa y exponer dos. No debería en ese caso, porque nosotros somos los que damos la introducción de qué materiales más.
+- [01:44:11] En ese caso también, ¿todos deberían tener la posibilidad de generar recetas?
+- [01:44:30] No.
+- [01:44:31] ¿Solamente el jefe?
+- [01:44:33] Sí.
+- [01:44:33] Entonces las recetas no tendrían que pasar por aprobación, la creación de las recetas solamente, no el consumo de estas.
+- [01:44:41] La creación no, porque la creación la va a hacer el jefe, y el consumo sí fue en la legislatura.
+- [01:44:47] Claro, el consumo sí. Entonces, retomando que ese punto no me quedó muy claro, si por ejemplo yo voy dentro de insumos y modifico caja cartón y le modifico el precio, acá en la receta no debería modificarse, ¿verdad?
+- [01:45:04] Por ejemplo, acá tenemos una receta, de ejemplo, que tiene estos componentes, y por ejemplo, dando el caso de que ya, el total de estos da 506, del total de todos estos tres, pero por ejemplo, supongamos que estos 6 pesos corresponden a caja cartón, y ocupa 1.
+- [01:45:30] ¿Qué pasa si, por ejemplo, en el momento de... a futuro, yo me voy aquí, por ejemplo, al maestro de artículos, veo caja cartón y le edito el monto de 6 a 5, ¿debería actualizarse también el monto de la receta?
+- [01:45:46] Creo que lo que pasa es que, por ejemplo, en la receta, el consumo se hace a final de mes, cuando llega el stock de los páginas.
+- [01:45:55] Entonces, al momento de generar el consumo, no deberían haber modificaciones en la bodega.
+- [01:46:03] Ya.
+- [01:46:03] Y por eso, por ejemplo, esta orden de aplicación va a quedar emitida en septiembre.
+- [01:46:11] Y yo en octubre voy a tener nuevos ingresos de materiales que van a mover el precio promedio de la bodega, ¿cierto?
+- [01:46:16] Claro.
+- [01:46:17] Y entonces, la de octubre va a quedar con el nuevo precio promedio.
+- [01:46:21] Pero no significa que se tenga que modificar la de septiembre.
+- [01:46:26] Porque si no, nunca vamos a tener un real.
+- [01:46:29] En ese caso, entonces, por receta, también deberíamos tener un tracking del costo mensual, ¿cierto?
+- [01:46:37] Sí, sería bueno, para seguir modificando los precios.
+- [01:46:41] Sí, porque actualmente esto se está nutriendo, es como una suma del monto que llega por bodega.
+- [01:46:48] Claro, pero no debería, si yo estoy consumiendo en ese mes, no debería después actualizarse con mis movimientos de bodega.
+- [01:46:55] Eso es lo real que se consumió en base a lo que había en bodega.
+- [01:46:58] Perfecto. Mira, en ese caso lo que me imagino bien rápido es que cuando se haga el cambio de mes, se vaya dejando como el registro del monto que se tuvo en el mes de cada uno de los componentes, como para tener el detalle, porque no tenemos en la base de datos el costo de las recetas, por así decirlo, como te decía.
+- [01:47:24] Es solamente una suma de los componentes que se traen de insumos.
+- [01:47:28] Exacto.
+- [01:47:29] Entonces lo que tenemos que hacer sería tener el registro de que sí o sí cada una de las recetas tenga su monto al momento de generarse.
+- [01:47:35] Cuando se genere, que quede guardado ese monto y de que al pasar por el cambio de periodo se actualice, ¿verdad?
+- [01:47:43] Claro, o sea, al final...
+- [01:47:46] O sea, yo pensé que iba a ser como un registro mensualizado.
+- [01:47:56] O sea, hacer cierre de insumos, hacer cierre de...
+- [01:47:58] O sea, hacer el cierre de contratistas, hacer el cierre de insumos.
+- [01:48:01] Claro, está así, pero por ejemplo, como te decía, esto al ser una suma de lo que viene de bodega, si por ejemplo yo entre medio del mes voy y modifico bodega, se va a actualizar esto.
+- [01:48:15] Entonces la idea es que este quede con el registro de cuando se creó y de que se vaya actualizando a medida de que se vaya cambiando el periodo.
+- [01:48:24] Claro, o sea, al final, cada vez que yo cierre el mes, debería irse el costo de la receta a cero, porque yo no tenía ningún consumo informado.
+- [01:48:37] Claro, pero esto todavía no llegamos al consumo de la receta, sería como la parametrización de estas.
+- [01:48:42] Ah, perfecto.
+- [01:49:16] Si yo tengo la posibilidad de acceder al maestro donde están todos los artículos y modifico el precio de uno de estos, te va a cambiar el total.
+- [01:49:27] Entonces, lo que me imagino sería de que este precio no se nutra directamente de lo que se está modificando maestro artículo, sino que crea con el precio de la creación y de que el administrador pueda actualizar los precios desde acá.
+- [01:49:42] Que, por ejemplo, tenga un botoncito, o quizás, por ejemplo, acá una advertencia de que le indique de que la caja se actualizó el precio, pero que no actualice el total.
+- [01:49:52] Solamente de que informe de que se actualizó el precio en bodega y de que el administrador decida cuándo actualizar el precio a lo que estipula el maestro de artículos.
+- [01:50:08] Y, de todas formas, también tener como un historial del total de cada una de las recetas histórico.
+- [01:50:17] Ya lo entiendo.
+- [01:50:17] Entonces, ahí está, porque como esto no es como un dato que esté guardado en la base de datos, sino en la suma de los costos que están aquí en bodega, si yo lo modifico el día antes, te descuadro.
+- [01:50:30] O sea, que al final, como es solamente para crear el colado, o sea, para crear como el historial de consumo, donde yo haga los consumos, ¿qué nos sale a hacer?
+- [01:50:45] Debería ser acá. Todavía no pasamos a ese paso.
+- [01:50:47] Ah, ya. Entonces una vez que yo haga el cierre de bodega, ¿tiene que ser el precio que está en bodega, no?
+- [01:51:03] Debería ser el precio de bodega. Entonces, ¿esto debería sí o sí actualizarse al precio de la bodega?
+- [01:51:08] Sí. Siempre cuando llegue al consumo va a ser el precio de bodega. Y después yo voy a seguir haciendo consumo al mes siguiente al mismo precio de la bodega que hay en el mes siguiente.
+- [01:51:17] En ese caso, María, pensando en el que ya tú vas a tener que hacer, por ejemplo, el cierre de insumos mañana, y yo como persona que tiene acceso a los artículos, voy y modifico, no sé, una hora antes y le pongo un cero de más, que podría ser eso muy catastrófico, a uno de los insumos que va en una receta.
+- [01:51:35] ¿Las modificaciones de insumos sería bueno que queden también con aprobación? ¿Los montos de las aprobaciones de insumos?
+- [01:51:42] Lo que pasa es que al final la codificación de insumos no se te va a generar por un ingreso, se te va a generar, o sea, no se te va a generar por una edición en sí del monto, se te va a generar por un ingreso físico de la bodega.
+- [01:51:56] Ah, claro.
+- [01:51:57] Porque eso se va a declarar con la guía de despacho.
+- [01:51:58] Claro, la guía de despacho van a ir declarando como los precios, por así decirlo.
+- [01:52:02] Exacto, la guía de despacho te van a ir sacando el precio promedio de lo que hay en bodega.
+- [01:52:05] Entonces, por ejemplo, acá en el maestro de artículos, este dato del precio en sí debería venir desde lo que llega de las guías de despacho.
+- [01:52:21] Sí, el precio, el stock, mira, el precio al final se va a sacar de la cantidad que yo tengo en bodega y toda la suma de todos los costos que me costaron esa cantidad.
+- [01:52:30] Ah, porque claro.
+- [01:52:34] Por ejemplo, no sé, si una guía me ingresaron 10 cartones a 1000 pesos y una otra guía me ingresaron 10 cartones a 1200, mi precio promedio son 20 cartones a 1100.
+- [01:52:44] Se saca por el precio promedio.
+- [01:52:46] Sí.
+- [01:52:48] Ok.
+- [01:52:51] Ay, sorry, hola, ¿cómo están?
+- [01:52:53] Hola, hola.
+- [01:52:55] Oye, y el precio promedio, tengo entendido que es una fórmula, ¿cierto, María Jesús?
+- [01:53:00] Sí, que es cantidad dividida en total.
+- [01:53:07] ¿Ah, solo eso? Yo no había visto una fórmula más compleja.
+- [01:53:15] Lo que pasa es que hay otra que es el FIFO, que va a depender del lote.
+- [01:53:19] Que cada lote mantiene su precio y eso se suma y se hace un promedio.
+- [01:53:24] Pero acá en realidad es cantidad y precio.
+- [01:53:28] Ah, ya.
+- [01:53:29] Sí.
+- [01:53:30] Ok.
+- [01:53:30] En ese caso, entonces, lo que nos faltaría sería también el registro de cada uno de los ingresos, tengan el monto para poder ver también aquí en la ficha de artículo el precio promedio que haga el cálculo dependiendo de las recepciones que se han tenido.
+- [01:53:51] Sí, es que ahí sería más complejo el consumo porque si yo, por ejemplo, tengo 20 recepciones a precios distintos, yo tendría que para hacer el consumo de los 20 stocks de cada recepción, ir a llamarlo. Ahí quedaría mucho más real, pero sería más tedioso, ¿no?
+- [01:54:13] Es que al fin y al cabo, por ejemplo, cuando hacemos un ingreso, podemos parametrizar la fecha de ese ingreso, quizás darle un código o algo y tenerlo diferenciado por insumo, cada uno de los ingresos, ligado también a su guía de despacho.
+- [01:54:28] Y ahí podríamos tener como esa base de datos que nos hace falta ahora para poder sacar el promedio.
+- [01:54:32] Pero por ejemplo, si yo tengo ingresos todos los días de caja y todos los días son 10 unidades y va variando el precio, supongamos que varía el precio. Después yo si quiero hacer el consumo de las 300.000 cajas, voy a tener que pescar todos los consumos diarios y no ir sumando cuánto me gastó cada uno, como ir abotando el stock de la recepción.
+- [01:54:57] Bueno, ahí yo creo que depende de cómo les convengan. Yo lo que me imagino es que al tener ya identificado los ingresos, por ejemplo, de este insumo que es embalaje, por ejemplo, de absorbentes, por ejemplo, llegó el primero a 1000, después llegaron de nuevo el 2, llegaron a 1100, y después llegaron de nuevo el 3 a 1200.
+- [01:55:28] La idea es que, como van a estar ligados también a una guía de despacho, que se va a hacer con un identificador, podamos tener la suma de cada uno para poder sacar el promedio y ahí al momento de realizar el consumo, que va a tener el tracking de cada uno de estos y va a hacer el cálculo por el total, dependiendo de cuántos ingresos ha tenido con sus precios. Se puede hacer.
+- [01:55:52] Lo que pasa es que al final, eso de definir los...
+- [01:55:56] ¡Hola a todos!
+- [01:56:31] Ahí, por ejemplo, si dejamos cada uno de los ingresos con su precio de entrada, eso sí, igual este costo de materiales de la receta sería igual muy variable.
+- [01:57:05] Porque, por ejemplo, si yo tengo dos existencias de caja, por ejemplo, que una llegó a 1.000 y otra llegó a 1.100, cuando yo consuma las que llegaron a 1.000, las que llegaron por 1.000, el costo se va a modificar. Va a quedar muy variable.
+- [01:57:22] Es que por eso te digo que es mucho más fácil poner cantidad-precio. Y en el mes va a tener un puro precio. Y después, al mes siguiente, si la bandeja tuvo modificaciones, te va a variar, pero no te va a variar todos los días.
+- [01:57:33] Ahí no te entendí bien. ¿Sería como dejarlo como precio fijo, dices tú, a cada uno de los insumos?
+- [01:57:39] Dejarlo a precio fijo, pero solo en el mes.
+- [01:57:42] Ya. Como que por mes tenga un precio fijo.
+- [01:57:45] Sí, por ejemplo, porque yo los consumos no los hago todos los días, yo los hago a fin de mes cuando me llegan las exigencias del packing.
+- [01:57:51] Entonces es un día en específico y es prácticamente el 30-31 de cada mes.
+- [01:57:57] Entonces no debería haber una variación en el precio de la bodega cuando yo hago el consumo del stock de bodega, en base a lo real.
+- [01:58:10] Y el precio que saldría como por ejemplo, me imagino que ya esto va a ser como ingreso, va a ser como mensualmente, los ingresos me imagino que también llegan una vez al mes los insumos, ¿verdad?
+- [01:58:24] Los insumos pueden llegar todos los días.
+- [01:58:28] Pueden llegar todos los días.
+- [01:58:28] Pero lo que voy yo es que al momento de hacer el consumo va a ser el precio promedio de lo que hay realmente en bodega. Entonces va a ser un precio.
+- [01:58:37] Y ese precio de lo que está en bodega, ¿cómo lo definiríamos?
+- [01:58:42] Precio promedio.
+- [01:58:45] Precio promedio de todos los ingresos, entonces.
+- [01:58:46] Sí, por ejemplo, lo mismo que te decía al principio. Entraron 10 CAF a 1.000, después entraron 10 CAF a 1.200, el precio promedio de mi bodega cuando lleva el consumo de las 20 son 1.100.
+- [01:58:56] Por ejemplo, si tengo existencias de, por ejemplo, el mes anterior, también entrarían al promedio, ¿cierto? Sería del total.
+- [01:59:06] Sí, del total, de lo que existe.
+- [01:59:10] Ya, entonces igual ahí tenemos que tener como el tracking, como te decía, vamos a tener igual la, si hacemos ingresos por guía de despacho, cada uno va a venir con su precio detallado, así que podemos conservarlo cada uno de esos precios.
+- [01:59:22] Para mí, perfecto que vaya por guía de despacho, porque en el momento de hacer las devoluciones al cliente, ahí me genera un problema el precio promedio, porque me saca de la bodega la existencia al precio promedio y no de la guía que yo estoy llamando para devolver.
+- [01:59:38] Claro.
+- [01:59:39] Entonces ahí es perfecto que esté por guía, pero para el consumo de la bodega es precio promedio.
+- [01:59:45] Perfecto, mira, yo creo que entonces acá por cada uno de los artículos deberíamos tener un listado de las fechas de ingreso con el monto y la cantidad para tener como el tracking acá, que eso sería información netamente para visualizar.
+- [02:00:00] Solo informativo. Con eso ya tendríamos parametrizado cada uno de los ingresos, la cantidad, y también deberíamos tener un contador de, por ejemplo, la existencia de cada uno de esos ingresos, junto con el total de la existencia, para ir como viendo cuáles van a ser los precios de las devoluciones.
+- [02:00:22] Exacto. Las devoluciones se hacen en base ya específica, entonces ahí sí me sirve, por ejemplo, yo puedo tomar
+- [02:00:29] Tomarlo por lote. Pero para lo que es valorizar el stock consumido, precio promedio.
+- [02:00:36] Entonces aquí es lo que yo me imagino que en el detalle que debería aparecer, deberían salir aquí abajito una lista que sea lo primero, que van a ser los ingresos de cada uno de los ítems.
+- [02:00:45] Y se va a detallar la guía en la que viene, el número de la guía del documento, el total antes, el total después, la cantidad consumida de esa guía de despacho solamente.
+- [02:01:01] ¿Pero por qué te va a salir la cantidad antes y la cantidad después si es un puro ingreso?
+- [02:01:07] Como ahí no te entendí.
+- [02:01:09] ¿Por qué te va a salir de un ingreso la cantidad antes y la cantidad después si es un puro ingreso?
+- [02:01:14] Porque, por ejemplo, si agotamos todas las unidades de una guía de despacho, tenemos que saber que esa guía de despacho ya fue consumida. La existencia. Ah, claro, tienes razón, el antes y el después no sumaría nada.
+- [02:01:31] No creo que al final el detalle de la guía de despacho me serviría solamente para cuando hay devolución o nada de crédito.
+- [02:01:37] Claro, el total saldría como aquí un numerito de detalle del artículo, del total de existencia solamente.
+- [02:01:45] En ese caso, ahí aprovechando también la duda, cuando yo por ejemplo quiero hacer una orden de consumo,
+- [02:01:51] esa orden de consumo me resta el stock que tengo en bodega solamente cuando es aprobada, ¿verdad?
+- [02:02:00] Cuando por ejemplo yo quiero hacer una orden de aplicación.
+- [02:02:04] Y yo, por ejemplo, digo, ya, de esta orden de aplicación voy a usar una receta que ocupa dos cajas, dos palets y dos bolsas.
+- [02:02:14] Ese consumo se va a restar de bodega cuando me aprueben el consumo, ¿verdad?
+- [02:02:22] Entonces también debería tener como un numerito que diga el reservado, pensando en que una...
+- [02:02:30] No debería ocurrir, pero pensando que una aprobación tarde más. ¿Para qué?
+- [02:02:33] Para que dos personas no vayan a consumir, por ejemplo, el total de la existencia y queden en espera de aprobación.
+- [02:02:40] Te entiendo.
+- [02:02:41] Entonces ahí quizás deberíamos tener, en vez del antes y el después, tener como el total disponible y el total reservado de cada una de las guías de despacho de este artículo.
+- [02:02:53] Te entiendo.
+- [02:02:54] Ahora, lo que no sé, lo que no sé es cómo lo van a hacer por ingreso.
+- [02:03:03] Porque al final si lo tienen detallado por guía, es como, ¿cómo van a tomar la decisión de cuál guía estoy consumiendo si yo tengo toda la bodega?
+- [02:03:12] Yo creo que ahí debería hacerse desde la más antigua a la más nueva.
+- [02:03:17] Sí, porque al final eso va a ser como el precio promedio, de lo mismo si yo tengo 20 guías, no importa cuánto tengo stock nomás y cuánto estoy consumiendo.
+- [02:03:26] Exacto.
+- [02:03:26] Pero no el precio del guía.
+- [02:03:28] Al paqui no le va a importar de qué guía viene, sino el precio promedio.
+- [02:03:31] Y a nosotras tampoco, porque al final la bodega la tenemos valorada.
+- [02:03:40] Y lo que sí nos importa es cuando nosotros hagamos una devolución de un producto,
+- [02:03:45] es saber, poder tomar específicamente el precio de la guía, o poder digitarlo, como sea,
+- [02:03:51] pero que no nos de el precio promedio para poder sacarlo de la bodega.
+- [02:03:58] Claro, ahí con eso tendríamos como el tracking completo, lo que sí tengo una duda, ¿qué pasa si, por ejemplo, no sé si es que pueda ocurrir el caso de que yo tenga que hacer una devolución de algo que ya consumí, no, ¿cierto?
+- [02:04:12] Eso, es que por eso yo digo que no me conviene hacer el consumo en base a la guía, ¿cachái? O sea, al final el tema de hacer la devolución es poder pescar la información de la guía, pero no que me mueva la guía en sí.
+- [02:04:26] Claro, al fin y al cabo la guía queda ingresada y recepcionada y después se hace otro documento de devolución.
+- [02:04:35] Exacto.
+- [02:04:35] Pero por ejemplo, ¿qué pasa si ya yo te hice a ti una guía de 10 cajas y tú consumiste esas 10 cajas más otras 5 de otro lado?
+- [02:04:44] Después no debería, porque tú ya consumiste las cajas que yo te di, no deberías pedirme una devolución de esas cajas, ¿verdad?
+- [02:04:51] Claro, pero es que por eso yo no quiero hacer el consumo por guía, yo lo quiero hacer por cantidad-precio.
+- [02:04:55] En ese caso, por ejemplo, al momento de hacer la orden de aplicación, ¿debería consumir desde la más antigua a la más nueva? ¿O debería consumir así como por... de otra forma?
+- [02:05:10] Es que ahí debería consumir, si caja cartón, ¿cuánto hay en bodega? Por ejemplo, mil a cien pesos. Y el precio promedio es tanto, yo pesco quinienta, pero que no detallen de una guía en específico.
+- [02:05:23] Ah, claro, ahí va a venir como del stock, tú no vas a seleccionar la guía como que quieres consumir, solamente vas a colocar el ítem y la bodega.
+- [02:05:34] Exacto, entonces al final la guía no me va a quedar amarrada nunca.
+- [02:05:39] Exacto, sí, sí, la guía solamente la tenemos como en el tracking para hacer la devolución.
+- [02:05:44] Exacto.
+- [02:05:45] Solamente me sirve para hacer una devolución.
+- [02:05:47] Por eso te preguntaba, ¿no ocurre? En el mundo ideal no debería pasar, pero no sé si es que ha llegado a pasar de que, por ejemplo, necesites devolver algo que consumiste. Eso no, ¿cierto?
+- [02:06:00] Es que al final, en la actualidad, no sé si lo consumí porque como se va todo a un saco de bodega...
+- [02:06:05] Ya, ya. Entonces el consumo de las existencias debería ser de la más antigua a la más nueva, no fijándose el precio, no fijándose en la guía de despacho, ni nada.
+- [02:06:18] O sea, al final el consumo de las existencias se te va a hacer al producto y al precio promedio, no vas a saber si es la primera, la última, la quinta, la del medio.
+- [02:06:26] Sí, sí, es más que nada como a nivel de la lógica, ¿por qué? Porque como ya tenemos identificado para el otro lado, que vendría a ser la devolución en la guía de despacho, por eso iba mi pregunta, si tú tienes que hacer una devolución es porque no ocupaste lo que te mandaron, ¿verdad?
+- [02:06:41] Claro, claro.
+- [02:07:11] Lo que pasa es que al final la devolución no va a ser de la guía en sí, va a ser del producto.
+- [02:07:17] Claro, del producto.
+- [02:07:17] Y lo único que necesito para hacer la devolución al cliente es que pueda traer los datos de la guía, pero solo los datos, porque al final mi devolución va a ir con mi guía, mi guía hacia el proveedor.
+- [02:07:28] Ah, perfecto. Entonces, en ese caso, ¿tú podrías devolver productos que no vinieron en una recepción, por ejemplo, que venían de otra?
+- [02:07:37] Exacto.
+- [02:07:37] Ah, perfecto, perfecto. Ya, ya, así ahí me queda más claro.
+- [02:07:41] Entonces la devolución no se va a fijar en qué guía viene, sino de la existencia que hay y cuánto va a devolver.
+- [02:07:46] Exacto, por ejemplo, si yo quiero hacer una devolución, ideal sería que yo pueda buscar la guía a la cual yo le hice referencia y se ingresa a la bodega, pero para que me traiga el precio de la guía.
+- [02:07:57] Claro, no te importa si es que no...
+- [02:07:59] No que la guía tenga una rebaja de existencia, porque al final todo se hace con documentos nuevos.
+- [02:08:03] Claro, y en ese caso no te importa si es que lo que llegó con esa guía se consumió o no, tú solamente quieres hacerla de vuelta y ver si es que existen esos productos para devolverlos.
+- [02:08:12] Exacto, y lo que más me importa es el precio al que llegó, porque ahí sí me influye en mi consumo contable, si yo, ella me mete una nota de crédito y yo hago la devolución con la guía al precio promedio, el precio que tienen ellos es muy distinto al precio que tengo yo.
+- [02:08:29] Perfecto.
+- [02:08:29] Entonces ahí se me genera una diferencia en contabilidad.
+- [02:08:31] Y eso es lo que hay que evitar.
+- [02:09:04] ¿Y cuáles serían los precios de esa guía?
+- [02:09:05] Claro, perfecto.
+- [02:09:07] Pero en realidad yo voy a ingresar una guía de despacho nuestra para hacer la salida de bodega, ¿cachái?
+- [02:09:12] Claro, que al fin y al cabo, por ejemplo, acá tendríamos el historial de las guías de despacho,
+- [02:09:17] tanto de las que se ingresen manualmente como las que lleguen de manera digital.
+- [02:09:21] Así que esa información la tendríamos y también tendríamos de manera interna el detalle de la bodega,
+- [02:09:26] de dónde vienen y todo eso.
+- [02:09:31] Y ahí no se mezclaría con el consumo tampoco.
+- [02:09:33] Exacto, el consumo al final es promedio de lo que hay en bodega, del stock de bodega en sí, pero las devoluciones son las que serían ideales para poder identificar a qué precio llegó ese producto en sí.
+- [02:09:47] Perfecto. En este caso, yo me acuerdo que dijimos que cuando llegara una guía de despacho, la guía de despacho no necesariamente coincide en el código y el nombre, sino que cuando se reciben se tiene que seleccionar el artículo de la bodega que corresponde a cada una de las líneas, ¿verdad?
+- [02:10:01] Sí.
+- [02:10:03] Perfecto.
+- [02:10:05] Al momento de marcar la recepción, o sea, de que se confirme de que los artículos llegaron, se tiene que hacer como la adición de estos insumos a bodega, ¿verdad? No necesariamente cuando la guía es recepcionada.
+- [02:10:18] ¿Cómo, perdón?
+- [02:10:19] Que al momento de tener recepcionado, no se deben sumar, es cuando se confirma la recepción, ¿verdad?
+- [02:10:25] Sí.
+- [02:10:25] Que se tiene que hacer la adición a bodega.
+- [02:10:27] Sí.
+- [02:10:28] Perfecto.
+- [02:10:29] De casualidad, dentro de lo que vendrían a ser las guías de despacho, las recepcionadas y las enviadas quizás también, no sé si es que a nivel de registro sería útil de tener la posibilidad de adjuntar documentos, como por ejemplo fotos quizás del packing o algo.
+- [02:10:50] ¿Sí?
+- [02:10:52] Ya.
+- [02:10:52] ¿Puedo decir?
+- [02:10:53] Porque así también podrían tomar captura de cómo llegó recepcionado, para que lo tengan como respaldo.
+- [02:11:04] Voy a darle entonces una vueltecita para hacer la sinergia con la guía de despacho, el ingreso cuando se reciba la guía de despacho, cuando se mande la Q se haga la adición,
+- [02:11:25] Y el momento de los consumos que se haga, como dijimos, de atrás para adelante, que se vaya consumiendo el stock y tener también linkeado los precios de cuando llegaron las guías de despacho para poder hacer las devoluciones.
+- [02:11:40] Y el precio promedio también calculado para el consumo de lo que vendría a ser la receta, o sea, el consumo de la receta en la orden de aplicación.
+- [02:11:50] Eso, las recetas se consumen en la orden de aplicación, ¿verdad? Perfecto, entonces acá al generar una nueva orden de aplicación también debería preguntarme directamente si no es un insumo que sea la receta, ¿verdad?
+- [02:12:12] Eh, claro, sí, porque ahí, o sea, yo la dejaría como un módulo, es un módulo distinto, que uno sea orden de aplicación y otro módulo sea consumo de receta.
+- [02:12:23] Ah, claro, porque al fin y al cabo las recetas las consumen los páginas.
+- [02:12:25] Sí, o sea, la receta la consumimos nosotros, pero con la información de los packing.
+- [02:12:31] Ya, ya, porque aquí lo teníamos más o menos estimulado el consumo de las recetas.
+- [02:12:41] Claro, que ese sería de forma manual, porque al final la idea del consumo de la receta del packing es poder subir el archivo.
+- [02:12:49] Entonces, por ejemplo, acá uno accede, selecciona el packing, la fecha, la bodeja de origen y acá la receta, que en este caso no sé por qué no deja seleccionar, si ya tenemos tres seleccionadas, pero aquí me mostraría como un desplegable de las recetas asociadas a ese packing.
+- [02:13:10] Ya, igual las recetas no van a asociar al packing, van a asociar al embalaje.
+- [02:13:15] Perfecto, entonces aquí tendríamos que eliminar el packing, ¿verdad?
+- [02:13:19] Sí, van a asociar al embalaje.
+- [02:13:21] Sí, porque aquí lo teníamos como dato opcional, pero podría ir a cualquier packing, ¿verdad?
+- [02:13:28] Sí.
+- [02:13:35] Acá, por ejemplo, en el consumo por los packing...
+- [02:13:39] Ahora igual, no es malo que diga el packing, porque al final nosotros igual tenemos la información de qué packing consumió.
+- [02:13:44] Lo que podríamos hacer entonces es que sea más de uno, porque aquí está como parametrizado que sea una receta, un packing.
+- [02:13:53] Claro, ahí tendríamos que poner cuánto se consumió de esa receta de cada packing.
+- [02:13:57] Bueno, porque quizás, por ejemplo, la caja premium está en los tres packings, pero en cada packing se consume una distinta cantidad.
+- [02:14:07] Ah, ya te entendí, ya te entendí. Entonces, acá deberíamos eliminar esto porque esto es como, no te deja seleccionar otro packing por receta.
+- [02:14:15] Lo que deberíamos tener entonces sería aquí abajito en la lista de detalles, ver como un consumo por packing.
+- [02:14:21] Sí.
+- [02:14:23] Ya, perfecto, para ir como también viendo qué packing consumió la receta, por así decirlo.
+- [02:14:28] Exacto, la receta.
+- [02:14:30] La hija.
+- [02:14:35] Acá, por ejemplo, en el consumo, ¿se tiene que parametrizar centro de costo, elemento de costo, por cada una de las recetas en el consumo?
+- [02:14:48] Sí.
+- [02:14:49] ¿Qué se tiene que parametrizar?
+- [02:14:51] El centro de costo.
+- [02:15:04] Sí, porque acá no lo teníamos parametrizado en la generación de la receta.
+- [02:15:08] Entonces, eso iría directamente en el consumo de la receta.
+- [02:15:10] Perfecto. ¿El centro de costo lo dejamos para que sea en el consumo de la receta o que se parametrize por cada una de las recetas?
+- [02:15:23] La receta va a llevar su centro de costo y cada receta es un centro de costo distinto.
+- [02:15:28] Ah, entonces mejor lo parametrizamos acá.
+- [02:15:30] O sea, puedo tener, por ejemplo, 20 recetas en el mismo centro de costo. Al final es el embalaje que le voy a poner a cada especie.
+- [02:15:36] Perfecto. Entonces, ¿sería bueno parametrizarlo en la receta y no en el consumo? ¿Que en el consumo llegue ya cada receta con su centro de costo?
+- [02:15:43] Sí, sí, la receta se debe parametrizar.
+- [02:15:47] Perfecto.
+- [02:15:48] Y nos dan uno a uno.
+- [02:15:50] Un centro de costo puede estar asociado a muchas recetas.
+- [02:15:54] Sí.
+- [02:15:54] Ya, perfecto.
+- [02:15:57] Entonces aquí también podríamos tener un filtro del centro de costos para que puedan filtrar como por centro de costos las recetas que están parametrizadas y también las consumidas.
+- [02:16:06] Sí.
+- [02:16:06] Dentro de lo que vendría a ser el cierre de bodegas, junto con esto que habíamos visto nuevo de las órdenes de aplicación, ¿hay algo que tengamos que tener en consideración? Por ejemplo, aquí habíamos movido lo que es la parametrización de las cuentas a este ítem, que la idea es que quede dentro de la parametrización aquí arribita.
+- [02:16:30] ¿Ya? De momento lo tenemos acá, pero no sé si por ejemplo nos faltará algún otro tipo acá del mapeo para las cuentas.
+- [02:16:45] Entradas, desladas, salida, devaluación, devaluación, salida, entrada... ¿Ahí faltaría merma? Sí faltarían algunas.
+- [02:16:55] Ahí quizás nos podrían mandar el detallito de las que corresponden al cierre de bodegas para incluirlas.
+- [02:17:00] Ya.
+- [02:17:22] Dentro de lo que vendría a ser activos fijos, todavía no tenemos directamente la aplicación de la parametrización de lo que habíamos hablado, pero como pueden ver se hizo aquí una modificación con lo que vendría a ser el gráfico de la depreciación mensual.
+- [02:17:41] Ya.
+- [02:17:42] Que se agregó como este mini gráfico que no sé si quedaría bien ubicado acá arriba porque va a restar toda la lista de los activos fijos.
+- [02:17:51] Pero así se dejó, con esos tres campos. Y cada uno de los meses.
+- [02:18:02] Entonces ahí cuando uno le pone el mouse encima aparece como el detalle del mes.
+- [02:18:07] Ya.
+- [02:18:10] Está bien, ¿cierto?
+- [02:18:11] Sí.
+- [02:18:26] Dentro del traspaso y cierre contable, bueno aquí se agregó también la parametrización para que se pudiera dejar la cuenta al debe y al haber.
+- [02:18:38] Ah, ya.
+- [02:18:38] Aquí se dejaría la parametrización, que esto igual, vamos a volver a lo mismo, es de dejar una parametrización en la parte de arriba donde se configure eso, que no sea un tab, para que sea como más cómodo, pero dentro de lo que vendría a ser el cierre, por así decirlo, de los activos fijos, junto con las cuentas, y lo que vendría a ser como la depreciación acumulada, ¿hay algún otro campo que debería viajar de este cierre a contabilidad?
+- [02:19:11] No.
+- [02:19:12] ¿No? Estaríamos cubiertos con lo que es activo fijo entonces. O sea, activo fijo tiene que estar el maestro, que es cuando yo ingreso el activo fijo. Sí. Ya, y la orden de compra. Ya, la orden de compra habíamos dicho de que se asocia directamente en compras. Ya. Entonces yo la creo en compras y se me va a activo fijo. Exactamente.
+- [02:19:34] Entonces, por ejemplo, uno crea aquí los activos fijos y cuando ya estén creados, yo puedo ir directamente al libro de compras y esta que nos están asociadas, nos va a aparecer acá los activos fijos que no tienen asociación disponible para poder asociar la factura recibida.
+- [02:20:01] ¿Ya? O sea, yo creo el activo fijo en el módulo de activo fijo.
+- [02:20:14] Exacto.
+- [02:20:15] ¿Y se me genera el orden de compra automático?
+- [02:20:17] ¿Se tiene que generar orden de compra?
+- [02:20:20] No, son procesos aparte. Porque el maestro de activo lleva más información que el orden de compra.
+- [02:20:28] Ah, ya. Yo creo que ahí estaba la confusión mía. Porque yo lo que estaba haciendo era asociar el activo fijo directamente a una factura, pero tiene que ir asociado a una orden de compra.
+- [02:20:38] Sí, o sea, todo nace de la orden de compra. Y una vez que la orden de compra está aprobada, yo creo mi maestro cuando llega la factura.
+- [02:20:47] Perfecto.
+- [02:20:47] Sí, porque al final el maestro yo debería poder alimentarlo de la factura ya ingresada, que es como ya la compra que efectivamente está en el tío.
+- [02:20:56] Porque si no yo podría crear mil cosas y puede que no haya comprado ninguna.
+- [02:21:00] Perfecto. En ese caso, tengo que hacer aquí la modificación y aquí aprovecho de preguntar porque, como te decía, no estaba, no lo tenía, lo había entendido mal, de que se ha asociado directamente a una factura, no a una orden de compra.
+- [02:21:15] Pero claro, tiene que nacer de una orden de compra que tiene que pasar por aprobación.
+- [02:21:18] Sí, todo nace de la orden de compra.
+- [02:21:20] En ese caso, ¿cómo podríamos diferenciar una orden de compra para que se asocie a un activo fijo?
+- [02:21:27] Tendría que crearse primero la orden de compra, ¿verdad?
+- [02:21:32] Sí, y dentro de la orden de compra, mirá, no es de toda la nueva.
+- [02:21:37] Hay una parte que dice tipo de orden, y ahí nosotros poníamos activo fijo.
+- [02:21:42] ¿No? Ahí dice tipo de orden, abajo. Ahí.
+- [02:21:50] Y esto debería gatillar automáticamente que se cree el activo fijo?
+- [02:21:56] No. No, eso solamente es para asociar a la factura.
+- [02:22:00] Y una vez que yo reconozca la factura, la factura la puedo asociar a un activo fijo, a ser el maestro.
+- [02:22:08] En ese caso, por ejemplo, aquí estamos parametrizando que esta va a ser una orden de compra de tipo activo fijo, ¿verdad?
+- [02:22:15] Sí.
+- [02:22:16] A esta orden de compra le va a llegar una factura que también tenemos que asociar y que tiene que calzar, ¿verdad?
+- [02:22:21] Sí.
+- [02:22:21] ¿No sería bueno de que cuando se asocie la factura y ya tenga identificado, previamente creada la orden de compra, de que es un tipo de orden de activo fijo y se le asocie la factura, que ahí me dé la posibilidad de asociarlo a un activo fijo o crear el activo fijo?
+- [02:22:39] Sí.
+- [02:22:42] Perfecto. Cuando entonces llegue la asociación de la factura, pasaríamos a registrar el activo fijo.
+- [02:22:47] Sí, ahora sí, por ejemplo, en el maestro yo puedo tener un detalle de todas las facturas que no están asociadas como a un maestro, ideal, porque así va a sentar el tiro cuando una factura no está en el módulo activo fijo.
+- [02:23:01] Entonces lo que podríamos hacer sería ir aquí al momento de crear un nuevo activo fijo que te liste las facturas que están del tipo activo fijo.
+- [02:23:07] Exacto, entonces yo selecciono la factura y empiezo a crear el maestro.
+- [02:23:11] Y en ese caso, si o si tiene que ser restrictivo, cuando la orden de compra sea aprobada, que se haya recibido la factura, ¿ahí recién pudo crear el activo fijo o se puede crear antes?
+- [02:23:21] Se puede crear con la orden de compra recepcionada.
+- [02:23:24] Ya.
+- [02:23:25] Acuérdate que hay dos estados en la orden de compra y creo que eso va a tener que ver.
+- [02:23:29] Sí, sí.
+- [02:23:30] Está el aprobado y el recepcionado.
+- [02:23:41] La aprobada es la que pasa directamente por la cadena de aprobación y fue aprobada, valga la redundancia, ¿verdad?
+- [02:23:46] Sí, la que está aprobada es la compra y la recepción es cuando llega.
+- [02:23:49] La recepción es cuando ya llegó la factura. Cuando ya llegó el producto. Sí, porque la factura puede tardarse tiempo. La orden de compra te permite reconocer el costo gasto en el momento real. La factura es el documento tributario.
+- [02:24:03] Bueno, perfecto. Ahí tendríamos que ver cómo podríamos hacer de que esa orden de compra pase de aprobada a recepcionada.
+- [02:24:13] Sí.
+- [02:24:15] Y tendríamos que darle un poquito de vueltas.
+- [02:24:17] Pero para finalizar un poquito esto, entonces, lo que yo me imagino es que como la...
+- [02:24:24] Sí o sí tiene que venir con orden de compra el activo fijo, ¿verdad?
+- [02:24:28] ¿O puedo crearlo antes de la orden de compra?
+- [02:24:31] No, el activo fijo tiene que crearse cuando ya la orden de compra está recepcionada o llegó a la factura.
+- [02:24:40] Perfecto, perfecto. Entonces, no necesariamente cuando está aprobada, sino cuando esté recepcionada.
+- [02:24:45] Sí, cuando esté recepcionada.
+- [02:24:47] Perfecto, eso es cuando llegó el producto.
+- [02:24:49] Sí.
+- [02:24:50] Ok. Entonces, acá deberíamos tener un selector de las órdenes de compra que son del tipo activo fijo y que ya estén recepcionadas.
+- [02:25:04] Ahora, pero no sé cómo podemos ser el discriminador de cuando la orden de compra está asociada a la factura para que no aparezca la factura y la orden de compra. ¿O solamente van a aparecer las órdenes de compra recepcionadas?
+- [02:25:19] Yo creo que es más ordenado que salgan solamente las órdenes de compra y que te informe solamente de que esa orden de compra no tiene factura asociada.
+- [02:25:28] Ya, perfecto.
+- [02:25:30] Cosa de que si tienes no te va a salir ninguna advertencia.
+- [02:25:33] Exacto, ya.
+- [02:25:34] Genial. En ese caso tendríamos que tener también un estado que diferencie las que tienen factura y las que no.
+- [02:25:47] Sí.
+- [02:25:48] Ya, perfecto. Entonces sería como activo fijo en estado recepcionado, por así decirlo, y facturado.
+- [02:26:01] Sí.
+- [02:26:01] Sí. Porque sin orden de compra recepcionada no se puede asociar un activo fijo. No puedo crear uno que no tenga la orden de compra recepcionada. Claro. Horrador tampoco, ¿verdad? De que te deje sin orden de compra. No. Ya. Sigo así con la orden de compra recepcionada. Y la asociación a las facturas la haríamos directamente del libro de compras. Sí. Y aquí en el libro de compras nos mostraría los relacionados el activo fijo. Sí. Perfecto.
+- [02:27:09] Miren, mi idea era que en esta prueba hiciéramos la emisión desde ALM a AlmaWeb, pero en el ambiente productivo de GoSocket nos quedamos sin CAF.
+- [02:27:21] Así que tengo que hablar con Pablo para ver qué podemos hacer en este caso, o si es que tenemos que hacerlo al revés, quizás hacerlo desde AlmaWeb a ALM.
+- [02:27:31] Tengo que consultarla, así que la emisión de momento quedaría ahí pendiente, pero la idea es que ya, por ejemplo, la próxima semana podamos hacer recepción en el libro de compras de los DTE e ir directamente asociándolos para ir viendo cómo se comporta el sistema e idealmente, por lo menos, hacer un cierre de alguno de los módulos para ver cómo queda en contabilidad.
+- [02:28:02] Ya. Yo creo que eso sí sería para la muestra del jueves porque igual esta semanita nos llevamos harto trabajo. Jueves de la próxima semana. Ya. ¿Consulta, Carlos, vamos a ver más reportabilidad de los módulos? De hecho, podríamos descartar ahora si es que nos falta, aprovechando la instancia, aprovechando si es que nos falta algún reporte dentro de los módulos. Lo que pasa es que igual el reporte de los módulos lo escriben con la jefatura de los departamentos. Ah, ok. Sí. Entonces, una vez que funcione el módulo, quiero ver qué quieren ver del módulo.
+- [02:28:37] Ya, ya. Entonces ya teniendo un módulo cubierto al 100% tendríamos que tener como esa reunión con la persona responsable del módulo.
+- [02:28:46] Sí, porque además de lo que yo quiero ver, quiero ver qué quieren ver ellos.
+- [02:28:52] Perfecto.
+- [02:28:54] Sí, porque quizás quieren ver otras cosas.
+- [02:28:56] María, aquí tengo una duda, de que había algún documento de que cubría por porcentaje una factura, ¿verdad?
+- [02:29:17] Que era lo activo fijo, si no me equivoco, ¿no?
+- [02:29:19] No, lo único que vivió por porcentaje fue la orden de compra madre.
+- [02:29:28] Que esa podría cubrir por porcentaje en vez de monto.
+- [02:29:31] Me acuerdo que había algo que consumía por porcentaje, quizás del activo fijo era, se me está olvidando en este momento.
+- [02:29:40] O sea, el activo fijo es para la depreciación.
+- [02:29:43] Ya.
+- [02:29:44] Pero no me acuerdo de lo del porcentaje.
+- [02:29:47] Sí, porque acá, si te das cuenta, tenemos esta visualización de que está por porcentaje.
+- [02:29:53] Pero eso es... ¿qué estamos viendo ahí?
+- [02:29:56] Libro de compras asociado a una proforma.
+- [02:30:00] Ah, la proforma.
+- [02:30:02] La proforma sí puede ir por porcentaje.
+- [02:30:04] No va por porcentaje, sino que va por...
+- [02:30:08] Yo la proforma la puedo asociar a una factura...
+- [02:30:15] La proforma la puedo asociar a una factura, pero no la puedo asociar a la proforma completa, parece algo así.
+- [02:30:20] Ah, sí, que quede parcializado.
+- [02:30:22] Sí.
+- [02:30:23] Sí, eso ya está cubierto. Pero hay algo que estaba cubriendo por porcentaje y lo voy a buscar. Lo voy a buscar porque ahí tenía una duda.
+- [02:30:29] Ya.
+- [02:30:30] No me puedo acordar en este momento.
+- [02:30:32] Por porcentaje, ¿no? O lo estoy alucinando también, puede ser. O quizá, no es que creo, lo que estaba como, no era por porcentaje, sino que por, como por, por cantidad, era el tema de las proformas y las órdenes de compra madre, que eso te iba a dar un totalizado de cuánto de la madre se ha consumido en las hijas.
+- [02:31:01] Claro, que vendría a ser como este visualizador de acá.
+- [02:31:05] Claro, por si le quedaba stock a la madre, pero así porcentaje no, no se ponga nada.
+- [02:31:11] Hoy estoy seguro que sí, pero lo voy a averiguar porque se me fue demasiada información esta semana.
+- [02:31:19] Queda atenta, queda atenta a preguntas.
+- [02:31:23] Con respecto a sus dudas, muchas gracias.
+- [02:31:25] Perfecto. No sé si es que ahora algo que quieran revisar, algo que les haya quedado duda.
+- [02:31:37] No.
+- [02:31:38] Por ejemplo, con lo que vendría a ser el cierre de contratistas, ya se hicieron los ajustes, pero no pudiendo realizar como un cierre real para que se vea la apertura, no tengo como ejemplo tampoco hecho a mano en la base de datos.
+- [02:31:51] Pero ya se tomó en consideración de que la reapertura como tal no existe si no existe la modificación y se va pasando el monto directo a las líneas. Y en el historial de contabilidad, junto con el historial de contradistas, se va registrando qué modificaciones, quién lo solicitó, quién lo aprobó y cómo quedó al final.
+- [02:32:09] Ya.
+- [02:32:11] Así lo habíamos acordado, ¿verdad?
+- [02:32:13] Sí. Y que al final toda la información se vea en el reporte.
+- [02:32:19] Exactamente. Y de hecho acá...
+- [02:32:20] Y que en el reporte solamente salgan los comprobantes activos.
+- [02:32:25] Exactamente.
+- [02:32:27] Que serían aquí los comprobantes de asiento, esta es la reportería, saldrían solamente los activos, y acá en la solicitud reversa se ve todo lo que no queremos que se vea.
+- [02:32:34] Exacto.
+- [02:32:36] Ya, perfecto.
+- [02:32:36] Pero por ejemplo, en la solicitud de reversa, ahí lo que yo acepto, no sale en el reporte.
+- [02:32:44] O sea, solamente como caería en el calce, no generaría como asientos nuevos.
+- [02:32:54] O sea, lo que voy yo es que si me hacen una solicitud de reversa es para poder editar el comprobante.
+- [02:33:00] Exacto.
+- [02:33:01] Pero no para hacer una reversa y después un nuevo comprobante.
+- [02:33:04] Exactamente.
+- [02:33:05] Sí.
+- [02:33:06] Al fin y al cabo lo que genera esto es que, por ejemplo, si hay una proforma que tiene asociado una factura, la desasocia de la factura, te permite generar la modificación,
+- [02:33:17] Y ahí nuevamente se tiene que pasar por la asociación de la factura que había quedado liberada, y ahí una vez teniendo todo eso, queda calzado como corresponde.
+- [02:33:28] Sí, pero al final no van a ver como asiento de reversa, sino que las modificaciones no nos juzgan.
+- [02:33:34] Exacto, no genera asientos nuevos.
+- [02:33:35] Claro.
+- [02:33:37] Solamente como que ajusta el asiento que corresponde a ese.
+- [02:33:40] Exacto.
+- [02:33:41] Exacto, así está quedando de momento.
+- [02:33:44] Sí.
+- [02:33:44] Y aquí no te queda como un historial, solamente visualización de lo que corresponde al cierre, junto con si es que tiene o no tiene modificaciones, no hay como una discriminación.
+- [02:33:55] Hay también, que es la opción de eliminar el asiento, ¿cierto?
+- [02:33:59] Aquí sí aparece la opción de anular o reversar.
+- [02:34:02] O sea, de eliminarlo.
+- [02:34:05] ¿Deberíamos tener la opción de eliminarlo?
+- [02:34:07] O sea, no que desaparezca ahí, sino que al eliminarlo no me dio solamente la opción de editarlo, porque a veces hay asientos que no están bien hechos y no deben ir nomás.
+- [02:34:18] Se tiene como que eliminar.
+- [02:34:20] Claro, no es necesario editarlos porque en realidad están mal hechos.
+- [02:34:25] Pero en ese caso, ¿no se tendría que hacer esa modificación desde el movimiento que generó el asiento?
+- [02:34:32] Sí.
+- [02:34:32] ¿Por qué? Porque como está el sistema, al menos por ejemplo en contratistas, es que si hay un asiento que no corresponde porque se tiene que hacer una modificación, ese asiento se actualiza con la modificación que se solicitó.
+- [02:34:44] Exacto, porque la mayoría es modificarlo porque por eso hacemos la reversa o por la cuenta que le hacemos de nuevo, pero hay asientos que en realidad no van, entonces ahí yo me iría al asiento y podría anular.
+- [02:34:52] Y en ese caso, por ejemplo, si hay un asiento que anular, por ejemplo, me imagino que haya sido de algún cierre que se haya generado mal, ¿se tendría que eliminar y se tendría que generar el cierre de nuevo? Por eso te he preguntado, porque por lo que tengo entendido, para que me esté equivocando, los asientos no se generan como de manera manual, siempre vienen desde otros módulos.
+- [02:35:19] Sí, no, no, no. Todo lo que cierre se mantiene ahorita. Pero, por ejemplo, en contabilidad igual voy a poder hacer asientos manuales.
+- [02:35:28] Tiene que estar la posibilidad de generar asientos manuales.
+- [02:35:30] Sí. Sí, porque al final ahí está mi ingreso diario.
+- [02:35:34] Sí, no lo teníamos considerado.
+- [02:35:40] Pero arriba dice nueva comprobante.
+- [02:35:42] Sí, sí, deja ingresar manualmente. Pero ahí tengo una duda porque, ¿cuáles serían los casos en que tengas que generar un asiento manual?
+- [02:35:51] ¿Algún ajuste? ¿Alguna reclasificación de factura?
+- [02:35:58] Que esos serían como factores externos, ¿verdad?
+- [02:36:01] Sí.
+- [02:36:05] Perfecto. Bueno, igual como tenemos el módulo de auditoría que va a registrar todo lo que pase, no tendríamos mayor inconveniente en tener esa opción, pero no sé si quizás te... porque eliminar igual es como...
+- [02:36:19] No me refiero a eliminarlo como de que desaparezca de la base de datos, sino que la opción de anularlo, que en realidad no me lo considero para nada porque está mal hecho.
+- [02:36:28] Ya. Sí, sí, yo creo que podríamos hacerlo.
+- [02:36:33] Claro, que no solamente que la opción de editarlo, sino que anularlo.
+- [02:36:37] Sí, porque al fin y al cabo, esta de acá, este menú, es para ver los asientos que corresponden, entonces aquí te debería mostrar los asientos anulados y donde vas a sacar el reporte debería mostrarte lo que corresponde.
+- [02:36:48] Ya.
+- [02:36:49] ¿Te parece?
+- [02:36:50] Sí.
+- [02:36:50] Sí, porque al fin y al cabo lo estábamos dejando, manteniendo este como reporte, pero claro, este debería ser una visualización de lo que pasa en el periodo.
+- [02:36:58] Y deberíamos tener la reportería aparte. Y acá quizás podríamos tener también como ver el historial de cada uno de los movimientos en caso de que se haya hecho una modificación o se eliminó, ver como el historial de cada uno de estos.
+- [02:37:14] Claro.
+- [02:37:15] Ya, perfecto. En ese caso, por ejemplo, ¿cuál sería el reporte donde tú sacarías como los asientos y comprobantes que corresponden del mes de estos de acá?
+- [02:37:24] Sí.
+- [02:37:24] ¿Cierto?
+- [02:37:25] Sí.
+- [02:37:26] ¿En particular cuál?
+- [02:37:28] Finalmente, somos libre mayor.
+- [02:37:30] Ya, ya. Ah, ya, perfecto. Entonces, este quedaría como la información de lo que corresponde y acá sería como el dato de lo que ha pasado.
+- [02:37:40] Sí.
+- [02:37:41] Ya, genial. Porque esto lo estaba considerando como reportería.
+- [02:37:45] Y este es tanto para ingresar datos, editar e informativo.
+- [02:37:51] Sí, ahí va lo real de lo que va pasando a diario.
+- [02:37:55] Ya, genial, genial. Entonces deberíamos tener la opción de anularlo, por así decirlo, de que quede como no válido, editar, y ¿cuál más?
+- [02:38:06] No iría a estaría el contabilizado, que sería todo lo que está contabilizado que se vaya a la reportería.
+- [02:38:11] Ya.
+- [02:38:11] Y lo que está anulado y pendiente, no.
+- [02:38:58] Ya. Dos acciones separadas.
+- [02:39:00] Dos acciones separadas.
+- [02:39:01] Sí.
+- [02:39:02] La anulación. ¿Quién la va a hacer? ¿Tiene que pasar por aprobación?
+- [02:39:11] La anulación, la jefatura de... la jefatura.
+- [02:39:15] Solo jefatura, entonces no pasaría por aprobación.
+- [02:39:18] No.
+- [02:39:27] ¿Fuera del motivo se necesitará algún otro campo?
+- [02:39:31] No, no tiene que ver con la explicación de por qué se anula.
+- [02:40:01] Por ejemplo, ¿las demás personas deberían tener la opción de solicitar una anulación y que el jefe la apruebe?
+- [02:40:10] Sí.
+- [02:40:11] Entonces, ¿contabilidad también debería tener reglas de aprobación?
+- [02:40:15] Sí.
+- [02:40:16] ¿O no? No, más que reglas, sino que la jefatura la apruebe, independiente del monto.
+- [02:40:19] Sí.
+- [02:40:21] Entonces, ¿nos generamos reglas de aprobación?
+- [02:40:23] No, es lo que se generaría, sería como permiso, ¿no?
+- [02:40:26] Claro.
+- [02:40:27] Claro, la solicitud, por ejemplo, si la gente se equivoca, me diga, necesito anular este...
+- [02:40:32] Claro, no hay opción de pasar piola.
+- [02:40:42] No, cero.
+- [02:40:45] Lo siento, Fran.
+- [02:40:47] Lo intentamos.
+- [02:40:50] Pero por la módica suma de 100.000 te dejamos un código secreto, junto con una cuenta de Netflix.
+- [02:40:57] Y la anulación final.
+- [02:40:59] Perfecto. Miren, al menos de lo que hemos visto, más dudas rebuscadas no tengo.
+- [02:41:09] No sé si es que a lo mejor habrá algo dentro de estos procesos que hayamos visto que le falte quizá alguna ramificación, permisos o algo.
+- [02:41:17] Yo por lo que veo creo que lo dejamos bien cerrado, por así decirlo.
+- [02:41:23] Sí, creo que ya cuando podamos hacer los casos más prácticos vamos a ir bien.
+- [02:41:29] Oh, no sé si me caí yo o se cayeron ustedes.
+- [02:41:32] Tú.
+- [02:41:34] Sí, justo no alcancé a escuchar.
+- [02:41:37] Que cuando podamos hacer casos prácticos, ahí vamos a ver si hay algún detalle.
+- [02:41:42] Sí, en el uso real ahí es donde viene el verdadero feedback.
+- [02:41:47] Sí.
+- [02:41:49] Perfecto.
+- [02:41:50] Mira, entonces, bueno, al menos por mi parte no tengo nada más que mostrar.
+- [02:41:54] No sé si es que tengan alguna duda o algo que necesiten ver o tengan alguna sugerencia que quieran ver de los otros módulos.
+- [02:42:01] Eh, no por ahora, lo que sí, ver la, cuando vamos a ver el módulo de tesorería, porque la Lupe va a participar.
+- [02:42:12] Sí, que yo creo que va a participar la Lupe y Agustín.
+- [02:42:31] Entonces ya teniendo uno o dos ya funcionando, que pasen a contabilidad y pasen a tesorería los datos, podríamos revisarlo con Lupe.
+- [02:42:42] Entonces te confirmaría bien el lunes para que veamos la participación de ella.
+- [02:42:47] Sí, porque te acuerdo que te había hecho en los comentarios si se podía adicionar el tema del proyectado.
+- [02:42:51] Sí.
+- [02:42:53] Que de hecho lo voy a anotar acá para que no se me olvide.
+- [02:42:57] Y que haría también pendiente que si me pueden enviar el documento que les pedí para basarlo en el ingreso.
+- [02:43:20] Ya.
+- [02:43:51] Acá tenemos las novedades.
+- [02:43:55] Pero chilenitos para la próxima.
+- [02:43:58] Sí, chilenitos también son ricos.
+- [02:44:00] Y la otra es la de torta con padú.
+- [02:44:03] Esa que yo tenía.
+- [02:44:04] Esa es la nacional, ¿verdad?
+- [02:44:06] Vamos a tener que llevar algo cuando vayamos para allá.
+- [02:44:09] ¿Cómo va a ser que lo lleve una a nosotros acá?
+- [02:44:10] Bueno, aquí en San Bernardo no hay mucha gastronomía que digamos.
+- [02:44:15] Pero ahí le vamos a llevar un...
+- [02:44:17] Ah, pero verdad que ustedes están en el desafío, po.
+- [02:44:20] No, igual podemos.
+- [02:44:22] Poquito, poquito.
+- [02:44:23] Va a depender del día que venga.
+- [02:44:27] Si ya pasó, no pasó. ¿Hasta cuándo tienen el...?
+- [02:44:29] Hasta el 23.
+- [02:44:31] ¿De noviembre?
+- [02:44:32] Sí.
+- [02:44:33] Oh, creo que llegamos antes ya. Pero veamos si es que existen las versiones light.
+- [02:44:37] Light y sin lactosa.
+- [02:44:40] ¿Hay compradores sin lactosa?
+- [02:44:42] Sí.
+- [02:44:44] Es porque dejen avisado.
+- [02:44:47] Ya, chicas, yo creo que por mi parte no tengo nada más que decir, así que yo creo que con eso estamos.
+- [02:44:51] Nos llevamos a harto trabajo, quedamos pendientes también de que nos envíen los documentos, y el lunes les confirmo cómo nos fue con estas modificaciones.
+- [02:44:59] Ya.
+- [02:45:00] Genial, pues muchas gracias por su tiempo, que tengan muy buena tarde.
+- [02:45:04] Igualmente.
+- [02:45:05] Chau chau.
