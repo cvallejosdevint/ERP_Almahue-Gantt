@@ -22,6 +22,12 @@ Matriz viva: [`docs/requerimientos/matriz-ui-normalizacion-2026-11-04.md`](../..
 3. Lista = `DataTable` (filtros en `filterBarExtra`, chips en `toolbarExtra`).
 4. Modal: si >= 5 campos visibles usar densificacion Plan de cuentas; si < 4, max 2 columnas.
 5. Estados = `Badge`. Acciones = `RowActions`.
-6. Sin banners sky/amber/emerald ni `className` emerald en `Button`.
+6. Sin banners sky/amber/emerald ni `className` emerald en `Button`. Aviso = `PageAviso` (C9) o `afterField` muted.
 7. Export PDF/Excel disponible en listados (pedido transversal).
-8. Actualizar deuda en la matriz si el archivo cambio de categoria.
+8. Click fila = detalle; edicion con «Editar datos». Parametrizacion: Activar/Desactivar + Editar + Eliminar.
+9. Ordenes de compra (listado, detalle, wizard, desglose C-4) entran en el mismo checklist; no las saltees.
+10. Historial / trazabilidad en modal o tab propio - nunca embebido en sidebar de la ficha (`formExtra` sidebar vacia = deuda).
+11. `MockListPage.formExtraPlacement`: default `below`; `sidebar` solo con panel denso util.
+12. Actualizar deuda en la matriz / `auditoria-ui-front-*.md` si el archivo cambio de categoria.
+
+Detalle: [`auditoria-click-detalle-vs-edicion-2026-11-04.md`](../../../docs/requerimientos/auditoria-click-detalle-vs-edicion-2026-11-04.md).

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manual de usuario ERP Almahue - mes contable octubre 2026</title>
+  <style>
+    :root {
+      --bg: #f3f0e8;
+      --ink: #1a1916;
+      --muted: #5a554c;
+      --accent: #1a5c48;
+      --accent-2: #0f3d30;
+      --card: #fffcf7;
+      --line: #ddd6c8;
+      --warn: #8a4b12;
+      --warn-bg: #fff4e5;
+      --ok: #1a5c48;
+      --ok-bg: #e7f3ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    nav {
+      position: sticky; top: 0; align-self: start;
+      height: 100vh; overflow: auto;
+      background: var(--accent-2); color: #e8f2ee;
+      padding: 1.25rem 1rem 2rem;
+    }
+    nav .brand { font-weight: 700; font-size: 1.05rem; margin-bottom: .25rem; }
+    nav .meta { font-size: .75rem; opacity: .75; margin-bottom: 1.25rem; }
+    nav a {
+      display: block; color: #cfe4db; text-decoration: none;
+      padding: .35rem .5rem; border-radius: 6px; font-size: .86rem;
+    }
+    nav a:hover, nav a:focus { background: rgba(255,255,255,.08); color: #fff; }
+    nav .group { margin-top: .85rem; font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; opacity: .55; padding: 0 .5rem; }
+    main { padding: 1.5rem 1.75rem 3.5rem; max-width: 980px; }
+    h1 { font-size: 1.85rem; margin: 0 0 .4rem; color: var(--accent); }
+    h2 { font-size: 1.35rem; margin: 2.2rem 0 .75rem; padding-top: .4rem; border-top: 1px solid var(--line); color: var(--accent-2); }
+    h3 { font-size: 1.05rem; margin: 1.4rem 0 .5rem; }
+    p, li { color: var(--ink); }
+    .lead { color: var(--muted); margin: 0 0 1.25rem; max-width: 62ch; }
+    .creds {
+      display: flex; flex-wrap: wrap; gap: .5rem .85rem;
+      background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+      padding: .85rem 1rem; margin-bottom: 1.5rem; font-size: .9rem;
+    }
+    .creds strong { color: var(--accent); }
+    .steps { margin: 0 0 1rem; padding-left: 1.2rem; }
+    .steps li { margin: .35rem 0; }
+    .shot {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: .65rem; margin: 0 0 1.1rem; overflow: hidden;
+    }
+    .shot img {
+      display: block; width: 100%; height: auto;
+      border-radius: 8px; background: #e8e4da;
+    }
+    .shot figcaption {
+      font-size: .8rem; color: var(--muted); margin-top: .45rem; padding: 0 .25rem;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: relative; height: auto; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .note, .ok {
+      border-radius: 10px; padding: .75rem 1rem; margin: 0 0 1rem; font-size: .9rem;
+    }
+    .note { background: var(--warn-bg); color: var(--warn); border: 1px solid #f0d3a8; }
+    .ok { background: var(--ok-bg); color: var(--ok); border: 1px solid #b7d9cb; }
+    .links { font-size: .9rem; }
+    .links a { color: var(--accent); }
+    footer { margin-top: 2.5rem; font-size: .8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <nav aria-label="Indice del manual">
+      <div class="brand">Almahue ERP</div>
+      <div class="meta">Manual · octubre 2026</div>
+      <a href="#inicio">Inicio</a>
+      <div class="group">Operacion</div>
+      <a href="#maestros">0. Maestros</a>
+      <a href="#compras">1. Compras OC</a>
+      <a href="#ventas">2. Ventas / Emitir</a>
+      <a href="#libro-compras">3. Libro de compras</a>
+      <a href="#rechazo">3b. Cluster rechazo</a>
+      <a href="#guias">4. Guias</a>
+      <a href="#tesoreria">5. Tesoreria</a>
+      <a href="#contratistas">6. Contratistas</a>
+      <a href="#contabilidad">7. Contabilidad / cierre</a>
+      <div class="group">Extras</div>
+      <a href="faqs.html">FAQs</a>
+      <a href="INFORME-CIERRE-OCTUBRE-2026.md">Informe cierre</a>
+    </nav>
+
+    <main>
+      <section id="inicio">
+        <h1>Manual de usuario ERP Almahue</h1>
+        <p class="lead">
+          Recorrido del mes contable interempresa (EXPORT ↔ SERVICES), periodo <strong>2026-10</strong>.
+          Capturas a 1536×960. Caso que cierra: packing DTE 33 folio SII <strong>73</strong>.
+        </p>
+        <div class="creds">
+          <span><strong>Demo</strong> admin@almahue.local / Admin123!</span>
+          <span><strong>PIN</strong> 4821</span>
+          <span><strong>Front</strong> localhost:5174</span>
+          <span><strong>Periodo</strong> T2026 / Octubre</span>
+        </div>
+        <p class="links">
+          Tambien: <a href="faqs.html">FAQs</a> ·
+          <a href="INFORME-CIERRE-OCTUBRE-2026.md">Informe de cierre</a> ·
+          <a href="MANUAL-USUARIO-ERP-ALMAHUE.md">Indice Markdown</a>
+        </p>
+        <div class="ok">
+          Al 02/11/2026 el periodo 2026-10 quedo <strong>CERRADO</strong> en EXPORT y SERVICES.
+          Balance Debe = Haber en ambos tenants.
+        </div>
+      </section>
+
+      <section id="maestros">
+        <h2>0. Maestros y periodo</h2>
+        <ol class="steps">
+          <li>Parametrizacion: monedas, bancos, centros/elementos, plan de cuentas, contrapartes.</li>
+          <li>Contabilidad > Periodos: dejar <strong>2026-10</strong> ABIERTO y preferido (antes del cierre final).</li>
+        </ol>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia01-param-plan-cuentas.png" alt="Plan de cuentas" loading="lazy" />
+            <figcaption>Plan de cuentas</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia01-conta-periodo-octubre.png" alt="Periodo octubre" loading="lazy" />
+            <figcaption>Periodo octubre abierto</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia01-param-bancos.png" alt="Bancos" loading="lazy" />
+            <figcaption>Bancos</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia01-param-contrapartes.png" alt="Contrapartes" loading="lazy" />
+            <figcaption>Clientes / proveedores</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="compras">
+        <h2>1. Compras - OC y aprobacion</h2>
+        <ol class="steps">
+          <li>Compras > Ordenes > Nueva OC en CLP (proveedor SERVICES, cuenta/CC/elemento).</li>
+          <li>Enviar a aprobacion; bandeja + PIN <strong>4821</strong> hasta APROBADO.</li>
+          <li>Documento de arranque = <strong>OC</strong> (sin CRUD de cotizaciones).</li>
+        </ol>
+        <div class="note">Cadena de aprobacion solo Compras (OC). OV no pasa por bandeja PIN.</div>
+        <figure class="shot">
+          <img src="capturas/mes-contable-dia12-compras-oc-clp-packing-items.png" alt="OC packing items" loading="lazy" />
+          <figcaption>OC-2026-0016 packing CLP - items</figcaption>
+        </figure>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-compras-oc-clp-aprobacion-pin.png" alt="Aprobacion PIN" loading="lazy" />
+            <figcaption>Aprobacion con PIN</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-compras-oc-clp-0016-aprobada.png" alt="OC aprobada" loading="lazy" />
+            <figcaption>OC-2026-0016 APROBADO</figcaption>
+          </figure>
+        </div>
+        <h3>Asesoria exenta (OC-2026-0017)</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-oc-asesoria-items.png" alt="OC asesoria" loading="lazy" />
+            <figcaption>OC asesoria EXENTO</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-oc-asesoria-0017-aprobada.png" alt="OC 0017 aprobada" loading="lazy" />
+            <figcaption>OC-2026-0017 APROBADO</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="ventas">
+        <h2>2. Ventas - OV y Emitir DTE</h2>
+        <ol class="steps">
+          <li>Ventas > Orden de venta > Guardar (valida stock) > CONFIRMADA.</li>
+          <li>Emitir con wizard <strong>factura-ov</strong> (fecha de la OV). Evitar Facturar one-click si necesitas fecha distinta de hoy.</li>
+          <li>Libro de ventas: Contabilizar (cuenta de ingreso + centro de costo).</li>
+        </ol>
+        <figure class="shot">
+          <img src="capturas/mes-contable-dia12-ov-packing-clp-items.png" alt="OV packing" loading="lazy" />
+          <figcaption>OV packing CONFIRMADA</figcaption>
+        </figure>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-factura-ov-packing-clp-paso1.png" alt="Emitir paso 1" loading="lazy" />
+            <figcaption>Emitir DTE - paso 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-factura-ov-packing-clp-paso3.png" alt="Emitir paso 3" loading="lazy" />
+            <figcaption>Emitir DTE - confirmar (folio SII 73)</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-libro-ventas-73-por-contabilizar.png" alt="Por contabilizar" loading="lazy" />
+            <figcaption>Libro ventas - Por contabilizar</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-libro-ventas-73-contabilizada.png" alt="Contabilizada" loading="lazy" />
+            <figcaption>Libro ventas - Contabilizada</figcaption>
+          </figure>
+        </div>
+        <figure class="shot">
+          <img src="capturas/mes-contable-dia12-libro-ventas-73-modal-cuenta.png" alt="Modal cuenta" loading="lazy" />
+          <figcaption>Modal: cuenta de ingreso + CC al contabilizar</figcaption>
+        </figure>
+      </section>
+
+      <section id="libro-compras">
+        <h2>3. Libro de compras - sync, Match y aceptacion</h2>
+        <ol class="steps">
+          <li>Compras > Libro / Registro > Sincronizar inbox GoSocket (rango con la fecha del DTE).</li>
+          <li>Asociar OC > Match <strong>Perfecto</strong> > Aceptar (acuse).</li>
+          <li>Contabilizar compra (asiento COMPRA:folio).</li>
+        </ol>
+        <figure class="shot">
+          <img src="capturas/mes-contable-dia13-sync-inbox-oct12-nov02.png" alt="Sync inbox" loading="lazy" />
+          <figcaption>Sincronizar inbox GoSocket</figcaption>
+        </figure>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-73-match-perfecto.png" alt="Match Perfecto 73" loading="lazy" />
+            <figcaption>#73 Match Perfecto vs OC-2026-0016</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-73-aceptada.png" alt="Aceptada 73" loading="lazy" />
+            <figcaption>Aceptada / Acuse ACEPTADO</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-73-asiento.png" alt="Asiento compra 73" loading="lazy" />
+            <figcaption>Asiento compra 73</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-73-contabilizada.png" alt="Compra contabilizada" loading="lazy" />
+            <figcaption>Compra Contabilizada</figcaption>
+          </figure>
+        </div>
+        <h3>34 asesoria (comercial OK / SII RCH en emisor)</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-52-match-perfecto.png" alt="Match 52" loading="lazy" />
+            <figcaption>34/#52 Match Perfecto</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-52-aceptada.png" alt="Aceptada 52" loading="lazy" />
+            <figcaption>Aceptada en EXPORT</figcaption>
+          </figure>
+        </div>
+        <div class="note">En SERVICES el 34/#52 quedo SII Rechazado: no se cobra ni se contabiliza del lado emisor.</div>
+      </section>
+
+      <section id="rechazo">
+        <h2>3b. Cluster de rechazo (ejemplos a no aceptar)</h2>
+        <p>Casos dejados a proposito para documentar alertas y descuadres. No asociar a OC-0016/0017 ni volver a anular el 72.</p>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia12-libro-compras-71-alerta-usd.png" alt="Alerta USD 71" loading="lazy" />
+            <figcaption>#71 Alerta MONTO_NO_COINCIDE (OC USD)</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia13-libro-compras-71-alerta-rechazo.png" alt="Rechazo 71" loading="lazy" />
+            <figcaption>#71 rechazo / fuera de octubre</figcaption>
+          </figure>
+        </div>
+        <figure class="shot">
+          <img src="capturas/mes-contable-dia12-libro-ventas-descuadre-nc-octubre.png" alt="Descuadre NC" loading="lazy" />
+          <figcaption>Descuadre NC 51 en octubre vs factura 71 en noviembre</figcaption>
+        </figure>
+      </section>
+
+      <section id="guias">
+        <h2>4. Guias de despacho</h2>
+        <ol class="steps">
+          <li>EXPORT emite guia 52 (traslado Res. 154) hacia SERVICES.</li>
+          <li>SERVICES: Insumos > Guias recibidas > Sincronizar.</li>
+        </ol>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia16-libro-ventas-guia52-folio54.png" alt="Guia emitida" loading="lazy" />
+            <figcaption>Guia 52 folio SII 54 emitida</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia16-guias-recibidas-sync.png" alt="Guias sync" loading="lazy" />
+            <figcaption>Sync guias recibidas en SERVICES</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="tesoreria">
+        <h2>5. Tesoreria - cartolas, CC, nomina y flujo</h2>
+        <ol class="steps">
+          <li>Cartolas > Importar CSV > Trabajar > Contabilizar (destino factura + codigo financiero).</li>
+          <li>Asiento banco = <code>CARTOLA:{id}</code> (no hay asiento PAGO).</li>
+          <li>Estado de cuenta por RUT: Historico con Calzado.</li>
+          <li>Flujo de caja: solo lectura desde cartolas Contabilizadas (+ proyecciones opcionales).</li>
+        </ol>
+        <h3>EXPORT - pago factura 73</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-export-importada.png" alt="Cartola importada" loading="lazy" />
+            <figcaption>Cartola importada</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-export-contabilizar-mov.png" alt="Contabilizar movimiento" loading="lazy" />
+            <figcaption>Contabilizar egreso (folio 73)</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-export-mov-contabilizado.png" alt="Movimiento contabilizado" loading="lazy" />
+            <figcaption>Movimiento Contabilizado · asiento 20260012</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-export-cerrada.png" alt="Cartola cerrada" loading="lazy" />
+            <figcaption>Cartola cerrada</figcaption>
+          </figure>
+        </div>
+        <h3>SERVICES - cobro</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-services-importada.png" alt="Cartola services" loading="lazy" />
+            <figcaption>Cartola cobro importada</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia23-cartola-services-cobro-ok.png" alt="Cobro OK" loading="lazy" />
+            <figcaption>Cobro Contabilizado · asiento 20260003</figcaption>
+          </figure>
+        </div>
+        <h3>Estado de cuenta y flujo</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia25-estado-cuenta-export-73-postgap.png" alt="CC EXPORT 73" loading="lazy" />
+            <figcaption>EXPORT: compra + pago 73 Calzado (fecha fiscal)</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia25-estado-cuenta-services-historico.png" alt="CC SERVICES" loading="lazy" />
+            <figcaption>SERVICES: venta + cobro Calzado</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia25-nomina-export.png" alt="Nomina" loading="lazy" />
+            <figcaption>Nomina semanal - PAGADOS $14.875.000</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia28-flujo-caja-export.png" alt="Flujo caja" loading="lazy" />
+            <figcaption>Flujo de caja EXPORT (egreso cartola)</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="contratistas">
+        <h2>6. Contratistas - ingreso, proforma y traspaso</h2>
+        <ol class="steps">
+          <li>Ingreso diario / tarja > Proforma DEFINITIVA.</li>
+          <li>Traspaso contable y cierre de mes > Centralizar (asiento TRASPASO-CTR).</li>
+        </ol>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia06-ctr-ingreso-diario.png" alt="Ingreso diario" loading="lazy" />
+            <figcaption>Ingreso diario contratista</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia08-ctr-proforma-definitiva.png" alt="Proforma" loading="lazy" />
+            <figcaption>Proforma DEFINITIVA</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia29-ctr-traspaso-estado.png" alt="Traspaso estado" loading="lazy" />
+            <figcaption>Traspaso pendiente - PF facturada $7.600.000</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia10-ctr-traspaso-asiento.png" alt="Asiento traspaso" loading="lazy" />
+            <figcaption>Asiento de traspaso (referencia Fase 2)</figcaption>
+          </figure>
+        </div>
+        <div class="ok">Re-centralizacion 02/11: asiento <strong>20260013</strong> TRASPASO-CTR:2026-10 (tras anular el 20260009).</div>
+      </section>
+
+      <section id="contabilidad">
+        <h2>7. Contabilidad - asientos, balance y cierre</h2>
+        <ol class="steps">
+          <li>Comprobantes / asientos: revisar COMPRA, CARTOLA y TRASPASO del mes.</li>
+          <li>Balance de 8 columnas: Debe = Haber.</li>
+          <li>Periodos > Cerrar el codigo del mes; confirmar en el modal el periodo correcto.</li>
+        </ol>
+        <div class="note">
+          El boton Cerrar de la grilla puede asociarse al periodo de una fila vecina.
+          Lee el texto del modal (ej. «Vas a cerrar el periodo 2026-10») antes de confirmar.
+        </div>
+        <h3>Asientos 73</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia30-asiento-20260011-compra73.png" alt="Asiento 20260011" loading="lazy" />
+            <figcaption>EXPORT 20260011 COMPRA:73</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia30-asiento-20260012-cartola.png" alt="Asiento 20260012" loading="lazy" />
+            <figcaption>EXPORT 20260012 CARTOLA pago</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia30-asientos-services.png" alt="Asientos SERVICES" loading="lazy" />
+            <figcaption>SERVICES: venta + cartola cobro</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia30-asiento-20260003-cartola-services.png" alt="Asiento cobro" loading="lazy" />
+            <figcaption>SERVICES 20260003 CARTOLA cobro</figcaption>
+          </figure>
+        </div>
+        <h3>Balance y cierre</h3>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia31-balance-8col-export-post-cierre.png" alt="Balance EXPORT" loading="lazy" />
+            <figcaption>Balance EXPORT $53.020.890</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia31-balance-8col-services-post-cierre.png" alt="Balance SERVICES" loading="lazy" />
+            <figcaption>Balance SERVICES $29.869.000</figcaption>
+          </figure>
+        </div>
+        <div class="grid-2">
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia31-periodos-export-cerrado.png" alt="Periodo EXPORT cerrado" loading="lazy" />
+            <figcaption>EXPORT: 2026-10 CERRADO</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="capturas/mes-contable-dia31-periodos-services-cerrado.png" alt="Periodo SERVICES cerrado" loading="lazy" />
+            <figcaption>SERVICES: 2026-10 CERRADO</figcaption>
+          </figure>
+        </div>
+        <div class="ok">
+          Post-cierre: no se pueden crear asientos con fecha en 2026-10 hasta reabrir el periodo (motivo obligatorio).
+        </div>
+      </section>
+
+      <footer>
+        Almahue ERP · Manual mes contable interempresa · generado 02/11/2026 ·
+        capturas en <code>docs/manual/capturas/</code>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

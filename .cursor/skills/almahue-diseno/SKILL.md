@@ -9,7 +9,7 @@ description: >-
 
 # Diseño Almahue
 
-Una sola forma por tipo de control. Ordenes de compra (el listado de Compras) queda fuera hasta que se pida.
+Una sola forma por tipo de control. Incluye listado, detalle y wizard de Ordenes de compra.
 
 Matriz de pantallas y deudas: [`reference-normalizacion.md`](reference-normalizacion.md) y `docs/requerimientos/matriz-ui-normalizacion-2026-11-04.md`.
 
@@ -20,9 +20,9 @@ Matriz de pantallas y deudas: [`reference-normalizacion.md`](reference-normaliza
 | C1 | Shell pagina | `PageHeader` |
 | C2 | Totales | `CollapsibleLibroSection` + `KpiStatCard` |
 | C3 | Lista | `DataTable` + `filterBarExtra` / `toolbarExtra` |
-| C4 | Modal ficha densa | `Modal` wide + grilla 2-3 cols + tabs/seccion |
-| C5 | Modal ficha corta | `Modal` + grilla 1-2 cols (sin huecos) |
-| C6 | Seccion formulario | bloque titulo + fondo surface |
+| C4 | Modal ficha densa | `Modal` + `FormGrid` cols 3 + tabs/`FormSection` |
+| C5 | Modal ficha corta | `Modal` + `FormGrid` cols 1-2 (sin huecos) |
+| C6 | Seccion formulario | `FormSection` |
 | C7 | Estado | `Badge` |
 | C8 | Acciones fila | `RowActions` |
 | C9 | Aviso | fila mensaje + boton |
@@ -59,14 +59,18 @@ Un total que se edita (descuento del wizard Emitir) sigue en `CollapsibleRightPa
 ## Formularios y modales (densidad)
 
 Referencia buena: Plan de cuentas > `Detalle y edicion de cuenta`.
-Referencia mala: `Editar Ingreso` con grilla de 3 columnas y celdas vacias.
+Referencia mala: `Editar Ingreso` con grilla de 3 columnas y celdas vacias; ficha de Contratista con panel derecho vacio por `formExtra` sidebar.
 
 - `Field` + `Input` / `Select` / `Textarea` / checkbox del design system. Labels arriba.
-- Grilla: `grid items-start gap-x-5 gap-y-4 sm:grid-cols-2 lg:grid-cols-3`.
-- Si la vista tiene **menos de 4 campos visibles**, usa **maximo 2 columnas** (C5). No fuerces 3 cols en `MockListPage` si queda aire.
-- Si la ficha es rica (parametrizacion, cuenta, dimensiones): tabs bajo el titulo, secciones C6, badge de codigo junto al titulo, footer con hint a la izquierda y `Cancelar` ghost + `Guardar` primary (C4).
-- Campos anchos (`Padre`, motivo largo): `sm:col-span-2` o `lg:col-span-3`, no una columna aislada con vacio al lado.
+- Grilla: `FormGrid` (`gap-x-5 gap-y-4`). `MockListPage` usa `resolveFormCols`: < 5 campos visibles baja a 2 cols aunque pidan 3.
+- Si la vista tiene **menos de 4 campos visibles**, usa **maximo 2 columnas** (C5). No fuerces 3 cols si queda aire.
+- Si la ficha es rica (parametrizacion, cuenta, dimensiones): tabs bajo el titulo, `FormSection`, badge de codigo junto al titulo, footer con hint a la izquierda y `Cancelar` ghost + `Guardar` primary (C4).
+- Campos anchos (`Padre`, motivo largo): `formColSpan(..., 'full')` o `span: 'full'` en MockFormField.
+- Hints largos: preferir texto corto; no dejar una celda alta vaciando la fila (reordenar o seccion).
 - Detalle adicional: **modal propio**, no inflar el modal actual con bloques en zigzag (pedido 03/11).
+- Modal de listas Mock: default `formSize="lg"` y `enableExport` en `MockListPage`; no uses `wide` si el contenido no lo llena.
+- `formExtra`: default `below` (ancho completo). `sidebar` solo si el panel derecho es denso y util (p. ej. stock por bodega). **Prohibido** sidebar para avisos de RUT o historial: deja un recuadro blanco vacio.
+- Avisos de cruce de RUT (tambien es proveedor/contratista): `afterField` bajo el RUT, texto muted. No caja de color ni columna lateral.
 
 ## Botones
 
@@ -87,6 +91,32 @@ Pedido cliente (22/10 y 28/10): **en todos los modulos / todas las paginas de li
 - Listados: `DataTable` con `enableExport` (CSV/Excel) y, donde aplique documento oficial, accion PDF (`RowActions` / preview).
 - Export de pagina tambien puede ir en `PageHeader` como `outline`, nunca como unico Buscar custom.
 - Al revisar una pantalla de lista: si no hay Excel/PDF, es deuda (ver matriz).
+
+## Click en lista = detalle (no edicion)
+
+Auditoria: [`docs/requerimientos/auditoria-click-detalle-vs-edicion-2026-11-04.md`](../../../docs/requerimientos/auditoria-click-detalle-vs-edicion-2026-11-04.md).
+
+- Click en la fila abre **detalle** (solo lectura). Nunca el formulario editable.
+- La edicion es accion aparte: boton **Editar datos** (footer del detalle y/o icono en Acciones).
+- `MockListPage`: `viewFirst` default true; footer «Editar datos»; `onToggleActiva` para Activar/Desactivar.
+- **Parametrizacion** (catalogos simples): en Acciones **Activar/Desactivar**, **Editar datos**, **Eliminar** (si aplica). Modal detalle tamano minimo `lg` (C5).
+
+### Detalle = misma data que items / respaldos
+
+Si el documento tiene **items** y/o **adjuntos**, la ficha de detalle y la de edicion deben mostrar **los mismos bloques** (cabecera + items + documentos). No abras un segundo modal "Items" / "Detalle y respaldos" con datos que faltan en la ficha.
+
+- Proformas: items + `AdjuntosDocumentoSection` dentro de la ficha (`formExtra`); sin modal paralelo de items.
+- OC / orden de insumos: detalle con lineas + adjuntos (mismo criterio).
+- Accion de fila "Items" solo si abre esa misma ficha (`helpers.openDetail` / `openEdit`), no otra vista incompleta.
+
+## Tipografia de listas (DataTable)
+
+Una sola tipografia de cuerpo en tablas:
+
+- Encabezados: `text-xs font-medium uppercase tracking-wide` muted.
+- Celdas: `text-sm font-normal` color texto. Montos a la derecha con `tabular-nums`.
+- Codigos/folios: `font-mono` al mismo `text-sm` (no `text-xs` suelto ni italic salvo vacio «No asignada»).
+- No mezclar `text-[11px]` / `text-xs` en el cuerpo de la lista.
 
 ## Acciones de fila
 
@@ -112,9 +142,14 @@ Si estado operativo y contabilizacion conviven, **dos badges o dos columnas** (p
 
 Si la fila nace de otro documento o apunta a uno (factura, OC, OV, guia, proforma), una columna **Origen** con el enlace. No repitas ese vinculo como un boton de acciones.
 
-## Historial
+## Historial / trazabilidad
 
-Orden de compra, orden de insumos, orden de venta y DTE: clic en la fila abre el documento, y desde ahi **Historial** (usuario, dia y hora). No pulses Guardar, Contabilizar, Emitir ni Pagar para mostrarlo.
+El historial **no va embebido** en la ficha ni en `formExtra` (ni sidebar ni al pie del form).
+
+- Documentos (OC, OV, DTE, guia): clic en fila abre detalle; desde ahi **Historial** (footer outline o Acciones con `RowActionIcons.trazabilidad`) abre `HistorialDocumentoModal` / timeline propio.
+- Maestros con auditoria de cambios (p. ej. vigencia de contratista): mismo patron - boton **Historial** en footer del detalle y/o Acciones; modal propio. No un listado dentro de la ficha.
+- Ficha cliente/proveedor: el tab **Historial** de `FichaContraparteModal` cuenta como vista propia (tab), no como sidebar.
+- No pulses Guardar, Contabilizar, Emitir ni Pagar solo para mostrar el historial.
 
 ## Menu
 
@@ -136,3 +171,4 @@ Recorrela en este orden y anota lo que no coincida. No des por bueno un bloque s
 6. Una columna Acciones, iconos distintos, nombre al pasar el mouse.
 7. Modales: densidad C4/C5; sin tercera columna vacia.
 8. Export PDF/Excel presente en listas (salvo excepcion documentada).
+9. Historial fuera de la ficha (modal/tab propio). Sin `formExtra` sidebar vacio.

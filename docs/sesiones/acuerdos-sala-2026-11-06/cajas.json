@@ -1,0 +1,83 @@
+{
+  "boxes": {
+    "reglas": [
+      {
+        "x": 1155,
+        "y": 364,
+        "w": 168,
+        "h": 112
+      },
+      {
+        "x": 966,
+        "y": 492,
+        "w": 168,
+        "h": 76
+      },
+      {
+        "x": 1155,
+        "y": 492,
+        "w": 168,
+        "h": 76
+      }
+    ],
+    "guias": [
+      {
+        "x": 823,
+        "y": 184,
+        "w": 118,
+        "h": 32
+      },
+      {
+        "x": 306,
+        "y": 302,
+        "w": 70,
+        "h": 15
+      }
+    ],
+    "asientosLista": [],
+    "asientosDetalle": [
+      {
+        "x": 533,
+        "y": 279,
+        "w": 456,
+        "h": 121
+      }
+    ],
+    "asientoAnular": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 960
+      }
+    ],
+    "presupuestos": [
+      {
+        "x": 1399,
+        "y": 587,
+        "w": 32,
+        "h": 32
+      }
+    ],
+    "activo": [],
+    "cartola": [
+      {
+        "x": 584,
+        "y": 468,
+        "w": 93,
+        "h": 32
+      }
+    ]
+  },
+  "log": [
+    "login http://127.0.0.1:5174/",
+    "shot reglas-eslabon",
+    "shot guias-por-confirmar",
+    "shot asientos-lista",
+    "shot asiento-detalle",
+    "shot asiento-anular",
+    "shot presupuestos",
+    "shot activo-fijo-alta",
+    "shot cartola"
+  ]
+}

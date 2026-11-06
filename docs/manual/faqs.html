@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs Almahue ERP - mes contable</title>
+  <style>
+    :root { --bg:#f6f4ef; --ink:#1c1b19; --muted:#5c574e; --accent:#1f5c4a; --card:#fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+    header { padding: 2rem 1.25rem 1rem; max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.6rem; margin: 0 0 .35rem; color: var(--accent); }
+    .sub { color: var(--muted); margin: 0; }
+    #q { width: 100%; max-width: 720px; display: block; margin: 0 auto 1rem; padding: .75rem 1rem; border: 1px solid #d5d0c6; border-radius: 8px; font-size: 1rem; }
+    main { max-width: 720px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+    details { background: var(--card); border: 1px solid #e4dfd5; border-radius: 10px; padding: .85rem 1rem; margin-bottom: .65rem; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: .65rem 0 0; color: var(--muted); line-height: 1.45; }
+    .tag { display: inline-block; font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); margin-bottom: .25rem; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Preguntas frecuentes</h1>
+    <p class="sub">Almahue ERP · simulacion interempresa octubre 2026</p>
+  </header>
+  <input id="q" type="search" placeholder="Buscar (folio, cartola, cierre, OC...)" aria-label="Buscar FAQ" />
+  <main id="list">
+    <details data-k="facturar fecha emitir ov"><span class="tag">Ventas</span><summary>Por que Facturar one-click pone fecha de hoy?</summary><p>El atajo sella la fecha del dia. Para un mes cerrado o pasado usa Emitir DTE con factura-ov y la fecha de la OV.</p></details>
+    <details data-k="anular nc libro ventas"><span class="tag">Ventas</span><summary>Falla anular desde Libro de ventas?</summary><p>Si el POST rechaza la propiedad total, emite la NC desde el wizard de Emitir DTE.</p></details>
+    <details data-k="folio oficial sii cobro cartola"><span class="tag">Tesoreria</span><summary>El cobro no encuentra el folio SII</summary><p>El lookup acepta folio interno ERP o folioOficial del partner.</p></details>
+    <details data-k="oc usd alerta match monto"><span class="tag">Compras</span><summary>Match Alerta MONTO_NO_COINCIDE</summary><p>OC y factura deben coincidir en moneda y monto. Una OC USD con factura CLP queda en alerta y bloquea el acuse.</p></details>
+    <details data-k="banco cartola cuenta plan"><span class="tag">Tesoreria</span><summary>Cartola no encuentra cuenta banco</summary><p>El nombre del banco del archivo debe calzar con una cuenta 1-1-01-02* (tolera DE, $ y variantes).</p></details>
+    <details data-k="estado cuenta fecha compra"><span class="tag">Tesoreria</span><summary>No veo la compra en el estado de cuenta del mes</summary><p>La CC usa la fecha fiscal del documento (fechaDocumento), no el dia operativo de contabilizacion.</p></details>
+    <details data-k="flujo caja proyecciones"><span class="tag">Tesoreria</span><summary>Flujo de caja vacio o error</summary><p>Sin proyecciones solo lista cartolas Contabilizadas y aperturas. El flag incluirProyecciones suma aging pendiente sin asiento.</p></details>
+    <details data-k="asiento pago cartola"><span class="tag">Tesoreria</span><summary>El pago genera asiento PAGO?</summary><p>No. El asiento de banco es CARTOLA:id. El pago solo calza cuenta corriente y aging.</p></details>
+    <details data-k="cerrar periodo contratistas"><span class="tag">Contabilidad</span><summary>Que cierra Periodos contables?</summary><p>El candado del mes (no nuevos asientos). Contratistas y bodega tienen cierre propio en sus modulos.</p></details>
+    <details data-k="reabrir periodo motivo"><span class="tag">Contabilidad</span><summary>Como reabro un periodo?</summary><p>Abrir + motivo obligatorio. Luego puedes volver a contabilizar en ese mes.</p></details>
+  </main>
+  <script>
+    const q = document.getElementById('q');
+    const items = [...document.querySelectorAll('details')];
+    q.addEventListener('input', () => {
+      const t = q.value.trim().toLowerCase();
+      items.forEach((el) => {
+        const hay = !t || (el.dataset.k + ' ' + el.innerText).toLowerCase().includes(t);
+        el.classList.toggle('hidden', !hay);
+      });
+    });
+  </script>
+</body>
+</html>

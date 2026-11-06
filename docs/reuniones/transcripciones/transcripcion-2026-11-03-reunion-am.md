@@ -1,0 +1,161 @@
+# Reunion Almahue 2026-11-03 AM (Whisper large-v3 + lexico)
+
+Idioma: es (p=1.00)
+Modelo: faster-whisper `large-v3` cuda float16 + VAD
+Fuente: C:\Users\c\Videos\Screen Recordings\Screen Recording 2026-11-03 115116.mp4 (00:42:16)
+Normalizacion: tools/transcript-lexico (grafias chilenas y nombres del ERP).
+
+- [00:00] Ahora está saliendo el sol y en la mañana hacía cualquier frío, parecía que iba a llover.
+- [00:07] Para el odio.
+- [00:09] Para el loli.
+- [00:11] Ya perdido, démosle. Tengo cualquier pega, huevón.
+- [00:14] ¿Se ve cierto?
+- [00:21] Sí veo.
+- [00:25] Pero solo contratista, solo contratista. ¿Los puntos que estaban presentando ayer?
+- [00:29] Sí, ayer que no había pasado, que...
+- [00:35] No estaba considerando, porque todavía quedaban rastros de la primera programación, en el traspaso y cierre contable, y tenía habilitado el botón de cierre, o sea, de reapertura, perdón.
+- [00:50] Y en sí, como no hablamos de la reapertura, la idea es que sea directamente cuando se haga alguna modificación en las proformas.
+- [00:59] Sí.
+- [01:00] ¿Cachái?
+- [01:01] O sea, se necesita hacer una modificación.
+- [01:03] Claro, ya lo saqué ya, ¿cachái?
+- [01:05] Acá en traspasos y cierre contable, cuando ya lo centralizáis queda deshabilitado, cachái.
+- [01:12] Y por ejemplo acá, si quiero hacer una modificación tengo que pedir directamente acá desde la proforma, la reversa.
+- [01:32] Ah, ¿por qué no me levanta el wizard?
+- [01:35] La idea es que acá, por ejemplo, te levante para pedir el motivo de la apertura y se realice la apertura, que creo que con la modificación que hice se eliminó.
+- [01:45] ¿Cachái? Y ahí debería mostrar los dos vistos buenos, o sea, la solicitud de los dos vistos buenos de jefe de contabilidad. Ahí me falta esa pifia. Pero en un periodo abierto debería verse así. Ahí, bueno, no te va a dejar centralizar porque realmente no hay nada que centralizar en este periodo.
+- [02:13] Pero debería verse así. Esa es como la diferencia de la vista de los dos, de una abierta y una cerrada. Tengo que ver el wizard, no sé por qué, porque si te diste cuenta, el otro que está cerrado tiene habilitada la reversa de todas formas.
+- [02:27] La idea ahora, Carlos, por ejemplo, la demo, la presentación que hagamos, por ejemplo, tener registro para que se genere movimiento, todo, ¿cachái?
+- [02:35] Sí, po.
+- [02:36] No hago un modo demo.
+- [02:38] No, sí, de hecho, todo lo que he hecho ahora son facturaciones entre las dos empresas.
+- [02:44] Ya, cachái, todas estas facturas son de real, cachái, entonces, al menos así lo estaba haciendo, pues sin modo demo, perfecto, cachái, bueno, el ingreso, los relacionados y todo, también le está funcionando como te diste cuenta, pero podemos hacer un flujo, un flujo completo, centralizando y viendo como queda la reapertura, vale,
+- [03:24] Luego, la reapertura, como cachaste, me está fallando que no me muestre el wizard, cachái, acá al momento de ingresar la clave debería mostrarlo, pero dice que el periodo está cerrado, cachái, ahí tengo que arreglar eso.
+- [03:46] Ah, ya, pues por eso, y eso es lo mismo que pasó ayer, ¿o no?
+- [03:52] O no, no era desde...
+- [03:53] No, ayer salió un error directamente y ni siquiera te mostraba esto.
+- [03:59] ¿Cuánto demora en corregirlo?
+- [04:01] Eh, tengo que revisarlo.
+- [04:02] Dale, por revisa los espero, si querés, para notar esto.
+- [23:09] 5, 8, 7, 9, no existe el power.
+- [23:56] ¿Qué pasó?
+- [23:57] No, estoy viendo una huesa.
+- [23:59] Carlos.
+- [30:02] Ya, me falta solamente un detalle que no sé por qué ahora se ven las de periodo anterior acá en las proformas, pero ya estoy arreglándolo.
+- [30:10] Y así se ve la visualización cuando está el periodo cerrado.
+- [30:15] ¿Ya?
+- [30:16] ¿Cachái? Te dice la cierta que está generada a nivel de contratista y de que el periodo contable también está cerrado por parte de lo que vendría a ser el periodo y el módulo.
+- [30:26] Yo, ¿qué es esto?
+- [30:27] Entonces aquí te pide el motivo.
+- [30:30] A ver si no se ve. ¡Ah! No puede ser.
+- [30:45] Ya, si ahí hizo la actualización de que se vean solamente los de este periodo.
+- [30:55] Ahí te dice que está vinculada a una factura ya, en caso de que la tenga, en caso de que no, no debería salir ese recuadro.
+- [31:01] ¿Qué pasó? ¿Por qué ahora sale esto? Puta, salió otro error ahora aún.
+- [31:16] Un muchacho aquí, ¿por qué tocarlo?
+- [32:17] Dale nomás.
+- [33:18] Buenos días.
+- [33:19] Buenos días.
+- [33:20] Buenos días.
+- [33:21] ¿Cómo están, caballeros?
+- [33:22] Aquí estamos con mucho problema, mucho error. No sé qué está pasando.
+- [33:28] Dígame usted, ¿qué pasa? ¿Qué sucede?
+- [33:32] No sé si nos están hackeando, no sé.
+- [33:35] Freshlink, Freshlink, ¿qué pasa con Freshlink?
+- [33:37] Ahí, me cobran las manos, pero estamos en eso. Vamos viendo ahora. Estoy viendo en qué está.
+- [33:44] Por favor, por favor, Diego.
+- [33:46] Me preocupé un poco de ese proyecto. Mira lo que pasa.
+- [33:51] Puta, me dejaste al más penca, vos. A las cosas.
+- [33:56] Sí, vamos a echar a esquivar. Estoy en eso, estoy en eso.
+- [33:59] ¿Cuál es el asco esto? Encima, bueno, hoy en día es justo, güa.
+- [34:10] ¿Justo hoy, guan?
+- [34:16] Sí, justo hoy en día, guan.
+- [34:19] Justo todo hoy día, huevón.
+- [34:40] Martes negro.
+- [34:41] A ver, te vi, tíos.
+- [34:50] Me pones tranquilo, tíos.
+- [34:53] ¿Qué tranquilo? ¿No estoy tranquilo?
+- [34:56] Sí, la pura cagada, huevón, José.
+- [34:58] Estábamos justo pelándote.
+- [35:00] ¡Oy!
+- [35:02] Me vas a cortar las venas, loco.
+- [35:05] Termina las cosas antes, después lo haces y te...
+- [35:08] Oye, ya, ya.
+- [35:11] Ahora sí voy a...
+- [35:13] Voy a ver estos bastardos del mame.
+- [35:15] Ya, eso, quiero, puta, José, aprovechemos al Diego, que nos pueda apoyar con eso.
+- [35:23] Sí, pero es que por el lado de Temite también está lo que te dije, pues yo me comprometí con fechas, y eso es tan atrasado. Por eso no quería pasarle nada al Diego.
+- [35:34] Sí, pero como está la situación, van a tener que apoyarnos, pues, bueno, porque si no, AlmaWeb va a empezar a chillar. Hablé con Mario, y él me dijo, bueno, yo entiendo, y hay un tirón, hubo un tirón de reja, todo esto fue por culpa de nosotros y la hueá. Pero sí, me dice, bueno, nada que hacer, ya está hecho, pero necesito el apoyo.
+- [36:00] No, sí, estamos más que claros con eso.
+- [36:02] No, no, no, ni nadie, güey.
+- [36:07] No, no, yo te voy a agarrar a combo.
+- [36:12] Ah, bueno, traigan al Seba, huevón.
+- [36:15] Alguien bueno, huevón. Traigamos a alguien bueno, huevón.
+- [36:18] Al Pablo, huevón. Unos despeinones, unos despeinones.
+- [36:20] Unos despeinones, unos cambios de banco, una weá piola.
+- [36:27] Así que eso, pero entonces...
+- [36:30] ¿Toma uno AlmaWeb o lo tomamos todos?
+- [36:34] O sea... ¿Qué es lo que querías hacer?
+- [36:40] Porque... Yo quiero que se resuelva.
+- [36:43] Por eso, huevón. Yo creo que uno basta.
+- [36:46] Ya, pero espera, por ejemplo, hay dos puntos que son críticos.
+- [36:49] La hueá de María Jesús, María José, que es el tema de los números, ¿cierto?
+- [36:54] De los gráficos.
+- [36:55] Sí.
+- [36:56] Ya, esa hueá es crítica.
+- [36:57] Y lo otro es la carga múltiple de archivos.
+- [37:00] Esos dos puntos, si los toma uno, ¿los puede resolver rápido, Reina?
+- [37:04] Espera, espera, espera, espera, espera.
+- [37:06] Eso de los tendencias de precios por mercado, eso lo revisé ayer con el Mario en la reunión y eso ya estaba resuelto.
+- [37:14] De hecho, yo me meto a ver y está resuelto.
+- [37:16] ¿No será que tiene una versión antigua instalada?
+- [37:18] Le debe faltar Control F5, esa loca.
+- [37:21] Porque ayer el Mario me dijo, sí, se ve bien.
+- [37:26] Entonces, ¿eso es el que voy a mandar?
+- [37:28] ¿Sabes qué responderle a eso, Luguan?
+- [37:30] Chevo, pero recién ahora estás leyendo.
+- [37:32] Sí, salí recién.
+- [37:33] Tú, Luguan, que leí lento, Luguan, si lo mandaste en una hora.
+- [37:36] No, Sergio, maldito.
+- [37:38] Ya, entonces, el Diego no es necesario, si lo decís tú.
+- [37:44] Si me decís, José, no es necesario el Diego, Luguan, yo lo despido, güey.
+- [37:48] Buena sea.
+- [38:18] Ya tengo todo el pasaje comprado, si son todos los que vigilan a vos, nomás.
+- [38:24] ¡Ella!
+- [38:28] Ya, ya, nos damos tiempo con las lucidaciones, tontos.
+- [38:33] Diego, entonces sigue donde te mire.
+- [38:38] Ahora lo que sí podría pedir el Diego, que es cortito,
+- [38:42] es la reunión esa que está pidiendo el Pipe,
+- [38:48] Para ver lo que estaba viendo el Seba.
+- [38:52] Esa API del link de pago.
+- [38:55] La API se va a vender de mí, pero solamente estoy hablando del MAUE.
+- [38:59] Porque ese es el que me está causando ruido.
+- [39:02] Ahora.
+- [39:05] Ya, vuelvo a lo mío entonces.
+- [39:08] Puta, pero igual gracias por la...
+- [39:10] No, eso no.
+- [39:13] Ya, chao. Voy a volver a lo mío.
+- [39:17] No me quedo aquí.
+- [39:17] Ya, ya.
+- [39:18] José, no, no, o sea, si José dice que no, él se cargó la mata solo, así que, vaya maldito.
+- [39:24] Sí, si la cosa es que se libera un poco de temite.
+- [39:29] Ya, pero para poder liberarse hay que hacer las cosas, por si.
+- [39:33] Ah, el maldito bastardo, es que tú querés pelear, saliste con ganas de pelear de la reunión de generación.
+- [39:39] No, no, no, ya, vaya, vaya Diego nomás, entonces, dos minutos.
+- [39:45] José, tú, mira, me importa que revise María José, le dice María José, esto lo revisamos con Mario ayer, se puede refrescar con manchiferre, el tema de la imagen, yo le dije que eso iba a quedar resuelto.
+- [40:00] Le dije al Mario, ¿por qué? Porque le dije, bueno, lo llamé, le dije, lo de las imágenes, eso lo conversamos, y me acuerdo perfectamente que iba a quedar solo una imagen en la aplicación, o sea, solo levantar la cámara, sin seleccionar desde la galería.
+- [40:15] Y ahora María José está diciendo que debería ser para los usuarios administradores. Y ahí me dijo, pero bueno, si desde el portal la Paola puede cargar más imágenes, adjuntar más evidencia, bacán. ¿Entendés? Bien, resolvemos.
+- [40:30] Ok. Esos dos puntos me interesa que los podamos corregir de AlmaWeb, por favor, José.
+- [40:36] Esos dos y dos, pues no, si hay que matarlos todos de una.
+- [40:39] No, pero espérate, espérate. Yo le pedí al Mario que me construyera un documento, con todos los puntos.
+- [40:45] Tú dile ahora en el grupo, dile en la interna al Mario, Mario, estoy trabajando en este punto, ¿ya?
+- [40:51] Y él dijo que llegaba a la oficina en 20 minutos, iban a construir un documento con todos los pendientes, y contra eso íbamos a trabajar y íbamos a distribuir la pega.
+- [41:04] Ya.
+- [41:05] ¿Ya?
+- [41:06] Ok, ya, entonces le hablo para que me comparte el documento por ahí.
+- [41:11] Sí, vos, tú tenés que decirle primero los puntos que ya tienen resuelto.
+- [41:14] Los que tienen resuelto para que no los incluya de nuevo en el archivo.
+- [41:18] ¿Ya?
+- [41:19] Yes.
+- [41:20] Eso, José.
+- [41:21] Ya, vale.
+- [41:51] No, si te voy ahora, y tengo que resolver AlmaWeb.

@@ -1,0 +1,52 @@
+{
+  "mes-contable-dia06-ctr-ingreso-diario": {
+    "nuevoIngresoBtn": {
+      "x": 1434,
+      "y": 108
+    },
+    "fila06": {
+      "x": 401,
+      "y": 667
+    },
+    "monto700k": {
+      "x": 1186,
+      "y": 667
+    },
+    "badgeEstado": {
+      "x": 1429,
+      "y": 668
+    }
+  },
+  "mes-contable-dia08-ctr-proforma-definitiva": {
+    "filaProforma": {
+      "x": 361,
+      "y": 562
+    },
+    "contratista": {
+      "x": 429,
+      "y": 562
+    },
+    "monto7600k": {
+      "x": 626,
+      "y": 562
+    },
+    "badgeDefinitiva": {
+      "x": 903,
+      "y": 563
+    }
+  },
+  "mes-contable-dia10-ctr-traspaso-asiento": {
+    "bloqueResumenVerde": {
+      "x": 128,
+      "y": 149
+    },
+    "bannerCierreAsiento": {
+      "x": 950,
+      "y": 312
+    },
+    "filaEnCierre": {
+      "x": 414,
+      "y": 883
+    }
+  }
+}

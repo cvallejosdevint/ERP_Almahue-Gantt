@@ -2,6 +2,8 @@
 
 Fecha: 2026-11-04. Alcance: `ERP/erp_front/src` (archivos `*Page*.tsx` / `*Pages.tsx`, excluye helpers comunes).
 
+Actualizacion lote 04/11 (noche): `FormGrid` + `resolveFormCols` en `MockListPage` (default `formSize=lg`, `enableExport`); export masivo en DataTables de lista; DataTable en preview Cartola, modificacion aprobaciones y dia del reporte ingresos; limpieza banners/btn emerald (NotasCobro, IndicadoresBC, Auditoria contable, Traspaso contratistas, boleta honorarios, etc.). Siguen HTML en wizards/detalle (NotasCobro facturas, Emitir, Asientos, etc.).
+
 Referencia visual acordada en sesion:
 - **Bueno (parametrizacion / ficha densa):** Plan de cuentas - modal `Detalle y edicion de cuenta` (tabs, grilla 2-3 cols ocupada, seccion de requisitos, footer ghost + primary).
 - **Malo (mucho aire sin uso):** fichas tipo `Editar Ingreso` via `MockListPage` con `formColumns=3` y pocos campos visibles - tercera columna vacia, huecos grandes.

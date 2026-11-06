@@ -1,0 +1,205 @@
+{
+  "ciclo": "2026-08",
+  "fechaEmisionDefault": "2026-08-15",
+  "empresaReceptorErp": "EMP-EXPORT",
+  "razonSocialReceptor": "ALMAHUE EXPORT SPA",
+  "rutReceptor": "77.032.638-9",
+  "emisorUnicoSandbox": {
+    "empresaIdEmisor": "EMP-SERVICES",
+    "razonSocial": "ALM SERVICES SPA",
+    "rut": "77.032.639-7",
+    "nota": "Sandbox GoSocket: CAF/cert del biller SERVICES. Todas las DTE de insumos, guias, proformas, OC parciales y NC/ND se emiten ALM → Export. El ERP calza por monto + OC/PF + proveedor maestro ALM en EXPORT."
+  },
+  "documentosErpGuia": [
+    {
+      "modulo": "Compras",
+      "numero": "OC-2026-AGO-001",
+      "tipo": "SERVICIO",
+      "neto": 1850000,
+      "uso": "OC servicios logisticos completa → factura unica BIL-AGO-01"
+    },
+    {
+      "modulo": "Insumos",
+      "numero": "OC-2026-AGO-INS-001",
+      "tipo": "INSUMOS",
+      "neto": 2400000,
+      "uso": "OC insumos madre; recepcion parcial con 2 guias + 2 facturas (60/40)"
+    },
+    {
+      "modulo": "Insumos",
+      "numero": "OC-2026-AGO-INS-002",
+      "tipo": "INSUMOS",
+      "neto": 960000,
+      "uso": "OC insumos simple: 1 guia + 1 factura"
+    },
+    {
+      "modulo": "Contratistas",
+      "numero": "PF-AGO26-001",
+      "neto": 3500000,
+      "uso": "Proforma completa → factura unica BIL-AGO-08"
+    },
+    {
+      "modulo": "Contratistas",
+      "numero": "PF-AGO26-002",
+      "neto": 1800000,
+      "uso": "Proforma parcializada: 2 facturas 1.000.000 + 800.000"
+    },
+    {
+      "modulo": "Compras",
+      "numero": "REG-AGO26-EXENTA-001",
+      "neto": 320000,
+      "tipoDte": 34,
+      "uso": "Factura exenta sin OC (libro compras)"
+    }
+  ],
+  "emisionesAlmAAlmahue": [
+    {
+      "caso": "BIL-AGO-01",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-05",
+      "neto": 1850000,
+      "numeroInterno": "F-AGO26-OC-001",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:OC-001",
+      "glosa": "Factura servicios logisticos · OC-2026-AGO-001",
+      "calzaErp": "OC-2026-AGO-001 / Libro compras"
+    },
+    {
+      "caso": "BIL-AGO-02",
+      "tipoDte": 52,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-08",
+      "neto": 1440000,
+      "numeroInterno": "G-AGO26-INS-001A",
+      "idempotencyKey": "AGO26:EMP-SERVICES:G:OC-INS-001A",
+      "glosa": "Guia parcial 1/2 insumos · OC-2026-AGO-INS-001 (60%)",
+      "calzaErp": "OC-2026-AGO-INS-001 hija .1 / bodega"
+    },
+    {
+      "caso": "BIL-AGO-03",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-09",
+      "neto": 1440000,
+      "numeroInterno": "F-AGO26-INS-001A",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:OC-INS-001A",
+      "glosa": "Factura parcial 1/2 insumos · OC-2026-AGO-INS-001",
+      "calzaErp": "OC hija .1 / REG parcial"
+    },
+    {
+      "caso": "BIL-AGO-04",
+      "tipoDte": 52,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-18",
+      "neto": 960000,
+      "numeroInterno": "G-AGO26-INS-001B",
+      "idempotencyKey": "AGO26:EMP-SERVICES:G:OC-INS-001B",
+      "glosa": "Guia parcial 2/2 insumos · OC-2026-AGO-INS-001 (40%)",
+      "calzaErp": "OC-2026-AGO-INS-001 hija .2 / bodega"
+    },
+    {
+      "caso": "BIL-AGO-05",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-19",
+      "neto": 960000,
+      "numeroInterno": "F-AGO26-INS-001B",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:OC-INS-001B",
+      "glosa": "Factura parcial 2/2 insumos · OC-2026-AGO-INS-001",
+      "calzaErp": "OC hija .2 / cierra cobertura madre"
+    },
+    {
+      "caso": "BIL-AGO-06",
+      "tipoDte": 52,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-12",
+      "neto": 960000,
+      "numeroInterno": "G-AGO26-INS-002",
+      "idempotencyKey": "AGO26:EMP-SERVICES:G:OC-INS-002",
+      "glosa": "Guia despacho embalaje · OC-2026-AGO-INS-002",
+      "calzaErp": "OC-2026-AGO-INS-002"
+    },
+    {
+      "caso": "BIL-AGO-07",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-13",
+      "neto": 960000,
+      "numeroInterno": "F-AGO26-INS-002",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:OC-INS-002",
+      "glosa": "Factura insumos embalaje · OC-2026-AGO-INS-002",
+      "calzaErp": "Libro compras / asociar OC insumos"
+    },
+    {
+      "caso": "BIL-AGO-08",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-20",
+      "neto": 3500000,
+      "numeroInterno": "F-AGO26-CTR-001",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:CTR-001",
+      "glosa": "Factura mano de obra · PF-AGO26-001",
+      "calzaErp": "Proforma PF-AGO26-001 / asociar en Compras"
+    },
+    {
+      "caso": "BIL-AGO-09",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-22",
+      "neto": 1000000,
+      "numeroInterno": "F-AGO26-CTR-002A",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:CTR-002A",
+      "glosa": "Factura parcial 1/2 contratista · PF-AGO26-002",
+      "calzaErp": "Proforma PF-AGO26-002 parcial (queda saldo)"
+    },
+    {
+      "caso": "BIL-AGO-10",
+      "tipoDte": 33,
+      "prioridad": "P0",
+      "fechaEmision": "2026-08-28",
+      "neto": 800000,
+      "numeroInterno": "F-AGO26-CTR-002B",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:CTR-002B",
+      "glosa": "Factura parcial 2/2 contratista · PF-AGO26-002",
+      "calzaErp": "Proforma PF-AGO26-002 cierra saldo"
+    },
+    {
+      "caso": "BIL-AGO-11",
+      "tipoDte": 34,
+      "prioridad": "P1",
+      "fechaEmision": "2026-08-25",
+      "neto": 320000,
+      "numeroInterno": "F-AGO26-EX-001",
+      "idempotencyKey": "AGO26:EMP-SERVICES:F:EX-001",
+      "glosa": "Factura exenta apoyo campo · REG-AGO26-EXENTA-001",
+      "calzaErp": "Libro compras exenta"
+    },
+    {
+      "caso": "BIL-AGO-12",
+      "tipoDte": 61,
+      "prioridad": "P1",
+      "fechaEmision": "2026-08-27",
+      "neto": 120000,
+      "codRef": 3,
+      "referenciaNumeroInterno": "F-AGO26-OC-001",
+      "numeroInterno": "NC-AGO26-OC-001",
+      "idempotencyKey": "AGO26:EMP-SERVICES:NC:OC-001",
+      "glosa": "NC corrige montos factura OC-2026-AGO-001",
+      "calzaErp": "Libro compras / ajuste OC servicios"
+    },
+    {
+      "caso": "BIL-AGO-13",
+      "tipoDte": 56,
+      "prioridad": "P1",
+      "fechaEmision": "2026-08-29",
+      "neto": 150000,
+      "codRef": 3,
+      "referenciaNumeroInterno": "F-AGO26-CTR-001",
+      "numeroInterno": "ND-AGO26-CTR-001",
+      "idempotencyKey": "AGO26:EMP-SERVICES:ND:CTR-001",
+      "glosa": "ND ajuste factura contratista PF-AGO26-001",
+      "calzaErp": "Libro compras contratistas"
+    }
+  ],
+  "emisionesSolicitarAlChatBilling": "usar array emisionesAlmAAlmahue — todas EMP-SERVICES biller, receptor 77.032.638-9, fechas agosto 2026"
+}

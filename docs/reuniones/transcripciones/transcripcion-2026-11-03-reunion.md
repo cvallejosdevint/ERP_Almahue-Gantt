@@ -1,0 +1,1544 @@
+# Reunion Almahue 2026-11-03 (Whisper large-v3 + lexico)
+
+Sesiones: AM (~42 min) + PM (~2 h 38 min). Screen recordings Windows.
+
+## Parte AM
+
+- [00:07] Para el odio.
+- [00:09] Para el loli.
+- [00:11] Ya perdido, démosle. Tengo cualquier pega, huevón.
+- [00:14] ¿Se ve cierto?
+- [00:21] Sí veo.
+- [00:25] Pero solo contratista, solo contratista. ¿Los puntos que estaban presentando ayer?
+- [00:29] Sí, ayer que no había pasado, que...
+- [00:35] No estaba considerando, porque todavía quedaban rastros de la primera programación, en el traspaso y cierre contable, y tenía habilitado el botón de cierre, o sea, de reapertura, perdón.
+- [00:50] Y en sí, como no hablamos de la reapertura, la idea es que sea directamente cuando se haga alguna modificación en las proformas.
+- [00:59] Sí.
+- [01:00] ¿Cachái?
+- [01:01] O sea, se necesita hacer una modificación.
+- [01:03] Claro, ya lo saqué ya, ¿cachái?
+- [01:05] Acá en traspasos y cierre contable, cuando ya lo centralizáis queda deshabilitado, cachái.
+- [01:12] Y por ejemplo acá, si quiero hacer una modificación tengo que pedir directamente acá desde la proforma, la reversa.
+- [01:32] Ah, ¿por qué no me levanta el wizard?
+- [01:35] La idea es que acá, por ejemplo, te levante para pedir el motivo de la apertura y se realice la apertura, que creo que con la modificación que hice se eliminó.
+- [01:45] ¿Cachái? Y ahí debería mostrar los dos vistos buenos, o sea, la solicitud de los dos vistos buenos de jefe de contabilidad. Ahí me falta esa pifia. Pero en un periodo abierto debería verse así. Ahí, bueno, no te va a dejar centralizar porque realmente no hay nada que centralizar en este periodo.
+- [02:13] Pero debería verse así. Esa es como la diferencia de la vista de los dos, de una abierta y una cerrada. Tengo que ver el wizard, no sé por qué, porque si te diste cuenta, el otro que está cerrado tiene habilitada la reversa de todas formas.
+- [02:27] La idea ahora, Carlos, por ejemplo, la demo, la presentación que hagamos, por ejemplo, tener registro para que se genere movimiento, todo, ¿cachái?
+- [02:35] Sí, po.
+- [02:36] No hago un modo demo.
+- [02:38] No, sí, de hecho, todo lo que he hecho ahora son facturaciones entre las dos empresas.
+- [02:44] Ya, cachái, todas estas facturas son de real, cachái, entonces, al menos así lo estaba haciendo, pues sin modo demo, perfecto, cachái, bueno, el ingreso, los relacionados y todo, también le está funcionando como te diste cuenta, pero podemos hacer un flujo, un flujo completo, centralizando y viendo como queda la reapertura, vale,
+- [03:24] Luego, la reapertura, como cachaste, me está fallando que no me muestre el wizard, cachái, acá al momento de ingresar la clave debería mostrarlo, pero dice que el periodo está cerrado, cachái, ahí tengo que arreglar eso.
+- [03:46] Ah, ya, pues por eso, y eso es lo mismo que pasó ayer, ¿o no?
+- [03:52] O no, no era desde...
+- [03:53] No, ayer salió un error directamente y ni siquiera te mostraba esto.
+- [03:59] ¿Cuánto demora en corregirlo?
+- [04:01] Eh, tengo que revisarlo.
+- [04:02] Dale, por revisa los espero, si querés, para notar esto.
+- [23:09] 5, 8, 7, 9, no existe el power.
+- [23:56] ¿Qué pasó?
+- [23:57] No, estoy viendo una huesa.
+- [23:59] Carlos.
+- [30:02] Ya, me falta solamente un detalle que no sé por qué ahora se ven las de periodo anterior acá en las proformas, pero ya estoy arreglándolo.
+- [30:10] Y así se ve la visualización cuando está el periodo cerrado.
+- [30:15] ¿Ya?
+- [30:16] ¿Cachái? Te dice la cierta que está generada a nivel de contratista y de que el periodo contable también está cerrado por parte de lo que vendría a ser el periodo y el módulo.
+- [30:26] Yo, ¿qué es esto?
+- [30:27] Entonces aquí te pide el motivo.
+- [30:30] A ver si no se ve. ¡Ah! No puede ser.
+- [30:45] Ya, si ahí hizo la actualización de que se vean solamente los de este periodo.
+- [30:55] Ahí te dice que está vinculada a una factura ya, en caso de que la tenga, en caso de que no, no debería salir ese recuadro.
+- [31:01] ¿Qué pasó? ¿Por qué ahora sale esto? Puta, salió otro error ahora aún.
+- [31:16] Un muchacho aquí, ¿por qué tocarlo?
+- [32:17] Dale nomás.
+- [33:18] Buenos días.
+- [33:19] Buenos días.
+- [33:20] Buenos días.
+- [33:21] ¿Cómo están, caballeros?
+- [33:22] Aquí estamos con mucho problema, mucho error. No sé qué está pasando.
+- [33:28] Dígame usted, ¿qué pasa? ¿Qué sucede?
+- [33:32] No sé si nos están hackeando, no sé.
+- [33:35] Freshlink, Freshlink, ¿qué pasa con Freshlink?
+- [33:37] Ahí, me cobran las manos, pero estamos en eso. Vamos viendo ahora. Estoy viendo en qué está.
+- [33:44] Por favor, por favor, Diego.
+- [33:46] Me preocupé un poco de ese proyecto. Mira lo que pasa.
+- [33:51] Puta, me dejaste al más penca, vos. A las cosas.
+- [33:56] Sí, vamos a echar a esquivar. Estoy en eso, estoy en eso.
+- [33:59] ¿Cuál es el asco esto? Encima, bueno, hoy en día es justo, güa.
+- [34:10] ¿Justo hoy, guan?
+- [34:16] Sí, justo hoy en día, guan.
+- [34:19] Justo todo hoy día, huevón.
+- [34:40] Martes negro.
+- [34:41] A ver, te vi, tíos.
+- [34:50] Me pones tranquilo, tíos.
+- [34:53] ¿Qué tranquilo? ¿No estoy tranquilo?
+- [34:56] Sí, la pura cagada, huevón, José.
+- [34:58] Estábamos justo pelándote.
+- [35:00] ¡Oy!
+- [35:02] Me vas a cortar las venas, loco.
+- [35:05] Termina las cosas antes, después lo haces y te...
+- [35:08] Oye, ya, ya.
+- [35:11] Ahora sí voy a...
+- [35:13] Voy a ver estos bastardos del mame.
+- [35:15] Ya, eso, quiero, puta, José, aprovechemos al Diego, que nos pueda apoyar con eso.
+- [35:23] Sí, pero es que por el lado de Temite también está lo que te dije, pues yo me comprometí con fechas, y eso es tan atrasado. Por eso no quería pasarle nada al Diego.
+- [35:34] Sí, pero como está la situación, van a tener que apoyarnos, pues, bueno, porque si no, AlmaWeb va a empezar a chillar. Hablé con Mario, y él me dijo, bueno, yo entiendo, y hay un tirón, hubo un tirón de reja, todo esto fue por culpa de nosotros y la hueá. Pero sí, me dice, bueno, nada que hacer, ya está hecho, pero necesito el apoyo.
+- [36:00] No, sí, estamos más que claros con eso.
+- [36:02] No, no, no, ni nadie, güey.
+- [36:07] No, no, yo te voy a agarrar a combo.
+- [36:12] Ah, bueno, traigan al Seba, huevón.
+- [36:15] Alguien bueno, huevón. Traigamos a alguien bueno, huevón.
+- [36:18] Al Pablo, huevón. Unos despeinones, unos despeinones.
+- [36:20] Unos despeinones, unos cambios de banco, una weá piola.
+- [36:27] Así que eso, pero entonces...
+- [36:30] ¿Toma uno AlmaWeb o lo tomamos todos?
+- [36:34] O sea... ¿Qué es lo que querías hacer?
+- [36:40] Porque... Yo quiero que se resuelva.
+- [36:43] Por eso, huevón. Yo creo que uno basta.
+- [36:46] Ya, pero espera, por ejemplo, hay dos puntos que son críticos.
+- [36:49] La hueá de María Jesús, María José, que es el tema de los números, ¿cierto?
+- [36:54] De los gráficos.
+- [36:55] Sí.
+- [36:56] Ya, esa hueá es crítica.
+- [36:57] Y lo otro es la carga múltiple de archivos.
+- [37:00] Esos dos puntos, si los toma uno, ¿los puede resolver rápido, Reina?
+- [37:04] Espera, espera, espera, espera, espera.
+- [37:06] Eso de los tendencias de precios por mercado, eso lo revisé ayer con el Mario en la reunión y eso ya estaba resuelto.
+- [37:14] De hecho, yo me meto a ver y está resuelto.
+- [37:16] ¿No será que tiene una versión antigua instalada?
+- [37:18] Le debe faltar Control F5, esa loca.
+- [37:21] Porque ayer el Mario me dijo, sí, se ve bien.
+- [37:26] Entonces, ¿eso es el que voy a mandar?
+- [37:28] ¿Sabes qué responderle a eso, Luguan?
+- [37:30] Chevo, pero recién ahora estás leyendo.
+- [37:32] Sí, salí recién.
+- [37:33] Tú, Luguan, que leí lento, Luguan, si lo mandaste en una hora.
+- [37:36] No, Sergio, maldito.
+- [37:38] Ya, entonces, el Diego no es necesario, si lo decís tú.
+- [37:44] Si me decís, José, no es necesario el Diego, Luguan, yo lo despido, güey.
+- [37:48] Buena sea.
+- [38:18] Ya tengo todo el pasaje comprado, si son todos los que vigilan a vos, nomás.
+- [38:24] ¡Ella!
+- [38:28] Ya, ya, nos damos tiempo con las lucidaciones, tontos.
+- [38:33] Diego, entonces sigue donde te mire.
+- [38:38] Ahora lo que sí podría pedir el Diego, que es cortito,
+- [38:42] es la reunión esa que está pidiendo el Pipe,
+- [38:48] Para ver lo que estaba viendo el Seba.
+- [38:52] Esa API del link de pago.
+- [38:55] La API se va a vender de mí, pero solamente estoy hablando del MAUE.
+- [38:59] Porque ese es el que me está causando ruido.
+- [39:02] Ahora.
+- [39:05] Ya, vuelvo a lo mío entonces.
+- [39:08] Puta, pero igual gracias por la...
+- [39:10] No, eso no.
+- [39:13] Ya, chao. Voy a volver a lo mío.
+- [39:17] No me quedo aquí.
+- [39:17] Ya, ya.
+- [39:18] José, no, no, o sea, si José dice que no, él se cargó la mata solo, así que, vaya maldito.
+- [39:24] Sí, si la cosa es que se libera un poco de temite.
+- [39:29] Ya, pero para poder liberarse hay que hacer las cosas, por si.
+- [39:33] Ah, el maldito bastardo, es que tú querés pelear, saliste con ganas de pelear de la reunión de generación.
+- [39:39] No, no, no, ya, vaya, vaya Diego nomás, entonces, dos minutos.
+- [39:45] José, tú, mira, me importa que revise María José, le dice María José, esto lo revisamos con Mario ayer, se puede refrescar con manchiferre, el tema de la imagen, yo le dije que eso iba a quedar resuelto.
+- [40:00] Le dije al Mario, ¿por qué? Porque le dije, bueno, lo llamé, le dije, lo de las imágenes, eso lo conversamos, y me acuerdo perfectamente que iba a quedar solo una imagen en la aplicación, o sea, solo levantar la cámara, sin seleccionar desde la galería.
+- [40:15] Y ahora María José está diciendo que debería ser para los usuarios administradores. Y ahí me dijo, pero bueno, si desde el portal la Paola puede cargar más imágenes, adjuntar más evidencia, bacán. ¿Entendés? Bien, resolvemos.
+- [40:30] Ok. Esos dos puntos me interesa que los podamos corregir de AlmaWeb, por favor, José.
+- [40:36] Esos dos y dos, pues no, si hay que matarlos todos de una.
+- [40:39] No, pero espérate, espérate. Yo le pedí al Mario que me construyera un documento, con todos los puntos.
+- [40:45] Tú dile ahora en el grupo, dile en la interna al Mario, Mario, estoy trabajando en este punto, ¿ya?
+- [40:51] Y él dijo que llegaba a la oficina en 20 minutos, iban a construir un documento con todos los pendientes, y contra eso íbamos a trabajar y íbamos a distribuir la pega.
+- [41:04] Ya.
+- [41:05] ¿Ya?
+- [41:06] Ok, ya, entonces le hablo para que me comparte el documento por ahí.
+- [41:11] Sí, vos, tú tenés que decirle primero los puntos que ya tienen resuelto.
+- [41:14] Los que tienen resuelto para que no los incluya de nuevo en el archivo.
+- [41:18] ¿Ya?
+- [41:19] Yes.
+- [41:20] Eso, José.
+- [41:21] Ya, vale.
+- [41:51] No, si te voy ahora, y tengo que resolver AlmaWeb.
+## Parte PM
+
+- [00:20] ¿Aló, aló?
+- [00:22] Ahí sí.
+- [00:24] Hola, ¿cómo están?
+- [00:26] Bien, ¿y tú?
+- [00:28] Bien, bien.
+- [00:30] Qué bueno.
+- [00:35] Acá estoy con Francisca y con la Lupe.
+- [00:41] Hola.
+- [00:43] Hola, Fragana, Lupe.
+- [00:47] Me entiendo cuenta.
+- [00:51] No hay problema.
+- [00:53] Y ahora sí.
+- [01:04] Voy a compartir pantalla para que revisemos los avances. Vamos a revisar lo que vendría a ser contratistas e insumos.
+- [01:12] Vamos a hacer emisiones reales para ir viendo cómo se va generando todo.
+- [01:17] Y ahí la idea es que ante cualquier detalle, cualquier cosita que vaya faltando en el proceso, me avisen para ir tomando nota.
+- [01:24] Yo igual después quiero ver la parametrización de los usuarios, por favor.
+- [01:28] Vale. Si gustas de hecho, primero vemos eso para que veamos claro cómo funciona.
+- [01:36] Ya, lo que pasa es que estaba creando los usuarios, por ejemplo, la Fran, que tiene el cargo de analista contable, le tengo que asignar el grupo de ordenes de compra.
+- [01:48] Intenté crear el grupo, pero no me sale... hay cosas que no entiendo.
+- [01:53] Voy a revisar. Desde este, ¿verdad?
+- [02:12] Sí, por ejemplo, la misma Frank, que está creada en... ya, en los usuarios ya la creé como analista contable.
+- [02:23] Pero si yo me voy a las reglas de aprobación, para crearle un grupo de orden de compra, ahí quedo.
+- [02:31] Perfecto.
+- [02:32] Ya, por ejemplo, acá le puse orden de compra y le puse nuevo.
+- [02:36] Desde acá.
+- [02:37] En configuración, puse nuevo grupo.
+- [02:39] Y acá, por ejemplo, es orden de compra. El nombre le puse creación de orden de compra. Y después me dice buscar usuarios. Y ahí no me sale nadie.
+- [03:01] Claro, efectivamente no está buscando los usuarios. Dame un momento. ¿Qué rol tiene?
+- [03:11] Analista contador.
+- [03:21] Dame un segundo, por favor.
+- [03:23] Ya.
+- [03:23] Mira, déjame hacer una pequeña prueba, voy a cambiarle el rol que tenía, que tenía el rol administrador, ¿ya?
+- [04:17] ¿Él le había cambiado el rol?
+- [04:18] ¿Sí?
+- [04:19] Sí.
+- [04:21] A ver, a lo mejor no lo tengo...
+- [04:22] Dice que tiene administrador todavía.
+- [04:26] Vamos a darle...
+- [04:28] Análista contable.
+- [04:30] ¿Analista contable?
+- [04:31] Sí, analista contable.
+- [04:33] Y el analista también tiene que poder crear ordenes de compra.
+- [04:36] ¡Gracias por ver el video!
+- [05:14] Y así o así seleccionarlo.
+- [05:16] Pero ahora si nos vamos directamente a las reglas de aprobación.
+- [05:22] Acá ahora debería aparecer en la lista, que es esta de acá, los usuarios que ya tienen acceso a ese rol.
+- [05:33] Ah, perfecto.
+- [05:34] Vamos igual de todas formas a hacer que sea un poquitito más entendible ese error y que sea quizá un poquitito más ágil el cómo hacer esa relación del editar el rol y editar el grupo de aprobación.
+- [05:48] Sí, porque por ejemplo, de los roles de los usuarios que se crearon, algunos, por ejemplo, el que tira la fran es mucho más completo que el que solamente puede crear órdenes de compra.
+- [06:00] Ya.
+- [06:00] Pero igual necesito que ella esté en la parte de emisión de orden de compra y no en el lado de la aprobación, porque la aprobación es solo para la jefatura.
+- [06:10] Perfecto.
+- [06:12] Mira, voy a ver una forma de que sea más fácil controlarlo directamente desde el perfil de usuario, cosa de que en estos dos solamente te dediques como a crear los grupos, y en el perfil de usuario le asignas como los grupos, por así decirlo.
+- [06:26] Ya, perfecto.
+- [06:27] Entonces, por lo que entiendo, podría estar en más de un grupo o una persona, ¿verdad?
+- [06:36] O sea, la idea es que distintos perfiles puedan estar en un mismo grupo.
+- [06:41] Porque, por ejemplo, el que tiene el perfil de creación de orden de compra va a estar en el mismo grupo de emisión de orden de compra que la franquia analista contable.
+- [06:52] Perfecto.
+- [06:53] Porque eso sería en sí, el grupo sería órdenes de compra, pero ¿dónde estaría la diferencia? Es en el rol que tenga asignado a cada uno.
+- [07:01] Exacto. Exacto, pero como dentro de los grupos estaba aprobación de orden de compra, lo importante es que también esté emisión de orden de compra, porque son permisos diferentes.
+- [07:13] Perfecto. Mira, voy a darle una vuelta ya ahora sabiendo esto de cómo dejarlo igual un poco más cómodo. Ya se me ocurrieron un par de cositas.
+- [07:20] Ya, buenísimo.
+- [07:21] Ya, porque en sí, claro, es como un poco complicado, es muy restrictivo, por último, debería mostrarte todo el usuario y decirte el grupo que están al momento de crear la aprobación.
+- [07:33] Claro.
+- [07:35] Perfecto. Pero ahí ya quedaría como regularizado. Se puede, existe la forma, sí, pero, claro, está... muchos pasos.
+- [07:44] Sí.
+- [07:47] Me salieron puros errores y dije algo, estoy haciendo mal.
+- [07:51] Mira, ahora vamos a pasar a la página que tengo yo local, que todavía no he desplegado esta mejora con todo lo que vimos en las reuniones.
+- [07:58] La tengo acá de manera local para que primero la revisáramos, ¿ya?
+- [08:01] Ya.
+- [08:03] Bueno, antes que nada, informar que Sergio se va a conectar un poquitito antes de las 4, que tuvo un pequeño problema.
+- [08:08] Ahí va a volver dentro de breve.
+- [08:11] Ya.
+- [08:12] Y vamos a partir revisando lo que vendría a ser contratistas.
+- [08:16] Ya.
+- [08:16] En contra de estas, me dediqué hoy día en la mañana porque desde ayer, desde las aproximadamente 12 más o menos, me di cuenta que la plataforma de GoSocket queda horriblemente lenta y me estaba devorando como 15 minutos en la generación de cada factura.
+- [08:32] Ya después de las 12 se pone muy lenta, así que dejé preparado bien temprano hoy día algunos de los ejemplos ya emitidos directamente.
+- [08:41] Vamos, igual de todas formas voy a intentar hacer la emisión de los documentos, pero en caso de que fallen ahí tengo ya unos pequeños respaldos.
+- [08:47] Y vamos a ocupar lo que vendría a ser la muestra del mes de marzo, que es el que dejé abierto y dejé octubre cerrado para que igual lo vayamos a revisar en caso de que tengamos alguna falla.
+- [08:56] Ya.
+- [09:28] O sea, es que tendrían cada uno de estos. De hecho, bueno, este es un documento interno que es el personalizable, por eso se va a ver un poco más diferente cuando veamos uno de GoSocket.
+- [09:38] Y ahí también está directamente lo que vendría a ser ir al documento que habíamos definido con anterioridad.
+- [09:44] Entonces ahora lo que vendría a ser las proformas, donde el estado definitivo y el estado notificado, ¿qué quiere decir?
+- [09:51] Es decir, definitivo que es una proforma que ya se asoció directamente a un ingreso y notificado al contratista es que se apretó este botoncito que está acá e hizo el envío del mail junto con el registro de aquí del tracking del envío de mail. Esa es como la única diferencia de los dos.
+- [10:07] Carlos, consulta, ¿esta es como otra página? Porque yo estoy en la página y no veo que se actualizacione.
+- [10:12] Sí, esto como te digo lo tenemos de manera local, todavía no lo despliego hasta que veamos bien más o menos como el día de hoy tengamos esta muestra y saliendo de la reunión yo la actualizo para que quede disponible para ustedes.
+- [10:24] Ya, buenísimo.
+- [10:25] Así que nos vamos a pillar ahí hartas diferencias en lo que vendría a ser la página que está publicada, que de hecho el truco como para saber en cuál estoy es que si acá arribita dice localhost es porque es la que tengo aquí, la de egoísta.
+- [10:37] Ya, ya.
+- [10:38] Entonces, bueno, aquí vendríamos a hacer lo que estábamos en proforma y facturas, volviendo al tema, y podríamos ya, por ejemplo, estas que ya están listas, que están asociadas a sus respectivos ingresos diarios, hacer directamente la asociación.
+- [10:52] Dentro de la asociación nos va a mostrar el listado de todas las facturas que se hayan recibido en todos los módulos.
+- [10:59] Lo dejamos así porque no sabíamos si es que en algún punto podrían ser, por ejemplo, las facturas directamente que vendrían al módulo de compras o si es que también podrían tener en algún momento ver la facultad de recibir también las facturas, verlas, perdón, desde el módulo de insumos.
+- [11:19] Entonces, aquí muestra todo y también debería mostrar los asociados, que eso es lo que estamos pendientes.
+- [11:25] Entonces, un momento que este es de 1.800.000 y aquí deberíamos tener lista una de 1.800.000, perdón, esta de acá arriba.
+- [11:46] De hecho, acá este buscador también vamos a hacerle una reforma para que sea un poquitito más ágil buscar, porque a mí ya me está costando.
+- [11:53] Pero, por ejemplo, el primer número que aparece sería el folio a la factura o es un correlativo?
+- [11:58] El folio, exactamente.
+- [11:59] Ah, perfecto. Foro, monto y el proveedor.
+- [12:03] Exacto.
+- [12:05] Ya. ¿Y el emitido? ¿No estaría de más?
+- [12:09] Sí, ese también está de más porque ya se toma por hecho de que es uno que viene desde la integración con GoSocket.
+- [12:16] Ya.
+- [12:17] Vamos a ir anotando. No sé si aquí también podría ser útil de que tenga los filtros primero para que te filtre como por las razones sociales.
+- [12:28] Sí, yo los filtraría por razones sociales.
+- [12:30] Al final la idea es que ninguna proforma pueda quedar asociada a otra factura que no sea del mismo...
+- [12:43] Ah, entonces aplicamos el filtro directamente que te cuesta las de ese root.
+- [12:49] Exacto.
+- [12:50] Ya, perfecto.
+- [13:35] Sí, aquí no está, eso sí, la de 1.800.000.
+- [13:39] Hay una de 180, quizás quedó, faltó un cero.
+- [13:43] Sí, yo creo que eso pasó.
+- [13:44] Bien, en este caso vamos a usar esta que se aproxima bastante al precio, que vendría a ser la factura 78.
+- [13:54] Y aquí nos va a hacer obviamente la diferencia que no está cuadrado, por así decirlo.
+- [13:59] Ya. Y por ejemplo, en ese caso, ¿esa proforma quedaría con un saldo pendiente de aprobación?
+- [14:07] ¿Igual dejaría asociar a la factura?
+- [14:09] Sí, si te das cuenta te permite asociarlo directamente.
+- [14:13] Ya.
+- [14:14] ¿Está bien eso? ¿Podría ser el caso?
+- [14:16] Podría ser el caso.
+- [14:17] Y ahí en ese caso, al momento de que ya, por ejemplo, está identificado que está esta diferencia, ¿sería bueno notificarlo al usuario que creó la proforma directamente?
+- [14:27] Sí.
+- [14:32] ¿Opcional o que sí o sí haga el acuse?
+- [14:35] Que sí o sí haga el acuse.
+- [14:37] Perfecto.
+- [14:42] Bajo control, todo o no más.
+- [14:43] Todo bajo control.
+- [14:49] Yo me imagino que puede ser una diferencia con el tema del IVA, quizás.
+- [14:53] No, lo que puede haber de diferencia ahí es que, no sé, la proforma se haya tomado del primero al 30 y el 31 quedó en el aire. Una cosa así.
+- [15:04] ¿Qué podría pasar?
+- [15:06] Sí, porque esta emisión debería corresponder. De hecho, ahí la vamos a revisar porque debería estar registrada en la otra empresa.
+- [15:19] Ah, ¿te quedó el monto neto y tú hiciste la proforma en monto bruto?
+- [15:23] Sí, yo creo que eso pasó.
+- [15:27] Nótese que la hice yo.
+- [15:28] Muy bien, estaba aprendiendo.
+- [15:30] Sí, parece que es el descuadre que tengo acá.
+- [15:35] No, me van a retar.
+- [15:38] No, no es el descuadre.
+- [15:40] ¿No nos da?
+- [15:40] No.
+- [15:42] Chan.
+- [15:43] No me da.
+- [15:45] Peor aún.
+- [15:46] No, pésimos ejecutivos, despídanme.
+- [15:52] Entonces aquí el asociar sería, al darle clic al asociar, que también haga el envío de la notificación.
+- [15:58] Que sea notificación interna y también notificación por correo.
+- [16:06] Ya, un momentito, vamos a revisar las emisiones desde la otra empresa.
+- [16:29] Un poco me parecen... pésimos.
+- [17:17] Bueno, para estas son estas reuniones, no hay problema con eso.
+- [17:20] Ya vamos a hacer la asociación, no importa que quede descuadrada, para que veamos cómo se generan los asientos.
+- [17:24] Ya, descuadrada el asiento también.
+- [17:28] Todo mal, ¿no? Vamos a ver todos los casos al tiro.
+- [17:32] Por ejemplo, este de 4200 llegó.
+- [17:35] Ya.
+- [17:35] Aquí no hizo el aviso. Me salvé por último, ¿no?
+- [17:41] Pero, por ejemplo, el aviso solo sale si está descuadrado.
+- [17:45] Exacto. ¿Debería salir que está cuadrado y notificar?
+- [17:50] Eso me encasía al asociar la factura con la proforma. Como que salga asociado.
+- [18:16] ¿Podría ser, por ejemplo, que el mismo cuadrito que salía en naranja salga en verde?
+- [18:21] Sí, sí, ningún problema. Que salga como así.
+- [18:26] Así, pero en verde.
+- [18:28] Ya, perfecto, perfecto. Acá como te das cuenta nos cambió el estado de esta, ahora ya aparece como facturada, y aquí ya no hace directamente la asociación de la factura.
+- [18:47] Bueno, lo que me temía, como GoSocket está con esta lentitud, no está mostrando directamente el documento.
+- [18:55] Pero ahí va a mostrar el documento, va a mostrar la factura, la proforma, la factura, ¿cierto?
+- [18:58] Sí, sí, aquí le dimos clic a este relacionado que vendría a ser la factura, va a mostrar la factura.
+- [19:04] Ah, buenísimo.
+- [19:05] Aquí estamos en la vista de proforma.
+- [19:07] Exacto.
+- [19:08] Ya.
+- [19:09] De hecho, aquí, por ejemplo, en esta vista de la proforma, me imagino que igual también debería salir que ya está asociada a una factura, ¿verdad?
+- [19:17] Porque esta es como la vista previa.
+- [19:19] O sea, la idea es que la proforma ya no se puede volver a asociar a otra factura.
+- [19:23] Ya.
+- [19:24] Y que obviamente la factura que se asoció no vuelva a aparecer en el listado de la proforma social.
+- [19:34] Perfecto. En ese caso, por ejemplo, ya me estoy saliendo un poquitito de lo que vendría a ser el contratista porque me surgió esta duda con lo que vendría a ser insumos.
+- [19:42] Porque insumos, la orden de compra, se puede hacer órdenes de compra a hijas cuando viene con guía de despacho que no cuadra, ¿verdad?
+- [19:55] Siempre se va a hacer una orden de compra a hijas de la madre.
+- [19:58] En el lado de insumo. Y cada recepción va a ser una orden de compra de hija.
+- [20:11] Cada orden de compra de hija estaría asociada con su guía de despacho y después varias órdenes de compra de hija pueden estar asociadas a la misma factura.
+- [20:18] Perfecto. Y por ejemplo, la madre, pensando que las hijas pueden estar con una o más facturas asociadas, ¿podría contener, por ejemplo, dos hijas a una factura y una hija a otra factura? ¿Que sean como dos compartidas y una sola?
+- [20:34] Sí.
+- [20:35] Perfecto. Entonces, cuando se trata de lo que vendría a ser el insumo, ¿sí se podrían relacionar a una madre diferentes facturas y estas facturas pueden estar asociadas a uno o más órdenes de compra de hijas?
+- [20:46] Sí, porque la madre es como la compra general que se hace en la primera negociación. Entonces a nosotros nos van emitiendo facturas en base a lo que va llegando mensual, pero también esa madre abarca más de un mes.
+- [20:58] Perfecto. ¿Puede pasar de que, por ejemplo, lleguen guías de despacho? Porque al fin y al cabo, como lo habíamos parametrizado, es que lo que iba a generar que se generaran hijas, valga la redundancia, es que fueran las guías de despacho que no alcanzaran a cubrir el monto de la orden de compra.
+- [21:19] Sí.
+- [21:21] ¿Puede que lo genere la factura también esto, o no?
+- [21:26] No, la guía de despacho va a generar ese descuadro con la orden de compra madre.
+- [21:31] Perfecto.
+- [21:32] De hecho, debería ser la última guía de despacho de esa compra.
+- [21:35] Si no, la persona encargada tiene que emitir una nueva orden de compra madre.
+- [21:42] Perfecto.
+- [21:42] ¿No es que quedamos que solamente una vez se iba a ajustar?
+- [21:44] Sí.
+- [21:45] Ya.
+- [21:46] Perfecto.
+- [21:47] La genera la guía de despacho.
+- [21:49] Perfecto.
+- [21:51] Estamos cuadrados, entonces, con eso, al menos, cómo funciona el sistema.
+- [21:54] Buenísimo.
+- [21:56] Perfecto, entonces ahí tendríamos lo que vendría a ser la asociación, en este caso como tenemos una facturada y una que está aprobada, estas dos nos deberían aparecer en el traspaso y cierre, efectivamente.
+- [22:10] Estas dos nos van a aparecer aquí en el traspaso y cierre, lo cual al momento de realizar la centralización de contradistas, nos muestra este pequeño resumen, y aquí nos pregunta las cuentas, que estas ya las teníamos tipificadas.
+- [22:28] Lo que sí debería verse el nombre completo. Sí, porque no se alcanza a ver directamente. A mí no se alcanza a ver el código, pero debería aparecer el nombre completo.
+- [22:45] Sí, mejor.
+- [22:48] ¿Están bien tipificadas en este instante? ¿O no corresponden estas cuantas?
+- [22:53] Están bien tipificadas en este instante.
+- [22:56] ¡Vamos!
+- [22:59] Vamos entonces a realizar el cierre de este módulo.
+- [23:03] El día de ingreso no calza con las proformas del periodo.
+- [23:52] ¿Y la factura? ¿La factura en sí no queda contabilizada?
+- [23:58] Las facturas que están asociadas a las proformas, ¿verdad?
+- [24:00] Sí.
+- [24:04] Creo que quedan como bloqueadas al momento de ser asociadas a proformas, pero no es como que queden contabilizadas.
+- [24:11] Claro, porque ahí faltaría la segunda parte de la factura.
+- [24:14] Que la factura netea de facturas por recibir de la centralización de contratistas contra el proveedor.
+- [24:22] Faltaría un segundo paso entonces acá.
+- [24:24] Sí, que eso puede estar en el módulo de compras.
+- [24:27] Perfecto.
+- [24:28] En el módulo de contratista está bien que se haga, se reconozca el gasto versus facturas por recibir.
+- [24:35] Y una vez que yo contabilizo en el módulo de compras la factura, me va a quedar facturas por recibir versus el proveedor.
+- [24:47] Ese sería ya como el cuadro de todo lo que se está trayendo de GoSocket con lo que se documentó en contratistas, ¿verdad?
+- [24:54] Sí, por el lado de contratista estaríamos haciendo las proformas con las facturas solamente y reconociendo el costo.
+- [25:03] Y por el lado del módulo de compras estaríamos ingresando el documento.
+- [25:07] Eso tendría que ser entonces acá en el módulo de compras, en el libro de compras, ¿verdad?
+- [25:17] Y en el libro de compras me debería aparecer la factura del contratista.
+- [25:23] Y cuando yo ponga contabilizar, que se vaya a facturas por recibir y que reconozca al proveedor.
+- [25:29] Ahí en ese caso entonces debería ser como un filtro de todo lo que está asociado a contratistas, ¿verdad? De las facturas que tenemos acá para hacer como el calce.
+- [25:41] Sí.
+- [25:42] Tendría que ser entonces una vista como con dos listas, ¿verdad? Porque estoy pensando aquí cómo hacerlo de manera visual.
+- [25:53] Es que ahí va a aparecer el listado de las facturas, ¿cierto?
+- [26:03] Exacto.
+- [26:04] Entonces ahí se supone que vamos a ir una a una contabilizando.
+- [26:06] Acá por ejemplo tenemos el, mira, si mal no me equivoco, esta sería la vista del libro de compras, y esta ya está asociada a una proforma, y ves ahí te dice que está 100% cubierto.
+- [26:18] Ya.
+- [26:19] Entonces lo que me imagino sería que, como sabemos acá, que proviene de una proforma, sería filtrar acá que te muestren todas las proformas,
+- [26:27] y quizá aquí en los totalizados tener como una nueva vista que te muestre el total, y aquí el detalle solamente de las proformas,
+- [26:33] Y si es que calza no te debería mostrar más información.
+- [26:36] O no sé si es que ya tienes como pensado una forma visual de la representación.
+- [26:40] O sea, yo creo que abajo, donde tiene que salir la orden de compra o la proforma asociada,
+- [26:45] me falta una segunda vista donde esté contabilizada o pendiente.
+- [26:52] Y ahí podríamos tener ese filtro para que se le dé la información.
+- [26:56] Sí. Igual le voy a querer dar una segunda vuelta a ese módulo de compra.
+- [27:00] Vale, en ese caso, por ejemplo, sería por proveedor, que te muestre como el total de las facturas.
+- [27:09] No, individualizado.
+- [27:11] Que te muestre el detalle de cada factura.
+- [27:12] Sí.
+- [27:14] Perfecto.
+- [27:23] De aquí del libro de compras tendríamos otra, así como este tipo de acción, que una vez ya cerrado, por ejemplo, contratistas, tengamos que hacer otra acción desde acá, más que nada como quizás pensando en un módulo nuevo, que nos haga el libro de compras.
+- [27:36] No, acá lo único que nos queda es el tema de la reversa.
+- [27:41] Perfecto.
+- [27:42] Porque una vez que esté el módulo de contratista cerrada y asociado a una proforma, si yo quiero modificar una proforma, tengo que reversar el documento ingresado.
+- [27:51] Perfecto.
+- [27:51] Mira, en ese caso, lo que me había ocurrido de que, aquí yo tengo, si no me equivoco, octubre está cerrado, si octubre está cerrado, por ejemplo acá, en el traspaso y cierre, aquí por ejemplo te muestra ya que está cerrado, te muestra el asiento que se generó,
+- [28:10] Y le tenía un botón acá que era como hacer la apertura nuevamente, pero según lo que entiendo, como le habíamos hablado, no aplicaba de que existiera el botón de hacer la apertura, ¿verdad?
+- [28:24] ¿La apertura?
+- [28:25] Sí, así como de contratistas.
+- [28:30] ¿Del cierre? ¿De la centralización?
+- [28:32] No, si está cerrado el mes hay que hacer una apertura. Hay que volver a abrirlo.
+- [28:37] Ya, porque yo como lo había dejado, si te das cuenta no tiene la opción, yo lo había dejado de que, pensando en que, por ejemplo, tendrían que modificar una proforma y una factura, más no agregar, no había considerado el agregar, de que se pudieran agregar, había pensado de que fuera directamente a la proforma de que se hiciera la reversa, de que se hiciera la solicitud.
+- [28:57] Con el mes cerrado no debería permitir hacer ninguna modificación.
+- [29:01] ¿Con el mes contable cerrado?
+- [29:03] Con el mes... Sí. Hay dos cierres. El mes contable, que va a todo lo que es contabilidad en específico, y está el cierre del módulo, que igual se hace mensual, que igual es un cierre mensualizado en realidad.
+- [29:25] Por eso, nosotros, como lo habíamos pensado, es que, si es que quisieras modificar, por ejemplo, una factura y ya estuvieran cerrados los dos, aquí te mostrará este modal, te dijera el motivo, y pasará por el visto bueno del administrador de Contradicta, el jefe, y del visto bueno del administrador de Contabilidad.
+- [29:52] Sin abrir el mes.
+- [29:54] Claro, aquí no haría una apertura, sino que te dejaría la opción de editar para que se genere el ajuste.
+- [30:02] Sí, es que recuerdo que el ajuste en el comprobante sí iba a ser en la línea, ¿te acuerdas de que lo hablamos?
+- [30:10] Claro, pero este...
+- [30:11] Cuando estaba, el módulo todavía estaba abierto y no se pasaba a contabilidad.
+- [30:17] Claro, este vendría a ser como, por ejemplo, el paso previo a eso.
+- [30:21] Como que esto gatilla de que te tengan que dar el visto bueno, y una vez teniendo el visto bueno, se permite hacer ese ajuste del asiento.
+- [30:35] O sea, al final lo único que cambiaría es que el mes quedaría siempre cerrado.
+- [30:41] Perfecto.
+- [30:43] No sé si es que, por ejemplo, debería existir la opción de poder abrir aquí la centralización,
+- [30:54] porque si vamos a hacer la modificación directamente desde Contabilidad, no creo que debería abrirse,
+- [31:00] porque eso va a generar un asiento de ajuste.
+- [31:06] No, una vez cerrado el módulo, no, no se debería poder abrir.
+- [31:10] Solo editar el... solo editar.
+- [31:44] Y ese ajuste entonces tendría que ser...
+- [32:14] Módulos relacionados.
+- [32:15] Ya, buenísimo.
+- [32:17] Que se quedaría como el módulo de auditoría, ¿no?
+- [32:20] Claro. Así se vería, por ejemplo, en caso de que tenga como muchos casos.
+- [32:24] Ya. Sería como una auditoría interna.
+- [32:28] Exacto.
+- [32:29] Aquí, por ejemplo, de hecho, le puedes ver como la trazabilidad.
+- [32:34] Ya, buenísimo.
+- [32:36] Aquí hizo la solicitud, dieron el visto bueno, se habilitó la edición, dieron el segundo visto bueno que vendría a ser de contabilidad.
+- [32:44] Y ahí pasó directamente al ajuste.
+- [32:48] Entonces, eso acá, los comprobantes y asientos, debería generar un asiento de ajuste, ¿verdad?
+- [33:07] Sí.
+- [33:10] Dentro del mismo periodo, ¿verdad?
+- [33:12] Sí, dentro del mismo periodo.
+- [33:14] Perfecto.
+- [33:15] Debería ser como el último de la lista de acá abajo.
+- [33:19] Sí, los ajustes que se hagan, sí.
+- [33:21] Pero se supone que el ajuste quedaría en el mismo reset que la centralización, ¿no?
+- [33:27] Exacto.
+- [33:27] Como que modificaría la línea nomás.
+- [33:29] Aquí, por ejemplo, tenemos un ajuste.
+- [33:30] Debería ser sobre la línea, ¿verdad?
+- [33:45] O sea, lo que yo había entendido era que iba a ser, por ejemplo, si tenía 10 proformas tomadas contra factores por recibir contratistas,
+- [33:53] que una de esas proformas de esa línea se iba a ajustar.
+- [34:04] Que aquí debería aparecer el historial sobre la línea, si me acuerdo.
+- [34:10] Sí. Oye, acá está lloviendo de alguna manera y es un calor de porquería.
+- [34:15] ¡Oh, qué horrible!
+- [34:16] Sí, ahora me da miedo que haya tornado.
+- [34:18] ¡Ja, ja, ja! ¡No, si nos vamos esta semana! ¡Ja, ja, ja!
+- [35:13] Si yo voy a ver, por ejemplo, el asiento de centralización, que me aparezca cuántos ajustes tiene.
+- [35:19] O poder hacer la vista rápida de qué fue lo que se editó.
+- [35:23] Vale. Yo creo que vamos a seguir con la línea de que aparezca directamente en la línea y que acá aparezca como un aviso de que se hizo una modificación.
+- [35:32] Sí, se hizo una modificación.
+- [35:33] Un ícono o algo así.
+- [35:35] Y aquí, por ejemplo, como lo habíamos comentado, si me acuerdo que lo habíamos dicho, de que te apareciera como, por ejemplo, en la línea cuál fue el ajuste.
+- [35:41] Sí.
+- [35:41] Quizá aquí en el tipo podría salir como una notificación, como un icono de más.
+- [35:54] Sí, ¿sabes lo que me genera ruido?
+- [35:59] Sí.
+- [36:02] Lo que pasa es que, por ejemplo, yo tomo 10 proformas.
+- [36:05] Dentro de las 10 proformas, al final todas se van a ir a mano de obra contratista,
+- [36:10] y la que los va a diferenciar va a ser el centro de costo.
+- [36:13] Claro.
+- [36:14] Entonces, al final, la línea, ¿cómo la va a identificar de a qué proforma corresponde? Porque al final una proforma puede tener cinco centros de costo. La línea no está por orden de proforma, sino que está por centro de costo.
+- [36:39] En ese caso, ¿cómo convendría que se visualice para poder tener claridad?
+- [36:43] Yo había pensado que fuera por proforma, pero claro, una proforma puede tener, por ejemplo, 20 centros de costo.
+- [37:02] Quizás tener una segunda visualización podría ser.
+- [37:08] ¿Y la segunda visualización daría el detalle a la proforma?
+- [37:11] Claro.
+- [37:18] Algo así tendría que ser.
+- [37:20] Porque al final vamos a ver la modificación del centro de costo y, por ejemplo, si apretamos el centro de costo, que nos diga qué proforma está asociada o algo así.
+- [37:26] Eso podría ser, que al darle clic directamente al centro de costo, demuestre las proformas que van a ese centro de costo.
+- [37:45] O que el ajuste quede linkeado al número de proforma. Entonces, sí, vamos a ver que el ajuste tiene un número de proforma y que en ese proforma solo hay modificaciones.
+- [37:56] Claro, y ahí en la misma proforma también tendríamos lo que vendría a ser la asociación con los centros de costo.
+- [38:01] Sí.
+- [38:01] Sí, yo creo que así también podría ser. Voy a generar entonces como una propuesta de eso.
+- [38:06] Ya, por favor, Carlos.
+- [39:07] ¿Las labores también deberíamos estar acá?
+- [39:09] O sea, claro, en la proforma lo que te detalla son las labores y el centro de costo con el monto.
+- [39:17] Ya, sí, porque solamente teníamos el detalle del centro de costo.
+- [39:20] Claro, entonces ahí faltarían las labores.
+- [39:22] Y cuando se centraliza, yo asumo que se va a centralizar por centro de costo, pero para la misma cuenta contable.
+- [39:39] Y acá, por ejemplo, en el traspaso sería también bueno tener ese filtro de los centros de costo porque acá tampoco lo estamos visualizando.
+- [39:54] En el traspaso...
+- [39:59] Ni las labores tampoco lo estamos listando acá.
+- [40:04] Pero aquí en el traspaso sería la contabilización.
+- [40:07] Exacto.
+- [40:09] Sí, al menos visualizarla y que la ciencia se haga más general, pero aquí visualizar lo que estamos visualizando.
+- [40:17] Entonces aquí también se ve los centros de costo y las labores de cada uno.
+- [40:22] Sí.
+- [40:31] Yo creo que podría ser como una vista de árbol, como lo hicimos acá en la parametrización de los planes de cuenta, para que quede ordenado.
+- [40:39] Sí, pero yo creo que ahí la visualización de los proformas podría ser por labor, centro de costo y como que la grupo en la labor.
+- [40:49] Acá en el cierre, ¿cierto?
+- [40:50] Sí.
+- [40:51] Ya, sí, sí. Y que te salga con esa vista de árbol.
+- [40:54] Sí.
+- [40:55] Sí. Entonces sería labor, después centro de costo. Sí. Y ahí el detalle. Claro, y ahí que venga obviamente que si yo aprieto la labor, ven, ven que proforma me la generó. Perfecto. Dentro de los reportes, ¿esa vista también deberíamos tenerla? Sí. Ya. ¿La replicamos así también como la vista de árbol? Sí, el reporte va a ir más como un Excel con varias filas. Claro. Sí.
+- [41:46] Ya, perfecto. No sé si hay algo de contratistas que quieran ver aprovechando, que les llame la atención dentro del proceso, aprovechando de estas correcciones y de los pequeñitos fallos que hemos tenido que no nos dejan realizar el cierre.
+- [42:12] Bueno, ahí sería el listado, que ahí se crea el contratista.
+- [42:16] Sí, exactamente.
+- [42:17] Ya, después vienen al tiro los ingresos diarios.
+- [42:20] Exacto.
+- [42:21] Que hay nuevo ingreso y sale toda la información a ingresar.
+- [42:24] Exacto.
+- [42:25] Ya, y ahí se van a generar unas varias líneas de ingresos que van a, yo puedo pinchar para formar la proforma.
+- [42:37] Exactamente, de hecho si te das cuenta, en este listado hay dos proformas que ya están relacionadas a estos seis, si te das cuenta.
+- [42:45] Que sería la proforma 21, que tiene estas dos, y estas tres que ya tiene la proforma 20.
+- [42:52] Y en caso de que no, no va a aparecer aquí ni relacionado y el estado va también a cambiar, obviamente.
+- [42:59] Ya, pero la asociación no se hace en el ingreso diario, se hace en la proforma, ¿no?
+- [43:03] Ah, el crear la proforma, exactamente.
+- [43:06] Y ahí cuando yo pongo nueva proforma, yo puedo pinchar todos los ingresos diarios que tengo sin asociar.
+- [43:12] Exactamente, del contratista.
+- [43:14] Ya.
+- [43:15] Que de hecho, mira, déjame verlo acá desde el modo demo.
+- [43:22] Vamos a simular un ingreso diario.
+- [43:24] Aquí, ¿cuál centro de costo se utiliza generalmente?
+- [43:31] Se utiliza en los cuarteles. C1, C2, C3.
+- [43:39] Creo que no los tenemos.
+- [43:44] Deberían estar más abajo.
+- [43:46] ¿No sale? Ah, no.
+- [43:48] Y si pones C1, no nos sale.
+- [44:00] No, no aparece.
+- [44:03] No, no hay mí.
+- [44:05] Creámoslo. Deberíamos poder crearlo.
+- [44:08] Ya.
+- [44:16] ¿Cuál sería el código?
+- [44:17] No me lo sé de memoria, pero por ejemplo ahí sería C1, no sé, los palos.
+- [44:25] Que eso para nosotros es cuartel 1, los palos. Cuartel 2, los palos.
+- [44:30] Ah, pero el código no es como un correlativo numérico.
+- [44:35] O sea, si es un correlativo numérico, que puede ser, no sé, depende de la empresa, es el correlativo.
+- [44:40] Si no me equivoco, los palos es 4000 y los santapilar 3000.
+- [44:50] Sí, porque aquí ya estaba en el 8002, quizás ya lo tenemos creado.
+- [44:55] Vamos a crearlo con el 8002 para no tener un error en la lista.
+- [44:59] Sí.
+- [45:00] ¿Cuál sería el nombre, perdón?
+- [45:02] C1.
+- [45:04] C1 los palos es así, ¿verdad?
+- [45:06] Sí, C1 los palos, sí.
+- [45:15] 8002, perfecto.
+- [45:23] Perfecto.
+- [45:23] Y las labores, vamos a crear igual las labores, vamos a hacerlo como una parametrización completa.
+- [45:57] ¿Algún código de labor que se ocupe?
+- [46:03] Cualquiera, pone uno de cuatro dígitos.
+- [46:07] ¿Me puedo editar esto, cierto?
+- [46:09] Sí, sí.
+- [46:10] Sí, de hecho, si te das cuenta, este es local, así que aquí lo podemos destruir.
+- [46:15] Ahí, poda.
+- [46:24] Las actividades se asocian a las labores, ¿verdad?
+- [46:28] Sí.
+- [46:30] Perfecto.
+- [46:32] ¿Qué actividad podría tener poda?
+- [46:34] Ya supongamos que igual es poda, porque no me la sé.
+- [46:39] No hay problema, no hay problema.
+- [46:41] Mientras no sea test, para que sea algo un poco más realista.
+- [46:48] Perfecto, perfecto, ahí tenemos la asociación.
+- [47:04] Vamos a crear los sectores igual. ¿Algún sector que se maneje?
+- [47:09] No, el sector puede ser transversal.
+- [47:11] Lo transversal textual.
+- [47:14] Sí, ¿a qué se refiere con sector?
+- [47:17] Es uno de los campos que no habían solicitado los contratistas.
+- [47:22] Ya.
+- [47:23] Me imagino que también puede ser como una duplicidad con faenas, ahora que lo veo.
+- [47:33] Yo creo que ahí le vamos a tener que dar una vuelta.
+- [47:35] Sí, porque si te das cuenta se asocia con el sector.
+- [47:38] Sí. Quizá el sector se refiere a ser administrativo o campo. Pero ahí lo vamos a dar una vuelta.
+- [47:48] Perfecto. Mira, de hecho acá deberíamos verlo en los ingresos diarios, las proformas que nos pide ese campo.
+- [47:53] Aquí lo pide, transversal, el predio, X-Sector y faena también.
+- [48:25] Si, este está duplicado si te das cuenta.
+- [48:27] Sí.
+- [48:28] Entonces aquí tenemos este ingreso diario, 5 horas, 1000 cada hora.
+- [48:40] Faltaría igual un totalizado de la cantidad de horas, ¿verdad?
+- [48:45] ¿Qué más está el cálculo del total?
+- [48:48] Sí.
+- [49:07] Ah, lo creo con la fecha de hoy, muy bien.
+- [49:13] Aquí estamos en agosto. Perfecto, ahí apareció el ingreso diario. Aparece con el estado pendiente y aquí va la opción de editar o eliminar.
+- [49:47] Ya, buenísimo.
+- [50:02] Y aquí no aparece directamente, es la única que tenemos creada para este contratista.
+- [50:10] Ya. Y ahí lo podemos crear y se crea la proforma.
+- [50:14] Exacto. La única implementación que hicimos acá es la opción de enviar o no enviar directamente al contratista como chequeable acá.
+- [50:20] Ya.
+- [50:20] Y ahí no aparece, está el listado pendiente de aprobación, entonces aquí va a llegar a los administradores que definimos, oh, aquí debería aparecer el listado de aprobación, eso falta también.
+- [50:42] Yo esa proforma le eliminaría la parte de enviar al contrarista mientras no esté aprobada.
+- [50:52] Perfecto, cuando pase a aprobada entonces.
+- [50:54] Sí, una vez que nosotros podamos ver el listado de la aprobada, tener la opción de poder enviarla, porque antes es muy riesgoso, muy peligroso.
+- [51:02] Perfecto. Entonces mejor que nos quede como un cheque acá, sino que quede como una acción directamente desde aquí.
+- [51:08] Que quede una acción ahí solamente cuando la proforma esté aprobada.
+- [51:12] Perfecto. Así que vamos a hacer la aprobación. Ah, se me olvidó el pin, muy bien.
+- [51:39] ¡Oh! El pin.
+- [51:44] Lo que le haya cambiado. Lo estaba anotando al revés, muy bien.
+- [52:06] Y vamos a hacer por la segunda aprobación.
+- [52:09] ¿Comprobamos que el pin se sirve?
+- [52:11] Sí, comprobado totalmente. Era parte del testing.
+- [52:13] Y ahí con la cuenta de admin nos pasamos a Bruno y Carlos, ahí quedó ya aprobado directamente, entonces ahora debería aparecerte este botón que ya existe, solamente si es que no lo ha enviado el contratista.
+- [52:30] ¿Consulta, por ejemplo, si tiene dos aprobaciones y yo tengo la mayor aprobación que el que me antecede? Si yo la apruebo, ¿se salta el que me antecede?
+- [52:38] No está para que, por ejemplo, te notifique antes de que apruebe el primero.
+- [52:43] Aquí, como estoy como administrador, me muestra como la cadena completa.
+- [52:47] Ya, porque ahí podríamos tenerlo en caso de vacaciones.
+- [52:52] Ya, de que el que tenga mayor rango pueda aprobar para abajo.
+- [52:55] Sí.
+- [52:56] Ya.
+- [52:58] ¿Eso lo aplicamos en todas las aprobaciones?
+- [53:01] En todas las aprobaciones.
+- [53:03] Perfecto.
+- [53:03] Entonces, por ejemplo, ahí siempre gatillaría la notificación cuando le corresponda, por ejemplo, a esta persona que no se salte como la lista como tal, pero de que sí le aparezca aquí en la bandeja y que pueda aprobar pasándola a los demás.
+- [53:17] Sí, o sea, yo creo que ahí tendríamos que ver una forma de que, por ejemplo, si la frana hace una orden de compra y de aprobación estoy yo y Agustín, que Agustín no pueda aprobar mientras yo no pruebe, teniendo un menor rango de aprobación.
+- [53:37] Como que a Agustín le aparezca cuando ya pasaron por mí.
+- [53:40] Claro.
+- [53:41] Y si yo estoy de vacaciones, habría que ver cómo lo podemos hacer.
+- [53:47] Mira, porque acá en las reglas de aprobación, habíamos pensado en eso y dejamos las suplencias, que es acá en configuración.
+- [53:57] Ah, buenísimo, ahí.
+- [54:00] Entonces, acá por ejemplo, te va a mostrar los grupos, lo puedes seleccionar acá, puedes seleccionar a quién hay que suplir y quién lo va a suplir.
+- [54:11] Ya.
+- [54:11] Entonces, en ese caso, si por ejemplo es una persona del integrante del grupo de aprobaciones y por ejemplo fuera mayor que tú, que pase directamente a él.
+- [54:23] Pero si es una persona externa, que el flujo se respete.
+- [54:28] Ya, ya.
+- [54:42] Y entonces acá tenemos directamente la proforma ya aprobada y acá podríamos directamente asociarla a una factura.
+- [54:49] Y aquí esto es lo que vimos delante, que listaba todas las facturas que teníamos disponibles para solamente este root.
+- [55:04] Si, de hecho ya estaba aplicado el filtro porque son puras ALM.
+- [55:07] Bueno, que no tenemos otro root para emitir aquí en GoSocket, solamente tenemos ALM, igual lo voy a revisar.
+- [55:14] Y ahí sería la asociación, y aquí directamente lo que vendría a ser el libro de compras.
+- [55:21] También queda aquí registrado que se hizo esa asociación.
+- [55:24] Y ya, por ejemplo, este movimiento no te dejaría, esta factura, no te dejaría asociarlo con otro documento.
+- [55:36] Ya.
+- [55:38] De hecho, acá, si no me equivoco, solamente aquí aparece la opción de contabilizar.
+- [55:41] Acá, por ejemplo, esto ya está, el botón de contabilizar que aparece cuando se hace la asociación, si no me equivoco, no aparece en cualquier momento.
+- [55:50] Esto yo creo que deberíamos restringirlo, que si no está asociado a un documento no debería aparecer para poder contabilizar, ¿verdad?
+- [55:56] Sí, porque todos van a ser ingresados con orden de compra o con proforma.
+- [56:01] Perfecto. Y acá, por ejemplo, aprovechando que ya tenemos esta contabilización, ¿no podríamos, como por ejemplo, tener aquí el filtro de mostrar solamente los que están asociados a proformas y ahí te muestre como un totalizado y hacer el calce por contabilizar la segunda parte?
+- [56:21] ¿Cómo que contabilicemos agrupado?
+- [56:23] ¿Sí? Ah, igual yo creo que sería mejor en un módulo aparte, no directamente el libro de compra.
+- [56:31] Sí.
+- [56:32] Sí, va a ser muchas opciones.
+- [56:34] Sí, no, yo el libro de compra lo dejaría con el listado que se nutre del servicio impuesto interno, o sea, las que lleguen de GoSocket, y poder ahí asociarlas a contabilizar, como una segunda revisión.
+- [56:51] Ya. ¿Como igual mantener el control desde acá?
+- [56:53] Sí, porque al final el control igual va a estar en la aprobación de las órdenes de compra.
+- [56:59] Claro, y en ese caso me imagino que igual, entonces acá en contratistas tenemos que, en el reporte, perdón, en el traspaso y cierre, tener un segundo tab que permita hacer contrafacturas, ¿verdad?
+- [57:12] ¿Te refieres a que alguna factura no esté con su orden de compra?
+- [57:16] No, de lo que me habías dicho de la contabilización del asiento, que quedara proveedores contrafacturas, si no me equivoco.
+- [57:23] Ahí quedaría facturas por recibir contra proveedor.
+- [57:27] Factura de recibir contra proveedor. Eso tendríamos que hacerlo quizá en una nueva pestaña desde acá.
+- [57:31] Entra en posicion.
+- [57:37] ¿Y cómo podríamos mostrar esa vista?
+- [57:46] Pero, por ejemplo, en el ánel de contratista.
+- [57:49] Sí, sí.
+- [57:51] Hola, Sergio.
+- [57:59] Eso no es Sergio, ¿cierto?
+- [58:00] Sí.
+- [58:01] Sí, seguro.
+- [58:04] Hola, ¿cómo están? Sorry, no quería interrumpir.
+- [58:07] No, no hay problema. Te necesitamos.
+- [58:09] Sí, necesitamos.
+- [58:11] Bien, también, aquí.
+- [58:12] Sí, a mí se me fue a confirmar que yo voy a buscar a mi hija al colegio, salen a las 3.25 y llego un poquito más tarde, pero se me fue a avisar, ahí le pedí a Carlos que avisara, no sé si avisó, pero...
+- [58:28] Sí, se avisó.
+- [58:29] Bueno, fue por ese motivo.
+- [58:31] Sí, sí, te acusé.
+- [58:32] Aprovechamos de ver unos temas de parametrización.
+- [58:35] Ah, ya, genial.
+- [58:36] No sé en qué punto, bueno, veo que ya está en el tema de contratistas, traspaso contable y cierre.
+- [58:44] Sí, ahí le vamos a tener que dar una segunda vuelta al traspaso contable y cierre.
+- [58:48] Ahí estamos como un poco mareados con el tema del cierre.
+- [58:52] ¿Por?
+- [58:53] Porque la idea de que el traspaso contable y cierre muestre todo lo que es el detalle de mano de obra contratista versus facturas por recibir.
+- [59:02] Y que en el módulo de contabilidad de compras, a mí me aparezca la factura para poder contabilizarla y CNT contra facturas por recibir. Porque si se hace directamente al módulo de contratistas, la factura queda contabilizada. Al final, cada vez que queramos editar alguna proforma, va a tener que ser como reversa de la factura.
+- [59:34] Claro.
+- [59:34] Entonces, como la idea es tener un cierre de fin de mes, que uno pueda ocupar el módulo de contratista independiente, o sea, como sin restricción a tener que pedir a cada rato aprobación de modificación, sino que una vez que esté el cierre ya tengan restricción de edición.
+- [01:00:02] Sí, ahí estaba un flejo.
+- [01:00:19] O sea, por el tema de contratistas, vamos bien. El problema sería la contabilización de la factura.
+- [01:00:25] Ahí estamos chocando, porque en sí el módulo de contratistas está completo.
+- [01:00:30] De hecho, ahí vimos contarlos que la idea del asiento contable sea mano de obra y también agrupe los centros de costo, como un detalle.
+- [01:00:43] Sí, eso lo habíamos hablado también allá en la reunión.
+- [01:01:13] Que por ejemplo ahora en el libro de compras cuando ya se asocian las proformas en sí ya te aparece como la asociación acá y te dice que está 100% cubierto, eso ya lo tenemos, pero está moviendo como que quede separado de todo lo que es el libro de compras, como que quede contabilización de contratistas solamente.
+- [01:01:34] Claro, como que ahí realmente aparezca la contabilización de la factura en sí, del documento que ya llega, porque al final los otros módulos se van a ir nutriendo en base a las órdenes de compra y a las proformas que hagamos, pero no a la factura.
+- [01:02:01] Porque ahí, en ese caso, dentro de lo que vendría a ser aquí el traspaso, faltaría ver entonces como todos los movimientos de proformas que tienen su factura asociada y que eso coincida con el cierre que se está haciendo, ¿verdad?
+- [01:02:13] O sea, en el traspaso contable van a aparecer todas las proformas aprobadas.
+- [01:02:20] Claro.
+- [01:02:21] Lo que pasa es que en todos los módulos...
+- [01:02:26] Oye, sube ya.
+- [01:02:29] Uy, qué brillo.
+- [01:02:30] Se escuchó.
+- [01:02:33] ¿Qué pasó?
+- [01:02:34] Acá estamos en Narnia.
+- [01:02:39] Estaba soñado, se puso a llover, ahora se nubló, sigue lloviendo y frenó.
+- [01:02:43] Se escuchó súper fuerte.
+- [01:02:45] No, la amarró. Debajo de la mesa, acuérdense. La tengo yo, Carlos. ¿Lo lograste? De hecho ya no está en la mesa. Están las puras patitas, sí.
+- [01:03:05] Oye, pero ahí por ejemplo ese traspaso, ¿ahí va a estar solo las proformas aprobadas y asignadas? ¿O no?
+- [01:03:15] No, son todas las aprobadas. Lo que pasa es que cuando uno aprueba la proforma, uno está reconociendo el gasto, pero eso no quiere decir que la factura en sí va a quedar en ese mes o se va a emitir al mes siguiente. Por eso, lo que es del módulo no tiene nada que ver con el libro de compra.
+- [01:03:31] Ah, ya te entiendo.
+- [01:03:33] Yo puedo tener proformas aprobadas, que obviamente se hizo el trabajo, pero que la factura me llegue al mes siguiente.
+- [01:03:42] Claro.
+- [01:03:43] Entonces, en el módulo de contratista, el asiento es mano de obra contratista contra facturas por recibir,
+- [01:03:49] asumiendo que hay un documento pendiente de que llegue.
+- [01:03:53] Y por el módulo de compras, se me hacen facturas por recibir al debe, contra el proveedor, en este caso al contratista.
+- [01:04:00] Entonces, ahí, cuando yo revise la cuenta de facturas por recibir, yo voy a saber al tiro si me falta un documento que me llegue.
+- [01:04:09] Ya, te entiendo.
+- [01:04:10] Pero eso no tiene nada que ver con yo reconocer el gasto en el mes.
+- [01:04:16] Ya te cacho, te cacho.
+- [01:04:18] Sí, porque en realidad el contratista puede trabajar, o sea, todo el mes, y en la quincena, en el mes siguiente, te puede llegar la factura de él.
+- [01:04:26] Exacto.
+- [01:04:27] O en los cinco días del mes.
+- [01:04:29] Exacto. Pero yo en el mes tuve el gasto real.
+- [01:04:33] Claro, que aquí sería lo que está en el cierre, ¿cierto? Cierre de proforma.
+- [01:04:40] Sí, entonces ya en cada cierre de cada módulo yo estoy reconociendo lo que realmente pasó, mi gasto real. Y en el módulo de compras yo estoy solamente como haciendo un checklist de los documentos que me van llegando. Pero toda la información se nutre de los módulos independientes.
+- [01:04:58] Ya te entiendo.
+- [01:05:31] En el periodo uno va a saber si es que, por ejemplo, hay algún periodo que tenga, que ya esté como cerrado, por así decirlo, pero tenga documentos pendientes o que ya esté redondo, o sea, que coincidan los documentos y lo otro.
+- [01:05:42] Y aquí solamente tener como un tab informativo con esa asociación, porque al fin y al cabo, una vez cuando ya todas las proformas coincidan con una factura y se tiene que realizar como un segundo cierre, por lo que entiendo, ¿verdad?
+- [01:05:55] Y que la asociación se tenga que hacer sí o sí del número de compra.
+- [01:06:04] Es que se supone que en compras va a listar lo que es proforma y las órdenes de compra, ¿cierto? Y creo que ahora era otro documento adicional. ¿Cuál era?
+- [01:06:17] Sí, la orden de activos.
+- [01:06:20] Ya.
+- [01:06:22] Que serían insumos, proformas y activos.
+- [01:06:25] ¿Es activos o era orden de aplicación?
+- [01:06:28] No, no era la que veamos.
+- [01:06:31] No, la orden de aplicación es para el consumo de bodega.
+- [01:06:34] Ya, para el rebaja ya.
+- [01:06:37] ¿Y esa orden de activo dónde está? ¿Dónde queda?
+- [01:06:43] Activo fijo.
+- [01:06:45] Activo fijo, ah, ese no lo he visto.
+- [01:06:50] Ah, pero tiene la misma estructura de una orden de compra o la proforma.
+- [01:06:59] Ya, ok.
+- [01:07:04] Entonces, en compras debería poder seleccionar la factura, la proforma, ¿cierto? Que es aprobada.
+- [01:07:11] ¿O las?
+- [01:07:12] Sí, yo me he quedado en la...
+- [01:07:15] Sí, puede ser más de una.
+- [01:07:18] En el libro de compra yo haría la asociación, cuando yo ponga contabilizar, que me parezca, si la puedo asociar a una orden de compra o a una proforma.
+- [01:07:28] O varias proformas, claro.
+- [01:07:30] Claro.
+- [01:07:35] Y ahí, por ejemplo, si...
+- [01:07:39] Así, por ejemplo, tenemos la asociación actual.
+- [01:07:44] Claro.
+- [01:07:45] Que aquí en vez de guías debería ser activos.
+- [01:07:48] Claro.
+- [01:07:52] Sí, porque al final las guías las reemplazan los insumos. O sea, insumos.
+- [01:07:56] Sí, así tal cual, que podamos asociarlo a la proforma y que aquí se haga la contabilización de la factura.
+- [01:08:09] Por ejemplo, aquí está también aplicado lo que te decía, Mari, de que aquí te permite seleccionar más de una proforma y te va diciendo cuánto es lo que falta por cubrir.
+- [01:08:18] Sí, que ya en este módulo debe estar toda la factura cubierta, pues ya ahí no salta el tiro si falta una orden de compra por emitir.
+- [01:08:28] Bueno, déjame notar una cosita. Entonces tú en la proforma, al aprobar, reconoces el gasto, ¿cierto? Sí. Y acá, al asociar la factura recibida, al asociar la factura recibida, ahí en cierto modo tú como que reconoces deuda, ¿no?
+- [01:09:12] Sí, pero aquí no se hace la asociación directa a la factura, que se haga en el módulo de compra y se muestra acá automático.
+- [01:09:27] Claro, claro, es lo que estaba mostrando el Carlos, en compras que puedan asociar, pero ahí por línea van a tener que asociar la cuenta o eso ya viene desde la proforma?
+- [01:09:40] Ah, y el cliente tiene también la cuenta asociada, ¿no? El proveedor, ¿no?
+- [01:09:58] El proveedor, pero el número de compra.
+- [01:10:02] Acá solamente se hace el gasto con tres factores por recibir contratista.
+- [01:10:10] Ya entiendo. O sea, en cierto modo, acá en proforma no se debería hacer nada más.
+- [01:10:17] Más que nada, hacer el cierre y el compra.
+- [01:10:20] Y quitar el botón de asociación.
+- [01:10:22] Claro.
+- [01:10:23] Claro, la que aparezca automático cuando ya está asociada a la factura en el módulo de compra.
+- [01:10:31] Sí.
+- [01:10:32] Ok.
+- [01:10:41] No se me ocurre.
+- [01:10:44] O sea, igual queda simple, vos.
+- [01:10:47] Llegamos al último.
+- [01:10:49] En el cierre podríamos dejarte también aquí un totalizado de cuántas faltan por tener factura, como para que se vaya actualizando.
+- [01:10:55] Claro.
+- [01:10:56] Ahí podría ser un...
+- [01:10:56] Un pendiente de asociación.
+- [01:10:58] Sí, un pendiente de asociación.
+- [01:10:59] Ya, ok.
+- [01:11:09] No sé qué otro punto tenías, de insumos, ¿no?
+- [01:11:12] Sí.
+- [01:11:13] ¿O cuál era el otro?
+- [01:11:14] Vamos para allá, insumos.
+- [01:11:17] ¿Hay que los ajustar un detallito en el tema de las compras?
+- [01:11:20] Sí, sí, y con unos detallitos más que vimos antes igual.
+- [01:11:23] Y en la forma de visualización también de acá del traspaso y cierre hay que hacer que sea con las cuentas.
+- [01:11:30] Ya, ok.
+- [01:11:38] Perfecto.
+- [01:11:39] En insumos, si no me equivoco...
+- [01:11:42] Sí, aquí las órdenes de aplicación tuvo un pequeño problema que no me estaba permitiendo hacer el movimiento de los stocks, así que de las órdenes de aplicación todavía está pendiente poder dejar la demo actualizada, que no estaba funcionando.
+- [01:11:59] Así que, lo que estaba pendiente acá de revisar es las órdenes de compra de insumos.
+- [01:12:09] Que acá, me voy a pasar un poquito, a ver si no me equivoco, sí, aquí está.
+- [01:12:17] Estas son emisiones reales que se hicieron de una plataforma a la otra, donde aquí se generaron primero las órdenes de compra de insumos.
+- [01:12:31] ¿Sí?
+- [01:12:32] Estas son para generar, para comprar insumos, ¿cierto, María Jesús?
+- [01:12:36] ¿Esta no es la orden de enviación?
+- [01:12:42] No, la orden de subo.
+- [01:12:43] Sí, la orden de subo.
+- [01:12:44] No, la orden de subo es para comprar.
+- [01:12:48] Ya, ok.
+- [01:12:50] Si se dan cuenta aquí tenemos las dos ya aprobadas, con su pequeño detalle, la visualización de los documentos también que se pueden adjuntar.
+- [01:12:58] Y aquí en el libro de guías es donde se pueden traer las guías de despacho de GoSocket, las cuales dependiendo de, se van a asociar a las órdenes de compra y dependiendo del monto, si cubre el monto con las líneas que corresponde con los ítems, se hace un match perfecto, si no, queda como parcializado generando una orden de compra a hijos.
+- [01:13:23] ¿Orden de compra a insumos de hijos? ¿También tenemos hijos en insumos?
+- [01:13:27] Sí.
+- [01:13:28] Ah, el proforma era que no se generaban hijos, ¿no?
+- [01:13:34] Pero tenía entendido que la orden...
+- [01:13:37] Se generaba hijos, yo recuerdo que era que, no sé si fue mal, pero que siempre la...
+- [01:13:50] Todo el ingreso en el cabrío iba contra guía y no...
+- [01:13:55] Ah, pero que tenían parcializado.
+- [01:13:57] Sí, vos, la guía de despacho es la que te genera la parcialización.
+- [01:14:00] Sí.
+- [01:14:00] O sea, si calza o no, o sea, si calza con la orden de insumo, no se genera un hijo, ¿cierto? Y queda asaltado.
+- [01:14:10] Exacto.
+- [01:14:11] De hecho, los dos ejemplos que tengo acá van a calzar justo, no van a generar un hijo, pero los voy a hacer inverso para que se genere un hijo, en este caso.
+- [01:14:25] De hecho, aquí tuve que habilitar a la mala la recepción, porque primero se tiene que marcar el acuse de la guía de despacho, pero desde ayer GoSocket que el acuse no...
+- [01:14:34] No lo está marcando.
+- [01:14:37] No acusa nada.
+- [01:14:39] Chicos, ¿qué va a pasar, por ejemplo, cuando nosotros vendamos la guía fiscal y no llegue, por ejemplo, a GoSocket?
+- [01:14:45] Acá, muy buena pregunta, tenemos el botón de ingreso manual.
+- [01:14:51] Ah, pero ojo que, ah, ahí dice agregar líneas.
+- [01:14:58] ¿Ya hay adjuntado documento?
+- [01:15:00] Exactamente, donde pueden digitalizarlo y adjuntarlo.
+- [01:15:04] Pero, por ejemplo, hay campos que faltan ahí, no sé, por ejemplo, el tipo de despacho, indicador de traslado.
+- [01:15:14] Vamos a hacer esos ajustes.
+- [01:15:15] Ahí sería bueno, María Jesús, si nos pueden compartir una guía física que les llegue a ustedes, para plasmarlo acá en este formulario de ingreso.
+- [01:15:27] Porque aquí está claro, el folio va a ser obligatorio, el root del emisor, el root del emisor también ahí debería ser un buscador de los clientes, de los proveedores en realidad.
+- [01:15:36] Ah, perfecto. Con el ingreso manual de guía de despacho no hay que hacer algún proceso adicional de casualidad? Aparte de adjuntar el documento digitalizado?
+- [01:16:00] No se hizo el acuse, pero había anticipado esto y había habilitado de todas formas una vez cuando se realiza el acuse a GoSocket de poder tener aquí la opción de recepcionar despacho.
+- [01:16:17] No debería, debería salir después de realizar el acuse, pero para este ejemplo lo vamos a utilizar.
+- [01:16:21] En este caso, por ejemplo, yo tenía preparado estas dos recepciones de guías de despacho, donde también tenía preparado cada una de sus órdenes de compra, que si se dan cuenta, unas de 1.585 y el otro es de 8.90, que si los vemos acá en las órdenes de insumo, están creadas y ya están aprobadas, pero para que se haga la parcialización, voy a asociarlas a intercambiadas, para que vean cómo se genera una guía, que no tenía preparado para ese caso.
+- [01:16:55] Esta la vamos a asociar a la de 1.585.000, perfecto, como palets, y esta bodega de destino.
+- [01:17:17] Ah, espérame, espérame. ¿Me escuchan?
+- [01:17:21] Sí.
+- [01:17:22] Ahí, por ejemplo, artículo de bodega. Ese es el producto que está cargado en el inventario, ¿cierto?
+- [01:17:28] Exacto, aquí se selecciona del inventario.
+- [01:17:30] Sería bueno ahí, porque aquí tienes la guía, ¿cierto? Tú sabes cuál es el total. Replicar, por ejemplo, el porcentaje de falta o cuánto queda por completar.
+- [01:17:55] La recepción de la guía se hace directamente de lo que yo puedo, que tengo creado como artículo en la bodega, ¿cierto? Entonces no debería tener la opción de crear producto.
+- [01:18:11] Solamente la opción de pedir creación, porque la persona que recepciona no es la persona que hace la creación de insumos en bodega.
+- [01:18:26] Puedes pedir la creación, porque actualmente lo hace el jefe de área que pide la creación del insumo.
+- [01:18:41] Aquí se le va a pedir crear el artículo, por así decirlo. Y también la opción de avisar por correo electrónico junto con un comentario.
+- [01:18:50] ¿Está perfecto?
+- [01:18:50] Sí.
+- [01:18:55] Si hay que eliminar el crear todo, solamente va a estar a pedir... ¿Qué va a ser?
+- [01:19:01] Sí, de hecho acá es lo que también me percaté de que acá al momento de realizar la recepción me está mostrando todas las órdenes de compra.
+- [01:19:13] Y debería mostrarme las órdenes de compra de insumos solamente, o igual podría mostrarme las órdenes de compra de compras, ¿no es cierto?
+- [01:19:20] No, solo de insumos.
+- [01:19:21] Solo de insumos, sí, porque aquí están las de compras listadas, entonces no vamos a limitar.
+- [01:19:25] Por ejemplo, si le pones pedir creación, Carlos, y si quiere volver atrás y cancelar, ponle cancelar.
+- [01:19:35] Ah, pero mira, mira, ah, ya, ya, ya.
+- [01:19:38] Sí, tiene sus propios botones, deberían estar acá para que se vean más... están como zigzag.
+- [01:19:44] Sí, porque yo pensé que habría otro modal, solamente agrega un espacio adicional al modal actual, ¿no?
+- [01:19:52] Sí, yo creo que más ordenado debería abrir un nuevo modal con el detalle de lo que está pidiendo crear.
+- [01:19:57] Sí, sí, sería bueno.
+- [01:19:59] Sí, lo van a dar inmediato.
+- [01:20:00] ¿Y el crear productos es para la casa?
+- [01:20:03] Sí.
+- [01:20:05] Adiós.
+- [01:20:05] Déjenme tomar nota un momento.
+- [01:20:11] ¿Y la cantidad podrá ser, por ejemplo, si la guía viene...? Ah, pero la guía viene eso.
+- [01:20:20] Sí, la cantidad viene en la guía de lo que se recepciona. Entonces este sería como una adición solamente.
+- [01:20:27] Sí, ahí sería solamente una adición del insumo, pero no que la creación quede con la cantidad.
+- [01:20:40] Ahí en ese caso, por ejemplo, en las guías de despacho también se detallan los códigos.
+- [01:20:45] ¿Los códigos tienen que coincidir lo que mandan en la guía de despacho con lo que tienen en bodega o puede que no haya un calce?
+- [01:20:51] Ya, perfecto, entonces ni me guío ni por el nombre ni por el código que venga en la guía de despacho, sino que se va a tipear manualmente.
+- [01:21:21] El sabe que es bolsa la misma.
+- [01:22:13] Y ahí da esta advertencia, en este caso, de que no completa directamente la orden de compra 001 y que se puede convertir en una madre y generar un hijo por 890.000.
+- [01:22:28] O puede avisar a la persona que, por ejemplo, en este caso es Admiral Maue, el que generó la orden de compra, de que haga una modificación de esa orden de compra para que calce con esta guía de despacho.
+- [01:22:38] En este caso vamos a generarla. Exige auxiliar los contrapartes.
+- [01:22:45] Ya es un problema de asociación. Dice que ya fue recepcionada, sí. Igual la asoció, tiró error, pero igual la asoció. Y acá, por ejemplo, podemos ver el detalle de que ahora se actualizó y la que era 001 generó una hija, que es la 001.1, con su correspondiente guía de despacho y generó la orden de compra, insumos, hija, que termina en .1.
+- [01:23:13] Ya.
+- [01:23:34] Ya.
+- [01:23:43] Deberían salir solamente las lunas de compra y las listas de asociado a un documento.
+- [01:23:48] Solo las listas y las madres iban a enviar de forma informativa.
+- [01:23:53] Claro.
+- [01:23:53] Por ejemplo, debería mostrarse así, pero cuando le dé clic a la madre, debería mostrarse el detalle de la madre bien por encima.
+- [01:23:59] Exacto.
+- [01:23:59] Perfecto. Entonces, en este caso, debería eliminarse la vista de la .1 y mostrarse, o sea, perdón, de la 001 y mostrarse solamente las 001 y todas las que se vayan generando, ¿verdad?
+- [01:24:09] Claro, solo las listas.
+- [01:24:10] En ese caso, por ejemplo, acá teníamos, por ejemplo, este ítem de cobertura que iba asociado directamente a la madre para ver el nivel.
+- [01:24:22] Eso debería estar en la parte que va a manejar la informativa de donde sale solo la orden de compra madre.
+- [01:24:29] Perfecto.
+- [01:24:32] Sí, entonces deberíamos quitarlo desde acá de cobertura porque si va a ser solamente esta cobertura desde acá de órdenes de insumo, porque si va a ser una parcializada,
+- [01:24:39] Allí se van a mostrar solamente las hijas, que la hija...
+- [01:24:42] Las hijas van a estar al 100%.
+- [01:24:44] Claro, las hijas van a estar como al 100%.
+- [01:24:47] Ahí, pero ahí, María, o sea, no sé, lo...
+- [01:24:51] Porque siento que esa barrita, o esa cobertura, es bastante útil.
+- [01:24:55] Sí, igual pienso lo mismo.
+- [01:24:57] Para saber por qué están pendientes.
+- [01:24:58] Entonces, a ver, si podríamos, por ejemplo, en los casos que son madre,
+- [01:25:02] y tienen hijos, al momento de pinchar sobre el registro,
+- [01:25:06] Que te pueda expandir todas las hijas que tiene esa madre, no sé si lo explico.
+- [01:25:12] Podríamos dejarlo acá.
+- [01:25:13] Yo pensaba dentro de la misma grilla, Carlos, dentro de la misma grilla, por ejemplo, tú le das, no sé, ver más o algo, y que abajito le aparezcan las cuatro, todas las hijas que tenga, cachái.
+- [01:25:28] O sea, tú dices que ahí aparezcan las madres asociadas a las hijas.
+- [01:25:31] Claro, por ejemplo, si tú pinchas en la madre, por ejemplo, el documento S01 es la madre, ¿o no, Carlos?
+- [01:25:39] Ya, si tú pinchas en la madre, cuando sea madre, que se expanda hacia abajito todas las hijas, asociadas a madre.
+- [01:25:47] Claro, que sea como un extendible.
+- [01:25:49] Exacto.
+- [01:25:51] Quizá como esto de acá, porque así podríamos conservar este de cobertura.
+- [01:25:59] ¿Qué es lo que me genera ruido, por ejemplo? Es el estado. Porque si yo tengo una compra madre aprobada, que no está completa, ¿cómo se me va a centralizar? ¿Completa o parcializada?
+- [01:26:14] Buena pregunta.
+- [01:26:19] Por eso hay un centro de guía como que ahí se aparecen las que realmente están recepcionadas.
+- [01:26:27] Pero la centralización entonces se va a hacer desde acá, porque teníamos considerado realizarla desde acá.
+- [01:26:31] O sea, puede ser de ahí, pero a lo que voy yo es que se supone que el estado aprobado en estos momentos va a ser que se vaya el gasto.
+- [01:26:43] Entonces si no andan de compra madre, me aparece aprobada, se me va a ir completa al gasto.
+- [01:26:49] Debería ser entonces un estado nuevo que sea parcializado, que ese no se va a considerar, y las hijas que estén aprobadas se consideren.
+- [01:26:58] Exacto.
+- [01:26:59] Pero ahí tengo duda porque, hasta donde yo sabía, la modificación, cuando se necesita realizar una modificación, la que pasa por aprobación es la madre.
+- [01:27:11] Sí, la que pasa por aprobación es la madre.
+- [01:27:14] Pero las madres son informativas.
+- [01:27:16] Entonces igual es...
+- [01:27:17] Si parece que no hay arrojo, ¿de qué es lo que se va a contabilizar?
+- [01:27:21] Claro, en la contabilización entonces lo que podríamos hacer sería discriminar que si es una madre se consideren solo las hijas.
+- [01:27:27] Sí, solo la hija.
+- [01:27:30] No, claro, pero ahí por ejemplo, igual tiene sentido lo que dice Carlos, porque ahí sería entonces dos estados, que sería la aprobación, ¿cierto?, del flujo de compra, y el otro es el contabilizado, ¿cierto?
+- [01:27:48] Y el otro, por ejemplo, se puede dar un caso de una orden madre que esté parcializada, pero también contabilizada, ¿o no?
+- [01:28:08] Deberíamos entonces separar lo que son los estados con la contabilización, yo creo, en dos columnas.
+- [01:28:15] O dentro de la misma columna, pero con dos etiquetas, por ejemplo, aprobado o contabilizado, o no sé, si no está contabilizado,
+- [01:28:24] No sé si prefieren con dos estados o dejarlo con dos columnas aparte.
+- [01:28:47] Yo pensaba que cuando quedan acá en contabilidad, cuando son como proveedor y contadores, que tienen los dos.
+- [01:28:56] Cosa de que el estado ya sea aprobado o rechazado, sea aparte, y cuando esté contabilizado aparezca aquí, además, el contabilizado.
+- [01:29:09] Y en ese caso, por ejemplo, cuando ya se realiza la contabilización, pero se hace una modificación, hubo un error, por ejemplo, en alguno de estos órdenes de compra o en la factura, y se tenga que hacer una corrección.
+- [01:29:24] ¿Afectaría entonces al estado contabilizado, si es que ya se reversó, por así decirlo?
+- [01:29:32] Sí, pues creo que el contabilizado se haga solo en la centralización del módulo, porque durante el mes pasa mucho que me piden reversar los movimientos de bodega.
+- [01:29:46] Claro, en ese caso podría ser una columna, o sea, entre comillas una columna va a ser una información de la base de datos,
+- [01:29:53] que de hecho, bueno, yo creo que podríamos tener una columna porque tenemos un selector de columnas,
+- [01:29:56] Entonces podría ser igual una columna que si no se da mucho uso se descarta.
+- [01:30:00] El estado dearias yvarística es el que hayям ska взять la vista pero que sea el estado de contabilización aparte yo creo
+- [01:30:05] para así tener separado lo que vendría a ser el estado de la cadena de
+- [01:30:09] aprobación y aparte también el estado de lo que vendría a ser la contabilización
+- [01:30:17] explodes
+- [01:30:20] El aprobado es cuando uno la crea y el jefe la aprueba, y el recepcionado es cuando efectivamente pasa el suceso.
+- [01:30:28] Yo creo que entonces deberían ser dos columnas, porque ese aprobado puede ser un rechazado...
+- [01:30:39] Sí, al final el aprobado es como el que el jefe aprobó la orden de compra, pero en realidad con esa orden de compra pueden pasar mil cosas.
+- [01:30:47] Sí, entonces este quizás debería ser aprobación en vez de estado, que muestre el estado de la aprobación.
+- [01:30:54] Y tener acá una columna aparte de que sea contabilización.
+- [01:31:16] La orden de compra de insumos me va a mover la bodega. En la recepción solamente me va a ingresar material a la bodega. Pero en realidad en la contabilización yo voy a tener lo que efectivamente gasté de la bodega. ¿Se entiende?
+- [01:31:37] Sí.
+- [01:31:39] Entonces, ¿el ingreso de la bodega?
+- [01:31:49] En ese caso, no sé si es que se maneja, por ejemplo, si es que necesitas ver el estado de la, por así decirlo, de la centralización, si es que fue contabilizado o no, debería verse directamente en el cierre de bodega, me imagino.
+- [01:32:14] Le decía a la bodega, porque ahí yo voy a tener todo lo que yo consumí en el mes y todo lo que yo consumí. Pero en la orden de compra de insumos prácticamente es, se emite, se aprueba y se recepciona el material.
+- [01:32:27] Claro.
+- [01:32:27] Pero no quiere decir que todo eso yo lo consumí en el mes.
+- [01:32:30] Exacto. A menos que igual de todas formas tengas como, por ejemplo, para ver el detalle acá, ver como aquí una columna de más, así como estado de centralización, me imagino.
+- [01:33:03] Sí.
+- [01:33:03] Entonces lo dejamos así.
+- [01:33:30] Tendríamos que hacer por ejemplo acá que en el cierre de bodega entonces te muestre como la facturación era o no? Ya me perdí un poco.
+- [01:33:42] Sí, en el cierre de bodega me va a mostrar lo que yo consumí.
+- [01:33:51] Lo que consumiste. Y eso cómo lo identificaríamos en el proceso, en el sistema actual de lo que consumí?
+- [01:33:57] Porque entonces yo lo pensaba como más lo que consumí es como lo que adquirí.
+- [01:34:01] Ah, pero ¿y eso no tiene relación alguna con órdenes de aplicación?
+- [01:34:33] Por el lado de la exportadora tiene el consumo del packing.
+- [01:34:49] ¿Y el consumo del packing entonces vendría como...?
+- [01:34:54] ¿Cómo se controla entonces el consumo del packing? Así como el gasto de este.
+- [01:35:07] En base a las clases producidas, no es que tienen... les conté que tenían un maquillaje donde decían
+- [01:35:13] María José, no sé si soy yo, pero la escucho realmente un poco como lejos.
+- [01:35:26] Sí, yo la escucho como entrecortada.
+- [01:35:28] ¿Y ahora?
+- [01:35:33] Ahora, a ver.
+- [01:35:34] Peor.
+- [01:35:36] Ahí sí mejor.
+- [01:35:37] Ahí mejor, ahí sí mejor.
+- [01:35:40] Escuché que mencionaste que es algo del embalaje.
+- [01:35:45] Sí, lo que pasa es que los packing trabajan en base a una receta y cada embalaje tiene su consumo de materiales. Entonces, basa en el stock que se crea, que se hace mensualmente, uno calcula qué materiales utilizó.
+- [01:36:06] Ya, por la receta.
+- [01:36:08] Sí, por la receta.
+- [01:36:11] Y esa receta no la tenemos considerada acá, ¿cierto?
+- [01:36:14] No, creo que no.
+- [01:36:15] No.
+- [01:36:15] No faltaría entonces tener el consumo de insumos.
+- [01:36:22] Y esa receta es como una hoja de producción en realidad, ¿o no?
+- [01:36:25] Sí.
+- [01:36:27] Porque ahí va, por ejemplo, en esa receta tú pones los insumos y además, por ejemplo, no sé, con productos o solamente va con solo insumos?
+- [01:36:41] Con insumos.
+- [01:36:53] Claro.
+- [01:36:53] ¿Me escuchas?
+- [01:37:35] Luz, agua, la mano de obra y además los productos que, como materia prima, que utilizan para llegar al producto final.
+- [01:37:46] Como el ejemplo que ustedes recuerdan que les di, el tema del, no sé, el comedor, que viene con la silla y mesa.
+- [01:37:51] Que la silla y mesa pasan a ser los productos, ¿cierto? Pero, por ejemplo, para construir, no sé, el agua o el sello fin para sellarla y ese tipo de cosas.
+- [01:38:02] Que no son los insumos.
+- [01:38:03] Mira, llamé a Mario, porque Mario con José Tomás crearon una forma de hacer los consumos desde la recepción de los paquis.
+- [01:38:15] Entonces quizás nos puede ayudar a construirlo más fácil o quizás cargar algún archivo mensual nomás.
+- [01:38:21] Entiendo.
+- [01:38:23] Porque todo esto se va a alimentar desde la página de AlmaWeb.
+- [01:38:31] Ya.
+- [01:38:32] Y estamos un poco mareados con el tema del consumo de la bodega de LM.
+- [01:38:37] El consumo de la bodega de LM.
+- [01:38:38] Que se hace con la receta...
+- [01:38:40] Ya, ya.
+- [01:38:40] En vez de que se hace la receta, hay una subestimación de cuánto se hizo el consumo mensual, en base a la producción.
+- [01:38:47] En base a la producción, ok.
+- [01:38:48] Ya, entonces, ¿qué pasa? Que acá, nosotros tenemos que ver cómo vamos a hacer el consumo en la bodega.
+- [01:38:53] Ya.
+- [01:38:53] ¿Cómo se hace actualmente?
+- [01:38:56] Actualmente, la Roxy, estamos en el estormago, ¿estás preparada?
+- [01:39:01] Sí.
+- [01:39:01] Ahí me llega la existencia, que son todos los movimientos de bodega que hace Agrosoft.
+- [01:39:05] Ya.
+- [01:39:06] Después, yo le cargo todo lo que es consumo a centro de costo.
+- [01:39:09] Ya.
+- [01:39:10] Que para mí es producción, ¿vale? Es un proceso.
+- [01:39:12] Y ahí, ese consumo por proceso, por caja, es caja por su receta.
+- [01:39:18] ¿Ya?
+- [01:39:18] O sea, cada caja tiene, de cada ítem, ocupa 0,1.
+- [01:39:24] Este ocupa 1, este 2, ¿eh?
+- [01:39:26] Entonces, es la multiplicación.
+- [01:39:27] Es por grupo, es por parte.
+- [01:39:28] Sí.
+- [01:39:29] Y de eso, después la Roxy lo toma de vuelta y le inyecta la razón a mano.
+- [01:39:37] ¿Entiendes?
+- [01:39:37] ¿Y con eso se hace la salida?
+- [01:39:38] Sí, vamos a hacerlo con el plástico vacío.
+- [01:39:41] ¿Sí?
+- [01:39:41] ¿Sería lo ideal? ¿Carlo, entendieron?
+- [01:39:48] Por lo que entendí, entonces, eso ya se está armando actualmente, nosotros tendríamos que consumirlo.
+- [01:39:56] O sea, lo que entrega Roxy, ¿escuché bien o no? ¿Ella hace la carga masiva, o hace la carga, o sea, perdón, manual, a Agrosoft?
+- [01:40:09] Claro, claro.
+- [01:40:10] ¿Qué era la palabra que ocupan? Dijeron la receta, la receta, ¿cierto?
+- [01:40:16] Sí.
+- [01:40:17] Ella, por ejemplo, todos los fines de mes, bueno, ella o José Tomás, me pide los consumos del mes, ¿no es cierto?
+- [01:40:24] Y ahí yo le mando todo lo que produjimos multiplicado por la receta, ¿de acuerdo?
+- [01:40:28] Entonces le digo que de tal insumo usamos tanto, de este tanto, de este tanto, en cereza, en mandarina, en manzana, en lo que sea, separado por especies.
+- [01:40:37] Y eso ellos después lo reingresan a la Agrosoft para ingresar los consumos en trabajo.
+- [01:40:42] Hay una forma de poder encargar un archivo, si al final le pasas el archivo, la barra digital.
+- [01:40:51] ¿Por qué lo multiplicas por la receta, Mario?
+- [01:40:56] Para saber, porque lo que yo recibo de los procesos es la cantidad de embalajes, ¿entendés?
+- [01:41:01] Pero lo que necesita tener movimiento en la bodega es como...
+- [01:41:06] El producto, cada por detalle.
+- [01:41:08] Yo le digo, produje 10 cajas negras, entonces 10 cajas negras por su receta. Cada caja negra
+- [01:41:18] ocupa una tapa, un fondo, una bolsa. Ah, ya, perfecto. Entonces ahí hace el 10 por
+- [01:41:24] cada gasto, ¿entendés? Porque ella tiene toda la receta en gastos por caja. Esto lo
+- [01:41:30] Si queréis comprar una caja, está ahí parametrizado.
+- [01:41:36] Ya, entiendo, entiendo, entiendo.
+- [01:41:38] Y esa receta igual la deberíamos contraer acá en este módulo de insumo, ¿no?
+- [01:41:46] Igual, podríamos irla cargando.
+- [01:41:47] Sí, por ejemplo.
+- [01:41:48] Sí, podría ser.
+- [01:41:50] Esa sería como la orden de aplicación.
+- [01:41:52] Claro.
+- [01:41:53] Claro.
+- [01:41:54] Te sirve un poco realmente para tener algo de auditoría para hacer, oye, sí, bastante, porque este es nuestro consumo.
+- [01:41:59] En la casa, en la casa.
+- [01:42:00] Sí.
+- [01:42:01] Sí, porque al final digital así todo le pasa y el archivo es como, mejor lo subimos.
+- [01:42:10] Lo que el export manager hoy día está consumiendo automáticamente son los movimientos de bodega, a excepción del consumo de centro de costo, ¿de acuerdo? Yo se lo bloqueo.
+- [01:42:19] Ya.
+- [01:42:20] Porque yo necesito, porque si no, ¿qué pasa? Si después consumo del centro de costo, yo voy a tener dos controles de consumo, ¿de acuerdo?
+- [01:42:25] Ya.
+- [01:42:26] Voy a estar considerando como una existencia los consumos y más encima yo le meto consumo, ¿de acuerdo?
+- [01:42:30] Entonces, al final, absorbo todo en Agrosoft, menos los consumos de centro de costo.
+- [01:42:38] Ya.
+- [01:42:40] Porque ya, entre los ingresos, pues, si se va a hacer de obligarías, igual.
+- [01:42:44] Claro.
+- [01:42:45] Oye, ¿y no tienen algún bosquejo, ejemplo de la receta?
+- [01:42:50] ¿Y el archivo que generan para la carga en Agrosoft?
+- [01:42:57] El archivo que generan...
+- [01:42:57] Se tendría que mandarte un archivo, pero es un Excel que le mando muy ordinario, así.
+- [01:43:02] Es una tabla, es una tabla muy...
+- [01:43:05] No, no, no, si es más que nada para ver cuáles son los campos a considerar.
+- [01:43:35] ¿Pero el fútbol se lo vamos a subir al archivo? ¿Puede ir todo en una hoja?
+- [01:43:38] Puede ir todo en una hoja y se lo botó el consumo.
+- [01:43:43] ¿Tememos de armar un Excel que sea estándar y se lo mandamos de ejemplo?
+- [01:43:51] Ya bueno. Entonces, María Jesús, el cierre de bodega iría contra el consumo, ¿cierto?
+- [01:44:08] Sí.
+- [01:44:08] Retomando.
+- [01:44:09] El cierre de bodega es solo el consumo.
+- [01:44:11] Porque al momento de recepcionar la factura, yo estoy alimentando la bodega con existencia, pero ese no es mi real consumo.
+- [01:44:22] Oye, entonces ahí, por ejemplo, porque tenemos la receta, ¿cierto? Y lo que dijo Mario, en cierto modo, la producción en sí va a ser X receta.
+- [01:44:41] Y el consumo real entonces iría contra la producción en el cierre de bodegas.
+- [01:44:54] Si, si no tenemos la base de cargar la receta al sistema, después lo único que tendríamos que tener es un módulo donde podamos poner la producción.
+- [01:45:12] Claro. Estaba pensando mejor dejar tener al tiro el módulo de producción, o sea, la pantalla de producción, donde podamos crear, como lo que hicimos en proforma, que las recetas van a estar creadas, ¿cierto? Se pueden ir creando una a una, ¿cierto? O una carga masiva.
+- [01:45:34] La receta, después cuando se cree la producción, que va a salir a ser algo muy similar a lo que está en proforma, solamente iría a seleccionar la receta y la cantidad, ¿cierto? Y eso de forma automática te va a calcular el total de esa producción.
+- [01:45:50] Sí.
+- [01:45:52] Y el cierre de bodega entonces lo harías contra la producción, ¿cierto?
+- [01:45:56] Contra la producción.
+- [01:46:01] Ya, ok.
+- [01:46:04] De hecho, yo creo que es mucho mejor tener la receta cargada en el sistema, porque así también ha sido como un filtro para los paquis.
+- [01:46:10] ¿Cómo?
+- [01:46:13] Es buena idea tener cargada la receta en el sistema, porque así nos sirve como un filtro con los packings, donde nos entrega la información.
+- [01:46:22] ¿A qué te refieres como un filtro con los packings?
+- [01:46:24] Porque quizás los packings en su receta tienen quizás un material de más que nosotros no tenemos en el sistema.
+- [01:46:30] Y al final nosotros como le hacemos la información de ellos, pues estamos teniendo un costo un día.
+- [01:46:37] Por ejemplo, el packing es la empresa que te hace el trabajo, ¿cierto? De packing.
+- [01:46:40] Sí, el páginas es el consumo.
+- [01:46:44] Por eso, ellos, ya, ellos, pero ellos te entregan a ti el, el, ellos tienen la, ellos tienen su propia receta o la, lo tienen la, o tú le entregas la receta?
+- [01:46:55] No, nosotros le entregamos la receta.
+- [01:46:59] Y después cuando ellos te, ¿cómo te facturan la producción?
+- [01:47:03] No, ellos hacen un consumo de, hacen un consumo de stock y ahí nos mandan el consumo del stock.
+- [01:47:09] Nosotros a ellos les entregamos una cantidad de stock para que lo puedan funcionar mensual.
+- [01:47:17] Y ellos nos entregan la vuelta de consumo por la producción.
+- [01:47:21] Por eso, por ejemplo, si tú creas una...
+- [01:47:26] Ya, pensamos como si tuviésemos el módulo de producción, ¿cierto?
+- [01:47:32] Tú, en base a la producción, tú ya tienes todo el consumo ya calculado, ¿cierto?
+- [01:47:41] ¿Y cómo validas que tu parking está utilizando los insumos o te está cerrando la producción con los insumos correctamente?
+- [01:47:59] Con la receta, ellos también manejan la receta. Y al final de cierre de temporada, yo te entregué, tú me entregaste.
+- [01:48:12] Ah, ya, porque la temporada completa pueden ser, son N producciones.
+- [01:48:16] Exacto. Por eso dentro de la construcción de la bodega, la propietaria empieza a mandar los materiales de los paquis. Por eso no quiere decir que yo estoy consumiendo ese material, sino que yo solamente lo estoy cambiando como de bodega.
+- [01:48:36] Sí, un depunto al lado interno.
+- [01:48:38] Un depunto al lado interno, claro.
+- [01:48:43] Ya, por eso.
+- [01:48:44] Ah, y ahí, por ejemplo, ¿tú te vas a manejar una bodega que se llame paqui?
+- [01:48:50] ¿Cómo?
+- [01:48:50] ¿Por qué? Porque, mira, por ejemplo, tenemos el mantenedor de bodegas, ¿cierto? Puede ir a la bodega, a batería. ¿Esas son reales o son de prueba?
+- [01:49:04] Son de prueba.
+- [01:49:05] A ver. Por ejemplo, ahí va a ir la bodega principal y la bodega del packing, ¿no?
+- [01:49:13] Sí. Por ejemplo, va a ir la chamonata y la bodega del packing.
+- [01:49:16] Ya, ok. Por ejemplo, entonces tú recepcionas, por eso tú decías la otra vez prácticamente lo que compramos es de paso, ¿no? Porque se va directo a la producción, ¿o no?
+- [01:49:30] Claro, o sea, lo que nosotros, sí, nosotros obtenemos bodas de las propias, pero nosotros cuando compramos los materiales para la temporada, se van repartiendo los páginas en base a la estimación que uno va a mandar a cada págin.
+- [01:49:42] Ya, te entiendo. Y, por ejemplo, ahí tú vas a saber cuánto les, ya me estoy pensando, las producciones ustedes las cargan, ¿cómo? No es por, no es en el cierre de temporada, ¿cierto?
+- [01:50:01] No, mensual.
+- [01:50:03] ¿Mensual?
+- [01:50:03] No, mensual, sí.
+- [01:50:05] Ya, por ejemplo, ya, entonces, entonces tú recibes la mercadería, haces el ingreso en mercadería y después haces un traspaso, traspaso entre bodegas, ¿cierto?
+- [01:50:18] Sí.
+- [01:50:19] Mueves lo de la bodega principal, se lo mueves a N, a N parking, no sé cuánto maneja.
+- [01:50:24] Se mueve entre bodegas, pero no se mueve de la cuenta de existencia.
+- [01:50:31] Ya, ok, entiendo. Y después la producción, la producción lo vas a, bueno, la receta en realidad no tiene relación con la bodega, ¿cierto? No va a tener relación.
+- [01:50:43] La receta, o sea, ¿tiene relación con la bodega? Al final yo la receta la armo en los insumos que tengo en bodega.
+- [01:51:13] La producción. Sí. O sea, yo cuando hago el consumo, no lo hago. Lo hace la producción en realidad, porque la receta es como una plantilla. Sí. Y este va con la bodega. Sí. Claro, porque toda esa producción, toda esa receta, porque puede ser N recetas, que tenga la producción X, todo ese movimiento va a ir sobre la bodega de mi packing. Sí.
+- [01:51:47] Sí, cada packing nos va a entregar un consumo de esto, y yo eso lo voy consumiendo en base a la existencia del packing, o en este caso de la botella.
+- [01:52:01] Claro. Y ese consumo entonces lo haríamos con una producción, ¿o no?
+- [01:52:07] Sí, se puede.
+- [01:52:09] Ya, pucha, tengo un bonito, no sé si se los voy a mandar. O sea, tengo la pizarra, pero no, mejor voy a hacer un algo más de ese.
+- [01:52:20] Con chatgeting se puede limpiar el vidrio, por si acaso.
+- [01:52:24] Pero, ahí, mira, yo, o sea, me quedó claro, ahí lo plasmamos después del sistema María Jesús, entiendo el flujo, entendí perfecto el flujo, que es el ingreso de mercadería, después del ingreso, el traspaso entre bodegas, y después viene la carga masiva de recetas, o crearlas también uno a uno con los insumos que se seleccionen.
+- [01:52:49] Y luego ya la producción iría contra NRZ.
+- [01:52:57] Sí.
+- [01:52:59] Y bueno, la producción iría asociada a la bodega.
+- [01:53:02] Ya.
+- [01:53:05] Yo tengo una duda, por ejemplo, con el tema de la recepción de documentos.
+- [01:53:10] Entonces, ¿se haría tal cual como tenemos el sistema, solamente que aquí en vez de ser como bodegas internas, serían como las bodegas de los packing, verdad?
+- [01:53:18] O sea, la recepción siempre va a ir a la bodega principal.
+- [01:53:22] Y después se hace el movimiento hacia los packing.
+- [01:53:24] Sí, porque nosotros tenemos igual bodega acá, contamos con tres bodegas que son propias, que ahí se van a hacer las recepciones, y además tenemos la bodega de los packing, que ahí se hacen los traspasos.
+- [01:53:38] Perfecto.
+- [01:53:38] Ahí, por ejemplo, ese traspaso de bodega, va a emitir una guía de despacho, ¿cierto? Que no constituye venta.
+- [01:53:45] Exacto.
+- [01:53:47] Ya, ok.
+- [01:53:50] Entonces aquí también nos faltaría un mantenedor de packings.
+- [01:53:54] No, porque ahí sería la bodega, ¿o no?
+- [01:53:58] Pero para analizar el envío de la guía.
+- [01:54:00] Lo que yo veo es que en la bodega va a ser como mi montador de packing, en realidad.
+- [01:54:05] Lo decía más que nada como para las guías de despacho.
+- [01:54:09] Ah, claro, porque ahí debería ir el destinatario, debería ser el packing, ¿o no?
+- [01:54:14] Sí, el destinatario del packing.
+- [01:54:16] Entonces igual deberíamos tener un mantenedor de packing.
+- [01:54:18] Pero yo creo que la guía de mi tía no la vamos a asociar a ningún movimiento de la bodega.
+- [01:54:29] Sí, pues tiene que haber ese traspaso entre bodegas.
+- [01:54:32] Sí, la guía que nosotros le invitamos va a tener que ir asociada al movimiento de la bodega.
+- [01:54:40] ¿Y tienen alguna guía de esa de traspaso entre bodegas? O sea, hacia el packing?
+- [01:54:47] Te la consigo.
+- [01:54:48] Ya.
+- [01:54:49] Entonces, el consumo sería por los packings prácticamente, y lo que nos faltaría sería entonces, porque ya con la recepción, o sea, con la recepción de la guía de despacho, haciendo esta modificación de incluir a los packings, tendríamos los ingresos, ya que packing fue.
+- [01:55:04] Nos faltaría entonces tener el tema del consumo, para controlar, dependiendo del packing, cuánto hizo, dependiendo de las recetas, por producción.
+- [01:55:15] Sí.
+- [01:55:17] Ya.
+- [01:55:20] La guía de emisión.
+- [01:55:21] Y esas guías, ¿de dónde se emitirían desde acá de insumos, cierto?
+- [01:55:32] O sea, actualmente la emitimos de acepta.
+- [01:55:35] Pero si la vamos...
+- [01:55:37] Acá deberían emitirse desde acá de la integración y visualizarse en el libro de guías.
+- [01:55:44] ¿En el libro de guías qué se está visualizando en este momento, Carlos?
+- [01:55:46] Solo recepción de guías de despacho.
+- [01:55:49] Ah, pero esas son las recibidas.
+- [01:55:51] Entonces aquí, no sé qué les parece, podríamos trabajar con dos pestañitas.
+- [01:55:54] Una que son las guías emitidas.
+- [01:55:58] Y en la otra serían las recibidas.
+- [01:56:03] Sí, porque actualmente se está vaciando desde el módulo de ventas.
+- [01:56:07] Hay un submódulo que se llama emitir DTE y aquí te deja vaciar la guía de despacho.
+- [01:56:11] Pero no sé si ahí, por ejemplo, estará bien que esté dentro del módulo de venta de Jesús,
+- [01:56:18] como que ahí hay que cargar el tema de la bodega y eso.
+- [01:56:22] O sea, si ya está resuelto acá...
+- [01:56:23] Sí, es guía de despacho y emitiría del módulo de insumo.
+- [01:56:28] Sí, de hecho, aquí le queda el despacho, por ejemplo, Sergio, está lo que indicaste, esa mejora de que tenga el camión y todo lo demás.
+- [01:56:36] Sí, porque ese departamento no va a tener acceso al módulo de venta nunca.
+- [01:56:45] Claro.
+- [01:56:47] Acá.
+- [01:56:49] Oye, pero igual ahí María Jesús yo lo dejaría, por ejemplo, dejaría una réplica dentro de insumo para emisión de guía.
+- [01:56:58] Sí.
+- [01:56:58] Igual después si ustedes quisieran emitir desde acá de ventas una guía, no sé, express, llamémoslo así, por servicio, no sé, la idea es que igual tengan la opción desde ventas.
+- [01:57:12] Sí, sería una técnica.
+- [01:57:14] Ya.
+- [01:57:15] Es decir que aquí está el tema de la guía de despacho, del RUD, la patente.
+- [01:57:20] Ya, bueno, la patente acá, ahora, ya, bueno, y el tema del detalle también para poder seleccionar la bodega, ¿no?
+- [01:57:27] Acá, sí.
+- [01:58:05] ¿Qué pasa ahí, María Jesús? Porque si tú trabajas con dos proveedores en paralelo, en el servicio puesto interno hay unas casillas de intercambio, ¿ya? Que solamente tú puedes registrar un solo correo, y que por lo general los proveedores de facturación electrónica, cuando habilita un cliente, cargan las casillas de ellos.
+- [01:58:24] ¿Para qué? Para que ahí pueden recibir las aceptaciones o rechazos del SII y en otra casilla que registran, en las casillas de intercambio, donde pueden recibir las aceptaciones o reclamos de tu cliente, ¿ya?
+- [01:58:39] Y bueno, también las facturas emitidas por tus proveedores, hacia ti. Entonces, si tú manejas dos proveedores de facturación electrónica, por ejemplo, no sé, acepta, va y actualiza las casillas de intercambio o las casillas de correo en el servicio de puestos internos, si tú emites desde GoSocket alguna guía de despacho, tú no te vas a enterar si fue aceptada o reclamada por el servicio de puestos internos.
+- [01:59:07] Ya te entiendo.
+- [01:59:07] Entonces, es un punto a considerar cuando se trabaja con dos, se puede, si tú emites la guía de despacho desde Acepta y tienes configurada la escasez de GoSocket, no hay ningún problema, si pasa bien, el servicio competente no te la va a aprobar, pero esa aprobación nunca la vas a poder ver reflejada en Acepta, ¿me explico?
+- [01:59:29] Sí.
+- [01:59:29] Ahí yo les recomiendo darle fuerza a lo que es GoSocket y dejar Acepta como en caso de SOS.
+- [01:59:45] O sea, igual es mío el crítico, pero como GoSocket todavía no nos responde,
+- [01:59:51] para el programa solo la guía de despacho es fundamental.
+- [01:59:55] Entonces, no sé, va a ser como difícil decir la guía de despacho si no han tenido...
+- [02:00:00] No separes modismos.
+- [02:00:02] Yo creo que va a ser más poblativa, en marzo va a ir de consumar.
+- [02:00:12] Fuera de lo que vendría a ser la emisión de la guía de despacho, ¿hay algún otro sistema que tengamos que replicar en Insumo Bodega?
+- [02:00:22] Aparte de los que teníamos que llegar a crear con esto del consumo.
+- [02:00:31] ¿Qué parece? ¿Movimientos?
+- [02:00:33] Ah, pero oye, pero no cerramos el tema de la guía de despacho. Por ejemplo, el libro de guías.
+- [02:00:37] Si lo íbamos a dejar con dos pestañitas, una que son las emitidas y las recibidas.
+- [02:00:42] Ah, no, pero la Mari dijo que las dejáramos para aparte de insumos, po.
+- [02:00:47] No, no, no, pero es en la emisión, po. En la emisión, pero el libro, el libro de guías, donde tú visualizas todas tus guías emitidas y recibidas.
+- [02:00:55] Sí, el libro de guías es ideal que sean emitidas y recibidas.
+- [02:00:59] Yeah.
+- [02:00:59] Pero todo en la misma pantalla o separado por una pestañita?
+- [02:01:06] Por una pestañita.
+- [02:01:08] Ya, ok.
+- [02:01:09] Y yo puedo ver la emitida por un lado y la recibida por el otro.
+- [02:01:56] Siendo bien sincero, el tema de los asientos para los activos, yo me... me pierdo, me pierdo todo.
+- [02:02:05] Vamos a hacer un archivo que sea de los asientos que se hacen contra movimientos de bodega.
+- [02:02:11] Ya, bueno. ¿Qué más faltaría? Ahí, por ejemplo, la semilla de la guía, iba a ser compasador.
+- [02:02:32] Ah, algo que se me fue a preguntar, porque entonces, y que no estaba considerado acá en lo que vendría a ser el libro de compras, al momento de realizar la asociación, es que acá no debería aparecer guía recibida, ¿cierto? Debería aparecer activos fijos.
+- [02:02:57] Sí.
+- [02:02:57] Perfecto, entonces tendríamos que tener también la asociación con los activos fijos, que eso no lo tenía considerado.
+- [02:03:11] Y lo mismo ahí quedaría, pues, ¿verdad? Si está asociado a un activo fijo no se puede asociar ni a proforma ni a orden de compra, ¿verdad?
+- [02:03:51] Y aquí nos faltaría entonces tener la posibilidad de seleccionar varias hijas de una madre acá en órdenes de compra insumo.
+- [02:03:58] Bueno, acá no tengo un ejemplo real, tengo solamente este que venía con una hija que quedó con un porcentaje fuera.
+- [02:04:07] Pero en ese caso de que tenga más de una hija, aquí debería mostrarme primero la madre, mostrarme las hijas, mostrar un cheque que me permita seleccionar una o varias, y dejar el resto como de la hija esparcializado para que se pueda recibir por otra factura, ¿verdad?
+- [02:04:24] Sí, pero recuerde que la orden de compra madre es una sola informativa.
+- [02:04:28] Vale.
+- [02:04:28] No, señor, porque la orden de compra madre va a ser la misma factura.
+- [02:04:31] Una duda, porque no sé, tengo en la cabeza de que... ¿Por qué tengo la asociación de guías recibidas? Porque las guías igual se pueden asociar a una orden de compra, entonces una orden de compra podría estar asociada a una guía y a una factura, ¿verdad? En la parcialización.
+- [02:05:07] No, porque las guías solamente nos van a ayudar para nutrir los insumos. Y eso va a generar las órdenes de compra madre e hija. La orden de compra va a asociar la factura.
+- [02:05:28] Pero van las órdenes de compra hija, ¿verdad?
+- [02:05:30] Sí.
+- [02:05:31] Sí. Entonces sí, porque si yo asocio una guía recibida a una orden de compra y esta no la completa, genera una orden hija, ¿verdad?
+- [02:05:44] Sí. Entonces la hija sí podría estar asociada a una guía que la creó y a una factura que la facturiza, vale la pregunta.
+- [02:05:51] Es que por eso no debería aparecer ahí, porque la guía solamente me va a aparecer en el módulo de insumos.
+- [02:05:58] Claro.
+- [02:05:58] Y ahí estamos en el módulo de compra. Entonces la compra siempre va a ir asociada a una orden de compra, a una orden de compra de insumos, a la de activos o a una proforma.
+- [02:06:09] ¿Es la orden de compra la que puede tener la doble...?
+- [02:06:12] Sí, la orden de compra va a estar asociada a una guía y a una factura.
+- [02:06:15] Ah, perfecto, perfecto. Porque me hacía ruido que estuviera hasta acá. No, pero no, no aplica.
+- [02:06:20] Sí.
+- [02:06:20] Del tema de las órdenes de aplicación, porque tengo aquí en sí creado el menú, pero no está aplicado la visualización, solamente está como reservado ahí el menú.
+- [02:07:04] Estas órdenes de aplicación, por lo que recuerdo, es como para declarar que se rebajó el stock de bodega, ¿verdad?
+- [02:07:12] Sí.
+- [02:07:14] ¿Y eso también puede ir asociado a una factura, guía de despacho?
+- [02:07:21] No.
+- [02:07:25] Solamente como que hace el descuento de stock de las bodegas, por así decirlo.
+- [02:07:29] Sí.
+- [02:07:30] Y en ese caso, me imagino que entonces sería listar las bodegas, listar los productos que va a tener esa orden de aplicación.
+- [02:07:44] Sí, y el stock.
+- [02:07:46] Y el stock que va a consumir.
+- [02:07:49] Sí, y que no te permita crear la orden de aplicación si el stock no está en la bodega.
+- [02:07:54] Ah, perfecto, perfecto. Solamente con stock positivo, por así decirlo.
+- [02:07:58] En ese caso, las órdenes de aplicación no tendrían que pasar por aprobación, ¿verdad?
+- [02:08:07] ¿También tendría que tener aprobación?
+- [02:08:14] Ya, entonces tendríamos que agregar un mantenedor, o sea, dentro de las órdenes de aprobación tendríamos que agregar un apartado para lo que vendría a ser las órdenes de aplicación.
+- [02:08:22] Sí.
+- [02:08:56] Bien. Perfecto. Entonces, consulta, porque ya tenemos aprobaciones de lo que vendrían a ser órdenes de compra e insumos. ¿Reutilizamos esas mismas para las órdenes de aplicación o las generamos como aparte?
+- [02:09:13] Que ya tenemos una parametrización de las reglas de aprobación, pero de insumos pensando en lo que es las órdenes de compra e insumos.
+- [02:09:25] Sí, sería la misma.
+- [02:09:27] ¿Sería la misma entonces?
+- [02:09:28] Sí, lo que pasa es que aquí lo que cambian son las empresas, pero en realidad es lo mismo.
+- [02:09:34] O sea, el insumo va a ser la misma que fue en el caso de Argosoft.
+- [02:09:40] Hablando de las empresas, todo lo que hemos hablado sería con ALM y AlmaWeb dividido, ¿cierto?
+- [02:09:47] ¿No tendrían interacción entre sí?
+- [02:09:49] No, ninguna empresa tendría interacción entre sí.
+- [02:09:52] ¿Viste? Acá es la opción de poder crear empresas, ¿cierto?
+- [02:09:55] Sí, sí. Acá en empresas te permite crear una nueva empresa.
+- [02:09:58] Ya, ninguna va a tener integración en este sitio.
+- [02:10:01] Ya.
+- [02:10:03] Claro, ahí se tendría que hacer como en caso de con emisiones de documento entre las dos.
+- [02:10:08] Exacto.
+- [02:10:08] Ya, perfecto.
+- [02:10:11] No hay ningún mantenedor entonces que necesiten ver la información de las dos empresas.
+- [02:10:24] Dentro de lo que vendría a ser el cierre de insumos,
+- [02:10:30] dentro de lo que vendría a ser el cierre de insumos,
+- [02:10:33] las órdenes de aplicación entrarían también al cierre, porque eso también serían como consumos, ¿verdad?
+- [02:10:38] Sí, o sea, en realidad la orden de aplicación sería el consumo del cierre de bodegas por el lado de la boca y bueno.
+- [02:11:01] Sí, sí, por los dos medios.
+- [02:11:05] En el cierre, entonces, estos dos tendrían que salir como, porque cada uno tiene como su cuenta, por así decirlo, para que se diferencien, o van a la misma?
+- [02:11:13] Van a distintas cuentas.
+- [02:11:22] ¿En qué parte del proceso se diferenciarían las cuentas?
+- [02:11:26] La única diferencia es que una consume la aplicación del campo y la otra los productos terminados. Por eso son distintos conceptos.
+- [02:11:35] Entonces una se va a ir a consumo de materiales y la otra se va a ir a materiales de exportación, algo así.
+- [02:11:46] El mismo proceso al final. Solamente uno consume lo agroquímico y otro consume las materias de exportación.
+- [02:11:58] Entonces aquí deberíamos tener como en el totalizado el tipo de cuenta y aquí poder seleccionar la cuenta al dedo y a la ver, ¿verdad?
+- [02:12:05] Sí.
+- [02:12:06] De cada uno de esos dos.
+- [02:12:07] Sí.
+- [02:12:09] Ok. Estoy pensando que más o menos podría cargar ahí.
+- [02:12:18] Esa selección yo la pondría como en una parametrización de bodega.
+- [02:12:25] ¿Para que sea predeterminado?
+- [02:12:27] Sí, para que sea predeterminado.
+- [02:12:29] Ok, tal cual como se ve acá y acá solamente te salgan los movimientos que van al mes.
+- [02:12:33] Exacto.
+- [02:12:34] Ya.
+- [02:12:36] Perfecto.
+- [02:12:37] Creo que teníamos parametrización de...
+- [02:12:40] No.
+- [02:12:42] ¿No le vas a agregar un nuevo menú aquí, submenú de la parametrización?
+- [02:12:45] Ya.
+- [02:12:46] ¿Esa parametrización podría ir en el mod no de bodega?
+- [02:12:50] ¿Como parametrización aparte?
+- [02:12:52] Sí.
+- [02:12:52] ¿Sí? Sí, sí, la dejo entonces en un submenú de bodega, de insumos bodega como parametrización.
+- [02:12:59] Sí, por favor.
+- [02:13:01] En ese caso, por ejemplo, porque nos pasaba igual, yo lo encontraba como un poco desordenado que se viera, por ejemplo, acá la parametrización de contratistas en parametrización.
+- [02:13:12] No sé si es que sería mejor tenerlo como también parametrización contratistas dentro.
+- [02:13:17] Sí, yo refería a cada módulo, como cada módulo con su parametrización ha sido más fácil de identificar qué estamos haciendo.
+- [02:13:24] Ya, voy a hacer entonces, por ejemplo aquí tenemos el de activo fijo, también lo voy a pasar aquí, dejar las parametrizaciones generales entonces.
+- [02:13:30] Sí.
+- [02:13:32] Ya, ¿qué más? Estoy pensando que otra cosa nos queda al debe de insumos, bodegas o proveedores. No sé si algo se nos ha olvidado ver.
+- [02:13:52] Yo lo que le voy a dar una vuelta es a lo nuevo al contratista, a lo que vamos a hacer en el tema de las proformas y las contratizaciones.
+- [02:14:07] Contratistas. ¿Del cierre? ¿Cómo se genera el cierre, por así decirlo?
+- [02:14:10] Del cierre, por si no tengamos dudas.
+- [02:14:13] Aquí entonces, por ejemplo, bueno, este mes no tenemos parametrizaciones, déjenme ir aquí a... si no me equivoco, en marzo teníamos... sí, aquí teníamos.
+- [02:14:27] Entonces acá pasarían directamente, independiente si es que tengan factura o no, todas las que están aprobadas, ya que la asociación de las facturas salía desde el módulo de compras.
+- [02:14:37] Respecto a eso, aquí entonces en proformas deberíamos eliminar la asociación de facturas, ¿verdad?
+- [02:14:48] Sí, que acá aparezca automática, que aparezca el listado de proformas y la asociación automática.
+- [02:14:55] Ya, por ejemplo, acá tenía un mes cerrado que era octubre, donde en este que ya está cerrado, para revisar lo que vendría a ser, por ejemplo, en este caso, si se dan cuenta, el periodo contable está cerrado y contratistas también está cerrado, obviamente.
+- [02:15:20] Entonces, acá es donde teníamos delante la duda, si es que era necesario, por ejemplo, de que se pudiera abrir el periodo contable, primero que nada, y abrir también el cierre de contratistas, que eso es lo que estábamos hablando delante, ¿verdad?
+- [02:15:36] Sí.
+- [02:15:37] En ese caso, por ejemplo, ¿existe la posibilidad de que varios meses después se tenga que hacer un ajuste a un periodo contable que ya está cerrado? ¿Ocurre eso?
+- [02:15:50] Créeme que sí.
+- [02:16:20] Era hacer el ajuste contable digitado asociado al ERC de la centralización.
+- [02:16:28] En ese caso, para poder identificar dónde se tiene que hacer el ajuste se tendría que ver por la proforma, ¿verdad?
+- [02:16:37] Sí.
+- [02:16:40] Entonces, por ejemplo, si el mes está cerrado, como en este caso que está cerrado el mes contable de contratistas,
+- [02:16:46] lo que imagino yo, que en vez de tener como aquí la posibilidad de abrir como el mes como tal,
+- [02:16:51] Ya que tenemos que hacer como este ajuste, lo que se había hecho es dejar como este botón de seleccionar proforma a reversar para que se revise esa proforma.
+- [02:16:58] Aquí te va a listar todas las proformas que están en el mes.
+- [02:17:02] Y acá te va a salir como el ajuste que se debería hacer al asiento, pero en ese caso, el ajuste como lo vimos, vamos a aprovechar este mes que también está cerrado, se tendría que hacer directamente a la línea, ¿verdad?
+- [02:17:18] Es que esa es la vuelta que le quiero dar porque si vamos a hacer el detalle por centro de costo, ese centro de costo puede estar asociado a 3, 4, 5 proformas.
+- [02:17:34] Entonces hay que ver cómo se va a visualizar mejor.
+- [02:17:38] Entonces acá deberíamos mantener un registro de por centro de costo, saber cuáles son las proformas que están asociadas a ese centro de costo en el cierre.
+- [02:17:47] Claro.
+- [02:17:47] Cosa de acá poder darle clic y ver cuáles son las proformas para realizar el ajuste.
+- [02:17:52] Sí.
+- [02:17:54] Entonces lo que deberíamos hacer, en este caso lo que me imagino, como ya pensando, actualmente obviamente no tenemos directamente, se puede llegar como a rastrearlo, pero no hay como una forma directa de verlo, lo que yo me imagino es que por ejemplo cuando se quiera hacer una corrección, ya sea se pueda realizar desde acá, identificando cuál es la proforma que se tiene que revisar, dándola aquí a reversar, o directamente desde acá, desde el cierre, seleccionando también la proforma, y eso nos debería levantar el asiento que se generó,
+- [02:18:23] La línea que corresponde a esa proforma y dentro poder acceder para realizar como ese ajuste. Mi duda es, por ejemplo, cuando yo realizo ese ajuste, porque por ejemplo este sería como el cierre, acá solamente debería actualizar los montos, ¿verdad?
+- [02:18:39] Podría actualizar los montos o podría cambiar el centro de costo. Las cuentas son las mismas.
+- [02:18:45] Ya, ya, la cuenta es la misma pero puede cambiar los montos, centro de costo y quizás la globosa también, ¿verdad?
+- [02:18:50] La labor.
+- [02:18:50] Perfecto. Entonces, a nivel de, como por ejemplo, de comprobante e imprimir, debería mostrar esta misma visualización, pero nosotros al ver el detalle desde acá, desde la página, nos debería mostrar aquí un, así como un identificador de que esta línea se editó, por ejemplo.
+- [02:19:09] Y ahí por dentro de esa línea ver las facturas, perdón, las proformas que están asociadas y hacer la modificación.
+- [02:19:19] Sí.
+- [02:19:20] Claro, entonces acá tendría que darle clic, poder ver como los centros de costo, darle clic al centro de costo, ver las proformas que están en ese centro de costo, elegir la proforma, y detallar que es la modificación que yo necesito.
+- [02:19:34] O sea, por ejemplo, en el asiento no es necesario que me aparezca toda esa información porque el asiento en sí es el ajuste que yo estoy haciendo, pero si por ejemplo en la reportería podría salir toda la información de esa responsabilidad.
+- [02:19:46] Perfecto, entonces en ese caso...
+- [02:19:48] Bueno, para llevar el consumo, no sé, de las labores del mes, yo voy a bajarle el reporte, no me voy a ir a la centralización del módulo.
+- [02:20:18] ¿Cuál va a ser como la línea que se va a modificar?
+- [02:20:20] Y cuando ya estén los dos aprobados, aquí debería decirme que está aprobado y aquí solamente mostrarme el ajuste realizado, ¿verdad?
+- [02:20:31] Sí.
+- [02:20:32] Y con un identificador de que se hizo una modificación solamente.
+- [02:20:35] Sí.
+- [02:20:36] Sí, porque al final también me importa la reportería.
+- [02:20:39] Perfecto.
+- [02:20:40] Entonces, lo que tiene que venir desde el módulo de contratistas cuando se tiene que hacer el cierre es la proforma, la cuenta y el centro de costo asociado para que se haga aquí ese cuadre.
+- [02:20:51] Sí.
+- [02:20:53] Perfecto. Y junto con los datos que se tienen que actualizar.
+- [02:20:56] Sí. Sí, en realidad acá me va a aparecer la información de toda la responsabilidad, pero por ejemplo cuando yo abaste el reporte yo voy a poder ver efectivamente como el total del mes.
+- [02:21:08] No que se modifique el asiento porque al final cuando yo quiera ver las labores que se hicieron en el mes, no me voy al asiento contable, sino que me voy a la reportería.
+- [02:21:38] En este caso, por ejemplo, ¿existe la posibilidad de que se haga, por ejemplo, no sé, pensando en que te lo podrían pedir uno a uno? ¿Puede de que tengan que hacer modificaciones a dos, tres proformas para que pidan las tres de una?
+- [02:21:56] Sí, puede ser.
+- [02:22:01] Perfecto.
+- [02:22:02] Puede ser porque quizás el problema fue el campo que se aplicó y ese campo puede estar en tres o cuatro proformas mensuales.
+- [02:22:08] Y aquí, por ejemplo, en estas solicitudes de reversa, fuera del antes-después, porque esto todavía es como si no está aquí, por ejemplo, si está este pendiente de aprobación, te mostraría solamente el antes-después, la cuenta que tiene que ver y la proforma.
+- [02:22:32] No va a estar como modificado, pero al momento de tener los dos vistos buenos, se debería aplicar automáticamente en el asiento el cambio, ¿verdad?
+- [02:22:39] Miren, que se apliquen el asiento no es tan importante, pero sí que en el reporte me traigan todos los movimientos asociados.
+- [02:22:50] ¿En cuál reporte en particular debería aparecer?
+- [02:22:53] En el reporte, cuando yo, no sé por qué, no sé por el reporte de labores mensuales, de consumo, claro, de trabajo en el centro de costo, donde yo descargue información.
+- [02:23:08] Porque actualmente, ¿dónde se vería como reflejado eso? Sería como en este reporte de auditoría, que tendría como la modificación que se hizo en el periodo contable.
+- [02:23:24] En el de contabilidad debería verse.
+- [02:23:26] Yo ahí bajo, por ejemplo, en reportería, cuando puedo ver las labores por centro de costo, yo voy a sacar las labores que se movieron en el mes.
+- [02:23:37] Entonces acá es importante que aparezca el movimiento en sí, la información.
+- [02:23:43] Aquí debería entonces detallarte el cambio que se hizo.
+- [02:23:46] No, aquí debería aparecerlo totalizado.
+- [02:23:48] Ah, el que ya está modificado y listo.
+- [02:23:50] Sí.
+- [02:23:51] Perfecto. ¿Y dónde deberías ver cómo la trazabilidad de esos cambios?
+- [02:23:54] No era apenas auditoría.
+- [02:24:26] Bueno, tenemos como ver una forma de, aquí en las labores, de ver si se hizo alguna modificación.
+- [02:24:30] ¿Es importante de que se vea de que se hicieron esos ajustes o que se vea el totalizado solamente?
+- [02:24:37] Yo creo que podría ser totalizado, si es que ahí lo que me importa ya es cómo se cerró el mes.
+- [02:24:42] Claro, y ahí en el detalle que se quiera ver, se podría ver también aquí desde auditoría las solicitudes que se hicieron de modificación en contratista.
+- [02:24:49] Claro, o sea, si quieren hacerle más registro, va a ir como en el módulo de auditoría.
+- [02:24:54] Pero cuando yo quiero bajar un reporte, lo que yo quiero es que me salga la información precisa, ¿no?
+- [02:25:01] Y en total, no.
+- [02:25:02] Perfecto. Entonces, ¿no se debería generar asientos?
+- [02:25:05] ¿Solamente se deberían actualizar y tener la trazabilidad de la modificación?
+- [02:25:10] Sí.
+- [02:25:13] Ya. Sí, creo que me quedó claro.
+- [02:25:16] No sé si hay alguna otra cosita que a lo mejor pienses que no tengamos con tanta claridad.
+- [02:25:20] ¿Referente al cierre?
+- [02:25:22] Como se genera la trazabilidad de la información, me va a salir como estaba anteriormente contabilizado, ¿cierto?
+- [02:25:31] ¿En contabilidad o en contradistas?
+- [02:25:34] En los dos.
+- [02:25:38] Mira, acá por ejemplo, en auditoría, cuando uno le da clic, te sale el estado anterior y el nuevo.
+- [02:25:45] Ya.
+- [02:25:46] Hay como una pequeña trazabilidad, pero no sé si es que te refieres como tener una trazabilidad como por detalle.
+- [02:25:52] O sea, me gustaría saber si aquí estaba cargado antes, ¿qué se modificó?
+- [02:26:07] Claro, o sea, como un detalle de lo que se cambió efectivamente, porque al final la droga se devuelve a cualquier cosa.
+- [02:26:25] Entonces, por ejemplo, aquí en proforma, si se hizo alguna modificación, aquí en la trazabilidad deberías poder ver el antes y el después.
+- [02:26:35] O, como te decía, si quieres verlo a mayor escala, podrías verlo directamente desde cada auditoría.
+- [02:26:42] Ahí tendrías como la opción de ver las modificaciones que se hicieron, y en cada una de las modificaciones, el dato que tenía antes y el dato que dejaron en la modificación.
+- [02:26:52] Respecto a lo que es activo, fijo, ¿esto también tendría que tener como un cierre de módulo?
+- [02:27:09] Sí, porque en el módulo salía el cálculo de la depreciación.
+- [02:27:15] Ya, sí, que aquí lo teníamos contemplado, pero este todavía no está construido.
+- [02:27:23] ¿Qué es lo que habíamos hablado, si no me equivoco, en la reunión antes de ir allá a preselección?
+- [02:27:28] Sí, eso me quedaría también pendiente, el tener el traspaso contable de activo, fijo, junto con estas modificaciones.
+- [02:27:39] Y en activo fijo, también debería solamente aquí generar y la asociación con documentos debería hacerse desde el módulo de compras, ¿verdad? No desde acá, igual como lo vimos en el otro.
+- [02:27:58] Sí, en activo fijo también.
+- [02:28:01] Perfecto. No sé si es que habrá alguna duda o algo que quieran revisar, aprovechando.
+- [02:28:25] Yo quedé mareado.
+- [02:28:27] Yo igual estoy un poco mareado, pero ahí con la nota después.
+- [02:28:30] Sí, sí, de hecho he intentado no ocupar el comodín de las reuniones de intermedio hasta tener hartas dudas.
+- [02:28:49] Ya, perfecto, perfecto.
+- [02:28:55] Saque reserva.
+- [02:28:57] Bueno, al menos por mi parte yo no tengo más que mostrar, me llevo a dar todos los ajustes que tenemos que realizar,
+- [02:29:11] El par de módulos que tenemos que generar, y yo creo que lo que sí te estaría molestando, Mari, que no lo hemos visto tanto en detalle, sería el cierre de activos fijos, pero eso yo creo que ya teniendo lo demás, lo vamos a dejar ahí en stand-by mientras.
+- [02:29:23] Ya.
+- [02:29:26] No sé, Sergio, a ver si tienes alguna duda tú.
+- [02:29:37] No, estoy aquí, pensé que estaba muteado, por eso no hablé.
+- [02:29:42] Escuchamos todo, Sergio.
+- [02:29:43] Ah, torre, torre.
+- [02:29:45] Escuché mis propiedades.
+- [02:29:47] No, yo por mi lado, bien, o sea, igual hay otra cosita. Ahora salió lo de producción y... Ah, cómo se me olvida esa palabra.
+- [02:30:00] ¿Tienes una aplicación?
+- [02:30:02] No, no, no.
+- [02:30:03] ¿La receta?
+- [02:30:04] La receta es.
+- [02:30:05] La receta.
+- [02:30:06] Sí.
+- [02:30:07] Sí.
+- [02:30:08] Vamos a buscar lo que podemos.
+- [02:30:09] Tengo que llegar aquí a la quincena.
+- [02:30:10] Tengo fe todavía.
+- [02:30:11] Tengo fe.
+- [02:30:12] Es el último que se pierde.
+- [02:30:13] Esa es la esperanza.
+- [02:30:14] Ah, también.
+- [02:30:15] No sé si ya la perdí cuando vi un tornado.
+- [02:30:16] María Jesús.
+- [02:30:17] Mira.
+- [02:30:18] Sí.
+- [02:30:19] Sí.
+- [02:30:20] Sí.
+- [02:30:21] Sí.
+- [02:30:22] Sí.
+- [02:30:23] Sí.
+- [02:30:24] Sí.
+- [02:30:25] Sí.
+- [02:30:26] Sí.
+- [02:30:27] Sí.
+- [02:30:28] Sí.
+- [02:30:29] Mira, con Mario, bueno, tú sabes que tenemos otro proyecto en paralelo, que es Freshen, ¿cierto?
+- [02:30:36] Sí.
+- [02:30:39] ¿Qué nos pasó? O sea, fue un... no sé si lo aprendí, pero yo, bueno, ya nos ha pasado con varios clientes,
+- [02:30:46] que nosotros igual, hace ya un tiempo le habíamos entregado un ambiente para que pudieran hacer algunas previsiones,
+- [02:30:52] Todo ese tipo de cosas.
+- [02:31:23] Por lo que tengo entendido está en gran parte ya listo. Que ustedes puedan, no sé, si bien nos juntamos los días martes y jueves, dentro de la semana también pueden hacer el jugado, el testeo de que esté funcionando correctamente, ¿me explico? Para que no nos pase lo que nos pasa.
+- [02:31:41] De hecho, mi idea, por eso era primero partir con la creación de los usuarios reales para que cada usuario pueda hacer la utilización del módulo en un ejemplo real. Por eso la primera que hice fue el tema de la parametrización, porque a mí me interesa que, por ejemplo, si la frena emite un orden de compra, efectivamente me llega a mí para la aprobación. Y se haga todo el flujo como corresponde.
+- [02:32:10] Sí, eso está dentro de nuestra planificación.
+- [02:32:14] Por eso me importa empezar a parametrizar. Ahora, mi duda es, porque ahora que vi que hay más páginas de AlmaWeb, en la página que tengo yo, se van a ir actualizando las cosas, ¿cierto?
+- [02:32:27] Sí, hoy día a la tarde queda con lo que estaba antes de esta reunión.
+- [02:32:31] Ya, entonces ahí mi idea es ir armando el plan de cuentas, ir armando el centro de costo real, las cuentas contables y el tema de los usuarios.
+- [02:32:41] Y una vez que ya vayamos a los módulos, ir haciéndolo como a ejemplo real.
+- [02:33:11] Son raros.
+- [02:33:13] Entonces, para no estar...
+- [02:33:17] Sí, tenía la duda, si yo eliminaba cosas, ¿estaba afectado? Porque yo estaba eliminando usuarios, eliminando...
+- [02:33:24] Claro, entonces, para separar las aguas, dejar a un lado una base para desarrollo y por otro lado la base adecuada del cliente.
+- [02:33:34] ¿Te parece, Carlos?
+- [02:33:35] Sí, sí, hoy día saliendo de la reunión, genero la actualización y hago la división de las dos bases.
+- [02:33:43] Claro. O lo otro que podríamos hacer, que igual sería más simple, crear una empresa de prueba.
+- [02:33:52] Sería ideal.
+- [02:33:54] También.
+- [02:33:55] Y ahí manejamos los registros que han asociado a la empresa, entonces todo lo que tú emites en esa empresa de prueba, no lo van a visualizar en las bases, entre comillas, productivas.
+- [02:34:05] ¿Sería para mi lado la empresa de desarrollo?
+- [02:34:12] No, no, sería para nosotros.
+- [02:34:13] Sí, para nosotros.
+- [02:34:14] Buscámosle como empresa de desarrollo.
+- [02:34:16] Ya, ya.
+- [02:34:17] Ahí lo que sí nos jugaría en contra es que, por ejemplo, con GoSocket, AlmaWeb y ALM tienen cada uno su ID independiente.
+- [02:34:29] Y va asociado al root.
+- [02:34:30] Entonces quizás, yo creo que deberíamos hacerlo con base de datos separada, Sergio, para no tener ese problema.
+- [02:34:37] Sí.
+- [02:34:37] Porque las emisiones, independiente tengamos las bases juntos, separadas por empresas, si hacemos emisiones entre las dos, que son las que podemos, que son ALM y AlmaWeb, van a llegar igual al otro.
+- [02:34:48] Entonces, si lo hacemos con una emisión de otro nombre, va a llegar con el root de AlmaWeb.
+- [02:34:55] Entiendo. ¿Ya? Mejor separamos entonces por ambiente.
+- [02:34:58] Ya.
+- [02:35:02] Pero en sí, la idea es que para María Jesús, para el equipo, sea el laurel que ya están manejando.
+- [02:35:07] Nosotros no adoptamos, hacemos cambio para nosotros. ¿Me explico?
+- [02:35:11] Sí, pero consulta, porque yo igual le he borrado cosas, ¿eso le afecta a usted?
+- [02:35:16] No.
+- [02:35:17] Sí, totalmente, totalmente.
+- [02:35:23] Nos hemos retrasado por eso.
+- [02:35:27] En ese caso también, María Jesús, cuando estés creando el usuario...
+- [02:35:31] ¿Te voy a borrar el botón de eliminar?
+- [02:35:35] Bloqueado, bloqueado el usuario.
+- [02:35:37] Go, cuando estés creando la parametrización de usuario también me puedes avisar y ahí me puedo conectar en caso de que también salga esta duda que teníamos, que al fin y al cabo era un cambio que se tenía que hacer de otro panel que teníamos que hacer que sea más accesible nomás.
+- [02:35:50] Sí, mira, yo creo que mañana me voy a dedicar a parametrizar, a parametrizar los usuarios, los permisos y todo lo que dimos hoy día.
+- [02:36:04] Ya.
+- [02:36:04] Y cualquier cosa te voy a ir avisando.
+- [02:36:06] Ya, genial.
+- [02:36:13] Ya, pues. Buenísimo.
+- [02:36:16] Buenísimo.
+- [02:36:17] Entonces,
+- [02:36:18] ¿Pueden dar un aviso?
+- [02:36:21] No, es que cualquier duda nos vaya avisando,
+- [02:36:23] así no avanza en vano.
+- [02:36:25] Tengo muchas dudas, pero las voy a
+- [02:36:27] pasar a un documento.
+- [02:36:31] Sí, o sea,
+- [02:36:32] la idea es que por último
+- [02:36:33] nos ocupemos el grupo de WhatsApp,
+- [02:36:35] ahí para que vayamos resolviendo
+- [02:36:37] y ahí que evidencia, y si es necesario una
+- [02:36:39] meet, si es que pueden, cinco minutitos,
+- [02:36:41] diez minutos, va a ganar.
+- [02:36:43] Genial.
+- [02:36:44] Así es, avanzamos a paso firme.
+- [02:36:46] Ya, buenísimo.
+- [02:36:48] ¿Ya?
+- [02:36:51] Sí.
+- [02:36:53] Ya pues, no sé si hay alguna otra duda.
+- [02:36:58] Sí, la reunión del jueves era para la mañana, ¿cierto? Para mandar la agenda de inmediato.
+- [02:37:04] Sí, mañana.
+- [02:37:06] A ver.
+- [02:37:07] Ahí yo tengo un temita. Yo creo que igual voy a poder conectarme como a las 10 porque a las 9 y media tengo una reunión, una daily diaria con el equipo de salud.
+- [02:37:16] Entonces, voy a llegar un poquito más tarde. Pero sí, igual me voy a conectar. O si quieren, la dejamos desde las 10 hacia adelante.
+- [02:37:26] La del jueves.
+- [02:37:27] Yo creo que mejor de las 10.
+- [02:37:28] Ya.
+- [02:37:29] De las 10 hacia la 1, si quieren, no sé.
+- [02:37:32] ¿Sí?
+- [02:37:33] Ya, lo voy a mandar de inmediato entonces.
+- [02:37:39] Bacán.
+- [02:37:42] Ya pues, con eso estamos entonces, creo.
+- [02:37:45] Perfecto.
+- [02:37:47] Muchísimas gracias, nos vemos el jueves.
+- [02:37:49] Gracias.
+- [02:37:50] Gracias a ustedes, nos vemos, chao.
+- [02:37:53] Que estén bien, chicos, chao, chao.
+- [02:37:56] Saludos, Juan y Medio.
+- [02:38:00] Grande Juan y Medio.
+- [02:38:02] Le gustó Juan y Medio.
+- [02:38:05] Yo llegué y hice un sándwich con ese lomo tan rico.
+- [02:38:08] No, hace rico.
+- [02:38:10] Sí, muy bueno.
+- [02:38:13] Muy bueno, muy bueno.
+- [02:38:15] Nos vemos, cuídense, que estén muy bien.
+- [02:38:17] Nos vemos, chao, chao.
