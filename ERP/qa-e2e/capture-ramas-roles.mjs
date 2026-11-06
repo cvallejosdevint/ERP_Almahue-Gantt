@@ -1,5 +1,5 @@
 import { chromium } from 'playwright-core';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir } from 'node:fs/promises';
 
 const out = 'E:/source/repos/Almahue/docs/sesiones/acuerdos-sala-2026-11-06';
 await mkdir(out, { recursive: true });
@@ -38,7 +38,7 @@ await page.evaluate(() => {
   }));
 });
 
-// 2. Navegar a /admin/aprobaciones (Esquema de Ramas)
+// 2. Navegar a /admin/aprobaciones (Esquema de Ramas con múltiples jefaturas)
 console.log('Navegando a /admin/aprobaciones...');
 await page.goto('http://127.0.0.1:5174/admin/aprobaciones', { waitUntil: 'networkidle' });
 await page.waitForTimeout(1000);
@@ -58,21 +58,25 @@ if (await btnEvaluar.count()) {
   await page.waitForTimeout(800);
 }
 
-// Tomar captura de la vista Esquema de Ramas con simulación
+// Tomar captura de la vista Esquema de Ramas con múltiples jefaturas y simulación
 await page.screenshot({ path: `${out}/despues-esquema-ramas-aprobacion.png` });
 console.log('Captura despues-esquema-ramas-aprobacion.png guardada exitosamente');
 
-// Medir cajas para anotaciones
-const boxesRamas = [];
-const btnRamasBox = await btnRamas.boundingBox();
-if (btnRamasBox) {
-  boxesRamas.push({
-    x: Math.round(btnRamasBox.x),
-    y: Math.round(btnRamasBox.y),
-    w: Math.round(btnRamasBox.width),
-    h: Math.round(btnRamasBox.height),
-    label: 'NUEVO: Pestaña Esquema de Ramas (Roles & Cargos)',
-  });
+// Abrir modal de configuración de un eslabón (ej. Jefatura de Riego)
+const editButtons = page.locator('button[title*="Configurar nombre"]');
+if (await editButtons.count()) {
+  // Clic en uno de los botones de edición de jefatura
+  await editButtons.nth(3).click().catch(() => {});
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: `${out}/despues-eslabon-configurar-modal.png` });
+  console.log('Captura despues-eslabon-configurar-modal.png guardada exitosamente');
+
+  // Cerrar modal
+  const btnCancelar = page.getByRole('button', { name: /Cancelar/i });
+  if (await btnCancelar.count()) {
+    await btnCancelar.click().catch(() => {});
+    await page.waitForTimeout(300);
+  }
 }
 
 // 3. Navegar a /admin/usuarios
@@ -81,7 +85,7 @@ await page.goto('http://127.0.0.1:5174/admin/usuarios', { waitUntil: 'networkidl
 await page.waitForTimeout(1000);
 await masTarde();
 
-// Tomar captura de la tabla de usuarios con la nueva columna
+// Tomar captura de la tabla de usuarios con la columna de Cargo
 await page.screenshot({ path: `${out}/despues-usuarios-cargo-arbol.png` });
 console.log('Captura despues-usuarios-cargo-arbol.png guardada exitosamente');
 

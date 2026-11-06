@@ -159,7 +159,7 @@
   </section>
 
   <section>
-    <h2>9. Admin - Esquema de Ramas (Roles & Reglas de Aprobación Unificadas)</h2>
+    <h2>9. Admin - Esquema de Ramas (Múltiples Jefaturas Operativas en Modo Demo)</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -167,10 +167,10 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, regla OR en jefaturas y simulador en vivo" />
+        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, múltiples jefaturas operativas y simulador en vivo" />
       </figure>
     </div>
-    <p class="nota">Se unifica la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) eliminando la necesidad de duplicar grupos. La Gerencia General está en el vértice común con tope ilimitado; las jefaturas de faena cuentan con regla de firma OR para agilizar compras sin trabas; y el simulador interactivo evalúa y resalta en vivo la ruta de escalamiento según monto.</p>
+    <p class="nota">Se unifica la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) eliminando la necesidad de duplicar grupos. La Gerencia General está en el vértice común con tope ilimitado; se incorporan múltiples jefaturas de ejemplo en modo demo (Jefaturas Fundos Norte y Sur, Riego y Fertilización, Maquinaria y Talleres, Recepción y Calidad, Planta y Embalaje, Frigorífico, Adquisiciones, Contabilidad y RRHH/Contratistas) con regla de firma OR para agilizar compras sin trabas; y el simulador interactivo evalúa y resalta en vivo la ruta de escalamiento según monto.</p>
   </section>
 
   <section>
@@ -186,6 +186,21 @@
       </figure>
     </div>
     <p class="nota">La grilla de Usuarios incorpora la columna de Cargo en Árbol Jerárquico. En el formulario de alta, el usuario simplemente selecciona su Cargo de la Rama (ej. Jefatura de Campo · Nivel 2), heredando automáticamente sus topes y línea de mando sin requerir configuración manual de grupos.</p>
+  </section>
+
+  <section>
+    <h2>11. Admin - Eslabones Configurables (Nombres, Padres y Personas Editables)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-eslabon-configurar-modal.png" alt="Nombres predefinidos rígidos sin personalización por el cliente" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, código, selección de eslabón superior y gestión de personas" />
+      </figure>
+    </div>
+    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código, nivel, a qué eslabón superior escala (padre), topes multimoneda, regla OR/AND y la asignación interactiva de personas al cargo.</p>
   </section>
 
   <div class="visor" id="visor" hidden>
