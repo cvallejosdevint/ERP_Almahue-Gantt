@@ -1,8 +1,21 @@
-# Acuerdos por Día — Últimas 3 Semanas (ERP Almahue)
+# Acuerdos por Día y por Semana — ERP Almahue
 
 Índice cronológico de todos los acuerdos levantados con el cliente (María Jesús, Fran, Lupe, Agustín, Mario), contrastados contra el código fuente y vinculados directamente a sus visores HTML de **recorrido paso a paso** y **comparación antes/después**.
 
-Periodo cubierto: **19 de Octubre de 2026 al 06 de Noviembre de 2026**.
+Periodo cubierto: **19 de Octubre de 2026 al 07 de Noviembre de 2026**.
+
+---
+
+## 📌 Informes Consolidados por Semana
+
+| Semana | Fechas Cubiertas | Documento Consolidado | Recorrido Interactivo (HTML) | Comparación Antes/Después (HTML) | Estado Global |
+|---|---|---|---|---|:---:|
+| **Esta Semana** | 02/11 al 07/11/2026 | [`informe-consolidado-requerimientos-semana-2026-11-02.md`](../informe-consolidado-requerimientos-semana-2026-11-02.md) | [🧭 Ver Recorrido (06/11)](../../sesiones/acuerdos-sala-2026-11-06/recorrido.html) | [🔍 Ver Comparación (06/11)](../../sesiones/acuerdos-sala-2026-11-06/comparacion.html) | **100% Auditado en Código (44/44 pts)** |
+| **Semana Anterior** | 26/10 al 30/10/2026 | [`informe-consolidado-requerimientos-semana-2026-10-26.md`](../informe-consolidado-requerimientos-semana-2026-10-26.md) | [🧭 Ver Recorrido Semana 26/10](../../sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html) | [🔍 Ver Comparación Semana 26/10](../../sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html) | **98.2% Cumplido (100% ERP, 54/55 pts)** |
+
+---
+
+## 📅 Detalle de Acuerdos por Día
 
 | Fecha | Documento de Acuerdos | Recorrido Interactivo | Comparación Antes/Después | Estado |
 |---|---|---|---|---|

@@ -18,7 +18,9 @@ Mapa vigente desde el 2026-09-28. El código de la app sigue en `ERP/erp_back` y
 | Auditoría de datos entre módulos: faltan, sobran, no cuadran (13/10) | `docs/requerimientos/auditoria-flujo-datos-2026-10-13.md` |
 | Cumplimiento vs cliente + GoSocket (21/10) | `docs/requerimientos/cumplimiento-cliente-2026-10-21.md` |
 | Matriz UI / normalizacion visual (04/11) | `docs/requerimientos/matriz-ui-normalizacion-2026-11-04.md` + skill `almahue-diseno` |
-| Acuerdos por día con recorridos y comparaciones HTML (3 semanas: 19/10 a 06/11) | [`docs/requerimientos/acuerdos-por-dia/README.md`](requerimientos/acuerdos-por-dia/README.md) |
+| Acuerdos por día y por semana con recorridos y comparaciones HTML (3 semanas: 19/10 a 07/11) | [`docs/requerimientos/acuerdos-por-dia/README.md`](requerimientos/acuerdos-por-dia/README.md) |
+| Informe consolidado de acuerdos — Esta Semana (02/11 a 07/11) | [`docs/requerimientos/informe-consolidado-requerimientos-semana-2026-11-02.md`](requerimientos/informe-consolidado-requerimientos-semana-2026-11-02.md) |
+| Informe consolidado de acuerdos — Semana Anterior (26/10 a 30/10) | [`docs/requerimientos/informe-consolidado-requerimientos-semana-2026-10-26.md`](requerimientos/informe-consolidado-requerimientos-semana-2026-10-26.md) |
 | Reunion cliente 21/10 (MJ, Fran, Lupe) | `docs/reuniones/transcripciones/transcripcion-2026-10-21-reunion-cliente.md` + minuta `docs/reuniones/minutas/reunion-2026-10-21-cliente.md` |
 | Reunion presencial 26/10 (manana ~01:24 + tarde ~01:54 reparada) | Transcripciones `transcripcion-2026-10-26-presencial.md` y `transcripcion-2026-10-26-presencial-tarde.md` |
 | Minuta presencial 26/10 v2.0 | `docs/reuniones/minutas/reunion-2026-10-26-presencial-v2.md` |
