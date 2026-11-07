@@ -203,6 +203,21 @@
     <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código, nivel jerárquico (entero o decimal como 2.1/2.2), la <strong>Modalidad de Aprobación en Reglas</strong> (Paralelo OR, Unánime AND, Escalonado), a qué eslabón superior escala (padre), topes multimoneda y la asignación interactiva de personas al cargo.</p>
   </section>
 
+  <section>
+    <h2>12. Admin - Creación Dinámica de Ramas y Asignación de Nivel de Rama</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-esquema-ramas-aprobacion.png" alt="Estructura fija y sin posibilidad de añadir ramas operativas adicionales" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-modal-nueva-rama-marcado.png" alt="Modal Nueva Rama con campo Nivel de Rama numérico, código, nombre, subtítulo y módulos asignados" />
+      </figure>
+    </div>
+    <p class="nota">El sistema permite crear libremente nuevas ramas para cubrir módulos presentes o futuros (ej. Contratistas, Insumos, Bodegas, Exportaciones). Cada rama cuenta con un campo numérico explícito de <strong>Nivel de Rama</strong> (1, 2, 3, 4, 5...) que organiza la jerarquía y el organigrama de manera ordenada. Además, se eliminó por completo todo rastro de los 20 grupos anteriores y barras legadas, dejando una arquitectura modular y escalable.</p>
+  </section>
+
   <div class="visor" id="visor" hidden>
     <div class="visor-bar">
       <strong id="visor-titulo"></strong>

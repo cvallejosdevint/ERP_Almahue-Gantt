@@ -38,18 +38,11 @@ await page.evaluate(() => {
   }));
 });
 
-// 2. Navegar a /admin/aprobaciones (Esquema de Ramas con múltiples jefaturas)
+// 2. Navegar a /admin/aprobaciones (Esquema de Ramas Dinámicas con Nivel de Rama)
 console.log('Navegando a /admin/aprobaciones...');
 await page.goto('http://127.0.0.1:5174/admin/aprobaciones', { waitUntil: 'networkidle' });
 await page.waitForTimeout(1000);
 await masTarde();
-
-// Asegurar que la vista de ramas esté activa
-const btnRamas = page.getByRole('button', { name: /Esquema de Ramas/i });
-if (await btnRamas.count()) {
-  await btnRamas.click().catch(() => {});
-  await page.waitForTimeout(500);
-}
 
 // Clic en el botón "Evaluar Ruta de Aprobación" del simulador
 const btnEvaluar = page.getByRole('button', { name: /Evaluar Ruta de Aprobación/i });
@@ -58,15 +51,30 @@ if (await btnEvaluar.count()) {
   await page.waitForTimeout(800);
 }
 
-// Tomar captura de la vista Esquema de Ramas con múltiples jefaturas y simulación
+// Tomar captura de la vista Esquema de Ramas con ramas dinámicas ordenadas por su nivel
 await page.screenshot({ path: `${out}/despues-esquema-ramas-aprobacion.png` });
 console.log('Captura despues-esquema-ramas-aprobacion.png guardada exitosamente');
+
+// Abrir modal de Nueva Rama
+const btnNuevaRama = page.getByRole('button', { name: /\+ Nueva Rama/i });
+if (await btnNuevaRama.count()) {
+  await btnNuevaRama.click().catch(() => {});
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: `${out}/despues-modal-nueva-rama.png` });
+  console.log('Captura despues-modal-nueva-rama.png guardada exitosamente');
+
+  // Cerrar modal
+  const btnCancelarRama = page.getByRole('button', { name: /Cancelar/i });
+  if (await btnCancelarRama.count()) {
+    await btnCancelarRama.click().catch(() => {});
+    await page.waitForTimeout(300);
+  }
+}
 
 // Abrir modal de configuración de un eslabón (ej. Jefatura de Riego)
 const editButtons = page.locator('button[title*="Configurar nombre"]');
 if (await editButtons.count()) {
-  // Clic en uno de los botones de edición de jefatura
-  await editButtons.nth(3).click().catch(() => {});
+  await editButtons.nth(2).click().catch(() => {});
   await page.waitForTimeout(600);
   await page.screenshot({ path: `${out}/despues-eslabon-configurar-modal.png` });
   console.log('Captura despues-eslabon-configurar-modal.png guardada exitosamente');
