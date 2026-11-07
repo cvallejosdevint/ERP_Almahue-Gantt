@@ -8,6 +8,8 @@ Periodo cubierto: **19 de Octubre de 2026 al 07 de Noviembre de 2026**.
 
 ## 📌 Informes Consolidados por Semana
 
+📄 **Documento Word Unificado (.docx):** [`informe-unificado-acuerdos-por-semana-erp-almahue.docx`](../informe-unificado-acuerdos-por-semana-erp-almahue.docx) *(Contiene la lista tipo matriz/checklist con checks de estado y el detalle pormenorizado por semana y día).*
+
 | Semana | Fechas Cubiertas | Documento Consolidado | Recorrido Interactivo (HTML) | Comparación Antes/Después (HTML) | Estado Global |
 |---|---|---|---|---|:---:|
 | **Esta Semana** | 02/11 al 07/11/2026 | [`informe-consolidado-requerimientos-semana-2026-11-02.md`](../informe-consolidado-requerimientos-semana-2026-11-02.md) | [🧭 Ver Recorrido (06/11)](../../sesiones/acuerdos-sala-2026-11-06/recorrido.html) | [🔍 Ver Comparación (06/11)](../../sesiones/acuerdos-sala-2026-11-06/comparacion.html) | **100% Auditado en Código (44/44 pts)** |

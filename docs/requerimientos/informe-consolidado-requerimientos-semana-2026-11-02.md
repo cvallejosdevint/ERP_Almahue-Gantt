@@ -139,3 +139,4 @@
 
 ---
 *Índice general de acuerdos por día: [`docs/requerimientos/acuerdos-por-dia/README.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/README.md)*
+
