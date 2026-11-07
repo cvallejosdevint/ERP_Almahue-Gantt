@@ -159,7 +159,7 @@
   </section>
 
   <section>
-    <h2>9. Admin - Esquema de Ramas & 3 Modalidades de Aprobación en Paralelo (OR, AND, Escalas 2.1/2.2)</h2>
+    <h2>9. Admin - Esquema de Ramas & 3 Modalidades de Aprobación en Paralelo (OR, AND, Escalas 3.1/3.2)</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -167,10 +167,13 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, cargos en paralelo y 3 modalidades de aprobación (OR, AND, Escalonado)" />
+        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en Rango 1, cargos en paralelo y 3 modalidades de aprobación (OR, AND, Escalonado)" />
       </figure>
     </div>
-    <p class="nota">Se estructura la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) con la Gerencia General en el vértice supremo. Los cargos de jefatura (Nivel 2) se despliegan en paralelo horizontalmente (eliminando la falsa cascada vertical). En las reglas de aprobación se configuran libremente 3 modalidades: <strong>1. En Paralelo (OR)</strong> como opciones no excluyentes (Fundos Norte y Sur; cualquiera visa para no frenar faena); <strong>2. Decisión Unánime (AND)</strong> en bloque conjunto vinculante (Planta + Calidad en empaque); y <strong>3. Escalas Secuenciales (2.1 ➔ 2.2)</strong> entre cargos por tramos de monto (Subjefe de Riego 2.1 ➔ Jefe de Riego 2.2) antes de escalar a Gerencia de Área.</p>
+    <p class="nota">Se estructura la administración de roles y aprobaciones mediante dos conceptos unificados donde <strong>el 1 es siempre el valor más importante</strong>:
+    <br>• <strong>Nivel de Rama (Ubicación & Herencia)</strong>: Nivel 1 = Dirección General (vértice supremo). Nivel 2 = Ramas Operativas Principales desplegadas en paralelo horizontal (Agrícola, Packing, Administración, Contratistas). Nivel 3+ = Sub-ramas dependientes ubicadas abajo.
+    <br>• <strong>Rango de Autoridad (Decisión de Personas)</strong>: Rango 1 = Gerencia General (decisión final ilimitada). Rango 2 = Gerencias de Área. Rango 3 = Jefaturas Operativas (3.1 ➔ 3.2 por tramos de monto). Rango 4 = Emisores / Asistentes (solo digitan).
+    <br>En las reglas de aprobación se configuran libremente 3 modalidades: <strong>1. En Paralelo (OR)</strong> como opciones no excluyentes (Fundos Norte y Sur; cualquiera visa para agilizar faena); <strong>2. Decisión Unánime (AND)</strong> en bloque conjunto vinculante (Planta + Calidad en empaque); y <strong>3. Escalas Secuenciales (3.1 ➔ 3.2)</strong> entre cargos por tramos de monto antes de escalar a Gerencia de Área.</p>
   </section>
 
   <section>
@@ -182,14 +185,14 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-usuarios-cargo-arbol-marcado.png" alt="Columna Cargo en Árbol Jerárquico con nivel, rama y topes" />
+        <img src="despues-usuarios-cargo-arbol-marcado.png" alt="Columna Cargo en Árbol Jerárquico con rango, rama y topes" />
       </figure>
     </div>
-    <p class="nota">La grilla de Usuarios incorpora la columna de Cargo en Árbol Jerárquico. En el formulario de alta, el usuario simplemente selecciona su Cargo de la Rama (ej. Jefatura de Campo · Nivel 2), heredando automáticamente sus topes y línea de mando sin requerir configuración manual de grupos.</p>
+    <p class="nota">La grilla de Usuarios incorpora la columna de Cargo en Árbol Jerárquico. En el formulario de alta, el usuario simplemente selecciona su Cargo de la Rama (ej. Jefatura de Campo · Rango 3), heredando automáticamente sus topes y línea de mando sin requerir configuración manual de grupos.</p>
   </section>
 
   <section>
-    <h2>11. Admin - Eslabones Configurables (Nombres, 3 Modalidades de Escala y Personas)</h2>
+    <h2>11. Admin - Eslabones Configurables (Nombres, Rangos 1 a 4, 3 Modalidades de Escala y Personas)</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -197,10 +200,10 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, selector de modalidad de aprobación (OR, AND, Escala 2.1), nivel decimal y gestión de personas" />
+        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, selector de modalidad de aprobación (OR, AND, Escala 3.1/3.2), Rango de Autoridad y gestión de personas" />
       </figure>
     </div>
-    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código, nivel jerárquico (entero o decimal como 2.1/2.2), la <strong>Modalidad de Aprobación en Reglas</strong> (Paralelo OR, Unánime AND, Escalonado), a qué eslabón superior escala (padre), topes multimoneda y la asignación interactiva de personas al cargo.</p>
+    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código identificador, el <strong>Rango de Autoridad (Decisión)</strong> (1 = GG, 2 = Gerencia de Área, 3 = Jefatura, 4 = Asistente), la <strong>Modalidad de Aprobación en Reglas</strong> (Paralelo OR, Unánime AND, Escalonado), a qué eslabón superior escala (padre), topes multimoneda y la asignación interactiva de personas al cargo.</p>
   </section>
 
   <section>
