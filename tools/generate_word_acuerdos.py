@@ -718,18 +718,32 @@ def create_document():
     # ──────────────────────────────────────────────────────────────────────────
     # GUARDAR DOCUMENTO
     # ──────────────────────────────────────────────────────────────────────────
+    def safe_save(document, target_path):
+        try:
+            document.save(target_path)
+            print(f"Documento guardado: {target_path}")
+            return target_path
+        except PermissionError:
+            alt_path = target_path.replace(".docx", "-actualizado.docx")
+            try:
+                document.save(alt_path)
+                print(f"AVISO: {target_path} está abierto en Word. Guardado como alternativa: {alt_path}")
+                return alt_path
+            except Exception as e:
+                print(f"Error al guardar {alt_path}: {e}")
+                return None
+
     out_dir = "E:/source/repos/Almahue/docs/requerimientos"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "informe-unificado-acuerdos-por-semana-erp-almahue.docx")
-    doc.save(out_path)
-    print(f"Documento Word guardado exitosamente en:\n{out_path}")
+    saved1 = safe_save(doc, out_path)
 
     # Copia en docs/sesiones/acuerdos-sala-2026-11-06/
     out_dir_sesion = "E:/source/repos/Almahue/docs/sesiones/acuerdos-sala-2026-11-06"
     os.makedirs(out_dir_sesion, exist_ok=True)
     out_path_sesion = os.path.join(out_dir_sesion, "informe-unificado-acuerdos-por-semana-erp-almahue.docx")
-    doc.save(out_path_sesion)
-    print(f"Copia guardada exitosamente en:\n{out_path_sesion}")
+    saved2 = safe_save(doc, out_path_sesion)
 
 if __name__ == "__main__":
     create_document()
+
