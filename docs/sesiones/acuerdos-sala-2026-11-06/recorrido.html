@@ -139,12 +139,12 @@
       },
       {
         mod: "Admin", cls: "param",
-        title: "9. Esquema de Ramas (Roles & Aprobaciones)",
+        title: "9. Esquema de Ramas & 3 Modalidades en Paralelo",
         img: "despues-esquema-ramas-aprobacion.png",
-        alt: "Esquema de Ramas con Gerencia General en la raíz y simulador en vivo",
+        alt: "Esquema de Ramas con Gerencia General en la raíz, cargos en paralelo y simulador en vivo",
         pins: [
           { x: 49.5, y: 19.5, t: "Vértice común: Gerencia General", d: "La Gerencia General (Don Sergio y Nicolás) encabeza el árbol jerárquico con tope ilimitado. Toda solicitud que exceda las gerencias de área escala directamente a este nivel." },
-          { x: 28.5, y: 38.0, t: "Ramas de Área y regla OR", d: "Cada área (Agrícola, Packing, Administración) tiene su línea de cargos con topes definidos. En jefaturas operativas con varias personas (Mario y Felipe en Campo), la regla OR permite que cualquiera firme para no trabar la faena." },
+          { x: 28.5, y: 38.0, t: "3 Modalidades en Paralelo (OR, AND, Escala)", d: "Los cargos hermanos se despliegan en paralelo: (1) Paralelo OR como opciones no excluyentes (Fundos Norte y Sur), (2) Decisión Unánime AND en bloque conjunto (Planta y Calidad), y (3) Escalas Secuenciales 2.1 ➔ 2.2 por tramos de monto (Riego) antes de escalar a Gerencia." },
           { x: 49.5, y: 78.5, t: "Simulador de Escalamiento", d: "Permite seleccionar el solicitante y el monto para ver en tiempo real la ruta resuelta: solicitudes menores se aprueban directamente en jefatura sin molestar a gerencias." }
         ]
       },
@@ -160,13 +160,13 @@
       },
       {
         mod: "Admin", cls: "param",
-        title: "11. Eslabones Configurables",
+        title: "11. Eslabones Configurables & Modalidades",
         img: "despues-eslabon-configurar-modal.png",
-        alt: "Modal para configurar nombres, topes y personas de cada eslabón",
+        alt: "Modal para configurar nombres, modalidades de aprobación y personas de cada eslabón",
         pins: [
           { x: 50.0, y: 25.0, t: "Nombre 100% Configurable", d: "El usuario puede escribir el nombre exacto de la jefatura o cargo que utiliza su empresa (ej. Jefatura de Riego, Jefatura Fundos Norte, etc.)." },
-          { x: 62.0, y: 37.0, t: "Escalamiento a Eslabón Superior", d: "Selector dinámico para definir a qué cargo superior de la jerarquía escala automáticamente este eslabón cuando se supera su límite." },
-          { x: 50.0, y: 64.0, t: "Asignación Dinámica de Personas", d: "Permite asociar y desasociar personas directamente al eslabón con regla de firma OR para no trabar la faena agrícola." }
+          { x: 50.0, y: 38.0, t: "Modalidad de Aprobación & Nivel Decimal", d: "Permite configurar si el eslabón opera como Opción en Paralelo (OR), Decisión Unánime (AND) o Escala Secuencial (2.1 ➔ 2.2), ingresando niveles enteros o decimales." },
+          { x: 50.0, y: 64.0, t: "Asignación Dinámica de Personas", d: "Permite asociar y desasociar personas directamente al eslabón con topes multimoneda y línea de mando automática." }
         ]
       }
     ];

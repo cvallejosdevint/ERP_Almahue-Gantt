@@ -159,18 +159,18 @@
   </section>
 
   <section>
-    <h2>9. Admin - Esquema de Ramas (Múltiples Jefaturas Operativas en Modo Demo)</h2>
+    <h2>9. Admin - Esquema de Ramas & 3 Modalidades de Aprobación en Paralelo (OR, AND, Escalas 2.1/2.2)</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
-        <img src="antes-esquema-ramas-aprobacion.png" alt="Configuración dispersa de 20 grupos repetitivos sin jerarquía visual" />
+        <img src="antes-esquema-ramas-aprobacion.png" alt="Aprobaciones monolíticas rígidas sin estructura de ramas ni paralelismo" />
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, múltiples jefaturas operativas y simulador en vivo" />
+        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en la raíz, cargos en paralelo y 3 modalidades de aprobación (OR, AND, Escalonado)" />
       </figure>
     </div>
-    <p class="nota">Se unifica la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) eliminando la necesidad de duplicar grupos. La Gerencia General está en el vértice común con tope ilimitado; se incorporan múltiples jefaturas de ejemplo en modo demo (Jefaturas Fundos Norte y Sur, Riego y Fertilización, Maquinaria y Talleres, Recepción y Calidad, Planta y Embalaje, Frigorífico, Adquisiciones, Contabilidad y RRHH/Contratistas) con regla de firma OR para agilizar compras sin trabas; y el simulador interactivo evalúa y resalta en vivo la ruta de escalamiento según monto.</p>
+    <p class="nota">Se estructura la administración de roles y aprobaciones por ramas (Agrícola, Packing, Administración) con la Gerencia General en el vértice supremo. Los cargos de jefatura (Nivel 2) se despliegan en paralelo horizontalmente (eliminando la falsa cascada vertical). En las reglas de aprobación se configuran libremente 3 modalidades: <strong>1. En Paralelo (OR)</strong> como opciones no excluyentes (Fundos Norte y Sur; cualquiera visa para no frenar faena); <strong>2. Decisión Unánime (AND)</strong> en bloque conjunto vinculante (Planta + Calidad en empaque); y <strong>3. Escalas Secuenciales (2.1 ➔ 2.2)</strong> entre cargos por tramos de monto (Subjefe de Riego 2.1 ➔ Jefe de Riego 2.2) antes de escalar a Gerencia de Área.</p>
   </section>
 
   <section>
@@ -189,7 +189,7 @@
   </section>
 
   <section>
-    <h2>11. Admin - Eslabones Configurables (Nombres, Padres y Personas Editables)</h2>
+    <h2>11. Admin - Eslabones Configurables (Nombres, 3 Modalidades de Escala y Personas)</h2>
     <div class="pair">
       <figure class="antes">
         <figcaption>Antes</figcaption>
@@ -197,10 +197,10 @@
       </figure>
       <figure class="despues">
         <figcaption>Después</figcaption>
-        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, código, selección de eslabón superior y gestión de personas" />
+        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, selector de modalidad de aprobación (OR, AND, Escala 2.1), nivel decimal y gestión de personas" />
       </figure>
     </div>
-    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código, nivel, a qué eslabón superior escala (padre), topes multimoneda, regla OR/AND y la asignación interactiva de personas al cargo.</p>
+    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código, nivel jerárquico (entero o decimal como 2.1/2.2), la <strong>Modalidad de Aprobación en Reglas</strong> (Paralelo OR, Unánime AND, Escalonado), a qué eslabón superior escala (padre), topes multimoneda y la asignación interactiva de personas al cargo.</p>
   </section>
 
   <div class="visor" id="visor" hidden>
