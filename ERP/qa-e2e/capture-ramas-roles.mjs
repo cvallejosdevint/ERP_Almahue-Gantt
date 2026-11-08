@@ -93,9 +93,25 @@ await page.goto('http://127.0.0.1:5174/admin/usuarios', { waitUntil: 'networkidl
 await page.waitForTimeout(1000);
 await masTarde();
 
-// Tomar captura de la tabla de usuarios con la columna de Cargo
+// Tomar captura de la tabla de usuarios con la columna de Cargo y Jefatura
 await page.screenshot({ path: `${out}/despues-usuarios-cargo-arbol.png` });
 console.log('Captura despues-usuarios-cargo-arbol.png guardada exitosamente');
+
+// Abrir modal de edición del primer usuario
+const editButtonsUsuarios = page.locator('button[title*="Editar"], button:has(svg.lucide-pencil), button:has(svg.lucide-edit-2), button:has(svg.lucide-edit)');
+if (await editButtonsUsuarios.count()) {
+  await editButtonsUsuarios.first().click().catch(() => {});
+  await page.waitForTimeout(700);
+  await page.screenshot({ path: `${out}/despues-modal-editar-usuario.png` });
+  console.log('Captura despues-modal-editar-usuario.png guardada exitosamente');
+
+  // Cerrar modal
+  const btnCancelar = page.getByRole('button', { name: /Cancelar/i });
+  if (await btnCancelar.count()) {
+    await btnCancelar.click().catch(() => {});
+    await page.waitForTimeout(300);
+  }
+}
 
 // 4. Navegar a /admin/organigrama
 console.log('Navegando a /admin/organigrama...');
