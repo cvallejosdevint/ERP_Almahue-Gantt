@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+    <title>Recorrido - aprobaciones unificadas y piso</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De dónde sale el grupo, el piso y quién queda sin grupo.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Parametrización", cls: "param",
+        title: "1. Piso en el mapa de OC",
+        img: "despues-reglas-piso.png",
+        alt: "Mapa de OC con Felipe Castro a partir de 500.000, sin recuadros",
+        pins: [
+          { x: 40.7, y: 38.2, t: "Piso de Felipe", d: "Administración, reglas de aprobación. Felipe Castro entra si el monto es mayor o igual a 500.000. Natalia Bravo cierra la cadena. No se envió una OC." },
+          { x: 55.7, y: 24.5, t: "Proformas", d: "El otro tipo de cadena. No usa los grupos de órdenes de compra. No se apretó Configurar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "2. Cadena de proformas",
+        img: "despues-proformas-cadena.png",
+        alt: "Mapa de proformas con Bruno Lagos y Carlos, sin recuadros",
+        pins: [
+          { x: 40.7, y: 38.2, t: "Bruno Lagos", d: "Con Proformas activo, el mapa muestra proformas test. Bruno Lagos entra desde 5.000. Carlos cierra la cadena. No se usa Compras - packing export." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "3. Una sola lista",
+        img: "despues-grupos-unificados.png",
+        alt: "Configuración con una tabla de grupos, tipo y contadores, sin recuadros",
+        pins: [
+          { x: 92.3, y: 23.7, t: "Filtro Tipo", d: "Configurar, Grupos. Un combo filtra Todos, Órdenes de compra o Proformas. La tabla de abajo es la misma lista." },
+          { x: 66.0, y: 70.1, t: "Sin grupo de OC", d: "Cuenta usuarios activos de la empresa de la sesión que no están en un grupo de Compras. El enlace abre Usuarios con ese filtro. No se apretó Guardar." },
+          { x: 81.3, y: 70.1, t: "Sin grupo de proformas", d: "La misma cuenta para Contratistas. Un usuario puede estar en un grupo de cada tipo. No se mezclan." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "4. Filtro de tipo, abierto",
+        img: "despues-filtro-tipo.png",
+        alt: "Combo Tipo abierto con Todos, Órdenes de compra y Proformas",
+        pins: [
+          { x: 92.3, y: 33.6, t: "Órdenes de compra o Proformas", d: "El combo está abierto. Elegir una opción deja en la tabla solo ese tipo. No se cambió. No se apretó Aplicar filtros." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "5. Alta: tipo e integrantes",
+        img: "despues-grupo-nuevo.png",
+        alt: "Nuevo grupo con tipo abierto, Elena y Felipe marcados, sin guardar",
+        pins: [
+          { x: 49.7, y: 24.9, t: "Tipo", d: "Un solo alta. El tipo se elige acá: órdenes de compra o proformas. Está abierto. No queda fijo por una sección." },
+          { x: 49.7, y: 56.0, t: "Integrantes primero", d: "Elena Rojas y Felipe Castro están marcados. Solo aparecen quienes pueden escribir esa pantalla. Se apretó Cancelar." },
+          { x: 49.7, y: 84.8, t: "Aprobador final", d: "Se elige entre los integrantes marcados y cierra la cadena. Vacío mientras no hay nadie marcado. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "6. Suplencia por tipo",
+        img: "despues-suplencia.png",
+        alt: "Nueva suplencia con tipo, grupos, rol a suplir y suplente, sin guardar",
+        pins: [
+          { x: 50.0, y: 28.4, t: "Tipo", d: "Primero el tipo: órdenes de compra o proformas. De ahí salen los grupos." },
+          { x: 50.0, y: 36.6, t: "Grupos donde está activo", d: "Con Órdenes de compra aparece Compras - packing export. Hay que marcar al menos uno. No se marcó." },
+          { x: 39.6, y: 44.8, t: "Rol a suplir", d: "Después de los grupos. Lista a quienes firman en esos grupos. El suplente va al lado. Se apretó Cancelar. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "7. Simulador bajo el piso",
+        img: "despues-simulador.png",
+        alt: "Simulador con 100.000 y bajo_umbral, sin enviar una OC",
+        pins: [
+          { x: 79.1, y: 44.0, t: "bajo_umbral", d: "Grupo Compras - packing export, monto 100.000. El primer escalón es 500.000, así que no pide aprobación. No se envió una OC. No se guardó." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "8. Admin de concepto",
+        img: "despues-admin-concepto.png",
+        alt: "Agregar administrador de concepto con Proformas y Bruno Lagos y Carlos, sin agregar",
+        pins: [
+          { x: 76.2, y: 40.5, t: "Usuarios del tipo", d: "El módulo está en Proformas. El combo Usuario abierto lista a Bruno Lagos y Carlos, que están en el grupo de proformas. Se apretó Cancelar. No se apretó Agregar." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "9. Destino del contador",
+        img: "despues-usuarios-sin-grupo.png",
+        alt: "Usuarios filtrados a sin grupo de Compras, sin guardar",
+        pins: [
+          { x: 43.6, y: 16.8, t: "Filtro sin grupo", d: "Sale del contador ámbar. La URL trae sinGrupo=Compras. Son los usuarios de la empresa de la sesión." },
+          { x: 54.0, y: 53.6, t: "Andres Pino", d: "Rol Ventas, sin grupo de OC en esta empresa. No se apretó Guardar usuario." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido - sin cuentas por tipo de documento</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De dónde sale el dato. Sin mapeo por tipo de documento.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "1. Menú sin mapeo por tipo",
+        img: "despues-asientos.png",
+        alt: "Menú Contabilidad abierto, sin Cuentas por tipo de documento",
+        pins: [
+          { x: 9.1, y: 49.6, t: "Períodos", d: "Configuración queda solo con Períodos contables. El ítem Cuentas por tipo de documento ya no está. No se pulsó Guardar." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "2. Destino de la ruta vieja",
+        img: "despues-asientos.png",
+        alt: "Comprobantes y asientos con el menú abierto",
+        pins: [
+          { x: 9.1, y: 55.9, t: "Asientos", d: "/contabilidad/config-sii redirige aquí. El asiento automático toma cuentas del plan y del documento, no de un mapeo por tipo. No se pulsó Contabilizar." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

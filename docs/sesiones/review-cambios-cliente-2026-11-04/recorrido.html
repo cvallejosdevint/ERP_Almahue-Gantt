@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido - Review cliente 03/11</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; max-height: calc(100vh - 24px); overflow-y: auto; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Review 03/11 - de donde sale el dato</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <a class="menu" href="comparacion.html">Comparacion</a>
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Contratistas", cls: "param",
+        title: "1. Traspaso y cierre - pendientes y arbol",
+        img: "despues-traspaso-cierre.png",
+        alt: "Traspaso contable con pendientes de asociacion",
+        pins: [
+          { x: 42.5, y: 25.1, t: "Pendientes de asociacion", d: "Tarjeta informativa: proformas aprobadas del periodo sin factura en Libro de compras. MJ pidio reconocer el gasto del mes aunque falte el DTE. Dato desde getCierreTraspaso / estados de proforma. No se pulso Centralizar." },
+          { x: 41.9, y: 34.6, t: "Cuentas del asiento Paso 1", d: "Debe 6-1-01-01-002 Mano de Obra Contratistas por Centro de costo vs Haber 2-1-08-02-003 Facturas por Recibir Contratistas por RUT. No se contabilizo." },
+          { x: 41.1, y: 67.4, t: "Desglose arbol", d: "Vista Labor > Centro de costo > Proforma del asiento de cierre. Misma fuente que el traspaso. No se reabrio el periodo." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "2. Proforma - edicion de items",
+        img: "despues-proformas-edicion.png",
+        alt: "Modal editar proforma con items",
+        pins: [
+          { x: 36.7, y: 60.4, t: "Items y centros de costo", d: "Filas editables de Labor, cantidad, precio y centro de costo. Base de la correccion post doble Visto Bueno sin tocar el asiento cerrado. No se pulso Guardar cambios." },
+          { x: 81.3, y: 68.7, t: "Guardar cambios", d: "Accion de persistir items. En esta captura no se apreto; solo se abrio el modal desde Ver / Editar." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "3. Libro de compras - Asociar factura",
+        img: "despues-asociar-factura-modal.png",
+        alt: "Modal asociar factura con pestanas nuevas",
+        pins: [
+          { x: 39.9, y: 21.4, t: "Pestana OC insumos", d: "Asocia factura a OC de insumos (madre/hijas). Sustituye el flujo viejo de Guias recibidas en este modal. No se vinculo." },
+          { x: 54.0, y: 21.4, t: "Pestana Activos fijos", d: "Vinculo compra de activo fijo desde Libro de compras (C-6). No se vinculo." },
+          { x: 67.7, y: 21.4, t: "Pestana Proformas", d: "Asociacion exclusiva desde Compras (no desde Contratistas). Exige cobertura 100% del neto. No se vinculo." },
+          { x: 74.3, y: 80.7, t: "Notificar diferencia", d: "Avisa al creador de la proforma cuando el neto no cuadra. No se envio notificacion." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "4. Ordenes de insumos - madre / hijas",
+        img: "despues-ordenes-insumos.png",
+        alt: "Grilla con OC hija y estados separados",
+        pins: [
+          { x: 23.7, y: 51.8, t: "Orden Madre / Hijas", d: "Columna de orden con acordeon de hijas (.1, .2) bajo la madre. Origen: listado insumos tipo INSUMOS." },
+          { x: 77.6, y: 51.8, t: "Estado Aprobacion", d: "Separado del estado de recepcion (pedido PM). No se aprobo ni envio a bandeja." },
+          { x: 87.1, y: 51.8, t: "Estado Recepcion", d: "Recepcion parcial / sin recepcion independiente de la aprobacion. No se recepciono guia." },
+          { x: 98.4, y: 65.6, t: "OC hija", d: "Fila hija visible bajo la madre. No se creo producto ni se guardo." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "5. Aplicacion campo y Recetas Packing",
+        img: "despues-ordenes-aplicacion-packing.png",
+        alt: "Pestanas de aplicacion y packing",
+        pins: [
+          { x: 29.3, y: 22.9, t: "Ordenes de Aplicacion", d: "Consumo agricola / campo con validacion de stock y cadena de insumos. Pestana 1 del centro." },
+          { x: 50.9, y: 22.9, t: "Recetas de Packing", d: "Mantenedor 1 a 1 de materiales de exportacion. Pestana activa en la captura." },
+          { x: 68.5, y: 22.9, t: "Produccion Mensual Packing", d: "Calcula consumo por cajas producidas hacia el cierre de bodega. No se cargo produccion." },
+          { x: 80.1, y: 11.3, t: "Importar plantilla Excel", d: "Carga masiva de recetas. No se importo archivo." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "6. Libro de guias - DTE 52 emitidas",
+        img: "despues-guias-emitidas-packing.png",
+        alt: "Guias emitidas traspaso packing",
+        pins: [
+          { x: 25.0, y: 20.8, t: "Guias Recibidas", d: "Recepcion de compras / existencia. Pestana pareja de Emitidas." },
+          { x: 42.6, y: 20.8, t: "Guias Emitidas", d: "Traspaso interno DTE 52 a Bodega Packing (no venta). Pestana activa." },
+          { x: 86.9, y: 11.3, t: "Emitir Guia DTE 52", d: "Accion de emitir guia de traspaso. No se emitio ni se guardo." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "conta",
+        title: "7. Cierre de bodega por consumos",
+        img: "despues-cierre-bodega.png",
+        alt: "Cierre mensual consumos agricola y packing",
+        pins: [
+          { x: 42.0, y: 28.0, t: "Consumo Packing", d: "Bloque de consumo de materiales de exportacion hacia el asiento de cierre. Fuente: produccion / recetas." },
+          { x: 53.6, y: 46.7, t: "Parametrizacion", d: "Cuentas debe/haber del modulo Insumos. Sin boton de reabrir cierre. No se centralizo." }
+        ]
+      },
+      {
+        mod: "Activo fijo", cls: "conta",
+        title: "8. Activo fijo - parametrizacion",
+        img: "despues-activo-fijo.png",
+        alt: "Maestro activo fijo con parametrizacion",
+        pins: [
+          { x: 21.9, y: 21.6, t: "Maestro y Depreciacion", d: "Pestana principal del maestro AF." },
+          { x: 29.5, y: 21.6, t: "Parametrizacion", d: "Cuentas y defaults del modulo, alineado a asociar AF en Libro de compras." },
+          { x: 41.0, y: 52.1, t: "Grafico consolidado", d: "Depreciacion mensual consolidada. Solo lectura en la captura." }
+        ]
+      },
+      {
+        mod: "Admin", cls: "param",
+        title: "9. Reglas de aprobacion - cualquier perfil",
+        img: "despues-reglas-aprobacion.png",
+        alt: "Modal nuevo grupo con integrantes y rol",
+        pins: [
+          { x: 36.7, y: 33.0, t: "Cualquier usuario activo", d: "Texto de regla: la cadena de compras admite cualquier usuario activo de la empresa (CHK-13)." },
+          { x: 26.1, y: 35.6, t: "Integrantes", d: "Busqueda y seleccion de miembros del grupo. No se guardo." },
+          { x: 16.8, y: 54.2, t: "Rol + grupo actual", d: "Cada usuario muestra Rol y grupo actual (o Sin grupo). No se pulso Guardar." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

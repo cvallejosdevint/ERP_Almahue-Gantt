@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Tesorería tanda 1 - antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tesorería tanda 1 - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, modo real, ERP local del 13/10/2026. Cartolas, Flujo de caja y Pagos se fotografiaron con el periodo de la sesión en 2026-09, porque las cartolas cargadas son de agosto y septiembre. Después el periodo volvió a 2026-10. Nómina, Estado de cuenta y Conciliación están en 2026-10. El recuadro verde y la etiqueta NUEVO están solo en la captura, no en el sistema. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra.</p>
+  </header>
+
+  <section>
+    <h2>Cartolas - asociar egresos a una nómina</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-cartolas.png" alt="Detalle de la cartola CLP con dos egresos marcados, sin la suma de lo seleccionado" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-cartolas-marcado.png" alt="Detalle de la cartola CLP con dos egresos marcados y la suma seleccionada, marcado en verde" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Pedido del cliente, demo 14/09 [01:02:42]: «Y esa selección tiene que calzar», «Sí, a la perfección».</li>
+      <li>Antes el sistema asociaba los egresos aunque no calzaran y solo mostraba un aviso. Ahora el panel muestra cuántos egresos van marcados y cuánto suman, y el servidor rechaza la asociación si esa suma (más los egresos que ya estaban en la semana) no calza con el total de la nómina. El rechazo no graba nada.</li>
+      <li>No se apretó Asociar nómina. Los dos egresos se marcaron solo para la foto.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Flujo de caja - total en pesos de todos los bancos</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-flujo-caja.png" alt="Flujo de caja con la vista en pesos apagada y un recuadro por moneda" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-flujo-caja-marcado.png" alt="Flujo de caja en pesos por defecto con el recuadro de total de todos los bancos, marcado en verde" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Pedido del cliente, demo 14/09 [01:12:30]: «sacamos el totalizado nomás de los bancos, aunque sea en dólar o en pesos, y después mandamos el informe en pesos».</li>
+      <li>La vista en pesos arranca encendida y el primer recuadro suma todos los bancos convertidos con el tipo de cambio del Banco Central del periodo. Los recuadros por moneda siguen al lado. Es solo visual: no cambia montos guardados.</li>
+      <li>No se apretó Registrar apertura ni Corregir.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pagos - qué hace el estado Pendiente</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-pagos.png" alt="Formulario Nuevo pago con el campo Estado sin explicación" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-pagos-marcado.png" alt="Formulario Nuevo pago con la ayuda del campo Estado, marcado en verde" />
+      </figure>
+    </div>
+    <ul class="nota">
+      <li>Pedido del cliente, tesorería 28/08 [línea 438]: «aquí igual te debería aparecer lo que está pendiente y lo que está calzado».</li>
+      <li>Antes un pago en Pendiente ya rebajaba la deuda en el estado de cuenta y en la nómina. Ahora Pendiente no toca nada; al pasar a Pagado se rebaja, y si vuelve a Pendiente se revierte. Un segundo pago de una factura sin saldo se rechaza. Además, el pago desde cartola registra en el estado de cuenta lo que salió del banco, y el número de documento se busca separando lo que es por pagar de lo que es por cobrar.</li>
+      <li>No se apretó Crear. El modal se cerró con Cancelar.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pantallas sin cambio visible</h2>
+    <ul class="nota">
+      <li>Nómina semanal (<a href="antes-nomina.png">antes</a>, <a href="despues-nomina.png">después</a>): se ve igual. Los días de atraso ahora se calculan al leer, y las facturas de compra toman como emisión y vencimiento la fecha del documento, no la de carga. Las dos facturas de la foto vencen el 31/10 y el 05/11, por eso siguen en 0 días.</li>
+      <li>Estado de cuenta (<a href="antes-estado-cuenta.png">antes</a>, <a href="despues-estado-cuenta.png">después</a>): se ve igual. Dejó de leer la tabla de anticipos de productor, ya no cuenta los pagos pendientes, y una NC aplicada a una factura queda calzada contra esa factura. En el aging la NC rebaja su factura en vez de sumar como deuda aparte.</li>
+      <li>Conciliación (<a href="antes-conciliacion.png">antes</a>, <a href="despues-conciliacion.png">después</a>): sin cambios en esta tanda.</li>
+    </ul>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "traspaso": [
+    {
+      "boxStr": "532,222,243,74",
+      "pinX": 42.5,
+      "pinY": 27,
+      "t": "Pendientes de asociación"
+    }
+  ],
+  "guia": [
+    {
+      "boxStr": "583,379,370,68",
+      "pinX": 50,
+      "pinY": 43,
+      "t": "Tipo de Despacho"
+    },
+    {
+      "boxStr": "957,379,370,68",
+      "pinX": 74.3,
+      "pinY": 43,
+      "t": "Tipo de Traslado"
+    }
+  ],
+  "cierre": [
+    {
+      "boxStr": "304,445,1184,134",
+      "pinX": 58.3,
+      "pinY": 53.3,
+      "t": "Parametrización por módulo"
+    }
+  ],
+  "oa": [
+    {
+      "boxStr": "538,313,460,334",
+      "pinX": 50,
+      "pinY": 50,
+      "t": "Modal PIN"
+    }
+  ]
+}

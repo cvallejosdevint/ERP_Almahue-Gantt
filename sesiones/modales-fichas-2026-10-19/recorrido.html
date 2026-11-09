@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido · fichas en tres columnas</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; max-height: calc(100vh - 24px); overflow: auto; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; max-height: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fichas anchas, tres columnas. No se guardó nada.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Administración", cls: "param",
+        title: "1. Empresa",
+        img: "despues-empresas.png",
+        alt: "Editar empresa ALM SERVICES, tres columnas, sin guardar",
+        pins: [
+          { x: 74, y: 20.5, t: "Giro, tercera columna", d: "La ficha pasa de dos columnas angostas a un modal de 1152 px. Fila 1: RUT, razón social y giro. Dirección ocupa la fila completa. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Administración", cls: "param",
+        title: "2. Usuario",
+        img: "despues-usuarios.png",
+        alt: "Editar usuario, secciones Cuenta, Acceso y Aprobaciones, sin guardar",
+        pins: [
+          { x: 74.5, y: 23.3, t: "Rol, tercera columna", d: "Nombre, email y rol quedan en una fila. Empresas, vigencia y aprobaciones van en secciones. El interruptor Activo reemplaza el checkbox. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Administración", cls: "param",
+        title: "3. Rol",
+        img: "despues-roles.png",
+        alt: "Editar rol Bodega / insumos, matriz de pantallas, sin guardar",
+        pins: [
+          { x: 32, y: 13.8, t: "Nombre del rol", d: "El modal del rol usa el mismo ancho (1152 px) para que la matriz de pantallas no quede apretada. La grilla de permisos sigue en una tabla. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "4. Cliente",
+        img: "despues-clientes.png",
+        alt: "Editar cliente, identificación, domicilio y comercial, sin guardar",
+        pins: [
+          { x: 74.5, y: 27.3, t: "Giro, tercera columna", d: "Identificación, domicilio fiscal y comercial, cada uno en tres columnas. Productor y Activo son interruptores. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Ventas", cls: "ventas",
+        title: "5. Prospecto",
+        img: "despues-prospectos.png",
+        alt: "Editar prospecto en tres columnas, sin guardar",
+        pins: [
+          { x: 74.5, y: 44.4, t: "Origen, tercera columna", d: "Lead, contacto y origen en la primera fila. Estado y fecha en la segunda. El modal ya no queda en el ancho chico. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "6. Contratista",
+        img: "despues-contratistas.png",
+        alt: "Editar contratista, cuatro secciones, sin guardar",
+        pins: [
+          { x: 74.5, y: 25.4, t: "E-mail, tercera columna", d: "Identificación, domicilio, contacto y vigencia. El proveedor de facturación queda en la tercera columna de Contacto. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "7. Ingreso diario",
+        img: "despues-ingreso.png",
+        alt: "Nuevo ingreso en tres columnas, sin crear",
+        pins: [
+          { x: 74.5, y: 21.8, t: "Cuartel, tercera columna", d: "Fecha, contratista y cuartel en una fila. Labor, actividad y tipo en la siguiente. El motivo ocupa el ancho. No se apretó Crear." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "8. Proforma",
+        img: "despues-proformas.png",
+        alt: "Editar proforma PF-00004, sin guardar",
+        pins: [
+          { x: 74.5, y: 35.7, t: "Moneda, tercera columna", d: "Número, contratista y moneda en una fila. El período y la cuenta de gasto comparten la siguiente. La tabla de ítems no repite el título Ítems. No se apretó Guardar cambios ni Guardar centros." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "9. Cuenta",
+        img: "despues-cuenta.png",
+        alt: "Editar cuenta ACTIVO, tres columnas, sin guardar",
+        pins: [
+          { x: 74.5, y: 32.7, t: "Tipo, tercera columna", d: "Código, nombre y tipo en una fila. Padre ocupa dos columnas e imputación la tercera. Centros, elementos y áreas van en la misma fila. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "10. Presupuesto",
+        img: "despues-presupuestos.png",
+        alt: "Editar presupuesto 2026, sin guardar",
+        pins: [
+          { x: 74.5, y: 44.4, t: "Monto, tercera columna", d: "Año, centro de costo y monto presupuestado en una fila. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "11. Orden de compra",
+        img: "despues-oc.png",
+        alt: "Detalle OC-2026-0021.1, ficha en tres columnas, sin recepcionar",
+        pins: [
+          { x: 68, y: 30.5, t: "Proveedor, tercera columna", d: "Estado, fecha y proveedor. Solicitante, creado por y solicitado a. Depto, moneda y afecto. El modal ocupa el ancho de la pantalla. No se apretó Recepcionar, Imprimir ni Editar orden de compra." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "12. Recepción",
+        img: "despues-recepciones.png",
+        alt: "Editar recepción OC-2026-0018, sin guardar",
+        pins: [
+          { x: 74.5, y: 42.7, t: "Tipo de cambio, tercera columna", d: "Número de OC, fecha y tipo de cambio en una fila. Moneda y monto en la siguiente. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "13. Proveedor",
+        img: "despues-proveedores.png",
+        alt: "Ficha de proveedor en tres columnas, sin guardar",
+        pins: [
+          { x: 74.5, y: 27.8, t: "Giro, tercera columna", d: "La pestaña Identificación de la ficha usa el mismo ancho y tres columnas. RUT, razón social y giro en la primera fila. No se apretó Guardar ficha." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "14. Artículo",
+        img: "despues-articulos.png",
+        alt: "Editar artículo 0001 palets, sin guardar",
+        pins: [
+          { x: 74.5, y: 21, t: "Subfamilia, tercera columna", d: "Código, familia y subfamilia en una fila. El detalle y la cuenta de ingreso ocupan el ancho. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "15. Movimiento",
+        img: "despues-movimientos.png",
+        alt: "Editar movimiento de bodega, sin guardar",
+        pins: [
+          { x: 74.5, y: 33.2, t: "Estado, tercera columna", d: "Fecha, tipo y estado en una fila. Bodega origen, bodega destino y artículo en la siguiente. La nota ocupa el ancho. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "16. Bodega",
+        img: "despues-bodegas.png",
+        alt: "Editar bodega BDGGER, sin guardar",
+        pins: [
+          { x: 74.5, y: 48.3, t: "Activa, tercera columna", d: "Código, nombre y el interruptor Activa en una sola fila. Esta ficha no tenía ancho propio: hereda el modal ancho de los listados. No se apretó Guardar cambios." }
+        ]
+      },
+      {
+        mod: "Tesorería", cls: "teso",
+        title: "17. Pago",
+        img: "despues-pagos.png",
+        alt: "Nuevo pago en tres columnas, sin crear",
+        pins: [
+          { x: 74.5, y: 36.6, t: "Proveedor, tercera columna", d: "Fecha, tipo y proveedor en una fila. Monto, medio y moneda en la siguiente. No se apretó Crear. No se pagó ningún documento." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

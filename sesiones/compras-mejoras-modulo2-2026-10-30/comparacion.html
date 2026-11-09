@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Módulo 2: Compras y Proveedores - Antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Módulo 2: Compras, Proveedores y Notas de Cobro - Antes y después</h1>
+    <p>Empresa ALMAHUE EXPORT SPA, ambiente local de desarrollo y periodo activo. El recuadro verde y la etiqueta NUEVO están colocados sobre las capturas para destacar las nuevas funcionalidades. Un clic abre la imagen en el visor. La rueda o las teclas + y - controlan el zoom. Flechas izquierda y derecha alternan entre el antes y el después. Esc cierra el visor.</p>
+  </header>
+
+  <!-- Par 1: OC Detalle Desglose Jerárquico Contable -->
+  <section>
+    <h2>1. Órdenes de compra: Detalle con Desglose Jerárquico Contable en Árbol (Item 2.4 / C-4)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-oc-detalle.png" alt="Modal de detalle de orden de compra clásico sin árbol contable" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-oc-detalle-marcado.png" alt="Modal de detalle con alternador de vista y desglose en árbol de cuatro niveles" />
+      </figure>
+    </div>
+    <p class="nota">Qué cambió: Se incorporó el componente interactivo de árbol contable de cuatro niveles (Cuenta Contable &gt; Centro de Costo &gt; Elemento de Gasto &gt; Líneas de Detalle) con cálculo ponderado de porcentajes respecto al total neto de la OC, junto con controles de expansión y colapso global. Qué no se apretó: No se ejecutó edición ni cierre de la orden de compra consultada.</p>
+  </section>
+
+  <!-- Par 2: Carga Masiva Planilla Excel Notas de Cobro Embarcadores -->
+  <section>
+    <h2>2. Notas de cobro: Carga Masiva y Prevalidación de Planilla Excel / CSV para Embarcadores (Item 2.7 / P-7)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-notas-cobro-embarcadores.png" alt="Modal de nueva nota de embarcador sin zona de subida de archivos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-notas-cobro-embarcadores-marcado.png" alt="Modal de nueva nota con zona de arrastrar y soltar archivo Excel y prevalidación automática" />
+      </figure>
+    </div>
+    <p class="nota">Qué cambió: Se habilitó la zona de carga de planillas Excel (.xlsx, .xls) y CSV con procesamiento en backend vía Multer y XLSX, prevalidando automáticamente contra las facturas del Libro de Compras y bloqueando su pago duplicado en Tesorería. Qué no se apretó: No se pulsó el botón Guardar para no crear registros definitivos en la base de datos durante la prueba visual.</p>
+  </section>
+
+  <!-- Par 3: Anulación Autorizada con PIN y Comprobante de Reverso -->
+  <section>
+    <h2>3. Notas de cobro: Flujo de Anulación Autorizada con PIN y Generación de Reverso Contable (Item 2.8)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-notas-cobro-anular.png" alt="Diálogo de anulación básico sin validación de PIN ni reverso formal" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-notas-cobro-anular-marcado.png" alt="Diálogo de anulación con requisito de motivo formal y PIN de 4 dígitos de administrador" />
+      </figure>
+    </div>
+    <p class="nota">Qué cambió: Se implementó la autorización obligatoria con PIN de 4 dígitos (Admin o AdminConcepto Compras) y motivo formal mínimo de 5 caracteres. Al anular, el backend invoca el generador de comprobantes de reverso contable invertido formal y libera de inmediato las facturas calzadas. Qué no se apretó: No se ingresó el PIN de confirmación para conservar intacto el estado de las notas de cobro activas.</p>
+  </section>
+
+  <!-- Par 4: Libro de Compras - Honorarios y Regla Notarial 1002 -->
+  <section>
+    <h2>4. Libro de compras: Registro de Boletas de Honorarios y Regla Notarial Estricta (Item 2.10 / P-5)</h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-libro-compras-honorarios.png" alt="Cabecera del libro de compras sin botón dedicado de registro de honorarios" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-libro-compras-honorarios-marcado.png" alt="Modal de registro de boleta de honorarios mostrando la alerta y requisitos de la Regla Notarial 1002" />
+      </figure>
+    </div>
+    <p class="nota">Qué cambió: Se añadió el botón 'Registrar honorarios' en la barra principal del Libro de Compras y el modal de registro con soporte para tipos de DTE 1001, 1002 y 1003. Para el tipo 1002 (exenta notarial), se aplica la regla restrictiva fail-closed que exige número formal de rendición de gastos y archivo adjunto de respaldo de pago notarial. Qué no se apretó: No se envió el formulario para no emitir boletas ficticias en el libro.</p>
+  </section>
+
+  <!-- Visor interactivo -->
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>Flechas izquierda / derecha: alternar antes y después. Teclas + y - : zoom. Esc cierra.</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo">
+      <img id="visor-img" src="" alt="Vista ampliada" />
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const visor = document.getElementById('visor');
+      const visorImg = document.getElementById('visor-img');
+      const visorTitulo = document.getElementById('visor-titulo');
+      const lienzo = document.getElementById('lienzo');
+      const btnIn = document.getElementById('zoom-in');
+      const btnOut = document.getElementById('zoom-out');
+      const btnReset = document.getElementById('zoom-reset');
+      const btnCerrar = document.getElementById('cerrar');
+
+      let zoom = 1;
+      let panX = 0;
+      let panY = 0;
+      let arrastrando = false;
+      let inicioX = 0;
+      let inicioY = 0;
+      let parActual = null;
+      let ladoActual = 'despues';
+
+      const pares = Array.from(document.querySelectorAll('section')).map(function (sec) {
+        const titulo = sec.querySelector('h2').textContent.trim();
+        const imgAntes = sec.querySelector('figure.antes img');
+        const imgDespues = sec.querySelector('figure.despues img');
+        return {
+          titulo: titulo,
+          antes: { src: imgAntes.src, alt: imgAntes.alt },
+          despues: { src: imgDespues.src, alt: imgDespues.alt }
+        };
+      });
+
+      function aplicarTransform() {
+        visorImg.style.transform = 'translate(calc(-50% + ' + panX + 'px), calc(-50% + ' + panY + 'px)) scale(' + zoom + ')';
+      }
+
+      function abrir(parIndex, lado) {
+        parActual = parIndex;
+        ladoActual = lado;
+        const par = pares[parActual];
+        const data = par[ladoActual];
+        visorImg.src = data.src;
+        visorImg.alt = data.alt;
+        visorTitulo.textContent = par.titulo + ' (' + (ladoActual === 'antes' ? 'Antes' : 'Después') + ')';
+        zoom = 1;
+        panX = 0;
+        panY = 0;
+        aplicarTransform();
+        visor.hidden = false;
+        visor.classList.add('abierto');
+      }
+
+      function cerrar() {
+        visor.classList.remove('abierto');
+        visor.hidden = true;
+      }
+
+      document.querySelectorAll('figure.antes img').forEach(function (img, idx) {
+        img.addEventListener('click', function () { abrir(idx, 'antes'); });
+      });
+
+      document.querySelectorAll('figure.despues img').forEach(function (img, idx) {
+        img.addEventListener('click', function () { abrir(idx, 'despues'); });
+      });
+
+      btnCerrar.addEventListener('click', cerrar);
+
+      btnIn.addEventListener('click', function () {
+        zoom = Math.min(zoom * 1.25, 4);
+        aplicarTransform();
+      });
+
+      btnOut.addEventListener('click', function () {
+        zoom = Math.max(zoom / 1.25, 0.4);
+        aplicarTransform();
+      });
+
+      btnReset.addEventListener('click', function () {
+        zoom = 1;
+        panX = 0;
+        panY = 0;
+        aplicarTransform();
+      });
+
+      lienzo.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+        zoom = Math.min(Math.max(zoom * factor, 0.4), 4);
+        aplicarTransform();
+      }, { passive: false });
+
+      lienzo.addEventListener('mousedown', function (e) {
+        if (e.button !== 0) return;
+        arrastrando = true;
+        lienzo.classList.add('arrastrando');
+        inicioX = e.clientX - panX;
+        inicioY = e.clientY - panY;
+      });
+
+      window.addEventListener('mousemove', function (e) {
+        if (!arrastrando) return;
+        panX = e.clientX - inicioX;
+        panY = e.clientY - inicioY;
+        aplicarTransform();
+      });
+
+      window.addEventListener('mouseup', function () {
+        arrastrando = false;
+        lienzo.classList.remove('arrastrando');
+      });
+
+      window.addEventListener('keydown', function (e) {
+        if (visor.hidden) return;
+        if (e.key === 'Escape') {
+          cerrar();
+        } else if (e.key === 'ArrowLeft') {
+          if (ladoActual === 'despues') abrir(parActual, 'antes');
+        } else if (e.key === 'ArrowRight') {
+          if (ladoActual === 'antes') abrir(parActual, 'despues');
+        } else if (e.key === '+' || e.key === '=') {
+          zoom = Math.min(zoom * 1.25, 4);
+          aplicarTransform();
+        } else if (e.key === '-') {
+          zoom = Math.max(zoom / 1.25, 0.4);
+          aplicarTransform();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

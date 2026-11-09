@@ -1,0 +1,54 @@
+%% AS-IS Agrosoft — procesos vistos en reuniones (R1, R2, R4, T28)
+%% Pegar en https://mermaid.live
+
+flowchart TB
+  subgraph ACC["Acceso"]
+    L[Login] --> UE[Última empresa]
+    UE --> MES[Elige mes contable y mes remuneración]
+    MES --> MOD[Módulos]
+  end
+
+  subgraph COMPRAS["Compras — proceso REAL"]
+    F1[Llega / existe factura del proveedor] --> OC[Contabilidad crea OC\nobserva nº factura]
+    OC --> AP[Jefe aprueba o rechaza\nen bandeja SIN correo]
+    AP --> REC[Recepción: solo fecha\nTC de ese día]
+    REC --> ASI1[Asiento: gasto vs facturas por recibir]
+    ASI1 --> REG[Registro de compra / asociar DTE]
+  end
+
+  subgraph COMPRAS_SW["Compras — lo que el software sugiere y NO usan"]
+    SOL[Solicitud de compra] -.-> OC
+  end
+
+  subgraph CONTR["Contratistas"]
+    TAR[Tarifario ciego] --> CTR[Contrato folio a mano]
+    CTR --> ENR[Enrolar personal]
+    ENR --> LAB[Labores diarias\nprecio a menudo desconocido]
+    LAB --> PRO[Proforma borrador / definitiva\nse envía al contratista]
+    PRO --> FAC[Contratista emite factura]
+    FAC --> ASO[Asociación 1 proforma por mes]
+    ASO --> TR[Traspaso: facturas por recibir]
+    FAC --> CIE[Cierre: 1 factura por contrato]
+  end
+
+  subgraph VENTAS["Ventas"]
+    SABE[Ya saben qué vender] --> FACT[Emisión en Acepta / GoSocket\nFUERA de Agrosoft]
+    FACT --> LV[Libro / contabilización posterior]
+    STK[Stock tránsito solo bodega]
+    STK --> VOK[Venta exige stock real]
+  end
+
+  subgraph TES["Tesorería"]
+    CART[Cartola digitada a mano] --> PAG[Pago: factura + banco\n+ código financiero + n° cartola]
+    PAG --> ASI2[Asiento banco vs proveedor\nCLP y USD]
+    PAG --> FC[Flujo de caja por código financiero]
+  end
+
+  subgraph CONT["Contabilidad núcleo"]
+    ASI1 --> MAY[Libro mayor / 8 columnas]
+    ASI2 --> MAY
+    TR --> MAY
+    LV --> MAY
+    MAY --> CIE2[Cierre POR MÓDULO]
+    CIE2 --> XML[Contab. electrónica 1 vez al año]
+  end

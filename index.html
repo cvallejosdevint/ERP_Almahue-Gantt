@@ -1,39 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>Manual cliente Almahue ERP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almahue ERP — Recorridos y Comparaciones de Sesiones Cliente</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap">
   <style>
-    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --side: #1c1917; }
-    * { box-sizing: border-box; }
-    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
-    aside { background: var(--side); color: #f5f5f4; padding: 16px 12px; overflow: auto; }
-    aside h1 { font-size: 1rem; margin: 0 8px 12px; }
-    aside p { margin: 0 8px 16px; color: #a8a29e; font-size: 13px; }
-    .g { margin: 0 0 10px; }
-    .g strong { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #a8a29e; padding: 8px; }
-    .g a { display: block; color: #fafaf9; text-decoration: none; padding: 6px 8px; border-radius: 8px; }
-    .g a:hover { background: #292524; }
-    .g a.dest { background: #292524; color: #fde68a; }
-    main { padding: 24px 32px; }
-    main h2 { margin: 0 0 8px; }
-    .nota { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.5; }
+    header { background: #15803d; color: #ffffff; padding: 32px 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    h1 { font-size: 1.75rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .subtitle { color: #bbf7d0; font-size: 0.95rem; margin-top: 4px; }
+    .badge-header { background: #14532d; color: #86efac; padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+    
+    main { max-width: 1200px; margin: 32px auto; padding: 0 24px; }
+    .intro-card { background: #ffffff; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; margin-bottom: 32px; }
+    .intro-title { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+    .intro-text { color: #475569; font-size: 0.92rem; }
+    
+    .legend { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; }
+    .tag-qa { background: #fef3c7; color: #92400e; padding: 3px 10px; border-radius: 6px; border: 1px solid #fde68a; }
+    .tag-code { background: #dbeafe; color: #1e40af; padding: 3px 10px; border-radius: 6px; border: 1px solid #bfdbfe; }
+    
+    .week-section { margin-bottom: 40px; }
+    .week-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+    .week-title { font-size: 1.25rem; font-weight: 700; color: #15803d; }
+    .week-count { font-size: 0.85rem; color: #64748b; font-weight: 600; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; }
+    .card { background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+    
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 8px; }
+    .card-date { font-size: 0.8rem; font-weight: 700; color: #15803d; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card-title { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; line-height: 1.35; }
+    .card-desc { font-size: 0.85rem; color: #64748b; margin-bottom: 16px; flex-grow: 1; }
+    
+    .card-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.15s ease; cursor: pointer; flex: 1; text-align: center; }
+    .btn-recorrido { background: #15803d; color: #ffffff; }
+    .btn-recorrido:hover { background: #166534; }
+    .btn-comparacion { background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; }
+    .btn-comparacion:hover { background: #e2e8f0; }
+    
+    footer { text-align: center; padding: 32px 24px; color: #94a3b8; font-size: 0.85rem; border-top: 1px solid #e2e8f0; margin-top: 48px; }
   </style>
 </head>
 <body>
-  <aside>
-    <h1>Almahue ERP</h1>
-    <p>Manual y speech 21/10/2026. Empresa Export. Datos nuevos. DTE ALM 61-65, cierre bodega 20260007.</p>
-    <div class="g"><strong>Presentacion</strong><a class="dest" href="recorrido.html">Gran recorrido (26 pasos)</a></div>
-    <div class="g"><strong>Inicio</strong><a href="recorrido-panel.html">Panel operativo</a></div><div class="g"><strong>Administración</strong><a href="recorrido-admin-empresas.html">Empresas</a><a href="recorrido-admin-plantilla.html">Plantilla documentos</a><a href="recorrido-admin-usuarios.html">Usuarios</a><a href="recorrido-admin-roles.html">Roles y permisos</a><a href="recorrido-admin-aprobaciones.html">Reglas de aprobación</a><a href="recorrido-admin-correos.html">Configuración de correos</a></div><div class="g"><strong>Parametrización</strong><a href="recorrido-param-monedas.html">Monedas</a><a href="recorrido-param-unidades.html">Unidades de medida</a><a href="recorrido-param-cc.html">Centros de costo</a><a href="recorrido-param-elementos.html">Elementos de costo</a><a href="recorrido-param-areas.html">Áreas de negocio</a><a href="recorrido-param-conceptos.html">Conceptos</a><a href="recorrido-param-codigos.html">Códigos financieros</a><a href="recorrido-param-tipos-doc.html">Tipos de documento</a><a href="recorrido-param-plan-cuentas.html">Plan de cuentas</a><a href="recorrido-param-indicadores.html">Indicadores BC</a><a href="recorrido-param-proveedores.html">Proveedores</a><a href="recorrido-param-contratista.html">Contratista</a><a href="recorrido-param-af.html">Activo fijo</a></div><div class="g"><strong>Contratistas</strong><a href="recorrido-ctr-listado.html">Listado</a><a href="recorrido-ctr-ingreso.html">Ingreso diario</a><a href="recorrido-ctr-proformas.html">Proformas y facturas</a><a href="recorrido-ctr-aprobaciones.html">Aprobaciones</a><a href="recorrido-ctr-auditoria.html">Auditoría</a><a href="recorrido-ctr-traspaso.html">Traspaso contable y cierre de mes</a><a href="recorrido-ctr-rep-ingresos.html">Reporte ingresos</a><a href="recorrido-ctr-rep-cc.html">Labores por centro de costo</a><a href="recorrido-ctr-rep-prod.html">Control de producción</a></div><div class="g"><strong>Ventas</strong><a href="recorrido-ventas-ov.html">Órdenes de venta</a><a href="recorrido-ventas-emitir.html">Emitir DTE</a><a href="recorrido-ventas-libro.html">Libro de ventas</a><a href="recorrido-ventas-clientes.html">Clientes</a><a href="recorrido-ventas-rep-sii.html">Libro de ventas SII</a><a href="recorrido-ventas-rep-cliente.html">Ventas por cliente y producto</a></div><div class="g"><strong>Compras</strong><a href="recorrido-compras-ordenes.html">Órdenes de compra</a><a href="recorrido-compras-aprobaciones.html">Aprobaciones</a><a href="recorrido-compras-libro.html">Libro de compras</a><a href="recorrido-compras-rep-pend.html">OC pendientes de recepción</a><a href="recorrido-compras-rep-depto.html">OC por depto y usuario</a></div><div class="g"><strong>Insumos / Bodega</strong><a href="recorrido-insumos-maestro.html">Maestro artículos</a><a href="recorrido-insumos-bodegas.html">Bodegas</a><a href="recorrido-insumos-stock.html">Stock por bodega / producto</a><a href="recorrido-insumos-movimientos.html">Movimientos / NC</a><a href="recorrido-insumos-cierre.html">Cierre de bodega</a><a href="recorrido-insumos-ordenes.html">Órdenes de insumos</a><a href="recorrido-insumos-aprobaciones.html">Aprobaciones</a><a href="recorrido-insumos-guias.html">Libro de guías</a></div><div class="g"><strong>Activo fijo</strong><a href="recorrido-af-maestro.html">Maestro</a><a href="recorrido-af-traspaso.html">Traspaso contable</a><a href="recorrido-af-reportes.html">Reportes</a></div><div class="g"><strong>Contabilidad</strong><a href="recorrido-conta-periodos.html">Períodos contables</a><a href="recorrido-conta-asientos.html">Comprobantes / asientos</a><a href="recorrido-conta-honorarios.html">Factores honorarios</a><a href="recorrido-conta-presupuestos.html">Presupuestos</a><a href="recorrido-conta-diario.html">Libro diario</a><a href="recorrido-conta-mayor.html">Libro mayor</a><a href="recorrido-conta-balance.html">Balance de 8 columnas</a><a href="recorrido-conta-er.html">Estado de resultados</a><a href="recorrido-conta-situacion.html">Situación financiera</a></div><div class="g"><strong>Tesorería</strong><a href="recorrido-teso-cartolas.html">Cartolas</a><a href="recorrido-teso-conciliacion.html">Conciliación</a><a href="recorrido-teso-flujo.html">Flujo de caja</a><a href="recorrido-teso-pagos.html">Pagos</a><a href="recorrido-teso-nominas.html">Nómina semanal</a><a href="recorrido-teso-cc.html">Estado de cuenta</a></div>
-  </aside>
+  <header>
+    <div class="header-container">
+      <div>
+        <h1>🌾 Almahue ERP · Recorridos y Comparaciones</h1>
+        <div class="subtitle">Repositorio Oficial en Línea de Pruebas, Pantallas y Validaciones de Sesión</div>
+      </div>
+      <div class="badge-header">GitHub Pages Online</div>
+    </div>
+  </header>
+
   <main>
-    <h2>Como usarlo en la presentacion</h2>
-    <div class="nota">
-      <p><a href="recorrido.html">Gran recorrido</a>: 26 pasos con Siguiente. Cadena ya guardada: OC-2026-0001 a 0005, DTE ALM 61-65, DTE Export 93, PF-00001, cierre CTR 20260005, cierre bodega 20260007, pago folio 64. Pins sobre PNG 1536x960.</p>
-      <p>Cada submodulo cuenta el proceso completo y termina con el comprobante en el listado mas el detalle de las lineas (cuentas, debe y haber). Menú vuelve al indice.</p>
-      <p>Las fotos no pulsan Guardar, Emitir, Contabilizar ni Pagar: el speech usa lo que ya quedo en la muestra, incluido el cierre de bodega 2026-10. Bitacora: <a href="gaps.md">gaps.md</a>.</p>
+    <div class="intro-card">
+      <div class="intro-title">Portal de Navegación y Evidencia Operativa</div>
+      <p class="intro-text">
+        Este portal contiene el despliegue en línea de todas las sesiones de contraste y validación con los usuarios clave de Agrícola Almahue (María Jesús, Fran, Lupe, Agustín, Mario y Don Sergio). Cada sesión cuenta con su visor de recorrido paso a paso a resolución 1536×960 y su comparativa interactiva antes vs después.
+      </p>
+      <div class="legend">
+        <div class="legend-item"><span class="tag-qa">⏳ Pendiente QA</span> Ajustado, corregido e integrado técnicamente; listo para validación formal de QA</div>
+        <div class="legend-item"><span class="tag-code">💻 Codeados pero sin revisión</span> Implementado en código fuente; en proceso de revisión de sala</div>
+      </div>
+    </div>
+
+    <!-- SEMANA 3 -->
+    <div class="week-section">
+      <div class="week-header">
+        <div class="week-title">Semana 3: Esta Semana (02/11 al 09/11/2026)</div>
+        <div class="week-count">4 Sesiones · 11 Pendiente QA · 33 Codeados</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">06/11 - 09/11/2026</span>
+              <span class="tag-qa">⏳ Pendiente QA</span>
+            </div>
+            <div class="card-title">Esquema de Ramas Jerárquicas, Normalización Visual e Integración Usuarios</div>
+            <div class="card-desc">Unificación Rango 1-4 vs Nivel 1-3+, selección secuencial en Usuarios sin jefatura manual, derivación de jefeId, sincronización de topes y orden 3.1 sobre 3.2.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">05/11/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Recetas por Centro de Costo, Topes de Aprobación y Stock Físico</div>
+            <div class="card-desc">Recetas asociadas al embalaje con centro de costo, tope obligatorio en último eslabón OC, stock sólo al confirmar físicamente la guía y alta de activo fijo originada en OC.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/acuerdos-noche-packing-org-2026-11-05/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/acuerdos-noche-packing-org-2026-11-05/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">04/11/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Normalización Visual almahue-diseno y Unificación Detalle/Edición</div>
+            <div class="card-desc">Cards plegables de totales, badges centrados, barra con filtro integrado y ciclo seguro de inactivar vs borrar definitivo en parametrización.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/review-cambios-cliente-2026-11-04/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/review-cambios-cliente-2026-11-04/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">03/11/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Traspaso de Proformas, Reversa y Calce de Guías Hijas</div>
+            <div class="card-desc">Prohibición de reapertura de periodos desde traspaso, wizard de reversa con 2 vistos buenos y ajuste de saldo de orden madre sólo con última guía recepcionada.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/gaps-reunion-03-11-2026-11-04/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/gaps-reunion-03-11-2026-11-04/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMANA 2 -->
+    <div class="week-section">
+      <div class="week-header">
+        <div class="week-title">Semana 2: Semana 26–30 Octubre (26/10 al 30/10/2026)</div>
+        <div class="week-count">5 Sesiones · 22 Codeados pero sin revisión</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">30/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Cobertura Parcial de Proformas y Compras Módulo 2</div>
+            <div class="card-desc">Pago parcial de proformas por fecha de compromiso, notas de cobro de embarcadores y validación estricta de asociación factura-OC antes de pago.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/compras-mejoras-modulo2-2026-10-30/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/compras-mejoras-modulo2-2026-10-30/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">29/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Doble Visto Bueno y Matriz 2x2 de Contratistas</div>
+            <div class="card-desc">Control de cuadrillas, jornales y tratos por faena, firma con PIN de supervisores y estado DEFINITIVA con permisos contratistas:write.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">28/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Tesorería Integral Lupe, Ver Cartola en Pesos y Devolución Insumos</div>
+            <div class="card-desc">Blindaje contra reimportaciones duplicadas, botón Ver en pesos con TC editable, asiento de banco anclado a CARTOLA:{id} y aging sin PAGO:{id}.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/tesoreria-ajuste-2026-11-04/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/tesoreria-ajuste-2026-11-04/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">27/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Balance de 8 Columnas Acumulativo y Alta de Activo Fijo</div>
+            <div class="card-desc">Balance tributario acumulativo anual desde el 1 de enero, notas de cobro masivas en Excel y alta de activo fijo condicionada a OC recepcionada.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">26/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Estados Financieros, Carga Masiva Agrosoft y Reglas OC</div>
+            <div class="card-desc">Estado de Resultados mensual vs Situación Financiera al 31/12, transacción atómica todo-o-nada en asientos e imputación contable múltiple en OC.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/parametrizacion-plan-oc-2026-10-27/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMANA 1 -->
+    <div class="week-section">
+      <div class="week-header">
+        <div class="week-title">Semana 1: Semana 19–23 Octubre (19/10 al 23/10/2026)</div>
+        <div class="week-count">5 Sesiones · 17 Codeados pero sin revisión</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">23/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Parametrización y Ciclo de Vida Seguro de Registros</div>
+            <div class="card-desc">Inactivar vs Eliminar definitivo para evitar pérdidas de datos maestros en fundos y centros de costo. Validación de RUT y giros en empresas.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/parametrizacion-formularios-2026-10-23/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/parametrizacion-formularios-2026-10-23/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">22/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Asientos Contables, Libros y Presupuestos</div>
+            <div class="card-desc">Comprobante queda ANULADO sin contra-asientos distorsionadores, filtro automático en mayor y campo comentario independiente en el detalle.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/correcciones-reunion-21-10-2026-10-22/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/correcciones-reunion-21-10-2026-10-22/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">21/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Guías Manuales, Hijas sin Saldo y Cierre Contratistas</div>
+            <div class="card-desc">Registro de guías de despacho manuales emitidas en terreno sin factura inmediata, control de saldos sobre orden madre y cierre de temporada contratistas.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/manual-cliente-2026-10-21/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/manual-cliente-2026-10-21/recorrido.html" target="_blank">🔍 Recorrido 21/10</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">20/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Procesos de Bodega, Devolución y Cierres DTE</div>
+            <div class="card-desc">Integración DTE con GoSocket en fail-closed, devolución sin alterar el documento físico original y bloqueo de movimientos por cierre mensual.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/gosocket-emision-2026-10-20/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/gosocket-emision-2026-10-20/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-top">
+              <span class="card-date">19/10/2026</span>
+              <span class="tag-code">💻 Codeados pero sin revisión</span>
+            </div>
+            <div class="card-title">Fichas de Contraparte y Modales de Edición</div>
+            <div class="card-desc">Ficha única por RUT compartida (cliente/proveedor/productor) con flag esProductor, click de fila separado de edición y gastos sin entrada a bodega.</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-recorrido" href="docs/sesiones/carlos-vs-jose-2026-10-19/recorrido.html" target="_blank">🧭 Recorrido</a>
+            <a class="btn btn-comparacion" href="docs/sesiones/carlos-vs-jose-2026-10-19/comparacion.html" target="_blank">🔍 Comparación</a>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+
+  <footer>
+    Agrícola Almahue ERP &copy; 2026 — Despliegue Oficial en GitHub Pages · Repositorio: ERP_Almahue-Gantt
+  </footer>
 </body>
 </html>

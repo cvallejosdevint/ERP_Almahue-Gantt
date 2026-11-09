@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Correcciones reunion 21/10 - recorrido</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; color: inherit; text-decoration: none; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .actions a.menu { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Correcciones reunion 21/10: de dónde sale el dato.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <a class="menu" href="comparacion.html">Comparación</a>
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Activo fijo", cls: "param",
+        title: "1. Maestro: KPI de IPC",
+        img: "despues-maestro.png",
+        alt: "Maestro de activo fijo con KPI IPC, sin guardar",
+        pins: [
+          { x: 88.0, y: 22.5, t: "IPC", d: "Sale del último periodo cargado en Parametrización › Activo fijo › IPC. Sin fila queda Sin carga. No se apretó Nuevo activo." }
+        ]
+      },
+      {
+        mod: "Activo fijo", cls: "param",
+        title: "2. Alta: solo factura de compras",
+        img: "despues-alta.png",
+        alt: "Alta de activo fijo con combo de facturas abierto",
+        pins: [
+          { x: 30.39, y: 37.45, t: "Factura de compras", d: "El activo nace de una factura del libro de compras. El combo queda abierto. No hay centro de costo ni carga inicial. No se apretó Guardar activo." },
+          { x: 69.61, y: 45.89, t: "Tipo de documento", d: "Texto de solo lectura (factura afecta, exenta, de compra o DIN). Lo rellena la factura, no se elige a mano." },
+          { x: 50.0, y: 52.22, t: "Vida útil (meses)", d: "Una sola vida útil, en meses. La preview de depreciación aparece al completar monto, meses e inicio. No se guardó." }
+        ]
+      },
+      {
+        mod: "Parametrización", cls: "param",
+        title: "3. IPC mensual",
+        img: "despues-parametrizacion.png",
+        alt: "Pestaña IPC abierta, sin guardar",
+        pins: [
+          { x: 41.71, y: 17.26, t: "Pestaña IPC", d: "Nueva pestaña junto a Tipos de documento. El listado de tipos queda de consulta." },
+          { x: 30.1, y: 27.7, t: "Periodo e IPC %", d: "Porcentaje mensual (ejemplo 0,8). La corrección monetaria corre en el traspaso. No se apretó Guardar IPC." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "4. Libro de guías: ingreso y Acepta",
+        img: "despues-guias.png",
+        alt: "Libro de guías con Excel Acepta e Ingreso manual",
+        pins: [
+          { x: 79.42, y: 9.0, t: "Excel Acepta", d: "Avisa que el import espera la muestra del cliente. No se importó ningún archivo." },
+          { x: 86.63, y: 9.0, t: "Ingreso manual", d: "Abre el formulario de guía digitada. Traer de GoSocket sigue a la derecha. No se pulsó Traer ni se contabilizó una fila." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "5. Guía manual y adjuntos",
+        img: "despues-guia-manual.png",
+        alt: "Modal de ingreso manual de guía, sin guardar",
+        pins: [
+          { x: 32.0, y: 62.0, t: "Adjuntos", d: "Se pueden adjuntar N archivos. Folio, RUT, líneas y Agregar línea quedan en el mismo modal. Se canceló: no se apretó Guardar guía." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "6. Madre al 100% con factura",
+        img: "despues-ordenes-insumos.png",
+        alt: "Órdenes de insumos con Todos y barra 2 de 2",
+        pins: [
+          { x: 32.2, y: 62.2, t: "2 de 2 con factura", d: "OC-2026-0006 cierra al asociar las facturas de las hijas. Se marcó Todos solo para ver el mes. No hay Contabilizar: el asiento va por recepción y cierre de bodega." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "conta",
+        title: "7. Cierre de bodega: cuentas y predeterminada",
+        img: "despues-cierre-bodega.png",
+        alt: "Cierre de bodega cerrado, cuentas debe y haber con boton predeterminada",
+        pins: [
+          { x: 48.0, y: 58.0, t: "Cuenta al debe", d: "Entrada proveedor a EXISTENCIA INSUMOS. El haber va a proveedores. El mes sigue CERRADO; no se reabrió ni se pulsó Cerrar mes." },
+          { x: 90.8, y: 52.2, t: "Guardar como predeterminada", d: "A la derecha de las cuentas Debe y Haber, guarda la selección para los siguientes cierres de bodega sin alterar el estado del periodo." }
+        ]
+      },
+      {
+        mod: "Activo fijo", cls: "param",
+        title: "8. Reportes: gráfico y desglose",
+        img: "despues-reportes-af.png",
+        alt: "Reportes de activo fijo con modal normalizado, tarjeta de 3 columnas y gráfico de últimos meses",
+        pins: [
+          { x: 37.8, y: 58.5, t: "Gráfico interactivo y rango", d: "Muestra la depreciación mensual y el valor neto contable en los últimos meses. Dispone de selector de rango Desde/Hasta y modo ampliado. No se modificó el mayor." },
+          { x: 45.0, y: 32.0, t: "Tarjeta estructurada y tabla", d: "Resumen a 3 columnas con Factura, Compra, Inicio, Vida útil y Depreciación acumulada. Abajo se lista la tabla de desglose mes a mes con botón Cerrar." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "9. Proveedores: lista normalizada",
+        img: "despues-proveedores-lista.png",
+        alt: "Lista de proveedores normalizada con estilo de Contratistas",
+        pins: [
+          { x: 48.2, y: 22.2, t: "Buscador y filtros reactivos", d: "Buscador integrado en vivo y selector de vigencia activo/inactivo con formato RUT homogéneo con Contratistas." },
+          { x: 93.0, y: 36.5, t: "Acciones de fila", d: "Menú estándar con Ver ficha (abre la consulta) y Editar (abre directamente el formulario). No se guardó ningún cambio." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "10. Ficha proveedor: modo lectura y editar",
+        img: "despues-proveedores-ficha.png",
+        alt: "Ficha de proveedor en modo lectura con encabezados y botón Editar en el pie",
+        pins: [
+          { x: 83.6, y: 87.9, t: "Botón Editar proveedor", d: "Al hacer clic en la fila se abre la ficha de solo lectura con datos limpios y banners en mayúsculas. El botón Editar desbloquea los inputs para modificar. No se apretó Guardar cambios." },
+          { x: 74.5, y: 87.9, t: "Botón Cerrar", d: "Permite salir de la consulta sin realizar modificaciones." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

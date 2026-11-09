@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido - Ciclo Completo de Reapertura, Doble Visto Bueno y Re-cierre</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --card: #fff;
+      --compras: #9a3412;
+      --ventas: #166534;
+      --conta: #1d4ed8;
+      --teso: #b45309;
+      --param: #0f766e;
+      --accent: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px 6px; max-width: 1440px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; font-weight: 700; }
+    .layout { display: grid; grid-template-columns: 290px 1fr; gap: 14px; max-width: 1440px; margin: 0 auto; padding: 4px 16px 12px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+    nav .rail-header { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 4px 8px 8px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 10px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 8px 10px; cursor: pointer; color: inherit; font: inherit; transition: background .15s ease; margin-bottom: 4px; }
+    nav button.step:hover { background: #f5f5f4; }
+    nav button.step.on { background: #f0ede6; font-weight: 600; outline: 1px solid #d6d3cb; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; font-size: 13px; line-height: 1.25; margin-top: 2px; }
+    .step-pills { display: flex; gap: 4px; margin-top: 6px; align-items: center; }
+    .step-pills .pill-btn { border: 1px solid #d6d3d1; background: #fff; border-radius: 9999px; font-size: 10px; font-weight: 700; padding: 1px 6px; color: #57534e; cursor: pointer; transition: all .15s ease; }
+    .step-pills .pill-btn:hover { background: #e7e5e4; }
+    .step-pills .pill-btn.active { background: #facc15; border-color: #eab308; color: #1c1917; font-weight: 800; transform: scale(1.08); box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    .bar-title-wrap { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .bar h2 { margin: 0; font-size: 1rem; font-weight: 700; }
+    .step-badge { display: inline-flex; align-items: center; padding: 3px 8px; font-size: 11px; font-weight: 800; border-radius: 6px; background: #1c1917; color: #fff; letter-spacing: .02em; }
+    .actions { display: flex; gap: 8px; align-items: center; }
+    .actions button, .actions a.menu { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 14px; color: inherit; text-decoration: none; font-weight: 600; font-size: 13px; transition: all .15s ease; }
+    .actions button:hover:not(:disabled) { background: #f5f5f4; border-color: #d6d3d1; }
+    .actions button:disabled { opacity: .35; cursor: default; }
+    .actions button.primary { background: #1c1917; color: #fafaf9; border-color: #1c1917; }
+    .actions button.primary:hover:not(:disabled) { background: #292524; }
+    .actions button.auto-btn { background: #fefce8; border-color: #fef08a; color: #854d0e; }
+    .actions button.auto-btn.active { background: #facc15; border-color: #eab308; color: #1c1917; font-weight: 700; }
+    .frame { position: relative; display: block; width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #fbfbfa; }
+    .frame img { display: block; width: 100%; height: auto; max-height: calc(100vh - 195px); object-fit: contain; }
+    button.pin { position: absolute; width: 32px; height: 32px; margin: -16px 0 0 -16px; padding: 0; border-radius: 50%; border: 2.5px solid #fff; color: #fff; font-weight: 800; font-size: 15px; box-shadow: 0 3px 8px rgba(0,0,0,.5); z-index: 2; opacity: .78; cursor: pointer; transition: transform .2s ease, opacity .2s ease; }
+    button.pin:hover { opacity: 1; transform: scale(1.15); z-index: 6; }
+    button.pin.on { width: 42px; height: 42px; margin: -21px 0 0 -21px; font-size: 19px; opacity: 1; outline: 3.5px solid #facc15; outline-offset: 2px; z-index: 10; transform: scale(1.1); animation: pinPulse 1.8s infinite; }
+    @keyframes pinPulse {
+      0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.75), 0 3px 8px rgba(0,0,0,.5); }
+      70% { box-shadow: 0 0 0 12px rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,.5); }
+      100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0), 0 3px 8px rgba(0,0,0,.5); }
+    }
+    .card { margin-top: 10px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 18px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+    .card-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+    .card h3 { margin: 0; font-size: 0.98rem; font-weight: 700; color: #1c1917; display: flex; align-items: center; gap: 8px; }
+    .card .pin-tag { font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 9999px; background: #facc15; color: #1c1917; letter-spacing: .02em; }
+    .card p { margin: 0; color: #44403c; line-height: 1.45; font-size: 14px; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; pt-2; border-top: 1px dashed var(--line); font-size: 11px; color: #78716c; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ciclo de Doble Visto Bueno y Bandeja de Reversas</h1>
+    <div class="actions">
+      <button type="button" id="autoBtn" class="auto-btn" title="Avanza automáticamente por cada detalle de número">▶ Reproducir Automático</button>
+      <a class="menu" href="comparacion.html">Ver Comparación</a>
+      <button type="button" id="prevBtn">← Anterior</button>
+      <button type="button" id="nextBtn" class="primary">Siguiente →</button>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div class="bar">
+        <div class="bar-title-wrap">
+          <span class="step-badge" id="stepBadge">Paso 1 de 5</span>
+          <h2 id="stepTitle"></h2>
+        </div>
+      </div>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "1. Solicitud de Reapertura con Justificación",
+        img: "despues-paso1-solicitud-reapertura.png",
+        alt: "Modal de solicitud formal de reapertura con justificación de ajuste y aviso de período contable cerrado",
+        pins: [
+          { x: 50.0, y: 56.8, t: "Justificación Obligatoria", d: "El administrativo ingresa el motivo fundado de la corrección (horas de cuadrilla en Cuartel 3). Al estar el mes contable cerrado, el sistema advierte que requerirá autorización previa con PIN de Contratistas y posteriormente de Contabilidad." },
+          { x: 50.0, y: 64.1, t: "Aviso de Período Contable Cerrado", d: "Al detectar que el período contable 2026-08 se encuentra cerrado, la interfaz notifica formalmente que se requerirá el flujo secuencial de Doble Visto Bueno (Abastecimiento y Contabilidad)." },
+          { x: 56.4, y: 72.1, t: "Enviar Solicitud a Jefaturas", d: "Al pulsar Enviar Solicitud a Jefaturas, el sistema genera el folio SOL-REV-2026-001 y notifica internamente al Administrador de Contratistas para su primera revisión técnica." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "2. Primer Visto Bueno (Jefatura de Contratistas con PIN)",
+        img: "despues-paso2-vb-contratistas.png",
+        alt: "Tarjeta de seguimiento de solicitud mostrando el primer visto bueno de Contratistas aprobado con PIN y esperando Contabilidad",
+        pins: [
+          { x: 90.0, y: 54.5, t: "Estado: Esperando VºBº Contabilidad", d: "El badge superior refleja que el primer paso técnico está completado y que el flujo se encuentra derivado a la bandeja de Contabilidad." },
+          { x: 39.2, y: 76.9, t: "1º VºBº Aprobado con PIN por Pablo", d: "Pablo (Jefatura de Contratistas) validó en terreno la pertinencia del ajuste y autorizó ingresando su clave PIN de 4 dígitos (4821). Queda constancia de fecha, hora y justificación técnica." },
+          { x: 92.3, y: 78.2, t: "Derivación a Bandeja Contable", d: "Como el mes contable 2026-08 está cerrado, la proforma permanece resguardada y se habilita el acceso directo para el segundo visto bueno de Contabilidad." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "3. Bandeja de Reversas en Contabilidad (Segundo Visto Bueno con PIN)",
+        img: "despues-paso3-menu-reversas-contabilidad.png",
+        alt: "Bandeja de solicitudes de reversa en Contabilidad con modal de autorización PIN",
+        pins: [
+          { x: 8.5, y: 54.0, t: "Menú Solicitudes de Reversa", d: "Nuevo submódulo en Contabilidad (ubicado antes de Reportes) que centraliza, clasifica y audita todos los pedidos de reapertura provenientes de los módulos operativos." },
+          { x: 50.0, y: 62.0, t: "Autorización con PIN Contable", d: "El Administrador de Contabilidad (Fran / Rodrigo) verifica la consistencia del balance e ingresa el PIN de 4 dígitos (4821) para firmar la reapertura autorizada." },
+          { x: 56.0, y: 77.1, t: "Liberación de Proforma a Edición", d: "Al confirmar con PIN, la solicitud queda APROBADA y el sistema restituye la proforma a estado REVERSADA, notificando al administrativo solicitante que la edición se encuentra habilitada." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "4. Proforma en Estado REVERSADA con Edición Habilitada",
+        img: "despues-paso4-proforma-reversada-edicion.png",
+        alt: "Listado de proformas con PRF-2026-020 en estado REVERSADA y editable",
+        pins: [
+          { x: 55.1, y: 43.5, t: "Proforma Reversada y Segura", d: "La proforma PRF-2026-020 adopta el estado REVERSADA manteniendo todas las cuadrillas y horas de labor intactas para su corrección puntual." },
+          { x: 95.0, y: 43.5, t: "Edición y Re-envío", d: "El administrativo realiza los ajustes necesarios en horas o centros de costo y envía la proforma corregida a DEFINITIVA para habilitar la re-centralización del módulo." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "5. Re-centralización y Auditoría del Cierre",
+        img: "despues-paso5-re-cierre-auditoria.png",
+        alt: "Panel de traspaso con módulo re-centralizado y tarjeta de auditoría con las firmas de Contratistas y Contabilidad",
+        pins: [
+          { x: 88.0, y: 54.5, t: "Re-centralización Contable", d: "El panel de traspaso registra el nuevo asiento CTR-2026-002-REC generado con las cifras corregidas de mano de obra." },
+          { x: 50.0, y: 75.0, t: "Auditoría Histórica Inalterable", d: "Se despliega la tarjeta de trazabilidad con el historial completo de quién solicitó, quién otorgó el 1º VºBº (Contratistas) y quién autorizó el 2º VºBº (Contabilidad)." },
+          { x: 94.0, y: 12.0, t: "Cierre Concluido y Notificado", d: "El indicador de cabecera confirma el estado Centralizado y el sistema despacha las notificaciones automáticas a ambas jefaturas informando el éxito del re-cierre." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "6. Comprobante de Ajuste Contable (Período Cerrado)",
+        img: "despues-paso6-asiento-ajuste-contable.png",
+        alt: "Comprobante de ajuste contable AJU-2026-001 con imputación balanceada por centros de costo",
+        pins: [
+          { x: 26.0, y: 19.3, t: "Tipo AJUSTE y Folio Formal", d: "El comprobante se emite bajo el tipo oficial AJUSTE con número AJU-2026-001 y estado CONTABILIZADO, protegiendo la inmutabilidad de los libros contables cerrados." },
+          { x: 50.0, y: 30.2, t: "Trazabilidad con Módulo Origen", d: "El campo Origen vincula formalmente el comprobante con AJUSTE-CTR:2026-08:PRF-2026-020 y la glosa certifica la reclasificación de cuadrilla de Servicios Agrícolas del Valle." },
+          { x: 58.3, y: 59.4, t: "Imputación Balanceada por Centro de Costo", d: "Ajuste cuadrado por $450.000 en Cuenta 6-1-01-01-002: Cargo al Debe en Cuartel 3 (Manzanos) y Abono al Haber en Cuartel 1 (Cerezos)." }
+        ]
+      },
+      {
+        mod: "Compras", cls: "compras",
+        title: "7. Asociación Multi-proforma con Contador de Cobertura en Libro de Compras",
+        img: "despues-paso7-asociacion-multi-proforma.png",
+        alt: "Modal de asociación de proformas en Libro de Compras con barra de cobertura en vivo y selección múltiple",
+        pins: [
+          { x: 50.0, y: 25.3, t: "Pestañas de Selección (OC y Proformas)", d: "El administrativo selecciona el origen Proformas (3 disponibles del contratista Servicios Agrícolas del Valle) para vincularlas a la factura FAC-CTR-9901 sin requerir orden de compra previa." },
+          { x: 50.0, y: 50.0, t: "Barra Dinámica de Cobertura en Vivo", d: "Control idéntico al patrón de OC madre e hijas: compara en tiempo real el Neto de Factura ($7.600.000) contra el Monto Seleccionado ($7.600.000) con Saldo Restante $0 y badge verde 'Calce exacto (100% cubierto)'." },
+          { x: 72.7, y: 84.9, t: "Vincular Múltiples Proformas", d: "El botón de acción resume la operación 'Vincular 2 proforma(s) ($7.600.000)' habilitándose únicamente cuando las proformas seleccionadas no exceden el monto neto de la factura." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "compras",
+        title: "8. Desvinculación y Liberación de Factura ante Solicitud de Reversa",
+        img: "despues-paso8-liberacion-factura-contratistas.png",
+        alt: "Modal de liberación de factura en Contratistas para soltar el documento en Libro de Compras y reabrir labores",
+        pins: [
+          { x: 45.8, y: 41.8, t: "Desvinculación Segura de Factura", d: "Acción formal desde el listado de proformas que permite desvincular la factura comercial asociada a la proforma cuando se requiere aplicar una reversa operativa." },
+          { x: 50.0, y: 49.2, t: "Impacto: Factura Suelta y Labores Editables", d: "La factura FAC-8891 queda suelta y disponible en el Libro de Compras para su re-asociación posterior, mientras que la proforma y sus labores diarias se restituyen a estado editable para ajustar cuadrillas y horas." },
+          { x: 58.9, y: 57.4, t: "Confirmación Auditada con PIN", d: "Al pulsar 'Liberar factura', la acción queda registrada en la bitácora histórica y notifica tanto al encargado de contratistas como a compras." }
+        ]
+      }
+    ];
+
+    let currentStep = 0;
+    let currentPin = 0;
+    let autoInterval = null;
+
+    const railEl = document.getElementById("rail");
+    const stageEl = document.getElementById("stage");
+    const cardEl = document.getElementById("card");
+    const stepTitleEl = document.getElementById("stepTitle");
+    const stepBadgeEl = document.getElementById("stepBadge");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const autoBtn = document.getElementById("autoBtn");
+
+    function renderRail() {
+      railEl.innerHTML = `
+        <div class="rail-header">Etapas del Recorrido</div>
+        ${steps.map((s, i) => `
+          <button type="button" class="step ${i === currentStep ? "on" : ""}" data-step-idx="${i}">
+            <div class="n ${s.cls}">${i + 1}</div>
+            <div>
+              <div class="mod">${s.mod}</div>
+              <div class="ttl">${s.title.replace(/^\\d+\\.\\s*/, "")}</div>
+              <div class="step-pills">
+                ${s.pins.map((p, pIdx) => `
+                  <span class="pill-btn ${(i === currentStep && pIdx === currentPin) ? "active" : ""}" data-step="${i}" data-pin="${pIdx}" title="${p.t}">
+                    ${pIdx + 1}
+                  </span>
+                `).join("")}
+              </div>
+            </div>
+          </button>
+        `).join("")}
+      `;
+
+      railEl.querySelectorAll("button.step").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const pill = e.target.closest(".pill-btn");
+          if (pill) {
+            e.stopPropagation();
+            const sIdx = Number(pill.getAttribute("data-step"));
+            const pIdx = Number(pill.getAttribute("data-pin"));
+            goTo(sIdx, pIdx);
+            return;
+          }
+          const sIdx = Number(btn.getAttribute("data-step-idx"));
+          goTo(sIdx, 0);
+        });
+      });
+    }
+
+    function renderScreen() {
+      const step = steps[currentStep];
+      stepTitleEl.textContent = step.title;
+      stepBadgeEl.textContent = `Paso ${currentStep + 1} de ${steps.length}`;
+
+      stageEl.innerHTML = `
+        <div class="frame">
+          <img src="${step.img}" alt="${step.alt}" />
+          ${step.pins.map((p, idx) => `
+            <button type="button" class="pin ${step.cls} ${idx === currentPin ? "on" : ""}" style="left:${p.x}%; top:${p.y}%;" data-pin-idx="${idx}" title="${p.t}">
+              ${idx + 1}
+            </button>
+          `).join("")}
+        </div>
+      `;
+
+      stageEl.querySelectorAll("button.pin").forEach(pinBtn => {
+        pinBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const pIdx = Number(pinBtn.getAttribute("data-pin-idx"));
+          goTo(currentStep, pIdx);
+        });
+      });
+
+      renderRail();
+      updatePinDetails();
+    }
+
+    function updatePinDetails() {
+      const step = steps[currentStep];
+      const pin = step.pins[currentPin] || step.pins[0];
+
+      // Update pin active state on the screenshot
+      stageEl.querySelectorAll("button.pin").forEach((pBtn, idx) => {
+        if (idx === currentPin) pBtn.classList.add("on");
+        else pBtn.classList.remove("on");
+      });
+
+      // Update pills in rail
+      railEl.querySelectorAll(".pill-btn").forEach(pill => {
+        const s = Number(pill.getAttribute("data-step"));
+        const p = Number(pill.getAttribute("data-pin"));
+        if (s === currentStep && p === currentPin) pill.classList.add("active");
+        else pill.classList.remove("active");
+      });
+
+      // Update Card
+      cardEl.innerHTML = `
+        <div class="card-header">
+          <h3>
+            <span class="pin-tag">Número ${currentPin + 1} de ${step.pins.length}</span>
+            <span>${pin.t}</span>
+          </h3>
+          <span style="font-size:12px; font-weight:600; color:var(--muted)">
+            Pantalla ${currentStep + 1} / ${steps.length}
+          </span>
+        </div>
+        <p>${pin.d}</p>
+        <div class="card-footer">
+          <span>Pulsa <strong>Siguiente</strong> o la tecla <strong>→</strong> para avanzar al detalle siguiente.</span>
+          <span>${currentPin + 1} de ${step.pins.length} detalles vistos en esta pantalla</span>
+        </div>
+      `;
+
+      // Update Buttons with explicit wording
+      const isFirst = (currentStep === 0 && currentPin === 0);
+      const isLast = (currentStep === steps.length - 1 && currentPin === step.pins.length - 1);
+
+      prevBtn.disabled = isFirst;
+      nextBtn.disabled = isLast;
+
+      if (currentPin > 0) {
+        prevBtn.textContent = `← Detalle Anterior (${currentPin})`;
+      } else if (currentStep > 0) {
+        prevBtn.textContent = `← Pantalla Anterior (${currentStep})`;
+      } else {
+        prevBtn.textContent = `← Anterior`;
+      }
+
+      if (currentPin < step.pins.length - 1) {
+        nextBtn.textContent = `Siguiente Detalle (${currentPin + 2} de ${step.pins.length}) →`;
+      } else if (currentStep < steps.length - 1) {
+        nextBtn.textContent = `Siguiente Pantalla (Paso ${currentStep + 2}) →`;
+      } else {
+        nextBtn.textContent = `Fin del Recorrido ✓`;
+      }
+    }
+
+    function goTo(stepIdx, pinIdx) {
+      const stepChanged = (currentStep !== stepIdx);
+      currentStep = stepIdx;
+      currentPin = pinIdx;
+      if (stepChanged) {
+        renderScreen();
+      } else {
+        updatePinDetails();
+      }
+    }
+
+    function forward() {
+      const s = steps[currentStep];
+      if (currentPin < s.pins.length - 1) {
+        goTo(currentStep, currentPin + 1);
+      } else if (currentStep < steps.length - 1) {
+        goTo(currentStep + 1, 0);
+      } else {
+        stopAuto();
+      }
+    }
+
+    function back() {
+      if (currentPin > 0) {
+        goTo(currentStep, currentPin - 1);
+      } else if (currentStep > 0) {
+        const prevStep = currentStep - 1;
+        goTo(prevStep, steps[prevStep].pins.length - 1);
+      }
+    }
+
+    function toggleAuto() {
+      if (autoInterval) {
+        stopAuto();
+      } else {
+        startAuto();
+      }
+    }
+
+    function startAuto() {
+      autoBtn.classList.add("active");
+      autoBtn.textContent = "⏸ Pausar";
+      autoInterval = setInterval(() => {
+        forward();
+      }, 3500);
+    }
+
+    function stopAuto() {
+      if (autoInterval) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+      autoBtn.classList.remove("active");
+      autoBtn.textContent = "▶ Reproducir Automático";
+    }
+
+    prevBtn.addEventListener("click", () => { stopAuto(); back(); });
+    nextBtn.addEventListener("click", () => { stopAuto(); forward(); });
+    autoBtn.addEventListener("click", toggleAuto);
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") { stopAuto(); back(); }
+      else if (e.key === "ArrowRight") { stopAuto(); forward(); }
+      else if (e.key === " ") { e.preventDefault(); toggleAuto(); }
+    });
+
+    renderScreen();
+  </script>
+</body>
+</html>

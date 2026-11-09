@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Muestra compras y ventas hacia contabilidad</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    .tabs { display: flex; gap: 6px; flex-wrap: wrap; max-width: 1280px; margin: 8px auto 0; padding: 0 16px; }
+    .tabs button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 4px 12px; }
+    .tabs button.on { background: #1c1917; color: #fff; border-color: #1c1917; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De compras y ventas al mayor. ALMAHUE EXPORT SPA, octubre 2026.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="tabs" id="tabs"></div>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const tabs = ["Ventas", "Compras", "Cartola y reversa", "Sin asiento en esta base"];
+    const steps = [
+      {
+        tab: "Ventas", mod: "Ventas", cls: "ventas",
+        title: "Orden de venta",
+        img: "muestra-ov.png",
+        alt: "Ordenes de venta facturadas a ALM SERVICES SPA",
+        pins: [{ x: 22.0, y: 39.3, t: "OV 101606909139", d: "ALMAHUE EXPORT le vendió a ALM SERVICES SPA. La orden está Facturada por $2.202. La de abajo, 101606909138, es la de $24.217. No se creó una orden nueva: el facturador local está en GoSocket sandbox y una emisión nueva gasta folio." }]
+      },
+      {
+        tab: "Ventas", mod: "Ventas", cls: "ventas",
+        title: "Libro de ventas",
+        img: "muestra-libro-ventas.png",
+        alt: "Libro de ventas con las facturas contabilizadas",
+        pins: [{ x: 72.8, y: 76.1, t: "Asiento 20260041", d: "La factura 92, folio interno FA-101606909139-0986, quedó Contabilizada. Ese número es el comprobante. Cliente al debe, ingreso e IVA débito al haber. La guía 51 sigue Emitida y no entra al mayor." }]
+      },
+      {
+        tab: "Ventas", mod: "Contabilidad", cls: "conta",
+        title: "Asiento de venta",
+        img: "muestra-asientos.png",
+        alt: "Asientos de octubre con tipo VENTAS y COMPRAS",
+        pins: [{ x: 34.5, y: 45.8, t: "Tipo VENTAS", d: "Origen DOC: más el folio interno. No tiene Anular / reversar: la venta se corrige con nota de crédito. Estos dos son los que salen de las órdenes de ALM SERVICES." }]
+      },
+      {
+        tab: "Ventas", mod: "Contabilidad", cls: "conta",
+        title: "Mayor, clientes",
+        img: "muestra-mayor.png",
+        alt: "Libro mayor de octubre",
+        pins: [{ x: 33.6, y: 76.7, t: "Clientes", d: "El mayor de octubre trae el debe de las dos facturas: $24.217 y $2.202. También llegan Ingreso e IVA débito. La prueba contra la API lo confirmó." }]
+      },
+      {
+        tab: "Compras", mod: "Compras", cls: "compras",
+        title: "Órdenes de compra",
+        img: "muestra-oc.png",
+        alt: "Listado de órdenes de compra",
+        pins: [{ x: 40, y: 28, t: "Órdenes", d: "La compra parte en la orden. Las cuatro facturas de octubre que ya están contabilizadas no tienen OC asociada, por eso el asiento no pudo tomar la cuenta de gasto del ítem." }]
+      },
+      {
+        tab: "Compras", mod: "Compras", cls: "compras",
+        title: "Libro de compras",
+        img: "muestra-libro-compras.png",
+        alt: "Libro de compras de octubre",
+        pins: [{ x: 50, y: 55, t: "Facturas contabilizadas", d: "51, 59, 60 y 61 están Contabilizadas. El asiento nuevo de una factura afecta lleva gasto, IVA crédito y Proveedores por el total. Estas cuatro se grabaron antes y no quedaron así." }]
+      },
+      {
+        tab: "Compras", mod: "Contabilidad", cls: "conta",
+        title: "Asiento de compra",
+        img: "muestra-asientos.png",
+        alt: "Asientos de compra con tipo COMPRAS",
+        pins: [{ x: 34.5, y: 58, t: "Tipo COMPRAS", d: "El origen ya era COMPRA:61, COMPRA:51, COMPRA:60 y COMPRA:59. El tipo quedó en COMPRAS. Siguen ofreciendo Anular / reversar, a diferencia de las ventas." }]
+      },
+      {
+        tab: "Compras", mod: "Contabilidad", cls: "conta",
+        title: "Mayor, donde cayó la compra",
+        img: "muestra-mayor.png",
+        alt: "Libro mayor, la compra quedó en Caja",
+        pins: [{ x: 33.6, y: 57.7, t: "Caja", d: "La prueba falla acá a propósito: esas compras no llegan a Proveedores ni a IVA crédito. El neto está en Caja y el haber en Banco Chile. La cuenta corriente y el aging sí tienen el total con IVA, por ejemplo $11.900 en la factura 51." }]
+      },
+      {
+        tab: "Cartola y reversa", mod: "Tesorería", cls: "teso",
+        title: "Cartola",
+        img: "muestra-cartola.png",
+        alt: "Cartolas bancarias",
+        pins: [{ x: 50, y: 40, t: "Movimiento de cartola", d: "Contabilizar una línea crea un asiento CARTOLA. En esta empresa hay tres, todos de septiembre 2026, y el mayor de ese mes los trae. Octubre no tiene cartola contabilizada. No se contabilizó ninguna línea para la foto." }]
+      },
+      {
+        tab: "Cartola y reversa", mod: "Contabilidad", cls: "conta",
+        title: "Reversa",
+        img: "muestra-asientos.png",
+        alt: "Asientos de octubre, sin reversas en este mes",
+        pins: [{ x: 90, y: 62, t: "Anular / reversar", d: "Anular un comprobante crea el asiento REVERSA con la fecha del original y deja el neto en cero. En septiembre hay tres. En octubre no hay ninguno. No se anuló nada." }]
+      },
+      {
+        tab: "Sin asiento en esta base", mod: "Contabilidad", cls: "conta",
+        title: "Centralización",
+        img: "muestra-centralizacion.png",
+        alt: "Pantalla de centralización",
+        pins: [{ x: 50, y: 35, t: "Sin centralizar", d: "El código puede crear CENTRALIZA-VTA y CENTRALIZA-CMP, tipo DIARIO. En ALMAHUE EXPORT no hay ninguno. No se ejecutó la centralización." }]
+      },
+      {
+        tab: "Sin asiento en esta base", mod: "Contratistas", cls: "param",
+        title: "Cierre de contratistas",
+        img: "muestra-contratistas.png",
+        alt: "Traspaso de contratistas",
+        pins: [{ x: 50, y: 32, t: "Sin cierre", d: "El cierre de mes crea TRASPASO-CTR con el costo contra facturas por recibir. No hay ninguno en esta base. Tampoco hay revaluación de tipo de cambio (REVALUACION_TC) ni un comprobante manual de este mes. No se traspasó." }]
+      }
+    ];
+
+    let tab = tabs[0], step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const tabBar = document.getElementById("tabs");
+    const visibles = () => steps.filter((s) => s.tab === tab);
+
+    tabs.forEach((name) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = name;
+      b.addEventListener("click", () => { tab = name; show(0, 0); });
+      tabBar.appendChild(b);
+    });
+
+    function renderRail() {
+      rail.innerHTML = "";
+      visibles().forEach((s, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "step";
+        b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title}</span></span>`;
+        b.addEventListener("click", () => show(i, 0));
+        rail.appendChild(b);
+      });
+      [...tabBar.children].forEach((el) => el.classList.toggle("on", el.textContent === tab));
+    }
+
+    function show(i, p) {
+      step = i; pin = p;
+      const lista = visibles();
+      const s = lista[i];
+      renderRail();
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === lista.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const lista = visibles();
+      const s = lista[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < lista.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      const lista = visibles();
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, lista[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

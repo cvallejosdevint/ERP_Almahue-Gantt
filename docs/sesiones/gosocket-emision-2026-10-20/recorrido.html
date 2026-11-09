@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Emisión GoSocket - recorrido por tipo</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    .tabs { display: flex; gap: 6px; flex-wrap: wrap; max-width: 1280px; margin: 8px auto 0; padding: 0 16px; }
+    .tabs button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 4px 12px; }
+    .tabs button.on { background: #1c1917; color: #fff; border-color: #1c1917; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Plan de emisión para GoSocket (13/10). 27 casos. No se emitió ni se avisó a Pablo. Plan: <a href="../../qa/planes/PLAN-PRUEBAS-GOSOCKET-EMISION-2026-10-06.md">PLAN-PRUEBAS-GOSOCKET-EMISION-2026-10-06.md</a>. Comparación: <a href="comparacion.html">comparacion.html</a>.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="tabs" id="tabs"></div>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const tabs = ["Factura 33", "Factura 34", "Guía 52", "Notas 56 y 61", "Exportación 110", "Notas 111 y 112"];
+    const steps = [
+      {
+        tab: "Factura 33", mod: "Ventas", cls: "ventas",
+        title: "Tipos que emite el ERP",
+        img: "despues-tipos.png",
+        alt: "Emitir DTE, sin facturar",
+        pins: [
+          { x: 90.5, y: 58.5, t: "Facturar desde OV", d: "La 33 sale de una OV confirmada. 4 casos: 33-1 Contado e ítem base; 33-2 crédito, descuento y pallet; 33-3 referencia 801; 33-4 flete como ítem. No se apretó Facturar." }
+        ]
+      },
+      {
+        tab: "Factura 33", mod: "Ventas", cls: "ventas",
+        title: "Cabecera 33",
+        img: "despues-cabecera.png",
+        alt: "Receptor y fecha del ejemplo, sin emitir",
+        pins: [
+          { x: 48.0, y: 36.0, t: "Receptor nacional", d: "ALM SERVICES SPA, 77.032.639-7, Rengo 15232. Lo usan las 33, 34, 52, 56 y 61. La foto es guía con los mismos datos. 33-1 usa Contado; esta muestra Crédito. No se apretó Emitir documento." },
+          { x: 32.0, y: 70.5, t: "Forma de pago", d: "33-1: Contado. 33-2 a 33-4: Crédito. Fecha 20/10/2026. Folio vacío hasta que GoSocket asigne CAF." }
+        ]
+      },
+      {
+        tab: "Factura 33", mod: "Ventas", cls: "ventas",
+        title: "Ítem base 33",
+        img: "despues-items.png",
+        alt: "Ítem cereza 1.850, sin emitir",
+        pins: [
+          { x: 42.0, y: 41.5, t: "Ítem base", d: "EX-CEREZA-CAJ, 1 caja a 1.850. Neto 1.850, IVA 352, total 2.202. 33-2 agrega 10 cajas con 10% y un pallet 0001. 33-4 agrega flete 1.500. No se apretó Agregar línea ni Emitir." },
+          { x: 88.5, y: 28.0, t: "Totales", d: "Lo esperado en XML y PDF: IVA 19% sobre el neto. El PDF y el XML ya se pueden bajar del ERP cuando el documento exista (GetDocumentPDF). Este ejemplo no se emitió." }
+        ]
+      },
+      {
+        tab: "Factura 34", mod: "Ventas", cls: "ventas",
+        title: "Cabecera exenta",
+        img: "despues-cabecera.png",
+        alt: "Mismos datos de receptor, indicador Exento en el caso 34",
+        pins: [
+          { x: 68.0, y: 78.5, t: "Indicador de venta", d: "En 34-1 a 34-3 el indicador es Exento. IVA 0. El neto va como monto exento. En la foto aparece Venta porque el ejemplo cargado es guía afecta. No se cambió ni se emitió." }
+        ]
+      },
+      {
+        tab: "Factura 34", mod: "Ventas", cls: "ventas",
+        title: "Ítems exentos",
+        img: "despues-items.png",
+        alt: "Ítem base, en 34 el IVA va en cero",
+        pins: [
+          { x: 88.5, y: 36.0, t: "IVA 0", d: "34-1: una línea, total 1.850. 34-2: cereza más pallet 10.000. 34-3: igual que 34-1 más OC-2026-001. Esperado: tipo 34, sin IVA. No se emitió." }
+        ]
+      },
+      {
+        tab: "Guía 52", mod: "Ventas", cls: "ventas",
+        title: "Paso 3, resolución 154",
+        img: "despues-guia-154.png",
+        alt: "Traslado de la guía 52-1, sin emitir",
+        pins: [
+          { x: 38.0, y: 51.0, t: "Tipo de traslado", d: "52-1: IndTraslado 1, operación constituye venta. 52-2: 5, traslados internos a Bodega Santiago. 52-3: 6, y la casilla de patente no conocida. Obligatorio para el SII desde el 1 de noviembre de 2026. No se apretó Emitir documento." },
+          { x: 68.0, y: 51.0, t: "Destino y transporte", d: "52-1: Fundo El Carmen 120, Rancagua. Transportista 76.888.901-5. Chofer 12.345.678-5, Juan Perez. Van en el XML (DirDest, RUTTrans, RUTChofer, NombreChofer)." },
+          { x: 52.0, y: 74.5, t: "Patente o no conocida", d: "52-1: ABCD12 y carro XY9901. 52-3 marca No se conoce la patente: no va el tag Patente y el documento lo dice. Salida 20/10/2026 08:30, llegada 20/10/2026." },
+          { x: 88.5, y: 48.5, t: "Emitir documento", d: "52-4 es la misma guía emitida por una sociedad y vista en los recibidos de la otra. No se apretó Emitir, Guardar como borrador ni Previsualizar PDF." }
+        ]
+      },
+      {
+        tab: "Notas 56 y 61", mod: "Ventas", cls: "ventas",
+        title: "Alta de NC y ND",
+        img: "despues-tipos.png",
+        alt: "Botones de nota de crédito y débito, sin emitir",
+        pins: [
+          { x: 31.5, y: 33.0, t: "Nota de crédito 61", d: "Tres casos: 61-1 CodRef 1 anula la 33-1; 61-2 CodRef 2 corrige texto; 61-3 CodRef 3 corrige montos, total 1.101, no supera el saldo 2.202. Folio de la factura: el que asigne GoSocket. No se apretó Nota de crédito." },
+          { x: 40.0, y: 33.0, t: "Nota de débito 56", d: "56-1 anula con los mismos montos. 56-2 corrige glosa. 56-3 corrige montos a neto 2.000. Referencia tipo 33, fecha 20/10/2026. No se apretó Nota de débito." }
+        ]
+      },
+      {
+        tab: "Exportación 110", mod: "Ventas", cls: "ventas",
+        title: "Bloque COMEX",
+        img: "despues-comex.png",
+        alt: "Aduana y moneda de la 110-1, sin emitir",
+        pins: [
+          { x: 38.0, y: 26.5, t: "Ind. traslado y vía", d: "110-1: despacho por cuenta del emisor, vía 1 marítima. 110-2 cambia la vía a 4 aéreo. Códigos Aduana Anexo 51. No se apretó Rellenar valores habituales de nuevo ni Emitir." },
+          { x: 32.0, y: 38.0, t: "País y cláusula", d: "110-1 y 110-2: país 225 U.S.A., cláusula 5 FOB, embarque 905 Valparaíso, desembarque Los Ángeles. 110-4: país 336 China y el puerto de China del selector." },
+          { x: 52.0, y: 62.0, t: "Tipo de cambio", d: "Moneda 13 dólar USA. El 20/10/2026 el indicador del día no estaba: se digita al emitir. 110-3: dos líneas, 9.250 USD, 5 bultos. El panel resume USD; el PDF debe mostrar el equivalente en pesos." }
+        ]
+      },
+      {
+        tab: "Notas 111 y 112", mod: "Ventas", cls: "ventas",
+        title: "NC y ND de exportación",
+        img: "despues-comex.png",
+        alt: "COMEX que heredan las notas 111 y 112",
+        pins: [
+          { x: 52.0, y: 62.0, t: "TC de la 110", d: "111 y 112 referencian la 110-1. Heredan aduana y tipo de cambio. 111-1 y 112-1 CodRef 1 anulan. 111-2 y 112-2 CodRef 2 corrigen texto. 111-3 y 112-3 CodRef 3 pasan a 2.000 USD y el TC se puede editar. No se emitió." }
+        ]
+      }
+    ];
+
+    let tab = tabs[0], step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const tabBar = document.getElementById("tabs");
+    const visibles = () => steps.filter((s) => s.tab === tab);
+
+    tabs.forEach((name) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = name;
+      b.addEventListener("click", () => { tab = name; show(0, 0); });
+      tabBar.appendChild(b);
+    });
+
+    function renderRail() {
+      rail.innerHTML = "";
+      visibles().forEach((s, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "step";
+        b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title}</span></span>`;
+        b.addEventListener("click", () => show(i, 0));
+        rail.appendChild(b);
+      });
+      [...tabBar.children].forEach((el) => el.classList.toggle("on", el.textContent === tab));
+    }
+
+    function show(i, p) {
+      step = i; pin = p;
+      const lista = visibles();
+      const s = lista[i];
+      renderRail();
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === lista.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const lista = visibles();
+      const s = lista[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < lista.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      const lista = visibles();
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, lista[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

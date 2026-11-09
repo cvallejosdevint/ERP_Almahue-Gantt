@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Contabilidad tanda 2 - recorrido</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>De dónde sale el dato.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Compras", cls: "compras",
+        title: "1. Contabilizar una factura de compra",
+        img: "despues-libro-compras-contabilizar.png",
+        alt: "Vista previa del asiento de la factura 54, sin aceptar",
+        pins: [
+          { x: 50.0, y: 56.98, t: "IVA crédito fiscal", d: "Debe $1.900 = total $11.900 menos neto $10.000 de la factura. La cuenta 1-1-09-01-001 sale del plan de cuentas. Si la factura es exenta, esta línea no aparece." },
+          { x: 50.0, y: 62.5, t: "Proveedores", d: "Haber $11.900, el total de la factura: lo mismo que después se paga en Tesorería. Antes iba por el neto y quedaba $1.900 corto." },
+          { x: 55.34, y: 70.42, t: "Cancelar", d: "Cierra la vista previa sin grabar. Se usó este botón: la factura 54 sigue Ingresada." },
+          { x: 64.71, y: 70.42, t: "Aceptar y contabilizar", d: "Crea el asiento con la fecha del documento y pasa la factura a Contabilizada. No se apretó para la foto." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "2. Asientos / comprobantes",
+        img: "despues-asientos.png",
+        alt: "Lista de asientos de 2026-10",
+        pins: [
+          { x: 91.15, y: 45.0, t: "Venta sin Anular", d: "Los asientos con origen DOC: vienen de una factura de venta. Ya no muestran Anular / reversar: una venta se corrige con nota de crédito en Emitir DTE, que también rebaja el estado de cuenta y el aging. La API también rechaza la anulación." },
+          { x: 90.89, y: 56.04, t: "Anular / reversar", d: "Sigue en los asientos manuales y de compra. Si es de compra, la factura vuelve a Ingresada y se descuentan su cuenta corriente y su aging. Si ya tiene pagos, no deja anular. No se apretó." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "3. Detalle de un asiento de venta",
+        img: "despues-asientos-venta-detalle.png",
+        alt: "Detalle del asiento 20260041, abierto con Ver",
+        pins: [
+          { x: 7.55, y: 26.77, t: "Origen", d: "DOC:FA-101606909139-0986 es el folio interno de la factura 92 del libro de ventas. De este prefijo depende que se bloquee la anulación." },
+          { x: 35.81, y: 29.69, t: "Motivo", d: "Explica dónde se corrige. Para el cierre de contratistas (TRASPASO-CTR:) el texto manda a reabrir el cierre en Contratistas." },
+          { x: 93.75, y: 90.42, t: "Cerrar", d: "Se cerró sin tocar nada más. No se imprimió." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "4. Reportes contables",
+        img: "despues-resumen-contable.png",
+        alt: "Resumen de reportes contables de 2026-10",
+        pins: [
+          { x: 85.42, y: 25.83, t: "Asientos del mes", d: "Cuenta los asientos contabilizados del periodo de la sesión (2026-10): 6, los mismos de la lista de Asientos. Antes decía 2." },
+          { x: 55.34, y: 36.98, t: "Ver balance", d: "Abre el Balance de 8 columnas del mismo periodo." },
+          { x: 95.96, y: 36.98, t: "Ver diario", d: "Abre el Libro diario." },
+          { x: 55.34, y: 46.77, t: "Ver mayor", d: "Abre el Mayor por cuenta. No se apretó ninguno para la foto." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "5. Balance de 8 columnas",
+        img: "despues-balance-8-columnas.png",
+        alt: "Balance de 8 columnas de 2026-10, página 1",
+        pins: [
+          { x: 37.17, y: 65.78, t: "Sumas debe y haber", d: "Acumuladas al cierre de 2026-10 desde los asientos contabilizados, más los anulados con su reversa. Las cuentas de resultado suman desde enero. Saldo deudor o acreedor = sumas debe menos sumas haber." },
+          { x: 58.33, y: 29.79, t: "Utilidad del ejercicio", d: "Ganancia $1.692.090 menos pérdida $219.900 = $1.472.190. Es lo que antes descuadraba el inventario." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "6. Balance, fila del resultado",
+        img: "despues-balance-8-columnas-resultado.png",
+        alt: "Balance de 8 columnas, página 3",
+        pins: [
+          { x: 77.93, y: 80.1, t: "Utilidad del ejercicio", d: "La fila lleva $1.472.190 a Inventario pasivo y a Resultado pérdida, y así cuadran las dos parejas. Si fuera pérdida, iría a Inventario activo y a Resultado ganancia. Solo se usó Siguiente." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "7. Libro mayor",
+        img: "despues-libro-mayor.png",
+        alt: "Libro mayor de 2026-10, todas las cuentas",
+        pins: [
+          { x: 46.42, y: 57.6, t: "Saldo inicial", d: "Caja $89.282 A: saldo de los meses anteriores. Con debe $979.000 queda deudor $889.718. Antes esa diferencia no se veía. D = deudor, A = acreedor." },
+          { x: 82.55, y: 70.31, t: "Pasivo", d: "Banco Chile Yuan tiene saldo acreedor, así que va a Pasivo, igual que en el balance. Activo y Pasivo son solo de cuentas de balance." },
+          { x: 94.14, y: 52.81, t: "Pérdida y Ganancia", d: "Columnas de las cuentas de ingreso y gasto, que antes caían en Activo o Pasivo. No se apretó Exportar." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

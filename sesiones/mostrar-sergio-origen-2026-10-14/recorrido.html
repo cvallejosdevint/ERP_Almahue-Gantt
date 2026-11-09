@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Recorrido para Sergio, del origen al asiento</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    header p { margin: 6px 0 0; color: var(--muted); }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1>De la orden al asiento. Lo que se muestra hoy.</h1>
+      <div class="bar">
+        <h2 id="title"></h2>
+        <div class="actions">
+          <button type="button" id="prev">Anterior</button>
+          <button type="button" id="next">Siguiente</button>
+        </div>
+      </div>
+    </div>
+    <p>Empresa ALMAHUE EXPORT SPA, periodo 2026-10, modo real. Son los cinco puntos que Sergio pidió mostrar: contabilización de la compra, contabilización de la venta, contratistas desde la parametrización hasta la proforma aprobada, asignación de la orden (madre, hija y factura) y el correo sin enviarlo. No se emitió un DTE, no se pagó y no se cerró el mes.</p>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Compra", cls: "compras",
+        title: "1. Orden nueva, ítems",
+        img: "oc-items.png",
+        alt: "Orden de compra con ítem de cajas y total 48.000",
+        pins: [
+          { x: 83.5, y: 52, t: "Confirmar sin aprobación", d: "Proveedor Insumos Packing Sur SpA, 14-10-2026. Ítem Cajas packing cereza, centro 1002, cuenta 6-1-01-02-004, 10 por 4.800. Neto 48.000. El monto no llega al primer escalón, así que se confirmó sin PIN. No se envió a la bandeja." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "compras",
+        title: "2. La orden quedó aprobada",
+        img: "oc-lista.png",
+        alt: "Listado de órdenes con OC-2026-0020 aprobada",
+        pins: [
+          { x: 21.9, y: 52.8, t: "OC-2026-0020", d: "Quedó Aprobado, neto 48.000, Insumos Packing Sur SpA, fecha 14-10-2026. Este es el origen de la cadena. La 0018 y la 0019 son el cierre viejo: no se usan en este relato." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "compras",
+        title: "3. Recepción del total",
+        img: "recepcion-lista.png",
+        alt: "Recepción confirmada de la OC-2026-0020 por 48.000",
+        pins: [
+          { x: 22, y: 42, t: "Recepción 48.000", d: "Se recepcionó el neto completo, 48.000, estado CONFIRMADA. Como cubre el total, no nace hija. El asiento de esa recepción es el 20260045. No se recepcionó de más." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "compras",
+        title: "4. Factura 70 en el libro",
+        img: "libro-contabilizada.png",
+        alt: "Libro de compras con la factura 70 contabilizada y la OC-2026-0020",
+        pins: [
+          { x: 19.7, y: 64.7, t: "Factura 70", d: "Documento recibido, no emitido al SII y no sincronizado desde GoSocket. Quedó asociado a la OC-2026-0020, match perfecto contra la recepción, neto 48.000. Después de aceptar el asiento, el estado es Contabilizada." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "compras",
+        title: "5. Asiento que se va a grabar",
+        img: "contabilizar-70.png",
+        alt: "Modal de contabilizar la factura 70",
+        pins: [
+          { x: 72, y: 62, t: "Aceptar y contabilizar", d: "Debe: Facturas por recibir servicios 2-1-08-02-004 por 48.000, e IVA crédito 1-1-09-01-001 por 9.120. Haber: Proveedores 2-1-04-01-001 por 57.120. El gasto ya quedó en la recepción, por eso la factura no vuelve a cargar la cuenta 6-1-01-02-004. Se apretó Aceptar. No se registró el pago." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "conta",
+        title: "6. Comprobante 20260046",
+        img: "asientos-lista.png",
+        alt: "Listado de comprobantes con el asiento de la factura 70",
+        pins: [
+          { x: 20.8, y: 45.1, t: "20260046", d: "Glosa Registro compra 70, tipo COMPRAS, 57.120 y 57.120, contabilizado. Arriba o al lado está el 20260045, la recepción de la OC-2026-0020. No se anuló ni se reversó." }
+        ]
+      },
+      {
+        mod: "Compra", cls: "conta",
+        title: "7. El comprobante en tres monedas",
+        img: "asiento-70.png",
+        alt: "Detalle del asiento 20260046 con columnas de peso, dólar y yuan",
+        pins: [
+          { x: 55, y: 48, t: "Peso, dólar y yuan", d: "El mismo comprobante muestra el debe y el haber en peso, y las columnas de dólar y yuan. Se abrió con Ver. No se imprimió ni se anuló." }
+        ]
+      },
+      {
+        mod: "Venta", cls: "ventas",
+        title: "8. Venta que ya estaba facturada",
+        img: "ov-lista.png",
+        alt: "Órdenes de venta con la 101606909139 facturada",
+        pins: [
+          { x: 22, y: 39.3, t: "101606909139", d: "ALM SERVICES SPA, 09-10-2026, 2.202, Facturada. No se creó otra orden de venta y no se emitió un DTE nuevo." }
+        ]
+      },
+      {
+        mod: "Venta", cls: "ventas",
+        title: "9. Libro de ventas",
+        img: "libro-ventas.png",
+        alt: "Libro de ventas con el folio 92 contabilizado",
+        pins: [
+          { x: 18, y: 55, t: "Folio 92", d: "Folio 92, factura FA-101606909139-0986, neto 1.850, asiento 20260041, contabilizada. El total del asiento es neto más IVA, 2.202. No se contabilizó otra fila." }
+        ]
+      },
+      {
+        mod: "Venta", cls: "conta",
+        title: "10. Asiento de esa venta",
+        img: "asiento-venta.png",
+        alt: "Comprobante 20260041 de la factura de venta",
+        pins: [
+          { x: 50, y: 48, t: "20260041", d: "Glosa FACTURA 10/2026, tipo de cambio 979,85. Total 2.202. También trae las columnas de dólar y yuan. No se reemitió." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "11. Parametrización, labor",
+        img: "param-labores.png",
+        alt: "Catálogo de labores del contratista",
+        pins: [
+          { x: 28, y: 52, t: "PACK-CER", d: "Parametrización, Contratista. Labor PACK-CER, Packing cereza export, activa. No se creó otra labor. La cuenta contable de la proforma no se define aquí: sigue como pregunta para María Jesús." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "12. Actividad",
+        img: "param-actividades.png",
+        alt: "Catálogo de actividades",
+        pins: [
+          { x: 28, y: 52, t: "SEL-CER", d: "Actividad SEL-CER, Seleccion y embalaje cereza, activa. Es la que usa el ingreso del 14-10. No se creó otra." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "13. Ficha del contratista",
+        img: "contratistas-lista.png",
+        alt: "Listado de contratistas",
+        pins: [
+          { x: 32, y: 40, t: "CTR-00001", d: "Cuadrillas Packing Export Ltda, RUT 76.210.102-8, activo, vigencia hasta 23-12-2026. No se creó otro contratista." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "14. Tarifas",
+        img: "tarifas.png",
+        alt: "Tarifas de contratista vacías",
+        pins: [
+          { x: 50, y: 38, t: "Sin tarifa cargada", d: "El mantenedor de tarifas está vacío. Por eso el ingreso del 14-10 llevó el precio 1.200 escrito en el formulario, no tomado de una tarifa. No se apretó Nueva tarifa." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "15. Ingreso del 14-10",
+        img: "ingreso.png",
+        alt: "Ingreso diario de cuadrillas del 14 de octubre",
+        pins: [
+          { x: 20.6, y: 51.8, t: "Ingreso 14-10-2026", d: "Sale de la ficha CTR-00001, la labor PACK-CER y la actividad SEL-CER. Centro 1002, jornada, 8 por 1.200, monto 9.600. No se editó." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "16. Proforma armada",
+        img: "proforma.png",
+        alt: "Proforma PF-00001 en borrador por 9.600",
+        pins: [
+          { x: 21.1, y: 44.8, t: "PF-00001 en borrador", d: "Una sola proforma de octubre, 9.600, con el ingreso del 14-10. No se partió en hija. Esta foto es el estado anterior a pedir la aprobación." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "17. Pedir aprobación",
+        img: "proforma-solicitar.png",
+        alt: "Modal solicitar aprobación de la proforma",
+        pins: [
+          { x: 78, y: 78, t: "Enviar", d: "Se apretó Enviar. El monto sí alcanza el primer escalón, así que no quedó definitiva sola: pasó a pendiente de aprobación. No se envió correo." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "18. Proforma definitiva",
+        img: "proforma-definitiva.png",
+        alt: "PF-00001 en estado definitiva",
+        pins: [
+          { x: 21, y: 45, t: "Aprobada", d: "Se apretó Aprobar. PF-00001 quedó DEFINITIVA, 9.600. No se apretó E-mail. No se generó PDF." }
+        ]
+      },
+      {
+        mod: "Contratistas", cls: "param",
+        title: "19. Asignar la proforma",
+        img: "proforma-asociar.png",
+        alt: "Modal asociar factura o generar OC de la proforma",
+        pins: [
+          { x: 40, y: 48, t: "Sin factura del contratista", d: "Notificar contratista dejó la proforma como notificada, sin mandar el correo. Facturar abre este modal. No hay un registro del libro para Cuadrillas Packing Export. Se canceló. No se generó una OC y no se apretó E-mail. La cuenta contable sigue sin definirse." }
+        ]
+      },
+      {
+        mod: "Orden", cls: "compras",
+        title: "20. Madre e hija en Compras",
+        img: "madre.png",
+        alt: "Ficha de la OC-2026-0016 con el panel Madre / hijas",
+        pins: [
+          { x: 32, y: 22, t: "Hija OC-2026-0017", d: "La madre OC-2026-0016 está en el listado de Compras, no en una pantalla de Insumos. El panel Madre / hijas muestra la 0017 en borrador, 48.000. La madre figura pendiente de aprobación, neto 32.000. No se editó ni se imprimió." }
+        ]
+      },
+      {
+        mod: "Correo", cls: "compras",
+        title: "21. Aviso, sin correo",
+        img: "notificar.png",
+        alt: "Modal notificar de la factura 70 con el correo desmarcado",
+        pins: [
+          { x: 18, y: 63, t: "Correo desmarcado", d: "Notificar de la factura 70. La casilla Enviar también por correo electrónico quedó apagada. No se eligió usuario y se apretó Cancelar. No salió ningún correo. La trazabilidad dice que aún no hay avisos." }
+        ]
+      },
+      {
+        mod: "Correo", cls: "param",
+        title: "22. Servidor de correo",
+        img: "correo.png",
+        alt: "Pantalla de configuración de correos",
+        pins: [
+          { x: 40, y: 28, t: "Configuración", d: "Administración, Configuración de correos. Se muestra el servidor. No se guardó y no se envió una prueba. Las credenciales de Mario no se cargaron." }
+        ]
+      },
+      {
+        mod: "Contabilidad", cls: "conta",
+        title: "23. Diario y resultado",
+        img: "diario.png",
+        alt: "Libro diario de octubre",
+        pins: [
+          { x: 30, y: 40, t: "Libro diario", d: "Se abre para la mirada que pidió Sergio. El cliente no lo pidió como requisito. No se cambió el periodo ni se creó un asiento a mano. El estado de resultados está en la misma rama de Contabilidad, captura balance.png." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

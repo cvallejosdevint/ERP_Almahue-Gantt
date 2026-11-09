@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Acuerdos de sala 06/11 - antes y después</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font: 16px/1.45 "Segoe UI", sans-serif; background: #f4f1ea; color: #1c1917; }
+    header, section { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    header p, .nota { margin: 0 0 8px; color: #57534e; }
+    section { margin: 28px auto; padding-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    figure { margin: 0; background: #fff; border: 1px solid #e7e5e4; border-radius: 10px; overflow: hidden; }
+    figcaption { padding: 10px 14px; font-weight: 700; }
+    figure.antes figcaption { background: #e7e5e4; }
+    figure.despues figcaption { background: #dcfce7; color: #14532d; }
+    figure img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    ul.nota { padding-left: 1.2rem; }
+    ul.nota li { margin: 4px 0; }
+    .badge-pendiente { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 9999px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; margin-left: 8px; vertical-align: middle; }
+    .badge-revision { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; margin-left: 8px; vertical-align: middle; }
+    @media (max-width: 900px) { .pair { grid-template-columns: 1fr; } }
+    .visor { position: fixed; inset: 0; z-index: 20; display: none; background: rgba(12, 10, 9, 0.92); color: #fafaf9; }
+    .visor.abierto { display: block; }
+    .visor-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: linear-gradient(rgba(12, 10, 9, 0.85), transparent); }
+    .visor-bar strong { margin-right: auto; font-size: 0.95rem; }
+    .visor-bar span { color: #d6d3d1; font-size: 0.85rem; }
+    .visor button { border: 0; border-radius: 8px; background: #292524; color: #fafaf9; font: 600 14px/1 "Segoe UI", sans-serif; padding: 8px 12px; cursor: pointer; }
+    .lienzo { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; }
+    .lienzo.arrastrando { cursor: grabbing; }
+    .lienzo img { position: absolute; top: 50%; left: 50%; max-width: none; max-height: 88vh; transform-origin: center center; user-select: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Acuerdos de sala 06/11 - antes y después</h1>
+    <p>ALMAHUE EXPORT SPA, Modo Demo, periodo 2026-08. Capturas 1536x960 de lo que quedó en el ERP: el eslabón de la escala, las guías por confirmar, el comentario y la anulación del comprobante, las acciones del presupuesto, el alta de activo fijo y la cartola en pesos. El recuadro verde y la etiqueta NUEVO están solo en la foto. Un clic abre la imagen. La rueda o las teclas + y - hacen zoom. Izquierda y derecha cambian entre el antes y el después. Esc cierra. Recorrido en <a href="recorrido.html">recorrido.html</a>. La semana anterior está en <a href="../revision-semana-2026-10-27-a-2026-11-05/comparacion.html">comparación 27/10 a 05/11</a>.</p>
+  </header>
+
+  <section>
+    <h2>1. Admin - Reglas de aprobación, eslabón <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-reglas-eslabon.png" alt="Eslabón con tope solo en pesos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-reglas-eslabon-marcado.png" alt="Cargo en la cadena y topes en dólar y yuan" />
+      </figure>
+    </div>
+    <p class="nota">El eslabón suma el cargo (Sin marca, jefatura, gerencia de área o gerencia general) y el tope en dólar y en yuan. El tope en pesos ya estaba. No se apretó Guardar. El grupo y la persona del eslabón no se cambiaron.</p>
+  </section>
+
+  <section>
+    <h2>2. Insumos - Libro de guías, por confirmar <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-guias-por-confirmar.png" alt="Libro de guías sin pestaña por confirmar" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-guias-por-confirmar-marcado.png" alt="Pestaña Por confirmar y totales de guías físicas" />
+      </figure>
+    </div>
+    <p class="nota">Aparece la pestaña Por confirmar con los totales de guías físicas (por confirmar y confirmadas). Se visualiza el listado con estado de Stock centrado, conteo de fotos/respaldo y botones de acción rápida para confirmar la recepción física en bodega y subir fotos de la guía firmada. El stock sólo suma al presionar Confirmar.</p>
+  </section>
+
+  <section>
+    <h2>3. Contabilidad - Detalle del comprobante <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-asiento-detalle.png" alt="Detalle del asiento sin comentario aparte" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-asiento-detalle-marcado.png" alt="Comentario que no cambia la glosa" />
+      </figure>
+    </div>
+    <p class="nota">El comentario queda aparte de la glosa. Imprimir y PDF siguen en el pie. Anular queda en rojo. No se apretó Guardar comentario, Imprimir, PDF ni Anular. El comprobante AJU-2026-001 no se modificó.</p>
+  </section>
+
+  <section>
+    <h2>4. Contabilidad - Anular comprobante <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-asiento-anular.png" alt="Anulación que preparaba otro comprobante" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-asiento-anular-marcado.png" alt="El comprobante queda anulado y no se crea otro" />
+      </figure>
+    </div>
+    <p class="nota">El aviso dice que el comprobante queda Anulado, sale del mayor y no se crea otro. Si quien anula no es jefatura de contabilidad, solo queda una solicitud. No se apretó Sí, anular. El motivo de ejemplo no se guardó.</p>
+  </section>
+
+  <section>
+    <h2>5. Contabilidad - Presupuestos por departamento <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-presupuestos.png" alt="Fila de presupuesto sin acciones de icono" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-presupuestos-marcado.png" alt="PDF, editar y eliminar en la fila" />
+      </figure>
+    </div>
+    <p class="nota">Cada fila tiene PDF, editar y eliminar. Exportar Excel y Exportar PDF del encabezado ya estaban. No se abrió el PDF de la fila ni se editó ni se eliminó un presupuesto.</p>
+  </section>
+
+  <section>
+    <h2>6. Activo fijo - Nuevo activo <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-activo-fijo-alta.png" alt="Alta de activo sin exigir OC recepcionada" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-activo-fijo-alta-marcado.png" alt="OC de activo fijo recepcionada obligatoria y factura opcional" />
+      </figure>
+    </div>
+    <p class="nota">La orden de compra tiene que ser de activo fijo y estar recepcionada. La factura de compras ya no es obligatoria: el campo no lleva asterisco. No se apretó Guardar activo ni se eligió una orden.</p>
+  </section>
+
+  <section>
+    <h2>7. Tesorería - Cartola bancaria <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-cartola.png" alt="Detalle de cartola sin vista en pesos" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-cartola-marcado.png" alt="Botón Ver en pesos en el detalle de la cartola" />
+      </figure>
+    </div>
+    <p class="nota">En el detalle de Banco Estado está Ver en pesos, y al lado el PDF. La cartola seguía cargando los movimientos. No se cambió la vista a pesos ni se descargó el PDF.</p>
+  </section>
+
+  <section>
+    <h2>8. Insumos - Recetas de embalaje con Centro de Costo <span class="badge-revision">💻 Codeados pero sin revisión</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-recetas-lista.png" alt="Recetas asociadas a un solo packing sin Centro de Costo" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-recetas-lista-marcado.png" alt="Columna Centro de Costo y filtro por CC en Recetas de Embalaje" />
+      </figure>
+    </div>
+    <p class="nota">La grilla de Recetas de Embalaje incorpora la columna y filtro select de Centro de Costo, desvinculando la receta de un único packing para distribuirse por packing en el consumo mensual de producción.</p>
+  </section>
+
+  <section>
+    <h2>9. Admin - Esquema de Ramas & 3 Modalidades de Aprobación en Paralelo (OR, AND, Escalas 3.1/3.2) <span class="badge-pendiente">⏳ Pendiente QA</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-esquema-ramas-aprobacion.png" alt="Aprobaciones monolíticas rígidas sin estructura de ramas ni paralelismo" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-esquema-ramas-aprobacion-marcado.png" alt="Esquema de Ramas con Gerencia General en Rango 1, cargos en paralelo y 3 modalidades de aprobación (OR, AND, Escalonado)" />
+      </figure>
+    </div>
+    <p class="nota">Se estructura la administración de roles y aprobaciones mediante dos conceptos unificados donde <strong>el 1 es siempre el valor más importante</strong>:
+    <br>• <strong>Nivel de Rama (Ubicación & Herencia)</strong>: Nivel 1 = Dirección General (vértice supremo). Nivel 2 = Ramas Operativas Principales desplegadas en paralelo horizontal (Agrícola, Packing, Administración, Contratistas). Nivel 3+ = Sub-ramas dependientes ubicadas abajo.
+    <br>• <strong>Rango de Autoridad (Decisión de Personas)</strong>: Rango 1 = Gerencia General (decisión final ilimitada). Rango 2 = Gerencias de Área. Rango 3 = Jefaturas Operativas (3.1 ➔ 3.2 por tramos de monto). Rango 4 = Emisores / Asistentes (solo digitan).
+    <br>En las reglas de aprobación se configuran libremente 3 modalidades: <strong>1. En Paralelo (OR)</strong> como opciones no excluyentes (Fundos Norte y Sur; cualquiera visa para agilizar faena); <strong>2. Decisión Unánime (AND)</strong> en bloque conjunto vinculante (Planta + Calidad en empaque); y <strong>3. Escalas Secuenciales (3.1 ➔ 3.2)</strong> entre cargos por tramos de monto antes de escalar a Gerencia de Área.</p>
+  </section>
+
+  <section>
+    <h2>10. Admin - Usuarios con Cargo en Árbol Jerárquico <span class="badge-pendiente">⏳ Pendiente QA</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-usuarios-cargo-arbol.png" alt="Usuarios sin pertenencia explícita a la jerarquía de roles" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-usuarios-cargo-arbol-marcado.png" alt="Columna Cargo en Árbol Jerárquico con rango, rama y topes" />
+      </figure>
+    </div>
+    <p class="nota">La grilla de Usuarios incorpora la columna de Cargo en Árbol Jerárquico. En el formulario de alta, el usuario simplemente selecciona su Cargo de la Rama (ej. Jefatura de Campo · Rango 3), heredando automáticamente sus topes y línea de mando sin requerir configuración manual de grupos.</p>
+  </section>
+
+  <section>
+    <h2>11. Admin - Eslabones Configurables (Nombres, Rangos 1 a 4, 3 Modalidades de Escala y Personas) <span class="badge-pendiente">⏳ Pendiente QA</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-eslabon-configurar-modal.png" alt="Nombres predefinidos rígidos sin personalización por el cliente" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-eslabon-configurar-modal-marcado.png" alt="Modal de configuración con nombre libre, selector de modalidad de aprobación (OR, AND, Escala 3.1/3.2), Rango de Autoridad y gestión de personas" />
+      </figure>
+    </div>
+    <p class="nota">Los nombres de cada eslabón y cargo no son predefinidos sino 100% configurables por el usuario. El modal permite editar el nombre exacto de la jefatura, código identificador, el <strong>Rango de Autoridad (Decisión)</strong> (1 = GG, 2 = Gerencia de Área, 3 = Jefatura, 4 = Asistente), la <strong>Modalidad de Aprobación en Reglas</strong> (Paralelo OR, Unánime AND, Escalonado), a qué eslabón superior escala (padre), topes multimoneda y la asignación interactiva de personas al cargo.</p>
+  </section>
+
+  <section>
+    <h2>12. Admin - Creación Dinámica de Ramas y Asignación de Nivel de Rama <span class="badge-pendiente">⏳ Pendiente QA</span></h2>
+    <div class="pair">
+      <figure class="antes">
+        <figcaption>Antes</figcaption>
+        <img src="antes-esquema-ramas-aprobacion.png" alt="Estructura fija y sin posibilidad de añadir ramas operativas adicionales" />
+      </figure>
+      <figure class="despues">
+        <figcaption>Después</figcaption>
+        <img src="despues-modal-nueva-rama-marcado.png" alt="Modal Nueva Rama con campo Nivel de Rama numérico, código, nombre, subtítulo y módulos asignados" />
+      </figure>
+    </div>
+    <p class="nota">El sistema permite crear libremente nuevas ramas para cubrir módulos presentes o futuros (ej. Contratistas, Insumos, Bodegas, Exportaciones). La <strong>Dirección General</strong> es <strong>Nivel 1</strong> (en el vértice), mientras que todas las ramas operativas principales son <strong>Nivel 2</strong> desplegadas en <strong>paralelo horizontal</strong> (Agrícola, Packing, Administración, Contratistas). El <strong>Nivel 3</strong> o superior corresponde a sub-ramas jerárquicas ubicadas <strong>abajo</strong> del Nivel 2, nunca en paralelo. Además, se eliminó por completo todo rastro de los 20 grupos anteriores y barras legadas.</p>
+  </section>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor-bar">
+      <strong id="visor-titulo"></strong>
+      <span>izquierda / derecha: antes y después. + y - : zoom. Esc cierra</span>
+      <button type="button" id="zoom-out" aria-label="Alejar">-</button>
+      <button type="button" id="zoom-reset">100%</button>
+      <button type="button" id="zoom-in" aria-label="Acercar">+</button>
+      <button type="button" id="visor-cerrar">Cerrar</button>
+    </div>
+    <div class="lienzo" id="lienzo"><img id="visor-img" alt="" /></div>
+  </div>
+  <script>
+    const pares = [...document.querySelectorAll(".pair")].map((pair) => {
+      const titulo = pair.closest("section").querySelector("h2").textContent.trim();
+      return [...pair.querySelectorAll("img")].map((img) => ({
+        src: img.getAttribute("src"),
+        alt: img.alt,
+        lado: img.closest("figure").classList.contains("despues") ? "Después" : "Antes",
+        titulo,
+      }));
+    });
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const titulo = document.getElementById("visor-titulo");
+    const lienzo = document.getElementById("lienzo");
+    let par = 0, lado = 0, escala = 1, x = 0, y = 0, arrastrando = false, origenX = 0, origenY = 0, baseX = 0, baseY = 0;
+    function pintar() {
+      const item = pares[par][lado];
+      visorImg.src = item.src;
+      visorImg.alt = item.alt;
+      titulo.textContent = item.titulo + " - " + item.lado;
+      visorImg.style.transform = "translate(calc(-50% + " + x + "px), calc(-50% + " + y + "px)) scale(" + escala + ")";
+    }
+    function abrir(indicePar, indiceLado) {
+      par = indicePar; lado = indiceLado; escala = 1; x = 0; y = 0;
+      visor.hidden = false; visor.classList.add("abierto");
+      document.body.style.overflow = "hidden";
+      pintar();
+    }
+    function cerrar() { visor.classList.remove("abierto"); visor.hidden = true; document.body.style.overflow = ""; }
+    function zoom(delta) { escala = Math.min(6, Math.max(0.4, Math.round((escala + delta) * 10) / 10)); pintar(); }
+    document.querySelectorAll(".pair img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const pair = img.closest(".pair");
+        abrir([...document.querySelectorAll(".pair")].indexOf(pair), [...pair.querySelectorAll("img")].indexOf(img));
+      });
+    });
+    document.getElementById("visor-cerrar").addEventListener("click", cerrar);
+    document.getElementById("zoom-in").addEventListener("click", () => zoom(0.25));
+    document.getElementById("zoom-out").addEventListener("click", () => zoom(-0.25));
+    document.getElementById("zoom-reset").addEventListener("click", () => { escala = 1; x = 0; y = 0; pintar(); });
+    lienzo.addEventListener("wheel", (event) => { event.preventDefault(); zoom(event.deltaY < 0 ? 0.15 : -0.15); }, { passive: false });
+    lienzo.addEventListener("pointerdown", (event) => {
+      arrastrando = true; lienzo.classList.add("arrastrando");
+      origenX = event.clientX; origenY = event.clientY; baseX = x; baseY = y;
+      lienzo.setPointerCapture(event.pointerId);
+    });
+    lienzo.addEventListener("pointermove", (event) => {
+      if (!arrastrando) return;
+      x = baseX + (event.clientX - origenX);
+      y = baseY + (event.clientY - origenY);
+      pintar();
+    });
+    lienzo.addEventListener("pointerup", () => { arrastrando = false; lienzo.classList.remove("arrastrando"); });
+    document.addEventListener("keydown", (event) => {
+      if (visor.hidden) return;
+      if (event.key === "Escape") cerrar();
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") { lado = lado === 0 ? 1 : 0; pintar(); }
+      if (event.key === "+" || event.key === "=") zoom(0.25);
+      if (event.key === "-" || event.key === "_") zoom(-0.25);
+    });
+  </script>
+</body>
+</html>

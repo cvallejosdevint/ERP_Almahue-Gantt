@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Bodega - mega recorrido por proceso</title>
+  <style>
+    :root { --bg: #f4f1ea; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --card: #fff; --compras: #9a3412; --ventas: #166534; --conta: #1d4ed8; --teso: #b45309; --param: #0f766e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.35 "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px 0; max-width: 1280px; margin: 0 auto; }
+    h1 { font-size: 1.05rem; margin: 0; }
+    .layout { display: grid; grid-template-columns: 230px 1fr; gap: 10px; max-width: 1280px; margin: 0 auto; padding: 6px 16px 10px; align-items: start; }
+    nav { position: sticky; top: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+    nav button.step { display: grid; grid-template-columns: 28px 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; border-radius: 8px; padding: 4px 6px; cursor: pointer; color: inherit; font: inherit; }
+    nav button.step.on { background: #f5f5f4; }
+    .n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+    .mod { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    .ttl { font-weight: 650; }
+    .compras { background: var(--compras); }
+    .ventas { background: var(--ventas); }
+    .conta { background: var(--conta); }
+    .teso { background: var(--teso); }
+    .param { background: var(--param); }
+    main { min-width: 0; }
+    .bar { display: flex; align-items: center; gap: 12px; margin: 0; }
+    .bar h2 { margin: 0; font-size: 1rem; }
+    .actions { display: flex; gap: 8px; }
+    .actions button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 12px; }
+    .actions button:disabled { opacity: .4; cursor: default; }
+    .frame { position: relative; display: inline-block; max-width: 100%; }
+    .frame img { display: block; width: auto; max-width: 100%; max-height: calc(100vh - 168px); height: auto; border-radius: 10px; border: 1px solid var(--line); }
+    button.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; padding: 0; border-radius: 50%; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.4); z-index: 1; opacity: .45; cursor: pointer; }
+    button.pin.on { width: 36px; height: 36px; margin: -18px 0 0 -18px; font-size: 16px; opacity: .85; outline: 3px solid #facc15; z-index: 2; }
+    .card { margin-top: 6px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+    .card h3 { margin: 0 0 2px; font-size: 0.95rem; }
+    .card p { margin: 0; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bodega por proceso. Cada pestaña es una pantalla. No se guardó ni se cerró el mes. Cierre de octubre: <a href="../cierres-modulos-2026-10-20/recorrido.html">cierres-modulos-2026-10-20</a>.</h1>
+    <div class="bar">
+      <h2 id="title"></h2>
+      <div class="actions">
+        <button type="button" id="prev">Anterior</button>
+        <button type="button" id="next">Siguiente</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="rail"></nav>
+    <main>
+      <div id="stage"></div>
+      <div class="card" id="card"></div>
+    </main>
+  </div>
+  <script>
+    const steps = [
+      {
+        mod: "Insumos", cls: "param",
+        title: "1. Maestro artículos",
+        img: "proceso-maestro.png",
+        alt: "Ficha de artículo, sin guardar",
+        pins: [
+          { x: 50, y: 58, t: "Cuenta de ingreso", d: "Reu3: el artículo indica a qué cuenta va cuando se vende. No es la cuenta del cierre de bodega. Esa vive en Cierre, por tipo de movimiento. No se apretó Guardar cambios." },
+          { x: 24, y: 68, t: "Inventariable", d: "Reu1: materiales de bodega viven aquí, no duplicados en Compras. El toggle mueve stock. No se apretó Guardar." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "param",
+        title: "2. Bodegas",
+        img: "proceso-bodegas.png",
+        alt: "Ficha de bodega, sin guardar",
+        pins: [
+          { x: 28, y: 52, t: "Código único", d: "Reu1 y Reu3: listar y crear bodegas de la empresa activa. Código único por empresa. No se apretó Guardar cambios." },
+          { x: 92, y: 11, t: "Nueva bodega", d: "Alta de bodega. Niveles de almacenamiento no se construyeron: MJ dijo que no los usan." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "3. Stock por bodega",
+        img: "proceso-stock.png",
+        alt: "Stock BDGCER, sin editar",
+        pins: [
+          { x: 22.2, y: 24.5, t: "Por bodega", d: "Reu3: poder buscar por bodega, no solo por movimiento. Combo BDGCER. No se guardó nada." },
+          { x: 92.1, y: 46.4, t: "Disponible", d: "Físico menos reserva de OV. Cereza 8219. La factura de venta no mueve stock otra vez (Reu6)." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "4. Movimientos",
+        img: "proceso-movimientos.png",
+        alt: "Movimiento entrada proveedor, sin guardar",
+        pins: [
+          { x: 50, y: 38, t: "Tipo Entrada proveedor", d: "Reu1: entrada desde OC o guía, traslado, devolución. Este es ENTRADA_PROVEEDOR de la guía 52 / hija OC-2026-0023.2. No se apretó Guardar." },
+          { x: 78, y: 52, t: "Factura vinculada NC", d: "Hueco: MJ pidió sacar la NC al precio de esa factura, no al promedio. El campo existe; el cierre y el stock no leen la factura de origen." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "conta",
+        title: "5. Cierre de bodega",
+        img: "proceso-cierre.png",
+        alt: "Cierre de bodega, sin cerrar el mes",
+        pins: [
+          { x: 95.2, y: 10.8, t: "Cerrar mes", d: "Reu1 y Reu4: cierre propio del módulo, nace el asiento. Deshabilitado porque faltan cuentas. No se apretó." },
+          { x: 58.0, y: 24.8, t: "Resumen del mes", d: "$61.700, 4 movimientos. Distinto del candado de Períodos. Hueco: las cuentas son por tipo, no por familia y subfamilia como en Agrosoft." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "6. Órdenes madre e hija",
+        img: "proceso-ordenes.png",
+        alt: "Órdenes de insumos, sin editar",
+        pins: [
+          { x: 92.4, y: 11.2, t: "Nueva OC insumos", d: "01/10 y 14/10: OC de materiales solo en insumos. No se apretó Nueva OC." },
+          { x: 35.4, y: 65.1, t: "Madre y cobertura", d: "OC-2026-0023 madre, hijas .1 y .2 por guía. El origen dice Insumos. No se apretó Contabilizar ni Cerrar orden." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "7. Libro de guías",
+        img: "proceso-guias.png",
+        alt: "Libro de guías, sin asociar ni sync",
+        pins: [
+          { x: 93.4, y: 11.2, t: "Traer de GoSocket", d: "14/10: la recepción de material es con guía. No se apretó Traer de GoSocket." },
+          { x: 96.7, y: 40.0, t: "Asociar a la orden", d: "Genera hija o avisa a quien creó la OC. Guía 54 sigue pendiente. No se apretó Asociar ni Informar recibo al SII." }
+        ]
+      },
+      {
+        mod: "Insumos", cls: "compras",
+        title: "8. Aprobaciones",
+        img: "proceso-aprobaciones.png",
+        alt: "Bandeja de OC insumos, sin PIN",
+        pins: [
+          { x: 18.0, y: 12.5, t: "Bandeja insumos", d: "14/10: cadena de OC de materiales aparte de compras de servicio. Lista de Insumos / Bodega." },
+          { x: 91.0, y: 40.0, t: "Ver / Historial", d: "OC-2026-0023 ya aprobada. No se apretó aprobar ni rechazar." }
+        ]
+      }
+    ];
+
+    let step = 0, pin = 0;
+    const rail = document.getElementById("rail");
+    const stage = document.getElementById("stage");
+    const card = document.getElementById("card");
+    const title = document.getElementById("title");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    steps.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "step";
+      b.innerHTML = `<span class="n ${s.cls}">${i + 1}</span><span><span class="mod">${s.mod}</span><br><span class="ttl">${s.title.replace(/^\d+\.\s/, "")}</span></span>`;
+      b.addEventListener("click", () => show(i, 0));
+      rail.appendChild(b);
+    });
+
+    function show(i, p) {
+      step = i; pin = p;
+      const s = steps[i];
+      title.textContent = s.title;
+      prev.disabled = i === 0 && p === 0;
+      next.disabled = i === steps.length - 1 && p === s.pins.length - 1;
+      [...rail.children].forEach((el, idx) => el.classList.toggle("on", idx === i));
+      stage.innerHTML = "";
+      const frame = document.createElement("div");
+      frame.className = "frame";
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = s.alt;
+      frame.appendChild(img);
+      s.pins.forEach((item, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "pin " + s.cls + (idx === p ? " on" : "");
+        b.style.left = item.x + "%";
+        b.style.top = item.y + "%";
+        b.textContent = String(idx + 1);
+        b.title = item.t;
+        b.addEventListener("click", () => show(i, idx));
+        frame.appendChild(b);
+      });
+      stage.appendChild(frame);
+      const item = s.pins[p];
+      card.innerHTML = `<h3>${item.t}</h3><p>${item.d}</p>`;
+    }
+    function forward() {
+      const s = steps[step];
+      if (pin < s.pins.length - 1) show(step, pin + 1);
+      else if (step < steps.length - 1) show(step + 1, 0);
+    }
+    function back() {
+      if (pin > 0) show(step, pin - 1);
+      else if (step > 0) show(step - 1, steps[step - 1].pins.length - 1);
+    }
+    prev.addEventListener("click", back);
+    next.addEventListener("click", forward);
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") forward();
+      if (ev.key === "ArrowLeft") back();
+    });
+    show(0, 0);
+  </script>
+</body>
+</html>

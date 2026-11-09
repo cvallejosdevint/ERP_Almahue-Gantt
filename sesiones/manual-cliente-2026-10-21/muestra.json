@@ -1,0 +1,26 @@
+{
+  "ocNumero": "OC-2026-0001",
+  "ocId": "cmvi36nk9000ah4tyx52asigv",
+  "folioOficial": "64",
+  "registroId": "cmvi3br6c0021h4ty6swfsrlx",
+  "facturaAlmId": "cmvi36jos0009h4tynwwpxcr9",
+  "gaps": [
+    "Sync inbox GoSocket rehidrato DTE viejos del sandbox (folios 56-63). Se borraron del libro local para no mezclarlos con la muestra. Folio 64 es el DTE nuevo ALM > Export."
+  ],
+  "ingresoLaborId": "cmvi5sy2600019otyra7newsl",
+  "proformaId": "cmvi5sy4800029otyk6d8nuwc",
+  "pagoId": "cmvi5syb800099otyjhp6v1pg",
+  "movimientoBodegaId": "cmvi36qrg000zh4tyjaa4s3lt",
+  "cierreCtrId": "cmvi76ygf000j9oty1wljpn99",
+  "asientoCtrId": "cmvi76ygc000i9otyvv8ad1l2",
+  "asientoCtrNumero": "20260005",
+  "asientoCtrMonto": 9600,
+  "ocInsumosNumero": "OC-2026-0002",
+  "guiaFolio": "57",
+  "facturaInsumos": "65",
+  "asientoInsumosNumero": "20260006",
+  "ocServicioSandbox": ["OC-2026-0003", "OC-2026-0004", "OC-2026-0005"],
+  "foliosSandboxAsociados": ["61", "62", "63"],
+  "asientoCierreBodegaNumero": "20260007",
+  "asientoCierreBodegaMonto": 66250
+}
