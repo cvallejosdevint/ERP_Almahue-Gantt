@@ -9,7 +9,9 @@ Estructura:
 """
 
 import os
+import re
 import docx
+import docx.opc.constants
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
@@ -35,6 +37,34 @@ def create_document():
     C_GRAY_BORDER = "D1D5DB" # Borde de tablas
     C_TEXT = "1F2937"        # Texto principal
     C_MUTED = "4B5563"       # Texto secundario
+
+    def add_hyperlink(paragraph, url, text, color="1D4ED8", underline=True):
+        part = paragraph.part
+        r_id = part.relate_to(url, docx.opc.constants.RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
+        hyperlink = OxmlElement('w:hyperlink')
+        hyperlink.set(qn('r:id'), r_id)
+        new_run = OxmlElement('w:r')
+        rPr = OxmlElement('w:rPr')
+        if color:
+            c = OxmlElement('w:color')
+            c.set(qn('w:val'), color)
+            rPr.append(c)
+        if underline:
+            u = OxmlElement('w:u')
+            u.set(qn('w:val'), 'single')
+            rPr.append(u)
+        rFonts = OxmlElement('w:rFonts')
+        rFonts.set(qn('w:ascii'), 'Segoe UI')
+        rFonts.set(qn('w:hAnsi'), 'Segoe UI')
+        rPr.append(rFonts)
+        sz = OxmlElement('w:sz')
+        sz.set(qn('w:val'), '17')
+        rPr.append(sz)
+        new_run.append(rPr)
+        new_run.text = text
+        hyperlink.append(new_run)
+        paragraph._p.append(hyperlink)
+        return hyperlink
 
     def set_cell_background(cell, fill_hex):
         tcPr = cell._element.get_or_add_tcPr()
@@ -107,10 +137,10 @@ def create_document():
     set_table_borders(meta_table, color="BBF7D0", sz="6")
 
     meta_items = [
-        ("FECHA DE EMISIÓN", "07 de Noviembre de 2026"),
-        ("ALCANCE AUDITADO", "3 Semanas (19/10 al 07/11/2026)"),
-        ("TOTAL ACUERDOS", "70 Requerimientos Consolidados"),
-        ("ESTADO GENERAL", "100% Validado en Código (✔ Listo)"),
+        ("FECHA DE EMISIÓN", "09 de Noviembre de 2026"),
+        ("ALCANCE AUDITADO", "3 Semanas (19/10 al 09/11/2026)"),
+        ("TOTAL ACUERDOS", "71 Requerimientos Consolidados"),
+        ("ESTADO GENERAL", "11 En QA · 60 Codeados pero sin revisión"),
     ]
 
     for idx, (lbl, val) in enumerate(meta_items):
@@ -164,109 +194,120 @@ def create_document():
         "A continuación se presenta la matriz general de control donde se auditan los acuerdos "
         "levantados en las sesiones con los clientes y usuarios clave de Agrícola Almahue "
         "(María Jesús Vial, Fran, Lupe Montero, Agustín Vial, Mario Rodríguez y Sergio Donoso), "
-        "verificando su correspondencia en backend (NestJS / PostgreSQL) y frontend (React / Vite)."
+        "verificando su correspondencia en backend (NestJS / PostgreSQL) y frontend (React / Vite).\n\n"
+        "Convención de Estados:\n"
+        "• ⏳ En QA: Acuerdos y requerimientos que han sido revisados, corregidos e implementados técnicamente "
+        "(como el ajuste integral a Administración de Usuarios, derivación automática de jefatura, saneamiento de errores 404, "
+        "topes de visación y normalización de jerarquías), los cuales quedan pendientes de validación formal en ciclo de QA.\n"
+        "• 💻 Codeados pero sin revisión: Acuerdos y requerimientos levantados en las sesiones de las últimas 3 semanas que ya se "
+        "encuentran implementados a nivel de código fuente (backend NestJS y frontend React), pendientes de contraste y revisión operativa con el cliente.\n\n"
+        "Nota de ordenamiento: Los acuerdos están organizados cronológicamente del más antiguo al más nuevo (19/10 al 09/11). "
+        "Por lo tanto, los 11 acuerdos de esta semana marcados como '⏳ En QA' se encuentran ubicados en el bloque final de la tabla (filas 61 a 71, fechas 06/11 - 09/11)."
     )
     r_intro.font.name = "Segoe UI"
     r_intro.font.size = Pt(9.5)
     r_intro.font.color.rgb = RGBColor(75, 85, 99)
 
-    # Datos exhaustivos del checklist
+    # Datos exhaustivos del checklist (orden cronológico ascendente: del más antiguo al más nuevo)
     checklist_data = [
-        # SEMANA 3: ESTA SEMANA (02/11 AL 07/11)
-        ("Esta Semana", "06/11 - 07/11", "Unificación Conceptual: Rango de Autoridad (Decisión 1 a 4) vs Nivel de Ramas (Ubicación & Herencia 1 a 3+). El 1 es siempre el valor más importante.", "Admin / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Eliminación total del rastro de configuración anterior (barras legadas, botones 'Niveles', 'Árbol de Grupos', inputs huérfanos y 20 grupos anteriores).", "Admin / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Creación dinámica de ramas ('+ Nueva Rama', Nivel 1 Dirección General, Nivel 2 Ramas operativas en paralelo, Nivel 3+ sub-ramas abajo).", "Admin / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Nombres de eslabones 100% configurables por el usuario (no predefinidos) con asignación de personas y topes multimoneda.", "Admin / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "3 Modalidades de Aprobación en Reglas: Paralelo OR (opciones no excluyentes), Unánime AND (bloque vinculado) y Escala Secuencial 3.1 ➔ 3.2.", "Admin / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Adaptación de usuarios reales existentes de BD Almahue (cargos-jerarquicos-real.ts: Natalia Bravo, Daniela Fuentes, Bruno Lagos, etc.).", "Admin / Parametrización", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Resiliencia de endpoints y eliminación de errores 404 en Modo Real con sincronización en localStorage.", "Front / Core", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Saneamiento estricto de TypeScript (tsc -b && vite build) con 0 errores y código de salida 0.", "Front / Core", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Integración de Cargo en grilla de Usuarios con selector de Rama y Cargo, heredando automáticamente topes y mando.", "Admin / Usuarios", "✔ Listo"),
-        ("Esta Semana", "06/11 - 07/11", "Simulador de escalamiento interactivo en tiempo real por solicitante y monto, resolviendo compras menores en jefatura.", "Admin / Aprobaciones", "✔ Listo"),
+        # SEMANA 1: SEMANA 19–23 OCTUBRE (19/10 AL 23/10) - CODEADOS PERO SIN REVISIÓN
+        ("Semana 19–23 Oct", "19/10", "Ficha única de contraparte compartida por RUT para clientes, proveedores y productores.", "Contrapartes", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "19/10", "Flag esProductor en contraparte (manteniendo el maestro Productor fuera como entidad independiente).", "Contrapartes / Comercial", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "19/10", "Separación de click de fila (detalle) versus botón explícito de edición.", "Front / UI", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "19/10", "Asociación de DTE a gastos generales y servicios sin obligar entrada a bodega.", "Compras / DTE", "💻 Codeados pero sin revisión"),
 
-        ("Esta Semana", "05/11", "Grupos y escalas se mantienen como motor de aprobación de OC (no reemplazados por organigrama informativo).", "Compras / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "05/11", "Siempre firma la jefatura; tope obligatorio en el último aprobador de la escala para evitar errores de tipeo.", "Compras / Aprobaciones", "✔ Listo"),
-        ("Esta Semana", "05/11", "Topes multimoneda (CLP, USD, Yuan) con tipo de cambio sugerido del Banco Central editable y guardado fijo.", "Parametrización / Monedas", "✔ Listo"),
-        ("Esta Semana", "05/11", "Recetas de insumos asociadas al embalaje (no a un solo packing). En el consumo se distribuyen cantidades por packing.", "Insumos / Recetas", "✔ Listo"),
-        ("Esta Semana", "05/11", "Consumo valorizado al precio promedio ponderado del stock mensual (sin FIFO por guía).", "Insumos / Bodega", "✔ Listo"),
-        ("Esta Semana", "05/11", "Devolución a proveedor valorizada al precio de la guía pero sin restar stock físico de origen.", "Insumos / Bodega", "✔ Listo"),
-        ("Esta Semana", "05/11", "Stock de guías recibidas se incrementa exclusivamente al confirmar la recepción (pestaña 'Por confirmar') con fotos y adjuntos.", "Insumos / Guías", "✔ Listo"),
-        ("Esta Semana", "05/11", "Activo fijo: el maestro nace exclusivamente cuando la OC tipo activo fijo está recepcionada (aviso si falta factura).", "Activo Fijo", "✔ Listo"),
-        ("Esta Semana", "05/11", "Reversa de proformas: se edita la línea del asiento existente (sin crear asiento nuevo de reversa ni ajuste).", "Contabilidad / Proformas", "✔ Listo"),
-        ("Esta Semana", "05/11", "Anulación de comprobantes: estado ANULADO con motivo registrado, ejecutado por la jefatura o mediante solicitud.", "Contabilidad / Asientos", "✔ Listo"),
-        ("Esta Semana", "05/11", "Retiro de 'Administradores por módulo' de la operación; control de acceso basado estrictamente en roles.", "Admin / Seguridad", "✔ Listo"),
+        ("Semana 19–23 Oct", "20/10", "Emisión DTE con GoSocket en modalidad fail-closed (bloqueo ante caída del proveedor).", "Facturación / DTE", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "20/10", "Devolución de mercadería sin rebajar el documento físico original.", "Insumos / Bodega", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "20/10", "Cierre mensual de bodegas bloqueando movimientos extemporáneos.", "Insumos / Bodega", "💻 Codeados pero sin revisión"),
 
-        ("Esta Semana", "04/11", "Normalización visual integral (almahue-diseno): totales en cards plegables, barra con filtro integrado, badges centrados.", "Front / UI", "✔ Listo"),
-        ("Esta Semana", "04/11", "Unificación de vistas de detalle y edición en tablas para evitar clicks sin respuesta visual.", "Front / UI", "✔ Listo"),
-        ("Esta Semana", "04/11", "Esquema de eliminación seguro en Parametrización: desactivar primero; borrar definitivo solo administradores.", "Parametrización", "✔ Listo"),
-        ("Esta Semana", "04/11", "Revisión y ajuste contable de reversa en Tesorería.", "Tesorería / Contabilidad", "✔ Listo"),
+        ("Semana 19–23 Oct", "21/10", "Registro de guías manuales de insumos sin obligatoriedad de factura inmediata.", "Insumos", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "21/10", "Hijas sin saldo: control de recepción parcial sobre órdenes madre.", "Compras / Insumos", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "21/10", "Cierre operativo de contratistas al término de la temporada agrícola.", "Contratistas", "💻 Codeados pero sin revisión"),
 
-        ("Esta Semana", "03/11", "No reabrir periodo contable desde Traspaso: las correcciones deben nacer directamente desde la proforma.", "Contratistas / Traspaso", "✔ Listo"),
-        ("Esta Semana", "03/11", "Wizard de reversa: en periodo cerrado no ofrecer ingreso directo de clave; exigir motivo y 2 vistos buenos.", "Contratistas / Proformas", "✔ Listo"),
-        ("Esta Semana", "03/11", "Grilla de proformas filtrada por mes exacto (no arrastrar meses previos en rangos).", "Contratistas / Proformas", "✔ Listo"),
-        ("Esta Semana", "03/11", "Libro de Compras: no mostrar botón 'Contabilizar' si el documento no está asociado a una OC o Proforma.", "Compras / Libro Compras", "✔ Listo"),
-        ("Esta Semana", "03/11", "Hijas de insumos: solo la última guía recepcionada ajusta el saldo de la orden madre.", "Insumos / Compras", "✔ Listo"),
-        ("Esta Semana", "03/11", "Calce de guías por código de artículo del maestro al recepcionar.", "Insumos / Guías", "✔ Listo"),
+        ("Semana 19–23 Oct", "22/10", "Anulación de comprobante contable sin emitir contra-asiento distorsionador; comprobante queda ANULADO.", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "22/10", "Filtro del Libro Mayor excluyendo asientos anulados.", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "22/10", "Campo de comentario independiente en detalle del asiento (preservando la glosa).", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "22/10", "Exportación a Excel y PDF con formato institucional en balances y presupuestos.", "Contabilidad", "💻 Codeados pero sin revisión"),
 
-        # SEMANA 2: SEMANA ANTERIOR (26/10 AL 30/10)
-        ("Semana Anterior", "30/10", "Cobertura parcial de proformas por contratista y fecha de pago.", "Contratistas", "✔ Listo"),
-        ("Semana Anterior", "30/10", "Compras Módulo 2: validación estricta de asociación factura-OC antes de pago.", "Compras", "✔ Listo"),
-        ("Semana Anterior", "30/10", "Comex: soporte para liquidaciones y notas de cobro de embarcadores y Asoex.", "Compras / Comex", "✔ Listo"),
-        ("Semana Anterior", "30/10", "Migraciones de base de datos de compras aplicadas en entorno local.", "Base de Datos", "✔ Listo"),
+        ("Semana 19–23 Oct", "23/10", "Ciclo de vida seguro de registros: desactivar primero; borrar definitivo restringido.", "Parametrización", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "23/10", "Formulario de parámetros de empresa con validación de RUT y giro tributario.", "Parametrización", "💻 Codeados pero sin revisión"),
+        ("Semana 19–23 Oct", "23/10", "Auditoría distribuida con historial de cambios accesible en cada tabla.", "Auditoría", "💻 Codeados pero sin revisión"),
 
-        ("Semana Anterior", "29/10", "Protocolo de Doble Visto Bueno para modificación de proformas confirmadas.", "Contratistas", "✔ Listo"),
-        ("Semana Anterior", "29/10", "Matriz 2x2 para control de cuadrillas, jornales y tratos por faena.", "Contratistas", "✔ Listo"),
-        ("Semana Anterior", "29/10", "Control de acceso con PIN de seguridad para supervisores de temporada.", "Seguridad / PIN", "✔ Listo"),
+        # SEMANA 2: SEMANA 26–30 OCTUBRE (26/10 AL 30/10) - CODEADOS PERO SIN REVISIÓN
+        ("Semana 26–30 Oct", "26/10", "Estado de Resultados mensual versus Estado de Situación Financiera clasificado al 31/12.", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "26/10", "Carga masiva de asientos contables restrictiva tipo Agrosoft (transacción atómica todo-o-nada).", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "26/10", "Presupuestos por departamento con semáforos porcentuales de ejecución.", "Presupuestos", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "26/10", "Líneas de imputación contable múltiple en Orden de Compra.", "Compras", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "26/10", "Alerta de dimensiones contables faltantes con solicitud directa al administrador.", "Compras / Contabilidad", "💻 Codeados pero sin revisión"),
 
-        ("Semana Anterior", "28/10", "Cartola bancaria: no duplicar movimientos al reimportar archivos del mismo periodo.", "Tesorería", "✔ Listo"),
-        ("Semana Anterior", "28/10", "Ver cartola en moneda base (pesos chilenos) con tipo de cambio informado.", "Tesorería", "✔ Listo"),
-        ("Semana Anterior", "28/10", "Asiento de banco anclado a la cartola (CARTOLA:{id}): el pago no genera asiento PAGO:{id} redundante.", "Tesorería / Contabilidad", "✔ Listo"),
-        ("Semana Anterior", "28/10", "Devolución de insumos valorizada al precio exacto de la guía o factura de compra.", "Insumos / Bodega", "✔ Listo"),
-        ("Semana Anterior", "28/10", "Estado de cuenta por RUT (anticipos y pagos) consolidado para cliente, proveedor y productor.", "Tesorería / Contrapartes", "✔ Listo"),
+        ("Semana 26–30 Oct", "27/10", "Balance de 8 columnas acumulativo anual desde el 1 de enero hasta el mes de corte.", "Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "27/10", "Notas de cobro: modalidad de gasto directo para Asoex y proveedores exentos.", "Compras / Facturas", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "27/10", "Carga masiva de notas de cobro con archivo Excel estructurado.", "Compras", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "27/10", "Reversa de proformas en periodo cerrado condicionada a aprobación previa.", "Contratistas / Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "27/10", "Activo fijo originado en OC recepcionada (reemplazando criterio de alta libre).", "Activo Fijo", "💻 Codeados pero sin revisión"),
 
-        ("Semana Anterior", "27/10", "Balance de 8 columnas acumulativo anual desde el 1 de enero hasta el mes de corte.", "Contabilidad", "✔ Listo"),
-        ("Semana Anterior", "27/10", "Notas de cobro: modalidad de gasto directo para Asoex y proveedores exentos.", "Compras / Facturas", "✔ Listo"),
-        ("Semana Anterior", "27/10", "Carga masiva de notas de cobro con archivo Excel estructurado.", "Compras", "✔ Listo"),
-        ("Semana Anterior", "27/10", "Reversa de proformas en periodo cerrado condicionada a aprobación previa.", "Contratistas / Contabilidad", "✔ Listo"),
-        ("Semana Anterior", "27/10", "Activo fijo originado en OC recepcionada (reemplazando criterio de alta libre).", "Activo Fijo", "✔ Listo"),
+        ("Semana 26–30 Oct", "28/10", "Cartola bancaria: no duplicar movimientos al reimportar archivos del mismo periodo.", "Tesorería", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "28/10", "Ver cartola en moneda base (pesos chilenos) con tipo de cambio informado.", "Tesorería", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "28/10", "Asiento de banco anclado a la cartola (CARTOLA:{id}): el pago no genera asiento PAGO:{id} redundante.", "Tesorería / Contabilidad", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "28/10", "Devolución de insumos valorizada al precio exacto de la guía o factura de compra.", "Insumos / Bodega", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "28/10", "Estado de cuenta por RUT (anticipos y pagos) consolidado para cliente, proveedor y productor.", "Tesorería / Contrapartes", "💻 Codeados pero sin revisión"),
 
-        ("Semana Anterior", "26/10", "Estado de Resultados mensual versus Estado de Situación Financiera clasificado al 31/12.", "Contabilidad", "✔ Listo"),
-        ("Semana Anterior", "26/10", "Carga masiva de asientos contables restrictiva tipo Agrosoft (transacción atómica todo-o-nada).", "Contabilidad", "✔ Listo"),
-        ("Semana Anterior", "26/10", "Presupuestos por departamento con semáforos porcentuales de ejecución.", "Presupuestos", "✔ Listo"),
-        ("Semana Anterior", "26/10", "Líneas de imputación contable múltiple en Orden de Compra.", "Compras", "✔ Listo"),
-        ("Semana Anterior", "26/10", "Alerta de dimensiones contables faltantes con solicitud directa al administrador.", "Compras / Contabilidad", "✔ Listo"),
+        ("Semana 26–30 Oct", "29/10", "Protocolo de Doble Visto Bueno para modificación de proformas confirmadas.", "Contratistas", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "29/10", "Matriz 2x2 para control de cuadrillas, jornales y tratos por faena.", "Contratistas", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "29/10", "Control de acceso con PIN de seguridad para supervisores de temporada.", "Seguridad / PIN", "💻 Codeados pero sin revisión"),
 
-        # SEMANA 1: SEMANA PREVIA (19/10 AL 23/10)
-        ("Semana 19–23 Oct", "23/10", "Ciclo de vida seguro de registros: desactivar primero; borrar definitivo restringido.", "Parametrización", "✔ Listo"),
-        ("Semana 19–23 Oct", "23/10", "Formulario de parámetros de empresa con validación de RUT y giro tributario.", "Parametrización", "✔ Listo"),
-        ("Semana 19–23 Oct", "23/10", "Auditoría distribuida con historial de cambios accesible en cada tabla.", "Auditoría", "✔ Listo"),
+        ("Semana 26–30 Oct", "30/10", "Cobertura parcial de proformas por contratista y fecha de pago.", "Contratistas", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "30/10", "Compras Módulo 2: validación estricta de asociación factura-OC antes de pago.", "Compras", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "30/10", "Comex: soporte para liquidaciones y notas de cobro de embarcadores y Asoex.", "Compras / Comex", "💻 Codeados pero sin revisión"),
+        ("Semana 26–30 Oct", "30/10", "Migraciones de base de datos de compras aplicadas en entorno local.", "Base de Datos", "💻 Codeados pero sin revisión"),
 
-        ("Semana 19–23 Oct", "22/10", "Anulación de comprobante contable sin emitir contra-asiento distorsionador; comprobante queda ANULADO.", "Contabilidad", "✔ Listo"),
-        ("Semana 19–23 Oct", "22/10", "Filtro del Libro Mayor excluyendo asientos anulados.", "Contabilidad", "✔ Listo"),
-        ("Semana 19–23 Oct", "22/10", "Campo de comentario independiente en detalle del asiento (preservando la glosa).", "Contabilidad", "✔ Listo"),
-        ("Semana 19–23 Oct", "22/10", "Exportación a Excel y PDF con formato institucional en balances y presupuestos.", "Contabilidad", "✔ Listo"),
+        # SEMANA 3: ESTA SEMANA (02/11 AL 09/11) - REQUERIMIENTOS 03/11 AL 05/11 (CODEADOS PERO SIN REVISIÓN)
+        ("Esta Semana", "03/11", "No reabrir periodo contable desde Traspaso: las correcciones deben nacer directamente desde la proforma.", "Contratistas / Traspaso", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "03/11", "Wizard de reversa: en periodo cerrado no ofrecer ingreso directo de clave; exigir motivo y 2 vistos buenos.", "Contratistas / Proformas", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "03/11", "Grilla de proformas filtrada por mes exacto (no arrastrar meses previos en rangos).", "Contratistas / Proformas", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "03/11", "Libro de Compras: no mostrar botón 'Contabilizar' si el documento no está asociado a una OC o Proforma.", "Compras / Libro Compras", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "03/11", "Hijas de insumos: solo la última guía recepcionada ajusta el saldo de la orden madre.", "Insumos / Compras", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "03/11", "Calce de guías por código de artículo del maestro al recepcionar.", "Insumos / Guías", "💻 Codeados pero sin revisión"),
 
-        ("Semana 19–23 Oct", "21/10", "Registro de guías manuales de insumos sin obligatoriedad de factura inmediata.", "Insumos", "✔ Listo"),
-        ("Semana 19–23 Oct", "21/10", "Hijas sin saldo: control de recepción parcial sobre órdenes madre.", "Compras / Insumos", "✔ Listo"),
-        ("Semana 19–23 Oct", "21/10", "Cierre operativo de contratistas al término de la temporada agrícola.", "Contratistas", "✔ Listo"),
+        ("Esta Semana", "04/11", "Normalización visual integral (almahue-diseno): totales en cards plegables, barra con filtro integrado, badges centrados.", "Front / UI", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "04/11", "Unificación de vistas de detalle y edición en tablas para evitar clicks sin respuesta visual.", "Front / UI", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "04/11", "Esquema de eliminación seguro en Parametrización: desactivar primero; borrar definitivo solo administradores.", "Parametrización", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "04/11", "Revisión y ajuste contable de reversa en Tesorería.", "Tesorería / Contabilidad", "💻 Codeados pero sin revisión"),
 
-        ("Semana 19–23 Oct", "20/10", "Emisión DTE con GoSocket en modalidad fail-closed (bloqueo ante caída del proveedor).", "Facturación / DTE", "✔ Listo"),
-        ("Semana 19–23 Oct", "20/10", "Devolución de mercadería sin rebajar el documento físico original.", "Insumos / Bodega", "✔ Listo"),
-        ("Semana 19–23 Oct", "20/10", "Cierre mensual de bodegas bloqueando movimientos extemporáneos.", "Insumos / Bodega", "✔ Listo"),
+        ("Esta Semana", "05/11", "Grupos y escalas se mantienen como motor de aprobación de OC (no reemplazados por organigrama informativo).", "Compras / Aprobaciones", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Siempre firma la jefatura; tope obligatorio en el último aprobador de la escala para evitar errores de tipeo.", "Compras / Aprobaciones", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Topes multimoneda (CLP, USD, Yuan) con tipo de cambio sugerido del Banco Central editable y guardado fijo.", "Parametrización / Monedas", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Recetas de insumos asociadas al embalaje (no a un solo packing). En el consumo se distribuyen cantidades por packing.", "Insumos / Recetas", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Consumo valorizado al precio promedio ponderado del stock mensual (sin FIFO por guía).", "Insumos / Bodega", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Devolución a proveedor valorizada al precio de la guía pero sin restar stock físico de origen.", "Insumos / Bodega", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Stock de guías recibidas se incrementa exclusivamente al confirmar la recepción (pestaña 'Por confirmar') con fotos y adjuntos.", "Insumos / Guías", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Activo fijo: el maestro nace exclusivamente cuando la OC tipo activo fijo está recepcionada (aviso si falta factura).", "Activo Fijo", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Reversa de proformas: se edita la línea del asiento existente (sin crear asiento nuevo de reversa ni ajuste).", "Contabilidad / Proformas", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Anulación de comprobantes: estado ANULADO con motivo registrado, ejecutado por la jefatura o mediante solicitud.", "Contabilidad / Asientos", "💻 Codeados pero sin revisión"),
+        ("Esta Semana", "05/11", "Retiro de 'Administradores por módulo' de la operación; control de acceso basado estrictamente en roles.", "Admin / Seguridad", "💻 Codeados pero sin revisión"),
 
-        ("Semana 19–23 Oct", "19/10", "Ficha única de contraparte compartida por RUT para clientes, proveedores y productores.", "Contrapartes", "✔ Listo"),
-        ("Semana 19–23 Oct", "19/10", "Flag esProductor en contraparte (manteniendo el maestro Productor fuera como entidad independiente).", "Contrapartes / Comercial", "✔ Listo"),
-        ("Semana 19–23 Oct", "19/10", "Separación de click de fila (detalle) versus botón explícito de edición.", "Front / UI", "✔ Listo"),
-        ("Semana 19–23 Oct", "19/10", "Asociación de DTE a gastos generales y servicios sin obligar entrada a bodega.", "Compras / DTE", "✔ Listo"),
+        # SEMANA 3: ESTA SEMANA (06/11 AL 09/11) - AJUSTES REVISADOS, CORREGIDOS E INTEGRADOS (PENDIENTE QA)
+        ("Esta Semana", "06/11 - 09/11", "Ajuste e integración a Administración de Usuarios: selección secuencial Rama y Nivel, derivación automática de jefatura, eliminación de campos no admitidos y sincronización de topes.", "Admin / Usuarios", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Unificación Conceptual: Rango de Autoridad (Decisión 1 a 4) vs Nivel de Ramas (Ubicación & Herencia 1 a 3+). El 1 es siempre el valor más importante.", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Eliminación total del rastro de configuración anterior (barras legadas, botones 'Niveles', 'Árbol de Grupos', inputs huérfanos y 20 grupos anteriores en Organigrama y Usuarios).", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Creación dinámica de ramas ('+ Nueva Rama', soporte de múltiples ramas Nivel 1 en paralelo o Dirección Nivel 1, Nivel 2 Ramas operativas).", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Nombres de eslabones 100% configurables por el usuario con personalización de etiqueta por rama (rangoEtiqueta) y gestión interactiva de personas.", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "3 Modalidades de Aprobación en Reglas: Paralelo OR (opciones no excluyentes), Unánime AND (bloque vinculado) y Escala Secuencial con disposición vertical estricta.", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Inversión y corrección de orden jerárquico de escalas secuenciales (3.1 Jefatura sobre 3.2 Subjefatura) e integración total de usuarios en BD.", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Reglas para puestos compartidos: configuración explícita AND u OR a partir de la jefatura, manteniendo nivel base Rango 4 sin configuración de visación.", "Admin / Aprobaciones", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Normalización visual y modal ancho de configuración de eslabón (size='wide', 2 columnas equilibradas y KPIs plegables según almahue-diseno).", "Admin / UI", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Auditoría de flujo de datos, resiliencia y eliminación de llamadas a APIs inexistentes (404) con sincronización backend de jefeId y montoMaxAprobacion.", "Front / Core", "⏳ En QA"),
+        ("Esta Semana", "06/11 - 09/11", "Simulador de escalamiento jerárquico corregido sin auto-aprobación de Rango 4 (anti-requisito canónico de autoaprobación).", "Admin / Aprobaciones", "⏳ En QA"),
     ]
 
-    # Construcción de la tabla Matriz / Checklist
+    # Construcción de la tabla Matriz / Checklist con Numeración Correlativa
     cols = [
-        ("SEMANA", Inches(1.1)),
-        ("DÍA", Inches(0.9)),
-        ("ACUERDO / REQUERIMIENTO AUDITADO", Inches(3.2)),
-        ("MÓDULO", Inches(1.1)),
-        ("ESTADO", Inches(0.8)),
+        ("N°", Inches(0.45)),
+        ("SEMANA", Inches(0.95)),
+        ("DÍA", Inches(0.65)),
+        ("ACUERDO / REQUERIMIENTO AUDITADO", Inches(2.90)),
+        ("MÓDULO", Inches(0.95)),
+        ("ESTADO", Inches(1.30)),
     ]
 
     chk_table = doc.add_table(rows=len(checklist_data) + 1, cols=len(cols))
@@ -283,7 +324,7 @@ def create_document():
         p = c.paragraphs[0]
         p.paragraph_format.space_before = Pt(0)
         p.paragraph_format.space_after = Pt(0)
-        if i in [1, 4]:
+        if i in [0, 2, 5]:
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(col_name)
         r.font.name = "Segoe UI"
@@ -302,39 +343,58 @@ def create_document():
         if semana != current_week:
             current_week = semana
 
-        for i, val in enumerate([semana, dia, acuerdo, modulo, estado]):
+        valores_fila = [str(row_idx), semana, dia, acuerdo, modulo, estado]
+        for i, val in enumerate(valores_fila):
             c = cells[i]
             c.width = cols[i][1]
-            set_cell_background(c, bg_color)
-            set_cell_margins(c, top=80, bottom=80, left=90, right=90)
+            if i == 5: # Estado
+                if "Pendiente" in val or "QA" in val:
+                    set_cell_background(c, "FEF3C7") # Ámbar suave
+                elif "Codeado" in val or "sin revisión" in val:
+                    set_cell_background(c, "EFF6FF") # Azul suave
+                else:
+                    set_cell_background(c, "DCFCE7") # Verde suave
+            else:
+                set_cell_background(c, bg_color)
+
+            set_cell_margins(c, top=80, bottom=80, left=70, right=70)
             p = c.paragraphs[0]
             p.paragraph_format.space_before = Pt(0)
             p.paragraph_format.space_after = Pt(0)
 
-            if i in [1, 4]:
+            if i in [0, 2, 5]: # N°, Día, Estado centrados
                 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
             r = p.add_run(val)
             r.font.name = "Segoe UI"
 
-            if i == 0: # Semana
+            if i == 0: # N°
+                r.font.size = Pt(8.5)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(180, 83, 9) if row_idx >= 61 else RGBColor(31, 41, 55)
+            elif i == 1: # Semana
                 r.font.size = Pt(8)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(15, 81, 50) if "Esta" in val else RGBColor(55, 65, 81)
-            elif i == 1: # Día
+            elif i == 2: # Día
                 r.font.size = Pt(8)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(31, 41, 55)
-            elif i == 2: # Acuerdo
+            elif i == 3: # Acuerdo
                 r.font.size = Pt(8.5)
                 r.font.color.rgb = RGBColor(31, 41, 55)
-            elif i == 3: # Módulo
+            elif i == 4: # Módulo
                 r.font.size = Pt(8)
                 r.font.color.rgb = RGBColor(75, 85, 99)
-            elif i == 4: # Estado
-                r.font.size = Pt(8.5)
+            elif i == 5: # Estado
+                r.font.size = Pt(8)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(21, 128, 61) # Verde éxito
+                if "Pendiente" in val or "QA" in val:
+                    r.font.color.rgb = RGBColor(180, 83, 9) # Ámbar / Naranja (En QA)
+                elif "Codeado" in val or "sin revisión" in val:
+                    r.font.color.rgb = RGBColor(29, 78, 216) # Azul corporativo (Codeados pero sin revisión)
+                else:
+                    r.font.color.rgb = RGBColor(21, 128, 61) # Verde éxito
 
     doc.add_page_break()
 
@@ -343,140 +403,145 @@ def create_document():
     # ──────────────────────────────────────────────────────────────────────────
     sec2_h = doc.add_paragraph()
     sec2_h.paragraph_format.space_before = Pt(16)
-    sec2_h.paragraph_format.space_after = Pt(6)
+    sec2_h.paragraph_format.space_after = Pt(4)
     run_s2 = sec2_h.add_run("2. Detalle Pormenorizado de Requerimientos por Semana y Día")
     run_s2.font.name = "Segoe UI"
     run_s2.font.size = Pt(16)
     run_s2.font.bold = True
     run_s2.font.color.rgb = RGBColor(15, 81, 50)
 
-    # Detalle estructurado
+    p_portal = doc.add_paragraph()
+    p_portal.paragraph_format.space_before = Pt(0)
+    p_portal.paragraph_format.space_after = Pt(8)
+    r_por1 = p_portal.add_run("🌐 Portal General en Línea (GitHub Pages): ")
+    r_por1.font.name = "Segoe UI"
+    r_por1.font.size = Pt(9.5)
+    r_por1.font.bold = True
+    r_por1.font.color.rgb = RGBColor(21, 128, 61)
+    add_hyperlink(p_portal, "https://cvallejosdevint.github.io/ERP_Almahue-Gantt/", "https://cvallejosdevint.github.io/ERP_Almahue-Gantt/")
+
+    # Detalle estructurado (orden cronológico ascendente: del más antiguo al más nuevo)
     semanas_detalle = [
         {
-            "nombre": "SEMANA 3: ESTA SEMANA (02/11 AL 07/11/2026)",
-            "resumen": "Semana culminante de consolidación institucional. Se resolvió la unificación conceptual de roles vs ramas, el motor dinámico de aprobaciones por ramas en paralelo, eliminación del rastro anterior de grupos, resiliencia 404 en Modo Real y build de producción 100% verde.",
+            "nombre": "SEMANA 1: SEMANA 19–23 OCTUBRE (19/10 AL 23/10/2026)",
+            "resumen": "Semana de arquitectura base: unificación de fichas de contrapartes por RUT, robustecimiento de emisión DTE fail-closed con GoSocket, auditoría distribuida y anulación no distorsionadora de comprobantes contables.",
             "dias": [
                 {
-                    "fecha": "Viernes 06 y Sábado 07 de Noviembre de 2026",
-                    "titulo": "Consolidación de Sala, Esquema de Ramas Jerárquicas Dinámicas y Unificación Conceptual (Rango vs Nivel)",
-                    "contexto": "Tras la sesión con Don Sergio, María Jesús y Agustín, se solicitó eliminar toda la complejidad de los 20 grupos anteriores y barras legadas. Adicionalmente, el usuario requirió: (1) Crear más ramas y organizarlas por estrato, (2) Hacer que los nombres de jefaturas sean 100% configurables, (3) Desplegar las jefaturas en paralelo (eliminando la falsa cascada) y configurar 3 modalidades en reglas (OR, AND, Escala 3.1/3.2), (4) Resolver los errores 404 en Modo Real adaptando los usuarios reales de PostgreSQL, y (5) Unificar conceptualmente el sistema para que el 1 sea siempre el valor más importante.",
+                    "fecha": "Lunes 19 de Octubre de 2026",
+                    "titulo": "Fichas de Contraparte y Modales de Edición",
+                    "contexto": "Resolución del requerimiento histórico de Carlos vs José: la contraparte es una ficha única identificada por RUT (sin duplicar datos entre cliente y proveedor). El productor se mantiene con flag 'esProductor' sin crear maestro independiente.",
                     "requerimientos": [
-                        "Unificación Conceptual: 'Rango de Autoridad' (Decisión de Personas, del 1 al 4, donde 1 = Gerencia General es el más importante) vs 'Nivel de Rama' (Ubicación y Herencia, donde Nivel 1 = Dirección General es el vértice superior).",
-                        "Eliminación total del rastro de configuración anterior: remoción de botones 'Niveles', 'Árbol de Grupos', inputs huérfanos y slide panels de grupos legacy.",
-                        "Creación Dinámica de Ramas: botón '+ Nueva Rama' para crear libremente ramas operativas (Nivel 2) en paralelo horizontal (Agrícola, Packing, Administración, Contratistas) o sub-ramas (Nivel 3+) situadas abajo.",
-                        "Eslabones 100% Configurables: nombres libres, edición de código, topes multimoneda y selección interactiva de modalidad de aprobación.",
-                        "3 Modalidades de Aprobación en Reglas: (1) Paralelo OR (opciones no excluyentes), (2) Decisión Unánime AND (bloque vinculado obligatorio Planta+Calidad), y (3) Escalas Secuenciales 3.1 ➔ 3.2 por tramos de monto.",
-                        "Adaptación de Usuarios Reales: mapeo exhaustivo en 'cargos-jerarquicos-real.ts' de Natalia Bravo, Daniela Fuentes, Sebastian Lagos, Rodrigo Salas, Bruno Lagos, etc.",
-                        "Resiliencia Modo Real: sincronización con localStorage en 'real/api.ts' resolviendo 404s y mensajes 'No se encontró los datos'.",
-                        "Compilación TypeScript impecable: 'tsc -b && vite build' con 0 errores (código de salida 0).",
-                        "Capturas Playwright a resolución estándar 1536×960 marcadas con cajas verdes 'NUEVO' y visores HTML actualizados."
+                        "Ficha única de contraparte compartida por RUT entre cliente y proveedor.",
+                        "Flag esProductor en ficha única (maestro Productor se mantiene fuera como entidad separada).",
+                        "Separación estricta entre click de fila (detalle) y botón de edición.",
+                        "Asociación de DTE a gastos generales y servicios sin obligar ingreso a bodega."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/components/aprobaciones/EsquemaRamasAprobacion.tsx (Motor de ramas dinámicas, modal de eslabón, modal nueva rama y simulador)",
-                        "ERP/erp_front/src/services/real/cargos-jerarquicos-real.ts (Mapeo canónico de usuarios reales de PostgreSQL de Almahue)",
-                        "ERP/erp_front/src/services/real/api.ts (Endpoints resilientes con fallback y persistencia local)",
-                        "ERP/erp_front/src/services/mock/fixtures-cargos-jerarquicos.ts (Fixtures de ramas y cargos demo alineados al Rango 1-4)",
-                        "ERP/erp_front/src/types/domain.ts (Definiciones de CargoJerarquico, RamaJerarquica y ModalidadEscalaJerarquica)",
-                        "ERP/erp_front/src/pages/parametrizacion/UsuariosPage.tsx (Columna y selector de Cargo Jerárquico en alta)",
-                        "ERP/erp_front/src/features/compras/compras-oc-helpers.ts y OrdenCompraWizardPage.tsx (Validación de techo máximo de aprobación)"
+                        "ERP/erp_front/src/features/comercial/FichaContraparteModal.tsx",
+                        "ERP/erp_front/src/features/proveedores/ProveedoresPage.tsx"
                     ],
-                    "visores": "docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html y docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html"
+                    "visores": "docs/sesiones/carlos-vs-jose-2026-10-19/recorrido.html y comparacion.html"
                 },
                 {
-                    "fecha": "Jueves 05 de Noviembre de 2026",
-                    "titulo": "Sala Cliente Presencial: Recetas por Centro de Costo, Topes de Aprobación y Reglas de Negocio",
-                    "contexto": "Sesión presencial donde se acordó que los grupos y escalas siguen siendo el motor de aprobación de OC. La jefatura siempre debe firmar y el último eslabón debe contar con tope obligatorio para evitar órdenes con ceros de más. En Insumos, las recetas se desvinculan de packings exclusivos y el stock se confirma únicamente al validar físicamente la guía.",
+                    "fecha": "Martes 20 de Octubre de 2026",
+                    "titulo": "Procesos de Bodega, Devolución y Cierres DTE",
+                    "contexto": "Reglas de inventario en bodega central y frigorífico: la devolución valorizada no debe alterar el documento físico original de la recepción.",
                     "requerimientos": [
-                        "Grupos y escalas se ratifican como motor transaccional de OC; organigrama queda como vista meramente informativa.",
-                        "Obligatoriedad de tope en el último aprobador de la escala de compras; bloqueo estricto si la OC supera dicho monto.",
-                        "Topes multimoneda (CLP, USD, CNY) con tipo de cambio sugerido del Banco Central editable.",
-                        "Recetas de insumos vinculadas a la especie/embalaje y con Centro de Costo; consumo distribuye cantidades por packing.",
-                        "Consumo valorizado a precio promedio ponderado mensual; devolución valorizada al precio de la guía sin rebajar stock físico origen.",
-                        "Pestaña 'Por confirmar' en Libro de Guías; existencias en bodega no suben hasta que el usuario presione 'Confirmar recepción' y suba foto.",
-                        "Alta de Activo Fijo nace exclusivamente de una OC recepcionada de tipo activo fijo.",
-                        "Reversa de proformas: edición directa de línea sin crear comprobante nuevo; Libro Mayor filtra solo asientos activos.",
-                        "Anulación de comprobante contable con estado ANULADO y registro obligatorio de motivo."
+                        "Integración DTE con GoSocket en modalidad fail-closed.",
+                        "Devolución de mercadería sin alterar el documento físico de origen.",
+                        "Bloqueo de movimientos de inventario en bodegas con cierre mensual activo."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/insumos/OrdenesAplicacionPage.tsx (Selector y columna Centro de Costo en recetas)",
-                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx (Pestaña Por confirmar, subida de fotos y confirmación)",
-                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx (Modal de motivo de anulación y filtro de activos)",
-                        "ERP/erp_front/src/features/activo-fijo/ActivoFijoPage.tsx (Selector estricto de OC recepcionada)",
-                        "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx (Bloqueo por exceder tope del último aprobador)"
+                        "ERP/erp_front/src/features/insumos/InsumosPages.tsx",
+                        "ERP/erp_back/src/modules/billing/billing-gateway.service.ts"
                     ],
-                    "visores": "docs/sesiones/acuerdos-noche-packing-org-2026-11-05/recorrido.html y docs/sesiones/acuerdos-noche-packing-org-2026-11-05/comparacion.html"
+                    "visores": "docs/sesiones/gosocket-emision-2026-10-20/recorrido.html y comparacion.html"
                 },
                 {
-                    "fecha": "Miércoles 04 de Noviembre de 2026",
-                    "titulo": "Normalización Visual Integral (almahue-diseno) y Unificación Detalle/Edición",
-                    "contexto": "Revisión exhaustiva de usabilidad. Se implementaron los 9 principios de diseño visual: totales en tarjetas plegables, colores de acción unificados, tooltip al pasar el cursor, badges de estado centrados, y eliminación de clicks en filas sin feedback.",
+                    "fecha": "Miércoles 21 de Octubre de 2026",
+                    "titulo": "Guías Manuales, Hijas sin Saldo y Cierre Contratistas",
+                    "contexto": "Sesión remota con María Jesús, Fran y Lupe. Operación en faena con guías de despacho manuales emitidas en terreno sin factura inmediata.",
                     "requerimientos": [
-                        "Cards plegables con totales de control arriba de cada grilla operativa.",
-                        "Unificación de modal de lectura y edición para evitar confusiones de interfaz.",
-                        "Eliminación en 2 fases en Parametrización: Inactivar (operadores) vs Eliminar Definitivo (solo Administradores sobre inactivos).",
-                        "Revisión de ajuste contable de reversa en Tesorería."
+                        "Registro de guías de despacho manuales con fecha y número de guía física.",
+                        "Control de saldos en recepciones parciales sobre órdenes madre.",
+                        "Cierre de temporada para proformas contratistas."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/components/common/CollapsibleLibroSection.tsx (Cards plegables de totales)",
-                        "ERP/erp_front/src/features/compras/ComprasPages.tsx y LibroComprasPage.tsx (Normalización visual)",
-                        "ERP/erp_front/src/features/parametrizacion/ParametrizacionPages.tsx (Ciclo inactivar/borrar)"
+                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx",
+                        "ERP/erp_front/src/features/contratistas/CierreContratistasPage.tsx"
                     ],
-                    "visores": "docs/sesiones/review-cambios-cliente-2026-11-04/recorrido.html y docs/sesiones/review-cambios-cliente-2026-11-04/comparacion.html"
+                    "visores": "docs/sesiones/manual-cliente-2026-10-21/recorrido.html"
                 },
                 {
-                    "fecha": "Martes 03 de Noviembre de 2026",
-                    "titulo": "Traspaso de Proformas, Reversa sin Apertura de Periodo y Calce de Guías",
-                    "contexto": "Definición sobre integridad contable: un periodo cerrado no se reabre bajo ninguna circunstancia. Toda corrección de proforma requiere protocolo formal de 2 vistos buenos y genera ajuste directo.",
+                    "fecha": "Jueves 22 de Octubre de 2026",
+                    "titulo": "Asientos Contables, Libros y Presupuestos",
+                    "contexto": "Regla contable solicitada por María Jesús: al anular un comprobante no debe crearse un contra-asiento distorsionador que abulte las sumas del mayor.",
                     "requerimientos": [
-                        "Prohibición de reapertura de periodos cerrados desde la pantalla de Traspaso.",
-                        "Wizard de reversa con solicitud formal de motivo y dos vistos buenos.",
-                        "Filtro estricto por mes calendario en grilla de proformas contratistas.",
-                        "Ocultamiento del botón Contabilizar en Libro de Compras para documentos sin OC o proforma vinculada.",
-                        "Recepción de guías hijas: solo la última guía recepcionada realiza el recálculo y ajuste sobre la orden madre."
+                        "Comprobante anulado cambia de estado a ANULADO y sale del Libro Mayor sin generar contra-asientos.",
+                        "Filtro en Libro Mayor para omitir automáticamente anulados.",
+                        "Campo de comentario independiente en detalle del asiento.",
+                        "Exportación a Excel y PDF con formato institucional en balances."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
-                        "ERP/erp_front/src/features/compras/LibroComprasPage.tsx",
-                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx"
+                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx",
+                        "ERP/erp_front/src/features/contabilidad/LibroDiarioMayorPages.tsx"
                     ],
-                    "visores": "docs/sesiones/gaps-reunion-03-11-2026-11-04/recorrido.html y docs/sesiones/gaps-reunion-03-11-2026-11-04/comparacion.html"
+                    "visores": "docs/sesiones/correcciones-reunion-21-10-2026-10-22/recorrido.html y comparacion.html"
+                },
+                {
+                    "fecha": "Viernes 23 de Octubre de 2026",
+                    "titulo": "Parametrización y Ciclo de Vida Seguro de Registros",
+                    "contexto": "Estándar de seguridad para evitar pérdida accidental de datos maestros en fundos, cuarteles y centros de costo.",
+                    "requerimientos": [
+                        "Ciclo de vida en dos fases: Inactivar (operadores) vs Eliminar definitivo (administrador sobre registros inactivos).",
+                        "Validación de RUT y giros en formulario de empresas.",
+                        "Historial de auditoría accesible por pestaña en cada tabla maestra."
+                    ],
+                    "codigo": ["ERP/erp_front/src/features/parametrizacion/ParametrizacionPages.tsx"],
+                    "visores": "docs/sesiones/parametrizacion-formularios-2026-10-23/recorrido.html y comparacion.html"
                 }
             ]
         },
         {
-            "nombre": "SEMANA 2: SEMANA ANTERIOR (26/10 AL 30/10/2026)",
+            "nombre": "SEMANA 2: SEMANA 26–30 OCTUBRE (26/10 AL 30/10/2026)",
             "resumen": "Semana de consolidación de estados financieros, balance acumulativo anual de 8 columnas, protocolo estricto de carga masiva de asientos tipo Agrosoft, liquidación de notas de cobro para Asoex/embarcadores y matriz 2x2 de contratistas.",
             "dias": [
                 {
-                    "fecha": "Viernes 30 de Octubre de 2026",
-                    "titulo": "Cobertura Parcial de Proformas, Comex y Compras Módulo 2",
-                    "contexto": "Cierre de contratistas y comercio exterior. Soporte para liquidaciones parciales de contratistas por fecha de pago y notas de cobro vinculadas a despachos de exportación.",
+                    "fecha": "Lunes 26 de Octubre de 2026",
+                    "titulo": "Revisión Presencial Integral: Estados Financieros, Carga Masiva Agrosoft y Reglas OC",
+                    "contexto": "Reunión presencial extensa en oficinas centrales de Almahue con María Jesús Vial. Se auditó la presentación de balances, la carga masiva transaccional y la imputación contable de órdenes de compra.",
                     "requerimientos": [
-                        "Soporte para pago parcializado de proformas por cuadrilla y fecha de compromiso.",
-                        "Notas de cobro directas para liquidaciones de embarcadores y Asoex sin exigir OC comercial.",
-                        "Validación estricta de asociación factura-OC antes de cursar pago en tesorería."
+                        "Estado de Resultados mensual versus Estado de Situación Financiera clasificado al 31/12.",
+                        "Carga masiva de comprobantes con validación atómica todo-o-nada tipo Agrosoft.",
+                        "Presupuesto por departamento con semáforos porcentuales de ejecución y alertas.",
+                        "Múltiples líneas de imputación contable en Orden de Compra.",
+                        "Alerta de dimensiones contables faltantes con solicitud directa al administrador."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
-                        "ERP/erp_front/src/features/compras/NotasCobroPage.tsx",
-                        "ERP/erp_back/src/modules/compras/notas-cobro.service.ts"
+                        "ERP/erp_front/src/features/contabilidad/EstadosFinancierosPage.tsx",
+                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx",
+                        "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx",
+                        "ERP/erp_back/src/modules/contabilidad/contabilidad.service.ts"
                     ],
-                    "visores": "docs/sesiones/compras-mejoras-modulo2-2026-10-30/recorrido.html y docs/sesiones/compras-mejoras-modulo2-2026-10-30/comparacion.html"
+                    "visores": "docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html y docs/sesiones/parametrizacion-plan-oc-2026-10-27/comparacion.html"
                 },
                 {
-                    "fecha": "Jueves 29 de Octubre de 2026",
-                    "titulo": "Doble Visto Bueno y Matriz de Control de Contratistas",
-                    "contexto": "Acuerdos del correo de María Jesús sobre el cierre de temporada: asegurar que ningún trato o jornal pueda ser modificado sin la doble autorización de jefatura y gerencia.",
+                    "fecha": "Martes 27 de Octubre de 2026",
+                    "titulo": "Balance de 8 Columnas Acumulativo, Reversa de Proformas y Activo Fijo",
+                    "contexto": "Sesiones AM y PM con María Jesús y Fran. Ajustes al balance tributario de 8 columnas para que abarque desde el 1 de enero hasta el periodo consultado, y restricción de alta de activo fijo sujeta a OC recepcionada.",
                     "requerimientos": [
-                        "Matriz 2x2 para control de cuadrillas, jornales y tratos por faena.",
-                        "Firma digital con PIN de seguridad para supervisores de temporada.",
-                        "Transición formal de proformas en estado DEFINITIVA con permisos contratistas:write."
+                        "Balance de 8 columnas acumulativo anual desde el 1 de enero hasta el mes de corte.",
+                        "Notas de cobro: modalidad de gasto directo para Asoex y proveedores exentos.",
+                        "Carga masiva de notas de cobro con archivo Excel estructurado.",
+                        "Reversa de proformas en periodo cerrado condicionada a aprobación previa.",
+                        "Activo fijo originado en OC recepcionada (reemplazando criterio de alta libre)."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
-                        "ERP/erp_front/src/features/contratistas/CierreContratistasPage.tsx"
+                        "ERP/erp_front/src/features/contabilidad/Balance8ColumnasPage.tsx",
+                        "ERP/erp_front/src/features/compras/NotasCobroPage.tsx",
+                        "ERP/erp_front/src/features/activo-fijo/ActivoFijoPage.tsx"
                     ],
-                    "visores": "docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/recorrido.html y docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/comparacion.html"
+                    "visores": "docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html y docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html"
                 },
                 {
                     "fecha": "Miércoles 28 de Octubre de 2026",
@@ -497,125 +562,138 @@ def create_document():
                     "visores": "docs/sesiones/tesoreria-ajuste-2026-11-04/recorrido.html y docs/sesiones/tesoreria-ajuste-2026-11-04/comparacion.html"
                 },
                 {
-                    "fecha": "Martes 27 de Octubre de 2026",
-                    "titulo": "Balance de 8 Columnas Acumulativo, Reversa de Proformas y Activo Fijo",
-                    "contexto": "Sesiones AM y PM con María Jesús y Fran. Ajustes al balance tributario de 8 columnas para que abarque desde el 1 de enero hasta el periodo consultado, y restricción de alta de activo fijo sujeta a OC recepcionada.",
+                    "fecha": "Jueves 29 de Octubre de 2026",
+                    "titulo": "Doble Visto Bueno y Matriz de Control de Contratistas",
+                    "contexto": "Acuerdos del correo de María Jesús sobre el cierre de temporada: asegurar que ningún trato o jornal pueda ser modificado sin la doble autorización de jefatura y gerencia.",
                     "requerimientos": [
-                        "Balance de 8 columnas acumulativo anual desde el 1 de enero hasta el mes de corte.",
-                        "Notas de cobro de gasto directo para Asoex con carga masiva Excel.",
-                        "Protocolo de reversa en periodo cerrado condicionado a visto bueno.",
-                        "Alta de Activo Fijo originada obligatoriamente en una OC recepcionada."
+                        "Matriz 2x2 para control de cuadrillas, jornales y tratos por faena.",
+                        "Firma digital con PIN de seguridad para supervisores de temporada.",
+                        "Transición formal de proformas en estado DEFINITIVA con permisos contratistas:write."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contabilidad/Balance8ColumnasPage.tsx",
-                        "ERP/erp_front/src/features/compras/NotasCobroPage.tsx",
-                        "ERP/erp_front/src/features/activo-fijo/ActivoFijoPage.tsx"
+                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
+                        "ERP/erp_front/src/features/contratistas/CierreContratistasPage.tsx"
                     ],
-                    "visores": "docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html y docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html"
+                    "visores": "docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/recorrido.html y docs/sesiones/cierre-contratistas-matriz-2x2-2026-10-29/comparacion.html"
                 },
                 {
-                    "fecha": "Lunes 26 de Octubre de 2026",
-                    "titulo": "Revisión Presencial Integral: Estados Financieros, Carga Masiva Agrosoft y Reglas OC",
-                    "contexto": "Reunión presencial extensa en oficinas centrales de Almahue con María Jesús Vial. Se auditó la presentación de balances, la carga masiva transaccional y la imputación contable de órdenes de compra.",
+                    "fecha": "Viernes 30 de Octubre de 2026",
+                    "titulo": "Cobertura Parcial de Proformas, Comex y Compras Módulo 2",
+                    "contexto": "Cierre de contratistas y comercio exterior. Soporte para liquidaciones parciales de contratistas por fecha de pago y notas de cobro vinculadas a despachos de exportación.",
                     "requerimientos": [
-                        "Estado de Resultados mensual versus Estado de Situación Financiera clasificado al 31/12.",
-                        "Carga masiva de comprobantes con validación atómica todo-o-nada tipo Agrosoft.",
-                        "Presupuesto por departamento con semáforos porcentuales de ejecución y alertas.",
-                        "Múltiples líneas de imputación contable en Orden de Compra.",
-                        "Alerta de dimensiones contables faltantes con solicitud directa al administrador."
+                        "Cobertura parcial de proformas por contratista y fecha de pago.",
+                        "Compras Módulo 2: validación estricta de asociación factura-OC antes de pago.",
+                        "Comex: soporte para liquidaciones y notas de cobro de embarcadores y Asoex.",
+                        "Migraciones de base de datos de compras aplicadas en entorno local."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contabilidad/EstadosFinancierosPage.tsx",
-                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx",
-                        "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx",
-                        "ERP/erp_back/src/modules/contabilidad/contabilidad.service.ts"
+                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
+                        "ERP/erp_front/src/features/compras/NotasCobroPage.tsx",
+                        "ERP/erp_back/src/modules/compras/notas-cobro.service.ts"
                     ],
-                    "visores": "docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html y docs/sesiones/parametrizacion-plan-oc-2026-10-27/comparacion.html"
+                    "visores": "docs/sesiones/compras-mejoras-modulo2-2026-10-30/recorrido.html y docs/sesiones/compras-mejoras-modulo2-2026-10-30/comparacion.html"
                 }
             ]
         },
         {
-            "nombre": "SEMANA 1: SEMANA PREVIA (19/10 AL 23/10/2026)",
-            "resumen": "Semana de arquitectura base: unificación de fichas de contrapartes por RUT, robustecimiento de emisión DTE fail-closed con GoSocket, auditoría distribuida y anulación no distorsionadora de comprobantes contables.",
+            "nombre": "SEMANA 3: ESTA SEMANA (02/11 AL 09/11/2026)",
+            "resumen": "Semana culminante de consolidación institucional. Se resolvió la unificación conceptual de roles vs ramas, el motor dinámico de aprobaciones por ramas en paralelo, eliminación del rastro anterior de grupos, resiliencia 404 en Modo Real, integración de usuarios en BD, derivación automática de jefaturas y build de producción 100% verde.",
             "dias": [
                 {
-                    "fecha": "Viernes 23 de Octubre de 2026",
-                    "titulo": "Parametrización y Ciclo de Vida Seguro de Registros",
-                    "contexto": "Estándar de seguridad para evitar pérdida accidental de datos maestros en fundos, cuarteles y centros de costo.",
+                    "fecha": "Martes 03 de Noviembre de 2026",
+                    "titulo": "Traspaso de Proformas, Reversa sin Apertura de Periodo y Calce de Guías",
+                    "contexto": "Definición sobre integridad contable: un periodo cerrado no se reabre bajo ninguna circunstancia. Toda corrección de proforma requiere protocolo formal de 2 vistos buenos y genera ajuste directo.",
                     "requerimientos": [
-                        "Ciclo de vida en dos fases: Inactivar (operadores) vs Eliminar definitivo (administrador sobre registros inactivos).",
-                        "Validación de RUT y giros en formulario de empresas.",
-                        "Historial de auditoría accesible por pestaña en cada tabla maestra."
-                    ],
-                    "codigo": ["ERP/erp_front/src/features/parametrizacion/ParametrizacionPages.tsx"],
-                    "visores": "docs/sesiones/parametrizacion-formularios-2026-10-23/recorrido.html y comparacion.html"
-                },
-                {
-                    "fecha": "Jueves 22 de Octubre de 2026",
-                    "titulo": "Asientos Contables, Libros y Presupuestos",
-                    "contexto": "Regla contable solicitada por María Jesús: al anular un comprobante no debe crearse un contra-asiento distorsionador que abulte las sumas del mayor.",
-                    "requerimientos": [
-                        "Comprobante anulado cambia de estado a ANULADO y sale del Libro Mayor sin generar contra-asientos.",
-                        "Filtro en Libro Mayor para omitir automáticamente anulados.",
-                        "Campo de comentario independiente en detalle del asiento.",
-                        "Exportación a Excel y PDF con formato institucional en balances."
+                        "No reabrir periodo contable desde Traspaso: las correcciones deben nacer directamente desde la proforma.",
+                        "Wizard de reversa: en periodo cerrado no ofrecer ingreso directo de clave; exigir motivo y 2 vistos buenos.",
+                        "Grilla de proformas filtrada por mes exacto (no arrastrar meses previos en rangos).",
+                        "Libro de Compras: no mostrar botón 'Contabilizar' si el documento no está asociado a una OC o Proforma.",
+                        "Hijas de insumos: solo la última guía recepcionada ajusta el saldo de la orden madre.",
+                        "Calce de guías por código de artículo del maestro al recepcionar."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx",
-                        "ERP/erp_front/src/features/contabilidad/LibroDiarioMayorPages.tsx"
+                        "ERP/erp_front/src/features/contratistas/ProformasContratistaNivel1Page.tsx",
+                        "ERP/erp_front/src/features/compras/LibroComprasPage.tsx",
+                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx"
                     ],
-                    "visores": "docs/sesiones/correcciones-reunion-21-10-2026-10-22/recorrido.html y comparacion.html"
+                    "visores": "docs/sesiones/gaps-reunion-03-11-2026-11-04/recorrido.html y docs/sesiones/gaps-reunion-03-11-2026-11-04/comparacion.html"
                 },
                 {
-                    "fecha": "Miércoles 21 de Octubre de 2026",
-                    "titulo": "Guías Manuales, Hijas sin Saldo y Cierre Contratistas",
-                    "contexto": "Sesión remota con María Jesús, Fran y Lupe. Operación en faena con guías de despacho manuales emitidas en terreno sin factura inmediata.",
+                    "fecha": "Miércoles 04 de Noviembre de 2026",
+                    "titulo": "Normalización Visual Integral (almahue-diseno) y Unificación Detalle/Edición",
+                    "contexto": "Revisión exhaustiva de usabilidad. Se implementaron los 9 principios de diseño visual: totales en tarjetas plegables, colores de acción unificados, tooltip al pasar el cursor, badges de estado centrados, y eliminación de clicks en filas sin feedback.",
                     "requerimientos": [
-                        "Registro de guías de despacho manuales con fecha y número de guía física.",
-                        "Control de saldos en recepciones parciales sobre órdenes madre.",
-                        "Cierre de temporada para proformas contratistas."
+                        "Cards plegables con totales de control arriba de cada grilla operativa.",
+                        "Unificación de modal de lectura y edición para evitar confusiones de interfaz.",
+                        "Eliminación en 2 fases en Parametrización: Inactivar (operadores) vs Eliminar Definitivo (solo Administradores sobre inactivos).",
+                        "Revisión de ajuste contable de reversa en Tesorería."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx",
-                        "ERP/erp_front/src/features/contratistas/CierreContratistasPage.tsx"
+                        "ERP/erp_front/src/components/common/CollapsibleLibroSection.tsx (Cards plegables de totales)",
+                        "ERP/erp_front/src/features/compras/ComprasPages.tsx y LibroComprasPage.tsx (Normalización visual)",
+                        "ERP/erp_front/src/features/parametrizacion/ParametrizacionPages.tsx (Ciclo inactivar/borrar)"
                     ],
-                    "visores": "docs/sesiones/manual-cliente-2026-10-21/recorrido.html"
+                    "visores": "docs/sesiones/review-cambios-cliente-2026-11-04/recorrido.html y docs/sesiones/review-cambios-cliente-2026-11-04/comparacion.html"
                 },
                 {
-                    "fecha": "Martes 20 de Octubre de 2026",
-                    "titulo": "Procesos de Bodega, Devolución y Cierres DTE",
-                    "contexto": "Reglas de inventario en bodega central y frigorífico: la devolución valorizada no debe alterar el documento físico original de la recepción.",
+                    "fecha": "Jueves 05 de Noviembre de 2026",
+                    "titulo": "Sala Cliente Presencial: Recetas por Centro de Costo, Topes de Aprobación y Reglas de Negocio",
+                    "contexto": "Sesión presencial donde se acordó que los grupos y escalas siguen siendo el motor de aprobación de OC. La jefatura siempre debe firmar y el último eslabón debe contar con tope obligatorio para evitar órdenes con ceros de más. En Insumos, las recetas se desvinculan de packings exclusivos y el stock se confirma únicamente al validar físicamente la guía.",
                     "requerimientos": [
-                        "Integración DTE con GoSocket en modalidad fail-closed.",
-                        "Devolución de mercadería sin alterar el documento físico de origen.",
-                        "Bloqueo de movimientos de inventario en bodegas con cierre mensual activo."
+                        "Grupos y escalas se mantienen como motor de aprobación de OC (no reemplazados por organigrama informativo).",
+                        "Siempre firma la jefatura; tope obligatorio en el último aprobador de la escala para evitar errores de tipeo.",
+                        "Topes multimoneda (CLP, USD, Yuan) con tipo de cambio sugerido del Banco Central editable y guardado fijo.",
+                        "Recetas de insumos asociadas al embalaje (no a un solo packing). En el consumo se distribuyen cantidades por packing.",
+                        "Consumo valorizado al precio promedio ponderado del stock mensual (sin FIFO por guía).",
+                        "Devolución a proveedor valorizada al precio de la guía pero sin restar stock físico de origen.",
+                        "Stock de guías recibidas se incrementa exclusivamente al confirmar la recepción (pestaña 'Por confirmar') con fotos y adjuntos.",
+                        "Activo fijo: el maestro nace exclusivamente cuando la OC tipo activo fijo está recepcionada (aviso si falta factura).",
+                        "Reversa de proformas: se edita la línea del asiento existente (sin crear asiento nuevo de reversa ni ajuste).",
+                        "Anulación de comprobantes: estado ANULADO con motivo registrado, ejecutado por la jefatura o mediante solicitud.",
+                        "Retiro de 'Administradores por módulo' de la operación; control de acceso basado estrictamente en roles."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/insumos/InsumosPages.tsx",
-                        "ERP/erp_back/src/modules/billing/billing-gateway.service.ts"
+                        "ERP/erp_front/src/features/insumos/OrdenesAplicacionPage.tsx (Selector y columna Centro de Costo en recetas)",
+                        "ERP/erp_front/src/features/insumos/GuiasInsumosRecibidasPage.tsx (Pestaña Por confirmar, subida de fotos y confirmación)",
+                        "ERP/erp_front/src/features/contabilidad/AsientosPage.tsx (Modal de motivo de anulación y filtro de activos)",
+                        "ERP/erp_front/src/features/activo-fijo/ActivoFijoPage.tsx (Selector estricto de OC recepcionada)",
+                        "ERP/erp_front/src/features/compras/OrdenCompraWizardPage.tsx (Bloqueo por exceder tope del último aprobador)"
                     ],
-                    "visores": "docs/sesiones/gosocket-emision-2026-10-20/recorrido.html y comparacion.html"
+                    "visores": "docs/sesiones/acuerdos-noche-packing-org-2026-11-05/recorrido.html y docs/sesiones/acuerdos-noche-packing-org-2026-11-05/comparacion.html"
                 },
                 {
-                    "fecha": "Lunes 19 de Octubre de 2026",
-                    "titulo": "Fichas de Contraparte y Modales de Edición",
-                    "contexto": "Resolución del requerimiento histórico de Carlos vs José: la contraparte es una ficha única identificada por RUT (sin duplicar datos entre cliente y proveedor). El productor se mantiene con flag 'esProductor' sin crear maestro independiente.",
+                    "fecha": "Viernes 06 a Lunes 09 de Noviembre de 2026",
+                    "titulo": "Consolidación de Sala, Esquema de Ramas Jerárquicas Dinámicas, Normalización Visual e Integración de Usuarios en BD",
+                    "contexto": "Tras la sesión con Don Sergio, María Jesús y Agustín, se solicitó eliminar toda la complejidad de los 20 grupos anteriores y barras legadas. Durante las jornadas del 06 al 09 de noviembre se completó: (1) Creación dinámica de ramas y soporte para múltiples ramas Nivel 1 en paralelo, (2) Nombres de eslabones 100% configurables por rama con gestión interactiva de personas, (3) 3 modalidades en reglas (OR, AND, Escala 3.1 sobre 3.2 con orden jerárquico correcto), (4) Integración completa de usuarios reales en BD derivando automáticamente jefaturas y topes de visación, (5) Modal ancho normalizado según almahue-diseno, y (6) Auditoría de flujo de datos eliminando llamadas 404.",
                     "requerimientos": [
-                        "Ficha única de contraparte compartida por RUT entre cliente y proveedor.",
-                        "Flag esProductor en ficha única (maestro Productor se mantiene fuera como entidad separada).",
-                        "Separación estricta entre click de fila (detalle) y botón de edición.",
-                        "Asociación de DTE a gastos generales y servicios sin obligar ingreso a bodega."
+                        "Unificación Conceptual: 'Rango de Autoridad' (Decisión de Personas, del 1 al 4, donde 1 = Gerencia General es el más importante) vs 'Nivel de Rama' (Ubicación y Herencia, donde Nivel 1 = Dirección General es el vértice superior).",
+                        "Eliminación total del rastro de configuración anterior: remoción de botones 'Niveles', 'Árbol de Grupos', inputs huérfanos y slide panels de grupos legacy.",
+                        "Creación Dinámica de Ramas: botón '+ Nueva Rama' para crear libremente ramas operativas (Nivel 2) en paralelo horizontal (Agrícola, Packing, Administración, Contratistas) o sub-ramas (Nivel 3+) situadas abajo.",
+                        "Eslabones 100% Configurables: nombres libres, edición de código, topes multimoneda y selección interactiva de modalidad de aprobación.",
+                        "3 Modalidades de Aprobación en Reglas: (1) Paralelo OR (opciones no excluyentes), (2) Decisión Unánime AND (bloque vinculado obligatorio Planta+Calidad), y (3) Escalas Secuenciales 3.1 ➔ 3.2 por tramos de monto con orden jerárquico correcto.",
+                        "Ajuste e integración a Administración de Usuarios: selección secuencial de Rama y Nivel/Cargo, derivación automática de jefatura, eliminación de campos no admitidos y sincronización de topes.",
+                        "Reglas para puestos compartidos: configuración explícita AND u OR a partir de la jefatura, manteniendo nivel base Rango 4 sin configuración de visación ni auto-aprobación.",
+                        "Normalización visual y modal ancho de configuración de eslabón (size='wide', 2 columnas equilibradas y KPIs plegables según almahue-diseno).",
+                        "Auditoría de flujo de datos, resiliencia y saneamiento de errores 404 en Modo Real persistiendo jefeId y montoMaxAprobacion en backend.",
+                        "Compilación TypeScript impecable: 'tsc -b && vite build' con 0 errores (código de salida 0).",
+                        "Capturas Playwright a resolución estándar 1536×960 marcadas con cajas verdes 'NUEVO' y visores HTML actualizados."
                     ],
                     "codigo": [
-                        "ERP/erp_front/src/features/comercial/FichaContraparteModal.tsx",
-                        "ERP/erp_front/src/features/proveedores/ProveedoresPage.tsx"
+                        "ERP/erp_front/src/components/aprobaciones/EsquemaRamasAprobacion.tsx (Motor de ramas dinámicas, modal ancho de eslabón, modal nueva rama y simulador)",
+                        "ERP/erp_front/src/pages/parametrizacion/UsuariosPage.tsx (Formulario secuencial Rama ➔ Nivel, derivación automática de jefatura y sincronización de topes)",
+                        "ERP/erp_front/src/services/real/cargos-jerarquicos-real.ts (Mapeo canónico de usuarios reales de PostgreSQL de Almahue)",
+                        "ERP/erp_front/src/services/real/api.ts (Endpoints resilientes con fallback, persistencia local y eliminación de endpoints 404)",
+                        "ERP/erp_front/src/services/mock/fixtures-cargos-jerarquicos.ts (Fixtures de ramas y cargos demo alineados al Rango 1-4)",
+                        "ERP/erp_front/src/types/domain.ts (Definiciones de CargoJerarquico, RamaJerarquica y ModalidadEscalaJerarquica)",
+                        "ERP/erp_front/src/features/compras/compras-oc-helpers.ts y OrdenCompraWizardPage.tsx (Validación de techo máximo de aprobación)"
                     ],
-                    "visores": "docs/sesiones/carlos-vs-jose-2026-10-19/recorrido.html y comparacion.html"
+                    "visores": "docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html y docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html"
                 }
             ]
         }
     ]
 
+    req_num = 0
     for sem in semanas_detalle:
         # Encabezado de la semana
         p_sem = doc.add_paragraph()
@@ -672,9 +750,23 @@ def create_document():
             r_rh.font.color.rgb = RGBColor(15, 81, 50)
 
             for req in dia["requerimientos"]:
+                req_num += 1
+                estado_item = "⏳ En QA" if req_num >= 61 else "💻 Codeados pero sin revisión"
+                
                 p_b = doc.add_paragraph(style='List Bullet')
                 p_b.paragraph_format.space_before = Pt(0)
-                p_b.paragraph_format.space_after = Pt(1.5)
+                p_b.paragraph_format.space_after = Pt(2)
+
+                # Badge numerado y con estado
+                r_badge = p_b.add_run(f"[#{req_num} · {estado_item}] ")
+                r_badge.font.name = "Segoe UI"
+                r_badge.font.size = Pt(8.5)
+                r_badge.font.bold = True
+                if req_num >= 61:
+                    r_badge.font.color.rgb = RGBColor(180, 83, 9) # Ámbar para QA
+                else:
+                    r_badge.font.color.rgb = RGBColor(29, 78, 216) # Azul para Codeados
+
                 r_b = p_b.add_run(req)
                 r_b.font.name = "Segoe UI"
                 r_b.font.size = Pt(8.5)
@@ -700,20 +792,32 @@ def create_document():
                 r_cb.font.size = Pt(8)
                 r_cb.font.color.rgb = RGBColor(75, 85, 99)
 
-            # Visores
+            # Visores en Línea (GitHub Pages)
             p_vis = doc.add_paragraph()
             p_vis.paragraph_format.space_before = Pt(2)
             p_vis.paragraph_format.space_after = Pt(6)
-            r_vh = p_vis.add_run("Visores Interactivos (1536×960): ")
+            r_vh = p_vis.add_run("Visores en Línea (GitHub Pages 1536×960): ")
             r_vh.font.name = "Segoe UI"
             r_vh.font.size = Pt(8.5)
             r_vh.font.bold = True
             r_vh.font.color.rgb = RGBColor(21, 128, 61)
-            r_vt = p_vis.add_run(dia["visores"])
-            r_vt.font.name = "Segoe UI"
-            r_vt.font.size = Pt(8.5)
-            r_vt.font.italic = True
-            r_vt.font.color.rgb = RGBColor(37, 99, 235)
+
+            # Extraer enlaces y agregar hipervínculos navegables
+            raw_visores = dia["visores"]
+            base_gh = "https://cvallejosdevint.github.io/ERP_Almahue-Gantt/"
+            full_matches = re.findall(r'(docs/sesiones/[a-zA-Z0-9_\-]+/[a-zA-Z0-9_\-]+\.html)', raw_visores)
+            if len(full_matches) == 1 and 'comparacion.html' in raw_visores and 'comparacion.html' not in full_matches[0]:
+                folder = '/'.join(full_matches[0].split('/')[:-1])
+                full_matches.append(f'{folder}/comparacion.html')
+
+            for link_idx, m in enumerate(full_matches):
+                if link_idx > 0:
+                    r_sep = p_vis.add_run("   |   ")
+                    r_sep.font.name = "Segoe UI"
+                    r_sep.font.size = Pt(8.5)
+                    r_sep.font.color.rgb = RGBColor(156, 163, 175)
+                lbl = "🧭 Ver Recorrido Interactivo" if "recorrido" in m else "🔍 Ver Comparación Antes/Después"
+                add_hyperlink(p_vis, base_gh + m, lbl)
 
     # ──────────────────────────────────────────────────────────────────────────
     # GUARDAR DOCUMENTO
