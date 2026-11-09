@@ -44,3 +44,4 @@ await page.screenshot({ path: 'docs/sesiones/acuerdos-sala-2026-11-06/despues-us
 console.log('Captura despues-usuarios-bd-integrada.png generada');
 
 await browser.close();
+
