@@ -74,7 +74,7 @@ Migraciones de esta semana (`20261105180000`, `20261105190000`, `20261105200000`
 
 Las pantallas tocadas desde el 27/10 hasta el 04/11 (organigrama, packings, orden de aplicacion, asientos, balance, resultado, situacion financiera, notas de cobro, cierre de bodega) estan en un solo antes / despues:
 
-- [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html`](../sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html)
-- [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html`](../sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html)
+- [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html`](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html)
+- [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html`](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html)
 
 Esas fotos son el sistema en modo demo, periodo 2026-08, a 1536x960. No incluyen lo pedido hoy en la seccion "cambia lo que ya esta construido": eso todavia no esta en pantalla.

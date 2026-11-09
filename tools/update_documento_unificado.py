@@ -294,3 +294,4 @@ with open(path_gen, "w", encoding="utf-8") as f:
     f.write(code)
 
 print("generate_word_acuerdos.py reescrito exitosamente.")
+

@@ -11,51 +11,55 @@
 
 ---
 
-## 1. Resumen Ejecutivo y Matriz Global de Estado (Semana 02–07 Noviembre)
+## 1. Resumen Ejecutivo y Matriz Global de Estado (Semana 02–09 Noviembre)
 
-| Módulo Operativo | Total Puntos | Completo | Parcial | Faltante / Externo | % Cumplimiento |
+| Módulo Operativo | Total Puntos | Pendientes QA (Ajustados / Corregidos) | Codeados pero sin revisión | Faltante / Externo | Estado Global |
 |---|:---:|:---:|:---:|:---:|:---:|
-| **1. Administración, Roles y Esquema de Ramas** | 12 | 12 | 0 | 0 | 100.0% |
-| **2. Compras, Órdenes de Compra y Aprobaciones** | 8 | 8 | 0 | 0 | 100.0% |
-| **3. Insumos, Bodegas y Recetas de Embalaje** | 7 | 7 | 0 | 0 | 100.0% |
-| **4. Contabilidad, Asientos y Presupuestos** | 6 | 6 | 0 | 0 | 100.0% |
-| **5. Activos Fijos** | 3 | 3 | 0 | 0 | 100.0% |
-| **6. Tesorería y Bancos** | 4 | 4 | 0 | 0 | 100.0% |
-| **7. Contratistas y Proformas** | 4 | 4 | 0 | 0 | 100.0% |
-| **TOTAL GENERAL AUDITADO EN CÓDIGO** | **44** | **44** | **0** | **0** | **100.0%** |
+| **1. Administración, Roles y Esquema de Ramas** | 12 | 11 | 1 | 0 | 11 En QA · 1 Codeado pero sin revisión |
+| **2. Compras, Órdenes de Compra y Aprobaciones** | 8 | 0 | 8 | 0 | 8 Codeados pero sin revisión |
+| **3. Insumos, Bodegas y Recetas de Embalaje** | 7 | 0 | 7 | 0 | 7 Codeados pero sin revisión |
+| **4. Contabilidad, Asientos y Presupuestos** | 6 | 0 | 6 | 0 | 6 Codeados pero sin revisión |
+| **5. Activos Fijos** | 3 | 0 | 3 | 0 | 3 Codeados pero sin revisión |
+| **6. Tesorería y Bancos** | 4 | 0 | 4 | 0 | 4 Codeados pero sin revisión |
+| **7. Contratistas y Proformas** | 4 | 0 | 4 | 0 | 4 Codeados pero sin revisión |
+| **TOTAL GENERAL AUDITADO EN CÓDIGO** | **44** | **11** | **33** | **0** | **11 En QA · 33 Codeados pero sin revisión** |
+
+> **Convención de Estados:**  
+> • **PENDIENTE QA:** Requerimientos y acuerdos que han sido revisados, ajustados y corregidos técnicamente (como la reestructuración integral de Administración de Usuarios, derivación automática de jefatura, eliminación de campos no admitidos, topes de visación y esquema de ramas), que quedan listos y pendientes de validación formal en ciclo de QA.  
+> • **CODEADOS PERO SIN REVISIÓN:** Requerimientos y acuerdos levantados en las sesiones de las últimas 3 semanas que ya se encuentran implementados a nivel de código fuente en backend y frontend, pendientes de contraste y revisión operativa con el cliente.
 
 ---
 
 ## 2. Detalle de Requerimientos Auditados por Módulo
 
-### Módulo 1: Administración, Roles y Esquema de Ramas Jerárquicas (12 Completos)
+### Módulo 1: Administración, Roles y Esquema de Ramas Jerárquicas (11 Pendientes · 1 Verificado)
 
-- **1.1 Unificación Conceptual de Jerarquía (Rango 1–4 vs Nivel de Ramas 1–3+)** — `COMPLETO`
+- **1.1 Unificación Conceptual de Jerarquía (Rango 1–4 vs Nivel de Ramas 1–3+)** — `PENDIENTE QA`
   - Se eliminó la ambigüedad donde cargos directivos tenían números altos que colisionaban con los estratos de las ramas.
   - **Rango de Autoridad (Decisión / Personas)**: Rango 1 = Gerencia General (decisión final ilimitada), Rango 2 = Gerencias de Área, Rango 3 = Jefaturas Operativas (3.1/3.2), Rango 4 = Asistentes/Emisores (solo digitan). **El 1 es el valor más importante y desciende hacia abajo**.
   - **Nivel de Rama (Ubicación & Herencia)**: Nivel 1 = Dirección General (raíz), Nivel 2 = Ramas Operativas Principales en paralelo horizontal (Agrícola, Packing, Administración, Contratistas), Nivel 3+ = Sub-ramas dependientes que van abajo y heredan ámbito. **El 1 es el valor más importante**.
   - Evidencia: [`domain.ts`](file:///e:/source/repos/Almahue/ERP/erp_front/src/types/domain.ts), [`EsquemaRamasAprobacion.tsx`](file:///e:/source/repos/Almahue/ERP/erp_front/src/components/aprobaciones/EsquemaRamasAprobacion.tsx#L40-L95).
-- **1.2 Eliminación Total de Rastro de Configuración Anterior** — `COMPLETO`
+- **1.2 Eliminación Total de Rastro de Configuración Anterior** — `PENDIENTE QA`
   - Se removieron de backend y frontend las barras obsoletas (botones "Niveles", "Árbol de Grupos", inputs huérfanos y slide panels de 20 grupos anteriores). La vista queda 100% montada sobre `EsquemaRamasAprobacion`.
-- **1.3 Creación Dinámica de Ramas y Asignación de Nivel de Rama** — `COMPLETO`
+- **1.3 Creación Dinámica de Ramas y Asignación de Nivel de Rama** — `PENDIENTE QA`
   - Modal interactivo con botón `+ Nueva Rama` para crear ramas ilimitadas (Agrícola, Packing, Administración, Contratistas, Bodega, Insumos, etc.) con selección de Nivel y módulos asignados.
-- **1.4 Nombres de Eslabones 100% Configurables** — `COMPLETO`
+- **1.4 Nombres de Eslabones 100% Configurables** — `PENDIENTE QA`
   - Los nombres de cada eslabón y cargo no son predefinidos sino totalmente configurables por el usuario (ej. Jefatura de Riego, Jefatura Fundos Norte, etc.).
-- **1.5 Modalidad de Aprobación en Reglas: Paralelo OR** — `COMPLETO`
+- **1.5 Modalidad de Aprobación en Reglas: Paralelo OR** — `PENDIENTE QA`
   - Despliegue horizontal en paralelo de cargos hermanos (Fundos Norte y Sur); cualquiera visa para no frenar la faena.
-- **1.6 Modalidad de Aprobación en Reglas: Decisión Unánime AND** — `COMPLETO`
+- **1.6 Modalidad de Aprobación en Reglas: Decisión Unánime AND** — `PENDIENTE QA`
   - Cargos agrupados en bloque vinculante (Planta + Calidad en empaque); requiere la firma obligatoria de todos.
-- **1.7 Modalidad de Aprobación en Reglas: Escalas Secuenciales 3.1 ➔ 3.2** — `COMPLETO`
+- **1.7 Modalidad de Aprobación en Reglas: Escalas Secuenciales 3.1 ➔ 3.2** — `PENDIENTE QA`
   - Subrangos decimales por tramos de monto (Subjefe de Riego 3.1 ➔ Jefe de Riego 3.2) antes de subir a Gerencia.
-- **1.8 Integración de Usuarios con Cargo en Árbol Jerárquico** — `COMPLETO`
-  - En [`UsuariosPage.tsx`](file:///e:/source/repos/Almahue/ERP/erp_front/src/pages/parametrizacion/UsuariosPage.tsx), se visualiza la columna Cargo en Árbol con Rango y Rama, heredando automáticamente topes y línea de mando.
-- **1.9 Adaptación de Usuarios Reales de Base de Datos Almahue** — `COMPLETO`
+- **1.8 Integración de Usuarios con Cargo en Árbol Jerárquico** — `PENDIENTE QA`
+  - En [`UsuariosPage.tsx`](file:///e:/source/repos/Almahue/ERP/erp_front/src/pages/parametrizacion/UsuariosPage.tsx), se visualiza la columna Cargo en Árbol con Rango y Rama, heredando automáticamente topes y línea de mando. Se eliminó la configuración de jefatura directa manual.
+- **1.9 Adaptación de Usuarios Reales de Base de Datos Almahue** — `PENDIENTE QA`
   - Creación de [`cargos-jerarquicos-real.ts`](file:///e:/source/repos/Almahue/ERP/erp_front/src/services/real/cargos-jerarquicos-real.ts) con todos los usuarios reales (Natalia Bravo, Daniela Fuentes, Sebastian Lagos, Rodrigo Salas, Bruno Lagos, etc.).
-- **1.10 Resiliencia y Eliminación de Errores 404 en Modo Real** — `COMPLETO`
-  - Fallback con sincronización en `localStorage` en [`real/api.ts`](file:///e:/source/repos/Almahue/ERP/erp_front/src/services/real/api.ts).
-- **1.11 Simulador de Escalamiento Jerárquico en Tiempo Real** — `COMPLETO`
-  - Evaluación interactiva de solicitante, cargo y monto en `/admin/aprobaciones`, visualizando la ruta aprobatoria resuelta.
-- **1.12 Saneamiento TypeScript y Build Verde** — `COMPLETO`
+- **1.10 Resiliencia y Eliminación de Errores 404 en Modo Real** — `PENDIENTE QA`
+  - Fallback limpio y eliminación de llamadas especulativas a APIs no implementadas en [`real/api.ts`](file:///e:/source/repos/Almahue/ERP/erp_front/src/services/real/api.ts).
+- **1.11 Simulador de Escalamiento Jerárquico en Tiempo Real** — `PENDIENTE QA`
+  - Evaluación interactiva de solicitante, cargo y monto en `/admin/aprobaciones`, visualizando la ruta aprobatoria resuelta sin auto-aprobación indebida de cargos base (Rango 4).
+- **1.12 Saneamiento TypeScript y Build Verde** — `COMPLETO / VERIFICADO`
   - Build de producción (`tsc -b && vite build`) con **0 errores y código de salida 0**.
 
 ---
@@ -122,20 +126,22 @@
 
 ---
 
-## 3. Enlaces Directos a Visores Interactivos y Documentos
+## 3. Enlaces Directos a Visores Interactivos y Documentos (GitHub Pages Online)
 
-### Semana Actual (02/11 al 07/11/2026)
-- 🧭 **Recorrido Interactivo con Pines (1536×960):** [`docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html`](file:///e:/source/repos/Almahue/docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html)
-- 🔍 **Comparación Antes / Después con Recuadros Verde:** [`docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html`](file:///e:/source/repos/Almahue/docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html)
+🌐 **Portal General en Línea:** [https://cvallejosdevint.github.io/ERP_Almahue-Gantt/](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/)
+
+### Semana Actual (02/11 al 09/11/2026)
+- 🧭 **Recorrido Interactivo con Pines (1536×960):** [Ver en GitHub Pages](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/acuerdos-sala-2026-11-06/recorrido.html)
+- 🔍 **Comparación Antes / Después con Recuadros Verde:** [Ver en GitHub Pages](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/acuerdos-sala-2026-11-06/comparacion.html)
 - 📄 **Acuerdos del 06/11 (Documento diario detallado):** [`docs/requerimientos/acuerdos-por-dia/2026-11-06-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-06-acuerdos.md)
-- 📄 **Acuerdos del 05/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-05-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-05-acuerdos.md)
-- 📄 **Acuerdos del 04/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-04-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-04-acuerdos.md)
-- 📄 **Acuerdos del 03/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-03-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-03-acuerdos.md)
+- 📄 **Acuerdos del 05/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-05-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-05-acuerdos.md) · [🧭 Recorrido](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/acuerdos-noche-packing-org-2026-11-05/recorrido.html) · [🔍 Comparación](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/acuerdos-noche-packing-org-2026-11-05/comparacion.html)
+- 📄 **Acuerdos del 04/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-04-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-04-acuerdos.md) · [🧭 Recorrido](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/review-cambios-cliente-2026-11-04/recorrido.html) · [🔍 Comparación](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/review-cambios-cliente-2026-11-04/comparacion.html)
+- 📄 **Acuerdos del 03/11:** [`docs/requerimientos/acuerdos-por-dia/2026-11-03-acuerdos.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/2026-11-03-acuerdos.md) · [🧭 Recorrido](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/gaps-reunion-03-11-2026-11-04/recorrido.html) · [🔍 Comparación](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/gaps-reunion-03-11-2026-11-04/comparacion.html)
 
 ### Semana Anterior (26/10 al 30/10/2026)
 - 📑 **Informe Consolidado Semana Anterior:** [`docs/requerimientos/informe-consolidado-requerimientos-semana-2026-10-26.md`](file:///e:/source/repos/Almahue/docs/requerimientos/informe-consolidado-requerimientos-semana-2026-10-26.md)
-- 🧭 **Recorrido Interactivo Semana Anterior:** [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html`](file:///e:/source/repos/Almahue/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html)
-- 🔍 **Comparación Antes / Después Semana Anterior:** [`docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html`](file:///e:/source/repos/Almahue/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html)
+- 🧭 **Recorrido Interactivo Semana Anterior:** [Ver en GitHub Pages](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/recorrido.html)
+- 🔍 **Comparación Antes / Después Semana Anterior:** [Ver en GitHub Pages](https://cvallejosdevint.github.io/ERP_Almahue-Gantt/docs/sesiones/revision-semana-2026-10-27-a-2026-11-05/comparacion.html)
 
 ---
 *Índice general de acuerdos por día: [`docs/requerimientos/acuerdos-por-dia/README.md`](file:///e:/source/repos/Almahue/docs/requerimientos/acuerdos-por-dia/README.md)*
